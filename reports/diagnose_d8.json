@@ -1,0 +1,29 @@
+{
+  "unaccented_25_eval": {
+    "(a) Accented (Ground Truth)": {
+      "p10": 0.30000000000000004,
+      "hit10": 0.68,
+      "ap10": 0.37908192239858907
+    },
+    "(b) Raw Unaccented (No restore)": {
+      "p10": 0.064,
+      "hit10": 0.24,
+      "ap10": 0.09661904761904762
+    },
+    "(c) Old Restore (Always restore)": {
+      "p10": 0.456,
+      "hit10": 0.8,
+      "ap10": 0.5053624842529604
+    },
+    "(d) Rule c' (Conditional restore)": {
+      "p10": 0.456,
+      "hit10": 0.8,
+      "ap10": 0.5053624842529604
+    }
+  },
+  "mutation_stats": {
+    "accented_queries_count": 75,
+    "old_rule_mutations": 16,
+    "c_prime_mutations": 0
+  }
+}

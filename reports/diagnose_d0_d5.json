@@ -1,0 +1,236 @@
+{
+  "ranks_test": {
+    "median": 266.5,
+    "mean": 373.72558139534885,
+    "r1": 0.003875968992248062,
+    "r5": 0.03488372093023256,
+    "r10": 0.059689922480620154,
+    "p90": 900.2000000000003,
+    "max": 1279
+  },
+  "ranks_full": {
+    "median": 7313.0,
+    "mean": 10881.482170542635,
+    "r1": 0.0,
+    "r5": 0.0,
+    "r10": 0.0015503875968992248,
+    "p90": 26791.800000000003,
+    "max": 38091
+  },
+  "top20_hubs": [
+    {
+      "item_id": "38753",
+      "count": 865,
+      "freq_pct": 67.05,
+      "articleType": "Handbags",
+      "gender": "Women",
+      "baseColour": "Black",
+      "path": "data/fashion-dataset/images/38753.jpg"
+    },
+    {
+      "item_id": "9361",
+      "count": 737,
+      "freq_pct": 57.13,
+      "articleType": "Socks",
+      "gender": "Unisex",
+      "baseColour": "Black",
+      "path": "data/fashion-dataset/images/9361.jpg"
+    },
+    {
+      "item_id": "9573",
+      "count": 727,
+      "freq_pct": 56.36,
+      "articleType": "Backpacks",
+      "gender": "Women",
+      "baseColour": "Purple",
+      "path": "data/fashion-dataset/images/9573.jpg"
+    },
+    {
+      "item_id": "36073",
+      "count": 496,
+      "freq_pct": 38.45,
+      "articleType": "Duffel Bag",
+      "gender": "Unisex",
+      "baseColour": "Khaki",
+      "path": "data/fashion-dataset/images/36073.jpg"
+    },
+    {
+      "item_id": "31191",
+      "count": 486,
+      "freq_pct": 37.67,
+      "articleType": "Accessory Gift Set",
+      "gender": "Men",
+      "baseColour": "Brown",
+      "path": "data/fashion-dataset/images/31191.jpg"
+    },
+    {
+      "item_id": "55814",
+      "count": 460,
+      "freq_pct": 35.66,
+      "articleType": "Night suits",
+      "gender": "Women",
+      "baseColour": "Purple",
+      "path": "data/fashion-dataset/images/55814.jpg"
+    },
+    {
+      "item_id": "34554",
+      "count": 447,
+      "freq_pct": 34.65,
+      "articleType": "Duffel Bag",
+      "gender": "Unisex",
+      "baseColour": "Blue",
+      "path": "data/fashion-dataset/images/34554.jpg"
+    },
+    {
+      "item_id": "5253",
+      "count": 363,
+      "freq_pct": 28.14,
+      "articleType": "Duffel Bag",
+      "gender": "Unisex",
+      "baseColour": "Grey",
+      "path": "data/fashion-dataset/images/5253.jpg"
+    },
+    {
+      "item_id": "12404",
+      "count": 355,
+      "freq_pct": 27.52,
+      "articleType": "Socks",
+      "gender": "Men",
+      "baseColour": "Grey",
+      "path": "data/fashion-dataset/images/12404.jpg"
+    },
+    {
+      "item_id": "38317",
+      "count": 339,
+      "freq_pct": 26.28,
+      "articleType": "Wallets",
+      "gender": "Men",
+      "baseColour": "Black",
+      "path": "data/fashion-dataset/images/38317.jpg"
+    },
+    {
+      "item_id": "25434",
+      "count": 280,
+      "freq_pct": 21.71,
+      "articleType": "Socks",
+      "gender": "Men",
+      "baseColour": "White",
+      "path": "data/fashion-dataset/images/25434.jpg"
+    },
+    {
+      "item_id": "51934",
+      "count": 279,
+      "freq_pct": 21.63,
+      "articleType": "Handbags",
+      "gender": "Women",
+      "baseColour": "Yellow",
+      "path": "data/fashion-dataset/images/51934.jpg"
+    },
+    {
+      "item_id": "1583",
+      "count": 268,
+      "freq_pct": 20.78,
+      "articleType": "Swimwear",
+      "gender": "Women",
+      "baseColour": "Black",
+      "path": "data/fashion-dataset/images/1583.jpg"
+    },
+    {
+      "item_id": "34284",
+      "count": 266,
+      "freq_pct": 20.62,
+      "articleType": "Dupatta",
+      "gender": "Women",
+      "baseColour": "Blue",
+      "path": "data/fashion-dataset/images/34284.jpg"
+    },
+    {
+      "item_id": "41023",
+      "count": 264,
+      "freq_pct": 20.47,
+      "articleType": "Belts",
+      "gender": "Men",
+      "baseColour": "Navy Blue",
+      "path": "data/fashion-dataset/images/41023.jpg"
+    },
+    {
+      "item_id": "51323",
+      "count": 233,
+      "freq_pct": 18.06,
+      "articleType": "Laptop Bag",
+      "gender": "Unisex",
+      "baseColour": "Grey",
+      "path": "data/fashion-dataset/images/51323.jpg"
+    },
+    {
+      "item_id": "58253",
+      "count": 218,
+      "freq_pct": 16.9,
+      "articleType": "Clutches",
+      "gender": "Women",
+      "baseColour": "Olive",
+      "path": "data/fashion-dataset/images/58253.jpg"
+    },
+    {
+      "item_id": "40110",
+      "count": 213,
+      "freq_pct": 16.51,
+      "articleType": "Tracksuits",
+      "gender": "Men",
+      "baseColour": "Blue",
+      "path": "data/fashion-dataset/images/40110.jpg"
+    },
+    {
+      "item_id": "40046",
+      "count": 195,
+      "freq_pct": 15.12,
+      "articleType": "Shorts",
+      "gender": "Men",
+      "baseColour": "Black",
+      "path": "data/fashion-dataset/images/40046.jpg"
+    },
+    {
+      "item_id": "31881",
+      "count": 195,
+      "freq_pct": 15.12,
+      "articleType": "Stoles",
+      "gender": "Women",
+      "baseColour": "Blue",
+      "path": "data/fashion-dataset/images/31881.jpg"
+    }
+  ],
+  "cosine_dist": {
+    "target": {
+      "min": -0.10319367051124573,
+      "mean": 0.3611098551148072,
+      "max": 0.7566541433334351
+    },
+    "top1": {
+      "min": 0.5087544918060303,
+      "mean": 0.7156864911548851,
+      "max": 0.8223880529403687
+    },
+    "top_hub": {
+      "min": 0.17527540028095245,
+      "mean": 0.6160514950752258,
+      "max": 0.7848993539810181
+    }
+  },
+  "mean_centering": {
+    "empirical": {
+      "r10": 0.14651162790697675,
+      "median": 71.0,
+      "mean": 154.84418604651162
+    },
+    "checkpoint_stats": {
+      "r10": 0.06201550387596899,
+      "median": 246.5,
+      "mean": 357.18062015503875
+    },
+    "csls": {
+      "r10": 0.06434108527131784,
+      "median": 234.0,
+      "mean": 342.1007751937984
+    }
+  }
+}
