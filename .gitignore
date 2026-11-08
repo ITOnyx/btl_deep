@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+
+# Raw dataset and checkpoints
+data/fashion-dataset/
+data/images*
+data/**/images*
+data/**/images/
+data/_quarantine*
+data/checkpoints*
+checkpoint*
+
+# Binary & artifacts
+*.npy
+*.npz
+*.faiss
+*.tar*
+*.zip
+
+# Large generated files
+reports/contact_sheets/*.png
+*.parquet
+
+# Index
+index/*
+!index/.gitkeep
+
+# Temporary / OS
+.DS_Store
+Thumbs.db

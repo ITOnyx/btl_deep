@@ -1,0 +1,43 @@
+# Điền các TODO trước khi chạy agent. Dùng dấu / hoặc \\ trong đường dẫn.
+project_root: "D:/Kì 7/Hoc_sau_ver4"
+
+paths:
+  kaggle_dir: "data/fashion-dataset"
+  checkpoint_dir: "TODO"      # đường dẫn checkpoints_siglip-vit
+  train_code: "TODO"          # notebook/script đã train (để lấy preprocessing)
+  old_images: "data/images"
+  crawled_images: "data/images_crawled/new/images"
+  catalog: "data/catalog/catalog.parquet"
+  quarantine: "data/_quarantine"
+  index_dir: "index"
+  reports_dir: "reports"
+  eval_dir: "eval"
+
+checkpoint:
+  format: "TODO"              # save_pretrained | pt_state_dict | pt_full_model | big_vision
+  model_name: "TODO"          # ví dụ tên model gốc dùng để dựng kiến trúc (nếu là state_dict)
+  text_language_in_training: "TODO"   # en | vi | mixed
+
+image_filter:                 # CHỈ là giá trị khởi đầu; chốt sau khi tôi duyệt contact sheet
+  min_short_side: 224
+  blur_laplacian_var_threshold: null   # null = chưa chốt, agent phải đề xuất qua contact sheet
+  phash_hamming_threshold: 4
+  detect_banner: true
+
+faiss:
+  type: "IndexHNSWFlat"
+  M: 32
+  ef_construction: 200
+  ef_search: 128
+  metric: "inner_product"
+
+eval:
+  seed: 42
+  topk: [1, 5, 10]
+  min_relevant_per_query: 5
+  n_text_queries: 400
+  n_latency_queries: 200
+  handwritten_queries: "eval/handwritten_queries.json"   # tôi tự viết, 50-100 câu
+
+app:
+  port: 8501
