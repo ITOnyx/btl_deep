@@ -17,11 +17,13 @@ Chỉ tiêu: Recall@10 ≥ 0.85, mAP ≥ 0.75 (text→ảnh, KHÔNG lọc thuộ
 8. Seed cố định; ghi phiên bản thư viện và tham số vào `reports/run_manifest.json`.
 9. Windows: dùng `pathlib`, `encoding="utf-8"`, đường dẫn có dấu cách/ký tự có dấu phải chạy được. Tác vụ dài phải resume được.
 
-## Quy tắc đánh giá (tránh điểm cao giả)
-- Chỉ tiêu chính chấm trên kết quả KHÔNG lọc thuộc tính (model thuần).
-- Kết quả có lọc thuộc tính báo cáo riêng, coi là chức năng sản phẩm.
-- Có tập truy vấn viết tay (`eval/handwritten_queries.json`) độc lập với metadata; báo cáo riêng.
-- Nếu checkpoint từng train trên dataset này, nêu rõ khả năng số liệu lạc quan; tách tập test khỏi tập train nếu xác định được.
+## Quy tắc đánh giá
+- Checkpoint đã train trên bộ Kaggle này. Số liệu so với chỉ tiêu CHỈ tính trên tập test của checkpoint (`split == "test"`), gallery chỉ gồm ảnh test. Số trên gallery đầy đủ (có ảnh train) chỉ để tham khảo và phải ghi là lạc quan.
+- Hai loại số liệu, không trộn:
+  1. Paired retrieval: truy vấn là caption (hoặc ảnh) của sản phẩm, đích là đúng ảnh cặp. Báo Recall@1/5/10 và mAP. Đây là số đối chiếu chỉ tiêu.
+  2. Truy vấn tự nhiên theo thuộc tính: relevance theo (articleType, gender, baseColour) có rất nhiều ảnh liên quan nên Recall@10 không có nghĩa. Dùng Precision@10, Hit@10, AP@10 (chuẩn hóa theo min(R,10)).
+- Kết quả chính KHÔNG lọc thuộc tính; kết quả có lọc báo cáo riêng.
+- Truy vấn viết tay (`eval/handwritten_queries.json`) báo riêng. Truy vấn tiếng Anh ngoài chỉ tiêu.
 - Tập test cố định (seed), không đổi giữa các lần chạy.
 
 ## Quy trình

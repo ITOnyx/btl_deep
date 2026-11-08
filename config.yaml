@@ -3,8 +3,8 @@ project_root: "D:/Kì 7/Hoc_sau_ver4"
 
 paths:
   kaggle_dir: "data/fashion-dataset"
-  checkpoint_dir: "TODO"      # đường dẫn checkpoints_siglip-vit
-  train_code: "TODO"          # notebook/script đã train (để lấy preprocessing)
+  checkpoint_dir: "data/checkpoints_siglip-vit"      # đường dẫn checkpoints_siglip-vit
+  train_code: "notebooks/siglip_vietnamese_ecommerce_colab_ver2.ipynb"          # notebook/script đã train (để lấy preprocessing)
   old_images: "data/images"
   crawled_images: "data/images_crawled/new/images"
   catalog: "data/catalog/catalog.parquet"
@@ -14,9 +14,12 @@ paths:
   eval_dir: "eval"
 
 checkpoint:
-  format: "TODO"              # save_pretrained | pt_state_dict | pt_full_model | big_vision
-  model_name: "TODO"          # ví dụ tên model gốc dùng để dựng kiến trúc (nếu là state_dict)
-  text_language_in_training: "TODO"   # en | vi | mixed
+  format: "pt_state_dict"              # save_pretrained | pt_state_dict | pt_full_model | big_vision
+  model_name: "google/siglip-so400m-patch14-224"          # ví dụ tên model gốc dùng để dựng kiến trúc (nếu là state_dict)
+  text_language_in_training: "vi"   # en | vi | mixed
+  checkpoint_hash: "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d"
+  embedding_dim: 1152
+  max_text_length: 128
 
 image_filter:                 # CHỈ là giá trị khởi đầu; chốt sau khi tôi duyệt contact sheet
   min_short_side: 224
@@ -40,6 +43,17 @@ eval:
   n_text_queries: 400
   n_latency_queries: 200
   handwritten_queries: "eval/handwritten_queries.json"   # tôi tự viết, 50-100 câu
+  min_group_size_for_queries: 10   # nhóm (articleType, gender[, baseColour]) nhỏ hơn thì không sinh truy vấn test
 
 app:
   port: 8501
+
+scope:
+  index_scope: "fashion_only"   # fashion_only | all
+  exclude_master_categories: ["Personal Care", "Home", "Sporting Goods"]
+  exclude_article_types: ["Ipad", "Free Gifts", "Fragrance Gift Set", "Key chain"]   # agent đề xuất thêm, tôi duyệt
+  keep_fashion_article_types_in_free_items: true  # Backpacks, Handbags, Wallets, Ties, Scarves, Clutches, Laptop Bag...
+
+embedding:
+  batch_size: 64
+  fp16: true
