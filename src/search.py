@@ -30,35 +30,106 @@ def compute_file_sha256(filepath: str) -> str:
     return h.hexdigest()
 
 
+def verify_manifest(
+    index_dir: Union[str, pathlib.Path],
+    checkpoint_path: Optional[Union[str, pathlib.Path]] = None,
+    catalog_path: Optional[Union[str, pathlib.Path]] = None
+) -> Dict[str, Any]:
+    """
+    Verifies that the manifest.json inside index_dir matches the sha256 hashes
+    of the checkpoint and catalog files.
+    Raises FileNotFoundError if manifest or target files do not exist.
+    Raises ValueError if any hash does not match.
+    """
+    index_dir = pathlib.Path(index_dir)
+    manifest_path = index_dir / "manifest.json"
+    if not manifest_path.exists():
+        raise FileNotFoundError(f"Index manifest not found at {manifest_path}!")
+
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        manifest = json.load(f)
+
+    # 1. Verify Checkpoint Hash
+    expected_ckpt_hash = manifest.get("checkpoint_hash")
+    if expected_ckpt_hash:
+        ckpt_to_check = pathlib.Path(checkpoint_path) if checkpoint_path else pathlib.Path(manifest.get("checkpoint_path", ""))
+        if not ckpt_to_check.exists():
+            raise FileNotFoundError(f"Checkpoint file not found at {ckpt_to_check} for hash verification!")
+        actual_ckpt_hash = compute_file_sha256(str(ckpt_to_check))
+        if actual_ckpt_hash != expected_ckpt_hash:
+            raise ValueError(
+                f"CHECKPOINT HASH MISMATCH! Manifest expected {expected_ckpt_hash}, but {ckpt_to_check} has {actual_ckpt_hash}. "
+                "The index was built with a different checkpoint. Refusing to load!"
+            )
+
+    # 2. Verify Catalog Hash
+    expected_cat_hash = manifest.get("catalog_hash")
+    if expected_cat_hash:
+        cat_to_check = pathlib.Path(catalog_path) if catalog_path else pathlib.Path(manifest.get("catalog_path", ""))
+        if not cat_to_check.exists():
+            raise FileNotFoundError(f"Catalog file not found at {cat_to_check} for hash verification!")
+        actual_cat_hash = compute_file_sha256(str(cat_to_check))
+        if actual_cat_hash != expected_cat_hash:
+            raise ValueError(
+                f"CATALOG HASH MISMATCH! Manifest expected {expected_cat_hash}, but {cat_to_check} has {actual_cat_hash}. "
+                "The index was built with a different catalog version. Refusing to load!"
+            )
+
+    return manifest
+
+
+def load_index(
+    index_dir: Union[str, pathlib.Path] = "index",
+    checkpoint_path: Optional[Union[str, pathlib.Path]] = None,
+    catalog_path: Optional[Union[str, pathlib.Path]] = None,
+    ef_search: int = 128
+):
+    """
+    Loads FAISS index, ID map, and manifest after verifying checkpoint and catalog hashes.
+    Raises ValueError if hashes do not match.
+    """
+    index_dir = pathlib.Path(index_dir)
+    manifest = verify_manifest(index_dir, checkpoint_path=checkpoint_path, catalog_path=catalog_path)
+
+    hnsw_filename = manifest.get("files", {}).get("hnsw_index", "faiss_hnsw_index.bin")
+    index_path = index_dir / hnsw_filename
+    if not index_path.exists():
+        raise FileNotFoundError(f"FAISS index not found at {index_path}!")
+
+    index = faiss.read_index(str(index_path))
+    index.hnsw.efSearch = ef_search
+
+    id_map_filename = manifest.get("files", {}).get("id_map", "id_map.json")
+    id_map_path = index_dir / id_map_filename
+    with open(id_map_path, "r", encoding="utf-8") as f:
+        id_map = json.load(f)
+
+    return index, id_map, manifest
+
+
 class VisualSearchEngine:
     def __init__(
         self,
         index_dir: str = "index",
         checkpoint_path: str = "data/checkpoints_siglip-vit/best_model.pt",
+        catalog_path: Optional[str] = "data/catalog/catalog.parquet",
         device: str = "cuda" if torch.cuda.is_available() else "cpu",
         ef_search: int = 128
     ):
         self.index_dir = pathlib.Path(index_dir)
         self.checkpoint_path = pathlib.Path(checkpoint_path)
+        self.catalog_path = pathlib.Path(catalog_path) if catalog_path else None
         self.device = device
         self.ef_search = ef_search
 
-        # 1. Verify Manifest and Checkpoint Hash Integrity
-        self._verify_manifest()
-
-        # 2. Load FAISS HNSW Index
-        index_path = self.index_dir / "faiss_hnsw_index.bin"
-        if not index_path.exists():
-            raise FileNotFoundError(f"FAISS index not found at {index_path}. Please run index construction first.")
-        print(f"Loading FAISS index from {index_path}...")
-        self.index = faiss.read_index(str(index_path))
-        self.index.hnsw.efSearch = self.ef_search
-
-        # 3. Load ID Map
-        id_map_path = self.index_dir / "id_map.json"
-        with open(id_map_path, "r", encoding="utf-8") as f:
-            self.id_map = json.load(f)
-        print(f"Loaded ID map with {len(self.id_map):,} items.")
+        # 1 & 2 & 3. Verify Manifest & Load Index and ID map
+        self.index, self.id_map, self.manifest = load_index(
+            index_dir=self.index_dir,
+            checkpoint_path=self.checkpoint_path,
+            catalog_path=self.catalog_path,
+            ef_search=self.ef_search
+        )
+        print(f"Loaded FAISS index and ID map with {len(self.id_map):,} items from {self.index_dir}.")
 
         # 4. Load Model
         print(f"Loading SigLIP model on {self.device}...")
@@ -68,25 +139,6 @@ class VisualSearchEngine:
             fp16=(self.device == "cuda")
         )
         self.processor = self.model.processor
-
-    def _verify_manifest(self):
-        manifest_path = self.index_dir / "manifest.json"
-        if not manifest_path.exists():
-            raise FileNotFoundError(f"Index manifest not found at {manifest_path}!")
-
-        with open(manifest_path, "r", encoding="utf-8") as f:
-            manifest = json.load(f)
-
-        expected_hash = manifest.get("checkpoint_hash")
-        print(f"Verifying checkpoint hash against manifest ({expected_hash[:12]}...)...")
-        actual_hash = compute_file_sha256(str(self.checkpoint_path))
-
-        if actual_hash != expected_hash:
-            raise ValueError(
-                f"CHECKPOINT HASH MISMATCH! Manifest expected {expected_hash}, but {self.checkpoint_path} has {actual_hash}. "
-                "The index was built with a different checkpoint. Refusing to load!"
-            )
-        print("Checkpoint hash verified successfully.")
 
     def encode_text(self, text: str) -> np.ndarray:
         inp = self.processor(

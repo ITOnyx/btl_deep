@@ -52,5 +52,21 @@
     "total_active_quarantine": 3528,
     "final_clean_catalog_items": 40891,
     "under30_groups_count": 170
+  },
+  "eval_testset_v1_sha256": "b505e31d7bd82205f2af984a122402fdbdd98d7480967e12bae009d611e09b3b",
+  "eval_testset_v1_path": "eval/testset_v1.json",
+  "phase3_eval": {
+    "timestamp": "2026-11-08 23:06:09",
+    "q1_paired_recall10_g_test": 0.0597,
+    "q1_paired_recall10_ci_g_test": [
+      0.0465,
+      0.0736
+    ],
+    "q1_paired_mrr_g_test": 0.0228,
+    "q1_paired_recall10_g_full": 0.0016,
+    "latency_text_to_image_p95_ms": 42.87,
+    "latency_image_to_image_p95_ms": 158.08,
+    "results_path": "eval/results.json",
+    "report_path": "reports/phase3_eval.md"
   }
 }

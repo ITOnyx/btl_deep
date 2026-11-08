@@ -1,0 +1,207 @@
+{
+  "colour_families": {
+    "Blue": [
+      "Blue",
+      "Navy Blue",
+      "Teal",
+      "Turquoise Blue"
+    ],
+    "Black": [
+      "Black",
+      "Charcoal"
+    ],
+    "White": [
+      "White",
+      "Off White",
+      "Cream"
+    ],
+    "Grey": [
+      "Grey",
+      "Grey Melange",
+      "Steel"
+    ],
+    "Brown": [
+      "Brown",
+      "Tan",
+      "Bronze",
+      "Copper",
+      "Coffee Brown",
+      "Mushroom Brown",
+      "Taupe"
+    ],
+    "Red": [
+      "Red",
+      "Maroon",
+      "Burgundy",
+      "Rust"
+    ],
+    "Green": [
+      "Green",
+      "Olive",
+      "Sea Green",
+      "Lime Green",
+      "Fluorescent Green"
+    ],
+    "Pink": [
+      "Pink",
+      "Peach",
+      "Rose",
+      "Magenta"
+    ],
+    "Purple": [
+      "Purple",
+      "Lavender",
+      "Mauve"
+    ],
+    "Yellow": [
+      "Yellow",
+      "Mustard",
+      "Gold"
+    ],
+    "Beige": [
+      "Beige",
+      "Khaki",
+      "Nude",
+      "Skin"
+    ],
+    "Orange": [
+      "Orange"
+    ],
+    "Silver": [
+      "Silver",
+      "Metallic"
+    ],
+    "Multi": [
+      "Multi"
+    ]
+  },
+  "article_type_families": {
+    "Tshirts": [
+      "Tshirts",
+      "Lounge Tshirts",
+      "Tops"
+    ],
+    "Shirts": [
+      "Shirts"
+    ],
+    "Tops": [
+      "Tops",
+      "Tshirts",
+      "Tunics",
+      "Shrug"
+    ],
+    "Casual Shoes": [
+      "Casual Shoes",
+      "Sports Shoes"
+    ],
+    "Sports Shoes": [
+      "Sports Shoes",
+      "Casual Shoes"
+    ],
+    "Formal Shoes": [
+      "Formal Shoes"
+    ],
+    "Sandals": [
+      "Sandals",
+      "Flip Flops",
+      "Sports Sandals"
+    ],
+    "Heels": [
+      "Heels",
+      "Flats"
+    ],
+    "Flats": [
+      "Flats",
+      "Heels"
+    ],
+    "Jeans": [
+      "Jeans",
+      "Jeggings"
+    ],
+    "Trousers": [
+      "Trousers",
+      "Track Pants",
+      "Lounge Pants",
+      "Churidar",
+      "Salwar"
+    ],
+    "Kurtas": [
+      "Kurtas",
+      "Kurtis",
+      "Kurta Sets"
+    ],
+    "Sarees": [
+      "Sarees",
+      "Lehenga Choli"
+    ],
+    "Watches": [
+      "Watches"
+    ],
+    "Handbags": [
+      "Handbags",
+      "Clutches",
+      "Messenger Bag"
+    ],
+    "Wallets": [
+      "Wallets",
+      "Clutches"
+    ],
+    "Backpacks": [
+      "Backpacks",
+      "Rucksacks",
+      "Duffel Bag"
+    ],
+    "Sunglasses": [
+      "Sunglasses"
+    ]
+  },
+  "gender_compatibility": {
+    "Men": [
+      "Men",
+      "Unisex"
+    ],
+    "Women": [
+      "Women",
+      "Unisex"
+    ],
+    "Unisex": [
+      "Men",
+      "Women",
+      "Unisex"
+    ],
+    "Boys": [
+      "Boys",
+      "Unisex"
+    ],
+    "Girls": [
+      "Girls",
+      "Unisex"
+    ]
+  },
+  "ambiguous_groupings_for_review": [
+    {
+      "group": "Tshirts vs Tops",
+      "reason": "Tops in Myntra is mostly women's fashion tops; Tshirts includes round-neck/polo. In family mode, Women's Tshirts match Tops."
+    },
+    {
+      "group": "Casual Shoes vs Sports Shoes",
+      "reason": "Sneakers / running shoes are often cross-tagged between Casual and Sports Shoes. In family mode, they match."
+    },
+    {
+      "group": "Wallets vs Clutches",
+      "reason": "Long women's wallets and small evening clutches overlap in design and usage. In family mode for Women, they match."
+    },
+    {
+      "group": "Kurtas vs Kurtis",
+      "reason": "Kurtis are short Kurtas; grouped under traditional Indian tunics."
+    },
+    {
+      "group": "Teal / Turquoise Blue in Blue family",
+      "reason": "Cyan/teal tones have blue and green components; assigned to Blue family."
+    },
+    {
+      "group": "Khaki in Beige family vs Tan in Brown family",
+      "reason": "Khaki is yellowish-beige; Tan is reddish-light brown."
+    }
+  ]
+}

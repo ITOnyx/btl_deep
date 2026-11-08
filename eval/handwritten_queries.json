@@ -1,0 +1,1694 @@
+[
+  {
+    "id": "h001",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo thun nam màu trắng trơn cổ tròn",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Áo thun nam trắng cơ bản"
+  },
+  {
+    "id": "h002",
+    "category": "Áo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "ao thun nam trang",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Không dấu ngắn gọn"
+  },
+  {
+    "id": "h003",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "áo sơ mi nam trắng công sở đi làm",
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Có từ ngữ cảnh 'công sở đi làm'"
+  },
+  {
+    "id": "h004",
+    "category": "Áo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "ao so mi nam trang dai tay",
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Không dấu có từ mô tả dài tay"
+  },
+  {
+    "id": "h005",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo polo nam màu xanh navy thể thao",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue",
+        "Blue"
+      ]
+    },
+    "note": "Áo polo thể thao"
+  },
+  {
+    "id": "h006",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo phông nam màu đen in họa tiết",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Từ ngữ địa phương 'áo phông'"
+  },
+  {
+    "id": "h007",
+    "category": "Áo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "ao phong den nam",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Không dấu, đảo ngữ"
+  },
+  {
+    "id": "h008",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "áo thun nữ mùa hè màu hồng dễ thương",
+    "spec": {
+      "articleType": [
+        "Tshirts",
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Pink"
+      ]
+    },
+    "note": "Ngữ cảnh mùa hè, tính từ cảm xúc"
+  },
+  {
+    "id": "h009",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo sơ mi nữ kẻ sọc màu xanh dương",
+    "spec": {
+      "articleType": [
+        "Shirts",
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "note": "Họa tiết kẻ sọc"
+  },
+  {
+    "id": "h010",
+    "category": "Áo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "ao so mi nu cong so",
+    "spec": {
+      "articleType": [
+        "Shirts",
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Không dấu, thuộc tính công sở"
+  },
+  {
+    "id": "h011",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo khoác jacket nam màu đen có khóa kéo",
+    "spec": {
+      "articleType": [
+        "Jackets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Áo khoác nam"
+  },
+  {
+    "id": "h012",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo len cổ tròn nữ màu đỏ ấm áp",
+    "spec": {
+      "articleType": [
+        "Sweaters"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "note": "Áo len nữ màu đỏ"
+  },
+  {
+    "id": "h013",
+    "category": "Áo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "ao len nu mau do",
+    "spec": {
+      "articleType": [
+        "Sweaters"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h014",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo hoodie nỉ nam màu xám",
+    "spec": {
+      "articleType": [
+        "Sweatshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "note": "Áo nỉ chui đầu"
+  },
+  {
+    "id": "h015",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo kiểu nữ sát nách màu vàng",
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Yellow"
+      ]
+    },
+    "note": "Áo kiểu nữ"
+  },
+  {
+    "id": "h016",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "áo blazer nam công sở lịch lãm màu đen",
+    "spec": {
+      "articleType": [
+        "Blazers",
+        "Jackets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Áo vest blazer nam"
+  },
+  {
+    "id": "h017",
+    "category": "Áo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "ao blazer nam den",
+    "spec": {
+      "articleType": [
+        "Blazers",
+        "Jackets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Không dấu ngắn gọn"
+  },
+  {
+    "id": "h018",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo thun nam màu đỏ đô thể thao",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red",
+        "Maroon"
+      ]
+    },
+    "note": "Màu đỏ đô / đỏ hạt dẻ"
+  },
+  {
+    "id": "h019",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo thun tay dài nam màu xám tiêu",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey",
+        "Grey Melange"
+      ]
+    },
+    "note": "Chi tiết tay dài xám tiêu"
+  },
+  {
+    "id": "h020",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo sơ mi nam cộc tay đi biển màu xanh lá",
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "note": "Ngữ cảnh đi biển, cộc tay"
+  },
+  {
+    "id": "h021",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo thun nữ form rộng màu trắng",
+    "spec": {
+      "articleType": [
+        "Tshirts",
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Dáng form rộng"
+  },
+  {
+    "id": "h022",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo sơ mi nam caro tím trẻ trung",
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "note": "Họa tiết caro tím"
+  },
+  {
+    "id": "h023",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo sát nách thể thao nam tập gym",
+    "spec": {
+      "articleType": [
+        "Innerwear Vests",
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "note": "Áo may ô tập gym"
+  },
+  {
+    "id": "h024",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo khoác gió thể thao nam chống nước",
+    "spec": {
+      "articleType": [
+        "Jackets",
+        "Rain Jacket"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "note": "Áo khoác gió"
+  },
+  {
+    "id": "h025",
+    "category": "Áo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo thun bé trai in hình siêu nhân",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Boys",
+      "baseColour": []
+    },
+    "note": "Áo thun trẻ em bé trai"
+  },
+  {
+    "id": "h026",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "quần jean nam ống đứng màu xanh dương",
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "note": "Quần jean ống đứng"
+  },
+  {
+    "id": "h027",
+    "category": "Quần & Váy",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "quan jean nam xanh",
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "note": "Không dấu ngắn gọn"
+  },
+  {
+    "id": "h028",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "colloquial",
+    "query": "quần bò nam rách gối cá tính",
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue",
+        "Black"
+      ]
+    },
+    "note": "Từ địa phương 'quần bò'"
+  },
+  {
+    "id": "h029",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "quần tây nam đi làm công sở màu đen",
+    "spec": {
+      "articleType": [
+        "Trousers"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Quần âu tây công sở"
+  },
+  {
+    "id": "h030",
+    "category": "Quần & Váy",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "quan tay nam cong so mau den",
+    "spec": {
+      "articleType": [
+        "Trousers"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h031",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "quần short nam đi biển mùa hè thoáng mát",
+    "spec": {
+      "articleType": [
+        "Shorts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "note": "Quần đùi short nam"
+  },
+  {
+    "id": "h032",
+    "category": "Quần & Váy",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "quan short nam mau trang",
+    "spec": {
+      "articleType": [
+        "Shorts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h033",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "quần jogger thể thao bo gấu màu xám",
+    "spec": {
+      "articleType": [
+        "Track Pants"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "note": "Quần nỉ thể thao jogger"
+  },
+  {
+    "id": "h034",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "quần legging nữ ôm sát màu đen",
+    "spec": {
+      "articleType": [
+        "Leggings",
+        "Tights"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Quần legging ôm"
+  },
+  {
+    "id": "h035",
+    "category": "Quần & Váy",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "quan legging nu den",
+    "spec": {
+      "articleType": [
+        "Leggings",
+        "Tights"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h036",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "chân váy chữ a dáng ngắn màu đen",
+    "spec": {
+      "articleType": [
+        "Skirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Chân váy chữ A"
+  },
+  {
+    "id": "h037",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "chân váy xòe hoa nhí dễ thương",
+    "spec": {
+      "articleType": [
+        "Skirts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Chân váy xòe"
+  },
+  {
+    "id": "h038",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "váy đầm dự tiệc sang trọng màu đỏ",
+    "spec": {
+      "articleType": [
+        "Dresses"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "note": "Đầm dạ hội dự tiệc"
+  },
+  {
+    "id": "h039",
+    "category": "Quần & Váy",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "dam du tiec mau do",
+    "spec": {
+      "articleType": [
+        "Dresses"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h040",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "đầm suông dạo phố mùa hè màu trắng",
+    "spec": {
+      "articleType": [
+        "Dresses"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Đầm suông trắng"
+  },
+  {
+    "id": "h041",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "quần kaki nam màu be dáng ôm",
+    "spec": {
+      "articleType": [
+        "Trousers"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Beige",
+        "Khaki"
+      ]
+    },
+    "note": "Quần kaki be"
+  },
+  {
+    "id": "h042",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "quần lót boxer nam co giãn tốt",
+    "spec": {
+      "articleType": [
+        "Boxers",
+        "Trunk"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "note": "Đồ lót nam"
+  },
+  {
+    "id": "h043",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "bộ đồ ngủ mặc nhà nữ dễ thương",
+    "spec": {
+      "articleType": [
+        "Night suits",
+        "Nightdress"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Đồ ngủ mặc nhà"
+  },
+  {
+    "id": "h044",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "quần jean nữ cạp cao ống loe",
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "note": "Jean nữ cạp cao"
+  },
+  {
+    "id": "h045",
+    "category": "Quần & Váy",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "áo liền quần jumpsuit nữ thanh lịch",
+    "spec": {
+      "articleType": [
+        "Jumpsuit"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Đồ bay jumpsuit"
+  },
+  {
+    "id": "h046",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "giày thể thao nam chạy bộ màu trắng",
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Giày chạy bộ trắng"
+  },
+  {
+    "id": "h047",
+    "category": "Giày dép",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "giay the thao nam trang",
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Không dấu ngắn gọn"
+  },
+  {
+    "id": "h048",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "colloquial",
+    "query": "giày sneaker nam cổ thấp màu đen",
+    "spec": {
+      "articleType": [
+        "Casual Shoes",
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Từ mượn 'sneaker'"
+  },
+  {
+    "id": "h049",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "giày tây nam da bóng buộc dây công sở",
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black",
+        "Brown"
+      ]
+    },
+    "note": "Giày tây công sở"
+  },
+  {
+    "id": "h050",
+    "category": "Giày dép",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "giay tay nam da bo mau nau",
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "note": "Không dấu giày da nâu"
+  },
+  {
+    "id": "h051",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "colloquial",
+    "query": "giày lười nam da mềm màu nâu",
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "note": "Giày lười loafer"
+  },
+  {
+    "id": "h052",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "giày cao gót nữ mũi nhọn màu đen 7cm",
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Cao gót mũi nhọn"
+  },
+  {
+    "id": "h053",
+    "category": "Giày dép",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "giay cao got nu mau den",
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Không dấu cao gót"
+  },
+  {
+    "id": "h054",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "giày cao gót nữ dự tiệc màu đỏ quyến rũ",
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "note": "Cao gót dự tiệc đỏ"
+  },
+  {
+    "id": "h055",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "giày búp bê đế bệt nữ màu kem",
+    "spec": {
+      "articleType": [
+        "Flats"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Cream",
+        "Beige",
+        "White"
+      ]
+    },
+    "note": "Giày búp bê bệt"
+  },
+  {
+    "id": "h056",
+    "category": "Giày dép",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "giay bup be de bet nu",
+    "spec": {
+      "articleType": [
+        "Flats"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h057",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "dép quai hậu sandal nam đi học đi chơi",
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "note": "Dép quai hậu sandal"
+  },
+  {
+    "id": "h058",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "sandal nữ quai mảnh màu trắng thanh lịch",
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Sandal nữ quai mảnh"
+  },
+  {
+    "id": "h059",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "colloquial",
+    "query": "dép kẹp xỏ ngón đi biển mùa hè",
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "note": "Dép kẹp xỏ ngón"
+  },
+  {
+    "id": "h060",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "giày thể thao nữ tập aerobic màu tím",
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "note": "Giày thể thao nữ tím"
+  },
+  {
+    "id": "h061",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "giày vải nam cổ thấp màu xanh navy",
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue",
+        "Blue"
+      ]
+    },
+    "note": "Giày vải canvas"
+  },
+  {
+    "id": "h062",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "giày bốt da nữ cổ thấp cá tính",
+    "spec": {
+      "articleType": [
+        "Booties"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black",
+        "Brown"
+      ]
+    },
+    "note": "Giày bốt cổ thấp"
+  },
+  {
+    "id": "h063",
+    "category": "Giày dép",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "dep sandal nam quai dan",
+    "spec": {
+      "articleType": [
+        "Sports Sandals",
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "note": "Không dấu sandal quai dán"
+  },
+  {
+    "id": "h064",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "giày đá bóng sân cỏ nhân tạo nam",
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "note": "Giày thể thao đá bóng"
+  },
+  {
+    "id": "h065",
+    "category": "Giày dép",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "tất vớ cổ ngắn thể thao nam màu trắng",
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Vớ tất thể thao"
+  },
+  {
+    "id": "h066",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "balo đựng laptop chống sốc đi học màu đen",
+    "spec": {
+      "articleType": [
+        "Backpacks",
+        "Laptop Bag"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Balo laptop đen"
+  },
+  {
+    "id": "h067",
+    "category": "Túi & Balo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "balo laptop chong nuoc mau den",
+    "spec": {
+      "articleType": [
+        "Backpacks",
+        "Laptop Bag"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h068",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "balo du lịch dã ngoại màu xanh dương",
+    "spec": {
+      "articleType": [
+        "Backpacks",
+        "Rucksacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "note": "Balo dã ngoại xanh"
+  },
+  {
+    "id": "h069",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "túi xách tay nữ da thật màu nâu sang trọng",
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "note": "Túi xách nữ nâu"
+  },
+  {
+    "id": "h070",
+    "category": "Túi & Balo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "tui xach nu da mau nau",
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "note": "Không dấu túi xách"
+  },
+  {
+    "id": "h071",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "túi đeo chéo nữ nhỏ gọn đi chơi dạo phố",
+    "spec": {
+      "articleType": [
+        "Handbags",
+        "Messenger Bag"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Túi đeo chéo đi chơi"
+  },
+  {
+    "id": "h072",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "ví da nam bỏ túi nhỏ gọn màu đen",
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Ví da nam đen"
+  },
+  {
+    "id": "h073",
+    "category": "Túi & Balo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "vi da nam mau den",
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h074",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "colloquial",
+    "query": "bóp tiền nam da bò màu nâu gập đôi",
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "note": "Từ phương ngữ 'bóp tiền'"
+  },
+  {
+    "id": "h075",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "ví cầm tay nữ dự tiệc sang chảnh clutch",
+    "spec": {
+      "articleType": [
+        "Clutches",
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Ví clutch dự tiệc"
+  },
+  {
+    "id": "h076",
+    "category": "Túi & Balo",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "vi cam tay nu du tiec",
+    "spec": {
+      "articleType": [
+        "Clutches",
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h077",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "túi đeo chéo nam đựng ipad thể thao",
+    "spec": {
+      "articleType": [
+        "Messenger Bag"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "note": "Túi đeo chéo nam"
+  },
+  {
+    "id": "h078",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "túi trống thể thao tập gym đựng đồ",
+    "spec": {
+      "articleType": [
+        "Duffel Bag"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "note": "Túi trống du lịch gym"
+  },
+  {
+    "id": "h079",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "túi xách công sở nữ màu đen đựng tài liệu",
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Túi xách công sở"
+  },
+  {
+    "id": "h080",
+    "category": "Túi & Balo",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "túi bao tử đeo hông cá tính",
+    "spec": {
+      "articleType": [
+        "Waist Pouch"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "note": "Túi bao tử đeo hông"
+  },
+  {
+    "id": "h081",
+    "category": "Đồng hồ",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "đồng hồ đeo tay nam mặt tròn dây da màu đen",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Đồng hồ nam dây da đen"
+  },
+  {
+    "id": "h082",
+    "category": "Đồng hồ",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "dong ho nam day da mau den",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h083",
+    "category": "Đồng hồ",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "đồng hồ nam kim loại thép không gỉ màu bạc",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Silver",
+        "Steel"
+      ]
+    },
+    "note": "Đồng hồ nam dây thép bạc"
+  },
+  {
+    "id": "h084",
+    "category": "Đồng hồ",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "dong ho nam day kim loai",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Silver",
+        "Steel"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h085",
+    "category": "Đồng hồ",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "đồng hồ nữ mặt nhỏ dây kim loại màu vàng hồng",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Gold",
+        "Silver",
+        "Pink"
+      ]
+    },
+    "note": "Đồng hồ nữ mặt nhỏ"
+  },
+  {
+    "id": "h086",
+    "category": "Đồng hồ",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "dong ho nu mau trang thanh lich",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h087",
+    "category": "Đồng hồ",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "đồng hồ nam phong cách thể thao chống nước",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Đồng hồ thể thao nam"
+  },
+  {
+    "id": "h088",
+    "category": "Đồng hồ",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "đồng hồ thời trang nữ mặt số đính đá màu bạc",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "note": "Đồng hồ nữ đính đá"
+  },
+  {
+    "id": "h089",
+    "category": "Đồng hồ",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "đồng hồ nam mặt vuông dây cao su",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Đồng hồ nam mặt vuông"
+  },
+  {
+    "id": "h090",
+    "category": "Đồng hồ",
+    "has_diacritics": true,
+    "style": "context",
+    "query": "đồng hồ công sở nam thanh lịch sang trọng",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "note": "Đồng hồ công sở"
+  },
+  {
+    "id": "h091",
+    "category": "Phụ kiện",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "kính râm nam phi công mắt đen thời trang",
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Kính râm phi công"
+  },
+  {
+    "id": "h092",
+    "category": "Phụ kiện",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "kinh ram nam den",
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Không dấu"
+  },
+  {
+    "id": "h093",
+    "category": "Phụ kiện",
+    "has_diacritics": true,
+    "style": "colloquial",
+    "query": "kính mát nữ mắt mèo sành điệu",
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Từ đồng nghĩa 'kính mát'"
+  },
+  {
+    "id": "h094",
+    "category": "Phụ kiện",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "thắt lưng da nam khóa kim màu đen",
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Thắt lưng da nam"
+  },
+  {
+    "id": "h095",
+    "category": "Phụ kiện",
+    "has_diacritics": false,
+    "style": "no_accent",
+    "query": "day nit nam da bo",
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown",
+        "Black"
+      ]
+    },
+    "note": "Phương ngữ 'dây nịt', không dấu"
+  },
+  {
+    "id": "h096",
+    "category": "Phụ kiện",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "cà vạt nam lụa tơ tằm màu xanh navy lịch lãm",
+    "spec": {
+      "articleType": [
+        "Ties"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue",
+        "Blue"
+      ]
+    },
+    "note": "Cà vạt lụa xanh navy"
+  },
+  {
+    "id": "h097",
+    "category": "Phụ kiện",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "mũ lưỡi trai thể thao nam màu đen",
+    "spec": {
+      "articleType": [
+        "Caps"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "note": "Mũ lưỡi trai"
+  },
+  {
+    "id": "h098",
+    "category": "Phụ kiện",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "khăn quàng cổ len mùa đông ấm áp cho nữ",
+    "spec": {
+      "articleType": [
+        "Scarves",
+        "Mufflers"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "note": "Khăn quàng cổ len"
+  },
+  {
+    "id": "h099",
+    "category": "Phụ kiện",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "bông tai bạc nữ hình tròn đính đá lấp lánh",
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "note": "Hoa tai bông tai"
+  },
+  {
+    "id": "h100",
+    "category": "Phụ kiện",
+    "has_diacritics": true,
+    "style": "natural",
+    "query": "dây chuyền bạc nữ mặt trái tim tinh tế",
+    "spec": {
+      "articleType": [
+        "Necklace and Chains",
+        "Pendant"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "note": "Dây chuyền bạc nữ"
+  }
+]

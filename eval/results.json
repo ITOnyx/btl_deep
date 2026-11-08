@@ -1,0 +1,1060 @@
+{
+  "timestamp": "2026-11-08 23:06:09",
+  "q1_paired": {
+    "g_test": {
+      "recall@1": 0.003875968992248062,
+      "recall@5": 0.03488372093023256,
+      "recall@10": 0.059689922480620154,
+      "recall@10_ci": [
+        0.046511627906976744,
+        0.07364341085271318
+      ],
+      "mrr": 0.022754410368193898,
+      "mrr_ci": [
+        0.017992088823758166,
+        0.02736322812451745
+      ],
+      "median_rank": 999999.0
+    },
+    "g_full_ef128": {
+      "recall@1": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0015503875968992248,
+      "recall@10_ci": [
+        0.0,
+        0.003875968992248062
+      ],
+      "mrr": 0.0008268156683449522,
+      "mrr_ci": [
+        0.00044320135460383913,
+        0.0012478693600802082
+      ],
+      "median_rank": 999999.0
+    },
+    "g_full_ef64": {
+      "recall@1": 0.0,
+      "recall@5": 0.0,
+      "recall@10": 0.0015503875968992248,
+      "recall@10_ci": [
+        0.0,
+        0.003875968992248062
+      ],
+      "mrr": 0.0007185447040529017,
+      "mrr_ci": [
+        0.000366089203062335,
+        0.001126461797562191
+      ],
+      "median_rank": 999999.0
+    }
+  },
+  "q2_attributes": {
+    "accented": {
+      "g_test": {
+        "strict": {
+          "precision@10": 0.39672131147540984,
+          "hit@10": 0.9508196721311475,
+          "ap@10": 0.38104978542722495
+        },
+        "family": {
+          "precision@10": 0.5311475409836065,
+          "hit@10": 0.9672131147540983,
+          "ap@10": 0.4882233725305545
+        }
+      },
+      "g_full": {
+        "strict": {
+          "precision@10": 0.6049180327868854,
+          "hit@10": 0.8688524590163934,
+          "ap@10": 0.5044821753838147
+        },
+        "family": {
+          "precision@10": 0.7278688524590164,
+          "hit@10": 0.8852459016393442,
+          "ap@10": 0.6615814467863648
+        }
+      }
+    },
+    "unaccented": {
+      "g_test": {
+        "strict": {
+          "precision@10": 0.08196721311475409,
+          "hit@10": 0.2459016393442623,
+          "ap@10": 0.07535713253121529
+        },
+        "family": {
+          "precision@10": 0.11475409836065573,
+          "hit@10": 0.29508196721311475,
+          "ap@10": 0.09378979096192211
+        }
+      },
+      "g_full": {
+        "strict": {
+          "precision@10": 0.10983606557377049,
+          "hit@10": 0.21311475409836064,
+          "ap@10": 0.08349531615925058
+        },
+        "family": {
+          "precision@10": 0.14918032786885246,
+          "hit@10": 0.22950819672131148,
+          "ap@10": 0.12736989331251627
+        }
+      }
+    },
+    "restored": {
+      "g_test": {
+        "strict": {
+          "precision@10": 0.39016393442622954,
+          "hit@10": 0.9180327868852459,
+          "ap@10": 0.3735643140073273
+        },
+        "family": {
+          "precision@10": 0.5163934426229507,
+          "hit@10": 0.9344262295081968,
+          "ap@10": 0.4735187147111426
+        }
+      },
+      "g_full": {
+        "strict": {
+          "precision@10": 0.5770491803278689,
+          "hit@10": 0.8360655737704918,
+          "ap@10": 0.4790020817069997
+        },
+        "family": {
+          "precision@10": 0.7000000000000001,
+          "hit@10": 0.8524590163934426,
+          "ap@10": 0.6359966172261253
+        }
+      }
+    }
+  },
+  "q3_handwritten": {
+    "accented": {
+      "g_test": {
+        "strict": {
+          "precision@10": 0.24600000000000002,
+          "hit@10": 0.61,
+          "ap@10": 0.24124255952380952
+        },
+        "family": {
+          "precision@10": 0.29100000000000004,
+          "hit@10": 0.64,
+          "ap@10": 0.28073197751322754
+        }
+      },
+      "g_full": {
+        "strict": {
+          "precision@10": 0.352,
+          "hit@10": 0.58,
+          "ap@10": 0.28754894179894175
+        },
+        "family": {
+          "precision@10": 0.3950000000000001,
+          "hit@10": 0.59,
+          "ap@10": 0.336084126984127
+        }
+      }
+    },
+    "unaccented": {
+      "g_test": {
+        "strict": {
+          "precision@10": 0.07,
+          "hit@10": 0.22,
+          "ap@10": 0.049698790627362065
+        },
+        "family": {
+          "precision@10": 0.09399999999999999,
+          "hit@10": 0.26,
+          "ap@10": 0.07249297052154195
+        }
+      },
+      "g_full": {
+        "strict": {
+          "precision@10": 0.085,
+          "hit@10": 0.26,
+          "ap@10": 0.058813095238095234
+        },
+        "family": {
+          "precision@10": 0.11,
+          "hit@10": 0.28,
+          "ap@10": 0.0807436507936508
+        }
+      }
+    },
+    "restored": {
+      "g_test": {
+        "strict": {
+          "precision@10": 0.3440000000000001,
+          "hit@10": 0.76,
+          "ap@10": 0.3420886227639203
+        },
+        "family": {
+          "precision@10": 0.3900000000000001,
+          "hit@10": 0.79,
+          "ap@10": 0.38379001165280924
+        }
+      },
+      "g_full": {
+        "strict": {
+          "precision@10": 0.4700000000000001,
+          "hit@10": 0.77,
+          "ap@10": 0.38202116402116393
+        },
+        "family": {
+          "precision@10": 0.531,
+          "hit@10": 0.78,
+          "ap@10": 0.45951666666666663
+        }
+      }
+    }
+  },
+  "q4_image_to_image": {
+    "n_queries": 1290,
+    "same_category_and_gender": {
+      "precision@10": 0.6982945736434109,
+      "hit@10": 0.9441860465116279,
+      "ap@10": 0.6869792472329156
+    },
+    "same_category_gender_and_colour": {
+      "precision@10": 0.1569767441860465,
+      "hit@10": 0.6124031007751938,
+      "ap@10": 0.22993836950513769
+    }
+  },
+  "filtered_retrieval": {
+    "q2": {
+      "n_queries": 61,
+      "unfiltered_precision@10": 0.6049180327868854,
+      "filtered_precision@10": 0.8524590163934426,
+      "relaxation_rate": 0.09836065573770492
+    },
+    "q3": {
+      "n_queries": 100,
+      "unfiltered_precision@10": 0.352,
+      "filtered_precision@10": 0.5810000000000001,
+      "relaxation_rate": 0.49
+    }
+  },
+  "error_analysis": {
+    "top20_errors": [
+      {
+        "item_id": "15970",
+        "masterCategory": "Unknown",
+        "articleType": "Shirts",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "1855",
+        "masterCategory": "Unknown",
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "25947",
+        "masterCategory": "Unknown",
+        "articleType": "Scarves",
+        "gender": "Women",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "8746",
+        "masterCategory": "Unknown",
+        "articleType": "Flip Flops",
+        "gender": "Unisex",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "25382",
+        "masterCategory": "Unknown",
+        "articleType": "Innerwear Vests",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "46086",
+        "masterCategory": "Unknown",
+        "articleType": "Sports Shoes",
+        "gender": "Women",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "36137",
+        "masterCategory": "Unknown",
+        "articleType": "Sports Shoes",
+        "gender": "Women",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "44725",
+        "masterCategory": "Unknown",
+        "articleType": "Flip Flops",
+        "gender": "Women",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "38405",
+        "masterCategory": "Unknown",
+        "articleType": "Belts",
+        "gender": "Women",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "50574",
+        "masterCategory": "Unknown",
+        "articleType": "Trunk",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "52223",
+        "masterCategory": "Unknown",
+        "articleType": "Necklace and Chains",
+        "gender": "Women",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "6280",
+        "masterCategory": "Unknown",
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "35587",
+        "masterCategory": "Unknown",
+        "articleType": "Sandals",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "27270",
+        "masterCategory": "Unknown",
+        "articleType": "Kurtas",
+        "gender": "Women",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "6046",
+        "masterCategory": "Unknown",
+        "articleType": "Shirts",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "42045",
+        "masterCategory": "Unknown",
+        "articleType": "Casual Shoes",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "4986",
+        "masterCategory": "Unknown",
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "52488",
+        "masterCategory": "Unknown",
+        "articleType": "Camisoles",
+        "gender": "Women",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "19582",
+        "masterCategory": "Unknown",
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "item_id": "18808",
+        "masterCategory": "Unknown",
+        "articleType": "Belts",
+        "gender": "Men",
+        "rank": 999999,
+        "r10": 0.0,
+        "mrr": 0.0
+      }
+    ],
+    "top15_category_confusions": [
+      {
+        "true": "Tshirts",
+        "predicted": "Handbags",
+        "count": 69
+      },
+      {
+        "true": "Tshirts",
+        "predicted": "Backpacks",
+        "count": 61
+      },
+      {
+        "true": "Handbags",
+        "predicted": "Backpacks",
+        "count": 57
+      },
+      {
+        "true": "Kurtas",
+        "predicted": "Backpacks",
+        "count": 48
+      },
+      {
+        "true": "Heels",
+        "predicted": "Backpacks",
+        "count": 40
+      },
+      {
+        "true": "Watches",
+        "predicted": "Accessory Gift Set",
+        "count": 38
+      },
+      {
+        "true": "Sports Shoes",
+        "predicted": "Duffel Bag",
+        "count": 37
+      },
+      {
+        "true": "Casual Shoes",
+        "predicted": "Duffel Bag",
+        "count": 33
+      },
+      {
+        "true": "Tops",
+        "predicted": "Backpacks",
+        "count": 32
+      },
+      {
+        "true": "Casual Shoes",
+        "predicted": "Handbags",
+        "count": 29
+      },
+      {
+        "true": "Shirts",
+        "predicted": "Belts",
+        "count": 28
+      },
+      {
+        "true": "Shirts",
+        "predicted": "Handbags",
+        "count": 24
+      },
+      {
+        "true": "Sports Shoes",
+        "predicted": "Backpacks",
+        "count": 20
+      },
+      {
+        "true": "Watches",
+        "predicted": "Backpacks",
+        "count": 20
+      },
+      {
+        "true": "Casual Shoes",
+        "predicted": "Backpacks",
+        "count": 19
+      }
+    ],
+    "top10_color_confusions": [
+      {
+        "true": "Black",
+        "predicted": "Purple",
+        "count": 82
+      },
+      {
+        "true": "Blue",
+        "predicted": "Purple",
+        "count": 57
+      },
+      {
+        "true": "White",
+        "predicted": "Purple",
+        "count": 54
+      },
+      {
+        "true": "Blue",
+        "predicted": "Black",
+        "count": 46
+      },
+      {
+        "true": "Pink",
+        "predicted": "Purple",
+        "count": 45
+      },
+      {
+        "true": "Green",
+        "predicted": "Purple",
+        "count": 44
+      },
+      {
+        "true": "Brown",
+        "predicted": "Purple",
+        "count": 43
+      },
+      {
+        "true": "White",
+        "predicted": "Black",
+        "count": 36
+      },
+      {
+        "true": "Grey",
+        "predicted": "Black",
+        "count": 34
+      },
+      {
+        "true": "Brown",
+        "predicted": "Black",
+        "count": 34
+      }
+    ],
+    "accessories_error_rate": 0.9960629921259843,
+    "accessories_count": 254
+  },
+  "subgroup_breakdown": {
+    "master_category": [
+      {
+        "masterCategory": "Unknown",
+        "n": 1290,
+        "recall10": 0.059689922480620154,
+        "mrr": 0.022754410368193898
+      }
+    ],
+    "article_type": [
+      {
+        "articleType": "Tshirts",
+        "n": 216,
+        "recall10": 0.004629629629629629,
+        "mrr": 0.00279697803915237
+      },
+      {
+        "articleType": "Shirts",
+        "n": 101,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Casual Shoes",
+        "n": 87,
+        "recall10": 0.0,
+        "mrr": 0.0033073092764728303
+      },
+      {
+        "articleType": "Watches",
+        "n": 81,
+        "recall10": 0.06172839506172839,
+        "mrr": 0.031055990160957087
+      },
+      {
+        "articleType": "Kurtas",
+        "n": 61,
+        "recall10": 0.0,
+        "mrr": 0.0045854989721276695
+      },
+      {
+        "articleType": "Sports Shoes",
+        "n": 59,
+        "recall10": 0.11864406779661017,
+        "mrr": 0.03919779437006927
+      },
+      {
+        "articleType": "Handbags",
+        "n": 59,
+        "recall10": 0.06779661016949153,
+        "mrr": 0.023307346222053108
+      },
+      {
+        "articleType": "Tops",
+        "n": 55,
+        "recall10": 0.0,
+        "mrr": 0.003050998088823154
+      },
+      {
+        "articleType": "Heels",
+        "n": 41,
+        "recall10": 0.0,
+        "mrr": 0.0024931411825325593
+      },
+      {
+        "articleType": "Wallets",
+        "n": 31,
+        "recall10": 0.03225806451612903,
+        "mrr": 0.014027815582528143
+      },
+      {
+        "articleType": "Sunglasses",
+        "n": 29,
+        "recall10": 0.13793103448275862,
+        "mrr": 0.0593443200498131
+      },
+      {
+        "articleType": "Briefs",
+        "n": 29,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Flip Flops",
+        "n": 27,
+        "recall10": 0.0,
+        "mrr": 0.0030300560931072235
+      },
+      {
+        "articleType": "Belts",
+        "n": 26,
+        "recall10": 0.07692307692307693,
+        "mrr": 0.03152492421144988
+      },
+      {
+        "articleType": "Backpacks",
+        "n": 24,
+        "recall10": 0.041666666666666664,
+        "mrr": 0.01430665882525938
+      },
+      {
+        "articleType": "Sandals",
+        "n": 23,
+        "recall10": 0.0,
+        "mrr": 0.00265086520285008
+      },
+      {
+        "articleType": "Socks",
+        "n": 23,
+        "recall10": 0.17391304347826086,
+        "mrr": 0.043997283717492744
+      },
+      {
+        "articleType": "Jeans",
+        "n": 18,
+        "recall10": 0.0,
+        "mrr": 0.0016835016835016836
+      },
+      {
+        "articleType": "Flats",
+        "n": 17,
+        "recall10": 0.0,
+        "mrr": 0.0011534025374855825
+      },
+      {
+        "articleType": "Bra",
+        "n": 16,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Shorts",
+        "n": 16,
+        "recall10": 0.375,
+        "mrr": 0.20054940032177854
+      },
+      {
+        "articleType": "Dresses",
+        "n": 15,
+        "recall10": 0.0,
+        "mrr": 0.008683006535947713
+      },
+      {
+        "articleType": "Formal Shoes",
+        "n": 14,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Sarees",
+        "n": 14,
+        "recall10": 0.5714285714285714,
+        "mrr": 0.14921322861593797
+      },
+      {
+        "articleType": "Trousers",
+        "n": 12,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Earrings",
+        "n": 12,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Caps",
+        "n": 10,
+        "recall10": 0.7,
+        "mrr": 0.2751190476190476
+      },
+      {
+        "articleType": "Clutches",
+        "n": 10,
+        "recall10": 0.1,
+        "mrr": 0.034376038671813325
+      },
+      {
+        "articleType": "Sweatshirts",
+        "n": 10,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Sweaters",
+        "n": 9,
+        "recall10": 0.5555555555555556,
+        "mrr": 0.22355699855699854
+      },
+      {
+        "articleType": "Kurtis",
+        "n": 8,
+        "recall10": 0.0,
+        "mrr": 0.005841386966174742
+      },
+      {
+        "articleType": "Tunics",
+        "n": 8,
+        "recall10": 0.0,
+        "mrr": 0.028702656992130676
+      },
+      {
+        "articleType": "Innerwear Vests",
+        "n": 8,
+        "recall10": 0.0,
+        "mrr": 0.0028178824721377914
+      },
+      {
+        "articleType": "Jackets",
+        "n": 8,
+        "recall10": 0.0,
+        "mrr": 0.006285310734463277
+      },
+      {
+        "articleType": "Track Pants",
+        "n": 7,
+        "recall10": 0.0,
+        "mrr": 0.011564625850340137
+      },
+      {
+        "articleType": "Ties",
+        "n": 7,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Nightdress",
+        "n": 6,
+        "recall10": 0.6666666666666666,
+        "mrr": 0.1546855921855922
+      },
+      {
+        "articleType": "Pendant",
+        "n": 6,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Trunk",
+        "n": 5,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Night suits",
+        "n": 5,
+        "recall10": 0.6,
+        "mrr": 0.19242424242424244
+      },
+      {
+        "articleType": "Capris",
+        "n": 5,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Cufflinks",
+        "n": 4,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Scarves",
+        "n": 4,
+        "recall10": 0.0,
+        "mrr": 0.009615384615384616
+      },
+      {
+        "articleType": "Dupatta",
+        "n": 4,
+        "recall10": 0.5,
+        "mrr": 0.07175925925925926
+      },
+      {
+        "articleType": "Skirts",
+        "n": 3,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Ring",
+        "n": 3,
+        "recall10": 0.0,
+        "mrr": 0.007575757575757576
+      },
+      {
+        "articleType": "Bangle",
+        "n": 3,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Accessory Gift Set",
+        "n": 3,
+        "recall10": 0.6666666666666666,
+        "mrr": 0.18095238095238095
+      },
+      {
+        "articleType": "Duffel Bag",
+        "n": 3,
+        "recall10": 0.6666666666666666,
+        "mrr": 0.18888888888888888
+      },
+      {
+        "articleType": "Kurta Sets",
+        "n": 3,
+        "recall10": 0.6666666666666666,
+        "mrr": 0.1259259259259259
+      },
+      {
+        "articleType": "Laptop Bag",
+        "n": 3,
+        "recall10": 0.0,
+        "mrr": 0.06204906204906205
+      },
+      {
+        "articleType": "Necklace and Chains",
+        "n": 3,
+        "recall10": 0.0,
+        "mrr": 0.008547008547008546
+      },
+      {
+        "articleType": "Leggings",
+        "n": 3,
+        "recall10": 0.0,
+        "mrr": 0.0035460992907801418
+      },
+      {
+        "articleType": "Stoles",
+        "n": 3,
+        "recall10": 0.6666666666666666,
+        "mrr": 0.139766081871345
+      },
+      {
+        "articleType": "Mobile Pouch",
+        "n": 2,
+        "recall10": 0.0,
+        "mrr": 0.02
+      },
+      {
+        "articleType": "Boxers",
+        "n": 2,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Sports Sandals",
+        "n": 2,
+        "recall10": 0.0,
+        "mrr": 0.03333333333333333
+      },
+      {
+        "articleType": "Lounge Pants",
+        "n": 2,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Churidar",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Bath Robe",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Baby Dolls",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Camisoles",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Bracelet",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.05263157894736842
+      },
+      {
+        "articleType": "Jewellery Set",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Patiala",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Mufflers",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.02
+      },
+      {
+        "articleType": "Messenger Bag",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Lounge Shorts",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Jumpsuit",
+        "n": 1,
+        "recall10": 1.0,
+        "mrr": 0.2
+      },
+      {
+        "articleType": "Gloves",
+        "n": 1,
+        "recall10": 1.0,
+        "mrr": 0.1
+      },
+      {
+        "articleType": "Jeggings",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Shoe Accessories",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Stockings",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Rain Jacket",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.05555555555555555
+      },
+      {
+        "articleType": "Salwar",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Swimwear",
+        "n": 1,
+        "recall10": 1.0,
+        "mrr": 0.25
+      },
+      {
+        "articleType": "Travel Accessory",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.043478260869565216
+      },
+      {
+        "articleType": "Tracksuits",
+        "n": 1,
+        "recall10": 1.0,
+        "mrr": 1.0
+      },
+      {
+        "articleType": "Waistcoat",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.0
+      },
+      {
+        "articleType": "Waist Pouch",
+        "n": 1,
+        "recall10": 0.0,
+        "mrr": 0.023809523809523808
+      }
+    ]
+  },
+  "latency": {
+    "text_to_image": {
+      "n_queries": 200,
+      "p50_ms": 23.785749996022787,
+      "p95_ms": 42.866745004721416,
+      "p99_ms": 56.53513699857285,
+      "mean_ms": 27.25253149990749
+    },
+    "image_to_image": {
+      "n_queries": 200,
+      "p50_ms": 97.24619999178685,
+      "p95_ms": 158.07567999290765,
+      "p99_ms": 169.79928199245475,
+      "mean_ms": 103.83738949960389
+    }
+  }
+}
