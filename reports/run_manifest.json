@@ -1,0 +1,34 @@
+{
+  "phase": 1,
+  "timestamp": "2026-11-08T20:21:42.962061",
+  "seed": 42,
+  "environment": {
+    "python_version": "3.12.0",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "cv2_version": "5.0.0",
+    "pillow_version": "10.2.0",
+    "pandas_version": "3.0.0",
+    "pyarrow_version": "25.0.1",
+    "imagehash_version": "4.3.2"
+  },
+  "thresholds_applied": {
+    "min_short_side": 224,
+    "blur_laplacian_var_threshold": 12.0,
+    "phash_hamming_threshold": 4,
+    "detect_banner": true
+  },
+  "counts": {
+    "raw_styles_rows": 44446,
+    "loaded_styles_rows": 44424,
+    "skipped_bad_lines": 22,
+    "missing_image_ids": 5,
+    "total_quarantined": 16754,
+    "quarantined_by_reason": {
+      "duplicate": 14414,
+      "blurry": 1286,
+      "banner": 935,
+      "low_res": 119
+    },
+    "final_catalog_items": 27665
+  }
+}
