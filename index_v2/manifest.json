@@ -1,0 +1,43 @@
+{
+  "pipeline": "Resize((224, 224), BILINEAR) + SiglipProcessor",
+  "created_at": "2026-11-09 00:54:05",
+  "total_items": 38646,
+  "embedding_dim": 1152,
+  "dtype": "float32",
+  "l2_normalized": true,
+  "checkpoint_path": "data/checkpoints_siglip-vit/best_model.pt",
+  "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+  "catalog_path": "data\\catalog\\catalog.parquet",
+  "catalog_hash": "bfaf6625e113e203e54b46aa157fd9325e7f3bb8daa75448f1ed3211f14e3519",
+  "index_type": "IndexHNSWFlat",
+  "faiss_params": {
+    "M": 32,
+    "ef_construction": 200,
+    "ef_search": 128,
+    "metric": "inner_product"
+  },
+  "files": {
+    "embeddings": {
+      "name": "image_embeddings_v2.npy",
+      "sha256": "ec02f2a62bae75b5e64deb4ded2fde6b4e2da7ab4b47807a620dcd7c44afa164",
+      "shape": [
+        38646,
+        1152
+      ]
+    },
+    "id_map": {
+      "name": "id_map_v2.json",
+      "count": 38646
+    },
+    "split": {
+      "name": "split_v2.json",
+      "test_count": 1290,
+      "unknown_count": 37356
+    },
+    "faiss_index": {
+      "name": "faiss_hnsw_index_v2.bin",
+      "sha256": "23a34b0db17e621ce4c907b3aca1c149228f15ac01016ac728a3430b35729c3f",
+      "ntotal": 38646
+    }
+  }
+}

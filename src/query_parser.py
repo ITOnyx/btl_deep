@@ -75,7 +75,7 @@ ARTICLE_PATTERNS = [
     (r"\b(ao kurta|kurta|kurti)\b", ["Kurtas", "Kurtis", "Kurta Sets"]),
     (r"\b(ao saree|saree|sari)\b", ["Sarees"]),
     # Quần & Váy
-    (r"\b(quan jean|quan bo|jean|bo)\b", ["Jeans"]),
+    (r"\b(quan jean|quan bo|jeans?)\b", ["Jeans"]),
     (r"\b(quan tay|quan au|quan cong so|trouser)\b", ["Trousers"]),
     (r"\b(quan kaki|kaki)\b", ["Trousers"]),
     (r"\b(quan short|quan dung|quan dui|short)\b", ["Shorts"]),

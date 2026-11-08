@@ -18,6 +18,7 @@ checkpoint*
 # Binary & artifacts
 *.npy
 *.npz
+*.bin
 *.faiss
 *.tar*
 *.zip
@@ -29,6 +30,9 @@ reports/contact_sheets/*.png
 # Index
 index/*
 !index/.gitkeep
+index_v2/*
+!index_v2/.gitkeep
+!index_v2/manifest.json
 
 # Temporary / OS
 .DS_Store
