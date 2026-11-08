@@ -21,7 +21,9 @@ checkpoint:
 image_filter:                 # CHỈ là giá trị khởi đầu; chốt sau khi tôi duyệt contact sheet
   min_short_side: 224
   blur_laplacian_var_threshold: 12.0
-  phash_hamming_threshold: 4
+  phash_hamming_threshold: 1
+  dedup_match_attributes: ["articleType", "gender", "baseColour"]
+  dedup_transitive: false
   detect_banner: true
 
 faiss:

@@ -1,5 +1,5 @@
 {
-  "phase": 1,
+  "phase": "1b",
   "timestamp": "2026-11-08T20:21:42.962061",
   "seed": 42,
   "environment": {
@@ -30,5 +30,27 @@
       "low_res": 119
     },
     "final_catalog_items": 27665
+  },
+  "timestamp_1b": "2026-11-08T20:29:14.636308",
+  "dedup_rules_1b": {
+    "phash_hamming_threshold": 1,
+    "match_attributes": [
+      "articleType",
+      "gender",
+      "baseColour"
+    ],
+    "transitive": false,
+    "representative_criteria": [
+      "short_side desc",
+      "blur_score desc",
+      "id asc"
+    ]
+  },
+  "counts_1b": {
+    "restored_images": 13226,
+    "final_quarantined_duplicates": 1188,
+    "total_active_quarantine": 3528,
+    "final_clean_catalog_items": 40891,
+    "under30_groups_count": 170
   }
 }
