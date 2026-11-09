@@ -1,0 +1,737 @@
+{
+  "meta": {
+    "num_runs": 5,
+    "queries_per_run": 200,
+    "images_per_run": 200,
+    "device": "cuda",
+    "gpu_env": {
+      "error": "could not convert string to float: '[N/A]'",
+      "background_processes": [
+        "12336, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe, [N/A]",
+        "15324, C:\\Windows\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe, [N/A]",
+        "15316, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe, [N/A]",
+        "1836, [Insufficient Permissions], [N/A]",
+        "16516, C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\157.0.4341.42\\msedgewebview2.exe, [N/A]",
+        "17284, C:\\Windows\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe, [N/A]",
+        "14624, C:\\Program Files\\WindowsApps\\MicrosoftWindows.Client.WebExperience_526.21100.40.0_x64__cw5n1h2txyewy\\WidgetBoard.exe, [N/A]",
+        "4752, C:\\Program Files\\WindowsApps\\Microsoft.Edge.GameAssist_1.0.4019.0_x64__8wekyb3d8bbwe\\EdgeGameAssist.exe, [N/A]",
+        "19356, C:\\Users\\nguye\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe, [N/A]",
+        "23020, C:\\Users\\nguye\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe, [N/A]",
+        "21220, C:\\Users\\nguye\\AppData\\Local\\Programs\\Antigravity IDE\\Antigravity IDE.exe, [N/A]",
+        "18216, C:\\Windows\\System32\\ShellHost.exe, [N/A]",
+        "19276, C:\\Program Files\\WindowsApps\\Claude_4.23118.0.0_x64__pzs8sxrjxfjjc\\app\\claude.exe, [N/A]",
+        "16760, C:\\Program Files\\WindowsApps\\Claude_4.23118.0.0_x64__pzs8sxrjxfjjc\\app\\claude.exe, [N/A]",
+        "25200, C:\\Users\\nguye\\AppData\\Local\\Programs\\Python\\Python312\\python.exe, [N/A]",
+        "25040, C:\\Users\\nguye\\AppData\\Local\\Programs\\Python\\Python312\\python.exe, [N/A]"
+      ]
+    },
+    "fp16": true,
+    "batch_size": 1,
+    "seed": 42,
+    "timestamp": "2026-11-09 12:52:43"
+  },
+  "components": {
+    "parse_query": {
+      "mean": {
+        "median": 1.3,
+        "min": 1.21,
+        "max": 2.14,
+        "all_runs": [
+          1.23,
+          1.3,
+          2.14,
+          1.99,
+          1.21
+        ]
+      },
+      "p50": {
+        "median": 1.05,
+        "min": 1.03,
+        "max": 2.01,
+        "all_runs": [
+          1.03,
+          1.04,
+          2.01,
+          1.88,
+          1.05
+        ]
+      },
+      "p95": {
+        "median": 2.56,
+        "min": 2.31,
+        "max": 3.37,
+        "all_runs": [
+          2.56,
+          2.36,
+          3.37,
+          3.04,
+          2.31
+        ]
+      },
+      "p99": {
+        "median": 3.38,
+        "min": 2.68,
+        "max": 4.67,
+        "all_runs": [
+          3.38,
+          2.72,
+          4.67,
+          4.14,
+          2.68
+        ]
+      }
+    },
+    "filter_candidates": {
+      "mean": {
+        "median": 0.68,
+        "min": 0.63,
+        "max": 0.98,
+        "all_runs": [
+          0.68,
+          0.63,
+          0.98,
+          0.93,
+          0.67
+        ]
+      },
+      "p50": {
+        "median": 0.39,
+        "min": 0.28,
+        "max": 0.62,
+        "all_runs": [
+          0.3,
+          0.44,
+          0.62,
+          0.39,
+          0.28
+        ]
+      },
+      "p95": {
+        "median": 2.26,
+        "min": 1.86,
+        "max": 2.75,
+        "all_runs": [
+          2.12,
+          1.86,
+          2.75,
+          2.38,
+          2.26
+        ]
+      },
+      "p99": {
+        "median": 3.09,
+        "min": 2.55,
+        "max": 4.25,
+        "all_runs": [
+          3.09,
+          2.81,
+          4.1,
+          4.25,
+          2.55
+        ]
+      }
+    },
+    "encode_text": {
+      "mean": {
+        "median": 30.41,
+        "min": 27.37,
+        "max": 62.14,
+        "all_runs": [
+          30.41,
+          27.37,
+          62.14,
+          56.32,
+          28.89
+        ]
+      },
+      "p50": {
+        "median": 25.17,
+        "min": 23.47,
+        "max": 56.04,
+        "all_runs": [
+          25.17,
+          23.47,
+          56.04,
+          50.42,
+          24.52
+        ]
+      },
+      "p95": {
+        "median": 61.28,
+        "min": 48.17,
+        "max": 93.95,
+        "all_runs": [
+          61.28,
+          48.17,
+          93.95,
+          93.56,
+          49.96
+        ]
+      },
+      "p99": {
+        "median": 86.21,
+        "min": 72.76,
+        "max": 143.03,
+        "all_runs": [
+          86.21,
+          72.76,
+          143.03,
+          120.59,
+          75.61
+        ]
+      }
+    },
+    "dense_topk_gpu": {
+      "mean": {
+        "median": 2.53,
+        "min": 2.08,
+        "max": 2.83,
+        "all_runs": [
+          2.83,
+          2.08,
+          2.73,
+          2.53,
+          2.17
+        ]
+      },
+      "p50": {
+        "median": 1.39,
+        "min": 1.24,
+        "max": 1.63,
+        "all_runs": [
+          1.39,
+          1.24,
+          1.63,
+          1.52,
+          1.38
+        ]
+      },
+      "p95": {
+        "median": 5.02,
+        "min": 4.94,
+        "max": 5.72,
+        "all_runs": [
+          4.99,
+          5.02,
+          5.72,
+          4.94,
+          5.26
+        ]
+      },
+      "p99": {
+        "median": 7.21,
+        "min": 5.69,
+        "max": 7.58,
+        "all_runs": [
+          7.23,
+          5.69,
+          7.21,
+          7.58,
+          5.88
+        ]
+      }
+    },
+    "sparse_bm25": {
+      "mean": {
+        "median": 4.34,
+        "min": 4.26,
+        "max": 6.41,
+        "all_runs": [
+          4.34,
+          4.27,
+          6.41,
+          6.2,
+          4.26
+        ]
+      },
+      "p50": {
+        "median": 3.77,
+        "min": 3.73,
+        "max": 6.16,
+        "all_runs": [
+          3.73,
+          3.77,
+          6.16,
+          6.03,
+          3.74
+        ]
+      },
+      "p95": {
+        "median": 8.01,
+        "min": 7.27,
+        "max": 8.84,
+        "all_runs": [
+          8.01,
+          7.27,
+          8.84,
+          8.81,
+          7.96
+        ]
+      },
+      "p99": {
+        "median": 10.08,
+        "min": 8.98,
+        "max": 12.0,
+        "all_runs": [
+          10.08,
+          9.27,
+          12.0,
+          11.58,
+          8.98
+        ]
+      }
+    },
+    "rrf_merge": {
+      "mean": {
+        "median": 0.21,
+        "min": 0.2,
+        "max": 0.33,
+        "all_runs": [
+          0.2,
+          0.21,
+          0.32,
+          0.33,
+          0.21
+        ]
+      },
+      "p50": {
+        "median": 0.17,
+        "min": 0.17,
+        "max": 0.31,
+        "all_runs": [
+          0.17,
+          0.17,
+          0.31,
+          0.3,
+          0.17
+        ]
+      },
+      "p95": {
+        "median": 0.4,
+        "min": 0.4,
+        "max": 0.53,
+        "all_runs": [
+          0.4,
+          0.42,
+          0.4,
+          0.53,
+          0.4
+        ]
+      },
+      "p99": {
+        "median": 0.62,
+        "min": 0.53,
+        "max": 0.98,
+        "all_runs": [
+          0.53,
+          0.58,
+          0.83,
+          0.98,
+          0.62
+        ]
+      }
+    },
+    "total_breakdown": {
+      "mean": {
+        "median": 39.68,
+        "min": 35.87,
+        "max": 74.72,
+        "all_runs": [
+          39.68,
+          35.87,
+          74.72,
+          68.29,
+          37.41
+        ]
+      },
+      "p50": {
+        "median": 32.96,
+        "min": 32.12,
+        "max": 68.12,
+        "all_runs": [
+          32.53,
+          32.12,
+          68.12,
+          62.42,
+          32.96
+        ]
+      },
+      "p95": {
+        "median": 72.72,
+        "min": 58.09,
+        "max": 113.11,
+        "all_runs": [
+          72.72,
+          58.09,
+          113.11,
+          105.73,
+          62.5
+        ]
+      },
+      "p99": {
+        "median": 101.76,
+        "min": 88.6,
+        "max": 161.31,
+        "all_runs": [
+          101.76,
+          90.94,
+          161.31,
+          130.88,
+          88.6
+        ]
+      }
+    }
+  },
+  "configs": {
+    "config_0": {
+      "mean": {
+        "median": 58.87,
+        "min": 33.96,
+        "max": 73.21,
+        "all_runs": [
+          33.96,
+          58.87,
+          73.21,
+          67.76,
+          38.07
+        ]
+      },
+      "p50": {
+        "median": 58.56,
+        "min": 30.67,
+        "max": 67.6,
+        "all_runs": [
+          30.67,
+          58.56,
+          67.6,
+          62.85,
+          32.21
+        ]
+      },
+      "p95": {
+        "median": 99.88,
+        "min": 53.24,
+        "max": 110.53,
+        "all_runs": [
+          53.24,
+          110.53,
+          99.88,
+          101.23,
+          68.26
+        ]
+      },
+      "p99": {
+        "median": 144.14,
+        "min": 73.58,
+        "max": 160.83,
+        "all_runs": [
+          73.58,
+          160.83,
+          153.77,
+          144.14,
+          102.49
+        ]
+      }
+    },
+    "config_1": {
+      "mean": {
+        "median": 69.17,
+        "min": 33.15,
+        "max": 73.91,
+        "all_runs": [
+          33.15,
+          69.17,
+          69.88,
+          73.91,
+          35.1
+        ]
+      },
+      "p50": {
+        "median": 62.17,
+        "min": 28.0,
+        "max": 68.08,
+        "all_runs": [
+          28.0,
+          62.17,
+          64.68,
+          68.08,
+          30.78
+        ]
+      },
+      "p95": {
+        "median": 99.4,
+        "min": 60.66,
+        "max": 114.54,
+        "all_runs": [
+          62.75,
+          114.54,
+          99.4,
+          104.81,
+          60.66
+        ]
+      },
+      "p99": {
+        "median": 135.97,
+        "min": 77.5,
+        "max": 151.76,
+        "all_runs": [
+          77.5,
+          145.5,
+          135.97,
+          151.76,
+          128.47
+        ]
+      }
+    },
+    "config_2": {
+      "mean": {
+        "median": 66.2,
+        "min": 31.08,
+        "max": 72.03,
+        "all_runs": [
+          31.08,
+          68.62,
+          72.03,
+          66.2,
+          36.23
+        ]
+      },
+      "p50": {
+        "median": 60.98,
+        "min": 28.89,
+        "max": 66.13,
+        "all_runs": [
+          28.89,
+          61.09,
+          66.13,
+          60.98,
+          32.3
+        ]
+      },
+      "p95": {
+        "median": 93.73,
+        "min": 44.34,
+        "max": 112.92,
+        "all_runs": [
+          44.34,
+          112.92,
+          103.09,
+          93.73,
+          64.0
+        ]
+      },
+      "p99": {
+        "median": 145.64,
+        "min": 74.41,
+        "max": 165.29,
+        "all_runs": [
+          74.41,
+          146.78,
+          165.29,
+          145.64,
+          86.78
+        ]
+      }
+    },
+    "config_3": {
+      "mean": {
+        "median": 69.84,
+        "min": 32.72,
+        "max": 94.01,
+        "all_runs": [
+          32.72,
+          69.84,
+          94.01,
+          86.5,
+          34.33
+        ]
+      },
+      "p50": {
+        "median": 65.11,
+        "min": 28.63,
+        "max": 77.22,
+        "all_runs": [
+          28.63,
+          65.11,
+          77.22,
+          76.0,
+          30.71
+        ]
+      },
+      "p95": {
+        "median": 117.23,
+        "min": 58.71,
+        "max": 176.73,
+        "all_runs": [
+          58.79,
+          117.23,
+          176.73,
+          139.97,
+          58.71
+        ]
+      },
+      "p99": {
+        "median": 125.08,
+        "min": 82.36,
+        "max": 288.8,
+        "all_runs": [
+          82.36,
+          125.08,
+          288.8,
+          268.22,
+          100.2
+        ]
+      }
+    },
+    "config_4": {
+      "mean": {
+        "median": 6.27,
+        "min": 4.27,
+        "max": 8.08,
+        "all_runs": [
+          5.27,
+          6.27,
+          8.08,
+          7.17,
+          4.27
+        ]
+      },
+      "p50": {
+        "median": 6.19,
+        "min": 3.61,
+        "max": 7.22,
+        "all_runs": [
+          4.47,
+          6.19,
+          7.22,
+          6.85,
+          3.61
+        ]
+      },
+      "p95": {
+        "median": 10.17,
+        "min": 8.7,
+        "max": 13.65,
+        "all_runs": [
+          10.32,
+          8.7,
+          13.65,
+          10.17,
+          8.99
+        ]
+      },
+      "p99": {
+        "median": 11.69,
+        "min": 10.45,
+        "max": 18.09,
+        "all_runs": [
+          11.37,
+          10.45,
+          18.09,
+          13.33,
+          11.69
+        ]
+      }
+    },
+    "config_5": {
+      "mean": {
+        "median": 70.84,
+        "min": 37.12,
+        "max": 110.36,
+        "all_runs": [
+          37.12,
+          72.42,
+          70.84,
+          110.36,
+          39.06
+        ]
+      },
+      "p50": {
+        "median": 61.74,
+        "min": 33.58,
+        "max": 65.39,
+        "all_runs": [
+          33.58,
+          65.11,
+          65.39,
+          61.74,
+          34.89
+        ]
+      },
+      "p95": {
+        "median": 112.07,
+        "min": 62.6,
+        "max": 129.05,
+        "all_runs": [
+          62.6,
+          116.9,
+          112.07,
+          129.05,
+          68.82
+        ]
+      },
+      "p99": {
+        "median": 142.44,
+        "min": 92.16,
+        "max": 1444.35,
+        "all_runs": [
+          92.17,
+          142.44,
+          142.75,
+          1444.35,
+          92.16
+        ]
+      }
+    }
+  },
+  "image_to_image": {
+    "mean": {
+      "median": 121.82,
+      "min": 89.84,
+      "max": 140.85,
+      "all_runs": [
+        89.84,
+        121.82,
+        131.4,
+        118.79,
+        140.85
+      ]
+    },
+    "p50": {
+      "median": 85.87,
+      "min": 80.65,
+      "max": 127.82,
+      "all_runs": [
+        85.87,
+        113.09,
+        127.82,
+        80.65,
+        84.99
+      ]
+    },
+    "p95": {
+      "median": 178.25,
+      "min": 137.22,
+      "max": 219.23,
+      "all_runs": [
+        137.22,
+        196.16,
+        219.23,
+        178.25,
+        175.52
+      ]
+    },
+    "p99": {
+      "median": 280.17,
+      "min": 179.5,
+      "max": 1500.77,
+      "all_runs": [
+        179.5,
+        253.19,
+        280.17,
+        1447.25,
+        1500.77
+      ]
+    }
+  }
+}

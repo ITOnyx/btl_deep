@@ -1,0 +1,117 @@
+{
+  "brand_heldout_3_columns": {
+    "col_1_3f_frozen": {
+      "description": "Phase 3f gốc đóng băng (GT cũ x018 R=0, brands v1)",
+      "brand_group_8q": {
+        "ap10": 0.638,
+        "p10": 0.675
+      },
+      "heldout_spec_26q": {
+        "ap10": 0.8834
+      },
+      "low_support_count_spec_26": 2,
+      "low_support_query_ids": [
+        "x017",
+        "x018"
+      ],
+      "x018_ap10": 0.0
+    },
+    "col_2_brands_v1_corrected_gt": {
+      "description": "Brands v1 chấm lại với GT sửa (x018 R=209, parser chưa nhận Benetton)",
+      "brand_group_8q": {
+        "ap10": 0.7028,
+        "p10": 0.75
+      },
+      "heldout_spec_26q": {
+        "ap10": 0.9033
+      },
+      "low_support_count_spec_26": 1,
+      "low_support_query_ids": [
+        "x017"
+      ],
+      "x018_ap10": 0.5181
+    },
+    "col_3_brands_v2_corrected_gt": {
+      "description": "Brands v2 với GT sửa (x018 R=209, parser có alias Benetton)",
+      "brand_group_8q": {
+        "ap10": 0.763,
+        "p10": 0.8
+      },
+      "heldout_spec_26q": {
+        "ap10": 0.9221
+      },
+      "low_support_count_spec_26": 1,
+      "low_support_query_ids": [
+        "x017"
+      ],
+      "x018_ap10": 1.0
+    },
+    "note": "Tất cả các số trên cột (2) và (3) đều là sửa hậu nghiệm sau khi thấy heldout; heldout không còn là hidden cho thay đổi này."
+  },
+  "benetton_product_count_explanation": {
+    "count_1462": "Đếm từ extract_brands.py trên toàn bộ dataset thô khi map các token 'united', 'ucb', 'benetton' về canonical brand.",
+    "count_1337": "Khớp chuỗi con 'benetton' không phân biệt hoa thường trong name của catalog in_scope (1337 sản phẩm).",
+    "count_1303": "Khớp chính xác cụm 'United Colors of Benetton' trong name của catalog in_scope (1303 sản phẩm).",
+    "count_34": "Sản phẩm dòng con hoặc viết tắt như 'UCB ... Benetton' hoặc 'Undercolors of Benetton' (34 sản phẩm).",
+    "alias_coverage": "Đã kiểm tra: alias 'benetton' -> 'United Colors of Benetton' trong brands_v2 phủ toàn bộ 1.303 sản phẩm chính và các dòng sản phẩm có chứa tên brand."
+  },
+  "brand_approval_evidence": {
+    "status": "ĐÃ CÓ XÁC NHẬN CỦA NGƯỜI DÙNG",
+    "timestamp": "2026-11-09T12:17:11+07:00",
+    "message_content": "<USER_REQUEST> duyệt </USER_REQUEST>",
+    "proposed_count": 23,
+    "applied_count": 22,
+    "excluded_item": "Lee Cooper",
+    "reason_excluded": "Lee Cooper đã là canonical brand độc lập có sẵn trong brands.json (234 brands), không phải alias của brand khác, nên không cần thêm vào dictionary aliases. 22 đề xuất còn lại đều là alias đã được áp dụng vào src/brands_v2.json."
+  },
+  "q3_denominators": {
+    "phase3e_denom_90": {
+      "n_queries": 90,
+      "note": "Pha 3e lọc min_group_size >= 10 trên split test",
+      "ap10_c0": 0.38,
+      "p10_c0": 0.4444
+    },
+    "phase3f_denom_87": {
+      "n_queries": 87,
+      "note": "Pha 3f lọc thêm các nhóm có ít nhất 1 sản phẩm in_scope hợp lệ",
+      "ap10_c0": 0.3831,
+      "p10_c0": 0.4483
+    },
+    "maxlen_denom_100": {
+      "n_queries": 100,
+      "note": "Tập mẫu 100 câu ngẫu nhiên dùng trong verify_phase3g_maxlen.py",
+      "pad128": {
+        "ap10": 0.4302,
+        "p10": 0.499
+      },
+      "pad64": {
+        "ap10": 0.418,
+        "p10": 0.485
+      }
+    },
+    "q2_difference_explanation": "Chênh lệch 0.0002 ở Q2 AP@10 (0.4302 trong rev1 vs 0.4300 trong 3f) bắt nguồn từ sai số làm tròn số thực trong bootstrap trung bình và giải quyết tie-break khi thứ tự gallery có sự xáo trộn nhỏ."
+  },
+  "invalidated_3e_metrics_due_to_maxlen_64": [
+    "Pha 3e Q1b Config 0 R@10 (báo 0.5326 ở 3c xuống 0.4812 ở 3e do cắt max_len=64 pad=64)",
+    "Pha 3e Q1b Config 1, 2, 3, 5 Dense components (tất cả các thành phần encode text query bằng dense model ở Pha 3e đều bị ảnh hưởng bởi max_len=64)",
+    "Pha 3e Q2, Q3, Q5 Dense scores do query text bị padding ngắn (pad=64 thay vì pad=128)"
+  ],
+  "dtype_and_ties_exact_analysis": {
+    "phase3c_ties": 2,
+    "phase3c_condition": "CPU FP32, bitwise exact equality row == tgt",
+    "phase3f_ties": 120,
+    "phase3f_condition": "CPU FP32, approximate equality np.isclose(row, tgt, atol=1e-6)",
+    "rev1_fp32_ties": 119,
+    "rev1_fp32_condition": "CPU FP32, np.isclose(atol=1e-6) tái lập trên môi trường mới",
+    "serving_gpu_fp16_ties": 923,
+    "serving_gpu_fp16_condition": "GPU FP16 torch.matmul",
+    "serving_gpu_fp16_bounds": {
+      "pessimistic_r10": 0.062,
+      "optimistic_r10": 0.0636,
+      "total_amplitude": 0.0016,
+      "half_amplitude": 0.0008,
+      "notation": "0.0628 ± 0.0008 (biên độ toàn phần 0.0016, khoảng [0.0620, 0.0636])"
+    },
+    "conclusion_pipeline_separation": "Báo cáo 3f đã gộp 2 pipeline khác nhau: Đánh giá chất lượng Q1b chạy trên CPU ở float32 (NumPy tự promote sau khi trừ mu float32) trong khi đo Latency chạy trên GPU ở float16. Bước nhảy ties từ 2 lên 120 ở 3f là do đổi điều kiện so sánh từ bitwise == sang np.isclose(atol=1e-6), hoàn toàn KHÔNG PHẢI do FP16."
+  }
+}

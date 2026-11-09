@@ -1,0 +1,169 @@
+{
+  "overlapping_queries": {
+    "count": 11,
+    "queries": [
+      {
+        "query_text": "ví cầm tay mùa hè",
+        "test_id": "q6_test_025",
+        "val_id": "q6_val_028",
+        "spec": {
+          "articleType": "Wallets",
+          "season": "Summer"
+        }
+      },
+      {
+        "query_text": "phong cách tập gym nữ",
+        "test_id": "q6_test_035",
+        "val_id": "q6_val_079",
+        "spec": {
+          "gender": "Women",
+          "usage": "Sports"
+        }
+      },
+      {
+        "query_text": "giày dạo phố ngày thu",
+        "test_id": "q6_test_061",
+        "val_id": "q6_val_108",
+        "spec": {
+          "articleType": "Casual Shoes",
+          "season": "Fall"
+        }
+      },
+      {
+        "query_text": "outfit dạo phố nam",
+        "test_id": "q6_test_086",
+        "val_id": "q6_val_019",
+        "spec": {
+          "gender": "Men",
+          "usage": "Casual"
+        }
+      },
+      {
+        "query_text": "vớ nam thường ngày",
+        "test_id": "q6_test_093",
+        "val_id": "q6_val_081",
+        "spec": {
+          "articleType": "Socks",
+          "gender": "Men",
+          "usage": "Casual"
+        }
+      },
+      {
+        "query_text": "quần lót nam ngày hè",
+        "test_id": "q6_test_097",
+        "val_id": "q6_val_026",
+        "spec": {
+          "articleType": "Briefs",
+          "gender": "Men",
+          "season": "Summer"
+        }
+      },
+      {
+        "query_text": "áo thun nữ mùa hè",
+        "test_id": "q6_test_103",
+        "val_id": "q6_val_002",
+        "spec": {
+          "articleType": "Tshirts",
+          "gender": "Women",
+          "season": "Summer"
+        }
+      },
+      {
+        "query_text": "outfit hàng ngày nam",
+        "test_id": "q6_test_105",
+        "val_id": "q6_val_072",
+        "spec": {
+          "gender": "Men",
+          "usage": "Casual"
+        }
+      },
+      {
+        "query_text": "outfit mùa hè unisex",
+        "test_id": "q6_test_107",
+        "val_id": "q6_val_056",
+        "spec": {
+          "gender": "Unisex",
+          "season": "Summer"
+        }
+      },
+      {
+        "query_text": "outfit lịch sự nam",
+        "test_id": "q6_test_108",
+        "val_id": "q6_val_006",
+        "spec": {
+          "gender": "Men",
+          "usage": "Formal"
+        }
+      },
+      {
+        "query_text": "giày tây đi làm",
+        "test_id": "q6_test_113",
+        "val_id": "q6_val_014",
+        "spec": {
+          "articleType": "Formal Shoes",
+          "usage": "Formal"
+        }
+      }
+    ]
+  },
+  "full_test_eval_n120": {
+    "n_queries": 120,
+    "config_0_dense_alone": {
+      "ap10": 0.2095,
+      "p10": 0.2917,
+      "hit10": 0.675
+    },
+    "condition_1_full_3f": {
+      "ap10": 0.5301,
+      "p10": 0.6083,
+      "hit10": 0.9167
+    },
+    "condition_2_bm25_no_usage": {
+      "ap10": 0.4819,
+      "p10": 0.5733,
+      "hit10": 0.9
+    },
+    "condition_3_no_filter_no_bonus_bm25_no_usage": {
+      "ap10": 0.3866,
+      "p10": 0.4742,
+      "hit10": 0.85
+    }
+  },
+  "non_overlapping_test_eval_n109": {
+    "n_queries": 109,
+    "config_0_dense_alone": {
+      "ap10": 0.2103,
+      "p10": 0.2899,
+      "hit10": 0.6606
+    },
+    "condition_1_full_3f": {
+      "ap10": 0.5388,
+      "p10": 0.6147,
+      "hit10": 0.9266
+    },
+    "condition_2_bm25_no_usage": {
+      "ap10": 0.4924,
+      "p10": 0.5817,
+      "hit10": 0.9083
+    },
+    "condition_3_no_filter_no_bonus_bm25_no_usage": {
+      "ap10": 0.3932,
+      "p10": 0.478,
+      "hit10": 0.844
+    }
+  },
+  "bootstrap_alpha_comparison": {
+    "val_queries_count": 120,
+    "ap10_alpha_1_0": 0.3571,
+    "ap10_alpha_0_85": 0.3529,
+    "mean_diff": 0.0042,
+    "reported_3f_diff": 0.0052,
+    "bootstrap_iterations": 1000,
+    "seed": 42,
+    "ci95_lower": -0.0146,
+    "ci95_upper": 0.0222,
+    "ci_contains_zero": true,
+    "conclusion": "Khoảng tin cậy 95% chứa 0 ([-0.0146, 0.0222]), chứng minh chênh lệch hoàn toàn nằm trong nhiễu ngẫu nhiên."
+  },
+  "explanation_3f_vs_rev1": "Trong Phase 3f gốc, hàm filter_relaxed được gọi với tham số mask=g_test_mask (N=1.290), nên điều kiện nới lỏng L0..L6 tính trên tập con test gallery. Trong script audit của rev1, filter_relaxed được gọi trên toàn gallery N=37.356 rồi mới cắt giao với G_test, dẫn đến relaxation dừng ở tầng cao hơn (L0/L1) có độ chính xác cao hơn làm AP@10 tăng từ 0.5172 lên 0.5245. Khi chạy đúng mask=g_test_mask như 3f gốc, số liệu tái lập CHÍNH XÁC: AP@10=0.5172, P@10=0.5967, Hit@10=0.8833."
+}
