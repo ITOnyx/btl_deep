@@ -718,14 +718,15 @@
       "reports/phase3f_errata.md": "de0464e29d42101267c8e1c59d8a84509c2b3b81371f1bdc0d3fc5f8aa452278",
       "reports/phase3f_errata_rev4.md": "47196c41a0d77961d9c34565cca9df08138270378d821245c9cdd7e933fa0123",
       "reports/phase3f_errata_rev3.md": "c61161d9242db6b9f5dede40b17336ff440a386310108605a80bff611080d8b1",
-      "reports/phase3g_padding_truncation_experiment.json": "e97e4f6b0cf0e54fb5372cc5d4d1cbbf3a5c1f76ff5e14e7e9d40db5b54fd16b",
+      "reports/phase3g_padding_truncation_experiment.json": "6e447ca2effa919533435b34f937aa05256ecf66dd1fe58e1fdd0c6b95dd616f",
       "reports/phase3g_slow_queries_telemetry.json": "7e7d2d345bfd43248071614c0f8df4190930c9591c0982e63927c0d0b243a92f",
       "reports/phase3g_do_bug_investigation.json": "d5393a1d6136c65cd35a66e29815157b183fc1c1bde79333b9a777116c62f3f2",
       "reports/phase3g_blind_ab_results.json": "0b0f82e4d283138916a315aa15fe3dea4546940cd602a65c2f15b68746535761",
-      "src/query_parser_v2.py": "03789c2103f7e4e02438a0bfa556e0fd834f5f4e728ff7defe945b7627cc86c1",
+      "src/query_parser_v2.py": "d975780ccc87a5da67405aa003bf71fde1af21d179a6b3616bf325bd514d4820",
       "src/check_do_queries.py": "cc0de9ea75f0eb1e3c1bd6b4a61d66e201d34206c671f721308ae2448f8aa1b4",
-      "src/experiment_padding_truncation.py": "17d23518b8df6e7683e77c00c075c3b7ea26b9ce0cc73c67d40c402efef0efd1",
-      "src/profile_image_latency_telemetry.py": "e4f8183c23a834cbf53a117bcf81ddcc8ba241f5857818ffb148d3f4642a7be7"
+      "src/experiment_padding_truncation.py": "c0c2afda012106b14f7b8a0f526b0655a33a8dfdf4f0839b084b204fd2396366",
+      "src/profile_image_latency_telemetry.py": "e4f8183c23a834cbf53a117bcf81ddcc8ba241f5857818ffb148d3f4642a7be7",
+      "src/check_keychain_details.py": "7e708d03dcb9e41842c1401e5f82177fe1a56496f6f07984526dde6e367a9bd2"
     }
   }
 }

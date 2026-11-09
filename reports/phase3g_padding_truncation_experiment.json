@@ -1,60 +1,69 @@
 {
-  "task": "Isolation of truncation vs padding length in SigLIP text encoding",
+  "task": "Isolation of truncation vs padding length on Train-Format Captions (matches 3f baseline)",
+  "query_format": "[{category}] {title} ({attrs})",
   "queries_count": 1290,
-  "caption_format": "[{category}] {title} ({attrs})",
   "results": {
     "full_128_pad_128": {
-      "g_test": {
+      "name": "Condition A: Full 128, Pad 128 (Colab 3f Baseline)",
+      "G_test": {
         "recall_at_1": 0.1116,
         "recall_at_5": 0.3543,
         "recall_at_10": 0.5225,
-        "mrr": 0.2363,
+        "mrr": 0.2362,
         "mean_rank": 35.15,
-        "median_rank": 10.0
+        "median_rank": 10.0,
+        "ties_count": 4
       },
-      "g_full": {
+      "G_full": {
         "recall_at_1": 0.0085,
         "recall_at_5": 0.038,
         "recall_at_10": 0.0628,
         "mrr": 0.03,
-        "mean_rank": 1038.21,
-        "median_rank": 272.5
+        "mean_rank": 1038.17,
+        "median_rank": 272.5,
+        "ties_count": 119
       }
     },
     "truncate_64_pad_128": {
-      "g_test": {
+      "name": "Condition B: Truncate 64, then Pad to 128",
+      "G_test": {
         "recall_at_1": 0.1682,
         "recall_at_5": 0.469,
         "recall_at_10": 0.6186,
         "mrr": 0.3095,
         "mean_rank": 21.56,
-        "median_rank": 6.0
+        "median_rank": 6.0,
+        "ties_count": 1
       },
-      "g_full": {
+      "G_full": {
         "recall_at_1": 0.0147,
         "recall_at_5": 0.062,
         "recall_at_10": 0.0969,
         "mrr": 0.0453,
-        "mean_rank": 644.08,
-        "median_rank": 171.0
+        "mean_rank": 644.1,
+        "median_rank": 171.0,
+        "ties_count": 75
       }
     },
     "truncate_64_pad_64": {
-      "g_test": {
+      "name": "Condition C: Truncate 64, Pad 64 (Short Sequence)",
+      "G_test": {
         "recall_at_1": 0.0233,
         "recall_at_5": 0.069,
         "recall_at_10": 0.1225,
         "mrr": 0.0592,
-        "mean_rank": 179.71,
-        "median_rank": 111.0
+        "mean_rank": 179.7,
+        "median_rank": 111.0,
+        "ties_count": 13
       },
-      "g_full": {
+      "G_full": {
         "recall_at_1": 0.0016,
         "recall_at_5": 0.0078,
         "recall_at_10": 0.0109,
         "mrr": 0.0066,
-        "mean_rank": 5204.82,
-        "median_rank": 3102.0
+        "mean_rank": 5204.84,
+        "median_rank": 3102.5,
+        "ties_count": 321
       }
     }
   }

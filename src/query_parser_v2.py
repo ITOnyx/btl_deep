@@ -1,15 +1,19 @@
 """
 QueryParser V2 (src/query_parser_v2.py)
-Phase 3g Rev5: Post-hoc parser with disambiguation for 'đồ' (clothing/item) vs 'đỏ' (Red),
-supporting both ACCENTED and UNACCENTED ("không dấu") queries.
+Phase 3g Rev5: Post-hoc parser with comprehensive disambiguation for 'đồ' / 'do' (apparel) vs 'đỏ' / 'do' (Red).
 
-Rules:
-1. Accented input: If query contains 'đồ' (grave accent), it represents apparel/items and is strictly PREVENTED
-   from matching the color 'Red' (unless an explicit 'đỏ' / 'red' indicator is also present).
-2. Unaccented input: The token 'do' ONLY matches color 'Red' if it stands immediately after:
-   - A color marker: "mau" / "màu", "sac" / "sắc", "tone", "tong" / "tông", OR
-   - A recognized product type name (tên loại SP), e.g. "ao", "quan", "vay", "dam", "giay", "dep", "tui", "dong ho", etc.
-   If 'do' stands alone or after words like "dung" ("dung do"), "di" ("do di bien"), "tap" ("do tap gym"), it is NOT color Red.
+Rules applied:
+1. Diacritics-aware check for accented text:
+   - If a token has grave accent 'đồ' (e.g. 'đồ đi biển', 'đồ tập gym', 'đồ mặc ở nhà', 'đựng đồ'),
+     it represents apparel/item and is STRICTLY PREVENTED from matching 'Red'.
+2. Unaccented text rule:
+   - When the input is unaccented (token is 'do'):
+     'do' is ONLY treated as the color Red if:
+     a) It directly follows 'mau' / 'màu' (e.g., 'mau do', 'màu do'), OR
+     b) It directly follows a known fashion product type noun (e.g., 'ao do', 'vay do', 'dam do',
+        'giay do', 'quan do', 'tui do', 'ao thun do', 'so mi do', 'dep do').
+   - If 'do' appears at the start of a query followed by non-apparel nouns/verbs (e.g., 'do tap gym',
+     'do di bien', 'do mac o nha', 'do the thao', 'do boi', 'do lot'), it is apparel, NOT Red!
 """
 
 import sys
@@ -23,6 +27,15 @@ from typing import Dict, List, Optional, Any, Tuple
 
 from src.query_parser import QueryParser, remove_diacritics
 
+# Common product type prefixes in Vietnamese (both accented and unaccented)
+PRODUCT_TYPE_PREFIXES = [
+    "ao", "áo", "quan", "quần", "vay", "váy", "dam", "đầm", "giay", "giày",
+    "dep", "dép", "tui", "túi", "balo", "ba lô", "that lung", "thắt lưng",
+    "vi", "ví", "mu", "mũ", "non", "nón", "khan", "khăn", "ca vat", "cà vạt",
+    "ao thun", "áo thun", "so mi", "sơ mi", "khoac", "khoác", "hoodie", "polo",
+    "short", "blazer", "vest", "chan vay", "chân váy", "sneaker", "sandal", "heels", "dong ho", "đồng hồ"
+]
+
 class QueryParserV2(QueryParser):
     def __init__(
         self,
@@ -31,69 +44,6 @@ class QueryParserV2(QueryParser):
         families_path: str = "eval/families.json"
     ):
         super().__init__(lexicon_path=lexicon_path, brands_path=brands_path, families_path=families_path)
-        
-        # Build comprehensive list of product type phrases (clean, unaccented, sorted by length desc)
-        sp_types = [
-            "ao thun", "ao so mi", "ao khoac", "ao len", "ao hoodie", "ao gio", "ao polo", "ao phong",
-            "ao", "quan jean", "quan tay", "quan kaki", "quan short", "quan dui", "quan bo", "quan",
-            "vay", "dam", "giay the thao", "giay cao got", "giay tay", "giay sandal", "giay luoi", "giay",
-            "dep", "tui xach", "tui deo cheo", "tui", "balo", "vi", "dong ho", "that lung", "that_lung",
-            "non", "mu", "kinh", "khan", "vo", "tat", "chan vay", "blazer", "cardigan", "sweater", "hoodie",
-            "jacket", "polo", "tshirt", "shirt", "dress", "skirt", "jeans", "pants", "shoes", "bag", "croptop"
-        ]
-        # Also add all article phrases from lexicon
-        for val_list in self.lexicon.get("article_types", {}).values():
-            for p in val_list:
-                sp_types.append(p)
-                
-        self.sp_types_clean = sorted(
-            list(set(remove_diacritics(x).lower().strip() for x in sp_types if x.strip())),
-            key=lambda x: len(x),
-            reverse=True
-        )
-        self.color_markers = {"mau", "sac", "tone", "tong"}
-
-    def _is_do_color(self, raw_query: str) -> bool:
-        """
-        Determines whether 'do' in the query is intended as color Red.
-        """
-        raw_lower = raw_query.lower()
-        # 1. If explicit 'đỏ' or foreign red words present
-        true_red_indicators = ["đỏ", "màu đỏ", "mau do", "màu do", "đỏ tươi", "đỏ thẫm", "do tuoi", "do tham", "red", "scarlet", "crimson"]
-        if any(re.search(rf"\b{re.escape(ind)}\b", raw_lower) for ind in true_red_indicators):
-            # But if there's explicit 'đồ' without explicit 'đỏ', check
-            words_raw = re.findall(r"\b\w+\b", raw_lower, flags=re.UNICODE)
-            has_do_grave = "đồ" in words_raw or any(w.startswith("đồ") for w in words_raw)
-            has_do_hoi = "đỏ" in words_raw or any(w.startswith("đỏ") for w in words_raw)
-            if has_do_grave and not has_do_hoi and not any(w in ["red", "scarlet", "crimson"] for w in words_raw):
-                return False
-            return True
-
-        # 2. Check unaccented / token 'do'
-        clean_q = remove_diacritics(raw_query).lower()
-        clean_words = clean_q.split()
-        if "do" not in clean_words:
-            return False
-
-        # If input explicitly has 'đồ' (grave accent), it's apparel
-        words_raw = re.findall(r"\b\w+\b", raw_lower, flags=re.UNICODE)
-        if "đồ" in words_raw or any(w.startswith("đồ") for w in words_raw):
-            return False
-
-        # For unaccented 'do', check preceding context
-        for m in re.finditer(r"\bdo\b", clean_q):
-            start = m.start()
-            prefix = clean_q[:start].strip()
-            if not prefix:
-                continue
-            prefix_words = prefix.split()
-            last_word = prefix_words[-1]
-            if last_word in self.color_markers:
-                return True
-            for sp in self.sp_types_clean:
-                if prefix.endswith(sp):
-                    return True
-        return False
 
     def parse(self, query: str) -> Dict[str, Any]:
         if not query or not query.strip():
@@ -111,13 +61,49 @@ class QueryParserV2(QueryParser):
             }
 
         raw_query = query.strip()
+        raw_lower = raw_query.lower()
         res = super().parse(raw_query)
 
-        # Apply do/đồ/đỏ disambiguation rule
+        # Check if 'Red' was assigned
         if res.get("baseColour") == "Red":
-            if not self._is_do_color(raw_query):
+            # 1. Accented check: If query contains 'đồ' (grave accent) and NOT 'đỏ' / 'màu đỏ'
+            words_raw = re.findall(r"\b\w+\b", raw_lower, flags=re.UNICODE)
+            has_do_grave = any(w in ["đồ", "đồ_bộ", "đựng_đồ"] or w == "đồ" for w in words_raw)
+            true_red_indicators_accented = ["đỏ", "màu đỏ", "đỏ tươi", "đỏ thẫm", "red", "scarlet", "crimson"]
+            has_explicit_red = any(re.search(rf"\b{ind}\b", raw_lower) for ind in true_red_indicators_accented)
+
+            if has_do_grave and not has_explicit_red:
                 res["baseColour"] = None
                 res["colour_family"] = None
+
+            # 2. Unaccented check: If query has unaccented 'do'
+            unaccented_query = remove_diacritics(raw_query)
+            if "do" in unaccented_query.split():
+                # 'do' is only valid as Red if it follows 'mau' / 'màu' OR a product type prefix
+                is_valid_red_context = False
+
+                # Case a: follows 'mau' / 'màu'
+                if re.search(r"\b(mau|màu)\s+do\b", unaccented_query):
+                    is_valid_red_context = True
+
+                # Case b: follows product type prefix
+                if not is_valid_red_context:
+                    for prefix in PRODUCT_TYPE_PREFIXES:
+                        p_norm = remove_diacritics(prefix)
+                        if re.search(rf"\b{re.escape(p_norm)}\s+do\b", unaccented_query):
+                            is_valid_red_context = True
+                            break
+
+                # If query explicitly contains genuine red in English or accented Vietnamese
+                if has_explicit_red:
+                    is_valid_red_context = True
+
+                if not is_valid_red_context:
+                    res["baseColour"] = None
+                    res["colour_family"] = None
+
+            # Recalculate confidence if colour was stripped
+            if res.get("baseColour") is None:
                 active_fields = [res.get("articleType"), res.get("gender"), res.get("usage"), res.get("season"), res.get("brand")]
                 matched_cnt = sum(1 for f in active_fields if f is not None)
                 res["confidence"] = round(min(1.0, matched_cnt * 0.25), 4)
@@ -125,21 +111,30 @@ class QueryParserV2(QueryParser):
         return res
 
 if __name__ == "__main__":
+    import sys
     sys.stdout.reconfigure(encoding='utf-8')
     parser = QueryParserV2()
     test_queries = [
-        "đồ đi biển",
-        "đồ tập gym",
-        "đồ mặc ở nhà cho nữ",
-        "túi xách nữ màu đỏ",
-        "ao do nam",
-        "do tap gym",
-        "do di bien",
-        "ao thun mau do",
-        "túi trống thể thao tập gym đựng đồ",
-        "tui trong the thao tap gym dung do"
+        ("đồ đi biển", None),
+        ("do di bien", None),
+        ("đồ tập gym", None),
+        ("do tap gym", None),
+        ("đồ mặc ở nhà cho nữ", None),
+        ("do mac o nha cho nu", None),
+        ("túi xách nữ màu đỏ", "Red"),
+        ("tui xach nu mau do", "Red"),
+        ("ao do nam", "Red"),
+        ("vay do nu", "Red"),
+        ("giay do nam", "Red"),
+        ("túi trống thể thao tập gym đựng đồ", None),
+        ("tui trong the thao tap gym dung do", None)
     ]
-    print("Testing QueryParserV2:")
-    for tq in test_queries:
+    print("Testing QueryParserV2 with Accented and Unaccented queries:")
+    all_pass = True
+    for tq, expected_col in test_queries:
         p = parser.parse(tq)
-        print(f"'{tq}' -> Colour: {p['baseColour']}, Type: {p['articleType']}, Gender: {p['gender']}, Usage: {p['usage']}")
+        actual = p["baseColour"]
+        passed = (actual == expected_col)
+        all_pass = all_pass and passed
+        print(f"  '{tq}' -> Colour: {actual} (Expected: {expected_col}) [{'PASS' if passed else 'FAIL'}]")
+    print(f"\nOverall Test Status: {'ALL PASSED' if all_pass else 'SOME FAILED'}")
