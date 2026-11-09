@@ -12,6 +12,8 @@ paths:
   index_dir: "index"
   reports_dir: "reports"
   eval_dir: "eval"
+  brands_path: "src/brands_v2.json"
+  brands_sha256: "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e"
 
 checkpoint:
   format: "pt_state_dict"              # save_pretrained | pt_state_dict | pt_full_model | big_vision
@@ -20,6 +22,7 @@ checkpoint:
   checkpoint_hash: "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d"
   embedding_dim: 1152
   max_text_length: 128
+  text_padding: "max_length"           # khớp code train colab padding='max_length'
 
 image_filter:                 # CHỈ là giá trị khởi đầu; chốt sau khi tôi duyệt contact sheet
   min_short_side: 224
@@ -44,6 +47,20 @@ eval:
   n_latency_queries: 200
   handwritten_queries: "eval/handwritten_queries.json"   # tôi tự viết, 50-100 câu
   min_group_size_for_queries: 10   # nhóm (articleType, gender[, baseColour]) nhỏ hơn thì không sinh truy vấn test
+  quality_device: "cpu"            # pipeline chuẩn đánh giá chất lượng (CPU Scorer centering)
+  quality_precision: "float32"     # chuẩn ma trận float32 bảo đảm tính tái lập bit-to-bit
+  latency_device: "cuda"           # pipeline phục vụ suy luận thời gian thực (VisualSearchEngine)
+  latency_precision: "float16"     # GPU PyTorch half-precision
+  tie_rule: "conservative"         # báo song song hoặc bi quan (pessimistic / conservative)
+
+scoring:
+  mu_gamma: 0.3                    # trọng số cộng điểm mềm (soft bonus) khi khớp thuộc tính danh mục/giới tính
+  csls: false                      # Cross-Domain Similarity Local Scaling (không kích hoạt)
+
+latency:
+  sla_metric: "p95"                # chỉ tiêu SLA chuẩn của hệ thống (AGENTS.md)
+  sla_ms: 200                      # ngưỡng trễ SLA (< 200 ms)
+  risk_metric: "p99"               # chỉ số rủi ro đuôi phân phối (tail risk metric)
 
 app:
   port: 8501
@@ -59,7 +76,7 @@ embedding:
   fp16: true
 
 inference:
-  phase: "3f"
+  phase: "3g"
   gamma: 0.3                      # winning parameter from validation grid
   alpha: 1.0                      # selected alpha*=1.0 (gap=0.0052 <= 0.0100 to save 170MB RAM)
   rrf_k: 60                       # fixed reciprocal rank fusion parameter
@@ -69,6 +86,5 @@ inference:
   enable_text_fusion: false       # frozen to false based on F3 rule
   use_usage: false                # independent filter verification flag
   use_season: false               # independent filter verification flag
-  filter_mode: "relaxed"          # "relaxed" | "soft" | "hard" | "none"
+  filter_mode: "relaxed"          # "relaxed" tương ứng C1, C2, C3, C5; "none" tương ứng C0 (Dense thuần); C4 là BM25 thuần
   scoring_mode: "mean_centered"   # mu_shared centering
-
