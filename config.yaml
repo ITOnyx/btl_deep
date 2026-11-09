@@ -58,9 +58,28 @@ scoring:
   csls: false                      # Cross-Domain Similarity Local Scaling (không kích hoạt)
 
 latency:
-  sla_metric: "p95"                # chỉ tiêu SLA chuẩn của hệ thống (AGENTS.md)
-  sla_ms: 200                      # ngưỡng trễ SLA (< 200 ms)
-  risk_metric: "p99"               # chỉ số rủi ro đuôi phân phối (tail risk metric)
+  sla_metric: "p95"
+  sla_ms: 200                  # giữ để tương thích code cũ
+  risk_metric: "p99"
+  min_runs: 5
+  warmup_queries: 20
+  flows:                       # SLA riêng từng luồng, không nới
+    text_to_image:  { sla_ms: 200 }
+    image_to_image: { sla_ms: 200 }
+    cir_catalog:    { sla_ms: 200 }
+    cir_upload:     { sla_ms: 200 }
+
+serving:
+  i2i_mode: "fast"             # fast (1 ảnh) | accurate (batch-2 TTA flip)
+  use_flip_aug: false          # chỉ true khi i2i_mode == accurate
+  gpu_preprocess: false        # chỉ bật sau khi qua kiểm tra tương đương
+  gpu_preprocess_min_cosine: 0.999
+
+eval:                          # thêm vào khối eval hiện có
+  gender_gt:
+    policy_file: "eval/gender_gt_policy.json"
+    official: "hybrid"         # hybrid | strict | relaxed
+    report_also: ["strict", "relaxed"]
 
 app:
   port: 8501

@@ -31,3 +31,10 @@ Chỉ tiêu: Recall@10 ≥ 0.85, mAP ≥ 0.75 (text→ảnh, KHÔNG lọc thuộ
 - Ngưỡng lọc chất lượng ảnh KHÔNG tự chốt: xuất contact sheet cho tôi duyệt rồi mới áp dụng.
 - Điểm mơ hồ có thể ảnh hưởng kết quả: dừng và hỏi.
 - Commit git sau mỗi pha (`git add -A && git commit -m "phase N: ..."`); không commit ảnh, embedding, index, checkpoint (dùng `.gitignore`).
+## Quy tắc SLA và Ground Truth giới tính
+- SLA tính theo từng luồng (text→ảnh, ảnh→ảnh, cir_catalog, cir_upload), mỗi luồng một dòng riêng. Không gộp luồng nhanh với luồng chậm để kéo p95.
+- Không nới `latency.flows.*.sla_ms` để báo "đạt". Không đạt thì ghi thẳng số đo và ghi rõ là không đạt.
+- Mỗi cấu hình latency đo >= `latency.min_runs` run độc lập, có warm-up, `torch.cuda.synchronize()` quanh forward; ghi đủ từng run (p50/p95/p99), không chỉ trung bình. Ghi nhiệt độ GPU nếu đọc được.
+- Tối ưu tiền xử lý chỉ được bật khi embedding mới khớp embedding gốc (cosine >= `serving.gpu_preprocess_min_cosine` trên >= 200 ảnh). Không khớp thì dừng và hỏi (luật 4).
+- Chính sách GT giới tính (`eval/gender_gt_policy.json`) phải được tạo và đóng băng (ghi sha256 vào `run_manifest.json`) TRƯỚC khi chấm điểm. Không sửa sau khi đã thấy kết quả. Báo cáo cả Hybrid (chính thức), Strict và Relaxed.
+- Luật 2 (index khớp checkpoint) áp dụng cả với `index_v2`: không rebuild index và không sửa embedding trong pha SLA/GT.

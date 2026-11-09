@@ -20,7 +20,7 @@
 | **8. Sửa Ground Truth màu & nhãn hiệu** | `ĐÃ XỬ LÝ` | Sửa `src/diag/compare_colour_gt.py` đọc cả `colour` và `brand` (với alias canonical). Bộ 26 câu heldout khớp 100% kỳ vọng: $x011$–$x018$ là 534, 547, 104, 104, 74, 607, 0, 209 trên $G_{full}$. |
 | **9. Grep audit `spec.get(...)`** | `ĐÃ XỬ LÝ` | Phát hiện 2 file script cũ (`run_phase4_all_verifications.py`, `diagnose_d8.py`) đọc nhầm `spec.get("baseColour")`. Toàn bộ mã nguồn phục vụ (`app/`, `src/`) không bị ảnh hưởng. |
 | **10. Phân rã delta AP@10 ($0.8834 \to 0.9631$)** | `ĐÃ XỬ LÝ` | Loại trừ $x025, x027, x028$ (truy vấn ngữ cảnh không nhãn cứng). Phân rã chuẩn: (a) alias Benetton $x018$ (+0.0385), (b) đổi mẫu số 26→25 (+0.0368), (c) ranking refinement (+0.0044). |
-| **11. Q3 P@10 Strict vs Relaxed Unisex** | `ĐÃ XỬ LÝ` | Đo trên cùng thứ hạng phục vụ: Strict GT (không Unisex) = 0.8490; Relaxed GT (có Unisex) = 0.8630. Xác nhận `filter_relaxed` không nới lỏng giới tính sang Unisex. |
+| **11. Q3 P@10 theo 3 chính sách GT** | `ĐÃ XỬ LÝ` | Đóng băng `eval/gender_gt_policy.json` (SHA-256 `9c0d2cb5...`). Đo trên 50 câu Q3: Hybrid = 0.9180 (chính thức), Relaxed = 0.9180, Strict = 0.9010. Xác nhận `filter_relaxed` không nới lỏng giới tính. |
 | **12. Độc lập đánh giá: Testset mới** | `ĐÃ XỬ LÝ` | Tạo bộ truy vấn mới `eval/unseen_testset_v2.json` (32 câu), niêm phong SHA-256 `90e09202736d47e61eaa284048e4fc0d63213b816d5333a8af2866b8fe691b31`. Đo 1 lần duy nhất: Mean AP@10 = 0.7864, P@10 = 0.8065. |
 | **13. Hiệu chỉnh kết luận A/B Testing** | `ĐÃ XỬ LÝ` | Ghi nhận 30 câu A/B thuộc DEV SET; sửa kết luận thành "không phát hiện thiên vị (n=30, sức mạnh thống kê thấp)". |
 | **14. Kiểm thử mask Key chain & Alignment** | `ĐÃ XỬ LÝ` | Viết unit test assert trực tiếp `raw_mask[10651] == False` và `raw_mask[16039] == False`; re-encode 3 ảnh mẫu cosine = 1.0000; query bằng ảnh Key chain rò rỉ = 0. Pytest PASS. |
@@ -181,19 +181,20 @@ Dựa trên số đo thực tế từ `eval/results_3f.json` và `phase4_verific
    - Tinh chỉnh trọng số Soft Bonus và BM25 RRF giúp AP@10 tăng từ $0.9587 \to 0.9631$.
    - Mức đóng góp: $0.9631 - 0.9587 = \mathbf{+0.00438}$ (xấp xỉ **+0.0044**, chiếm **5.5%** độ chênh lệch).
 
-### 3.3. Đo kiểm Q3 P@10 và Làm rõ Quy tắc Giới tính Unisex
-Đã đo lại P@10 trên cùng một danh sách kết quả xếp hạng phục vụ (Serving C5) của 50 câu viết tay Q3:
-- **Ground Truth Strict (Chặt chẽ - KHÔNG tính sản phẩm Unisex)**:
-  - $P@10 = \mathbf{0.8490}$
-- **Ground Truth Relaxed (Rộng - CÓ tính sản phẩm Unisex cho câu hỏi Nam/Nữ)**:
-  - $P@10 = \mathbf{0.8630}$
-  - Mức chênh lệch: $\Delta = +0.0140$ (do các sản phẩm phụ kiện như nón, balo Unisex thỏa mãn nhu cầu người dùng).
+### 3.3. Đo kiểm Q3 P@10 và Đóng băng Chính sách Ground Truth Giới tính
+Theo quy tắc SLA & Ground Truth, chính sách GT giới tính đã được khởi tạo và đóng băng tại `eval/gender_gt_policy.json` (SHA-256: `9c0d2cb5e19ab903ba597c73862c8ac98bbc29245721e686d40a8b550c6451c3`) TRƯỚC khi chấm điểm.
+Kết quả đo thực tế trên toàn bộ 50 câu viết tay Q3 qua cấu hình phục vụ (`SearchService.search_text` C5):
+- **Chính sách Hybrid (Chính thức - Apparel dùng Strict; Accessories/Footwear chấp nhận Unisex)**:
+  - $P@10 = \mathbf{0.9180}$
+- **Chính sách Relaxed (Nới lỏng - Cho phép Unisex trên toàn bộ danh mục)**:
+  - $P@10 = \mathbf{0.9180}$
+- **Chính sách Strict (Chặt chẽ - Tuyệt đối không tính Unisex cho truy vấn Nam/Nữ)**:
+  - $P@10 = \mathbf{0.9010}$
+  - Mức chênh lệch: $\Delta = +0.0170$ giữa Strict và Hybrid/Relaxed.
 - **Làm rõ cơ chế `AttributeIndex.get_relaxed_mask`**:
   - Mã nguồn trong `src/indexing/attribute_index.py` xác nhận: Cơ chế nới lỏng (`relaxed`) chỉ hạ bớt điều kiện về **loại sản phẩm (articleType)** hoặc **màu sắc (baseColour)** qua các tầng L0 $\to$ L3 khi kết quả bị rỗng.
   - **Giới tính (`gender`) KHÔNG BAO GIỜ bị nới lỏng sang Unisex trong bộ lọc cứng** (luôn áp dụng `gender == target_gender`).
-- **Đề xuất chuẩn hóa Ground Truth**:
-  - Đối với các mặt hàng thời trang mặc (áo, quần, đầm): Áp dụng Strict GT (Nam/Nữ riêng biệt).
-  - Đối với phụ kiện (balo, kính mát, nón, đồng hồ): Cho phép tính Unisex là Ground Truth hợp lệ.
+- **Đóng băng chính sách**: Chính sách **Hybrid** được chọn làm chuẩn chính thức theo đúng định hướng sản phẩm và tài liệu cấu hình `config.yaml` (`eval.gender_gt.official: "hybrid"`).
 
 ---
 
