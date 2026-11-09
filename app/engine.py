@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Any, Optional
 
 import yaml
+import numpy as np
 import pandas as pd
 from PIL import Image
 

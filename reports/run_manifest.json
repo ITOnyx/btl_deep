@@ -813,7 +813,10 @@
     "inference_3e": "a992efcdc02bb669506187b92e36a9f66e2b3a8644d1e822a63b09011eab924e",
     "verifications_phase4": "a9ddd1adf2bfb1bfe6f254ca6ae426ef62fe8c63b75ab5e93bb05b19857c1979",
     "latency_e2e_phase4": "8c3e40ca7574afb9666a48743cd1d3099827a9bb4a4f00f909ffc34a81b28908",
-    "audit_final_phase4": "967abf8edc30c7232a755c8820aefd26fc8f785e0ed639c5495a6b3fe0895987"
+    "audit_final_phase4": "967abf8edc30c7232a755c8820aefd26fc8f785e0ed639c5495a6b3fe0895987",
+    "fix_report_phase4": "9ec6a3fcf1d55e2a4c161c4c75366b48360826227f36d47d5ddc6c1c40353fd0",
+    "latency_optimizations_phase4": "c277316905ac79719a6fa2becfe35752104e301934e676b0025f956685b90fb0",
+    "app_engine_py": "9e0cf7e0d80a3b578e698aef0ac2af356063622d022914de8e96efbeb391f818"
   },
   "phase4_audit_final": {
     "timestamp": "2026-11-09T21:05:00",
@@ -836,6 +839,26 @@
       "reports/phase3/phase3f/phase3f_errata.md": "638e99cc0ff8a356b925257fab5d2915da8047d3b9598bb2b71cbea280622358",
       "reports/phase3/phase3e/phase3e_inference_only.md": "a992efcdc02bb669506187b92e36a9f66e2b3a8644d1e822a63b09011eab924e",
       "reports/phase2/phase2a/phase2a_findings.md": "8c60c1aab5765422555f4ba50cc9891959afb6a63c0685f539c63ec16e73dbb7"
+    }
+  },
+  "phase4_fix_and_audit": {
+    "timestamp": "2026-11-09T21:55:00",
+    "status": "COMPLETED_AUDIT_AND_FIX",
+    "description": "Comprehensive Audit & Fix Report addressing all user audit requirements",
+    "summary": {
+      "config_sync": "latency.sla_metric p95 confirmed; formula 38644 + 7 - 2 = 38649 verified",
+      "heldout_independence": "heldout_queries.json labeled as DEV SET due to post-hoc brand alias & parser fixes",
+      "colour_gt_bug": "13/26 spec queries affected by missing colour field in GT generator; all 26 verified",
+      "gallery_consistency": "Keychains 43230 & 42066 masked across all 5 search pathways; pytest passed 100%",
+      "latency_decomposition": "Thermal throttling hypothesis dismissed; 4 inference optimizations benchmarked",
+      "ab_permutation": "Seed 20261109 vs Seed 42 clarified; Wald-Wolfowitz Z=-2.55 p=0.0108 reported; no position bias",
+      "open_decisions": "3 decisions recorded for user sign-off (SLA CIR, SLA Image-Image, Wristbands)"
+    },
+    "files": {
+      "reports/phase4/phase4_fix_report.md": "9ec6a3fcf1d55e2a4c161c4c75366b48360826227f36d47d5ddc6c1c40353fd0",
+      "reports/phase4/phase4_latency_optimizations.json": "c277316905ac79719a6fa2becfe35752104e301934e676b0025f956685b90fb0",
+      "tests/test_keychain_masking_and_alignment.py": "e1792d3c42436498c09f101ecb854fe4bbf3d2b2368d8801e25fe404b87bbf47",
+      "app/engine.py": "9e0cf7e0d80a3b578e698aef0ac2af356063622d022914de8e96efbeb391f818"
     }
   }
 }
