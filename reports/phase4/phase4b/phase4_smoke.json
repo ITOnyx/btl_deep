@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-09 18:34:20",
+  "timestamp": "2026-11-09 19:35:49",
   "rule_7_verified": true,
   "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
   "gallery_size": 38644,
   "warmup_telemetry": {
     "warmup_queries_count": 5,
-    "warmup_duration_ms": 3592.39,
+    "warmup_duration_ms": 2459.29,
     "note": "CUDA kernels compiled and weights resident in VRAM prior to benchmark measurements."
   },
   "queries": [
@@ -15,13 +15,13 @@
       "query": "áo sơ mi nam trắng",
       "config": "c5",
       "latency_breakdown": {
-        "parse_ms": 1.62,
-        "filter_ms": 2.14,
-        "encode_ms": 111.69,
-        "search_ms": 12.69,
-        "total_ms": 128.22
+        "parse_ms": 1.06,
+        "filter_ms": 2.24,
+        "encode_ms": 41.88,
+        "search_ms": 10.6,
+        "total_ms": 55.82
       },
-      "total_latency_ms": 128.22,
+      "total_latency_ms": 55.82,
       "parsed": {
         "raw_query": "áo sơ mi nam trắng",
         "articleType": "Shirts",
@@ -157,13 +157,13 @@
       "query": "quan jean nam xanh",
       "config": "c5",
       "latency_breakdown": {
-        "parse_ms": 1.88,
-        "filter_ms": 1.75,
-        "encode_ms": 38.46,
-        "search_ms": 6.1,
-        "total_ms": 48.25
+        "parse_ms": 2.47,
+        "filter_ms": 1.05,
+        "encode_ms": 62.76,
+        "search_ms": 7.82,
+        "total_ms": 74.16
       },
-      "total_latency_ms": 48.25,
+      "total_latency_ms": 74.16,
       "parsed": {
         "raw_query": "quan jean nam xanh",
         "articleType": "Jeans",
@@ -301,13 +301,13 @@
       "query": "giày nike nam",
       "config": "c5",
       "latency_breakdown": {
-        "parse_ms": 1.06,
-        "filter_ms": 1.66,
-        "encode_ms": 26.89,
-        "search_ms": 6.05,
-        "total_ms": 35.7
+        "parse_ms": 1.38,
+        "filter_ms": 2.12,
+        "encode_ms": 43.78,
+        "search_ms": 5.73,
+        "total_ms": 53.07
       },
-      "total_latency_ms": 35.7,
+      "total_latency_ms": 53.07,
       "parsed": {
         "raw_query": "giày nike nam",
         "articleType": null,
@@ -445,13 +445,13 @@
       "query": "túi xách nữ Lavie",
       "config": "c5",
       "latency_breakdown": {
-        "parse_ms": 1.36,
-        "filter_ms": 0.96,
-        "encode_ms": 23.53,
-        "search_ms": 5.04,
-        "total_ms": 30.95
+        "parse_ms": 1.08,
+        "filter_ms": 1.14,
+        "encode_ms": 22.3,
+        "search_ms": 4.52,
+        "total_ms": 29.09
       },
-      "total_latency_ms": 30.95,
+      "total_latency_ms": 29.09,
       "parsed": {
         "raw_query": "túi xách nữ Lavie",
         "articleType": "Handbags",
@@ -589,13 +589,13 @@
       "query": "đồ đi biển mùa hè",
       "config": "c5",
       "latency_breakdown": {
-        "parse_ms": 2.82,
-        "filter_ms": 0.08,
-        "encode_ms": 39.32,
-        "search_ms": 9.02,
-        "total_ms": 51.28
+        "parse_ms": 2.53,
+        "filter_ms": 0.07,
+        "encode_ms": 25.97,
+        "search_ms": 6.93,
+        "total_ms": 35.53
       },
-      "total_latency_ms": 51.28,
+      "total_latency_ms": 35.53,
       "parsed": {
         "raw_query": "đồ đi biển mùa hè",
         "articleType": null,
@@ -732,12 +732,13 @@
       "category": "image",
       "subtype": "image_shirt",
       "query_image": "data\\fashion-dataset\\images\\15970.jpg",
-      "product_desc": "Turtle Check Navy Blue Shirt",
+      "product_desc": "Turtle Check Men Navy Blue Shirt",
+      "product_articleType": "Shirts",
       "exclude_self_id": "15970",
       "self_excluded_successfully": true,
-      "total_latency_ms": 157.4,
+      "total_latency_ms": 132.08,
       "latency_breakdown": {
-        "total_ms": 157.4
+        "total_ms": 132.08
       },
       "top10_ids": [
         "20021",
@@ -848,12 +849,13 @@
       "category": "image",
       "subtype": "image_jeans",
       "query_image": "data\\fashion-dataset\\images\\39386.jpg",
-      "product_desc": "Peter England Blue Jeans",
+      "product_desc": "Peter England Men Party Blue Jeans",
+      "product_articleType": "Jeans",
       "exclude_self_id": "39386",
       "self_excluded_successfully": true,
-      "total_latency_ms": 164.88,
+      "total_latency_ms": 160.33,
       "latency_breakdown": {
-        "total_ms": 164.88
+        "total_ms": 160.33
       },
       "top10_ids": [
         "44579",
@@ -963,13 +965,131 @@
     {
       "category": "image",
       "subtype": "image_watch",
+      "query_image": "data\\fashion-dataset\\images\\59263.jpg",
+      "product_desc": "Titan Women Silver Watch",
+      "product_articleType": "Watches",
+      "exclude_self_id": "59263",
+      "self_excluded_successfully": true,
+      "total_latency_ms": 108.19,
+      "latency_breakdown": {
+        "total_ms": 108.19
+      },
+      "top10_ids": [
+        "45898",
+        "30036",
+        "56318",
+        "45188",
+        "39025",
+        "49328",
+        "25619",
+        "37481",
+        "25618",
+        "45922"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "45898",
+          "name": "Maxima Women White Dial Watch",
+          "score": 1.8541,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        },
+        {
+          "rank": 2,
+          "item_id": "30036",
+          "name": "SKAGEN DENMARK Women White Mother of Pearl Dial Watch 107SSCS",
+          "score": 1.8502,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        },
+        {
+          "rank": 3,
+          "item_id": "56318",
+          "name": "Fastrack Women White Dial Watch",
+          "score": 1.8487,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        },
+        {
+          "rank": 4,
+          "item_id": "45188",
+          "name": "CASIO ENTICER Women White Dial Analogue Watch A637",
+          "score": 1.8448,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        },
+        {
+          "rank": 5,
+          "item_id": "39025",
+          "name": "CASIO ENTICER Women White Dial Analogue Watch A636",
+          "score": 1.8424,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        },
+        {
+          "rank": 6,
+          "item_id": "49328",
+          "name": "DKNY Women White Dial Watch NY8283",
+          "score": 1.8409,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        },
+        {
+          "rank": 7,
+          "item_id": "25619",
+          "name": "Fastrack Women White Casual Watch",
+          "score": 1.8399,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        },
+        {
+          "rank": 8,
+          "item_id": "37481",
+          "name": "Esprit Women White Dial Watch",
+          "score": 1.836,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        },
+        {
+          "rank": 9,
+          "item_id": "25618",
+          "name": "Fastrack Women White Dial Watch N2298SM01",
+          "score": 1.8355,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        },
+        {
+          "rank": 10,
+          "item_id": "45922",
+          "name": "Maxima Women White Dial Watch",
+          "score": 1.8341,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Women"
+        }
+      ]
+    },
+    {
+      "category": "image",
+      "subtype": "image_tshirt",
       "query_image": "data\\fashion-dataset\\images\\1855.jpg",
-      "product_desc": "Q&Q Men Black Dial Watch",
+      "product_desc": "Inkfruit Mens Chain Reaction T-shirt",
+      "product_articleType": "Tshirts",
       "exclude_self_id": "1855",
       "self_excluded_successfully": true,
-      "total_latency_ms": 151.56,
+      "total_latency_ms": 159.02,
       "latency_breakdown": {
-        "total_ms": 151.56
+        "total_ms": 159.02
       },
       "top10_ids": [
         "1860",
@@ -1081,9 +1201,9 @@
       "subtype": "cir_color",
       "ref_image": "data\\fashion-dataset\\images\\15970.jpg",
       "modifier_text": "màu xanh navy",
-      "total_latency_ms": 86.06,
+      "total_latency_ms": 100.81,
       "latency_breakdown": {
-        "total_ms": 86.06
+        "total_ms": 100.81
       },
       "top10_ids": [
         "8740",
@@ -1195,9 +1315,9 @@
       "subtype": "cir_type",
       "ref_image": "data\\fashion-dataset\\images\\39386.jpg",
       "modifier_text": "quần short",
-      "total_latency_ms": 86.8,
+      "total_latency_ms": 130.33,
       "latency_breakdown": {
-        "total_ms": 86.8
+        "total_ms": 130.33
       },
       "top10_ids": [
         "30637",
@@ -1309,9 +1429,9 @@
       "subtype": "cir_style",
       "ref_image": "data\\fashion-dataset\\images\\15970.jpg",
       "modifier_text": "áo khoác jacket",
-      "total_latency_ms": 86.65,
+      "total_latency_ms": 110.9,
       "latency_breakdown": {
-        "total_ms": 86.65
+        "total_ms": 110.9
       },
       "top10_ids": [
         "57066",

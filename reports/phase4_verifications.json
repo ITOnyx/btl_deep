@@ -1,0 +1,430 @@
+{
+  "timestamp": "2026-11-09 19:34:30",
+  "task3_serving_re_eval": {
+    "post_hoc_status": "GHI_HAU_NGHIEM_POST_HOC",
+    "q2": {
+      "g_test": {
+        "reported_ap10": 0.9457,
+        "serving_ap10": 0.9457,
+        "serving_p10": 0.723
+      },
+      "g_full": {
+        "reported_ap10": 0.9982,
+        "serving_ap10": 0.9982,
+        "serving_p10": 0.9984
+      }
+    },
+    "q3": {
+      "g_test": {
+        "reported_ap10": 0.7635,
+        "serving_ap10": 0.7635,
+        "serving_p10": 0.5624
+      },
+      "g_full": {
+        "reported_ap10": 0.8443,
+        "serving_ap10": 0.8443,
+        "serving_p10": 0.8663
+      }
+    },
+    "q5": {
+      "g_test": {
+        "reported_ap10": 0.9491,
+        "serving_ap10": 0.9491,
+        "serving_p10": 0.2543
+      },
+      "g_full": {
+        "reported_ap10": 0.9523,
+        "serving_ap10": 0.9523,
+        "serving_p10": 0.874
+      }
+    },
+    "heldout": {
+      "g_test": {
+        "reported_ap10": 0.8816,
+        "serving_ap10": 0.8863,
+        "serving_p10": 0.768,
+        "valid_n": 25
+      },
+      "g_full": {
+        "reported_ap10": 0.9688,
+        "serving_ap10": 0.9701,
+        "serving_p10": 0.984,
+        "valid_n": 25
+      }
+    },
+    "brand_notification_tests": {
+      "quan jean nam xanh": {
+        "fired": false,
+        "parsed_brand": null,
+        "unparsed_tokens": [
+          "xanh"
+        ],
+        "message": ""
+      },
+      "do tap gym": {
+        "fired": false,
+        "parsed_brand": null,
+        "unparsed_tokens": [],
+        "message": ""
+      },
+      "túi xách Lavie nữ": {
+        "fired": true,
+        "parsed_brand": null,
+        "unparsed_tokens": [
+          "lavie"
+        ],
+        "message": "Thương hiệu 'Lavie' hiện không có trong catalog; hệ thống đang tự động nới lỏng và hiển thị các sản phẩm túi xách nữ có kiểu dáng tương tự."
+      },
+      "túi xách nữ Lavie": {
+        "fired": true,
+        "parsed_brand": null,
+        "unparsed_tokens": [
+          "lavie"
+        ],
+        "message": "Thương hiệu 'Lavie' hiện không có trong catalog; hệ thống đang tự động nới lỏng và hiển thị các sản phẩm túi xách nữ có kiểu dáng tương tự."
+      }
+    }
+  },
+  "task4_telemetry": {
+    "hypothesis_demoted": "Hạ nguyên nhân quá nhiệt (B.3) thành 'giả thuyết chưa tái lập' vì trong điều kiện đo lường chuẩn hóa với telemetry đầy đủ, không ghi nhận truy vấn nào > 500 ms.",
+    "sla_rule": "Không kết luận SLA từ 3 truy vấn ảnh khói (smoke test). Báo cáo SLA chuẩn hóa dựa trên 5 run benchmark 200 truy vấn (1.000 truy vấn tổng thể).",
+    "five_runs_telemetry": [
+      {
+        "run": 1,
+        "queries_count": 200,
+        "total_duration_s": 0.53,
+        "p50_ms": 1.69,
+        "p95_ms": 2.09,
+        "p99_ms": 2.49,
+        "max_ms": 73.52,
+        "queries_over_500ms_count": 0,
+        "gpu_telemetry_start": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        },
+        "gpu_telemetry_end": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        }
+      },
+      {
+        "run": 2,
+        "queries_count": 200,
+        "total_duration_s": 0.39,
+        "p50_ms": 1.51,
+        "p95_ms": 2.13,
+        "p99_ms": 2.61,
+        "max_ms": 2.68,
+        "queries_over_500ms_count": 0,
+        "gpu_telemetry_start": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        },
+        "gpu_telemetry_end": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        }
+      },
+      {
+        "run": 3,
+        "queries_count": 200,
+        "total_duration_s": 0.46,
+        "p50_ms": 1.75,
+        "p95_ms": 2.68,
+        "p99_ms": 3.12,
+        "max_ms": 3.45,
+        "queries_over_500ms_count": 0,
+        "gpu_telemetry_start": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        },
+        "gpu_telemetry_end": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        }
+      },
+      {
+        "run": 4,
+        "queries_count": 200,
+        "total_duration_s": 0.4,
+        "p50_ms": 1.36,
+        "p95_ms": 2.15,
+        "p99_ms": 2.46,
+        "max_ms": 2.72,
+        "queries_over_500ms_count": 0,
+        "gpu_telemetry_start": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        },
+        "gpu_telemetry_end": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        }
+      },
+      {
+        "run": 5,
+        "queries_count": 200,
+        "total_duration_s": 0.4,
+        "p50_ms": 1.55,
+        "p95_ms": 2.33,
+        "p99_ms": 2.63,
+        "max_ms": 2.74,
+        "queries_over_500ms_count": 0,
+        "gpu_telemetry_start": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        },
+        "gpu_telemetry_end": {
+          "temperature_c": 80.0,
+          "graphics_clock_mhz": 1732.0,
+          "memory_clock_mhz": 6000.0,
+          "memory_used_mb": 2243.0,
+          "memory_total_mb": 4096.0
+        }
+      }
+    ],
+    "total_queries_over_500ms": 0,
+    "overall_p95_range": [
+      2.09,
+      2.68
+    ],
+    "overall_max_latency_ms": 73.52
+  },
+  "task5_val_truncation": {
+    "protocol": "Tuning on split val (7,471 items, seed 42) to avoid data leakage onto G_test",
+    "explanation_rule": "Đã xóa bỏ hoặc đánh dấu 'giả thuyết chưa đo' đối với giải thích 'loại bỏ thuộc tính nhiễu'. Trên các câu truy vấn thực tế (độ dài <= 64 token), Condition B và Condition A hoàn toàn tương đương nhau.",
+    "val_results": {
+      "condition_a_full128_pad128": {
+        "mean_ap10": 0.4223,
+        "mean_p10": 0.4929
+      },
+      "condition_b_trunc64_pad128": {
+        "mean_ap10": 0.4223,
+        "mean_p10": 0.4929
+      },
+      "condition_c_trunc64_pad64": {
+        "mean_ap10": 0.2612,
+        "mean_p10": 0.3214
+      }
+    },
+    "conclusion": "Trên tập val, Condition A và Condition B đạt kết quả tương đương trên truy vấn người dùng (do các truy vấn đều <= 64 token); Condition C (pad 64) sụt giảm mạnh do lệch chiều dài vị trí huấn luyện (positional embedding 128)."
+  },
+  "task8_brand_c0": {
+    "ground_truth_note": "Condition A (cũ) loại trừ x018 vì so chuỗi strict 'Benetton' ra R=0 (chỉ có n=24/26 câu trên G_full, n=23/26 trên G_test). GT mới cập nhật x018=209 trên G_full (n=25/26 câu) và x018=7 trên G_test (n=24/26 câu).",
+    "heldout_brand_c0_eval": {
+      "all_8_brands": {
+        "mean_p10": 0.0625,
+        "mean_ap10": 0.0167
+      },
+      "valid_7_brands_excl_lavie": {
+        "mean_p10": 0.0714,
+        "mean_ap10": 0.0191
+      },
+      "comparison_with_c5": {
+        "c0_valid_7_p10": 0.0714,
+        "c5_valid_7_p10": 0.8,
+        "c0_valid_7_ap10": 0.0191,
+        "c5_valid_7_ap10": 0.872,
+        "delta_p10": 0.7286,
+        "delta_ap10": 0.8529
+      },
+      "details": [
+        {
+          "id": "x011",
+          "query": "áo thun Puma nam",
+          "brand": "Puma",
+          "R_new_gt": 534,
+          "c0_p10": 0.0,
+          "c0_ap10": 0.0,
+          "c0_hit10": 0.0,
+          "top10_retrieved": [
+            "3198",
+            "4294",
+            "6195",
+            "3347",
+            "31574",
+            "3866",
+            "48407",
+            "3064",
+            "4260",
+            "4293"
+          ]
+        },
+        {
+          "id": "x012",
+          "query": "giày Nike nam",
+          "brand": "Nike",
+          "R_new_gt": 547,
+          "c0_p10": 0.0,
+          "c0_ap10": 0.0,
+          "c0_hit10": 0.0,
+          "top10_retrieved": [
+            "13359",
+            "50764",
+            "13646",
+            "4069",
+            "22171",
+            "41858",
+            "57501",
+            "12475",
+            "39284",
+            "38787"
+          ]
+        },
+        {
+          "id": "x013",
+          "query": "giày Adidas nữ",
+          "brand": "Adidas",
+          "R_new_gt": 104,
+          "c0_p10": 0.0,
+          "c0_ap10": 0.0,
+          "c0_hit10": 0.0,
+          "top10_retrieved": [
+            "56967",
+            "45408",
+            "39203",
+            "59147",
+            "49597",
+            "41736",
+            "19038",
+            "54135",
+            "26179",
+            "33132"
+          ]
+        },
+        {
+          "id": "x014",
+          "query": "đồng hồ Fossil nam",
+          "brand": "Fossil",
+          "R_new_gt": 104,
+          "c0_p10": 0.0,
+          "c0_ap10": 0.0,
+          "c0_hit10": 0.0,
+          "top10_retrieved": [
+            "11179",
+            "40559",
+            "40520",
+            "51521",
+            "51552",
+            "31849",
+            "40501",
+            "40515",
+            "59246",
+            "40502"
+          ]
+        },
+        {
+          "id": "x015",
+          "query": "áo kurta Fabindia nam",
+          "brand": "Fabindia",
+          "R_new_gt": 74,
+          "c0_p10": 0.3,
+          "c0_ap10": 0.0867,
+          "c0_hit10": 1.0,
+          "top10_retrieved": [
+            "18985",
+            "13447",
+            "22324",
+            "19525",
+            "30784",
+            "30782",
+            "59132",
+            "27525",
+            "30750",
+            "12462"
+          ]
+        },
+        {
+          "id": "x016",
+          "query": "giày cao gót Catwalk",
+          "brand": "Catwalk",
+          "R_new_gt": 607,
+          "c0_p10": 0.2,
+          "c0_ap10": 0.0472,
+          "c0_hit10": 1.0,
+          "top10_retrieved": [
+            "47641",
+            "33111",
+            "45335",
+            "41726",
+            "20729",
+            "35530",
+            "13386",
+            "18548",
+            "51759",
+            "35816"
+          ]
+        },
+        {
+          "id": "x017",
+          "query": "túi xách Lavie nữ",
+          "brand": "Lavie",
+          "R_new_gt": 0,
+          "c0_p10": 0.0,
+          "c0_ap10": 0.0,
+          "c0_hit10": 0.0,
+          "top10_retrieved": [
+            "52633",
+            "57244",
+            "53706",
+            "53918",
+            "53692",
+            "38446",
+            "42851",
+            "25264",
+            "53695",
+            "27701"
+          ]
+        },
+        {
+          "id": "x018",
+          "query": "áo thun Benetton nam",
+          "brand": "Benetton",
+          "R_new_gt": 209,
+          "c0_p10": 0.0,
+          "c0_ap10": 0.0,
+          "c0_hit10": 0.0,
+          "top10_retrieved": [
+            "2036",
+            "48407",
+            "3261",
+            "7832",
+            "3347",
+            "4293",
+            "1903",
+            "31386",
+            "6947",
+            "4061"
+          ]
+        }
+      ]
+    }
+  }
+}

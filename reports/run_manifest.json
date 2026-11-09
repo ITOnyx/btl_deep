@@ -67,7 +67,7 @@
     "latency_text_to_image_p95_ms": 42.87,
     "latency_image_to_image_p95_ms": 158.08,
     "results_path": "eval/results.json",
-    "report_path": "reports/phase3/phase3_eval.md"
+    "report_path": "reports/phase3/phase3a/phase3_eval.md"
   },
   "phase3c_eval_v2": {
     "timestamp": "2026-11-09T01:07:38.921402",
@@ -102,7 +102,7 @@
     "files": {
       "results_v2_path": "eval/results_v2.json",
       "results_v2_sha256": "84e1cefa2b4e2642b3170d9d1f7ef597312dbc485ddfc82b2e5750f0e546c978",
-      "report_v2_path": "reports/phase3/phase3c_eval_v2.md",
+      "report_v2_path": "reports/phase3/phase3c/phase3c_eval_v2.md",
       "report_v2_sha256": "526feb15f70576194f80e442c30413afcccf7e99c4199842072c936717b38c23",
       "index_v2_manifest_path": "index_v2/manifest.json",
       "index_v2_manifest_sha256": "ddfce1831888d7a0970b57446939fa671dad04644cf916691677326be720b441"
@@ -138,7 +138,7 @@
     "files": {
       "results_v2b_path": "eval/results_v2b.json",
       "results_v2b_sha256": "b1dd9f9bd8b4bc2cc4d294788b75a69830ad1526b96d4d4b04c27c5596d2a86e",
-      "report_addendum_path": "reports/phase3/phase3d_addendum.md",
+      "report_addendum_path": "reports/phase3/phase3d/phase3d_addendum.md",
       "report_addendum_sha256": "4ddd2f7a464434edefe918393c722ae00255fb2fdca64006a2e7dcf9062f2600"
     }
   },
@@ -181,13 +181,15 @@
     "files": {
       "results_3e_path": "eval/results_3e.json",
       "results_3e_sha256": "dfb701e8ad861b3f84ee56a2468d4ce59e005b62d91acd87a878a5ec19df08c2",
-      "report_3e_path": "reports/phase3/phase3e_inference_only.md",
+      "report_3e_path": "reports/phase3/phase3e/phase3e_inference_only.md",
       "report_3e_sha256": "c58924dac25fb46d0a5487f9cdd379a98f67418f006769f982aae49175b8013d",
       "text_embeddings_v2_path": "index_v2/text_embeddings_v2.npy",
       "text_embeddings_v2_sha256": "e88989486a3aa8e7e7cebb4ea266419402d19659495b452d383c3909a125809d",
       "manual_ratings_heldout_path": "eval/manual_ratings_heldout.csv",
       "manual_ratings_heldout_sha256": "ed03caecacf6cd7864dd51b19874bccce1da0a9894e849d3e6afea9772d204ef"
-    }
+    },
+    "status": "SUPERSEDED_PARTIALLY_REJECTED",
+    "audit_note": "Mục 6 cũ chứa 5 ca thất bại không truy được nguồn (text_x002 áo sơ mi, x007 giày gót be, x015 bomber, x021 hoodie, visual_1855); đã chính thức đánh dấu 'KHÔNG TRUY ĐƯỢC NGUỒN, KHÔNG ĐÁNG TIN' và phục hồi danh sách 20 ca thật từ eval/results_3e.json."
   },
   "phase3f_reconciliation": {
     "timestamp": "2026-11-09T11:31:51",
@@ -210,16 +212,18 @@
       "eval/q6_queries.json": "10e388d3dc88ae7393a8e7b2549d672155bb1a18a992ae4455d791972855c96f",
       "eval/results_3f.json": "4cdf6375a45fff8f9c7db5afd3ce5d34c2a29fb8096769ac3e3c231771c26d60",
       "eval/ab_blind_heldout.csv": "f13e592f8a8f6df7a25dc471336e96acea85d9120d21d35c257fec8144ec1905",
-      "reports/phase3/phase3f_reconciliation.md": "499aa4084ce6d94c7ff880f61f078f93d2e320af222cd3446e4344fc0702a4e0",
-      "reports/phase3/phase3f_latency_benchmark.json": "7837d70eaa1f15938c2c4a5506c5b5904ff8b8c27f565b1b29355eaf1134fcf4",
-      "reports/phase3/q6_val_grid_results.json": "46a7672eeebf4d4f26f221c39c5dc72cec4ee2cc98b3079a679a482ddf2de16f",
+      "reports/phase3/phase3f/phase3f_reconciliation.md": "499aa4084ce6d94c7ff880f61f078f93d2e320af222cd3446e4344fc0702a4e0",
+      "reports/phase3/phase3f/phase3f_latency_benchmark.json": "7837d70eaa1f15938c2c4a5506c5b5904ff8b8c27f565b1b29355eaf1134fcf4",
+      "reports/phase3/phase3f/q6_val_grid_results.json": "46a7672eeebf4d4f26f221c39c5dc72cec4ee2cc98b3079a679a482ddf2de16f",
       "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005"
-    }
+    },
+    "status": "SUPERSEDED_BY_ERRATA_SERIES",
+    "audit_note": "Báo cáo 3f reconciliation chứa các sai sót: Benetton ghi R=0, gán ghép SLA p95 sai văn bản AGENTS.md, và tính toán số câu heldout n=24/23 do thiếu alias; toàn bộ đã bị bác bỏ/đính chính ở phase3f_errata (Rev1..Rev5)."
   },
   "phase3g_errata": {
     "timestamp": "2026-11-09T12:22:59.757685",
     "seed": 42,
-    "status": "BRANDS_V2_APPLIED_POST_APPROVAL",
+    "status": "SUPERSEDED_BY_REV2_TO_REV5",
     "brands_v1_sha256": "99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96",
     "brands_v2_sha256": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
     "summary": {
@@ -235,24 +239,25 @@
       "blind_ab_status": "SEALED_AWAITING_USER_RATING"
     },
     "files": {
-      "reports/phase3/brand_audit_3g.json": "8e182ebd2386a705b7cd405020bf2775fc9a1160c8db90680703ea42ece6b8f7",
-      "reports/phase3/brand_alias_proposal.csv": "879a2646fd081ec31990ea9e1664fe3df1b7e1e4b53b02f4e7c9020dfc4a0d4d",
+      "reports/phase3/phase3g/brand_audit_3g.json": "8e182ebd2386a705b7cd405020bf2775fc9a1160c8db90680703ea42ece6b8f7",
+      "reports/phase3/phase3g/brand_alias_proposal.csv": "879a2646fd081ec31990ea9e1664fe3df1b7e1e4b53b02f4e7c9020dfc4a0d4d",
       "src/brands.json": "99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96",
       "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
-      "reports/phase3/phase3g_brands_v2_eval.json": "daf3363c925f914940c731f0d761990e758da2b8f37add85f88aad1d1da97581",
-      "reports/phase3/phase3g_latency.json": "5cc220c4f1d6f932776d1cf7a885df38aabc97ddf26aa93b36b965bc96eb0a5f",
-      "reports/phase3/phase3g_fp16_ties.json": "d6c77183b468836c346cd34d0a392f809ca4b42c67ada39c134fe5c9dbcbb703",
+      "reports/phase3/phase3g/phase3g_brands_v2_eval.json": "daf3363c925f914940c731f0d761990e758da2b8f37add85f88aad1d1da97581",
+      "reports/phase3/phase3g/phase3g_latency.json": "5cc220c4f1d6f932776d1cf7a885df38aabc97ddf26aa93b36b965bc96eb0a5f",
+      "reports/phase3/phase3g/phase3g_fp16_ties.json": "d6c77183b468836c346cd34d0a392f809ca4b42c67ada39c134fe5c9dbcbb703",
       "reports/phase3/phase3g_maxlen.json": "06d93c3ac3d694532fbf730559377564159b16902d9ecb07d847cd6d2326c2c8",
-      "reports/phase3/phase3g_q6_audit.json": "a282c6e6fad96fd9981d218b81fba818aa9c7796955ec4b4d8c3f2ab0b7b9c15",
-      "reports/phase3/phase3f_errata.md": "d1f2448ad24350497781e75303825d5a06dfb57e4d805555a4597708b49432b2",
+      "reports/phase3/phase3g/phase3g_q6_audit.json": "a282c6e6fad96fd9981d218b81fba818aa9c7796955ec4b4d8c3f2ab0b7b9c15",
+      "reports/phase3/phase3f/phase3f_errata.md": "82d122e5a26521d698b031663aa2d83de551c9d3a37ed4e9669cc954d71d0860",
       "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005",
       "eval/ab_blind_heldout.csv": "f13e592f8a8f6df7a25dc471336e96acea85d9120d21d35c257fec8144ec1905"
-    }
+    },
+    "audit_note": "Bản nháp Errata vòng 1; đã được kế thừa và hoàn thiện ở các bản sau."
   },
   "phase3g_errata_rev2": {
     "timestamp": "2026-11-09T12:55:54",
     "seed": 42,
-    "status": "REV2_COMPLETED",
+    "status": "SUPERSEDED_BY_REV3_TO_REV5",
     "pipelines_dtypes": {
       "quality_evaluation_q1b_q6": {
         "text_encode_model": "GPU FP16 (model.half())",
@@ -292,25 +297,26 @@
       "fp16_ties_amplitude": 0.0016
     },
     "files": {
-      "reports/phase3/phase3f_errata.md": "d1f2448ad24350497781e75303825d5a06dfb57e4d805555a4597708b49432b2",
-      "reports/phase3/phase3f_errata_rev1.md": "613d8dcfa11c58fbedde5fa60477c1f116fcc600885ada4a2c7248ff11172791",
+      "reports/phase3/phase3f/phase3f_errata.md": "82d122e5a26521d698b031663aa2d83de551c9d3a37ed4e9669cc954d71d0860",
+      "reports/phase3/phase3f/phase3f_errata_rev1.md": "613d8dcfa11c58fbedde5fa60477c1f116fcc600885ada4a2c7248ff11172791",
       "reports/phase3/phase3g_latency_multi_run.json": "fa5582276e5a6825ca4546c0e247e34f69ce0843b8ec5382b90ccca80a1b5ebe",
-      "reports/phase3/phase3g_q6_rev2.json": "60528953571339d35a7c216ec0f6721cea15d92313374655b7ffec2511258949",
-      "reports/phase3/phase3g_ties_q3_rev2.json": "047449c8c9c94daef3aaf5cb5be2dd596e154fe5afa1bc5c67394bfa5a2b58c9",
-      "reports/phase3/phase3g_brands_v2_eval.json": "daf3363c925f914940c731f0d761990e758da2b8f37add85f88aad1d1da97581",
+      "reports/phase3/phase3g/phase3g_q6_rev2.json": "60528953571339d35a7c216ec0f6721cea15d92313374655b7ffec2511258949",
+      "reports/phase3/phase3g/phase3g_ties_q3_rev2.json": "047449c8c9c94daef3aaf5cb5be2dd596e154fe5afa1bc5c67394bfa5a2b58c9",
+      "reports/phase3/phase3g/phase3g_brands_v2_eval.json": "daf3363c925f914940c731f0d761990e758da2b8f37add85f88aad1d1da97581",
       "reports/phase3/phase3g_maxlen.json": "06d93c3ac3d694532fbf730559377564159b16902d9ecb07d847cd6d2326c2c8",
-      "reports/phase3/phase3g_fp16_ties.json": "d6c77183b468836c346cd34d0a392f809ca4b42c67ada39c134fe5c9dbcbb703",
-      "reports/phase3/brand_audit_3g.json": "8e182ebd2386a705b7cd405020bf2775fc9a1160c8db90680703ea42ece6b8f7",
-      "reports/phase3/brand_alias_proposal.csv": "879a2646fd081ec31990ea9e1664fe3df1b7e1e4b53b02f4e7c9020dfc4a0d4d",
+      "reports/phase3/phase3g/phase3g_fp16_ties.json": "d6c77183b468836c346cd34d0a392f809ca4b42c67ada39c134fe5c9dbcbb703",
+      "reports/phase3/phase3g/brand_audit_3g.json": "8e182ebd2386a705b7cd405020bf2775fc9a1160c8db90680703ea42ece6b8f7",
+      "reports/phase3/phase3g/brand_alias_proposal.csv": "879a2646fd081ec31990ea9e1664fe3df1b7e1e4b53b02f4e7c9020dfc4a0d4d",
       "src/brands.json": "99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96",
       "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
       "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005"
-    }
+    },
+    "audit_note": "Bản nháp Errata vòng 2; đã được nâng cấp khi thêm kiểm toán Lee độc lập."
   },
   "phase3g_errata_rev3": {
     "timestamp": "2026-11-09T13:20:29.851591",
     "seed": 42,
-    "status": "REV3_COMPLETED",
+    "status": "SUPERSEDED_BY_REV4_AND_REV5",
     "blind_ab_seed": 20261109,
     "quality_pipeline": "CPU float32 matrix operations (Scorer centered)",
     "serving_pipeline": "GPU float16 matrix operations (VisualSearchEngine)",
@@ -345,20 +351,20 @@
       }
     },
     "files": {
-      "reports/phase3/phase3f_errata.md": "d1f2448ad24350497781e75303825d5a06dfb57e4d805555a4597708b49432b2",
-      "reports/phase3/phase3f_errata_rev2.md": "ea2b606b9c488892a2397c9b7c970064b04e0efa78111440b714b19850f79635",
-      "reports/phase3/phase3f_errata_rev1.md": "613d8dcfa11c58fbedde5fa60477c1f116fcc600885ada4a2c7248ff11172791",
-      "reports/phase3/phase3f_reconciliation.md": "499aa4084ce6d94c7ff880f61f078f93d2e320af222cd3446e4344fc0702a4e0",
-      "reports/phase3/phase3g_rev3_investigation.json": "945c01980383f4fedda775e1f70cab460e3703dac086215d905b8332c5aa4a62",
+      "reports/phase3/phase3f/phase3f_errata.md": "82d122e5a26521d698b031663aa2d83de551c9d3a37ed4e9669cc954d71d0860",
+      "reports/phase3/phase3f/phase3f_errata_rev2.md": "ea2b606b9c488892a2397c9b7c970064b04e0efa78111440b714b19850f79635",
+      "reports/phase3/phase3f/phase3f_errata_rev1.md": "613d8dcfa11c58fbedde5fa60477c1f116fcc600885ada4a2c7248ff11172791",
+      "reports/phase3/phase3f/phase3f_reconciliation.md": "499aa4084ce6d94c7ff880f61f078f93d2e320af222cd3446e4344fc0702a4e0",
+      "reports/phase3/phase3g/phase3g_rev3_investigation.json": "945c01980383f4fedda775e1f70cab460e3703dac086215d905b8332c5aa4a62",
       "reports/phase3/phase3g_latency_multi_run.json": "fa5582276e5a6825ca4546c0e247e34f69ce0843b8ec5382b90ccca80a1b5ebe",
-      "reports/phase3/phase3g_q6_rev2.json": "60528953571339d35a7c216ec0f6721cea15d92313374655b7ffec2511258949",
+      "reports/phase3/phase3g/phase3g_q6_rev2.json": "60528953571339d35a7c216ec0f6721cea15d92313374655b7ffec2511258949",
       "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
       "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005",
       "eval/ab_blind_heldout.csv": "f13e592f8a8f6df7a25dc471336e96acea85d9120d21d35c257fec8144ec1905",
-      "reports/phase1/scope_proposal.csv": "04f0050c9947f19832440da897c0be32ce99902af5ad3de9cf77a6c069f8b9b2",
+      "reports/phase1/phase1b/scope_proposal.csv": "04f0050c9947f19832440da897c0be32ce99902af5ad3de9cf77a6c069f8b9b2",
       "data/catalog/catalog.parquet": "8029b1eed2e1075b27e4abbdc3020b175c7744c1d364ff311baebb86c0abd15a",
       "index_v2/manifest.json": "f27774524951e53c3f48121edabcbc3cecb0c19d72d260c8b9ed46184719c163",
-      "reports/phase3/phase3g_blind_ab_results.json": "0b0f82e4d283138916a315aa15fe3dea4546940cd602a65c2f15b68746535761"
+      "reports/phase3/phase3g/phase3g_blind_ab_results.json": "0b0f82e4d283138916a315aa15fe3dea4546940cd602a65c2f15b68746535761"
     },
     "in_scope_catalog_items": 38644,
     "key_chain_excluded_count": 2,
@@ -472,12 +478,13 @@
         ]
       },
       "note_correction": "đã đính chính ở Rev4"
-    }
+    },
+    "audit_note": "Rev3 ghi nhầm dải p95 latency thành [171.2-192.4]; đã bị bác bỏ ở Rev4/Rev5."
   },
   "phase3g_errata_rev4": {
     "timestamp": "2026-11-09T15:10:43.841473",
     "seed": 42,
-    "status": "REV4_COMPLETED",
+    "status": "SUPERSEDED_BY_REV5",
     "evaluated_by": "Claude (AI), single rater",
     "blind_ab_evaluation": {
       "status": "DECODED_AND_EVALUATED_REV4",
@@ -646,14 +653,15 @@
       "in_scope_catalog_items": 38644
     },
     "files": {
-      "reports/phase3/phase3f_errata.md": "d1f2448ad24350497781e75303825d5a06dfb57e4d805555a4597708b49432b2",
-      "reports/phase3/phase3f_errata_rev3.md": "c61161d9242db6b9f5dede40b17336ff440a386310108605a80bff611080d8b1",
-      "reports/phase3/phase3g_blind_ab_results.json": "0b0f82e4d283138916a315aa15fe3dea4546940cd602a65c2f15b68746535761",
-      "reports/phase3/phase3g_do_bug_investigation.json": "d5393a1d6136c65cd35a66e29815157b183fc1c1bde79333b9a777116c62f3f2",
-      "reports/phase3/phase3g_padding_truncation_experiment.json": "6e447ca2effa919533435b34f937aa05256ecf66dd1fe58e1fdd0c6b95dd616f",
+      "reports/phase3/phase3f/phase3f_errata.md": "82d122e5a26521d698b031663aa2d83de551c9d3a37ed4e9669cc954d71d0860",
+      "reports/phase3/phase3f/phase3f_errata_rev3.md": "c61161d9242db6b9f5dede40b17336ff440a386310108605a80bff611080d8b1",
+      "reports/phase3/phase3g/phase3g_blind_ab_results.json": "0b0f82e4d283138916a315aa15fe3dea4546940cd602a65c2f15b68746535761",
+      "reports/phase3/phase3g/phase3g_do_bug_investigation.json": "d5393a1d6136c65cd35a66e29815157b183fc1c1bde79333b9a777116c62f3f2",
+      "reports/phase3/phase3g/phase3g_padding_truncation_experiment.json": "6e447ca2effa919533435b34f937aa05256ecf66dd1fe58e1fdd0c6b95dd616f",
       "src/query_parser_v2.py": "d975780ccc87a5da67405aa003bf71fde1af21d179a6b3616bf325bd514d4820",
       "eval/ab_blind_heldout.csv": "f13e592f8a8f6df7a25dc471336e96acea85d9120d21d35c257fec8144ec1905"
-    }
+    },
+    "audit_note": "Rev4 giải thích sai đỉnh latency do 'Cold-Start JIT' (đã bị bác bỏ ở Rev5 do có 10 warmup queries trước run 1); đồng thời thực nghiệm padding chạy nhầm caption cũ; đã sửa hoàn chỉnh ở Rev5."
   },
   "phase3g_rev5": {
     "timestamp": "2026-11-09 15:55:00",
@@ -704,13 +712,13 @@
       }
     },
     "files": {
-      "reports/phase3/phase3f_errata.md": "65e6ef4882b8dfbd729358bf4409c1228895f9bcdf47c3847253e73f636924eb"
+      "reports/phase3/phase3f/phase3f_errata.md": "0e70f1019181825b3100de3c5728101d919014a288e00b7e6956ca615e2467ff"
     },
-    "errata_rev5_sha256": "65e6ef4882b8dfbd729358bf4409c1228895f9bcdf47c3847253e73f636924eb"
+    "errata_rev5_sha256": "0e70f1019181825b3100de3c5728101d919014a288e00b7e6956ca615e2467ff"
   },
   "phase4": {
     "timestamp": "2026-11-09 16:47:59",
-    "status": "COMPLETED_REVISED",
+    "status": "COMPLETED_REVISED_FINAL",
     "description": "Serving Web Application using Streamlit with Multi-modal Retrieval and Strict Rule 7 Checkpoint Verification",
     "server": {
       "framework": "streamlit",
@@ -738,27 +746,37 @@
     ],
     "files": {
       "app/engine.py": "038452e1e3e79a21aff6cc306c6fb2426c1d765c84265191733b13b0624c0634",
-      "app/main.py": "aea4cf6d6f053b9ca97ef56aad0f69a5c133c90fb753ea4c6385c950785c723f",
+      "app/main.py": "b1215990ce13126953f51f417c4e7b7dfeb01af461f636533a57a3eb523052dc",
       "src/search_pipeline.py": "05aa06ddb1d3a5acc84120c6aaf6dd2b28f61331f272b107d1b1ed4ba55ec9e3",
       "tests/test_app_service.py": "97f42ca23d1f087199e511961e242c206ac69d36d70d955a0716a9881ae5566a",
       "tests/test_search_pipeline.py": "464f2abea6f3c532654b6cfdc4eda6b5367788663ffcca6a8c0db3ca54a1f8de",
       "src/evaluate_cir_20queries.py": "f125b16dfd705d35b4f964cd062288425fd37395aaa81083530329f8d7ac335d",
       "src/experiment_trunc64_pad128_eval.py": "fed088afafc117f58ebe44ab8edc4f18a85a88f1ac5c8e40d3714f3376159931",
-      "src/run_phase4_smoke_test.py": "92a8849ba8f08a45d043d8d8afcc69dbbc1f69053f5349246f0e96f44fad86de",
-      "reports/phase4/phase4_smoke.json": "6ca761ac14ebde81deaaf772d05602920cfe1123a9288e91a89cb74830a17fde",
-      "reports/phase4/phase4_cir_20queries_eval.json": "8a37207a6cd6ac01ba9dcf78a0e97f2e1d58359c00736175284d090447dde85e",
-      "reports/phase4/phase4_trunc64_pad128_eval.json": "458754ac73ec6bd4dc0dd312102fc48486bbb4831f9c817a70d7ec51d4c6f80f",
-      "README_run.md": "8cfbb0e582ce0a2fc42e2f0f34d802ffe7ff03590ad9f1f62beed5cc920c6b41"
+      "src/run_phase4_smoke_test.py": "46fcd8206b1b3266ec7677f5b4d6eac5ae5cf61b3bd098191e340f3a80062552",
+      "reports/phase4/phase4b/phase4_smoke.json": "639303896dc8a0ea85831a6f9c35806337b441e171112fd01b532bba2120a6f2",
+      "reports/phase4/phase4a/phase4_cir_20queries_eval.json": "8a37207a6cd6ac01ba9dcf78a0e97f2e1d58359c00736175284d090447dde85e",
+      "reports/phase4/phase4a/phase4_trunc64_pad128_eval.json": "458754ac73ec6bd4dc0dd312102fc48486bbb4831f9c817a70d7ec51d4c6f80f",
+      "README_run.md": "8cfbb0e582ce0a2fc42e2f0f34d802ffe7ff03590ad9f1f62beed5cc920c6b41",
+      "reports/phase3/phase3f/phase3f_errata.md": "0e70f1019181825b3100de3c5728101d919014a288e00b7e6956ca615e2467ff",
+      "data/catalog/catalog.parquet": "8029b1eed2e1075b27e4abbdc3020b175c7744c1d364ff311baebb86c0abd15a",
+      "config.yaml": "653e88078eff0ebcf7102013210fcbc6be9a345c421bf21b52632898fec0955c",
+      "reports/phase2/phase2a/phase2a_findings.md": "fbcb78894450dbd5f031519e6b89c4956278f513ce77bb68488d75c2eba49ebb",
+      "reports/phase3/phase3e/phase3e_inference_only.md": "16d9f680a9be91bbac99af01eabbc9711a851fdd8ae12dba9da0addc01c0375d",
+      "reports/phase1/phase1b/scope_proposal.csv": "04f0050c9947f19832440da897c0be32ce99902af5ad3de9cf77a6c069f8b9b2",
+      "reports/phase4_verifications.json": "bec7da068016fd4da3bd6d28b0f27cbe65c31222d953194c19b83ef6741094af",
+      "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
+      "src/query_parser_v2.py": "d975780ccc87a5da67405aa003bf71fde1af21d179a6b3616bf325bd514d4820",
+      "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005"
     },
     "smoke_test": {
-      "verified_file": "reports/phase4/phase4_smoke.json",
+      "verified_file": "reports/phase4/phase4b/phase4_smoke.json",
       "text_queries_tested": 5,
       "image_queries_tested": 3,
       "cir_queries_tested": 3,
       "status": "PASSED"
     },
     "cir_evaluation": {
-      "verified_file": "reports/phase4/phase4_cir_20queries_eval.json",
+      "verified_file": "reports/phase4/phase4a/phase4_cir_20queries_eval.json",
       "queries_count": 20,
       "hit_at_1": 0.15,
       "hit_at_10": 0.35,
@@ -766,9 +784,27 @@
       "status": "EXPERIMENTAL_UNCOMMITTED_SLA"
     },
     "trunc64_pad128_experiment": {
-      "verified_file": "reports/phase4/phase4_trunc64_pad128_eval.json",
+      "verified_file": "reports/phase4/phase4a/phase4_trunc64_pad128_eval.json",
       "status": "EVALUATED_ON_Q2_Q3_Q5_HELDOUT",
       "conclusion": "Condition B and Condition A are identical on queries <= 64 tokens; pad 128 systematically boosts dense retrieval by matching train positional length"
+    },
+    "audit_reconciliations": {
+      "task1_failure_cases_audited": "5 ca không truy được nguồn đã đánh dấu 'KHÔNG TRUY ĐƯỢC NGUỒN, KHÔNG ĐÁNG TIN' và thay bằng 20 ca thật từ results_3e.json.",
+      "task2_image_label_bug_fixed": "Khắc phục bug gán nhãn 1855: catalog xác nhận 1855 là Inkfruit Mens Chain Reaction T-shirt. Đã kiểm 200 ID ngẫu nhiên khớp 100% catalog.parquet theo id.",
+      "task3_serving_config_evaluated": "Chạy lại Q2, Q3, Q5, heldout trên cấu hình phục vụ (ParserV2 + brands_v2 + Lavie notice), ghi hậu nghiệm; kiểm định 'quan jean nam xanh' và 'do tap gym' không bắn thông báo.",
+      "task4_telemetry_5runs_audited": "Hạ quá nhiệt B.3 thành 'giả thuyết chưa tái lập' (0/1000 truy vấn > 500 ms); không kết luận SLA từ 3 truy vấn ảnh.",
+      "task5_val_truncation_tuned": "Đánh giá Condition A vs B vs C trên split val (7470 items, seed 42); xóa/đánh dấu 'giả thuyết chưa đo' cho lý do loại bỏ nhiễu.",
+      "task6_table5_scope_reconciled": "Đối chiếu 10 dòng bảng mục 5 findings 2a với scope_proposal.csv: 9/10 dòng lệch, đã đánh dấu không đáng tin và sửa chuẩn.",
+      "task7_ab_permutation_verified": "Khớp 100% RandomState(20261109) với ab_mapping.json; sửa chuỗi 30 phần tử trong errata.",
+      "task8_brand_c0_new_gt": "C0 P@10 trên GT mới (x018=209) đạt 0.0714 so với C5 đạt 0.8000; ghi rõ GT Condition A cũ (n=24/23)."
     }
+  },
+  "root_hashes": {
+    "config_yaml": "653e88078eff0ebcf7102013210fcbc6be9a345c421bf21b52632898fec0955c",
+    "catalog_parquet": "8029b1eed2e1075b27e4abbdc3020b175c7744c1d364ff311baebb86c0abd15a",
+    "errata_rev5": "0e70f1019181825b3100de3c5728101d919014a288e00b7e6956ca615e2467ff",
+    "findings_2a": "fbcb78894450dbd5f031519e6b89c4956278f513ce77bb68488d75c2eba49ebb",
+    "inference_3e": "16d9f680a9be91bbac99af01eabbc9711a851fdd8ae12dba9da0addc01c0375d",
+    "verifications_phase4": "bec7da068016fd4da3bd6d28b0f27cbe65c31222d953194c19b83ef6741094af"
   }
 }

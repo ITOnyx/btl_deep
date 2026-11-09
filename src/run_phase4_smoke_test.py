@@ -83,14 +83,15 @@ def main():
         smoke_results["queries"].append(entry)
         print(f"[{tc['type']}] '{q}' -> Top 1: [{results[0]['item_id']}] {results[0]['name']} | Latency: {entry['total_latency_ms']:.2f} ms")
 
-    # 2. Three Visual Search Queries with Self-Exclusion (Steady State)
+    # 2. Visual Search Queries with Self-Exclusion (Steady State)
     image_cases = [
-        {"type": "image_shirt", "path": "data/fashion-dataset/images/15970.jpg", "desc": "Turtle Check Navy Blue Shirt"},
-        {"type": "image_jeans", "path": "data/fashion-dataset/images/39386.jpg", "desc": "Peter England Blue Jeans"},
-        {"type": "image_watch", "path": "data/fashion-dataset/images/1855.jpg", "desc": "Q&Q Men Black Dial Watch"}
+        {"type": "image_shirt", "path": "data/fashion-dataset/images/15970.jpg"},
+        {"type": "image_jeans", "path": "data/fashion-dataset/images/39386.jpg"},
+        {"type": "image_watch", "path": "data/fashion-dataset/images/59263.jpg"},
+        {"type": "image_tshirt", "path": "data/fashion-dataset/images/1855.jpg"}
     ]
 
-    print("\n--- 2. Testing 3 Visual Search Queries (Self-Exclusion Active) ---")
+    print("\n--- 2. Testing Visual Search Queries (Self-Exclusion Active) ---")
     for ic in image_cases:
         p = Path(ic["path"])
         if not p.exists():
@@ -98,6 +99,16 @@ def main():
             continue
         im = Image.open(p).convert("RGB")
         self_id = p.stem
+
+        # Look up true product metadata from catalog by item_id
+        row_cat = service.engine.df[service.engine.df["item_id"].astype(str) == str(self_id)]
+        if len(row_cat) > 0:
+            prod_desc = str(row_cat.iloc[0]["name"])
+            prod_type = str(row_cat.iloc[0]["articleType"])
+        else:
+            prod_desc = "Unknown"
+            prod_type = "Unknown"
+
         t0 = time.time()
         results, meta = service.search_image(
             im,
@@ -112,7 +123,8 @@ def main():
             "category": "image",
             "subtype": ic["type"],
             "query_image": str(p),
-            "product_desc": ic["desc"],
+            "product_desc": prod_desc,
+            "product_articleType": prod_type,
             "exclude_self_id": self_id,
             "self_excluded_successfully": self_id not in [r["item_id"] for r in results],
             "total_latency_ms": round(meta.get("latency_ms", total_lat), 2),
@@ -133,7 +145,7 @@ def main():
             ]
         }
         smoke_results["queries"].append(entry)
-        print(f"[{ic['type']}] {p.name} (excl: {self_id}) -> Top 1: [{results[0]['item_id']}] {results[0]['name']} | Latency: {entry['total_latency_ms']:.2f} ms")
+        print(f"[{ic['type']}] {p.name} ({prod_desc} - excl: {self_id}) -> Top 1: [{results[0]['item_id']}] {results[0]['name']} | Latency: {entry['total_latency_ms']:.2f} ms")
 
     # 3. Three CIR Queries (Steady State)
     cir_cases = [
@@ -176,7 +188,8 @@ def main():
         smoke_results["queries"].append(entry)
         print(f"[{cc['type']}] {p.name} + '{mod}' -> Top 1: [{results[0]['item_id']}] {results[0]['name']} | Latency: {entry['total_latency_ms']:.2f} ms")
 
-    out_file = Path("reports/phase4_smoke.json")
+    out_file = Path("reports/phase4/phase4b/phase4_smoke.json")
+    out_file.parent.mkdir(parents=True, exist_ok=True)
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(smoke_results, f, indent=2, ensure_ascii=False)
 

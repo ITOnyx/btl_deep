@@ -219,28 +219,91 @@ Trong cấu hình Hệ thống hoàn chỉnh (Config 5), cơ chế hạ cấp m�
 
 ## 6. Phân tích 20 Trường hợp Thất bại Điển hình
 
-Dữ liệu chi tiết về 20 ca thất bại được trích xuất tại [`eval/results_3e.json`](file:///d:/Kì 7/Hoc_sau_ver4/eval/results_3e.json):
+> [!CAUTION]
+> **ĐÍNH CHÍNH & XÁC THỰC NGUỒN GỐC DỮ LIỆU (ERRATA AUDIT):**
+> Trong các phiên bản báo cáo trước, 5 trường hợp ví dụ sau đây:
+> 1. `text_x002` ("áo sơ mi công sở nam dài tay màu xanh navy")
+> 2. `text_x007` ("giày cao gót nữ màu be mũi nhọn")
+> 3. `text_x015` ("áo khoác bomber nam unisex đen")
+> 4. `text_x021` ("áo hoodie nỉ lót bông form rộng")
+> 5. `visual_1855` ("Truy xuất ảnh dép xỏ ngón Flip Flops")
+> 
+> Đã được đối soát 1:1 với dữ liệu gốc `diagnostics.failure_cases` trong file [`eval/results_3e.json`](file:///d:/Kì 7/Hoc_sau_ver4/eval/results_3e.json). Kết quả xác nhận: **Cả 5 ca trên hoàn toàn KHÔNG CÓ trong file dữ liệu gốc `results_3e.json`**.
+> **Kết luận kiểm toán:** Toàn bộ 5 ca này được đánh dấu chính thức là **"KHÔNG TRUY ĐƯỢC NGUỒN, KHÔNG ĐÁNG TIN"** (tuyệt đối không gọi là lỗi gõ tay hay nhầm lẫn biên tập). Dưới đây là danh sách đầy đủ, chính xác của **20 ca thất bại thật** trích xuất nguyên bản từ `eval/results_3e.json`.
 
-1. **`text_x002` ("áo sơ mi công sở nam dài tay màu xanh navy"):**
-   - *Đặc tả mục tiêu:* Shirts, Men, Navy Blue.
-   - *Top-1 thu được:* ID `27230` (Shirts, Men, Blue).
-   - *Nguyên nhân:* Mẫu catalog được gán nhãn `Blue` thay vì `Navy Blue` trong metadata Myntra, dù hình ảnh thực tế là xanh đậm.
-2. **`text_x007` ("giày cao gót nữ màu be mũi nhọn"):**
-   - *Đặc tả mục tiêu:* Heels, Women, Beige.
-   - *Top-1 thu được:* ID `39386` (Flats, Women, Beige).
-   - *Nguyên nhân:* Mẫu giày búp bê màu be có thiết kế mũi nhọn thanh mảnh tương tự giày gót thấp, model ưu tiên đặc trưng thị giác mũi nhọn hơn là chiều cao của gót.
-3. **`text_x015` ("áo khoác bomber nam unisex đen"):**
-   - *Đặc tả mục tiêu:* Jackets, Men/Unisex, Black.
-   - *Top-1 thu được:* ID `15970` (Sweaters, Men, Black).
-   - *Nguyên nhân:* Sự chồng lấn thị giác giữa áo len kéo khóa (cardigan/sweaters) và áo khoác bomber mỏng.
-4. **`text_x021` ("áo hoodie nỉ lót bông form rộng"):**
-   - *Đặc tả mục tiêu:* Sweatshirts, Unisex, Grey.
-   - *Top-1 thu được:* ID `59263` (Tshirts, Men, Grey).
-   - *Nguyên nhân:* Cụm từ "form rộng", "lót bông" không nằm trong từ điển thuộc tính tiêu chuẩn, BM25 bị phân tán vào các mẫu áo thun dài tay màu xám.
-5. **`visual_1855` (Truy xuất ảnh dép xỏ ngón Flip Flops):**
-   - *Top-1 thu được:* ID `1854` (Sandals, Navy Blue).
-   - *Nguyên nhân:* Danh mục Flip Flops và Sandals có ranh giới thị giác rất hẹp; láng giềng k-NN nhận diện nhầm sang Sandals.
-*(Xem chi tiết 15 ca còn lại trong `eval/results_3e.json`)*.
+### Danh sách 20 Trường hợp Thất bại Thật Trích xuất từ `eval/results_3e.json`:
+
+#### A. 12 Truy vấn Văn bản (Text Failure Cases)
+1. **`text_x002`:**
+   - *Truy vấn:* `"áo thun nữ màu hồng"` (Type: `text_query`)
+   - *Đặc tả mục tiêu:* `articleType`: `['Tshirts', 'Tops']`, `gender`: `'Women'`, `colour`: `['Pink']`
+   - *C0 Top-1 ID:* `26923` | *C5 Top-1 ID:* `1651` (`Domyos`, `Tshirts`, `Women`, `Pink`)
+   - *C5 P@10:* `0.4` | *Phân tích:* `Fine-grained color/pattern nuance`
+2. **`text_x004`:**
+   - *Truy vấn:* `"giày cao gót nữ màu đen"` (Type: `text_query`)
+   - *Đặc tả mục tiêu:* `articleType`: `['Heels']`, `gender`: `'Women'`, `colour`: `['Black']`
+   - *C0 Top-1 ID:* `47569` | *C5 Top-1 ID:* `47569` (`Portia`, `Heels`, `Women`, `Black`)
+   - *C5 P@10:* `0.4` | *Phân tích:* `Fine-grained color/pattern nuance`
+3. **`text_x005`:**
+   - *Truy vấn:* `"túi xách nữ màu đỏ"` (Type: `text_query`)
+   - *Đặc tả mục tiêu:* `articleType`: `['Handbags']`, `gender`: `'Women'`, `colour`: `['Red']`
+   - *C0 Top-1 ID:* `52641` | *C5 Top-1 ID:* `47289` (`Baggit`, `Handbags`, `Women`, `Red`)
+   - *C5 P@10:* `0.4` | *Phân tích:* `Fine-grained color/pattern nuance`
+4. **`text_x006`:**
+   - *Truy vấn:* `"dép xỏ ngón nam màu đen"` (Type: `text_query`)
+   - *Đặc tả mục tiêu:* `articleType`: `['Flip Flops']`, `gender`: `'Men'`, `colour`: `['Black']`
+   - *C0 Top-1 ID:* `20840` | *C5 Top-1 ID:* `20943` (`ADIDAS`, `Flip Flops`, `Men`, `Black`)
+   - *C5 P@10:* `0.1` | *Phân tích:* `Fine-grained color/pattern nuance`
+5. **`text_x009`:**
+   - *Truy vấn:* `"vay nu mau xanh la"` (Type: `text_query`, unaccented)
+   - *Đặc tả mục tiêu:* `articleType`: `['Dresses', 'Skirts']`, `gender`: `'Women'`, `colour`: `['Green']`
+   - *C0 Top-1 ID:* `49593` | *C5 Top-1 ID:* `34585` (`Tonga`, `Dresses`, `Women`, `Green`)
+   - *C5 P@10:* `0.1` | *Phân tích:* `Fine-grained color/pattern nuance`
+6. **`text_x010`:**
+   - *Truy vấn:* `"quan short nu mau trang"` (Type: `text_query`, unaccented)
+   - *Đặc tả mục tiêu:* `articleType`: `['Shorts']`, `gender`: `'Women'`, `colour`: `['White']`
+   - *C0 Top-1 ID:* `55814` | *C5 Top-1 ID:* `43915` (`Femella`, `Shorts`, `Women`, `Cream`)
+   - *C5 P@10:* `0.0` | *Phân tích:* `Color discrepancy (Cream vs {'White'})`
+7. **`text_x014`:**
+   - *Truy vấn:* `"đồng hồ Fossil nam"` (Type: `text_query`, brand query)
+   - *Đặc tả mục tiêu:* `articleType`: `['Watches']`, `gender`: `'Men'`, `brand`: `'Fossil'`
+   - *C0 Top-1 ID:* `36251` | *C5 Top-1 ID:* `58454` (`Fossil`, `Watches`, `Men`, `Black`)
+   - *C5 P@10:* `0.3` | *Phân tích:* `Fine-grained color/pattern nuance`
+8. **`text_x015`:**
+   - *Truy vấn:* `"áo kurta Fabindia nam"` (Type: `text_query`, brand query)
+   - *Đặc tả mục tiêu:* `articleType`: `['Kurtas']`, `gender`: `'Men'`, `brand`: `'Fabindia'`
+   - *C0 Top-1 ID:* `32199` | *C5 Top-1 ID:* `30782` (`Fabindia`, `Kurtas`, `Men`, `White`)
+   - *C5 P@10:* `0.3` | *Phân tích:* `Fine-grained color/pattern nuance`
+9. **`text_x017`:**
+   - *Truy vấn:* `"túi xách Lavie nữ"` (Type: `text_query`, brand query)
+   - *Đặc tả mục tiêu:* `articleType`: `['Handbags']`, `gender`: `'Women'`, `brand`: `'Lavie'`
+   - *C0 Top-1 ID:* `51958` | *C5 Top-1 ID:* `53679` (`Kiara`, `Handbags`, `Women`, `Pink`)
+   - *C5 P@10:* `0.0` | *Phân tích:* `Brand mismatch (Kiara vs Lavie)` (Do catalog Kaggle không có sản phẩm Lavie, R=0)
+10. **`text_x018`:**
+    - *Truy vấn:* `"áo thun Benetton nam"` (Type: `text_query`, brand query)
+    - *Đặc tả mục tiêu:* `articleType`: `['Tshirts']`, `gender`: `'Men'`, `brand`: `'Benetton'`
+    - *C0 Top-1 ID:* `30756` | *C5 Top-1 ID:* `19664` (`United Colors of Benetton`, `Tshirts`, `Men`, `Black`)
+    - *C5 P@10:* `0.0` | *Phân tích:* `Brand mismatch (United Colors of Benetton vs Benetton)` (Ở Pha 3e chưa có alias)
+11. **`text_x021`:**
+    - *Truy vấn:* `"áo khoác nữ mùa đông"` (Type: `text_query`, season query)
+    - *Đặc tả mục tiêu:* `articleType`: `['Jackets']`, `gender`: `'Women'`
+    - *C0 Top-1 ID:* `13961` | *C5 Top-1 ID:* `18961` (`United Colors of Benetton`, `Jackets`, `Women`, `Grey`)
+    - *C5 P@10:* `0.1` | *Phân tích:* `Fine-grained color/pattern nuance`
+12. **`text_x022`:**
+    - *Truy vấn:* `"đầm nữ đi tiệc màu đen"` (Type: `text_query`, usage query)
+    - *Đặc tả mục tiêu:* `articleType`: `['Dresses']`, `gender`: `'Women'`, `colour`: `['Black']`
+    - *C0 Top-1 ID:* `8485` | *C5 Top-1 ID:* `8485` (`Forever New`, `Dresses`, `Women`, `Black`)
+    - *C5 P@10:* `0.3` | *Phân tích:* `Fine-grained color/pattern nuance`
+
+#### B. 8 Truy vấn Hình ảnh (Visual Search Failure Cases)
+13. **`visual_7990`:** Image Query | *Phân tích:* Visual texture similarity dominated over category/color (`Tshirts`, `Purple`)
+14. **`visual_25947`:** Image Query | *Phân tích:* Visual texture similarity dominated over category/color (`Mufflers`, `Black`)
+15. **`visual_8746`:** Image Query | *Phân tích:* Visual texture similarity dominated over category/color (`Sandals`, `Navy Blue`)
+16. **`visual_46086`:** Image Query | *Phân tích:* Visual texture similarity dominated over category/color (`Sports Shoes`, `Purple`)
+17. **`visual_36137`:** Image Query | *Phân tích:* Visual texture similarity dominated over category/color (`Casual Shoes`, `Red`)
+18. **`visual_44725`:** Image Query | *Phân tích:* Visual texture similarity dominated over category/color (`Flip Flops`, `Brown`)
+19. **`visual_5253`:** Image Query | *Phân tích:* Visual texture similarity dominated over category/color (`Duffel Bag`, `Blue`)
+20. **`visual_50574`:** Image Query | *Phân tích:* Visual texture similarity dominated over category/color (`Trunk`, `Black`)
 
 ---
 

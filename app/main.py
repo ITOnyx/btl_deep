@@ -358,7 +358,12 @@ with tab_text:
                 p_col6.metric("Ứng viên xét duyệt", f"{meta.get('candidates_count', 0):,}")
 
             # 3. Lavie Notice Rule
-            if parsed.get("brand") and parsed.get("brand").lower() == "lavie":
+            is_lavie = (
+                (parsed.get("brand") and parsed.get("brand").lower() == "lavie") or
+                "lavie" in [t.lower() for t in parsed.get("unparsed_tokens", [])] or
+                re.search(r"\blavie\b", query, re.IGNORECASE) is not None
+            )
+            if is_lavie:
                 st.warning("ℹ️ **Thông báo thương hiệu:** Thương hiệu 'Lavie' hiện không có trong catalog; hệ thống đang tự động nới lỏng và hiển thị các sản phẩm túi xách nữ có kiểu dáng tương tự.")
 
             # 4. Results Grid
@@ -410,8 +415,10 @@ with tab_image:
         elif selected_sample_img is not None:
             query_image = Image.open(selected_sample_img).convert("RGB")
             exclude_self_id = Path(selected_sample_img).stem
-            st.image(query_image, caption=f"Ảnh mẫu catalog: ID {exclude_self_id}", use_container_width=True)
-            st.warning(f"🛡️ **Ảnh chọn từ catalog (ID: {exclude_self_id}):** Đã kích hoạt cơ chế tự động **loại bỏ chính sản phẩm này** khỏi danh sách kết quả.")
+            sample_row = service.engine.df[service.engine.df["item_id"].astype(str) == str(exclude_self_id)]
+            sample_name = str(sample_row.iloc[0]["name"]) if len(sample_row) > 0 else f"ID {exclude_self_id}"
+            st.image(query_image, caption=f"Ảnh mẫu catalog: {sample_name} (ID: {exclude_self_id})", use_container_width=True)
+            st.warning(f"🛡️ **Ảnh chọn từ catalog ({sample_name} - ID: {exclude_self_id}):** Đã kích hoạt cơ chế tự động **loại bỏ chính sản phẩm này** khỏi danh sách kết quả.")
 
     with img_col2:
         if query_image is not None:
