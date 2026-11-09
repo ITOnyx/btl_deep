@@ -211,11 +211,36 @@
     "files": {
       "eval/q6_queries.json": "10e388d3dc88ae7393a8e7b2549d672155bb1a18a992ae4455d791972855c96f",
       "eval/results_3f.json": "4cdf6375a45fff8f9c7db5afd3ce5d34c2a29fb8096769ac3e3c231771c26d60",
-      "eval/ab_mapping.json": "2bab34f1950ce2e9b894f0fe9d663776745940f70a3a556b6453e49cff6bb1fc",
       "eval/ab_blind_heldout.csv": "ee5ffe73ada0b4afac3c3054f91ec988de44e59a4f721ef91f47c436bc760d91",
       "reports/phase3f_reconciliation.md": "616beb68f9fa02cb18d3f9e99e236f0e9cd80b7de35a636a450dd00ba4f30b6a",
       "reports/phase3f_latency_benchmark.json": "7837d70eaa1f15938c2c4a5506c5b5904ff8b8c27f565b1b29355eaf1134fcf4",
-      "reports/q6_val_grid_results.json": "46a7672eeebf4d4f26f221c39c5dc72cec4ee2cc98b3079a679a482ddf2de16f"
+      "reports/q6_val_grid_results.json": "46a7672eeebf4d4f26f221c39c5dc72cec4ee2cc98b3079a679a482ddf2de16f",
+      "eval/_sealed/ab_mapping.json": "2bab34f1950ce2e9b894f0fe9d663776745940f70a3a556b6453e49cff6bb1fc"
+    }
+  },
+  "phase3g_errata": {
+    "timestamp": "2026-11-09T12:15:47.389509",
+    "seed": 42,
+    "status": "AWAITING_USER_APPROVAL_FOR_BRAND_ALIAS",
+    "summary": {
+      "brand_audit_status": "AWAITING_APPROVAL",
+      "latency_benchmark_status": "VERIFIED_RERUN",
+      "fp16_ties_status": "ROOT_CAUSE_EXPLAINED",
+      "maxlen_padding_status": "CONFIRMED_HYPOTHESIS_PADDING_LENGTH_DOMINATES",
+      "q6_independence_status": "PARTIAL_INDEPENDENCE_WITH_ABLATION",
+      "blind_ab_status": "SEALED_AWAITING_USER_RATING"
+    },
+    "files": {
+      "reports/brand_audit_3g.json": "8e182ebd2386a705b7cd405020bf2775fc9a1160c8db90680703ea42ece6b8f7",
+      "reports/brand_alias_proposal.csv": "879a2646fd081ec31990ea9e1664fe3df1b7e1e4b53b02f4e7c9020dfc4a0d4d",
+      "reports/phase3g_latency.json": "5cc220c4f1d6f932776d1cf7a885df38aabc97ddf26aa93b36b965bc96eb0a5f",
+      "reports/phase3g_fp16_ties.json": "d6c77183b468836c346cd34d0a392f809ca4b42c67ada39c134fe5c9dbcbb703",
+      "reports/phase3g_maxlen.json": "06d93c3ac3d694532fbf730559377564159b16902d9ecb07d847cd6d2326c2c8",
+      "reports/phase3g_q6_audit.json": "a282c6e6fad96fd9981d218b81fba818aa9c7796955ec4b4d8c3f2ab0b7b9c15",
+      "reports/phase3f_errata.md": "9f185890f695ac3fd197d047ddb9b89e6abe3c9c01aae947913f28b68b524f75",
+      "eval/_sealed/ab_mapping.json": "2bab34f1950ce2e9b894f0fe9d663776745940f70a3a556b6453e49cff6bb1fc",
+      "src/brands.json": "99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96",
+      "eval/ab_blind_heldout.csv": "ee5ffe73ada0b4afac3c3054f91ec988de44e59a4f721ef91f47c436bc760d91"
     }
   }
 }

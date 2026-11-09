@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "task": "Phase 3g max_length & padding length root cause verification",
+    "q2_count": 61,
+    "q3_count": 100,
+    "q1b_count": 1290
+  },
+  "q2_verification": {
+    "mean_cosine_pad64_vs_pad128": 0.656,
+    "pad64": {
+      "p10": 0.3328,
+      "ap10": 0.294
+    },
+    "pad128": {
+      "p10": 0.4344,
+      "ap10": 0.4302
+    }
+  },
+  "q3_verification": {
+    "mean_cosine_pad64_vs_pad128": 0.624,
+    "pad64": {
+      "p10": 0.152,
+      "ap10": 0.1366
+    },
+    "pad128": {
+      "p10": 0.248,
+      "ap10": 0.2517
+    }
+  },
+  "q1b_disentanglement": {
+    "token_length_distribution": {
+      "pct_greater_than_64_tokens": 99.92,
+      "pct_greater_than_128_tokens": 7.67
+    },
+    "variants": [
+      {
+        "variant": "a",
+        "truncate": 64,
+        "pad": 64,
+        "recall_at_10_g_test": 0.1225
+      },
+      {
+        "variant": "b",
+        "truncate": 64,
+        "pad": 128,
+        "recall_at_10_g_test": 0.6186
+      },
+      {
+        "variant": "c",
+        "truncate": 128,
+        "pad": 128,
+        "recall_at_10_g_test": 0.5225
+      }
+    ],
+    "impact_of_truncation": -0.0961,
+    "impact_of_padding_length": 0.4961
+  },
+  "law_4_training_alignment": {
+    "pipeline_config_yaml": {
+      "padding": "max_length",
+      "max_length": 128
+    },
+    "training_code": {
+      "padding": "max_length",
+      "max_length": 128,
+      "cells": [
+        27,
+        29,
+        33,
+        35,
+        39,
+        51
+      ]
+    },
+    "matches": true,
+    "notes": "Notebook siglip_vietnamese_ecommerce_colab_ver2.ipynb (Cells 27, 29, 33, 35, 39, 51) explicitly called expand_siglip_position_embeddings(model, target_max_length=128) and trained with processor(..., padding='max_length', truncation=True, max_length=128). Thus, max_length=128 and padding='max_length' strictly matches the trained checkpoint weights."
+  }
+}

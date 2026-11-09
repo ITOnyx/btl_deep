@@ -1,0 +1,24 @@
+﻿alias,canonical_brand,type,canonical_in_brands_json,canonical_catalog_products,alias_catalog_products,status,reason
+Benetton,United Colors of Benetton,alias,True,1303,1337,ĐỀ XUẤT ÁP DỤNG,Tên thông dụng phổ biến nhất của United Colors of Benetton (Heldout x018)
+UCB,United Colors of Benetton,alias,True,1303,159,ĐỀ XUẤT ÁP DỤNG,Viết tắt 3 chữ cái phổ biến của United Colors of Benetton
+Adidas,ADIDAS,alias,True,1969,1969,ĐỀ XUẤT ÁP DỤNG,Chuẩn hóa viết hoa/thường (brands.json viết ADIDAS)
+Gini & Jony,Gini and Jony,alias,True,318,5,ĐỀ XUẤT ÁP DỤNG,Ký tự & thay cho and (dạng hiển thị nhãn hiệu chính thức)
+Gini Jony,Gini and Jony,alias,True,318,17,ĐỀ XUẤT ÁP DỤNG,Dạng gõ tắt không ký tự nối
+Reid Taylor,Reid & Taylor,alias,True,244,0,ĐỀ XUẤT ÁP DỤNG,Bỏ ký tự & khi người dùng gõ phím
+Reid and Taylor,Reid & Taylor,alias,True,244,0,ĐỀ XUẤT ÁP DỤNG,Dạng chữ 'and' thay cho '&'
+US Polo,U.S. Polo Assn.,alias,True,1,0,ĐỀ XUẤT ÁP DỤNG,Tên gọi tắt cực kỳ phổ biến của U.S. Polo Assn.
+US Polo Assn,U.S. Polo Assn.,alias,True,1,0,ĐỀ XUẤT ÁP DỤNG,Bỏ dấu chấm phân cách
+U.S. Polo,U.S. Polo Assn.,alias,True,1,304,ĐỀ XUẤT ÁP DỤNG,Bỏ chữ Assn.
+FCUK,French Connection,alias,True,413,49,ĐỀ XUẤT ÁP DỤNG,Tên thương hiệu viết tắt nổi tiếng toàn cầu của French Connection
+Levis,Levi's,alias,True,51,185,ĐỀ XUẤT ÁP DỤNG,Bỏ dấu nháy đơn khi gõ tiếng Việt / mobile
+Q and Q,Q&Q,alias,True,255,0,ĐỀ XUẤT ÁP DỤNG,Thay ký tự & bằng and
+QQ,Q&Q,alias,True,255,0,ĐỀ XUẤT ÁP DỤNG,Dạng gõ liền bỏ &
+Lee Cooper,Lee Cooper,brand_moi,True,133,133,ĐỀ XUẤT THÊM BRAND ĐỘC LẬP (133 sp),"Brand độc lập (133 sp trong catalog, >=20 sp), hiện thiếu trong brands.json"
+Wrangler Jeans,Wrangler,alias,True,668,0,ĐỀ XUẤT ÁP DỤNG,Kèm articleType vào brand khi tìm
+sOliver,s.Oliver,alias,True,128,0,ĐỀ XUẤT ÁP DỤNG,Bỏ dấu chấm viết tắt của s.Oliver
+MrMen,Mr.Men,alias,True,105,0,ĐỀ XUẤT ÁP DỤNG,Bỏ dấu chấm viết tắt của Mr.Men
+Modacc,Mod'acc,alias,True,43,0,ĐỀ XUẤT ÁP DỤNG,Bỏ dấu nháy đơn của Mod'acc
+Tantra Kids,Tantra Kid's,alias,True,34,0,ĐỀ XUẤT ÁP DỤNG,Bỏ dấu nháy đơn của Tantra Kid's
+Mr,Mr.,alias_dau_cau,True,63,169,ĐỀ XUẤT ÁP DỤNG,Bỏ dấu chấm viết tắt của Mr.
+Inc,Inc.,alias_dau_cau,True,29,66,ĐỀ XUẤT ÁP DỤNG,Bỏ dấu chấm viết tắt của Inc.
+Estd,Estd.,alias_dau_cau,True,24,24,ĐỀ XUẤT ÁP DỤNG,Bỏ dấu chấm viết tắt của Estd.

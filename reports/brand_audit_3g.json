@@ -1,0 +1,36 @@
+[
+  {
+    "id": "x017",
+    "query": "túi xách Lavie nữ",
+    "brand_in_query": "Lavie",
+    "exact_matches_in_catalog": 0,
+    "substring_matches_in_catalog": 0,
+    "r_art_gen_full": 1731,
+    "r_art_gen_test": 59,
+    "r_strict_full_with_brand": 0,
+    "r_strict_test_with_brand": 0,
+    "parser_recognized_brand": null,
+    "parser_confidence": 0.69,
+    "unparsed_tokens": [
+      "lavie"
+    ],
+    "note": "Brand absent from catalog"
+  },
+  {
+    "id": "x018",
+    "query": "áo thun Benetton nam",
+    "brand_in_query": "Benetton",
+    "exact_matches_in_catalog": 1337,
+    "substring_matches_in_catalog": 1337,
+    "r_art_gen_full": 5153,
+    "r_art_gen_test": 143,
+    "r_strict_full_with_brand": 209,
+    "r_strict_test_with_brand": 7,
+    "parser_recognized_brand": null,
+    "parser_confidence": 0.69,
+    "unparsed_tokens": [
+      "benetton"
+    ],
+    "note": "Brand alias missing (Canonical: United Colors of Benetton, 1303 products)"
+  }
+]

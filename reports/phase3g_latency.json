@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "phase": "3g",
+    "seed": 42,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "fp16": true,
+    "batch_size": 1,
+    "n_text_queries": 200,
+    "n_image_queries": 200,
+    "warmup_queries": 10,
+    "cache_state": "Gallery embeddings pre-cached in GPU FP16; no per-query result cache",
+    "includes_image_loading": true,
+    "phase3e_228ms_reconciliation": {
+      "reported_in_3f": "228 ms ở Pha 3e",
+      "actual_config_5_p95_in_3e": 205.79,
+      "actual_config_0_p95_in_3e": 229.65,
+      "note": "Số 228 ms trong văn bản 3f là làm tròn từ Config 0 (229.65 ms), không phải Config 5 (205.79 ms). Báo cáo cần sửa chính xác."
+    }
+  },
+  "breakdown": {
+    "parse_query": {
+      "mean": 1.11,
+      "p50": 1.0,
+      "p95": 1.91,
+      "p99": 2.23
+    },
+    "filter_candidates": {
+      "mean": 0.64,
+      "p50": 0.27,
+      "p95": 1.88,
+      "p99": 3.27
+    },
+    "encode_text": {
+      "mean": 26.86,
+      "p50": 23.07,
+      "p95": 43.99,
+      "p99": 75.07
+    },
+    "dense_topk_gpu": {
+      "mean": 2.12,
+      "p50": 1.38,
+      "p95": 4.93,
+      "p99": 5.68
+    },
+    "sparse_bm25": {
+      "mean": 4.0,
+      "p50": 3.63,
+      "p95": 6.74,
+      "p99": 8.41
+    },
+    "rrf_merge": {
+      "mean": 0.18,
+      "p50": 0.16,
+      "p95": 0.33,
+      "p99": 0.45
+    },
+    "total_breakdown": {
+      "mean": 34.9,
+      "p50": 31.25,
+      "p95": 54.86,
+      "p99": 85.64
+    }
+  },
+  "configurations": [
+    {
+      "config_id": 0,
+      "config_name": "Config 0: Dense Model Only",
+      "mean_ms": 32.27,
+      "p50_ms": 28.72,
+      "p95_ms": 51.11,
+      "p99_ms": 68.87,
+      "sla_p95_target_ms": 200.0,
+      "status_p95": "ĐẠT",
+      "status_p99": "ĐẠT"
+    },
+    {
+      "config_id": 1,
+      "config_name": "Config 1: Candidate Filter + Dense",
+      "mean_ms": 31.59,
+      "p50_ms": 28.26,
+      "p95_ms": 49.19,
+      "p99_ms": 85.72,
+      "sla_p95_target_ms": 200.0,
+      "status_p95": "ĐẠT",
+      "status_p99": "ĐẠT"
+    },
+    {
+      "config_id": 2,
+      "config_name": "Config 2: Candidate Filter + Soft Bonus + Dense",
+      "mean_ms": 29.16,
+      "p50_ms": 27.23,
+      "p95_ms": 39.77,
+      "p99_ms": 75.75,
+      "sla_p95_target_ms": 200.0,
+      "status_p95": "ĐẠT",
+      "status_p99": "ĐẠT"
+    },
+    {
+      "config_id": 3,
+      "config_name": "Config 3: Candidate Filter + Soft Bonus + Text Fusion (alpha*=1.0)",
+      "mean_ms": 32.52,
+      "p50_ms": 27.9,
+      "p95_ms": 58.51,
+      "p99_ms": 86.7,
+      "sla_p95_target_ms": 200.0,
+      "status_p95": "ĐẠT",
+      "status_p99": "ĐẠT"
+    },
+    {
+      "config_id": 4,
+      "config_name": "Config 4: BM25 Sparse Alone",
+      "mean_ms": 5.34,
+      "p50_ms": 5.15,
+      "p95_ms": 9.65,
+      "p99_ms": 11.02,
+      "sla_p95_target_ms": 200.0,
+      "status_p95": "ĐẠT",
+      "status_p99": "ĐẠT"
+    },
+    {
+      "config_id": 5,
+      "config_name": "Config 5: Full System (Hybrid Dense+BM25+RRF)",
+      "mean_ms": 36.67,
+      "p50_ms": 32.53,
+      "p95_ms": 54.17,
+      "p99_ms": 94.92,
+      "sla_p95_target_ms": 200.0,
+      "status_p95": "ĐẠT",
+      "status_p99": "ĐẠT"
+    }
+  ],
+  "image_to_image": {
+    "pipeline": "Image -> Image End-to-End (PIL + BILINEAR Resize + Normalize + SigLIP FP16 + GPU Dot Product Top-10)",
+    "mean_ms": 105.32,
+    "p50_ms": 99.75,
+    "p95_ms": 153.77,
+    "p99_ms": 210.19,
+    "sla_target_ms": 200.0,
+    "status_p95": "ĐẠT",
+    "status_p99": "KHÔNG ĐẠT"
+  }
+}

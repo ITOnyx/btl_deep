@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "task": "Phase 3g Q6 Independence & BM25 Ablation Audit",
+    "val_queries_count": 120,
+    "test_queries_count": 120,
+    "total_queries_count": 240,
+    "overlap_texts_count": 11
+  },
+  "ground_truth_definition": {
+    "has_articleType": true,
+    "has_gender": true,
+    "has_season_or_usage": true,
+    "independence_assessment": "Q6 KHÔNG độc lập hoàn toàn với Query Parser vì ground truth vẫn ràng buộc articleType và gender. Parser lọc đúng danh mục giúp thu hẹp không gian tìm kiếm."
+  },
+  "bm25_fields": {
+    "title": true,
+    "attrs_articleType_vi": true,
+    "attrs_gender_vi": true,
+    "attrs_colour_vi": true,
+    "usage_vi": true,
+    "season_vi": false,
+    "sample_training_captions": false,
+    "note": "BM25 index contains usage_vi (e.g. 'dạo phố thường ngày', 'thể thao'), allowing direct lexical match with usage queries. Season is absent from index."
+  },
+  "bm25_ablation_results": {
+    "config_0_model_thuan": {
+      "ap10": 0.2095,
+      "p10": 0.2917,
+      "hit10": 0.675
+    },
+    "config_5_default_bm25": {
+      "ap10": 0.5245,
+      "p10": 0.6033,
+      "hit10": 0.9167
+    },
+    "config_5_ablated_bm25_no_usage": {
+      "ap10": 0.4998,
+      "p10": 0.5883,
+      "hit10": 0.9083
+    },
+    "delta_ap10": -0.0247,
+    "delta_p10": -0.015,
+    "delta_hit10": -0.0084
+  },
+  "alpha_selection_rationale": {
+    "val_gap_alpha_0_85_vs_1_0": 0.0052,
+    "rule": "gap <= 0.0100 allowed selecting alpha*=1.0 to save 170MB RAM and eliminate text embedding latency",
+    "val_gallery_nature": "Gallery val gồm 37,356 ảnh 'unknown' (rất có thể chứa ảnh train của checkpoint SigLIP), do đó số val mang tính lạc quan.",
+    "heldout_status": "Heldout đã được quan sát ở Pha 3e và 3f, không còn là tập ẩn hoàn toàn."
+  }
+}

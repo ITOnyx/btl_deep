@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "task": "Q1b Config 0 FP32 vs FP16 precision & tie-breaking audit",
+    "queries_count": 1290,
+    "max_length": 128,
+    "centering": "mu_shared",
+    "current_pipeline_mode": "optimistic (strictly_greater + 1)"
+  },
+  "results": {
+    "G_test": {
+      "fp32": {
+        "optimistic": {
+          "recall_at_1": 0.1116,
+          "recall_at_5": 0.3543,
+          "recall_at_10": 0.5225,
+          "mrr": 0.2363,
+          "median_rank": 10.0,
+          "mean_rank": 35.15
+        },
+        "pessimistic": {
+          "recall_at_1": 0.1116,
+          "recall_at_5": 0.3543,
+          "recall_at_10": 0.5225,
+          "mrr": 0.2362,
+          "median_rank": 10.0,
+          "mean_rank": 35.16
+        },
+        "average": {
+          "recall_at_1": 0.1116,
+          "recall_at_5": 0.3543,
+          "recall_at_10": 0.5225,
+          "mrr": 0.2363,
+          "median_rank": 10.0,
+          "mean_rank": 35.15
+        },
+        "ties_count": 6,
+        "total_tied_competitors": 6
+      },
+      "fp16": {
+        "optimistic": {
+          "recall_at_1": 0.1116,
+          "recall_at_5": 0.355,
+          "recall_at_10": 0.524,
+          "mrr": 0.2366,
+          "median_rank": 10.0,
+          "mean_rank": 35.11
+        },
+        "pessimistic": {
+          "recall_at_1": 0.1116,
+          "recall_at_5": 0.3543,
+          "recall_at_10": 0.5225,
+          "mrr": 0.2358,
+          "median_rank": 10.0,
+          "mean_rank": 35.21
+        },
+        "average": {
+          "recall_at_1": 0.1116,
+          "recall_at_5": 0.3543,
+          "recall_at_10": 0.5225,
+          "mrr": 0.2361,
+          "median_rank": 10.0,
+          "mean_rank": 35.16
+        },
+        "ties_count": 115,
+        "total_tied_competitors": 124
+      },
+      "comparison": {
+        "r10_diff_optimistic": 0.0015,
+        "r10_diff_pessimistic": 0.0,
+        "ties_count_fp32": 6,
+        "ties_count_fp16": 115,
+        "ties_increase": 109
+      }
+    },
+    "G_full": {
+      "fp32": {
+        "optimistic": {
+          "recall_at_1": 0.0085,
+          "recall_at_5": 0.038,
+          "recall_at_10": 0.0628,
+          "mrr": 0.03,
+          "median_rank": 272.5,
+          "mean_rank": 1038.21
+        },
+        "pessimistic": {
+          "recall_at_1": 0.0085,
+          "recall_at_5": 0.038,
+          "recall_at_10": 0.0628,
+          "mrr": 0.0299,
+          "median_rank": 272.5,
+          "mean_rank": 1038.3
+        },
+        "average": {
+          "recall_at_1": 0.0085,
+          "recall_at_5": 0.038,
+          "recall_at_10": 0.0628,
+          "mrr": 0.03,
+          "median_rank": 272.5,
+          "mean_rank": 1038.26
+        },
+        "ties_count": 119,
+        "total_tied_competitors": 126
+      },
+      "fp16": {
+        "optimistic": {
+          "recall_at_1": 0.0085,
+          "recall_at_5": 0.038,
+          "recall_at_10": 0.0636,
+          "mrr": 0.0302,
+          "median_rank": 272.0,
+          "mean_rank": 1036.99
+        },
+        "pessimistic": {
+          "recall_at_1": 0.0085,
+          "recall_at_5": 0.038,
+          "recall_at_10": 0.062,
+          "mrr": 0.0299,
+          "median_rank": 273.0,
+          "mean_rank": 1039.65
+        },
+        "average": {
+          "recall_at_1": 0.0085,
+          "recall_at_5": 0.038,
+          "recall_at_10": 0.062,
+          "mrr": 0.03,
+          "median_rank": 272.5,
+          "mean_rank": 1038.32
+        },
+        "ties_count": 923,
+        "total_tied_competitors": 3442
+      },
+      "comparison": {
+        "r10_diff_optimistic": 0.0008,
+        "r10_diff_pessimistic": -0.0008,
+        "ties_count_fp32": 119,
+        "ties_count_fp16": 923,
+        "ties_increase": 804
+      }
+    }
+  }
+}
