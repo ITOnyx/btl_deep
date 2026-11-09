@@ -704,7 +704,7 @@
       }
     },
     "files": {
-      "reports/phase3f_errata.md": "de0464e29d42101267c8e1c59d8a84509c2b3b81371f1bdc0d3fc5f8aa452278",
+      "reports/phase3f_errata.md": "d1f2448ad24350497781e75303825d5a06dfb57e4d805555a4597708b49432b2",
       "reports/phase3f_errata_rev4.md": "47196c41a0d77961d9c34565cca9df08138270378d821245c9cdd7e933fa0123",
       "reports/phase3f_errata_rev3.md": "c61161d9242db6b9f5dede40b17336ff440a386310108605a80bff611080d8b1",
       "reports/phase3g_padding_truncation_experiment.json": "6e447ca2effa919533435b34f937aa05256ecf66dd1fe58e1fdd0c6b95dd616f",
@@ -717,7 +717,7 @@
       "src/profile_image_latency_telemetry.py": "e4f8183c23a834cbf53a117bcf81ddcc8ba241f5857818ffb148d3f4642a7be7",
       "src/check_keychain_details.py": "7e708d03dcb9e41842c1401e5f82177fe1a56496f6f07984526dde6e367a9bd2"
     },
-    "errata_rev5_sha256": "de0464e29d42101267c8e1c59d8a84509c2b3b81371f1bdc0d3fc5f8aa452278"
+    "errata_rev5_sha256": "d1f2448ad24350497781e75303825d5a06dfb57e4d805555a4597708b49432b2"
   },
   "phase4": {
     "timestamp": "2026-11-09 16:47:59",
@@ -748,15 +748,15 @@
       "composed_image_retrieval (CIR with MultimodalSigLIPWithCIR + Attention Combiner)"
     ],
     "files": {
-      "app/engine.py": "9689149209d7c6ccf3988640b3bf57f5e6555c813347481a136e15dd721c612a",
-      "app/main.py": "bf134eda575e8514be6d31aea6e00d26cd0647a466dd6df3fd1772a867fc2cbb",
+      "app/engine.py": "038452e1e3e79a21aff6cc306c6fb2426c1d765c84265191733b13b0624c0634",
+      "app/main.py": "aea4cf6d6f053b9ca97ef56aad0f69a5c133c90fb753ea4c6385c950785c723f",
       "src/search_pipeline.py": "05aa06ddb1d3a5acc84120c6aaf6dd2b28f61331f272b107d1b1ed4ba55ec9e3",
       "src/test_app_service.py": "97f42ca23d1f087199e511961e242c206ac69d36d70d955a0716a9881ae5566a",
       "src/test_search_pipeline.py": "464f2abea6f3c532654b6cfdc4eda6b5367788663ffcca6a8c0db3ca54a1f8de",
       "src/evaluate_cir_20queries.py": "f125b16dfd705d35b4f964cd062288425fd37395aaa81083530329f8d7ac335d",
       "src/experiment_trunc64_pad128_eval.py": "fed088afafc117f58ebe44ab8edc4f18a85a88f1ac5c8e40d3714f3376159931",
-      "src/run_phase4_smoke_test.py": "fa464c8d6608c2a93d72ef83eb95573c5e8413c48781203f32e9a9b9822f900f",
-      "reports/phase4_smoke.json": "513877ea4ca75d91a85ca47013b4da8984addca9205ba4f41eef75a7d3271c34",
+      "src/run_phase4_smoke_test.py": "92a8849ba8f08a45d043d8d8afcc69dbbc1f69053f5349246f0e96f44fad86de",
+      "reports/phase4_smoke.json": "6ca761ac14ebde81deaaf772d05602920cfe1123a9288e91a89cb74830a17fde",
       "reports/phase4_cir_20queries_eval.json": "8a37207a6cd6ac01ba9dcf78a0e97f2e1d58359c00736175284d090447dde85e",
       "reports/phase4_trunc64_pad128_eval.json": "458754ac73ec6bd4dc0dd312102fc48486bbb4831f9c817a70d7ec51d4c6f80f",
       "README_run.md": "e66b2e17a9a01f460d1656214d89030343506f3c33708750c71661745fe27cb8"
@@ -764,7 +764,7 @@
     "smoke_test": {
       "verified_file": "reports/phase4_smoke.json",
       "text_queries_tested": 5,
-      "image_queries_tested": 2,
+      "image_queries_tested": 3,
       "cir_queries_tested": 3,
       "status": "PASSED"
     },

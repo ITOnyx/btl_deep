@@ -48,7 +48,7 @@ eval:
   handwritten_queries: "eval/handwritten_queries.json"   # tôi tự viết, 50-100 câu
   min_group_size_for_queries: 10   # nhóm (articleType, gender[, baseColour]) nhỏ hơn thì không sinh truy vấn test
   quality_device: "cpu"            # pipeline chuẩn đánh giá chất lượng (CPU Scorer centering)
-  quality_precision: "float32"     # chuẩn ma trận float32 bảo đảm tính tái lập bit-to-bit
+  quality_precision: "float32"     # chuẩn ma trận float32 cho đánh giá chất lượng
   latency_device: "cuda"           # pipeline phục vụ suy luận thời gian thực (VisualSearchEngine)
   latency_precision: "float16"     # GPU PyTorch half-precision
   tie_rule: "conservative"         # báo song song hoặc bi quan (pessimistic / conservative)

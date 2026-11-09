@@ -402,12 +402,16 @@ with tab_image:
         use_knn = st.checkbox("Bật k-NN Attribute Voting Rescoring", value=True)
 
         query_image = None
+        exclude_self_id = None
         if uploaded_file is not None:
             query_image = Image.open(uploaded_file).convert("RGB")
-            st.image(query_image, caption="Ảnh truy vấn tải lên", use_container_width=True)
+            st.image(query_image, caption="Ảnh truy vấn tải lên (Không loại trừ khỏi catalog)", use_container_width=True)
+            st.info("ℹ️ **Ảnh tải lên từ thiết bị:** Không loại trừ sản phẩm nào khỏi gallery kết quả.")
         elif selected_sample_img is not None:
             query_image = Image.open(selected_sample_img).convert("RGB")
-            st.image(query_image, caption=f"Ảnh mẫu: {Path(selected_sample_img).name}", use_container_width=True)
+            exclude_self_id = Path(selected_sample_img).stem
+            st.image(query_image, caption=f"Ảnh mẫu catalog: ID {exclude_self_id}", use_container_width=True)
+            st.warning(f"🛡️ **Ảnh chọn từ catalog (ID: {exclude_self_id}):** Đã kích hoạt cơ chế tự động **loại bỏ chính sản phẩm này** khỏi danh sách kết quả.")
 
     with img_col2:
         if query_image is not None:
@@ -416,6 +420,7 @@ with tab_image:
                     img_results, img_meta = service.search_image(
                         query_image,
                         top_k=top_k,
+                        exclude_self_id=exclude_self_id,
                         use_flip_aug=use_flip,
                         use_knn_voting=use_knn
                     )
@@ -549,20 +554,27 @@ with tab_benchmark:
             st.markdown(
                 """<div style="background:#ECFDF5; border:1px solid #A7F3D0; border-radius:8px; padding:0.8rem; margin-bottom:0.8rem;">
                 <h5 style="color:#047857; margin-top:0;">🛡️ Cột 2: Hệ thống (Parser + Metadata)</h5>
-                <p style="font-size:0.85rem; color:#475569; margin-bottom:0.4rem;"><b>Cấu hình C2 & C5</b> (Hệ sinh thái kỹ thuật)</p>
-                <div style="font-size:1.4rem; font-weight:700; color:#047857;">Recall@10: 0.9008 (C5: 0.9023)</div>
-                <div style="font-size:0.95rem; color:#334155; margin-top:0.2rem;">mAP (MRR): <b>0.5205</b> (C5: 0.5240)</div>
+                <p style="font-size:0.85rem; color:#475569; margin-bottom:0.4rem;"><b>Cấu hình C2</b> (QueryParser V2 + Soft Bonus &gamma;=0.3, strictly no BM25)</p>
+                <div style="margin-bottom:0.5rem;">
+                    <div style="font-size:1.3rem; font-weight:700; color:#047857;">Recall@10: 0.9008</div>
+                    <span style="background:#D1FAE5; color:#065F46; padding:0.15rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700;">
+                        🟢 ĐẠT CHỈ TIÊU DỰ ÁN (&ge; 0.85)
+                    </span>
+                </div>
+                <div style="margin-bottom:0.5rem;">
+                    <div style="font-size:1.1rem; font-weight:700; color:#B45309;">mAP (MRR): 0.5205</div>
+                    <span style="background:#FEF3C7; color:#92400E; padding:0.15rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700;">
+                        ❌ CHƯA ĐẠT CHỈ TIÊU DỰ ÁN (&ge; 0.75)
+                    </span>
+                </div>
                 <div style="font-size:0.85rem; color:#64748B;">Recall@1: 0.3442 | Recall@5: 0.7465</div>
                 <div style="font-size:0.85rem; color:#64748B;">G_full Recall@10: <b>0.2682</b></div>
                 <hr style="margin:0.5rem 0;">
-                <span style="background:#D1FAE5; color:#065F46; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700;">
-                    🟢 ĐẠT RECALL@10 HỆ THỐNG
-                </span>
-                <p style="font-size:0.75rem; color:#065F46; margin-top:0.4rem; margin-bottom:0;">Thành quả của QueryParserV2 + Lọc ứng viên L0..L6 + Soft Bonus γ=0.3 + BM25 RRF.</p>
+                <p style="font-size:0.75rem; color:#065F46; margin-top:0.4rem; margin-bottom:0;">*Lưu ý:* Q1b đánh giá paired retrieval theo chuẩn Colab chỉ dùng C0 và C2, không sử dụng BM25 hay Text Fusion.</p>
                 </div>""", unsafe_allow_html=True
             )
 
-        st.caption("*Khẳng định độc lập:* Điểm số 0.90+ là thành quả của Hệ sinh thái kỹ thuật (Parser + Metadata + BM25), không đại diện cho riêng mô hình SigLIP nguyên bản.")
+        st.caption("*Khẳng định độc lập:* Điểm số Recall@10 đạt 0.9008 là thành quả của Hệ sinh thái kỹ thuật (Parser + Metadata + Soft Bonus), không đại diện cho riêng mô hình SigLIP nguyên bản.")
 
     with b_col2:
         st.markdown("#### 2. Đối soát Độ trễ & Phân rã Thời gian (5 Runs)")

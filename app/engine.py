@@ -163,12 +163,14 @@ class SearchService:
         self,
         image_input: Any,
         top_k: int = 10,
+        exclude_self_id: Optional[str] = None,
         use_flip_aug: bool = True,
         use_knn_voting: bool = True
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         results = self.engine.search_image(
             image_input,
             top_k=top_k,
+            exclude_self_id=exclude_self_id,
             use_flip_aug=use_flip_aug,
             use_knn_voting=use_knn_voting
         )

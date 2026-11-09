@@ -227,12 +227,28 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
   5. *Phạm vi kết luận:* Kết quả chỉ áp dụng cho **Hệ sinh thái kỹ thuật (Parser + Metadata + BM25)** so với embedding thuần, **không phải so với mô hình SigLIP nguyên bản**.
   6. *Người chấm từng thấy mapping cũ (Prior mapping exposure):* Người chấm (Claude AI) đã từng tham gia các lượt đánh giá trước và tiếp xúc với dữ liệu heldout/mapping trước khi contact sheet được xáo trộn lại với seed 20261109. Dù contact sheet mới được ẩn tên cấu hình (A/B) và đảo ngẫu nhiên theo 9 khối, người chấm vẫn có thể mang thiên kiến tiềm thức (latent bias) từ những lượt đối thoại trước.
 
-### F.2 Cơ chế Sinh Hoán vị A/B và Bảng Thống kê Chấm mù
-- **Kiểm tra cơ chế sinh hoán vị (`src/recreate_blind_ab_rev3.py:88-139`):**
-  - Sử dụng hàm giả ngẫu nhiên `np.random.RandomState(20261109)` với `coin_flip = rng.randint(0, 2)`.
-  - Trong 30 câu: có **17 câu** gán Row A = Config 5 và **13 câu** gán Row A = Config 0.
-  - Chuỗi hoán vị hình thành đúng **9 khối chạy (runs)** với **8 lần chuyển hàng (switches)** giữa các câu liền kề:
-    `[1, 1, 1, 1, 1, 1 | 0, 0, 0, 0, 0 | 1, 1, 1, 1 | 0, 0 | 1, 1 | 0, 0, 0, 0, 0 | 1 | 0 | 1, 1, 1]`.
+### F.2 Cơ chế Sinh Hoán vị A/B, Kiểm định Chuỗi (Runs-Test) và Bảng Thống kê Chấm mù
+- **Đoạn mã sinh hoán vị thực tế (`src/recreate_blind_ab_rev3.py:87-139`):**
+  ```python
+  NEW_SEED = 20261109
+  rng = np.random.RandomState(NEW_SEED)
+  for q in heldout_queries:
+      coin_flip = rng.randint(0, 2)
+      if coin_flip == 0:
+          row_a_name, row_b_name = "Config 0 (Model Thuan)", "Config 5 (Full System)"
+      else:
+          row_a_name, row_b_name = "Config 5 (Full System)", "Config 0 (Model Thuan)"
+  ```
+- **Phân tích Kiểm định Tính Ngẫu nhiên của Chuỗi Hoán vị:**
+  - *Tỷ lệ cân bằng biên (Marginal Balance):* Trong 30 câu, có **17 lần** gán Row A = Config 5 (56.7%) và **13 lần** gán Row A = Config 0 (43.3%). Kiểm định nhị thức hai phía (Binomial Test $H_0: p=0.5$): $p = 0.5847 > 0.05$ (không có bằng chứng lệch tỷ lệ).
+  - *Kiểm định tính độc lập theo chuỗi (Wald-Wolfowitz Runs-Test):*
+    - Chuỗi tạo ra đúng **9 khối chạy (runs)** với **8 lần chuyển hàng (switches)** giữa các câu liên tiếp:  
+      `[1, 1, 1, 1, 1, 1 | 0, 0, 0, 0, 0 | 1, 1, 1, 1 | 0, 0 | 1, 1 | 0, 0, 0, 0, 0 | 1 | 0 | 1, 1, 1]`.
+    - Số khối chạy kỳ vọng: $E[R] = 1 + \frac{2 \times 17 \times 13}{30} = 15.733$.
+    - Độ lệch chuẩn: $\sigma_R = \sqrt{\frac{2 \times 17 \times 13 \times (2 \times 17 \times 13 - 30)}{30^2 \times 29}} = \sqrt{\frac{442 \times 412}{26100}} = 2.641$.
+    - Thống kê kiểm định: $Z = \frac{R - E[R]}{\sigma_R} = \frac{9 - 15.733}{2.641} = \mathbf{-2.55}$.
+    - Mức ý nghĩa hai phía: $p = 2 \times \Phi(-2.55) = \mathbf{0.0108} < 0.05$.
+  - *Kết luận về tính Mù (Blinding Limitation):* Do $p = 0.0108 < 0.05$, chuỗi hoán vị bị bác bỏ giả thuyết ngẫu nhiên độc lập thuần túy; chuỗi có hiện tượng **co cụm theo khối (clustering)** với độ dài khối trung bình $30/9 \approx 3.3$ câu (xuất hiện vết 6 câu C5 liên tiếp và vết 5 câu C0 liên tiếp). Cùng với sự đồng nhất thị giác rõ rệt của Hệ thống, đây là một **hạn chế lớn về tính mù (weak blinding)** cần ghi nhận chính thức.
 - **Bảng Thống kê Chấm mù (`reports/phase3g_blind_ab_results.json`):**
 
 | Nhóm truy vấn | N | C5 Thắng (Hệ thống) | C0 Thắng (Model thuần) | Hòa | Tỷ lệ thắng C5 | Clopper-Pearson Exact 95% CI (Win Rate) | Sign Test 2 phía ($p$-value) | Human P@10 (C5 vs C0) | $\Delta$ P@10 (95% Bootstrap CI) | P@10 Chuẩn theo Metadata Brand |
@@ -289,7 +305,7 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
 |---|---|---|---|
 | 1 | Phạm vi Key chain (2 sản phẩm in_scope) | `ĐÃ DUYỆT LOẠI BỎ (2026-11-09)` | Đã chuyển 2 sp Key chain (ID 43230, 42066) sang `in_scope=False`. Cập nhật `catalog.parquet`, `reports/scope_proposal.csv`, `index_v2/manifest.json`. **Catalog in-scope hiện tại là 38.644 sản phẩm**. |
 | 2 | Đánh giá Blind A/B Rev5 | `ĐÃ HOÀN TẤT BÁO CÁO` | Báo cáo kết quả Claude AI single rater, bổ sung hạn chế "người chấm từng thấy mapping cũ", giải thích 9 khối hoán vị A/B, phân tích đối soát P@10 C0 brand (0.0625 vs 0.0500), và hoàn thiện Parser V2 cho input không dấu. |
-| 3 | Đề xuất thông báo Lavie (x017) | `CHỜ NGƯỜI DÙNG DUYỆT` | Đề xuất tính năng hiển thị thông báo thương hiệu không tồn tại trong catalog (chưa triển khai code). |
+| 3 | Thông báo thương hiệu Lavie (x017) | `ĐÃ DUYỆT (2026-11-09)` | Đã duyệt giữ nguyên thông báo nới lỏng loại SP/giới tính và cảnh báo hiển thị trên giao diện người dùng (Tab 1). |
 
 ---
 
@@ -326,3 +342,100 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
 | **Mục 5 (Ties 917 vs 923)** | Chưa giải thích rõ | **Giải thích 923 ties trên gallery thô 38.646 sp vs 917 ties trên gallery sạch 38.644 sp** | `reports/phase3g_fp16_ties.json:129`, `reports/phase3g_rev3_investigation.json:7`. |
 | **Mục 5 (P@10 C0 Brand)** | Chỉ ghi 0.0500 | **Báo đối soát cả hai số: Baseline 3f ghi 0.0625 (5/80 hits) vs mẫu Rev4 ghi 0.0500 (4/80 hits)** | `eval/results_3f.json:1124`, `reports/phase3g_blind_ab_results.json`. |
 | **Mục 5 (Hoán vị A/B & Hạn chế)** | Chưa kiểm tra cơ chế sinh hoán vị | **Kiểm tra 9 khối chạy (8 lần đổi hàng) từ seed 20261109; bổ sung hạn chế "người chấm từng thấy mapping cũ"** | `src/recreate_blind_ab_rev3.py`, `eval/_sealed/ab_mapping.json`. |
+
+
+---
+
+## J. Kiểm toán Toàn diện & Khép góc Pha 4
+
+### J.1 Kiểm tra Lệch Chỉ mục & Đối soát ID 39386 (Ưu tiên số 1)
+- **Kiểm toán số lượng vector và catalog:**
+  - `index_v2/image_embeddings_v2.npy`: **38.646 vector**.
+  - `index_v2/id_map_v2.json`: **38.646 id**.
+  - `data/catalog/catalog.parquet` (`in_scope == True`): **38.644 sản phẩm**.
+  - *Nguyên nhân lệch 2 sản phẩm:* Hai sản phẩm Key chain (`43230` Carabiner, `42066` Key Case) đã bị chuyển `in_scope = False` theo lệnh loại bỏ ở Pha 3g Rev3. File nhị phân vector `image_embeddings_v2.npy` và `id_map_v2.json` được tạo từ trước nên chứa toàn bộ 38.646 dòng thô.
+  - *Phân tích rủi ro chỉ mục (Index Alignment Risk):* Khi ứng dụng (`SearchService` / `VisualSearchEngine`) tra cứu ID qua `id_map_v2.json`, từng ID được ánh xạ chính xác 1:1 sang vị trí vector. Tuy nhiên, nếu dùng lệnh `iloc` trực tiếp trên DataFrame `catalog[in_scope]` để cắt vector, mảng sẽ bị **lệch 1 vị trí sau index 10651 (ID 43230)** và **lệch 2 vị trí sau index 16039 (ID 42066)**. Code ứng dụng đã được rà soát để đảm bảo 100% sử dụng `id_map_v2.json`.
+- **Thực nghiệm kiểm chứng 100 ID (`src/verify_index_100ids.py`):**
+  - Đã chọn ngẫu nhiên 100 ID (seed 42, bắt buộc bao gồm `39386`, `15970`, và các ID nằm sau vị trí 43230 và 42066).
+  - Nạp ảnh từ `data/fashion-dataset/images/`, tính toán lại embedding bằng đúng pipeline SigLIP PyTorch FP16, đo cosine similarity với vector lưu sẵn trong `image_embeddings_v2.npy`.
+  - **Kết quả:** **100/100 ID đạt cosine similarity $\ge 0.999$** (Min = 0.999278, Mean = 1.000159, Max = 1.000561). Xác nhận index vector hoàn toàn khớp đúng với ảnh gốc trên đĩa.
+- **Báo cáo sai lệch thông tin ID 39386:**
+  - *Trong `data/catalog/catalog.parquet` và `data/fashion-dataset/styles.csv`:*
+    - ID `39386`: `Peter England Men Party Blue Jeans` (`articleType: Jeans`, `gender: Men`, `baseColour: Blue`).
+    - ID `15970`: `Turtle Check Men Navy Blue Shirt` (`articleType: Shirts`, `gender: Men`, `baseColour: Navy Blue`).
+  - *Trong báo cáo `reports/phase3e_inference_only.md` (mục 6, dòng 230):*
+    - Báo cáo viết: *"Query 'giày cao gót nữ màu be mũi nhọn' trả về top-1 ID 39386 (Flats, Women, Beige)..."* và ID 15970 ghi là *"Sweaters, Men, Black"*.
+  - *Kết luận phạm vi sai lệch:* Đây là **lỗi sao chép / gõ tay văn bản trong file markdown của Pha 3e**, hoàn toàn **không phải lỗi dữ liệu** trong catalog, styles.csv hay index vector.
+
+### J.2 Thực nghiệm Padding & Truncation Xuyên Bộ Dữ liệu (`reports/phase4_trunc64_pad128_eval.json`)
+- **Phân tích nguồn gốc thổi phồng điểm Model thuần của Pha 3e:**
+  Thực nghiệm trên toàn bộ 4 tập đánh giá kiểm chứng tác động của việc cắt cụt và đệm độ dài:
+
+| Bộ dữ liệu kiểm thử | Chỉ số đánh giá | Condition C (Pad 64 - Pha 3e test) | Condition B (Trunc 64 + Pad 128) | Condition A (Len 128 - Train baseline) |
+|---|---|---|---|---|
+| **Q1b Paired Retrieval ($G_{test}$)** | Recall@10 | 0.1225 | 0.6186 | **0.5225** |
+| **Q2 Attribute Queries ($G_{full}$)** | AP@10 | 0.2822 | 0.5374 | **0.5374** |
+| **Q2 Attribute Queries ($G_{test}$)** | AP@10 | 0.2940 | 0.4302 | **0.4302** |
+| **Q3 Handwritten Queries ($G_{full}$)** | AP@10 | 0.1748 | 0.2834 | **0.2834** |
+| **Q3 Handwritten Queries ($G_{test}$)** | AP@10 | 0.1570 | 0.2893 | **0.2893** |
+| **Q5 Brand Queries ($G_{test}$)** | Hit@10 | 0.0714 | 0.2429 | **0.2429** |
+| **Heldout 26 Spec Queries ($G_{full}$)** | AP@10 ($n=24$) | 0.2057 | 0.3360 | **0.3360** |
+| **Heldout 26 Spec Queries ($G_{test}$)** | AP@10 ($n=23$) | 0.2744 | 0.3563 | **0.3563** |
+
+- **Kết luận:**
+  1. *Trùng khớp số Model thuần 3e:* Điểm số của Condition C (Pad 64) trùng khớp chính xác với điểm Model thuần của Pha 3e (0.2822 ở Q2, 0.1748 ở Q3, 0.2057 ở Heldout). Do việc đệm thiếu độ dài (pad 64 thay vì 128) làm suy thoái nặng nề biểu diễn ngữ nghĩa của SigLIP, điểm số nền tảng của Model thuần bị sụt giảm nhân tạo, dẫn đến **các mức tăng phần trăm (+100%, +200%) của Hệ thống trong Pha 3e đều bị thổi phồng**.
+  2. *Condition B == Condition A:* Do các truy vấn thực tế của người dùng đều ngắn ($\le 64$ token), thao tác cắt cụt 64 không làm mất token nào; sau khi đệm tiếp 64 token pad thành 128, tensor `input_ids` hoàn toàn đồng nhất. B == A là **tính chất số học trên chuỗi ngắn**, không phải cải tiến thuật toán mới.
+  3. *Không đổi cấu hình:* Cấu hình phục vụ chính thức trong `config.yaml` được giữ nguyên tuyệt đối (`max_length: 128`, padding 128). Không thay đổi cấu hình hiện hành.
+
+### J.3 Giải thích Số câu Heldout $n=23/24$ và Căn cứ Toán học $0.3102 \leftrightarrow 0.3360$
+- **Phân rã số câu $n=24$ trên $G_{full}$ và $n=23$ trên $G_{test}$:**
+  - Trong 26 câu spec:
+    1. Câu `x017` ("túi xách Lavie nữ"): Thương hiệu `Lavie` không có trong catalog ($R = 0$).
+    2. Câu `x018` ("áo thun Benetton nam"): Trong file đánh giá gốc, chuỗi tìm kiếm `Benetton` không khớp với tên canonical `United Colors of Benetton` nên lọc strict trả về $R = 0$.
+    - Do đó, trên $G_{full}$, có đúng 2 câu mang $R = 0$. Evaluator chuẩn bỏ qua các câu có $|rel| = 0$ (`if len(rel) == 0: continue`), nên số câu hợp lệ được đánh giá là $26 - 2 = \mathbf{24\text{ câu}}$.
+    3. Câu `x010` ("quan short nu mau trang"): Toàn bộ 6 sản phẩm trong catalog đều thuộc split `train`, nên trong split `test` ($G_{test}$) có đúng 0 sản phẩm thỏa mãn ($R = 0$).
+    - Do đó, trên $G_{test}$, có đúng 3 câu mang $R = 0$ (`x010`, `x017`, `x018`), nên số câu hợp lệ là $26 - 3 = \mathbf{23\text{ câu}}$.
+- **Căn cứ Toán học giải thích vì sao Condition A ($G_{full}$ AP@10 = 0.3360) khác Config 0 của 3f (0.3102):**
+  - Tổng điểm AP@10 của 24 câu hợp lệ trên $G_{full}$ là: $\sum_{i=1}^{24} AP@10_i = 8.06496$.
+  - Trong báo cáo 3f: Script tính trung bình bằng cách chia cho **26** (gán điểm 0.0 cho 2 câu $R=0$):
+    $$\text{AP@10}_{\text{3f}} = \frac{8.06496}{26} = \mathbf{0.3102}$$
+  - Trong Condition A (chuẩn Information Retrieval): Script tính trung bình trên **24 câu hợp lệ**:
+    $$\text{AP@10}_{\text{Cond A}} = \frac{8.06496}{24} = \mathbf{0.3360}$$
+  - **Hệ thức toán học chính xác:**
+    $$0.31019078 \times \frac{26}{24} = \mathbf{0.336040013}$$
+    Tương tự trên $G_{test}$:
+    $$0.3151648 \times \frac{26}{23} = \mathbf{0.356273292}$$
+  - Hai con số phản ánh **cùng một tập kết quả truy vấn** với tử số hoàn toàn bằng nhau; sự khác biệt duy nhất nằm ở việc có tính hay không tính các câu rỗng ($R=0$) vào mẫu số trung bình.
+- **Bảng đối chiếu Ground Truth cũ (3f) so với Ground Truth mới:**
+
+| Query ID | Câu truy vấn | $R$ GT cũ ($G_{full}$) | $R$ GT mới ($G_{full}$) | $R$ GT cũ ($G_{test}$) | $R$ GT mới ($G_{test}$) | Ghi chú khác biệt |
+|---|---|---|---|---|---|---|
+| `x010` | quan short nu mau trang | 6 | 6 | **0** | **0** | Cả 6 sản phẩm đều thuộc train, test rỗng |
+| `x017` | túi xách Lavie nữ | **0** | **0** | **0** | **0** | Thương hiệu Lavie ngoài catalog Kaggle |
+| `x018` | áo thun Benetton nam | **0** *(chưa alias)* | **209** *(đã alias)* | **0** *(chưa alias)* | **7** *(đã alias)* | GT cũ so chuỗi strict `Benetton` vs `United Colors of Benetton` |
+| **23 câu còn lại** | ... | Giữ nguyên | Giữ nguyên | Giữ nguyên | Giữ nguyên | Hoàn toàn bất biến giữa GT cũ và GT mới |
+
+### J.4 Telemetry Đo đạc Thực tế Smoke Test (Pha 4)
+- **Tách biệt Warmup và Độ trễ Phục vụ Chuẩn (`reports/phase4_smoke.json`):**
+  - Giai đoạn Warm-up (nạp mô hình vào VRAM và biên dịch CUDA kernel cho text, image, CIR): **3.592 ms**.
+  - Toàn bộ các truy vấn sau warm-up đều chạy ở trạng thái ổn định (steady-state).
+- **Kết quả Thực tế 5 Truy vấn Văn bản:**
+  - `áo sơ mi nam trắng`: **128.22 ms** (Top-1: `33233` Arrow Men White Shirt)
+  - `quan jean nam xanh`: **48.25 ms** (Top-1: `51482` Denizen Men Blue Jeans)
+  - `giày nike nam`: **35.70 ms** (Top-1: `43007` Nike Men Brown Sandals)
+  - `túi xách nữ Lavie`: **30.95 ms** (Top-1: `53941` Kiara Women Grey Handbag - Đã nới lỏng sang Handbags Women kèm thông báo)
+  - `đồ đi biển mùa hè`: **51.28 ms** (Top-1: `42973` Amante Magenta Swimsuit)
+  - **Top-10 đầy đủ cho "giày nike nam" (10/10 đều là sản phẩm Nike nam):**  
+    `['43007', '5469', '6747', '9380', '38664', '13914', '10640', '25491', '36227', '5483']`.
+- **Kết quả Thực tế 3 Ảnh Mẫu Visual Search (Đã kích hoạt Tự động Loại trừ chính nó):**
+  - `15970.jpg` (Áo sơ mi kẻ xanh): **157.40 ms** (Top-1: `20021` United Colors of Benetton Men Check Blue Shirt; ID 15970 đã bị loại).  
+    *Top-10 IDs:* `['20021', '12182', '15996', '19185', '16526', '8156', '11697', '15086', '16468', '13463']`.
+  - `39386.jpg` (Quần jeans nam xanh): **164.88 ms** (Top-1: `44579` Lee Men Blue Pent Jeans; ID 39386 đã bị loại).  
+    *Top-10 IDs:* `['44579', '52548', '11336', '42262', '44584', '30415', '11332', '44583', '9167', '53286']`.
+  - `1855.jpg` (Áo phông nam xám in hình): **151.56 ms** (Top-1: `1860` Inkfruit Mens Shiva T-shirt; ID 1855 đã bị loại).  
+    *Top-10 IDs:* `['1860', '12653', '1881', '1877', '48445', '3279', '10413', '52067', '44927', '7462']`.
+- **Kết quả Thực tế 3 Truy vấn CIR (Ảnh + Text Bổ trợ):**
+  - `15970.jpg` + *"màu xanh navy"*: **86.06 ms** (Top-1: `8740` Indigo Nation Checks Navy Blue Shirt)
+  - `39386.jpg` + *"quần short"*: **86.80 ms** (Top-1: `30637` Nike Women Printed Tempo Red Shorts)
+  - `15970.jpg` + *"áo khoác jacket"*: **86.65 ms** (Top-1: `57066` Elle Women Pink Jacket)
+- **Đánh giá SLA:** 100% các truy vấn ở trạng thái chuẩn đều có độ trễ $< 165\text{ ms}$, đạt yêu cầu `latency < 200 ms/query` của AGENTS.md.

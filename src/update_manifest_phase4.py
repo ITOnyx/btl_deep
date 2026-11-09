@@ -84,7 +84,7 @@ def main():
     d["phase4"]["smoke_test"] = {
         "verified_file": "reports/phase4_smoke.json",
         "text_queries_tested": 5,
-        "image_queries_tested": 2,
+        "image_queries_tested": 3,
         "cir_queries_tested": 3,
         "status": "PASSED"
     }
