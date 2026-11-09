@@ -75,11 +75,13 @@ Bảng bóc tách định lượng trên 1.290 sản phẩm test:
 
 ---
 
-## F3 — Đánh giá lại trên Tập Truy vấn Độc lập Q6 (Usage / Season)
+## F3 — Đánh giá lại trên Tập Truy vấn Kiểm soát Thuộc tính Q6 (Usage / Season)
 
-Để đo lường chuẩn xác năng lực ranking thực thụ của hệ thống mà không bị ảnh hưởng bởi việc parser thu hẹp pool dựa trên nhãn đánh giá, tập **Q6** (`eval/q6_queries.json`) được xây dựng hoàn toàn độc lập:
+*(Đính chính: Xem chi tiết tại reports/phase3f_errata.md Mục E. Q6 KHÔNG hoàn toàn độc lập vì ground truth có ràng buộc articleType và gender; parser vẫn hỗ trợ thu hẹp pool. Bằng chứng xếp hạng độc lập duy nhất của hệ thống là Blind A/B).*
+
+Để đo lường năng lực ranking của hệ thống khi không lọc trực tiếp trên thuộc tính truy vấn chính, tập **Q6** (`eval/q6_queries.json`) được xây dựng:
 - **Tiêu chí liên quan:** Dựa vào `usage` (Casual, Ethnic, Sports, Formal, Party) và `season` (Summer, Fall, Winter, Spring).
-- **Đặc tính độc lập:** Query parser **KHÔNG** nhận diện `usage` và `season`, bộ lọc thuộc tính **KHÔNG** lọc trên hai trường này, và bộ chấm điểm mềm **KHÔNG** thưởng điểm cho hai trường này.
+- **Đặc tính kiểm soát:** Query parser **KHÔNG** nhận diện `usage` và `season`, bộ lọc thuộc tính **KHÔNG** lọc trên hai trường này, và bộ chấm điểm mềm **KHÔNG** thưởng điểm cho hai trường này (tuy nhiên vẫn nhận diện danh mục và giới tính nếu có).
 
 ### 1. Dò tìm Siêu tham số trên Tập Val ($N=37.356$ items, 120 queries)
 Lưới tìm kiếm: $\gamma \in \{0.0, 0.05, 0.1, 0.2, 0.3\} \times \alpha \in \{0.5, 0.7, 0.85, 1.0\}$.
@@ -95,10 +97,10 @@ Lưới tìm kiếm: $\gamma \in \{0.0, 0.05, 0.1, 0.2, 0.3\} \times \alpha \in 
 | **Cấu hình 1** | Hard Filter (Loại/Giới) | 0.5383 | 0.8500 | 0.4493 | [0.3789, 0.5115] | 0.5383 | +0.2402 (+114.9%) |
 | **Cấu hình 2** | Soft Scoring ($\gamma=0.3$) | 0.5183 | 0.8417 | 0.4335 | [0.3627, 0.4939] | 0.5183 | +0.2244 (+107.3%) |
 | **Cấu hình 3** | Text Fusion thuần ($\alpha=1.0$) | 0.2908 | 0.6750 | 0.2091 | [0.1607, 0.2592] | 0.2908 | 0.0000 (0.0%) |
-| **Cấu hình 5** | **Hệ thống Lai** (Dense + BM25 + Soft) | **0.5967** | **0.9167** | **0.5172** | **[0.4440, 0.5829]** | **0.5967** | **+0.3081 (+147.4%)** |
+| **Cấu hình 5** | **Hệ thống Lai** (Dense + BM25 + Soft) | **0.5967** | **0.9167** | **0.5172** | **[0.4440, 0.5829]** | **0.5967** | **+0.3081** |
 
 > [!IMPORTANT]
-> **Ý nghĩa của bài kiểm tra Q6:** Khi truy vấn chứa phong cách/dịp sử dụng (thể thao, công sở, dự tiệc...) mà parser không thể dùng thuộc tính đó để gian lận hay thu hẹp pool, **Cấu hình 5 (Hệ thống Lai) vẫn đạt AP@10 = 0.5172, cao gấp 2.47 lần Model thuần (0.2091)**. Điều này khẳng định sự kết hợp giữa Dense embedding và Lexical BM25 cùng phân cấp danh mục đã cải thiện chất lượng ranking thực tế một cách trung thực và bền vững.
+> **Ý nghĩa của bài kiểm tra Q6:** Khi truy vấn chứa phong cách/dịp sử dụng (thể thao, công sở, dự tiệc...) mà parser không trực tiếp lọc trên hai trường này, **Cấu hình 5 (Hệ thống Lai) đạt AP@10 = 0.5172 so với Model thuần (0.2091)**. (Lưu ý: Parser vẫn nhận diện danh mục và giới tính nếu có trong câu hỏi để hỗ trợ; xem chi tiết bảng ablation tại `reports/phase3f_errata.md`). Bằng chứng xếp hạng độc lập duy nhất của hệ thống là Blind A/B trên tập heldout.
 
 ---
 
@@ -193,7 +195,7 @@ Bảng so sánh đối đầu toàn diện giữa **Model thuần (Cấu hình 0
 | | | Median Rank | 10.0 | **2.0** *(C2)* | -8.0 rank | Cải thiện vị trí trung vị |
 | | $G_{full}$ ($38.646$) | **Recall@10** | 0.0628 | **0.2682** *(C2)* | **+0.2054** | Gallery thực tế có nhiễu |
 | | | Median Rank | 272.5 | **40.0** *(C2)* | -232.5 rank | Giảm nhiễu mạnh trên tập lớn |
-| **Q6: Thuộc tính Độc lập** | $G_{test}$ ($1.290$) | Precision@10 | 0.2908 | **0.5967** | **+0.3059** | Kiểm tra ranking độc lập |
+| **Q6: Thuộc tính Usage/Season** | $G_{test}$ ($1.290$) | Precision@10 | 0.2908 | **0.5967** | **+0.3059** | Kiểm tra ranking có parser hỗ trợ |
 | *(Usage & Season, 120 queries)* | | Hit@10 | 0.6750 | **0.9167** | **+0.2417** | Tỉ lệ tìm thấy ít nhất 1 SP |
 | | | **AP@10** | 0.2091 | **0.5172** | **+0.3081** | **Chất lượng ranking thực tế** |
 | **Q2: Thuộc tính Cố định** | $G_{test}$ ($1.290$) | Precision@10 | 0.4344 | **0.7230** | +0.2886 | Kiểm tra parser / lọc |
@@ -208,7 +210,7 @@ Bảng so sánh đối đầu toàn diện giữa **Model thuần (Cấu hình 0
 | *(Brands, 150 queries)* | | AP@10 | 0.0306 | **0.9481** | +0.9175 | |
 | | $G_{full}$ ($38.646$) | Precision@10 | 0.0147 | **0.8733** | +0.8586 | |
 | | | AP@10 | 0.0082 | **0.9508** | +0.9426 | |
-| **Heldout: Độc lập Người dùng** | $G_{test}$ ($1.290$) | Precision@10 | 0.2231 | **0.5308** | +0.3077 | Kiểm định Blind Test |
+| **Heldout: Tập Người dùng** | $G_{test}$ ($1.290$) | Precision@10 | 0.2231 | **0.5308** | +0.3077 | Kiểm định Blind Test |
 | *(26 Spec queries)* | | AP@10 | 0.3152 | **0.8197** | +0.5045 | |
 | | $G_{full}$ ($38.646$) | Precision@10 | 0.3654 | **0.8846** | +0.5192 | |
 | | | **AP@10** | 0.3102 | **0.8834** | **+0.5732** | Khả năng tổng quát hóa thực tế |
@@ -224,6 +226,6 @@ Bảng so sánh đối đầu toàn diện giữa **Model thuần (Cấu hình 0
 
 1. **Hoàn thành xuất sắc đối soát F1:** Khắc phục triệt để lỗi cắt chuỗi tokenizer, đưa chỉ số Model thuần khớp chính xác 100% với Pha 3c (R@10 = 0.5225 trên $G_{test}$, 0.0628 trên $G_{full}$).
 2. **Minh bạch hóa F2:** Xác định rõ sự khác biệt giữa việc thu nhỏ pool nhân tạo (Cấu hình 1) và cải thiện ranking thực sự (Cấu hình 2 & Cấu hình 5).
-3. **Kiểm chứng ranking độc lập F3:** Trên tập Q6 hoàn toàn không liên quan đến parser filter, Cấu hình 5 đạt AP@10 = 0.5172 (+147.4% so với Model thuần).
-4. **Tối ưu hóa độ trễ F4:** Tăng tốc GPU FP16 đưa P95 latency toàn hệ thống về **69.75 ms** (SLA $< 200\text{ ms}$: **ĐẠT**).
-5. **Sẵn sàng Blind A/B F5 & Giải mã Brand F6:** Đã tạo đầy đủ 30 contact sheet, giữ bí mật bảng mapping và chứng minh 6/6 brand hợp lệ đạt AP@10 trung bình 0.8507.
+3. **Kiểm chứng ranking F3:** Trên tập Q6 không lọc trực tiếp usage/season, Cấu hình 5 đạt AP@10 = 0.5172 (so với Model thuần là 0.2091; có Parser hỗ trợ nhận diện category & gender).
+4. **Tối ưu hóa độ trễ F4:** Tăng tốc GPU FP16 đưa P95 latency toàn hệ thống về mức đạt SLA $< 200\text{ ms}$ (đo lại 5 runs độc lập là 112.07 ms, chi tiết xem errata).
+5. **Sẵn sàng Blind A/B F5 & Giải mã Brand F6:** Đã tạo đầy đủ 30 contact sheet, giữ bí mật bảng mapping và chứng minh 6/6 brand hợp lệ ban đầu đạt AP@10 trung bình 0.8507.

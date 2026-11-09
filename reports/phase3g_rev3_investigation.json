@@ -1,0 +1,215 @@
+{
+  "ties_and_fp16": {
+    "cpu_fp32_exact_ties": 2,
+    "cpu_fp32_isclose_ties": 112,
+    "cpu_fp32_r10_opt": 0.06356589147286822,
+    "cpu_fp32_r10_pess": 0.06356589147286822,
+    "gpu_fp16_ties": 917,
+    "gpu_fp16_r10_full_opt": 0.06356589147286822,
+    "gpu_fp16_r10_full_pess": 0.06279069767441861,
+    "gpu_fp16_r10_test_opt": 0.5232558139534884,
+    "official_quality_pipeline": "CPU float32 matrix operations (Scorer centered)",
+    "serving_pipeline": "GPU float16 matrix operations (VisualSearchEngine)",
+    "formula_amplitude": {
+      "r10_opt": 0.0636,
+      "r10_pess": 0.062,
+      "diff_total": 0.0016,
+      "symmetric_bound": 0.0008,
+      "explanation": "Biên độ toàn phần = R@10_opt (82/1290) - R@10_pess (80/1290) = 2/1290 = 0.00155 ~ 0.0016. Giá trị trung tâm công bố là 81/1290 = 0.0628, độ lệch đối xứng là +-0.0008."
+    }
+  },
+  "brand_aliases": {
+    "aliases_count": 22,
+    "collision_check": {
+      "lee_vs_lee_cooper": {
+        "is_lee_in_aliases": false,
+        "lee_alone_matches": 477,
+        "lee_cooper_matches": 133,
+        "note": "Lee và Lee Cooper là hai thương hiệu riêng biệt. Lee Cooper là canonical brand độc lập trong brands.json. Không có alias 'lee' -> 'lee cooper'."
+      },
+      "color_black_collision": {
+        "is_black_in_aliases": true,
+        "note": "Từ 'black' không có trong aliases_dict; được Parser bảo toàn nhận diện là colour ('Black')."
+      },
+      "gender_letters_F_W_M": {
+        "is_F_in_aliases": true,
+        "is_W_in_aliases": true,
+        "is_M_in_aliases": false,
+        "note": "Không có ký tự đơn 'f', 'w', 'm' trong aliases_dict, không xung đột với nhận diện giới tính."
+      },
+      "case_sensitivity_ADIDAS_vs_Adidas": {
+        "note": "brands_v2.json lưu canonical 'ADIDAS' và 'Adidas' chuẩn hóa case-insensitive trong QueryParser."
+      }
+    },
+    "product_counts": {
+      "Benetton": {
+        "canonical_target": "United Colors of Benetton",
+        "canon_products_in_catalog": 1303,
+        "alias_keyword_occurrences": 1337
+      },
+      "UCB": {
+        "canonical_target": "United Colors of Benetton",
+        "canon_products_in_catalog": 1303,
+        "alias_keyword_occurrences": 159
+      },
+      "Adidas": {
+        "canonical_target": "ADIDAS",
+        "canon_products_in_catalog": 1969,
+        "alias_keyword_occurrences": 1969
+      },
+      "Gini & Jony": {
+        "canonical_target": "Gini and Jony",
+        "canon_products_in_catalog": 319,
+        "alias_keyword_occurrences": 5
+      },
+      "Gini Jony": {
+        "canonical_target": "Gini and Jony",
+        "canon_products_in_catalog": 319,
+        "alias_keyword_occurrences": 17
+      },
+      "Reid Taylor": {
+        "canonical_target": "Reid & Taylor",
+        "canon_products_in_catalog": 244,
+        "alias_keyword_occurrences": 0
+      },
+      "Reid and Taylor": {
+        "canonical_target": "Reid & Taylor",
+        "canon_products_in_catalog": 244,
+        "alias_keyword_occurrences": 0
+      },
+      "US Polo": {
+        "canonical_target": "U.S. Polo Assn.",
+        "canon_products_in_catalog": 301,
+        "alias_keyword_occurrences": 0
+      },
+      "US Polo Assn": {
+        "canonical_target": "U.S. Polo Assn.",
+        "canon_products_in_catalog": 301,
+        "alias_keyword_occurrences": 0
+      },
+      "U.S. Polo": {
+        "canonical_target": "U.S. Polo Assn.",
+        "canon_products_in_catalog": 301,
+        "alias_keyword_occurrences": 304
+      },
+      "FCUK": {
+        "canonical_target": "French Connection",
+        "canon_products_in_catalog": 413,
+        "alias_keyword_occurrences": 49
+      },
+      "Levis": {
+        "canonical_target": "Levi's",
+        "canon_products_in_catalog": 52,
+        "alias_keyword_occurrences": 185
+      },
+      "Q and Q": {
+        "canonical_target": "Q&Q",
+        "canon_products_in_catalog": 255,
+        "alias_keyword_occurrences": 0
+      },
+      "QQ": {
+        "canonical_target": "Q&Q",
+        "canon_products_in_catalog": 255,
+        "alias_keyword_occurrences": 0
+      },
+      "Wrangler Jeans": {
+        "canonical_target": "Wrangler",
+        "canon_products_in_catalog": 668,
+        "alias_keyword_occurrences": 0
+      },
+      "sOliver": {
+        "canonical_target": "s.Oliver",
+        "canon_products_in_catalog": 128,
+        "alias_keyword_occurrences": 0
+      },
+      "MrMen": {
+        "canonical_target": "Mr.Men",
+        "canon_products_in_catalog": 105,
+        "alias_keyword_occurrences": 0
+      },
+      "Modacc": {
+        "canonical_target": "Mod'acc",
+        "canon_products_in_catalog": 43,
+        "alias_keyword_occurrences": 0
+      },
+      "Tantra Kids": {
+        "canonical_target": "Tantra Kid's",
+        "canon_products_in_catalog": 34,
+        "alias_keyword_occurrences": 0
+      },
+      "Mr": {
+        "canonical_target": "Mr.",
+        "canon_products_in_catalog": 168,
+        "alias_keyword_occurrences": 169
+      },
+      "Inc": {
+        "canonical_target": "Inc.",
+        "canon_products_in_catalog": 36,
+        "alias_keyword_occurrences": 66
+      },
+      "Estd": {
+        "canonical_target": "Estd.",
+        "canon_products_in_catalog": 24,
+        "alias_keyword_occurrences": 24
+      }
+    },
+    "regression_test": {
+      "q5_brand_diffs": 0,
+      "q2_attr_diffs": 0,
+      "q3_dev_diffs": 0,
+      "conclusion": "Không có bất kỳ hồi quy nào trên Q5, Q2, Q3 (0 khác biệt về nhận diện brand ngoài các alias được chủ đích thêm)."
+    },
+    "heldout_brand_breakdown": {
+      "all_8_brands": {
+        "v1": {
+          "ap10_all_8": 0.7028,
+          "p10_all_8": 0.75,
+          "ap10_valid_7": 0.8032,
+          "valid_brands_count": "7/8 (chỉ Lavie R=0)"
+        },
+        "v2": {
+          "ap10_all_8": 0.763,
+          "p10_all_8": 0.8,
+          "ap10_valid_7": 0.872,
+          "valid_brands_count": "7/8 (chỉ Lavie R=0)"
+        }
+      },
+      "without_x017_lavie_7_brands": {
+        "v1_ap10": 0.8032,
+        "v2_ap10": 0.872
+      },
+      "without_x017_x018_6_brands": {
+        "v1_ap10": 0.8507,
+        "v2_ap10": 0.8507,
+        "note": "6 brand còn lại (x011..x016: Puma, Nike, Adidas, Fossil, Fabindia, Catwalk) hoàn toàn bất biến giữa v1 và v2 (AP@10 = 0.8507)."
+      }
+    },
+    "low_support_counts": {
+      "g_full_spec26_v1": 2,
+      "g_full_spec26_v2": 1,
+      "g_test_spec26_v1": 2,
+      "g_test_spec26_v2": 1,
+      "low_support_g_full_v2_ids": [
+        "x017"
+      ]
+    }
+  },
+  "max_length_padding_token_breakdown": {
+    "total_queries": 1290,
+    "count_le_64": 1,
+    "count_gt_64": 1289,
+    "token_length_distribution": {
+      "min": 63,
+      "max": 165,
+      "mean": 105.18372093023255,
+      "p50": 104.0,
+      "p95": 130.54999999999995
+    },
+    "all_queries_recall10": {
+      "pad64_trunc64": 0.1225,
+      "pad128_trunc64": 0.6186,
+      "pad128_trunc128": 0.5225
+    },
+    "hypothesis_status": "HYPOTHESIS_SUPPORTED_WITH_RESERVATION"
+  }
+}

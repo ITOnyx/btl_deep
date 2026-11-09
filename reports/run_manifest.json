@@ -308,5 +308,55 @@
       "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
       "eval/_sealed/ab_mapping.json": "2bab34f1950ce2e9b894f0fe9d663776745940f70a3a556b6453e49cff6bb1fc"
     }
+  },
+  "phase3g_errata_rev3": {
+    "timestamp": "2026-11-09T13:20:29.851591",
+    "seed": 42,
+    "status": "REV3_COMPLETED",
+    "blind_ab_seed": 20261109,
+    "quality_pipeline": "CPU float32 matrix operations (Scorer centered)",
+    "serving_pipeline": "GPU float16 matrix operations (VisualSearchEngine)",
+    "key_reconciled_metrics": {
+      "brand_heldout_8q_c5_ap10_3f_frozen": 0.638,
+      "brand_heldout_8q_c5_ap10_brands_v1_corrected_gt": 0.7028,
+      "brand_heldout_8q_c5_ap10_brands_v2_corrected_gt": 0.763,
+      "brand_heldout_7q_valid_ap10_v2": 0.872,
+      "brand_heldout_6q_invariant_ap10": 0.8507,
+      "heldout_spec_26q_ap10_brands_v2": 0.9221,
+      "x018_benetton_ap10_v2": 1.0,
+      "low_support_spec_26q_count_g_full": 1,
+      "latency_config5_mean_ms": 70.84,
+      "latency_config5_p95_ms": 112.07,
+      "latency_config5_p95_status": "DAT",
+      "latency_img2img_p95_ms": 178.25,
+      "latency_img2img_p95_status": "DAT",
+      "latency_img2img_p99_ms": 280.17,
+      "latency_img2img_p99_status": "RISK_METRIC",
+      "q6_test_config5_ap10_exact_3f": 0.5172,
+      "q6_test_config0_ap10_exact_3f": 0.2091,
+      "q6_test_ablation_condition3_ap10": 0.2285,
+      "caption_length_le_64_count": 1,
+      "caption_length_gt_64_count": 1289,
+      "caption_padding_hypothesis_status": "HYPOTHESIS_DOWNGRADED",
+      "fp16_ties_amplitude_total": 0.0016,
+      "fp16_ties_amplitude_symmetric": 0.0008,
+      "regression_tests_differences": {
+        "q5_brand_150": 0,
+        "q2_attr_61": 0,
+        "q3_handwritten_100": 0
+      }
+    },
+    "files": {
+      "reports/phase3f_errata.md": "73865a277ab372b89e31f3331a7c01cf8edaedd6bacb5b0641d007099d8e021a",
+      "reports/phase3f_errata_rev2.md": "ea2b606b9c488892a2397c9b7c970064b04e0efa78111440b714b19850f79635",
+      "reports/phase3f_errata_rev1.md": "613d8dcfa11c58fbedde5fa60477c1f116fcc600885ada4a2c7248ff11172791",
+      "reports/phase3f_reconciliation.md": "499aa4084ce6d94c7ff880f61f078f93d2e320af222cd3446e4344fc0702a4e0",
+      "reports/phase3g_rev3_investigation.json": "945c01980383f4fedda775e1f70cab460e3703dac086215d905b8332c5aa4a62",
+      "reports/phase3g_latency_multi_run.json": "fa5582276e5a6825ca4546c0e247e34f69ce0843b8ec5382b90ccca80a1b5ebe",
+      "reports/phase3g_q6_rev2.json": "60528953571339d35a7c216ec0f6721cea15d92313374655b7ffec2511258949",
+      "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
+      "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005",
+      "eval/ab_blind_heldout.csv": "ee5ffe73ada0b4afac3c3054f91ec988de44e59a4f721ef91f47c436bc760d91"
+    }
   }
 }
