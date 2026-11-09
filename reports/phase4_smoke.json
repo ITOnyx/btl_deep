@@ -1,0 +1,1290 @@
+{
+  "timestamp": "2026-11-09 18:15:00",
+  "rule_7_verified": true,
+  "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+  "gallery_size": 38644,
+  "queries": [
+    {
+      "category": "text",
+      "subtype": "text_accented",
+      "query": "áo sơ mi nam trắng",
+      "config": "c5",
+      "latency_breakdown": {
+        "parse_ms": 2.55,
+        "filter_ms": 1.8,
+        "encode_ms": 662.82,
+        "search_ms": 158.99,
+        "total_ms": 826.26
+      },
+      "total_latency_ms": 826.26,
+      "parsed": {
+        "raw_query": "áo sơ mi nam trắng",
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "White",
+        "colour_family": "White",
+        "usage": null,
+        "season": null,
+        "brand": null,
+        "unparsed_tokens": [],
+        "confidence": 0.91
+      },
+      "tier": "L1_type_gender_colour",
+      "candidates_count": 421,
+      "top10_ids": [
+        "33233",
+        "59445",
+        "54252",
+        "14753",
+        "14750",
+        "12295",
+        "12242",
+        "23031",
+        "26041",
+        "9463"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "33233",
+          "name": "Arrow Men White Shirt",
+          "score": 0.03201844170689583,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "Arrow"
+        },
+        {
+          "rank": 2,
+          "item_id": "59445",
+          "name": "Arrow Men White Shirt",
+          "score": 0.029571646824479103,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "Arrow"
+        },
+        {
+          "rank": 3,
+          "item_id": "54252",
+          "name": "Black Coffee Men White Shirt",
+          "score": 0.02758360095322132,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "Black"
+        },
+        {
+          "rank": 4,
+          "item_id": "14753",
+          "name": "Arrow Men White Striped Shirt",
+          "score": 0.02684684656560421,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "Arrow"
+        },
+        {
+          "rank": 5,
+          "item_id": "14750",
+          "name": "Arrow Men Stripes White Shirts",
+          "score": 0.026137303560972214,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "Arrow"
+        },
+        {
+          "rank": 6,
+          "item_id": "12295",
+          "name": "Genesis Men Solid White Shirts",
+          "score": 0.026120660826563835,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "Genesis"
+        },
+        {
+          "rank": 7,
+          "item_id": "12242",
+          "name": "Genesis Men White Shirt",
+          "score": 0.025138041004538536,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "Genesis"
+        },
+        {
+          "rank": 8,
+          "item_id": "23031",
+          "name": "Arrow Men White Striped Shirt",
+          "score": 0.024606872349977493,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "Arrow"
+        },
+        {
+          "rank": 9,
+          "item_id": "26041",
+          "name": "John Miller Men White Shirt",
+          "score": 0.02456928789615631,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "John Miller"
+        },
+        {
+          "rank": 10,
+          "item_id": "9463",
+          "name": "John Miller Men White Shirt",
+          "score": 0.02454075776040554,
+          "articleType": "Shirts",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "John Miller"
+        }
+      ]
+    },
+    {
+      "category": "text",
+      "subtype": "text_unaccented",
+      "query": "quan jean nam xanh",
+      "config": "c5",
+      "latency_breakdown": {
+        "parse_ms": 1.43,
+        "filter_ms": 1.51,
+        "encode_ms": 70.69,
+        "search_ms": 50.89,
+        "total_ms": 124.57
+      },
+      "total_latency_ms": 124.57,
+      "parsed": {
+        "raw_query": "quan jean nam xanh",
+        "articleType": "Jeans",
+        "gender": "Men",
+        "baseColour": null,
+        "colour_family": null,
+        "usage": null,
+        "season": null,
+        "brand": null,
+        "unparsed_tokens": [
+          "xanh"
+        ],
+        "confidence": 0.69
+      },
+      "tier": "L3_type_gender",
+      "candidates_count": 264,
+      "top10_ids": [
+        "51482",
+        "28790",
+        "28802",
+        "56795",
+        "46890",
+        "16513",
+        "46903",
+        "18487",
+        "28795",
+        "28799"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "51482",
+          "name": "Denizen Men Blue Jeans",
+          "score": 0.02493458427488804,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Denizen"
+        },
+        {
+          "rank": 2,
+          "item_id": "28790",
+          "name": "Denizen Men Blue Jeans",
+          "score": 0.024706421419978142,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Denizen"
+        },
+        {
+          "rank": 3,
+          "item_id": "28802",
+          "name": "Denizen Men Blue Jeans",
+          "score": 0.023709315806627274,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Denizen"
+        },
+        {
+          "rank": 4,
+          "item_id": "56795",
+          "name": "Horsefly Men Blue Jeans",
+          "score": 0.021908272057771683,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Unknown"
+        },
+        {
+          "rank": 5,
+          "item_id": "46890",
+          "name": "Locomotive Men Blue Jeans",
+          "score": 0.021804511547088623,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Locomotive"
+        },
+        {
+          "rank": 6,
+          "item_id": "16513",
+          "name": "Locomotive Men Washed Blue Jeans",
+          "score": 0.02166026458144188,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Locomotive"
+        },
+        {
+          "rank": 7,
+          "item_id": "46903",
+          "name": "Peter England Men Blue Jeans",
+          "score": 0.02159244194626808,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Peter England"
+        },
+        {
+          "rank": 8,
+          "item_id": "18487",
+          "name": "Puma Men Washed Blue Jeans",
+          "score": 0.021407686173915863,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Puma"
+        },
+        {
+          "rank": 9,
+          "item_id": "28795",
+          "name": "Denizen Men Blue Jeans",
+          "score": 0.021250557154417038,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Denizen"
+        },
+        {
+          "rank": 10,
+          "item_id": "28799",
+          "name": "Denizen Men Blue Jeans",
+          "score": 0.020903361961245537,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men",
+          "brand": "Denizen"
+        }
+      ]
+    },
+    {
+      "category": "text",
+      "subtype": "text_brand",
+      "query": "giày nike nam",
+      "config": "c5",
+      "latency_breakdown": {
+        "parse_ms": 0.68,
+        "filter_ms": 1.61,
+        "encode_ms": 32.24,
+        "search_ms": 6.38,
+        "total_ms": 40.93
+      },
+      "total_latency_ms": 40.93,
+      "parsed": {
+        "raw_query": "giày nike nam",
+        "articleType": null,
+        "gender": "Men",
+        "baseColour": null,
+        "colour_family": null,
+        "usage": null,
+        "season": null,
+        "brand": "Nike",
+        "unparsed_tokens": [
+          "giay"
+        ],
+        "confidence": 0.4767
+      },
+      "tier": "L0_exact_with_brand",
+      "candidates_count": 1555,
+      "top10_ids": [
+        "43007",
+        "5469",
+        "6747",
+        "9380",
+        "38664",
+        "13914",
+        "10640",
+        "25491",
+        "36227",
+        "5483"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "43007",
+          "name": "Nike Men Brown Sandals",
+          "score": 0.025521669536828995,
+          "articleType": "Sandals",
+          "baseColour": "Brown",
+          "gender": "Men",
+          "brand": "Nike"
+        },
+        {
+          "rank": 2,
+          "item_id": "5469",
+          "name": "Nike Men's Nike Streetgato Black Shoe",
+          "score": 0.02364782989025116,
+          "articleType": "Sports Shoes",
+          "baseColour": "Black",
+          "gender": "Men",
+          "brand": "Nike"
+        },
+        {
+          "rank": 3,
+          "item_id": "6747",
+          "name": "Nike Men's Streetgato White Shoe",
+          "score": 0.0222662054002285,
+          "articleType": "Sports Shoes",
+          "baseColour": "White",
+          "gender": "Men",
+          "brand": "Nike"
+        },
+        {
+          "rank": 4,
+          "item_id": "9380",
+          "name": "Nike Men Elite Sports Shoes",
+          "score": 0.017307693138718605,
+          "articleType": "Sports Shoes",
+          "baseColour": "Green",
+          "gender": "Men",
+          "brand": "Nike"
+        },
+        {
+          "rank": 5,
+          "item_id": "38664",
+          "name": "Nike Men Liteforce Grey Shoes",
+          "score": 0.01653594709932804,
+          "articleType": "Casual Shoes",
+          "baseColour": "Grey",
+          "gender": "Men",
+          "brand": "Nike"
+        },
+        {
+          "rank": 6,
+          "item_id": "13914",
+          "name": "Nike Men Air Max Elevate Black Sandals",
+          "score": 0.016393441706895828,
+          "articleType": "Sandals",
+          "baseColour": "Black",
+          "gender": "Men",
+          "brand": "Nike"
+        },
+        {
+          "rank": 7,
+          "item_id": "10640",
+          "name": "Nike Men Nike Elite Black Casual Shoes",
+          "score": 0.016393441706895828,
+          "articleType": "Casual Shoes",
+          "baseColour": "Black",
+          "gender": "Men",
+          "brand": "Nike"
+        },
+        {
+          "rank": 8,
+          "item_id": "25491",
+          "name": "Nike Men Air Embark Grey Sandals",
+          "score": 0.016129031777381897,
+          "articleType": "Sandals",
+          "baseColour": "Grey",
+          "gender": "Men",
+          "brand": "Nike"
+        },
+        {
+          "rank": 9,
+          "item_id": "36227",
+          "name": "Nike Men Air Ralston Mid Lite Brown Shoes",
+          "score": 0.01587301678955555,
+          "articleType": "Casual Shoes",
+          "baseColour": "Brown",
+          "gender": "Men",
+          "brand": "Nike"
+        },
+        {
+          "rank": 10,
+          "item_id": "5483",
+          "name": "Nike Men's Nike Streegato Black Shoe",
+          "score": 0.01587301678955555,
+          "articleType": "Sports Shoes",
+          "baseColour": "Black",
+          "gender": "Men",
+          "brand": "Nike"
+        }
+      ]
+    },
+    {
+      "category": "text",
+      "subtype": "text_out_of_catalog",
+      "query": "túi xách nữ Lavie",
+      "config": "c5",
+      "latency_breakdown": {
+        "parse_ms": 0.7,
+        "filter_ms": 0.8,
+        "encode_ms": 30.47,
+        "search_ms": 3.03,
+        "total_ms": 35.04
+      },
+      "total_latency_ms": 35.04,
+      "parsed": {
+        "raw_query": "túi xách nữ Lavie",
+        "articleType": "Handbags",
+        "gender": "Women",
+        "baseColour": null,
+        "colour_family": null,
+        "usage": null,
+        "season": null,
+        "brand": null,
+        "unparsed_tokens": [
+          "lavie"
+        ],
+        "confidence": 0.69
+      },
+      "tier": "L3_type_gender",
+      "candidates_count": 1731,
+      "top10_ids": [
+        "53941",
+        "47375",
+        "47380",
+        "28448",
+        "53963",
+        "25197",
+        "2664",
+        "14791",
+        "1941",
+        "47337"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "53941",
+          "name": "Kiara Women Grey Handbag",
+          "score": 0.024234173819422722,
+          "articleType": "Handbags",
+          "baseColour": "Grey",
+          "gender": "Women",
+          "brand": "Kiara"
+        },
+        {
+          "rank": 2,
+          "item_id": "47375",
+          "name": "Baggit Women Brown Handbag",
+          "score": 0.0177933182567358,
+          "articleType": "Handbags",
+          "baseColour": "Brown",
+          "gender": "Women",
+          "brand": "Baggit"
+        },
+        {
+          "rank": 3,
+          "item_id": "47380",
+          "name": "Baggit Women Purple Bag",
+          "score": 0.017751937732100487,
+          "articleType": "Handbags",
+          "baseColour": "Purple",
+          "gender": "Women",
+          "brand": "Baggit"
+        },
+        {
+          "rank": 4,
+          "item_id": "28448",
+          "name": "Kiara Women Brown Handbag",
+          "score": 0.01705865189433098,
+          "articleType": "Handbags",
+          "baseColour": "Brown",
+          "gender": "Women",
+          "brand": "Kiara"
+        },
+        {
+          "rank": 5,
+          "item_id": "53963",
+          "name": "Kiara Women Brown Handbag",
+          "score": 0.016701744869351387,
+          "articleType": "Handbags",
+          "baseColour": "Brown",
+          "gender": "Women",
+          "brand": "Kiara"
+        },
+        {
+          "rank": 6,
+          "item_id": "25197",
+          "name": "Lino Perros Women Leatherette Light Brown Handbag",
+          "score": 0.016393441706895828,
+          "articleType": "Handbags",
+          "baseColour": "Brown",
+          "gender": "Women",
+          "brand": "Lino Perros"
+        },
+        {
+          "rank": 7,
+          "item_id": "2664",
+          "name": "Murcia   Bag",
+          "score": 0.016393441706895828,
+          "articleType": "Handbags",
+          "baseColour": "Brown",
+          "gender": "Women",
+          "brand": "Murcia"
+        },
+        {
+          "rank": 8,
+          "item_id": "14791",
+          "name": "United Colors of Benetton Women Solid Grey Handbags",
+          "score": 0.016129031777381897,
+          "articleType": "Handbags",
+          "baseColour": "Grey",
+          "gender": "Women",
+          "brand": "United Colors of Benetton"
+        },
+        {
+          "rank": 9,
+          "item_id": "1941",
+          "name": "Domyos Brown Bag",
+          "score": 0.016129031777381897,
+          "articleType": "Handbags",
+          "baseColour": "Brown",
+          "gender": "Women",
+          "brand": "Domyos"
+        },
+        {
+          "rank": 10,
+          "item_id": "47337",
+          "name": "Baggit Women Olive Green Bag",
+          "score": 0.01587301678955555,
+          "articleType": "Handbags",
+          "baseColour": "Olive",
+          "gender": "Women",
+          "brand": "Baggit"
+        }
+      ]
+    },
+    {
+      "category": "text",
+      "subtype": "text_vague",
+      "query": "đồ đi biển mùa hè",
+      "config": "c5",
+      "latency_breakdown": {
+        "parse_ms": 3.23,
+        "filter_ms": 0.06,
+        "encode_ms": 29.36,
+        "search_ms": 454.39,
+        "total_ms": 487.09
+      },
+      "total_latency_ms": 487.09,
+      "parsed": {
+        "raw_query": "đồ đi biển mùa hè",
+        "articleType": null,
+        "gender": null,
+        "baseColour": null,
+        "colour_family": null,
+        "usage": null,
+        "season": null,
+        "brand": null,
+        "unparsed_tokens": [
+          "di",
+          "bien"
+        ],
+        "confidence": 0.25
+      },
+      "tier": "L6_fallback_all",
+      "candidates_count": 38644,
+      "top10_ids": [
+        "42973",
+        "48523",
+        "2562",
+        "37584",
+        "51332",
+        "37583",
+        "51334",
+        "37585",
+        "52032",
+        "51271"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "42973",
+          "name": "Amante Magenta Swimsuit WFSD05",
+          "score": 0.02282051369547844,
+          "articleType": "Swimwear",
+          "baseColour": "Magenta",
+          "gender": "Women",
+          "brand": "Amante"
+        },
+        {
+          "rank": 2,
+          "item_id": "48523",
+          "name": "French Connection Women Magenta Playsuit",
+          "score": 0.020018016919493675,
+          "articleType": "Jumpsuit",
+          "baseColour": "Magenta",
+          "gender": "Women",
+          "brand": "French Connection"
+        },
+        {
+          "rank": 3,
+          "item_id": "2562",
+          "name": "Nabaiji Women Black Swimsuit",
+          "score": 0.017624223604798317,
+          "articleType": "Swimwear",
+          "baseColour": "Black",
+          "gender": "Women",
+          "brand": "Black"
+        },
+        {
+          "rank": 4,
+          "item_id": "37584",
+          "name": "Madagascar3 Infant Girls Light Green Snapsuit Romper",
+          "score": 0.016393441706895828,
+          "articleType": "Rompers",
+          "baseColour": "Green",
+          "gender": "Girls",
+          "brand": "Madagascar3 Infant"
+        },
+        {
+          "rank": 5,
+          "item_id": "51332",
+          "name": "Wildcraft Men Black Rain Trousers",
+          "score": 0.016393441706895828,
+          "articleType": "Rain Trousers",
+          "baseColour": "Black",
+          "gender": "Men",
+          "brand": "Wildcraft"
+        },
+        {
+          "rank": 6,
+          "item_id": "37583",
+          "name": "Madagascar3 Infant Girls Pink Snapsuit Romper",
+          "score": 0.016129031777381897,
+          "articleType": "Rompers",
+          "baseColour": "Pink",
+          "gender": "Girls",
+          "brand": "Madagascar3 Infant"
+        },
+        {
+          "rank": 7,
+          "item_id": "51334",
+          "name": "Wildcraft Men Navy Blue Rain Trousers",
+          "score": 0.016129031777381897,
+          "articleType": "Rain Trousers",
+          "baseColour": "Navy Blue",
+          "gender": "Men",
+          "brand": "Wildcraft"
+        },
+        {
+          "rank": 8,
+          "item_id": "37585",
+          "name": "Madagascar3 Infant Girls White Snapsuit Romper",
+          "score": 0.01587301678955555,
+          "articleType": "Rompers",
+          "baseColour": "White",
+          "gender": "Girls",
+          "brand": "Madagascar3 Infant"
+        },
+        {
+          "rank": 9,
+          "item_id": "52032",
+          "name": "Just Natural Unisex Red Rain Jacket",
+          "score": 0.01587301678955555,
+          "articleType": "Rain Jacket",
+          "baseColour": "Red",
+          "gender": "Unisex",
+          "brand": "Just Natural"
+        },
+        {
+          "rank": 10,
+          "item_id": "51271",
+          "name": "Hop Scotch Girls White and Pink Digital Watch",
+          "score": 0.015625,
+          "articleType": "Watches",
+          "baseColour": "White",
+          "gender": "Girls",
+          "brand": "Unknown"
+        }
+      ]
+    },
+    {
+      "category": "image",
+      "subtype": "image_shirt",
+      "query_image": "data\\fashion-dataset\\images\\15970.jpg",
+      "latency_breakdown": {
+        "total_ms": 560.26
+      },
+      "top10_ids": [
+        "20021",
+        "12182",
+        "15996",
+        "19185",
+        "8156",
+        "16526",
+        "11697",
+        "15086",
+        "16468",
+        "14047"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "20021",
+          "name": "United Colors of Benetton Men Check Blue Shirt",
+          "score": 1.8667969703674316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 2,
+          "item_id": "12182",
+          "name": "Basics Men Blue Slim Fit Checked Shirt",
+          "score": 1.8658204078674316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 3,
+          "item_id": "15996",
+          "name": "Turtle Check Men Blue Shirt",
+          "score": 1.8658204078674316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 4,
+          "item_id": "19185",
+          "name": "United Colors of Benetton Men Check Blue Shirt",
+          "score": 1.8643555641174316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 5,
+          "item_id": "8156",
+          "name": "Highlander Men Blue Checked Haig Slim Fit Shirt",
+          "score": 1.8638672828674316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 6,
+          "item_id": "16526",
+          "name": "Locomotive Men Check Navy Blue Shirt",
+          "score": 1.8638672828674316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 7,
+          "item_id": "11697",
+          "name": "Lee Men Check Blue Shirts",
+          "score": 1.8628907203674316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 8,
+          "item_id": "15086",
+          "name": "Mother Earth Men Check Blue Shirts",
+          "score": 1.8624024391174316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 9,
+          "item_id": "16468",
+          "name": "Locomotive Men Check Blue Shirt",
+          "score": 1.8619141578674316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 10,
+          "item_id": "14047",
+          "name": "Flying Machine Men Check Blue Shirts",
+          "score": 1.8614258766174316,
+          "articleType": "Shirts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        }
+      ]
+    },
+    {
+      "category": "image",
+      "subtype": "image_jeans",
+      "query_image": "data\\fashion-dataset\\images\\39386.jpg",
+      "latency_breakdown": {
+        "total_ms": 232.22
+      },
+      "top10_ids": [
+        "39386",
+        "44579",
+        "52548",
+        "11336",
+        "42262",
+        "44584",
+        "30415",
+        "11332",
+        "44583",
+        "9167"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "39386",
+          "name": "Peter England Men Party Blue Jeans",
+          "score": 1.8873047828674316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 2,
+          "item_id": "44579",
+          "name": "Lee Men Blue Pent Jeans",
+          "score": 1.8565430641174316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 3,
+          "item_id": "52548",
+          "name": "Pepe Jeans Men Blue Jeans",
+          "score": 1.8404297828674316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 4,
+          "item_id": "11336",
+          "name": "United Colors of Benetton Men Washed Blue Jeans",
+          "score": 1.8365235328674316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 5,
+          "item_id": "42262",
+          "name": "John Players Men Blue Jeans",
+          "score": 1.8360352516174316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 6,
+          "item_id": "44584",
+          "name": "Lee Men Blue Brushed Jeans",
+          "score": 1.8355469703674316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 7,
+          "item_id": "30415",
+          "name": "Deni Yo Men Slim Fit Washed Blue Jeans",
+          "score": 1.8350586891174316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 8,
+          "item_id": "11332",
+          "name": "United Colors of Benetton Men Washed Blue Jeans",
+          "score": 1.8335938453674316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 9,
+          "item_id": "44583",
+          "name": "Lee Men Blue Scraped Jeans",
+          "score": 1.8306641578674316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 10,
+          "item_id": "9167",
+          "name": "Locomotive Men Race Blue Jeans",
+          "score": 1.8277344703674316,
+          "articleType": "Jeans",
+          "baseColour": "Blue",
+          "gender": "Men"
+        }
+      ]
+    },
+    {
+      "category": "cir",
+      "subtype": "cir_color",
+      "ref_image": "data\\fashion-dataset\\images\\15970.jpg",
+      "modifier_text": "màu xanh navy",
+      "latency_breakdown": {
+        "total_ms": 174.03
+      },
+      "top10_ids": [
+        "8740",
+        "17185",
+        "17158",
+        "59834",
+        "14663",
+        "24817",
+        "19830",
+        "18922",
+        "29287",
+        "15145"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "8740",
+          "name": "Indigo Nation Men Checks Navy Blue Shirt",
+          "score": 0.38720703125,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 2,
+          "item_id": "17185",
+          "name": "U.S. Polo Assn. Men Stripes Navy Blue Shirt",
+          "score": 0.38623046875,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 3,
+          "item_id": "17158",
+          "name": "U.S. Polo Assn. Men Checks Navy Blue Shirt",
+          "score": 0.3857421875,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 4,
+          "item_id": "59834",
+          "name": "United Colors of Benetton Men Navy Blue Shirt",
+          "score": 0.385009765625,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 5,
+          "item_id": "14663",
+          "name": "Basics Men Navy Blue Slim Fit Checked Shirt",
+          "score": 0.384765625,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 6,
+          "item_id": "24817",
+          "name": "Basics Men Navy Slim Fit Checked Shirt",
+          "score": 0.384765625,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 7,
+          "item_id": "19830",
+          "name": "U.S. Polo Assn. Men Check Navy Blue Shirt",
+          "score": 0.38427734375,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 8,
+          "item_id": "18922",
+          "name": "Levis Men Classic Mustard Checks Shirt",
+          "score": 0.383544921875,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 9,
+          "item_id": "29287",
+          "name": "Wrangler Men Dorca Big Check Navy Blue Shirt",
+          "score": 0.3828125,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 10,
+          "item_id": "15145",
+          "name": "Arrow Sport Men Printed Navy Blue Shirts",
+          "score": 0.382568359375,
+          "articleType": "Shirts",
+          "baseColour": "Navy Blue",
+          "gender": "Men"
+        }
+      ]
+    },
+    {
+      "category": "cir",
+      "subtype": "cir_type",
+      "ref_image": "data\\fashion-dataset\\images\\39386.jpg",
+      "modifier_text": "quần short",
+      "latency_breakdown": {
+        "total_ms": 101.39
+      },
+      "top10_ids": [
+        "30637",
+        "15341",
+        "6525",
+        "37558",
+        "37520",
+        "37580",
+        "7491",
+        "32621",
+        "28460",
+        "30599"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "30637",
+          "name": "Nike Women Printed Tempo Red Shorts",
+          "score": 0.42724609375,
+          "articleType": "Shorts",
+          "baseColour": "Red",
+          "gender": "Women"
+        },
+        {
+          "rank": 2,
+          "item_id": "15341",
+          "name": "Nike Women Solid Pink Shorts",
+          "score": 0.41015625,
+          "articleType": "Shorts",
+          "baseColour": "Pink",
+          "gender": "Women"
+        },
+        {
+          "rank": 3,
+          "item_id": "6525",
+          "name": "Nike Women's Tempo yellow Short",
+          "score": 0.40673828125,
+          "articleType": "Shorts",
+          "baseColour": "Yellow",
+          "gender": "Women"
+        },
+        {
+          "rank": 4,
+          "item_id": "37558",
+          "name": "Madagascar3 Girls Pink Shorts",
+          "score": 0.40673828125,
+          "articleType": "Shorts",
+          "baseColour": "Pink",
+          "gender": "Girls"
+        },
+        {
+          "rank": 5,
+          "item_id": "37520",
+          "name": "Madagascar3 Infant Boys Lemon Yellow Shorts",
+          "score": 0.406494140625,
+          "articleType": "Shorts",
+          "baseColour": "Yellow",
+          "gender": "Boys"
+        },
+        {
+          "rank": 6,
+          "item_id": "37580",
+          "name": "Madagascar 3 Girls Pink Shorts",
+          "score": 0.403076171875,
+          "articleType": "Shorts",
+          "baseColour": "Pink",
+          "gender": "Girls"
+        },
+        {
+          "rank": 7,
+          "item_id": "7491",
+          "name": "Nike Women's EM Tempo 3.5\" Pink Short",
+          "score": 0.403076171875,
+          "articleType": "Shorts",
+          "baseColour": "Pink",
+          "gender": "Women"
+        },
+        {
+          "rank": 8,
+          "item_id": "32621",
+          "name": "Nike Men Woven Reflective Blue Shorts",
+          "score": 0.40283203125,
+          "articleType": "Shorts",
+          "baseColour": "Blue",
+          "gender": "Men"
+        },
+        {
+          "rank": 9,
+          "item_id": "28460",
+          "name": "Urban Yoga Women Pink Shorts",
+          "score": 0.400390625,
+          "articleType": "Shorts",
+          "baseColour": "Pink",
+          "gender": "Women"
+        },
+        {
+          "rank": 10,
+          "item_id": "30599",
+          "name": "Nike Men Hustle Reversible Red Shorts",
+          "score": 0.3974609375,
+          "articleType": "Shorts",
+          "baseColour": "Red",
+          "gender": "Men"
+        }
+      ]
+    },
+    {
+      "category": "cir",
+      "subtype": "cir_style",
+      "ref_image": "data\\fashion-dataset\\images\\15970.jpg",
+      "modifier_text": "áo khoác jacket",
+      "latency_breakdown": {
+        "total_ms": 93.29
+      },
+      "top10_ids": [
+        "57066",
+        "6877",
+        "9532",
+        "28502",
+        "20793",
+        "6876",
+        "59127",
+        "12807",
+        "5559",
+        "40050"
+      ],
+      "top10_items": [
+        {
+          "rank": 1,
+          "item_id": "57066",
+          "name": "Elle Women Pink Jacket",
+          "score": 0.37841796875,
+          "articleType": "Jackets",
+          "baseColour": "Pink",
+          "gender": "Women"
+        },
+        {
+          "rank": 2,
+          "item_id": "6877",
+          "name": "Forever New Women Soft Magnolia Pink Jacket",
+          "score": 0.364501953125,
+          "articleType": "Jackets",
+          "baseColour": "Pink",
+          "gender": "Women"
+        },
+        {
+          "rank": 3,
+          "item_id": "9532",
+          "name": "Nike Men Summerized Wind Runner Orange Jackets",
+          "score": 0.36376953125,
+          "articleType": "Jackets",
+          "baseColour": "Orange",
+          "gender": "Men"
+        },
+        {
+          "rank": 4,
+          "item_id": "28502",
+          "name": "Nike Men Windrunner Yellow Jacket",
+          "score": 0.36181640625,
+          "articleType": "Jackets",
+          "baseColour": "Yellow",
+          "gender": "Men"
+        },
+        {
+          "rank": 5,
+          "item_id": "20793",
+          "name": "Basics Men Beige Jacket",
+          "score": 0.35791015625,
+          "articleType": "Jackets",
+          "baseColour": "Beige",
+          "gender": "Men"
+        },
+        {
+          "rank": 6,
+          "item_id": "6876",
+          "name": "Forever New Women Peach Jacket",
+          "score": 0.35205078125,
+          "articleType": "Jackets",
+          "baseColour": "Peach",
+          "gender": "Women"
+        },
+        {
+          "rank": 7,
+          "item_id": "59127",
+          "name": "Just Natural Men Brown Jacket",
+          "score": 0.3505859375,
+          "articleType": "Jackets",
+          "baseColour": "Brown",
+          "gender": "Men"
+        },
+        {
+          "rank": 8,
+          "item_id": "12807",
+          "name": "Nike Women Hood Pink Jackets",
+          "score": 0.349365234375,
+          "articleType": "Jackets",
+          "baseColour": "Pink",
+          "gender": "Women"
+        },
+        {
+          "rank": 9,
+          "item_id": "5559",
+          "name": "Reebok Men Reversible Blue & Yellow Jacket",
+          "score": 0.347412109375,
+          "articleType": "Jackets",
+          "baseColour": "Yellow",
+          "gender": "Men"
+        },
+        {
+          "rank": 10,
+          "item_id": "40050",
+          "name": "ADIDAS Men Yellow Kaka Jacket",
+          "score": 0.3447265625,
+          "articleType": "Jackets",
+          "baseColour": "Yellow",
+          "gender": "Men"
+        }
+      ]
+    }
+  ]
+}

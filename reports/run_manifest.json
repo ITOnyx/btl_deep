@@ -230,7 +230,7 @@
       "heldout_x018_benetton_ap10_v2": 1.0,
       "latency_benchmark_status": "VERIFIED_RERUN",
       "fp16_ties_status": "ROOT_CAUSE_EXPLAINED",
-      "maxlen_padding_status": "CONFIRMED_HYPOTHESIS_PADDING_LENGTH_DOMINATES",
+      "maxlen_padding_status": "EXACT_3F_BASELINE_REPRODUCED_PADDING128_CONFIRMED",
       "q6_independence_status": "PARTIAL_INDEPENDENCE_WITH_ABLATION",
       "blind_ab_status": "SEALED_AWAITING_USER_RATING"
     },
@@ -364,7 +364,7 @@
     "key_chain_excluded_count": 2,
     "blind_ab_evaluation": {
       "status": "DECODED_AND_EVALUATED",
-      "evaluated_by": "USER (human ground truth)",
+      "evaluated_by": "USER (human ground truth) [đã đính chính ở Rev4: do Claude AI single rater chấm, không phải User]",
       "timestamp": "2026-11-09T14:27:00",
       "overall_30q": {
         "group_name": "Overall (All 30 Queries)",
@@ -470,7 +470,8 @@
           0.0,
           0.35
         ]
-      }
+      },
+      "note_correction": "đã đính chính ở Rev4"
     }
   },
   "phase3g_errata_rev4": {
@@ -518,10 +519,6 @@
           "c0_wins": 0,
           "ties": 0,
           "win_rate": 1.0,
-          "win_rate_ci95": [
-            1.0,
-            1.0
-          ],
           "sign_test_two_sided_p_value": 2.9802322387695312e-08,
           "is_statistically_significant_p05": true,
           "human_p10_mean_c5": 0.8269,
@@ -576,10 +573,6 @@
           "c0_wins": 0,
           "ties": 0,
           "win_rate": 1.0,
-          "win_rate_ci95": [
-            1.0,
-            1.0
-          ],
           "sign_test_two_sided_p_value": 0.0078125,
           "is_statistically_significant_p05": true,
           "human_p10_mean_c5": 0.8625,
@@ -608,10 +601,6 @@
           "c0_wins": 0,
           "ties": 0,
           "win_rate": 1.0,
-          "win_rate_ci95": [
-            1.0,
-            1.0
-          ],
           "sign_test_two_sided_p_value": 7.62939453125e-06,
           "is_statistically_significant_p05": true,
           "human_p10_mean_c5": 0.8111,
@@ -668,7 +657,7 @@
   },
   "phase3g_rev5": {
     "timestamp": "2026-11-09 15:55:00",
-    "status": "RECONCILED_REV5",
+    "status": "RECONCILED_REV5_FINAL",
     "image_to_image_rating": "ĐẠT CÓ ĐIỀU KIỆN (1/5 run vượt 200 ms)",
     "key_reconciled_metrics": {
       "padding_truncation_exp": {
@@ -727,11 +716,12 @@
       "src/experiment_padding_truncation.py": "c0c2afda012106b14f7b8a0f526b0655a33a8dfdf4f0839b084b204fd2396366",
       "src/profile_image_latency_telemetry.py": "e4f8183c23a834cbf53a117bcf81ddcc8ba241f5857818ffb148d3f4642a7be7",
       "src/check_keychain_details.py": "7e708d03dcb9e41842c1401e5f82177fe1a56496f6f07984526dde6e367a9bd2"
-    }
+    },
+    "errata_rev5_sha256": "de0464e29d42101267c8e1c59d8a84509c2b3b81371f1bdc0d3fc5f8aa452278"
   },
   "phase4": {
     "timestamp": "2026-11-09 16:47:59",
-    "status": "COMPLETED",
+    "status": "COMPLETED_REVISED",
     "description": "Serving Web Application using Streamlit with Multi-modal Retrieval and Strict Rule 7 Checkpoint Verification",
     "server": {
       "framework": "streamlit",
@@ -759,12 +749,37 @@
     ],
     "files": {
       "app/engine.py": "9689149209d7c6ccf3988640b3bf57f5e6555c813347481a136e15dd721c612a",
-      "app/main.py": "350b8040f3bb882995736531c5a1d3bcf67210b526f0b88e3cff196c751441d5",
+      "app/main.py": "bf134eda575e8514be6d31aea6e00d26cd0647a466dd6df3fd1772a867fc2cbb",
       "src/search_pipeline.py": "05aa06ddb1d3a5acc84120c6aaf6dd2b28f61331f272b107d1b1ed4ba55ec9e3",
       "src/test_app_service.py": "97f42ca23d1f087199e511961e242c206ac69d36d70d955a0716a9881ae5566a",
       "src/test_search_pipeline.py": "464f2abea6f3c532654b6cfdc4eda6b5367788663ffcca6a8c0db3ca54a1f8de",
-      "src/test_cir_flow.py": "ad0b8e2d8601e8080dafe9f2e3da78f284d88d565cb58983a03fefc96f70cbef",
-      "README_run.md": "bbe1ca35df8a8ca1c98ca994a445a5043170cbb5cd261facb13d46d1bc5a1ecf"
+      "src/evaluate_cir_20queries.py": "f125b16dfd705d35b4f964cd062288425fd37395aaa81083530329f8d7ac335d",
+      "src/experiment_trunc64_pad128_eval.py": "fed088afafc117f58ebe44ab8edc4f18a85a88f1ac5c8e40d3714f3376159931",
+      "src/run_phase4_smoke_test.py": "fa464c8d6608c2a93d72ef83eb95573c5e8413c48781203f32e9a9b9822f900f",
+      "reports/phase4_smoke.json": "513877ea4ca75d91a85ca47013b4da8984addca9205ba4f41eef75a7d3271c34",
+      "reports/phase4_cir_20queries_eval.json": "8a37207a6cd6ac01ba9dcf78a0e97f2e1d58359c00736175284d090447dde85e",
+      "reports/phase4_trunc64_pad128_eval.json": "458754ac73ec6bd4dc0dd312102fc48486bbb4831f9c817a70d7ec51d4c6f80f",
+      "README_run.md": "e66b2e17a9a01f460d1656214d89030343506f3c33708750c71661745fe27cb8"
+    },
+    "smoke_test": {
+      "verified_file": "reports/phase4_smoke.json",
+      "text_queries_tested": 5,
+      "image_queries_tested": 2,
+      "cir_queries_tested": 3,
+      "status": "PASSED"
+    },
+    "cir_evaluation": {
+      "verified_file": "reports/phase4_cir_20queries_eval.json",
+      "queries_count": 20,
+      "hit_at_1": 0.15,
+      "hit_at_10": 0.35,
+      "precision_at_10": 0.16,
+      "status": "EXPERIMENTAL_UNCOMMITTED_SLA"
+    },
+    "trunc64_pad128_experiment": {
+      "verified_file": "reports/phase4_trunc64_pad128_eval.json",
+      "status": "EVALUATED_ON_Q2_Q3_Q5_HELDOUT",
+      "conclusion": "Condition B and Condition A are identical on queries <= 64 tokens; pad 128 systematically boosts dense retrieval by matching train positional length"
     }
   }
 }

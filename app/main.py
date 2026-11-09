@@ -262,6 +262,25 @@ def render_product_grid(results: List[Dict[str, Any]], cols_per_row: int = 5):
 with tab_text:
     st.markdown("### Tra cứu Sản phẩm bằng Văn bản tiếng Việt")
 
+    # Clear distinction between System vs Model Pure
+    search_mode_ui = st.radio(
+        "🎯 **Chế độ Tìm kiếm:**",
+        options=["system", "model_pure"],
+        format_func=lambda x: {
+            "system": "🛡️ Hệ thống (Parser + Metadata + BM25) [Cấu hình C5 Hybrid]",
+            "model_pure": "🤖 Model thuần (SigLIP Dense) [Cấu hình C0 Không can thiệp]"
+        }[x],
+        horizontal=True,
+        index=0 if config_choice != "c0" else 1,
+        help="Phân định minh bạch giữa Hệ thống hoàn chỉnh (Parser + Metadata + BM25 RRF + Soft Bonus) và Mô hình SigLIP thuần."
+    )
+    effective_config = "c0" if search_mode_ui == "model_pure" else ("c5" if config_choice == "c0" else config_choice)
+
+    if effective_config == "c0":
+        st.info("ℹ️ **Đang chọn: Model thuần (SigLIP Dense)** — Truy vấn văn bản được mã hóa trực tiếp qua SigLIP Text Tower và tính cosine similarity với ảnh gallery. Không qua QueryParser, không lọc thuộc tính, không dùng BM25.")
+    else:
+        st.success("✨ **Đang chọn: Hệ thống (Parser + Metadata + BM25)** — Sử dụng QueryParser V2 trích xuất thuộc tính, nới lỏng ứng viên đa tầng L0..L6, cộng thưởng điểm mềm và kết hợp tìm kiếm từ vựng BM25 qua RRF.")
+
     # Sample Quick Queries
     st.markdown("**Gợi ý truy vấn mẫu:**")
     sample_cols = st.columns(6)
@@ -291,7 +310,7 @@ with tab_text:
             with st.spinner("Đang xử lý truy vấn..."):
                 results, meta = service.search_text(
                     query=query_input.strip(),
-                    config_mode=config_choice,
+                    config_mode=effective_config,
                     top_k=top_k,
                     gamma=gamma_val
                 )
@@ -426,7 +445,8 @@ with tab_image:
 # TAB 3: CIR (Composed Image Retrieval)
 # -------------------------------------------------------------
 with tab_cir:
-    st.markdown("### Tra cứu Đa phương thức (CIR: Ảnh + Text điều chỉnh)")
+    st.markdown("### 🎨 Tra cứu Đa phương thức (CIR: Ảnh + Text điều chỉnh) — *(Thử nghiệm, chưa đánh giá)*")
+    st.warning("⚠️ **Ghi chú thử nghiệm:** Tính năng Composed Image Retrieval (CIR) hiện đang ở trạng thái **Thử nghiệm, chưa đánh giá chính thức**. Tỉ lệ thay đổi thuộc tính phụ thuộc vào Attention Combiner của checkpoint và chưa được đưa vào cam kết SLA của dự án.")
     st.markdown("Kết hợp đặc trưng của một ảnh tham chiếu cùng câu văn bản yêu cầu thay đổi (ví dụ: *'đổi sang màu đỏ'*, *'kiểu dáng cộc tay'*, *'dành cho nữ'*).")
 
     cir_c1, cir_c2 = st.columns([1, 2])
@@ -506,15 +526,42 @@ with tab_benchmark:
 
     with b_col1:
         st.markdown("#### 1. Đánh giá Paired Retrieval (Q1b trên $G_{test}$)")
-        st.markdown(
-            r"""
-            | Cấu hình thuật toán | Recall@1 | Recall@5 | Recall@10 | mAP (MRR) | Đạt chỉ tiêu dự án (R@10 $\ge$ 0.85, mAP $\ge$ 0.75) |
-            |---|---|---|---|---|---|
-            | **Model thuần (Config 0: SigLIP Only)** | 0.1116 | 0.3543 | **0.5225** | **0.2362** | ❌ CHƯA ĐẠT (Chỉ số gốc) |
-            | **Hệ thống C2 (Parser + Dense + Soft Bonus)** | 0.3442 | 0.7465 | **0.9008** | **0.5205** | 🟢 Đạt Recall@10 Hệ thống |
-            | **Hệ thống C5 (Hybrid Dense + BM25 + RRF)** | 0.3512 | 0.7510 | **0.9023** | **0.5240** | 🟢 Đạt Recall@10 Hệ thống |
-            """
-        )
+        st.error("⚠️ **NGUYÊN TẮC BẤT BIẾN:** Tuyệt đối không để số đo của Hệ sinh thái kỹ thuật (0.9008) đứng thay cho điểm số của Mô hình thuần SigLIP (0.5225)!")
+
+        sub_c1, sub_c2 = st.columns(2)
+        with sub_c1:
+            st.markdown(
+                """<div style="background:#FFF1F2; border:1px solid #FECDD3; border-radius:8px; padding:0.8rem; margin-bottom:0.8rem;">
+                <h5 style="color:#BE123C; margin-top:0;">🤖 Cột 1: Model thuần (SigLIP Dense)</h5>
+                <p style="font-size:0.85rem; color:#475569; margin-bottom:0.4rem;"><b>Cấu hình C0</b> (Chỉ trích xuất vector, không can thiệp)</p>
+                <div style="font-size:1.4rem; font-weight:700; color:#BE123C;">Recall@10: 0.5225</div>
+                <div style="font-size:0.95rem; color:#334155; margin-top:0.2rem;">mAP (MRR): <b>0.2362</b></div>
+                <div style="font-size:0.85rem; color:#64748B;">Recall@1: 0.1116 | Recall@5: 0.3543</div>
+                <div style="font-size:0.85rem; color:#64748B;">G_full Recall@10: <b>0.0628</b></div>
+                <hr style="margin:0.5rem 0;">
+                <span style="background:#FEE2E2; color:#991B1B; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700;">
+                    ❌ CHƯA ĐẠT CHỈ TIÊU GỐC
+                </span>
+                <p style="font-size:0.75rem; color:#64748B; margin-top:0.4rem; margin-bottom:0;">Chỉ tiêu đề ra: R@10 ≥ 0.85, mAP ≥ 0.75. Mô hình SigLIP nguyên bản chưa đạt.</p>
+                </div>""", unsafe_allow_html=True
+            )
+        with sub_c2:
+            st.markdown(
+                """<div style="background:#ECFDF5; border:1px solid #A7F3D0; border-radius:8px; padding:0.8rem; margin-bottom:0.8rem;">
+                <h5 style="color:#047857; margin-top:0;">🛡️ Cột 2: Hệ thống (Parser + Metadata)</h5>
+                <p style="font-size:0.85rem; color:#475569; margin-bottom:0.4rem;"><b>Cấu hình C2 & C5</b> (Hệ sinh thái kỹ thuật)</p>
+                <div style="font-size:1.4rem; font-weight:700; color:#047857;">Recall@10: 0.9008 (C5: 0.9023)</div>
+                <div style="font-size:0.95rem; color:#334155; margin-top:0.2rem;">mAP (MRR): <b>0.5205</b> (C5: 0.5240)</div>
+                <div style="font-size:0.85rem; color:#64748B;">Recall@1: 0.3442 | Recall@5: 0.7465</div>
+                <div style="font-size:0.85rem; color:#64748B;">G_full Recall@10: <b>0.2682</b></div>
+                <hr style="margin:0.5rem 0;">
+                <span style="background:#D1FAE5; color:#065F46; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700;">
+                    🟢 ĐẠT RECALL@10 HỆ THỐNG
+                </span>
+                <p style="font-size:0.75rem; color:#065F46; margin-top:0.4rem; margin-bottom:0;">Thành quả của QueryParserV2 + Lọc ứng viên L0..L6 + Soft Bonus γ=0.3 + BM25 RRF.</p>
+                </div>""", unsafe_allow_html=True
+            )
+
         st.caption("*Khẳng định độc lập:* Điểm số 0.90+ là thành quả của Hệ sinh thái kỹ thuật (Parser + Metadata + BM25), không đại diện cho riêng mô hình SigLIP nguyên bản.")
 
     with b_col2:
