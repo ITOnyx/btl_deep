@@ -11,17 +11,25 @@ Hệ thống tìm kiếm thời trang đa phương thức tiếng Việt trên t
   - `text_embeddings_v2.npy`: 38.646 vector text sản phẩm chuẩn hóa (1152-d).
   - `id_map_v2.json`: Bản đồ index sang item_id.
 - `src/`:
-  - `query_parser_v2.py`: Bộ phân tích truy vấn tiếng Việt trích xuất loại sản phẩm, giới tính, màu sắc, thương hiệu (hỗ trợ có dấu và không dấu).
+  - `model_siglip.py`, `model_siglip_cir.py`: Wrapper suy luận đa phương thức SigLIP và CIR Combiner.
+  - `query_parser_v2.py`: Bộ phân tích truy vấn tiếng Việt (hỗ trợ có dấu và không dấu).
   - `lexicon_vi.json`: Từ điển 60 articleTypes, 47 baseColours, genders, usages.
-  - `brands_v2.json`: 234 thương hiệu nhận diện từ catalog.
+  - `brands_v2.json`: 234 thương hiệu nhận diện từ catalog kèm alias đã duyệt.
   - `attr_index.py`: Chỉ mục thuộc tính mảng số NumPy, lọc chính xác và nới lỏng nhiều tầng (L0..L6).
   - `lexical.py`: BM25 CSR thưa tốc độ cao (~4 ms) với mở rộng song ngữ.
+  - `scoring.py`: Chuẩn hóa vector và Scorer bù tâm đặc trưng huấn luyện.
   - `search_pipeline.py`: Pipeline tìm kiếm hợp nhất (`VisualSearchEngine`).
+  - `diag/`: Các kịch bản chẩn đoán, audit, kiểm toán, trắc nghiệm độ trễ lịch sử.
+  - `experiments/`: Các kịch bản thực nghiệm, tuning lưới tham số, huấn luyện offline.
+- `tests/`: Bộ kiểm thử tự động hệ thống (`test_app_service.py`, `test_search_pipeline.py`, `test_cir_flow.py`, `test_manifest_verification.py`).
 - `eval/`: Bộ dữ liệu kiểm thử (Q1b, Q2, Q3, Q5, Heldout).
 - `reports/`:
-  - `val_grid_results.json`: Kết quả lưới 16 tổ hợp trên tập val ($\gamma^*=0.3, \alpha^*=1.0$).
-  - `phase3f_errata.md`: Báo cáo đính chính & chuẩn hóa kết quả thực nghiệm.
-  - `run_manifest.json`: Siêu dữ liệu chạy, hash môi trường và chỉ số tái lập.
+  - `phase1/`: Báo cáo làm sạch dữ liệu, đề xuất phạm vi (scope).
+  - `phase2/`: Báo cáo khảo sát và xây dựng chỉ mục vector.
+  - `phase3/`: Báo cáo đối soát Pha 3f/3g (`phase3f_errata.md`), lưới tham số, dữ liệu thực nghiệm A/B.
+  - `phase4/`: Báo cáo kiểm thử thực tế Pha 4 (`phase4_smoke.json`, `phase4_cir_20queries_eval.json`, `phase4_trunc64_pad128_eval.json`).
+  - `quarantine_log.csv`: Nhật ký cách ly ảnh theo Luật bất biến 2.
+  - `run_manifest.json`: Siêu dữ liệu chạy, hash môi trường và chỉ số tái lập theo Luật bất biến 8.
 
 ---
 

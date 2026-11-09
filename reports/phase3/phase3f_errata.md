@@ -3,11 +3,11 @@
 **Dự án:** SigLIP E-commerce Visual Search (`Hoc_sau_ver4`)  
 **Ngày thực hiện:** 2026-11-09 (Bản Rev5 chuẩn hóa theo chỉ đạo rà soát của Người dùng)  
 **Chế độ:** Suy luận thuần. Không train lại, không sửa checkpoint SigLIP, không xóa file.  
-**Báo cáo được đính chính:** `reports/phase3f_reconciliation.md` (giữ nguyên làm bằng chứng lịch sử).  
-**Bản đối chứng Errata vòng 1:** `reports/phase3f_errata_rev1.md` (giữ nguyên làm bằng chứng lịch sử).  
-**Bản đối chứng Errata vòng 2:** `reports/phase3f_errata_rev2.md` (giữ nguyên làm bằng chứng lịch sử).  
-**Bản đối chứng Errata vòng 3:** `reports/phase3f_errata_rev3.md` (giữ nguyên làm bằng chứng lịch sử).  
-**Bản đối chứng Errata vòng 4:** `reports/phase3f_errata_rev4.md` (giữ nguyên làm bằng chứng lịch sử).  
+**Báo cáo được đính chính:** `reports/phase3/phase3f_reconciliation.md` (giữ nguyên làm bằng chứng lịch sử).  
+**Bản đối chứng Errata vòng 1:** `reports/phase3/phase3f_errata_rev1.md` (giữ nguyên làm bằng chứng lịch sử).  
+**Bản đối chứng Errata vòng 2:** `reports/phase3/phase3f_errata_rev2.md` (giữ nguyên làm bằng chứng lịch sử).  
+**Bản đối chứng Errata vòng 3:** `reports/phase3/phase3f_errata_rev3.md` (giữ nguyên làm bằng chứng lịch sử).  
+**Bản đối chứng Errata vòng 4:** `reports/phase3/phase3f_errata_rev4.md` (giữ nguyên làm bằng chứng lịch sử).  
 
 > **Quy ước bất biến**
 > - 100% con số trong báo cáo được trích xuất trực tiếp từ các file JSON/CSV do script sinh tự động trong `reports/` và `eval/`. Tuyệt đối không gõ tay, không bịa số.
@@ -21,26 +21,26 @@
 
 | Mục | Vấn đề rà soát | Trạng thái Rev5 | Ảnh hưởng đến kết luận Pha 3f | File dữ liệu nguồn |
 |---|---|---|---|---|
-| **A** | Benetton & Kiểm toán Brand | `XÁC NHẬN LỖI` | Benetton có 209 sp strict ở $G_{full}$ (38.644 sp) và 7 sp strict ở $G_{test}$; thương hiệu Lee độc lập có đúng 344 sp (loại trừ 133 sp của Lee Cooper, tổng 477 sp); thêm 22 alias hậu nghiệm; đề xuất thông báo khi gặp brand ngoài catalog như Lavie | `reports/brand_audit_3g.json`, `src/audit_lee.py`, `reports/phase3g_rev3_investigation.json` |
-| **B** | Latency & SLA AGENTS.md | `XÁC NHẬN LỖI` | AGENTS.md chỉ quy định `latency < 200 ms/query` (không ghi p95); xóa câu "SLA chuẩn theo AGENTS.md"; truy dải p95 ảnh→ảnh đúng là `[137.22 - 219.23 ms]` (Rev3 ghi `[171.2–192.4]` là sai bản); bác bỏ giả thuyết "cold-start CUDA JIT" (10 warmup queries trước run 1; đỉnh 1447-1500 ms ở Run 4 & 5 do nhiệt độ 86°C thermal throttling xuống 442 MHz và tranh chấp tiến trình nền); đổi nhãn thành **"ĐẠT CÓ ĐIỀU KIỆN" (1/5 run vượt 200 ms)** | `reports/phase3g_latency_multi_run.json:712-735`, `reports/phase3g_slow_queries_telemetry.json`, `AGENTS.md:7` |
-| **C** | FP16, Ties & Pipeline Chất lượng | `BÁC BỎ GIẢ THUYẾT` | Giải thích ties: 923 ties trên gallery ban đầu 38.646 sp (`phase3g_fp16_ties.json`), 917 ties trên gallery 38.644 sp sau loại Key chain (`phase3g_rev3_investigation.json`); biên độ đối xứng $\pm 0.0008$ quanh 0.0628; ghi đúng dtype từng bước pipeline; bỏ "bit-to-bit" do Text Encoder chạy GPU FP16 | `reports/phase3g_fp16_ties.json:129`, `reports/phase3g_rev3_investigation.json:7` |
-| **D** | Padding, Truncation & Bảng D.2 | `MỘT PHẦN` (Đã có Thực nghiệm) | Thực nghiệm chuẩn với chuỗi metadata huấn luyện `[{category}] {title} ({attrs})` tái lập hoàn hảo baseline 3f: Condition A (full 128, pad 128) đạt R@10 = 0.5225, MRR = 0.2363 trên $G_{test}$ và R@10 = 0.0628 trên $G_{full}$; Condition B (trunc 64, pad 128) đạt 0.6186 so với Condition C (trunc 64, pad 64) đạt 0.1225; chứng minh độ dài đệm 128 là yếu tố cấu trúc chi phối | `eval/results_3f.json:1044-1055`, `reports/phase3g_padding_truncation_experiment.json:6-60` |
-| **E** | Q6 & Key chain Scope | `XÁC NHẬN LỖI` | Xóa bỏ chữ "độc lập" và "+147%" ở Q6; kiểm toán Key chain: đúng 2 sp (ID 43230, 42066) trong toàn bộ Kaggle `styles.csv` và catalog, hiện đã chuyển `in_scope=False`, xác nhận còn **0 Key chain in_scope**; giải thích 2 vs 35 do template string hardcode gõ nhầm ở `phase2a_survey.py:372` | `reports/phase2a_findings.md:67`, `src/phase2a_survey.py:372`, `catalog.parquet` |
-| **F** | Đánh giá Chấm mù A/B Rev5 | `ĐÃ HOÀN TẤT` | Ghi nhận Claude (AI) single rater; bổ sung hạn chế "người chấm từng thấy mapping cũ"; kiểm tra sinh hoán vị A/B ngẫu nhiên (seed 20261109) ra 17 lần A=C5, 13 lần A=C0 với 9 khối chạy (8 lần đổi hàng); đối chiếu P@10 C0 brand: 3f ghi 0.0625 (5/80 hits) vs Rev4 ghi 0.0500 (4/80 hits); Parser V2 bổ sung quy tắc cho đầu vào không dấu, chạy lại 36 câu đổi 4 câu (x025, x027, x028, Q3) và ghi nhận tính chất hậu nghiệm | `reports/phase3g_blind_ab_results.json`, `reports/phase3g_do_bug_investigation.json`, `eval/_sealed/ab_mapping.json` |
+| **A** | Benetton & Kiểm toán Brand | `XÁC NHẬN LỖI` | Benetton có 209 sp strict ở $G_{full}$ (38.644 sp) và 7 sp strict ở $G_{test}$; thương hiệu Lee độc lập có đúng 344 sp (loại trừ 133 sp của Lee Cooper, tổng 477 sp); thêm 22 alias hậu nghiệm; đề xuất thông báo khi gặp brand ngoài catalog như Lavie | `reports/phase3/brand_audit_3g.json`, `src/diag/audit_lee.py`, `reports/phase3/phase3g_rev3_investigation.json` |
+| **B** | Latency & SLA AGENTS.md | `XÁC NHẬN LỖI` | AGENTS.md chỉ quy định `latency < 200 ms/query` (không ghi p95); xóa câu "SLA chuẩn theo AGENTS.md"; truy dải p95 ảnh→ảnh đúng là `[137.22 - 219.23 ms]` (Rev3 ghi `[171.2–192.4]` là sai bản); bác bỏ giả thuyết "cold-start CUDA JIT" (10 warmup queries trước run 1; đỉnh 1447-1500 ms ở Run 4 & 5 do nhiệt độ 86°C thermal throttling xuống 442 MHz và tranh chấp tiến trình nền); đổi nhãn thành **"ĐẠT CÓ ĐIỀU KIỆN" (1/5 run vượt 200 ms)** | `reports/phase3/phase3g_latency_multi_run.json:712-735`, `reports/phase3/phase3g_slow_queries_telemetry.json`, `AGENTS.md:7` |
+| **C** | FP16, Ties & Pipeline Chất lượng | `BÁC BỎ GIẢ THUYẾT` | Giải thích ties: 923 ties trên gallery ban đầu 38.646 sp (`phase3g_fp16_ties.json`), 917 ties trên gallery 38.644 sp sau loại Key chain (`phase3g_rev3_investigation.json`); biên độ đối xứng $\pm 0.0008$ quanh 0.0628; ghi đúng dtype từng bước pipeline; bỏ "bit-to-bit" do Text Encoder chạy GPU FP16 | `reports/phase3/phase3g_fp16_ties.json:129`, `reports/phase3/phase3g_rev3_investigation.json:7` |
+| **D** | Padding, Truncation & Bảng D.2 | `MỘT PHẦN` (Đã có Thực nghiệm) | Thực nghiệm chuẩn với chuỗi metadata huấn luyện `[{category}] {title} ({attrs})` tái lập hoàn hảo baseline 3f: Condition A (full 128, pad 128) đạt R@10 = 0.5225, MRR = 0.2363 trên $G_{test}$ và R@10 = 0.0628 trên $G_{full}$; Condition B (trunc 64, pad 128) đạt 0.6186 so với Condition C (trunc 64, pad 64) đạt 0.1225; chứng minh độ dài đệm 128 là yếu tố cấu trúc chi phối | `eval/results_3f.json:1044-1055`, `reports/phase3/phase3g_padding_truncation_experiment.json:6-60` |
+| **E** | Q6 & Key chain Scope | `XÁC NHẬN LỖI` | Xóa bỏ chữ "độc lập" và "+147%" ở Q6; kiểm toán Key chain: đúng 2 sp (ID 43230, 42066) trong toàn bộ Kaggle `styles.csv` và catalog, hiện đã chuyển `in_scope=False`, xác nhận còn **0 Key chain in_scope**; giải thích 2 vs 35 do template string hardcode gõ nhầm ở `phase2a_survey.py:372` | `reports/phase2/phase2a_findings.md:67`, `src/diag/phase2a_survey.py:372`, `catalog.parquet` |
+| **F** | Đánh giá Chấm mù A/B Rev5 | `ĐÃ HOÀN TẤT` | Ghi nhận Claude (AI) single rater; bổ sung hạn chế "người chấm từng thấy mapping cũ"; kiểm tra sinh hoán vị A/B ngẫu nhiên (seed 20261109) ra 17 lần A=C5, 13 lần A=C0 với 9 khối chạy (8 lần đổi hàng); đối chiếu P@10 C0 brand: 3f ghi 0.0625 (5/80 hits) vs Rev4 ghi 0.0500 (4/80 hits); Parser V2 bổ sung quy tắc cho đầu vào không dấu, chạy lại 36 câu đổi 4 câu (x025, x027, x028, Q3) và ghi nhận tính chất hậu nghiệm | `reports/phase3/phase3g_blind_ab_results.json`, `reports/phase3/phase3g_do_bug_investigation.json`, `eval/_sealed/ab_mapping.json` |
 
 ---
 
 ## A. Brand: Sửa kết luận Benetton, Kiểm toán Lee và Đề xuất Thông báo
 
-### A.1 Bằng chứng mã nguồn và Dữ liệu thực tế (`reports/brand_audit_3g.json`)
+### A.1 Bằng chứng mã nguồn và Dữ liệu thực tế (`reports/phase3/brand_audit_3g.json`)
 - **Phát biểu cũ (3f, mục F6):** x017 (Lavie) và x018 (Benetton) có R = 0, AP@10 "toán học bằng 0"; báo cáo "6/6 brand hợp lệ".
 - **Bằng chứng thực tế:**
   1. `data/catalog/catalog.parquet`: Có **1.303 sản phẩm** mang chính xác nhãn canonical `"United Colors of Benetton"`, và **1.337 sản phẩm** chứa chuỗi con `"benetton"`.
-  2. `reports/brand_audit_3g.json`: Câu `x018` ("áo thun Benetton nam") có `r_strict_full_with_brand` = **209 sản phẩm** trên $G_{full}$ (38.644 sp), và `r_strict_test_with_brand` = **7 sản phẩm** trên $G_{test}$ (1.290 sp).
-  3. `reports/brand_audit_3g.json`: Câu `x017` ("túi xách nữ Lavie") có đúng **0 sản phẩm** trong catalog.
+  2. `reports/phase3/brand_audit_3g.json`: Câu `x018` ("áo thun Benetton nam") có `r_strict_full_with_brand` = **209 sản phẩm** trên $G_{full}$ (38.644 sp), và `r_strict_test_with_brand` = **7 sản phẩm** trên $G_{test}$ (1.290 sp).
+  3. `reports/phase3/brand_audit_3g.json`: Câu `x017` ("túi xách nữ Lavie") có đúng **0 sản phẩm** trong catalog.
 - **Kết luận:** Phát biểu "Benetton catalog rỗng" của Pha 3f là **SAI**. Nguyên nhân thực sự là do `src/brands.json` v1 chỉ chứa tên đầy đủ `"United Colors of Benetton"` mà thiếu alias `"benetton"`, khiến QueryParser V1 bỏ sót brand.
 
-### A.2 Kiểm toán Lee vs Lee Cooper: Làm rõ số lượng 344 vs 477 (`src/audit_lee.py`)
+### A.2 Kiểm toán Lee vs Lee Cooper: Làm rõ số lượng 344 vs 477 (`src/diag/audit_lee.py`)
 Kiểm toán bằng regex ranh giới từ `\blee\b` trên toàn bộ 38.644 sản phẩm in-scope của catalog:
 - Tổng số sản phẩm chứa từ `\blee\b` (tính chung): **477 sản phẩm**.
 - Số sản phẩm của thương hiệu `Lee Cooper` (`\blee cooper\b`): **133 sản phẩm**.
@@ -92,8 +92,8 @@ Do catalog Kaggle không có thương hiệu `Lavie`:
   - **p95 < 200 ms:** Đo mức độ đáp ứng thời gian thực cho 95% người dùng thông thường.
   - **p99:** Đo chỉ số rủi ro đuôi (tail risk metric) đối với các truy vấn phức tạp hoặc trường hợp tải đỉnh.
 
-### B.2 Đối soát Dải p95 Ảnh→Ảnh trong `reports/phase3g_latency_multi_run.json`
-- **Truy vết file nguồn (`reports/phase3g_latency_multi_run.json:712-723`):**
+### B.2 Đối soát Dải p95 Ảnh→Ảnh trong `reports/phase3/phase3g_latency_multi_run.json`
+- **Truy vết file nguồn (`reports/phase3/phase3g_latency_multi_run.json:712-723`):**
   - Run 1: **137.22 ms**
   - Run 2: **196.16 ms**
   - Run 3: **219.23 ms** (> 200 ms)
@@ -107,7 +107,7 @@ Do catalog Kaggle không có thương hiệu `Lavie`:
 
 ### B.3 Xóa bỏ và Bác bỏ Giả thuyết "Cold-Start CUDA JIT"
 - Trong báo cáo Rev4, đoạn giải thích đỉnh p99 (1447–1500 ms) do *"Cold-Start CUDA Kernel Compilation & Memory Re-allocation"* bị **BÁC BỎ HOÀN TOÀN** vì các bằng chứng thực nghiệm sau:
-  1. Script benchmark `src/benchmark_phase3g_rev2.py:185-193` đã thực hiện **10 truy vấn warmup trước khi bắt đầu Run 1**.
+  1. Script benchmark `src/diag/benchmark_phase3g_rev2.py:185-193` đã thực hiện **10 truy vấn warmup trước khi bắt đầu Run 1**.
   2. Nếu do Cold-Start JIT, đỉnh trễ bắt buộc phải xuất hiện tại **Run 1**. Nhưng thực tế p99 qua các run như sau (`phase3g_latency_multi_run.json:724-735`):
      - Run 1: **179.50 ms**
      - Run 2: **253.19 ms**
@@ -118,7 +118,7 @@ Do catalog Kaggle không có thương hiệu `Lavie`:
      - **Quá nhiệt và Thermal Throttling:** Chạy 5 runs liên tục (1.000 text queries + 1.000 image queries) trên GPU laptop NVIDIA RTX 2050 Mobile khiến nhiệt độ chạm trần nhiệt **86°C**, xung nhịp GPU bị hệ điều hành bóp từ 1.470 MHz xuống **442–480 MHz**.
      - **Cạnh tranh tài nguyên tiến trình nền:** Tại thời điểm đo (`2026-11-09 12:52:43`), log ghi nhận 16 tiến trình nền Windows/IDE đang chia sẻ GPU (`SearchHost.exe`, `WidgetBoard.exe`, `EdgeWebView`, `Antigravity.exe`, `Claude.exe`, `python.exe`), gây hiện tượng context-switch stall ngẫu nhiên ở cuối phiên.
 
-### B.4 Telemetry Đối chứng Độc lập và Timestamp Truy vấn Chậm (`reports/phase3g_slow_queries_telemetry.json`)
+### B.4 Telemetry Đối chứng Độc lập và Timestamp Truy vấn Chậm (`reports/phase3/phase3g_slow_queries_telemetry.json`)
 Chạy kiểm toán chuyên sâu 5 runs (200 ảnh/run, có 10 warmup) ghi nhận telemetry GPU `nvidia-smi` ở từng run:
 
 | Run | Thời gian chạy | GPU Temp (Start $\to$ End) | Graphics Clock | Memory Clock | p50 (ms) | p95 (ms) | p99 (ms) | Max (ms) | Số truy vấn > 500 ms |
@@ -141,9 +141,9 @@ Chạy kiểm toán chuyên sâu 5 runs (200 ảnh/run, có 10 warmup) ghi nhậ
 - **Căn cứ:** Code Pha 3f (`evaluate_phase3f.py:209-214`) chạy phép trừ vector tâm `mu` float32 và thực hiện `np.dot` hoàn toàn trên **CPU float32**.
 - **Nguyên nhân thực sự:** Do Pha 3f đổi hàm so sánh từ đẳng thức bitwise `sims == target_sim` (ties = 2) sang `np.isclose(sims, target_sim, atol=1e-6)` (ties = 119..120).
 
-### C.2 Giải thích Sự khác biệt Ties 917 vs 923 (`reports/phase3g_fp16_ties.json` vs `reports/phase3g_rev3_investigation.json`)
-- **Con số 923 ties (`reports/phase3g_fp16_ties.json:129`):** Đo trên toàn bộ tập embedding gallery ban đầu $N = 38.646$ sản phẩm bằng ma trận GPU FP16.
-- **Con số 917 ties (`reports/phase3g_rev3_investigation.json:7`):** Đo trên tập gallery sạch $N = 38.644$ sản phẩm sau khi đã loại bỏ 2 sản phẩm Key chain và sử dụng đẳng thức chính xác `row == tgt_score` trên GPU FP16.
+### C.2 Giải thích Sự khác biệt Ties 917 vs 923 (`reports/phase3/phase3g_fp16_ties.json` vs `reports/phase3/phase3g_rev3_investigation.json`)
+- **Con số 923 ties (`reports/phase3/phase3g_fp16_ties.json:129`):** Đo trên toàn bộ tập embedding gallery ban đầu $N = 38.646$ sản phẩm bằng ma trận GPU FP16.
+- **Con số 917 ties (`reports/phase3/phase3g_rev3_investigation.json:7`):** Đo trên tập gallery sạch $N = 38.644$ sản phẩm sau khi đã loại bỏ 2 sản phẩm Key chain và sử dụng đẳng thức chính xác `row == tgt_score` trên GPU FP16.
 - **Biên độ đối xứng GPU FP16:**
   - $R@10$ Lạc quan (Optimistic Rank $\le 10$): **0.0636** ($+0.0008$).
   - $R@10$ Bi quan (Pessimistic Rank + ties - 1 $\le 10$): **0.0620** ($-0.0008$).
@@ -171,9 +171,9 @@ Toàn bộ số liệu của Bảng D.2 được trích xuất trực tiếp t�
 
 *Khẳng định dứt khoát:* Mô hình SigLIP nguyên bản đạt Recall@10 = **0.5225** và mAP = **0.2362** trên tập test, **chưa đạt chỉ tiêu của dự án** (Recall@10 $\ge$ 0.85, mAP $\ge$ 0.75). Điểm số 0.9008 là thành quả của Hệ sinh thái C2 (trích xuất metadata và cộng điểm soft bonus), không đại diện cho riêng mô hình.
 
-### D.2 Thực nghiệm Tái lập Baseline 3f và Tách biệt Padding vs Truncation (`reports/phase3g_padding_truncation_experiment.json`)
+### D.2 Thực nghiệm Tái lập Baseline 3f và Tách biệt Padding vs Truncation (`reports/phase3/phase3g_padding_truncation_experiment.json`)
 - **Nguyên nhân sai lệch số liệu ở Rev4:** Script thực nghiệm của Rev4 nạp nhầm `q1_paired_queries` từ `eval/testset_v1.json` (caption tiếng Việt tự nhiên kiểu *"Sản phẩm áo sơ mi..."* vốn là caption v1 chưa tinh chỉnh), dẫn đến Condition A chỉ đạt R@10 = 0.0535 và mean rank 365.88.
-- **Chạy lại chuẩn hóa:** Chạy trên đúng chuỗi văn bản huấn luyện của checkpoint SigLIP `[{category}] {title} ({attrs})` trích từ `data/checkpoints_siglip-vit/product_metadata.json` trên cả 1.290 câu test của $G_{test}$ và $G_{full}$ (`reports/phase3g_padding_truncation_experiment.json:6-60`):
+- **Chạy lại chuẩn hóa:** Chạy trên đúng chuỗi văn bản huấn luyện của checkpoint SigLIP `[{category}] {title} ({attrs})` trích từ `data/checkpoints_siglip-vit/product_metadata.json` trên cả 1.290 câu test của $G_{test}$ và $G_{full}$ (`reports/phase3/phase3g_padding_truncation_experiment.json:6-60`):
 
 | Cấu hình thực nghiệm | Định dạng chuỗi văn bản | Chiều dài chuỗi | R@1 G_test | R@5 G_test | R@10 G_test | MRR G_test | R@10 G_full | Tương quan với Baseline 3f |
 |---|---|---|---|---|---|---|---|---|
@@ -208,9 +208,9 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
   2. ID `42066`: *American Tourister Unisex Black Key Case*
 - **Giải thích vì sao `scope_proposal.csv` ghi 2 còn `phase2a_findings.md` ghi 35:**
   1. Trong file thô ban đầu của Kaggle (`data/fashion-dataset/styles.csv`), chỉ có đúng **2 sản phẩm** mang nhãn `Key chain` (ID 43230 và 42066).
-  2. Báo cáo Pha 1b (`reports/phase1b_report.md:88`) đã ghi nhận chính xác: `| Accessories | Key chain | Unisex | 2 | Thời trang |`.
-  3. File `reports/scope_proposal.csv` được sinh động bằng script qua `df.groupby('articleType')`, phản ánh con số thực tế = **2**.
-  4. Con số **35 sản phẩm** trong `reports/phase2a_findings.md:67` xuất phát từ chuỗi bảng Markdown hardcode trong `src/phase2a_survey.py:372` (`"| Key chain | 35 | Out-of-Scope | Móc chìa khóa (quà tặng lưu niệm) |"`), do tác giả đã gõ nhầm số 35 vào template string chứ không phải đếm từ dữ liệu Kaggle.
+  2. Báo cáo Pha 1b (`reports/phase1/phase1b_report.md:88`) đã ghi nhận chính xác: `| Accessories | Key chain | Unisex | 2 | Thời trang |`.
+  3. File `reports/phase1/scope_proposal.csv` được sinh động bằng script qua `df.groupby('articleType')`, phản ánh con số thực tế = **2**.
+  4. Con số **35 sản phẩm** trong `reports/phase2/phase2a_findings.md:67` xuất phát từ chuỗi bảng Markdown hardcode trong `src/diag/phase2a_survey.py:372` (`"| Key chain | 35 | Out-of-Scope | Móc chìa khóa (quà tặng lưu niệm) |"`), do tác giả đã gõ nhầm số 35 vào template string chứ không phải đếm từ dữ liệu Kaggle.
 
 ---
 
@@ -228,7 +228,7 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
   6. *Người chấm từng thấy mapping cũ (Prior mapping exposure):* Người chấm (Claude AI) đã từng tham gia các lượt đánh giá trước và tiếp xúc với dữ liệu heldout/mapping trước khi contact sheet được xáo trộn lại với seed 20261109. Dù contact sheet mới được ẩn tên cấu hình (A/B) và đảo ngẫu nhiên theo 9 khối, người chấm vẫn có thể mang thiên kiến tiềm thức (latent bias) từ những lượt đối thoại trước.
 
 ### F.2 Cơ chế Sinh Hoán vị A/B, Kiểm định Chuỗi (Runs-Test) và Bảng Thống kê Chấm mù
-- **Đoạn mã sinh hoán vị thực tế (`src/recreate_blind_ab_rev3.py:87-139`):**
+- **Đoạn mã sinh hoán vị thực tế (`src/experiments/recreate_blind_ab_rev3.py:87-139`):**
   ```python
   NEW_SEED = 20261109
   rng = np.random.RandomState(NEW_SEED)
@@ -249,7 +249,7 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
     - Thống kê kiểm định: $Z = \frac{R - E[R]}{\sigma_R} = \frac{9 - 15.733}{2.641} = \mathbf{-2.55}$.
     - Mức ý nghĩa hai phía: $p = 2 \times \Phi(-2.55) = \mathbf{0.0108} < 0.05$.
   - *Kết luận về tính Mù (Blinding Limitation):* Do $p = 0.0108 < 0.05$, chuỗi hoán vị bị bác bỏ giả thuyết ngẫu nhiên độc lập thuần túy; chuỗi có hiện tượng **co cụm theo khối (clustering)** với độ dài khối trung bình $30/9 \approx 3.3$ câu (xuất hiện vết 6 câu C5 liên tiếp và vết 5 câu C0 liên tiếp). Cùng với sự đồng nhất thị giác rõ rệt của Hệ thống, đây là một **hạn chế lớn về tính mù (weak blinding)** cần ghi nhận chính thức.
-- **Bảng Thống kê Chấm mù (`reports/phase3g_blind_ab_results.json`):**
+- **Bảng Thống kê Chấm mù (`reports/phase3/phase3g_blind_ab_results.json`):**
 
 | Nhóm truy vấn | N | C5 Thắng (Hệ thống) | C0 Thắng (Model thuần) | Hòa | Tỷ lệ thắng C5 | Clopper-Pearson Exact 95% CI (Win Rate) | Sign Test 2 phía ($p$-value) | Human P@10 (C5 vs C0) | $\Delta$ P@10 (95% Bootstrap CI) | P@10 Chuẩn theo Metadata Brand |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -276,7 +276,7 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
      - Một từ chỉ báo màu sắc: `"mau"`, `"màu"`, `"sac"`, `"sắc"`, `"tone"`, `"tong"`, `"tông"`, HOẶC
      - Một tên loại sản phẩm thời trang đã nhận diện: `"ao"`, `"quan"`, `"vay"`, `"dam"`, `"giay"`, `"dep"`, `"tui"`, `"dong ho"`, v.v. (ví dụ: *"ao do nam"*, *"tui do"*, *"ao thun mau do"*).
      - Nếu `"do"` đứng đầu câu (*"do tap gym"*, *"do di bien"*) hoặc đứng sau các từ hành động (*"dung do"*), nó không được nhận diện là màu Đỏ.
-- **Kiểm tra thực nghiệm trên toàn bộ 36 câu chứa "đồ/đỏ/do" (`reports/phase3g_do_bug_investigation.json`):**
+- **Kiểm tra thực nghiệm trên toàn bộ 36 câu chứa "đồ/đỏ/do" (`reports/phase3/phase3g_do_bug_investigation.json`):**
   - Có đúng **4 câu** được sửa đổi sạch sẽ: `x025`, `x027`, `x028` (Heldout 30) và `'túi trống thể thao tập gym đựng đồ'` (Q3). Cả 4 câu đều được phục hồi `baseColour: None`.
   - Toàn bộ **32 câu** mang màu đỏ thực sự giữ nguyên kết quả `baseColour: Red`.
   - *Ghi chú:* Đây là bản vá **hậu nghiệm (post-hoc)** vì được phát triển sau khi quan sát lỗi của tập heldout.
@@ -303,7 +303,7 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
 
 | # | Hạng mục | Trạng thái hiện tại | Hành động tiếp theo |
 |---|---|---|---|
-| 1 | Phạm vi Key chain (2 sản phẩm in_scope) | `ĐÃ DUYỆT LOẠI BỎ (2026-11-09)` | Đã chuyển 2 sp Key chain (ID 43230, 42066) sang `in_scope=False`. Cập nhật `catalog.parquet`, `reports/scope_proposal.csv`, `index_v2/manifest.json`. **Catalog in-scope hiện tại là 38.644 sản phẩm**. |
+| 1 | Phạm vi Key chain (2 sản phẩm in_scope) | `ĐÃ DUYỆT LOẠI BỎ (2026-11-09)` | Đã chuyển 2 sp Key chain (ID 43230, 42066) sang `in_scope=False`. Cập nhật `catalog.parquet`, `reports/phase1/scope_proposal.csv`, `index_v2/manifest.json`. **Catalog in-scope hiện tại là 38.644 sản phẩm**. |
 | 2 | Đánh giá Blind A/B Rev5 | `ĐÃ HOÀN TẤT BÁO CÁO` | Báo cáo kết quả Claude AI single rater, bổ sung hạn chế "người chấm từng thấy mapping cũ", giải thích 9 khối hoán vị A/B, phân tích đối soát P@10 C0 brand (0.0625 vs 0.0500), và hoàn thiện Parser V2 cho input không dấu. |
 | 3 | Thông báo thương hiệu Lavie (x017) | `ĐÃ DUYỆT (2026-11-09)` | Đã duyệt giữ nguyên thông báo nới lỏng loại SP/giới tính và cảnh báo hiển thị trên giao diện người dùng (Tab 1). |
 
@@ -327,21 +327,21 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
 ## I. Lịch sử sửa đổi qua các phiên bản Errata
 
 ### I.1 Lịch sử sửa đổi từ Rev2 sang Rev3
-*(Xem chi tiết trong `reports/phase3f_errata_rev3.md`)*
+*(Xem chi tiết trong `reports/phase3/phase3f_errata_rev3.md`)*
 
 ### I.2 Lịch sử sửa đổi từ Rev3 sang Rev4
-*(Xem chi tiết trong `reports/phase3f_errata_rev4.md`)*
+*(Xem chi tiết trong `reports/phase3/phase3f_errata_rev4.md`)*
 
 ### I.3 Lịch sử sửa đổi từ Rev4 sang Rev5
 | Mục | Số cũ (Rev4) | Số mới (Rev5) | Lý do sửa đổi và Căn cứ bằng chứng |
 |---|---|---|---|
-| **Mục 1 (Thực nghiệm Padding)** | Condition A: 0.0535 / 365.9 | **Condition A: R@10 = 0.5225, MRR = 0.2363 trên $G_{test}$, R@10 = 0.0628 trên $G_{full}$** | Chạy lại trên đúng chuỗi văn bản huấn luyện `[{category}] {title} ({attrs})` từ checkpoint SigLIP, tái lập hoàn hảo baseline 3f (3f: 0.5225 / 0.0628); Condition B (trunc 64, pad 128) đạt 0.6186 so với Condition C (pad 64) đạt 0.1225; `reports/phase3g_padding_truncation_experiment.json:6-60`. |
-| **Mục 2 (Latency SLA)** | Ghi nhận đỉnh p99 do "Cold Start CUDA JIT" | **Xóa bỏ Cold-Start; giải thích do quá nhiệt (86°C, throttled 442 MHz) và tranh chấp tiến trình nền; đổi nhãn Image-to-Image thành "ĐẠT CÓ ĐIỀU KIỆN" (1/5 run vượt 200 ms)** | 10 warmup queries đã chạy trước Run 1; đỉnh 1447–1500 ms nằm ở Run 4 & 5; đối soát dải p95 ảnh→ảnh đúng là `[137.22 - 219.23 ms]` (Rev3 ghi sai `[171.2-192.4]`); `reports/phase3g_latency_multi_run.json:712-735`, `reports/phase3g_slow_queries_telemetry.json`. |
-| **Mục 3 (Parser V2 Không dấu)** | Chỉ xử lý từ có dấu "đồ" | **Thêm quy tắc cho input không dấu: "do" chỉ là màu khi đứng sau chỉ báo màu hoặc tên loại SP; chặn "đồ" huyền** | Test trên câu không dấu, chạy lại 36 câu đổi đúng 4 câu (x025, x027, x028, Q3), ghi nhận tính chất hậu nghiệm; `src/query_parser_v2.py`, `reports/phase3g_do_bug_investigation.json`. |
-| **Mục 4 (Kiểm toán Key chain)** | Giải thích chung chung 2 vs 35 | **Lập bảng kiểm toán: 2 sp (ID 43230, 42066), in_scope=False, split=unknown, quarantine=0; xác nhận còn 0 Key chain in_scope; giải thích 35 do template string hardcode gõ nhầm** | `data/fashion-dataset/styles.csv`, `reports/phase1b_report.md:88`, `src/phase2a_survey.py:372`, `reports/phase2a_findings.md:67`. |
-| **Mục 5 (Ties 917 vs 923)** | Chưa giải thích rõ | **Giải thích 923 ties trên gallery thô 38.646 sp vs 917 ties trên gallery sạch 38.644 sp** | `reports/phase3g_fp16_ties.json:129`, `reports/phase3g_rev3_investigation.json:7`. |
-| **Mục 5 (P@10 C0 Brand)** | Chỉ ghi 0.0500 | **Báo đối soát cả hai số: Baseline 3f ghi 0.0625 (5/80 hits) vs mẫu Rev4 ghi 0.0500 (4/80 hits)** | `eval/results_3f.json:1124`, `reports/phase3g_blind_ab_results.json`. |
-| **Mục 5 (Hoán vị A/B & Hạn chế)** | Chưa kiểm tra cơ chế sinh hoán vị | **Kiểm tra 9 khối chạy (8 lần đổi hàng) từ seed 20261109; bổ sung hạn chế "người chấm từng thấy mapping cũ"** | `src/recreate_blind_ab_rev3.py`, `eval/_sealed/ab_mapping.json`. |
+| **Mục 1 (Thực nghiệm Padding)** | Condition A: 0.0535 / 365.9 | **Condition A: R@10 = 0.5225, MRR = 0.2363 trên $G_{test}$, R@10 = 0.0628 trên $G_{full}$** | Chạy lại trên đúng chuỗi văn bản huấn luyện `[{category}] {title} ({attrs})` từ checkpoint SigLIP, tái lập hoàn hảo baseline 3f (3f: 0.5225 / 0.0628); Condition B (trunc 64, pad 128) đạt 0.6186 so với Condition C (pad 64) đạt 0.1225; `reports/phase3/phase3g_padding_truncation_experiment.json:6-60`. |
+| **Mục 2 (Latency SLA)** | Ghi nhận đỉnh p99 do "Cold Start CUDA JIT" | **Xóa bỏ Cold-Start; giải thích do quá nhiệt (86°C, throttled 442 MHz) và tranh chấp tiến trình nền; đổi nhãn Image-to-Image thành "ĐẠT CÓ ĐIỀU KIỆN" (1/5 run vượt 200 ms)** | 10 warmup queries đã chạy trước Run 1; đỉnh 1447–1500 ms nằm ở Run 4 & 5; đối soát dải p95 ảnh→ảnh đúng là `[137.22 - 219.23 ms]` (Rev3 ghi sai `[171.2-192.4]`); `reports/phase3/phase3g_latency_multi_run.json:712-735`, `reports/phase3/phase3g_slow_queries_telemetry.json`. |
+| **Mục 3 (Parser V2 Không dấu)** | Chỉ xử lý từ có dấu "đồ" | **Thêm quy tắc cho input không dấu: "do" chỉ là màu khi đứng sau chỉ báo màu hoặc tên loại SP; chặn "đồ" huyền** | Test trên câu không dấu, chạy lại 36 câu đổi đúng 4 câu (x025, x027, x028, Q3), ghi nhận tính chất hậu nghiệm; `src/query_parser_v2.py`, `reports/phase3/phase3g_do_bug_investigation.json`. |
+| **Mục 4 (Kiểm toán Key chain)** | Giải thích chung chung 2 vs 35 | **Lập bảng kiểm toán: 2 sp (ID 43230, 42066), in_scope=False, split=unknown, quarantine=0; xác nhận còn 0 Key chain in_scope; giải thích 35 do template string hardcode gõ nhầm** | `data/fashion-dataset/styles.csv`, `reports/phase1/phase1b_report.md:88`, `src/diag/phase2a_survey.py:372`, `reports/phase2/phase2a_findings.md:67`. |
+| **Mục 5 (Ties 917 vs 923)** | Chưa giải thích rõ | **Giải thích 923 ties trên gallery thô 38.646 sp vs 917 ties trên gallery sạch 38.644 sp** | `reports/phase3/phase3g_fp16_ties.json:129`, `reports/phase3/phase3g_rev3_investigation.json:7`. |
+| **Mục 5 (P@10 C0 Brand)** | Chỉ ghi 0.0500 | **Báo đối soát cả hai số: Baseline 3f ghi 0.0625 (5/80 hits) vs mẫu Rev4 ghi 0.0500 (4/80 hits)** | `eval/results_3f.json:1124`, `reports/phase3/phase3g_blind_ab_results.json`. |
+| **Mục 5 (Hoán vị A/B & Hạn chế)** | Chưa kiểm tra cơ chế sinh hoán vị | **Kiểm tra 9 khối chạy (8 lần đổi hàng) từ seed 20261109; bổ sung hạn chế "người chấm từng thấy mapping cũ"** | `src/experiments/recreate_blind_ab_rev3.py`, `eval/_sealed/ab_mapping.json`. |
 
 
 ---
@@ -355,7 +355,7 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
   - `data/catalog/catalog.parquet` (`in_scope == True`): **38.644 sản phẩm**.
   - *Nguyên nhân lệch 2 sản phẩm:* Hai sản phẩm Key chain (`43230` Carabiner, `42066` Key Case) đã bị chuyển `in_scope = False` theo lệnh loại bỏ ở Pha 3g Rev3. File nhị phân vector `image_embeddings_v2.npy` và `id_map_v2.json` được tạo từ trước nên chứa toàn bộ 38.646 dòng thô.
   - *Phân tích rủi ro chỉ mục (Index Alignment Risk):* Khi ứng dụng (`SearchService` / `VisualSearchEngine`) tra cứu ID qua `id_map_v2.json`, từng ID được ánh xạ chính xác 1:1 sang vị trí vector. Tuy nhiên, nếu dùng lệnh `iloc` trực tiếp trên DataFrame `catalog[in_scope]` để cắt vector, mảng sẽ bị **lệch 1 vị trí sau index 10651 (ID 43230)** và **lệch 2 vị trí sau index 16039 (ID 42066)**. Code ứng dụng đã được rà soát để đảm bảo 100% sử dụng `id_map_v2.json`.
-- **Thực nghiệm kiểm chứng 100 ID (`src/verify_index_100ids.py`):**
+- **Thực nghiệm kiểm chứng 100 ID (`src/diag/verify_index_100ids.py`):**
   - Đã chọn ngẫu nhiên 100 ID (seed 42, bắt buộc bao gồm `39386`, `15970`, và các ID nằm sau vị trí 43230 và 42066).
   - Nạp ảnh từ `data/fashion-dataset/images/`, tính toán lại embedding bằng đúng pipeline SigLIP PyTorch FP16, đo cosine similarity với vector lưu sẵn trong `image_embeddings_v2.npy`.
   - **Kết quả:** **100/100 ID đạt cosine similarity $\ge 0.999$** (Min = 0.999278, Mean = 1.000159, Max = 1.000561). Xác nhận index vector hoàn toàn khớp đúng với ảnh gốc trên đĩa.
@@ -363,11 +363,11 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
   - *Trong `data/catalog/catalog.parquet` và `data/fashion-dataset/styles.csv`:*
     - ID `39386`: `Peter England Men Party Blue Jeans` (`articleType: Jeans`, `gender: Men`, `baseColour: Blue`).
     - ID `15970`: `Turtle Check Men Navy Blue Shirt` (`articleType: Shirts`, `gender: Men`, `baseColour: Navy Blue`).
-  - *Trong báo cáo `reports/phase3e_inference_only.md` (mục 6, dòng 230):*
+  - *Trong báo cáo `reports/phase3/phase3e_inference_only.md` (mục 6, dòng 230):*
     - Báo cáo viết: *"Query 'giày cao gót nữ màu be mũi nhọn' trả về top-1 ID 39386 (Flats, Women, Beige)..."* và ID 15970 ghi là *"Sweaters, Men, Black"*.
   - *Kết luận phạm vi sai lệch:* Đây là **lỗi sao chép / gõ tay văn bản trong file markdown của Pha 3e**, hoàn toàn **không phải lỗi dữ liệu** trong catalog, styles.csv hay index vector.
 
-### J.2 Thực nghiệm Padding & Truncation Xuyên Bộ Dữ liệu (`reports/phase4_trunc64_pad128_eval.json`)
+### J.2 Thực nghiệm Padding & Truncation Xuyên Bộ Dữ liệu (`reports/phase4/phase4_trunc64_pad128_eval.json`)
 - **Phân tích nguồn gốc thổi phồng điểm Model thuần của Pha 3e:**
   Thực nghiệm trên toàn bộ 4 tập đánh giá kiểm chứng tác động của việc cắt cụt và đệm độ dài:
 
@@ -416,7 +416,7 @@ Kiểm toán toàn bộ sản phẩm `articleType == "Key chain"` trong catalog 
 | **23 câu còn lại** | ... | Giữ nguyên | Giữ nguyên | Giữ nguyên | Giữ nguyên | Hoàn toàn bất biến giữa GT cũ và GT mới |
 
 ### J.4 Telemetry Đo đạc Thực tế Smoke Test (Pha 4)
-- **Tách biệt Warmup và Độ trễ Phục vụ Chuẩn (`reports/phase4_smoke.json`):**
+- **Tách biệt Warmup và Độ trễ Phục vụ Chuẩn (`reports/phase4/phase4_smoke.json`):**
   - Giai đoạn Warm-up (nạp mô hình vào VRAM và biên dịch CUDA kernel cho text, image, CIR): **3.592 ms**.
   - Toàn bộ các truy vấn sau warm-up đều chạy ở trạng thái ổn định (steady-state).
 - **Kết quả Thực tế 5 Truy vấn Văn bản:**
