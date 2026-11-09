@@ -728,5 +728,43 @@
       "src/profile_image_latency_telemetry.py": "e4f8183c23a834cbf53a117bcf81ddcc8ba241f5857818ffb148d3f4642a7be7",
       "src/check_keychain_details.py": "7e708d03dcb9e41842c1401e5f82177fe1a56496f6f07984526dde6e367a9bd2"
     }
+  },
+  "phase4": {
+    "timestamp": "2026-11-09 16:47:59",
+    "status": "COMPLETED",
+    "description": "Serving Web Application using Streamlit with Multi-modal Retrieval and Strict Rule 7 Checkpoint Verification",
+    "server": {
+      "framework": "streamlit",
+      "port": 8501,
+      "host": "localhost"
+    },
+    "rule_7_checkpoint_verification": {
+      "enforced": true,
+      "checkpoint_path": "data/checkpoints_siglip-vit/best_model.pt",
+      "expected_sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+      "verified": true
+    },
+    "gallery": {
+      "total_items_in_scope": 38644,
+      "alignment_resolved_shift": true,
+      "excluded_keychains": [
+        "43230",
+        "42066"
+      ]
+    },
+    "modalities_supported": [
+      "text_to_image (Config 5 Hybrid: ParserV2 + L0..L6 Relaxation + Soft Bonus gamma=0.3 + BM25 RRF k=60; Config 0 Dense only toggle)",
+      "image_to_image (Visual Search + Flip Augmentation TTA + k-NN Attribute Voting)",
+      "composed_image_retrieval (CIR with MultimodalSigLIPWithCIR + Attention Combiner)"
+    ],
+    "files": {
+      "app/engine.py": "9689149209d7c6ccf3988640b3bf57f5e6555c813347481a136e15dd721c612a",
+      "app/main.py": "350b8040f3bb882995736531c5a1d3bcf67210b526f0b88e3cff196c751441d5",
+      "src/search_pipeline.py": "05aa06ddb1d3a5acc84120c6aaf6dd2b28f61331f272b107d1b1ed4ba55ec9e3",
+      "src/test_app_service.py": "97f42ca23d1f087199e511961e242c206ac69d36d70d955a0716a9881ae5566a",
+      "src/test_search_pipeline.py": "464f2abea6f3c532654b6cfdc4eda6b5367788663ffcca6a8c0db3ca54a1f8de",
+      "src/test_cir_flow.py": "ad0b8e2d8601e8080dafe9f2e3da78f284d88d565cb58983a03fefc96f70cbef",
+      "README_run.md": "bbe1ca35df8a8ca1c98ca994a445a5043170cbb5cd261facb13d46d1bc5a1ecf"
+    }
   }
 }

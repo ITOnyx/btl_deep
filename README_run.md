@@ -62,3 +62,34 @@ Kết quả lưu tại:
 - `eval/results_3e.json`
 - `reports/contact_sheets/heldout_*.png`
 - `eval/manual_ratings_heldout.csv`
+
+---
+
+## 4. Chạy ứng dụng Web Demo (Streamlit - Pha 4)
+
+Ứng dụng web phục vụ tìm kiếm thời trang đa phương thức được triển khai bằng Streamlit theo đúng cấu hình tại `config.yaml` (`port: 8501`).
+
+### Khởi chạy ứng dụng:
+```bash
+streamlit run app/main.py --server.port 8501
+```
+
+### Các tính năng và Tab chính:
+1. **Tuân thủ Luật bất biến 7 (Rule 7 Checkpoint Hash Verification):**
+   - Ứng dụng tự động kiểm tra mã băm SHA-256 của checkpoint SigLIP (`best_model.pt`) đối chiếu với `config.yaml` và `index_v2/manifest.json`.
+   - Nếu phát hiện sai lệch (mismatched hash), ứng dụng lập tức từ chối tải và hiển thị cảnh báo đỏ nhằm ngăn ngừa trôi dạt phân phối vector.
+2. **Tab 1: Văn bản tiếng Việt $\to$ Ảnh:**
+   - Trích xuất thực thể bằng `QueryParserV2` (loại sản phẩm, giới tính, màu sắc, thương hiệu, hỗ trợ cả câu có dấu và không dấu).
+   - Nới lỏng đa tầng `L0..L6`, lọc BM25 RRF ($k=60$) kết hợp Soft Bonus $\gamma=0.3$ (Cấu hình C5 tối ưu).
+   - Hỗ trợ chuyển đổi so sánh tức thì với Cấu hình C0 (Dense thuần SigLIP).
+   - Hiển thị chi tiết độ trễ từng giai đoạn (Parser, Dense, BM25, RRF, Filter).
+3. **Tab 2: Ảnh $\to$ Ảnh (Visual Search):**
+   - Tải ảnh tải lên hoặc chọn ảnh mẫu từ catalog.
+   - Hỗ trợ lật ảnh tăng cường (Flip Augmentation TTA) và bầu chọn thuộc tính k-NN ($k=5$).
+4. **Tab 3: Ảnh + Văn bản bổ trợ (Composed Image Retrieval - CIR):**
+   - Ghép đặc trưng ảnh tham chiếu và câu bổ trợ tiếng Việt (ví dụ: *"đổi sang màu đỏ"*, *"chuyển sang áo dài tay"*) qua bộ kết hợp `MultimodalSigLIPWithCIR`.
+   - Hiển thị trực quan ảnh gốc bên cạnh danh sách sản phẩm gợi ý sau khi thay đổi thuộc tính.
+5. **Tab 4: Đối soát & Báo cáo Hệ thống:**
+   - Bảng tổng hợp đối chiếu chỉ tiêu Q1b giữa C5 vs C0.
+   - Thống kê độ trễ qua 5 lần chạy (latency telemetry) và chứng nhận đạt SLA có điều kiện.
+   - Bảng theo dõi và ghi chú Errata Rev5.
