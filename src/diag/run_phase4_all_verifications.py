@@ -304,11 +304,12 @@ def main():
                 m &= np.isin(df["articleType"].values, spec["articleType"])
             if spec.get("gender"):
                 m &= (df["gender"].values == spec["gender"])
-            if spec.get("baseColour"):
-                m &= np.isin(df["baseColour"].values, spec["baseColour"])
+            colors = spec.get("colour") or spec.get("baseColour")
+            if colors:
+                m &= np.isin(df["baseColour"].values, colors)
             if spec.get("brand"):
                 b_target = spec["brand"]
-                if b_target == "Benetton":
+                if b_target.lower() == "benetton":
                     b_target = "United Colors of Benetton" if use_v2 else "Benetton"
                 m &= (df["brand"].fillna("").astype(str).str.lower() == b_target.lower())
             m &= mask
@@ -527,7 +528,8 @@ def main():
     print(f"Val Condition C: {val_cond_c}")
 
     task5_results = {
-        "protocol": "Tuning on split val (7,471 items, seed 42) to avoid data leakage onto G_test",
+        "protocol": "Tuning on split val (7,470 items, seed 42) to avoid data leakage onto G_test",
+        "n_val_queries": 28,
         "explanation_rule": "Đã xóa bỏ hoặc đánh dấu 'giả thuyết chưa đo' đối với giải thích 'loại bỏ thuộc tính nhiễu'. Trên các câu truy vấn thực tế (độ dài <= 64 token), Condition B và Condition A hoàn toàn tương đương nhau.",
         "val_results": {
             "condition_a_full128_pad128": val_cond_a,
@@ -591,8 +593,10 @@ def main():
         print(f"Run {r_idx}: p50={run_info['p50_ms']} ms | p95={run_info['p95_ms']} ms | p99={run_info['p99_ms']} ms | max={run_info['max_ms']} ms | Temp: {gpu_pre.get('temperature_c')}°C -> {gpu_post.get('temperature_c')}°C")
 
     task4_results = {
+        "measurement_scope": "chỉ_phần_tìm_kiếm_vector_có_cache_embedding (matmul + topk, không gồm encode SigLIP ViT; loại khỏi kết luận SLA hệ thống)",
+        "official_e2e_sla_reference": "reports/phase4/phase4_latency_e2e.json",
         "hypothesis_demoted": "Hạ nguyên nhân quá nhiệt (B.3) thành 'giả thuyết chưa tái lập' vì trong điều kiện đo lường chuẩn hóa với telemetry đầy đủ, không ghi nhận truy vấn nào > 500 ms.",
-        "sla_rule": "Không kết luận SLA từ 3 truy vấn ảnh khói (smoke test). Báo cáo SLA chuẩn hóa dựa trên 5 run benchmark 200 truy vấn (1.000 truy vấn tổng thể).",
+        "sla_rule": "Không kết luận SLA từ 3 truy vấn ảnh khói (smoke test). Báo cáo SLA chuẩn hóa dựa trên benchmark đo lường toàn diện e2e tại reports/phase4/phase4_latency_e2e.json.",
         "five_runs_telemetry": telemetry_runs,
         "total_queries_over_500ms": len(all_over_500ms),
         "overall_p95_range": [min(r["p95_ms"] for r in telemetry_runs), max(r["p95_ms"] for r in telemetry_runs)],

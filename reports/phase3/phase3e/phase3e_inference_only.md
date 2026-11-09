@@ -46,6 +46,11 @@ Kết quả chi tiết được lưu tại [`reports/val_grid_results.json`](fil
 - **Cấu hình (4) — Lai ghép Thưa + Đặc (Dense + BM25 RRF):** Ghép top-100 đặc (Config 0) và top-100 BM25 bằng RRF ($k=60$).
 - **Cấu hình (5) — Hệ thống hoàn chỉnh (Full System):** Phân tích truy vấn $\to$ Hạ cấp L0..L6 ($min\_candidates=20$) $\to$ Dung hợp Text Fusion ($\alpha=0.5$) + Soft Bonus ($\gamma=0.3$) $\to$ Ghép BM25 có lọc bằng RRF ($k=60$).
 
+> [!NOTE]
+> **CẢNH BÁO QUY TẮC ĐÁNH GIÁ (RULE 24 & CHUẨN HÓA AP@10):**
+> 1. **Cảnh báo Rule 24 ($G_{full}$):** Theo `AGENTS.md`, chỉ tiêu chính thức của dự án CHỈ được đối chiếu trên tập kiểm thử thuần túy ($G_{test}$, 1.290 sản phẩm test). Mọi số liệu trên gallery đầy đủ ($G_{full}$, chứa cả các sản phẩm train) **chỉ mang tính chất tham khảo và là ước lượng lạc quan (optimistic reference)**.
+> 2. **Phân kỳ toán học giữa AP@10 và P@10 (Chuẩn hóa $\min(R, 10)$):** Chỉ số $\text{AP@10}$ được chuẩn hóa theo $\min(R, 10)$: $\text{AP@10} = \frac{1}{\min(R, 10)} \sum_{k=1}^{10} P@k \cdot \text{rel}_k$. Khi một truy vấn có $R < 10$ sản phẩm liên quan trong gallery (rất phổ biến trên $G_{test}$ hẹp, ví dụ $R=2$ hoặc $R=3$ trong Q5 brand queries), nếu hệ thống xếp đúng toàn bộ $R$ sản phẩm ở các vị trí đầu (rank 1..R), thì $\text{AP@10} = 1.0$, trong khi $\text{P@10} = R/10 \le 0.30$. Do đó, việc AP@10 đạt mức cao (như 0.9491 ở Q5 $G_{test}$) trong khi P@10 đạt 0.2543 phản ánh hệ thống đã lấy trúng hầu hết sản phẩm liên quan hiếm hoi trong tập test, không phải mâu thuẫn số liệu.
+
 ---
 
 ### 3.1. Q1b: 1,290 Cặp Caption $\to$ Ảnh Đích (Paired Retrieval)

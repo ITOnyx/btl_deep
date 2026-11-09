@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09 19:34:30",
+  "timestamp": "2026-11-09 20:58:29",
   "task3_serving_re_eval": {
     "post_hoc_status": "GHI_HAU_NGHIEM_POST_HOC",
     "q2": {
@@ -40,15 +40,15 @@
     },
     "heldout": {
       "g_test": {
-        "reported_ap10": 0.8816,
-        "serving_ap10": 0.8863,
-        "serving_p10": 0.768,
-        "valid_n": 25
+        "reported_ap10": 0.9393,
+        "serving_ap10": 0.9418,
+        "serving_p10": 0.5958,
+        "valid_n": 24
       },
       "g_full": {
-        "reported_ap10": 0.9688,
-        "serving_ap10": 0.9701,
-        "serving_p10": 0.984,
+        "reported_ap10": 0.9631,
+        "serving_ap10": 0.9646,
+        "serving_p10": 0.968,
         "valid_n": 25
       }
     },
@@ -86,139 +86,142 @@
     }
   },
   "task4_telemetry": {
+    "measurement_scope": "chỉ_phần_tìm_kiếm_vector_có_cache_embedding (matmul + topk, không gồm encode SigLIP ViT; loại khỏi kết luận SLA hệ thống)",
+    "official_e2e_sla_reference": "reports/phase4/phase4_latency_e2e.json",
     "hypothesis_demoted": "Hạ nguyên nhân quá nhiệt (B.3) thành 'giả thuyết chưa tái lập' vì trong điều kiện đo lường chuẩn hóa với telemetry đầy đủ, không ghi nhận truy vấn nào > 500 ms.",
-    "sla_rule": "Không kết luận SLA từ 3 truy vấn ảnh khói (smoke test). Báo cáo SLA chuẩn hóa dựa trên 5 run benchmark 200 truy vấn (1.000 truy vấn tổng thể).",
+    "sla_rule": "Không kết luận SLA từ 3 truy vấn ảnh khói (smoke test). Báo cáo SLA chuẩn hóa dựa trên benchmark đo lường toàn diện e2e tại reports/phase4/phase4_latency_e2e.json.",
     "five_runs_telemetry": [
       {
         "run": 1,
         "queries_count": 200,
-        "total_duration_s": 0.53,
-        "p50_ms": 1.69,
-        "p95_ms": 2.09,
-        "p99_ms": 2.49,
-        "max_ms": 73.52,
+        "total_duration_s": 0.6,
+        "p50_ms": 1.52,
+        "p95_ms": 1.69,
+        "p99_ms": 1.8,
+        "max_ms": 102.46,
         "queries_over_500ms_count": 0,
         "gpu_telemetry_start": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 67.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         },
         "gpu_telemetry_end": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 68.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         }
       },
       {
         "run": 2,
         "queries_count": 200,
-        "total_duration_s": 0.39,
-        "p50_ms": 1.51,
-        "p95_ms": 2.13,
-        "p99_ms": 2.61,
-        "max_ms": 2.68,
+        "total_duration_s": 0.36,
+        "p50_ms": 1.48,
+        "p95_ms": 1.78,
+        "p99_ms": 1.93,
+        "max_ms": 2.39,
         "queries_over_500ms_count": 0,
         "gpu_telemetry_start": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 68.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         },
         "gpu_telemetry_end": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 68.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         }
       },
       {
         "run": 3,
         "queries_count": 200,
-        "total_duration_s": 0.46,
-        "p50_ms": 1.75,
-        "p95_ms": 2.68,
-        "p99_ms": 3.12,
-        "max_ms": 3.45,
+        "total_duration_s": 0.41,
+        "p50_ms": 1.55,
+        "p95_ms": 2.87,
+        "p99_ms": 3.65,
+        "max_ms": 4.27,
         "queries_over_500ms_count": 0,
         "gpu_telemetry_start": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 68.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         },
         "gpu_telemetry_end": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 68.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         }
       },
       {
         "run": 4,
         "queries_count": 200,
-        "total_duration_s": 0.4,
-        "p50_ms": 1.36,
-        "p95_ms": 2.15,
-        "p99_ms": 2.46,
-        "max_ms": 2.72,
+        "total_duration_s": 0.44,
+        "p50_ms": 1.57,
+        "p95_ms": 2.72,
+        "p99_ms": 3.5,
+        "max_ms": 20.52,
         "queries_over_500ms_count": 0,
         "gpu_telemetry_start": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 68.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         },
         "gpu_telemetry_end": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 68.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         }
       },
       {
         "run": 5,
         "queries_count": 200,
-        "total_duration_s": 0.4,
-        "p50_ms": 1.55,
-        "p95_ms": 2.33,
-        "p99_ms": 2.63,
-        "max_ms": 2.74,
+        "total_duration_s": 0.42,
+        "p50_ms": 1.64,
+        "p95_ms": 2.73,
+        "p99_ms": 3.47,
+        "max_ms": 4.18,
         "queries_over_500ms_count": 0,
         "gpu_telemetry_start": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 68.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         },
         "gpu_telemetry_end": {
-          "temperature_c": 80.0,
-          "graphics_clock_mhz": 1732.0,
+          "temperature_c": 69.0,
+          "graphics_clock_mhz": 1755.0,
           "memory_clock_mhz": 6000.0,
-          "memory_used_mb": 2243.0,
+          "memory_used_mb": 2191.0,
           "memory_total_mb": 4096.0
         }
       }
     ],
     "total_queries_over_500ms": 0,
     "overall_p95_range": [
-      2.09,
-      2.68
+      1.69,
+      2.87
     ],
-    "overall_max_latency_ms": 73.52
+    "overall_max_latency_ms": 102.46
   },
   "task5_val_truncation": {
-    "protocol": "Tuning on split val (7,471 items, seed 42) to avoid data leakage onto G_test",
+    "protocol": "Tuning on split val (7,470 items, seed 42) to avoid data leakage onto G_test",
+    "n_val_queries": 28,
     "explanation_rule": "Đã xóa bỏ hoặc đánh dấu 'giả thuyết chưa đo' đối với giải thích 'loại bỏ thuộc tính nhiễu'. Trên các câu truy vấn thực tế (độ dài <= 64 token), Condition B và Condition A hoàn toàn tương đương nhau.",
     "val_results": {
       "condition_a_full128_pad128": {

@@ -106,7 +106,9 @@
       "report_v2_sha256": "526feb15f70576194f80e442c30413afcccf7e99c4199842072c936717b38c23",
       "index_v2_manifest_path": "index_v2/manifest.json",
       "index_v2_manifest_sha256": "ddfce1831888d7a0970b57446939fa671dad04644cf916691677326be720b441"
-    }
+    },
+    "status": "DEPRECATED_BASELINE",
+    "audit_note": "Bị thay thế bởi phương pháp suy luận thuần Pha 3e/3f và kiểm toán Pha 4."
   },
   "phase3d_addendum": {
     "timestamp": "2026-11-09T09:05:16",
@@ -140,7 +142,9 @@
       "results_v2b_sha256": "b1dd9f9bd8b4bc2cc4d294788b75a69830ad1526b96d4d4b04c27c5596d2a86e",
       "report_addendum_path": "reports/phase3/phase3d/phase3d_addendum.md",
       "report_addendum_sha256": "4ddd2f7a464434edefe918393c722ae00255fb2fdca64006a2e7dcf9062f2600"
-    }
+    },
+    "status": "DEPRECATED_BASELINE",
+    "audit_note": "Bị thay thế bởi phương pháp suy luận thuần Pha 3e/3f và kiểm toán Pha 4."
   },
   "phase3e_frozen_assets": {
     "timestamp": "2026-11-09T09:38:46",
@@ -757,16 +761,18 @@
       "reports/phase4/phase4a/phase4_cir_20queries_eval.json": "8a37207a6cd6ac01ba9dcf78a0e97f2e1d58359c00736175284d090447dde85e",
       "reports/phase4/phase4a/phase4_trunc64_pad128_eval.json": "458754ac73ec6bd4dc0dd312102fc48486bbb4831f9c817a70d7ec51d4c6f80f",
       "README_run.md": "8cfbb0e582ce0a2fc42e2f0f34d802ffe7ff03590ad9f1f62beed5cc920c6b41",
-      "reports/phase3/phase3f/phase3f_errata.md": "0e70f1019181825b3100de3c5728101d919014a288e00b7e6956ca615e2467ff",
+      "reports/phase3/phase3f/phase3f_errata.md": "638e99cc0ff8a356b925257fab5d2915da8047d3b9598bb2b71cbea280622358",
       "data/catalog/catalog.parquet": "8029b1eed2e1075b27e4abbdc3020b175c7744c1d364ff311baebb86c0abd15a",
       "config.yaml": "653e88078eff0ebcf7102013210fcbc6be9a345c421bf21b52632898fec0955c",
-      "reports/phase2/phase2a/phase2a_findings.md": "fbcb78894450dbd5f031519e6b89c4956278f513ce77bb68488d75c2eba49ebb",
-      "reports/phase3/phase3e/phase3e_inference_only.md": "16d9f680a9be91bbac99af01eabbc9711a851fdd8ae12dba9da0addc01c0375d",
+      "reports/phase2/phase2a/phase2a_findings.md": "8c60c1aab5765422555f4ba50cc9891959afb6a63c0685f539c63ec16e73dbb7",
+      "reports/phase3/phase3e/phase3e_inference_only.md": "a992efcdc02bb669506187b92e36a9f66e2b3a8644d1e822a63b09011eab924e",
       "reports/phase1/phase1b/scope_proposal.csv": "04f0050c9947f19832440da897c0be32ce99902af5ad3de9cf77a6c069f8b9b2",
-      "reports/phase4_verifications.json": "bec7da068016fd4da3bd6d28b0f27cbe65c31222d953194c19b83ef6741094af",
+      "reports/phase4_verifications.json": "a9ddd1adf2bfb1bfe6f254ca6ae426ef62fe8c63b75ab5e93bb05b19857c1979",
       "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
       "src/query_parser_v2.py": "d975780ccc87a5da67405aa003bf71fde1af21d179a6b3616bf325bd514d4820",
-      "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005"
+      "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005",
+      "reports/phase4/phase4_latency_e2e.json": "8c3e40ca7574afb9666a48743cd1d3099827a9bb4a4f00f909ffc34a81b28908",
+      "reports/phase4/phase4_audit_final.md": "967abf8edc30c7232a755c8820aefd26fc8f785e0ed639c5495a6b3fe0895987"
     },
     "smoke_test": {
       "verified_file": "reports/phase4/phase4b/phase4_smoke.json",
@@ -802,9 +808,34 @@
   "root_hashes": {
     "config_yaml": "653e88078eff0ebcf7102013210fcbc6be9a345c421bf21b52632898fec0955c",
     "catalog_parquet": "8029b1eed2e1075b27e4abbdc3020b175c7744c1d364ff311baebb86c0abd15a",
-    "errata_rev5": "0e70f1019181825b3100de3c5728101d919014a288e00b7e6956ca615e2467ff",
-    "findings_2a": "fbcb78894450dbd5f031519e6b89c4956278f513ce77bb68488d75c2eba49ebb",
-    "inference_3e": "16d9f680a9be91bbac99af01eabbc9711a851fdd8ae12dba9da0addc01c0375d",
-    "verifications_phase4": "bec7da068016fd4da3bd6d28b0f27cbe65c31222d953194c19b83ef6741094af"
+    "errata_rev5": "638e99cc0ff8a356b925257fab5d2915da8047d3b9598bb2b71cbea280622358",
+    "findings_2a": "8c60c1aab5765422555f4ba50cc9891959afb6a63c0685f539c63ec16e73dbb7",
+    "inference_3e": "a992efcdc02bb669506187b92e36a9f66e2b3a8644d1e822a63b09011eab924e",
+    "verifications_phase4": "a9ddd1adf2bfb1bfe6f254ca6ae426ef62fe8c63b75ab5e93bb05b19857c1979",
+    "latency_e2e_phase4": "8c3e40ca7574afb9666a48743cd1d3099827a9bb4a4f00f909ffc34a81b28908",
+    "audit_final_phase4": "967abf8edc30c7232a755c8820aefd26fc8f785e0ed639c5495a6b3fe0895987"
+  },
+  "phase4_audit_final": {
+    "timestamp": "2026-11-09T21:05:00",
+    "status": "COMPLETED_AUDIT_FINAL",
+    "description": "Final Phase 4 Audit and Data Reconciliation covering Tasks T1 through T8",
+    "tasks_summary": {
+      "t1_p10_serving_normalized": "XÁC NHẬN LỖI (Repo chuẩn: Q2=0.9984, Q3=0.8663; 0.9980 và 0.7936 là số ảo trong chat)",
+      "t2_val_size_and_queries": "ĐÃ XỬ LÝ (Val size 7,470 sp sạch trên gallery 38,644 sp; 28 truy vấn val sinh động)",
+      "t3_heldout_valid_n": "XÁC NHẬN LỖI & ĐÃ XỬ LÝ (G_test n=24 do x010, x017 rỗng; G_full n=25 do x018=209. Sửa bug colour field)",
+      "t4_latency_e2e_benchmark": "ĐÃ XỬ LÝ (Tách phép đo vector ~2ms có cache khỏi SLA; đo e2e 1000 query/luồng. Text đạt SLA; CIR p99 224-275 ms, max 306 ms không đạt SLA tuyệt đối)",
+      "t5_index_scope_and_sporting_goods": "CHƯA XÁC ĐỊNH (Xung đột 2 Wristbands Sporting Goods, chờ duyệt Phương án A hoặc B)",
+      "t6_catalog_audit": "ĐÃ XỬ LÝ (200/200 ID khớp 100%; ID 1855 là Inkfruit Mens Chain Reaction T-shirt)",
+      "t7_manifest_hashes_synced": "ĐÃ XỬ LÝ",
+      "t8_evaluation_rules_and_limitations": "ĐÃ XỬ LÝ (AP@10 chuẩn hóa min(R,10); Rule 24 cho G_full; chuỗi A/B seed 20261109 khớp 100%; mẫu nhỏ G_test)"
+    },
+    "files": {
+      "reports/phase4/phase4_audit_final.md": "967abf8edc30c7232a755c8820aefd26fc8f785e0ed639c5495a6b3fe0895987",
+      "reports/phase4/phase4_latency_e2e.json": "8c3e40ca7574afb9666a48743cd1d3099827a9bb4a4f00f909ffc34a81b28908",
+      "reports/phase4_verifications.json": "a9ddd1adf2bfb1bfe6f254ca6ae426ef62fe8c63b75ab5e93bb05b19857c1979",
+      "reports/phase3/phase3f/phase3f_errata.md": "638e99cc0ff8a356b925257fab5d2915da8047d3b9598bb2b71cbea280622358",
+      "reports/phase3/phase3e/phase3e_inference_only.md": "a992efcdc02bb669506187b92e36a9f66e2b3a8644d1e822a63b09011eab924e",
+      "reports/phase2/phase2a/phase2a_findings.md": "8c60c1aab5765422555f4ba50cc9891959afb6a63c0685f539c63ec16e73dbb7"
+    }
   }
 }
