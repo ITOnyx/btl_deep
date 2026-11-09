@@ -100,6 +100,35 @@ class Scorer:
         csls_scores = 2.0 * raw_sims - self.beta * (r_q + r_g)
         return csls_scores
 
+    def score_mode4_csls_centered(
+        self,
+        query_vec: np.ndarray,
+        gallery_vecs: np.ndarray,
+        candidate_indices: Optional[np.ndarray] = None
+    ) -> np.ndarray:
+        """
+        Mode 4: CSLS applied on Mean-Centered representations.
+        """
+        q_c = self.center_vectors(query_vec.reshape(1, -1))
+        g_c = self.center_vectors(gallery_vecs)
+        raw_sims = np.dot(g_c, q_c.T).flatten()
+
+        k_val = min(self.k, len(raw_sims))
+        topk_g = np.partition(raw_sims, -k_val)[-k_val:]
+        r_q = float(np.mean(topk_g))
+
+        if self.val_query_bank is not None:
+            bank_c = self.center_vectors(self.val_query_bank)
+            sims_bank = np.dot(g_c, bank_c.T)
+            k_bank = min(self.k, sims_bank.shape[1])
+            topk_bank = np.partition(sims_bank, -k_bank, axis=1)[:, -k_bank:]
+            r_g = np.mean(topk_bank, axis=1)
+        else:
+            r_g = np.zeros_like(raw_sims)
+
+        csls_scores = 2.0 * raw_sims - self.beta * (r_q + r_g)
+        return csls_scores
+
     def rerank_candidates(
         self,
         query_vec: np.ndarray,
@@ -109,7 +138,7 @@ class Scorer:
     ) -> Tuple[np.ndarray, np.ndarray]:
         """
         Reranks a list of candidate indices (e.g. top-200 from HNSW).
-        mode: 'cosine' | 'centered' | 'csls'
+        mode: 'cosine' | 'centered' | 'csls' | 'csls_centered'
         returns: (sorted_indices, sorted_scores)
         """
         cand_vecs = full_gallery_embeddings[candidate_indices]
@@ -119,6 +148,8 @@ class Scorer:
             scores = self.score_mode2_centered(query_vec, cand_vecs)
         elif mode == "csls":
             scores = self.score_mode3_csls(query_vec, cand_vecs, candidate_indices)
+        elif mode in ("csls_centered", "csls_center"):
+            scores = self.score_mode4_csls_centered(query_vec, cand_vecs, candidate_indices)
         else:
             raise ValueError(f"Unknown scoring mode: {mode}")
 

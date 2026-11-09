@@ -107,5 +107,39 @@
       "index_v2_manifest_path": "index_v2/manifest.json",
       "index_v2_manifest_sha256": "ddfce1831888d7a0970b57446939fa671dad04644cf916691677326be720b441"
     }
+  },
+  "phase3d_addendum": {
+    "timestamp": "2026-11-09T09:05:16",
+    "verified_items": {
+      "q4_self_excluded": true,
+      "c0_2_split_status": "reconstruction surveyed from notebook Cell 8; test: 1,372 (1,290 in_scope), unknown: 39,519",
+      "c1_pipeline_verified": true,
+      "q3_bootstrap_ci_1000": true,
+      "scoring_modes_compared": [
+        "mode1_raw_cosine",
+        "mode2_mean_centering",
+        "mode3_csls_raw",
+        "mode4_csls_centered"
+      ],
+      "ambiguity_ceiling_analyzed": true
+    },
+    "key_metrics": {
+      "q4_visual_p10_g_test_same_cat_gen": 0.6807,
+      "q4_visual_hit10_g_test_same_cat_gen": 0.9457,
+      "q4_visual_p10_g_full_same_cat_gen": 0.8081,
+      "q4_visual_hit10_g_full_same_cat_gen": 0.9698,
+      "q3_handwritten_delta_c_minus_a_p10_g_full": 0.046,
+      "q3_handwritten_delta_c_minus_a_hit10_g_full": 0.07,
+      "recommended_default_mode": "mode2_mean_centering",
+      "recommended_default_latency_p95_ms": 27.4,
+      "q1b_attribute_hit10_g_test": 0.7713,
+      "latency_image_p99_risk_ms": 181.51
+    },
+    "files": {
+      "results_v2b_path": "eval/results_v2b.json",
+      "results_v2b_sha256": "b1dd9f9bd8b4bc2cc4d294788b75a69830ad1526b96d4d4b04c27c5596d2a86e",
+      "report_addendum_path": "reports/phase3d_addendum.md",
+      "report_addendum_sha256": "4ddd2f7a464434edefe918393c722ae00255fb2fdca64006a2e7dcf9062f2600"
+    }
   }
 }
