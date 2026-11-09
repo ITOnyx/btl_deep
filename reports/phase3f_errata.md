@@ -228,7 +228,7 @@ Trong bảng Ablation của Q6:
 
 | # | Hạng mục | Trạng thái hiện tại | Hành động tiếp theo |
 |---|---|---|---|
-| 1 | Phạm vi Key chain (2 sản phẩm in_scope) | `CHỜ NGƯỜI DÙNG DUYỆT` | Giữ nguyên `in_scope=True` (2 sp) trong catalog; chờ Người dùng quyết định loại hay giữ |
+| 1 | Phạm vi Key chain (2 sản phẩm in_scope) | `ĐÃ DUYỆT LOẠI BỎ (2026-11-09)` | Đã chuyển 2 sp Key chain (ID 43230, 42066) sang `in_scope=False`. Cập nhật `catalog.parquet`, `reports/scope_proposal.csv`, `index_v2/manifest.json`. **Số cũ dùng gallery 38.646, từ rev3 là 38.644**. |
 | 2 | Chấm mù 30 contact sheet A/B Rev3 | `CHỜ NGƯỜI DÙNG CHẤM` | Người dùng mở các file `reports/contact_sheets/blind_ab_x*.png` và điền `eval/ab_blind_heldout.csv` |
 
 ---
@@ -285,3 +285,4 @@ Trong bảng Ablation của Q6:
 | **Mục E (Tính độc lập Q6)** | Vẫn còn từ ngữ so sánh độc lập | **Xóa bỏ hoàn toàn chữ "độc lập" và "+147%"** | Khẳng định Q6 có Parser hỗ trợ; bằng chứng xếp hạng độc lập duy nhất là Blind A/B. |
 | **Mục E (Baseline Điều kiện 3)** | Chưa giải thích vì sao ĐK 3 (0.2285) > C0 (0.2091) | **Giải thích do tín hiệu từ vựng màu sắc/phụ kiện của BM25** | RRF fusion $k=60$ giữa Dense và BM25 mang lại cải thiện nhẹ so với Dense thuần. |
 | **Mục F (Font chữ và Seed Blind A/B)** | Seed cũ, font mặc định PIL lỗi tiếng Việt | **Seed mới 20261109, font TrueType Arial chuẩn tiếng Việt** | 30 contact sheet mới đẹp mắt, niêm phong SHA-256 mới, template CSV sạch sẽ. |
+| **Mục G (Phạm vi Key chain)** | Gallery 38.646 sp in_scope | **Gallery 38.644 sp in_scope** (loại 2 sp Key chain) | **Số cũ dùng gallery 38.646, từ rev3 là 38.644**. Đã cập nhật `catalog.parquet`, `reports/scope_proposal.csv`, `index_v2/manifest.json`. 2 sp không thuộc $G_{test}$ và không thuộc GT nên không ảnh hưởng số liệu cũ. |

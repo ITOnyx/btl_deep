@@ -8,7 +8,7 @@
   "checkpoint_path": "data/checkpoints_siglip-vit/best_model.pt",
   "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
   "catalog_path": "data\\catalog\\catalog.parquet",
-  "catalog_hash": "bfaf6625e113e203e54b46aa157fd9325e7f3bb8daa75448f1ed3211f14e3519",
+  "catalog_hash": "8029b1eed2e1075b27e4abbdc3020b175c7744c1d364ff311baebb86c0abd15a",
   "index_type": "IndexHNSWFlat",
   "faiss_params": {
     "M": 32,
@@ -39,5 +39,7 @@
       "sha256": "23a34b0db17e621ce4c907b3aca1c149228f15ac01016ac728a3430b35729c3f",
       "ntotal": 38646
     }
-  }
+  },
+  "in_scope_items_rev3": 38644,
+  "note_rev3": "Pha 3g Rev3: 2 Key chain products excluded from in_scope per User approval. In-scope count updated from 38,646 to 38,644."
 }

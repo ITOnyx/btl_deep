@@ -118,7 +118,7 @@ Jeggings,Apparel,Women,26,True,Fashion item (Trang phục / Giày dép / Túi x�
 Jewellery Set,Accessories,Women,52,True,Fashion item (Trang phục / Giày dép / Túi xách / Phụ kiện thời trang)
 Jumpsuit,Apparel,Women,16,True,Fashion item (Trang phục / Giày dép / Túi xách / Phụ kiện thời trang)
 Kajal and Eyeliner,Personal Care,Women,96,False,Non-fashion (Mỹ phẩm / Chăm sóc cá nhân / Thiết bị thể thao / Đồ gia dụng)
-Key chain,Accessories,Unisex,2,True,"Ambiguous / Proposed In-Scope: Móc chìa khóa (phụ kiện nhỏ, biên giới giữa thời trang và quà lưu niệm)"
+Key chain,Accessories,Unisex,2,False,Excluded by User Approval (Pha 3g Rev3): Móc chìa khóa quà lưu niệm Out-of-Scope
 Kurta Sets,Apparel,Boys,4,True,Fashion item (Trang phục / Giày dép / Túi xách / Phụ kiện thời trang)
 Kurta Sets,Apparel,Women,90,True,Fashion item (Trang phục / Giày dép / Túi xách / Phụ kiện thời trang)
 Kurtas,Apparel,Boys,5,True,Fashion item (Trang phục / Giày dép / Túi xách / Phụ kiện thời trang)

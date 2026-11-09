@@ -347,7 +347,7 @@
       }
     },
     "files": {
-      "reports/phase3f_errata.md": "73865a277ab372b89e31f3331a7c01cf8edaedd6bacb5b0641d007099d8e021a",
+      "reports/phase3f_errata.md": "eea3b1778c36587401762e256152219c219f8848ecab8f4cadd6bd8bd8066ed4",
       "reports/phase3f_errata_rev2.md": "ea2b606b9c488892a2397c9b7c970064b04e0efa78111440b714b19850f79635",
       "reports/phase3f_errata_rev1.md": "613d8dcfa11c58fbedde5fa60477c1f116fcc600885ada4a2c7248ff11172791",
       "reports/phase3f_reconciliation.md": "499aa4084ce6d94c7ff880f61f078f93d2e320af222cd3446e4344fc0702a4e0",
@@ -356,7 +356,12 @@
       "reports/phase3g_q6_rev2.json": "60528953571339d35a7c216ec0f6721cea15d92313374655b7ffec2511258949",
       "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
       "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005",
-      "eval/ab_blind_heldout.csv": "ee5ffe73ada0b4afac3c3054f91ec988de44e59a4f721ef91f47c436bc760d91"
-    }
+      "eval/ab_blind_heldout.csv": "ee5ffe73ada0b4afac3c3054f91ec988de44e59a4f721ef91f47c436bc760d91",
+      "reports/scope_proposal.csv": "04f0050c9947f19832440da897c0be32ce99902af5ad3de9cf77a6c069f8b9b2",
+      "data/catalog/catalog.parquet": "8029b1eed2e1075b27e4abbdc3020b175c7744c1d364ff311baebb86c0abd15a",
+      "index_v2/manifest.json": "f27774524951e53c3f48121edabcbc3cecb0c19d72d260c8b9ed46184719c163"
+    },
+    "in_scope_catalog_items": 38644,
+    "key_chain_excluded_count": 2
   }
 }
