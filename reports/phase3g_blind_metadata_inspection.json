@@ -1,0 +1,950 @@
+{
+  "summary": "Blind Metadata Inspection (Row_1 vs Row_2 without revealing model identity)",
+  "sheets_verified_count": 30,
+  "total_sheets": 30,
+  "queries_inspection": [
+    {
+      "query_id": "x001",
+      "query_text": "sơ mi nam xanh navy",
+      "group": "simple",
+      "has_spec": true,
+      "catalog_relevant_count": 166,
+      "parsed_articleType": "Shirts",
+      "parsed_gender": "Men",
+      "parsed_colour": "Navy Blue",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 0,
+      "Row_2_hit10": 0,
+      "zero_hit_rows": [
+        "Row_2"
+      ]
+    },
+    {
+      "query_id": "x002",
+      "query_text": "áo thun nữ màu hồng",
+      "group": "simple",
+      "has_spec": true,
+      "catalog_relevant_count": 315,
+      "parsed_articleType": "Tshirts",
+      "parsed_gender": "Women",
+      "parsed_colour": "Pink",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 1,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x003",
+      "query_text": "quần jean nam màu xanh",
+      "group": "simple",
+      "has_spec": true,
+      "catalog_relevant_count": 224,
+      "parsed_articleType": "Jeans",
+      "parsed_gender": "Men",
+      "parsed_colour": "Blue",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 2,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x004",
+      "query_text": "giày cao gót nữ màu đen",
+      "group": "simple",
+      "has_spec": true,
+      "catalog_relevant_count": 320,
+      "parsed_articleType": "Heels",
+      "parsed_gender": "Women",
+      "parsed_colour": "Black",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 3,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x005",
+      "query_text": "túi xách nữ màu đỏ",
+      "group": "simple",
+      "has_spec": true,
+      "catalog_relevant_count": 106,
+      "parsed_articleType": "Handbags",
+      "parsed_gender": "Women",
+      "parsed_colour": "Red",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 5,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x006",
+      "query_text": "dép xỏ ngón nam màu đen",
+      "group": "simple",
+      "has_spec": true,
+      "catalog_relevant_count": 168,
+      "parsed_articleType": "Flip Flops",
+      "parsed_gender": "Men",
+      "parsed_colour": "Black",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 3,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x007",
+      "query_text": "ao thun nam mau xam",
+      "group": "simple_unaccented",
+      "has_spec": true,
+      "catalog_relevant_count": 536,
+      "parsed_articleType": "Tshirts",
+      "parsed_gender": "Men",
+      "parsed_colour": "Grey",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 4,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 10,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x008",
+      "query_text": "giay the thao nam mau den",
+      "group": "simple_unaccented",
+      "has_spec": true,
+      "catalog_relevant_count": 440,
+      "parsed_articleType": "Sports Shoes",
+      "parsed_gender": "Men",
+      "parsed_colour": "Black",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 0,
+      "Row_1_hit10": 0,
+      "Row_2_correct_count": 10,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": [
+        "Row_1"
+      ]
+    },
+    {
+      "query_id": "x009",
+      "query_text": "vay nu mau xanh la",
+      "group": "simple_unaccented",
+      "has_spec": true,
+      "catalog_relevant_count": 13,
+      "parsed_articleType": "Dresses",
+      "parsed_gender": "Women",
+      "parsed_colour": "Green",
+      "parsed_brand": null,
+      "system_tier_used": "L3_type_gender",
+      "Row_1_correct_count": 1,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 8,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x010",
+      "query_text": "quan short nu mau trang",
+      "group": "simple_unaccented",
+      "has_spec": true,
+      "catalog_relevant_count": 6,
+      "parsed_articleType": "Shorts",
+      "parsed_gender": "Women",
+      "parsed_colour": "White",
+      "parsed_brand": null,
+      "system_tier_used": "L3_type_gender",
+      "Row_1_correct_count": 0,
+      "Row_1_hit10": 0,
+      "Row_2_correct_count": 5,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": [
+        "Row_1"
+      ]
+    },
+    {
+      "query_id": "x011",
+      "query_text": "áo thun Puma nam",
+      "group": "brand",
+      "has_spec": true,
+      "catalog_relevant_count": 536,
+      "parsed_articleType": "Tshirts",
+      "parsed_gender": "Men",
+      "parsed_colour": null,
+      "parsed_brand": "Puma",
+      "system_tier_used": "L0_exact_with_brand",
+      "Row_1_correct_count": 0,
+      "Row_1_hit10": 0,
+      "Row_2_correct_count": 10,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": [
+        "Row_1"
+      ]
+    },
+    {
+      "query_id": "x012",
+      "query_text": "giày Nike nam",
+      "group": "brand",
+      "has_spec": true,
+      "catalog_relevant_count": 550,
+      "parsed_articleType": null,
+      "parsed_gender": "Men",
+      "parsed_colour": null,
+      "parsed_brand": "Nike",
+      "system_tier_used": "L0_exact_with_brand",
+      "Row_1_correct_count": 9,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 0,
+      "Row_2_hit10": 0,
+      "zero_hit_rows": [
+        "Row_2"
+      ]
+    },
+    {
+      "query_id": "x013",
+      "query_text": "giày Adidas nữ",
+      "group": "brand",
+      "has_spec": true,
+      "catalog_relevant_count": 132,
+      "parsed_articleType": null,
+      "parsed_gender": "Women",
+      "parsed_colour": null,
+      "parsed_brand": "ADIDAS",
+      "system_tier_used": "L0_exact_with_brand",
+      "Row_1_correct_count": 8,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 0,
+      "Row_2_hit10": 0,
+      "zero_hit_rows": [
+        "Row_2"
+      ]
+    },
+    {
+      "query_id": "x014",
+      "query_text": "đồng hồ Fossil nam",
+      "group": "brand",
+      "has_spec": true,
+      "catalog_relevant_count": 105,
+      "parsed_articleType": "Watches",
+      "parsed_gender": "Men",
+      "parsed_colour": null,
+      "parsed_brand": "Fossil",
+      "system_tier_used": "L0_exact_with_brand",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 0,
+      "Row_2_hit10": 0,
+      "zero_hit_rows": [
+        "Row_2"
+      ]
+    },
+    {
+      "query_id": "x015",
+      "query_text": "áo kurta Fabindia nam",
+      "group": "brand",
+      "has_spec": true,
+      "catalog_relevant_count": 74,
+      "parsed_articleType": "Kurtas",
+      "parsed_gender": "Men",
+      "parsed_colour": null,
+      "parsed_brand": "Fabindia",
+      "system_tier_used": "L0_exact_with_brand",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 2,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x016",
+      "query_text": "giày cao gót Catwalk",
+      "group": "brand",
+      "has_spec": true,
+      "catalog_relevant_count": 607,
+      "parsed_articleType": "Heels",
+      "parsed_gender": null,
+      "parsed_colour": null,
+      "parsed_brand": "Catwalk",
+      "system_tier_used": "L0_exact_with_brand",
+      "Row_1_correct_count": 0,
+      "Row_1_hit10": 0,
+      "Row_2_correct_count": 10,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": [
+        "Row_1"
+      ]
+    },
+    {
+      "query_id": "x017",
+      "query_text": "túi xách Lavie nữ",
+      "group": "brand",
+      "has_spec": true,
+      "catalog_relevant_count": 0,
+      "parsed_articleType": "Handbags",
+      "parsed_gender": "Women",
+      "parsed_colour": null,
+      "parsed_brand": null,
+      "system_tier_used": "L3_type_gender",
+      "Row_1_correct_count": 0,
+      "Row_1_hit10": 0,
+      "Row_2_correct_count": 0,
+      "Row_2_hit10": 0,
+      "zero_hit_rows": [
+        "Row_1",
+        "Row_2"
+      ]
+    },
+    {
+      "query_id": "x018",
+      "query_text": "áo thun Benetton nam",
+      "group": "brand",
+      "has_spec": true,
+      "catalog_relevant_count": 0,
+      "parsed_articleType": "Tshirts",
+      "parsed_gender": "Men",
+      "parsed_colour": null,
+      "parsed_brand": null,
+      "system_tier_used": "L3_type_gender",
+      "Row_1_correct_count": 0,
+      "Row_1_hit10": 0,
+      "Row_2_correct_count": 0,
+      "Row_2_hit10": 0,
+      "zero_hit_rows": [
+        "Row_1",
+        "Row_2"
+      ]
+    },
+    {
+      "query_id": "x019",
+      "query_text": "áo sơ mi nam dài tay đi làm",
+      "group": "extra_words",
+      "has_spec": true,
+      "catalog_relevant_count": 2597,
+      "parsed_articleType": "Shirts",
+      "parsed_gender": "Men",
+      "parsed_colour": null,
+      "parsed_brand": null,
+      "system_tier_used": "L3_type_gender",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 2,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x020",
+      "query_text": "giày chạy bộ nam",
+      "group": "extra_words",
+      "has_spec": true,
+      "catalog_relevant_count": 1460,
+      "parsed_articleType": "Sports Shoes",
+      "parsed_gender": "Men",
+      "parsed_colour": null,
+      "parsed_brand": null,
+      "system_tier_used": "L3_type_gender",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 0,
+      "Row_2_hit10": 0,
+      "zero_hit_rows": [
+        "Row_2"
+      ]
+    },
+    {
+      "query_id": "x021",
+      "query_text": "áo khoác nữ mùa đông",
+      "group": "extra_words",
+      "has_spec": true,
+      "catalog_relevant_count": 56,
+      "parsed_articleType": "Jackets",
+      "parsed_gender": "Women",
+      "parsed_colour": "Bronze",
+      "parsed_brand": null,
+      "system_tier_used": "L3_type_gender",
+      "Row_1_correct_count": 1,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 10,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x022",
+      "query_text": "đầm nữ đi tiệc màu đen",
+      "group": "extra_words",
+      "has_spec": true,
+      "catalog_relevant_count": 103,
+      "parsed_articleType": "Dresses",
+      "parsed_gender": "Women",
+      "parsed_colour": "Black",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 1,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 10,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x023",
+      "query_text": "quần short nam thể thao màu xám",
+      "group": "extra_words",
+      "has_spec": true,
+      "catalog_relevant_count": 45,
+      "parsed_articleType": "Shorts",
+      "parsed_gender": "Men",
+      "parsed_colour": "Grey",
+      "parsed_brand": null,
+      "system_tier_used": "L1_type_gender_colour",
+      "Row_1_correct_count": 1,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 10,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x024",
+      "query_text": "ba lô đi học màu xanh dương",
+      "group": "extra_words",
+      "has_spec": true,
+      "catalog_relevant_count": 148,
+      "parsed_articleType": "Backpacks",
+      "parsed_gender": null,
+      "parsed_colour": "Blue",
+      "parsed_brand": null,
+      "system_tier_used": "L4_type_only",
+      "Row_1_correct_count": 0,
+      "Row_1_hit10": 0,
+      "Row_2_correct_count": 10,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": [
+        "Row_1"
+      ]
+    },
+    {
+      "query_id": "x025",
+      "query_text": "đồ đi biển",
+      "group": "vague",
+      "has_spec": false,
+      "catalog_relevant_count": null,
+      "parsed_articleType": null,
+      "parsed_gender": null,
+      "parsed_colour": "Red",
+      "parsed_brand": null,
+      "system_tier_used": "L6_fallback_all",
+      "Row_1_correct_count": null,
+      "Row_1_hit10": "Manual_Eval",
+      "Row_2_correct_count": null,
+      "Row_2_hit10": "Manual_Eval",
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x026",
+      "query_text": "quà tặng cho bố",
+      "group": "vague",
+      "has_spec": false,
+      "catalog_relevant_count": null,
+      "parsed_articleType": null,
+      "parsed_gender": null,
+      "parsed_colour": null,
+      "parsed_brand": null,
+      "system_tier_used": "L6_fallback_all",
+      "Row_1_correct_count": null,
+      "Row_1_hit10": "Manual_Eval",
+      "Row_2_correct_count": null,
+      "Row_2_hit10": "Manual_Eval",
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x027",
+      "query_text": "đồ tập gym",
+      "group": "vague",
+      "has_spec": false,
+      "catalog_relevant_count": null,
+      "parsed_articleType": null,
+      "parsed_gender": null,
+      "parsed_colour": "Red",
+      "parsed_brand": null,
+      "system_tier_used": "L6_fallback_all",
+      "Row_1_correct_count": null,
+      "Row_1_hit10": "Manual_Eval",
+      "Row_2_correct_count": null,
+      "Row_2_hit10": "Manual_Eval",
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x028",
+      "query_text": "đồ mặc ở nhà cho nữ",
+      "group": "vague",
+      "has_spec": false,
+      "catalog_relevant_count": null,
+      "parsed_articleType": null,
+      "parsed_gender": "Women",
+      "parsed_colour": "Red",
+      "parsed_brand": null,
+      "system_tier_used": "L6_fallback_all",
+      "Row_1_correct_count": null,
+      "Row_1_hit10": "Manual_Eval",
+      "Row_2_correct_count": null,
+      "Row_2_hit10": "Manual_Eval",
+      "zero_hit_rows": []
+    },
+    {
+      "query_id": "x029",
+      "query_text": "cà vạt nam",
+      "group": "rare",
+      "has_spec": true,
+      "catalog_relevant_count": 216,
+      "parsed_articleType": "Ties",
+      "parsed_gender": "Men",
+      "parsed_colour": null,
+      "parsed_brand": null,
+      "system_tier_used": "L3_type_gender",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 0,
+      "Row_2_hit10": 0,
+      "zero_hit_rows": [
+        "Row_2"
+      ]
+    },
+    {
+      "query_id": "x030",
+      "query_text": "khăn quàng cổ nữ",
+      "group": "rare",
+      "has_spec": true,
+      "catalog_relevant_count": 163,
+      "parsed_articleType": "Scarves",
+      "parsed_gender": "Women",
+      "parsed_colour": null,
+      "parsed_brand": null,
+      "system_tier_used": "L3_type_gender",
+      "Row_1_correct_count": 10,
+      "Row_1_hit10": 1,
+      "Row_2_correct_count": 4,
+      "Row_2_hit10": 1,
+      "zero_hit_rows": []
+    }
+  ],
+  "deep_dive_details": {
+    "x008": {
+      "qid": "x008",
+      "query": "giay the thao nam mau den",
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "colour": [
+          "Black"
+        ]
+      },
+      "catalog_relevant_count": 440,
+      "parsed": {
+        "raw_query": "giay the thao nam mau den",
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Black",
+        "colour_family": "Black",
+        "usage": null,
+        "season": null,
+        "brand": null,
+        "unparsed_tokens": [],
+        "confidence": 0.91
+      },
+      "tier_used": "L1_type_gender_colour",
+      "Row_1_hits": 0,
+      "Row_2_hits": 10,
+      "row_1_is_system": false,
+      "system_top5_items": [
+        {
+          "rank": 1,
+          "item_id": "34837",
+          "name": "ADIDAS Men Black Sports Shoes",
+          "articleType": "Sports Shoes",
+          "gender": "Men",
+          "baseColour": "Black",
+          "score": 0.0253,
+          "matches_spec": true
+        },
+        {
+          "rank": 2,
+          "item_id": "4662",
+          "name": "ADIDAS Men  Elroy Low Black Shoes",
+          "articleType": "Sports Shoes",
+          "gender": "Men",
+          "baseColour": "Black",
+          "score": 0.0245,
+          "matches_spec": true
+        },
+        {
+          "rank": 3,
+          "item_id": "15284",
+          "name": "Fila Men Tenet Black Sports Shoes",
+          "articleType": "Sports Shoes",
+          "gender": "Men",
+          "baseColour": "Black",
+          "score": 0.024,
+          "matches_spec": true
+        },
+        {
+          "rank": 4,
+          "item_id": "29227",
+          "name": "ADIDAS Men Mactelo Black Sports Shoes",
+          "articleType": "Sports Shoes",
+          "gender": "Men",
+          "baseColour": "Black",
+          "score": 0.024,
+          "matches_spec": true
+        },
+        {
+          "rank": 5,
+          "item_id": "44401",
+          "name": "Force 10 Men Black Shoes",
+          "articleType": "Sports Shoes",
+          "gender": "Men",
+          "baseColour": "Black",
+          "score": 0.0227,
+          "matches_spec": true
+        }
+      ]
+    },
+    "x010": {
+      "qid": "x010",
+      "query": "quan short nu mau trang",
+      "spec": {
+        "articleType": [
+          "Shorts"
+        ],
+        "gender": "Women",
+        "colour": [
+          "White"
+        ]
+      },
+      "catalog_relevant_count": 6,
+      "parsed": {
+        "raw_query": "quan short nu mau trang",
+        "articleType": "Shorts",
+        "gender": "Women",
+        "baseColour": "White",
+        "colour_family": "White",
+        "usage": null,
+        "season": null,
+        "brand": null,
+        "unparsed_tokens": [],
+        "confidence": 0.91
+      },
+      "tier_used": "L3_type_gender",
+      "Row_1_hits": 0,
+      "Row_2_hits": 5,
+      "row_1_is_system": false,
+      "system_top5_items": [
+        {
+          "rank": 1,
+          "item_id": "5789",
+          "name": "Jealous 21 Women's Blue White Checkered Short",
+          "articleType": "Shorts",
+          "gender": "Women",
+          "baseColour": "White",
+          "score": 0.0325,
+          "matches_spec": true
+        },
+        {
+          "rank": 2,
+          "item_id": "5788",
+          "name": "Jealous 21 Women's Checkered Pink White Short",
+          "articleType": "Shorts",
+          "gender": "Women",
+          "baseColour": "White",
+          "score": 0.0325,
+          "matches_spec": true
+        },
+        {
+          "rank": 3,
+          "item_id": "6525",
+          "name": "Nike Women's Tempo yellow Short",
+          "articleType": "Shorts",
+          "gender": "Women",
+          "baseColour": "Yellow",
+          "score": 0.0308,
+          "matches_spec": false
+        },
+        {
+          "rank": 4,
+          "item_id": "21431",
+          "name": "Roxy Women White Shorts",
+          "articleType": "Shorts",
+          "gender": "Women",
+          "baseColour": "White",
+          "score": 0.03,
+          "matches_spec": true
+        },
+        {
+          "rank": 5,
+          "item_id": "57896",
+          "name": "Femella Women Off White Shorts",
+          "articleType": "Shorts",
+          "gender": "Women",
+          "baseColour": "Off White",
+          "score": 0.0293,
+          "matches_spec": false
+        }
+      ]
+    },
+    "x024": {
+      "qid": "x024",
+      "query": "ba lô đi học màu xanh dương",
+      "spec": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "colour": [
+          "Blue",
+          "Navy Blue"
+        ]
+      },
+      "catalog_relevant_count": 148,
+      "parsed": {
+        "raw_query": "ba lô đi học màu xanh dương",
+        "articleType": "Backpacks",
+        "gender": null,
+        "baseColour": "Blue",
+        "colour_family": "Blue",
+        "usage": null,
+        "season": null,
+        "brand": null,
+        "unparsed_tokens": [
+          "di",
+          "hoc",
+          "mau"
+        ],
+        "confidence": 0.6186
+      },
+      "tier_used": "L4_type_only",
+      "Row_1_hits": 0,
+      "Row_2_hits": 10,
+      "row_1_is_system": false,
+      "system_top5_items": [
+        {
+          "rank": 1,
+          "item_id": "25235",
+          "name": "Lino Perros Women Blue Backpacks",
+          "articleType": "Backpacks",
+          "gender": "Women",
+          "baseColour": "Blue",
+          "score": 0.0308,
+          "matches_spec": true
+        },
+        {
+          "rank": 2,
+          "item_id": "21437",
+          "name": "Roxy Women Blue Backpack",
+          "articleType": "Backpacks",
+          "gender": "Women",
+          "baseColour": "Blue",
+          "score": 0.0282,
+          "matches_spec": true
+        },
+        {
+          "rank": 3,
+          "item_id": "21189",
+          "name": "Quiksilver Unisex Blue Backpack",
+          "articleType": "Backpacks",
+          "gender": "Unisex",
+          "baseColour": "Blue",
+          "score": 0.0281,
+          "matches_spec": true
+        },
+        {
+          "rank": 4,
+          "item_id": "24324",
+          "name": "ADIDAS Unisex Blue Backpack",
+          "articleType": "Backpacks",
+          "gender": "Unisex",
+          "baseColour": "Blue",
+          "score": 0.0275,
+          "matches_spec": true
+        },
+        {
+          "rank": 5,
+          "item_id": "38131",
+          "name": "Wildcraft Unisex Blue Backpack",
+          "articleType": "Backpacks",
+          "gender": "Unisex",
+          "baseColour": "Blue",
+          "score": 0.0272,
+          "matches_spec": true
+        }
+      ]
+    },
+    "x027": {
+      "qid": "x027",
+      "query": "đồ tập gym",
+      "spec": null,
+      "catalog_relevant_count": null,
+      "parsed": {
+        "raw_query": "đồ tập gym",
+        "articleType": null,
+        "gender": null,
+        "baseColour": "Red",
+        "colour_family": "Red",
+        "usage": "Sports",
+        "season": null,
+        "brand": null,
+        "unparsed_tokens": [],
+        "confidence": 0.52
+      },
+      "tier_used": "L6_fallback_all",
+      "Row_1_hits": null,
+      "Row_2_hits": null,
+      "row_1_is_system": false,
+      "system_top5_items": [
+        {
+          "rank": 1,
+          "item_id": "52417",
+          "name": "Red Rose Women Red Pyjama Set",
+          "articleType": "Night suits",
+          "gender": "Women",
+          "baseColour": "Red",
+          "score": 0.0301,
+          "matches_spec": "N/A"
+        },
+        {
+          "rank": 2,
+          "item_id": "52442",
+          "name": "Red Rose Red Nightdress",
+          "articleType": "Nightdress",
+          "gender": "Women",
+          "baseColour": "Red",
+          "score": 0.0255,
+          "matches_spec": "N/A"
+        },
+        {
+          "rank": 3,
+          "item_id": "52501",
+          "name": "Red Rose Red Nightdress",
+          "articleType": "Baby Dolls",
+          "gender": "Women",
+          "baseColour": "Red",
+          "score": 0.0227,
+          "matches_spec": "N/A"
+        },
+        {
+          "rank": 4,
+          "item_id": "52508",
+          "name": "Red Rose Red Nightdress",
+          "articleType": "Baby Dolls",
+          "gender": "Women",
+          "baseColour": "Red",
+          "score": 0.0215,
+          "matches_spec": "N/A"
+        },
+        {
+          "rank": 5,
+          "item_id": "33961",
+          "name": "Femella Women Red Leggings",
+          "articleType": "Leggings",
+          "gender": "Women",
+          "baseColour": "Red",
+          "score": 0.0181,
+          "matches_spec": "N/A"
+        }
+      ]
+    },
+    "x029": {
+      "qid": "x029",
+      "query": "cà vạt nam",
+      "spec": {
+        "articleType": [
+          "Ties"
+        ],
+        "gender": "Men"
+      },
+      "catalog_relevant_count": 216,
+      "parsed": {
+        "raw_query": "cà vạt nam",
+        "articleType": "Ties",
+        "gender": "Men",
+        "baseColour": null,
+        "colour_family": null,
+        "usage": null,
+        "season": null,
+        "brand": null,
+        "unparsed_tokens": [],
+        "confidence": 0.79
+      },
+      "tier_used": "L3_type_gender",
+      "Row_1_hits": 10,
+      "Row_2_hits": 0,
+      "row_1_is_system": true,
+      "system_top5_items": [
+        {
+          "rank": 1,
+          "item_id": "58911",
+          "name": "Hakashi Men Grey Silk Tie",
+          "articleType": "Ties",
+          "gender": "Men",
+          "baseColour": "Grey",
+          "score": 0.0289,
+          "matches_spec": true
+        },
+        {
+          "rank": 2,
+          "item_id": "49715",
+          "name": "Park Avenue Men Black Tie",
+          "articleType": "Ties",
+          "gender": "Men",
+          "baseColour": "Black",
+          "score": 0.0264,
+          "matches_spec": true
+        },
+        {
+          "rank": 3,
+          "item_id": "50284",
+          "name": "Parx Men Black Tie",
+          "articleType": "Ties",
+          "gender": "Men",
+          "baseColour": "Black",
+          "score": 0.0254,
+          "matches_spec": true
+        },
+        {
+          "rank": 4,
+          "item_id": "50285",
+          "name": "Parx Men Purple Tie",
+          "articleType": "Ties",
+          "gender": "Men",
+          "baseColour": "Purple",
+          "score": 0.0253,
+          "matches_spec": true
+        },
+        {
+          "rank": 5,
+          "item_id": "49697",
+          "name": "Park Avenue Men Red Tie",
+          "articleType": "Ties",
+          "gender": "Men",
+          "baseColour": "Red",
+          "score": 0.0243,
+          "matches_spec": true
+        }
+      ]
+    }
+  }
+}

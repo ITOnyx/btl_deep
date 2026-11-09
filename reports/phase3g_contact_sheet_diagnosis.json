@@ -1,0 +1,302 @@
+[
+  {
+    "qid": "x001",
+    "query": "sơ mi nam xanh navy",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x002",
+    "query": "áo thun nữ màu hồng",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x003",
+    "query": "quần jean nam màu xanh",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x004",
+    "query": "giày cao gót nữ màu đen",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x005",
+    "query": "túi xách nữ màu đỏ",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x006",
+    "query": "dép xỏ ngón nam màu đen",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x007",
+    "query": "ao thun nam mau xam",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x008",
+    "query": "giay the thao nam mau den",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x009",
+    "query": "vay nu mau xanh la",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x010",
+    "query": "quan short nu mau trang",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x011",
+    "query": "áo thun Puma nam",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x012",
+    "query": "giày Nike nam",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x013",
+    "query": "giày Adidas nữ",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x014",
+    "query": "đồng hồ Fossil nam",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x015",
+    "query": "áo kurta Fabindia nam",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x016",
+    "query": "giày cao gót Catwalk",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x017",
+    "query": "túi xách Lavie nữ",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x018",
+    "query": "áo thun Benetton nam",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x019",
+    "query": "áo sơ mi nam dài tay đi làm",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x020",
+    "query": "giày chạy bộ nam",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x021",
+    "query": "áo khoác nữ mùa đông",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x022",
+    "query": "đầm nữ đi tiệc màu đen",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x023",
+    "query": "quần short nam thể thao màu xám",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x024",
+    "query": "ba lô đi học màu xanh dương",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x025",
+    "query": "đồ đi biển",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x026",
+    "query": "quà tặng cho bố",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x027",
+    "query": "đồ tập gym",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 10,
+    "old_drawn_B": 0,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x028",
+    "query": "đồ mặc ở nhà cho nữ",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x029",
+    "query": "cà vạt nam",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  },
+  {
+    "qid": "x030",
+    "query": "khăn quàng cổ nữ",
+    "raw_len_A": 10,
+    "raw_len_B": 10,
+    "old_drawn_A": 0,
+    "old_drawn_B": 10,
+    "fixed_drawn_A": 10,
+    "fixed_drawn_B": 10
+  }
+]
