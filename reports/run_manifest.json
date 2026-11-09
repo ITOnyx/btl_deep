@@ -188,5 +188,34 @@
       "manual_ratings_heldout_path": "eval/manual_ratings_heldout.csv",
       "manual_ratings_heldout_sha256": "ed03caecacf6cd7864dd51b19874bccce1da0a9894e849d3e6afea9772d204ef"
     }
+  },
+  "phase3f_reconciliation": {
+    "timestamp": "2026-11-09T11:31:51",
+    "frozen_hyperparameters": {
+      "gamma_soft_bonus": 0.3,
+      "alpha_text_fusion": 1.0,
+      "rrf_k": 60
+    },
+    "key_metrics": {
+      "q1b_c0_model_thuan_r10_g_test": 0.5225,
+      "q1b_c0_model_thuan_r10_g_full": 0.0628,
+      "q1b_c2_soft_scoring_r10_g_test": 0.9008,
+      "q1b_c2_soft_scoring_r10_g_full": 0.2682,
+      "q6_independent_ap10_c0": 0.2091,
+      "q6_independent_ap10_c5": 0.5172,
+      "heldout_spec_ap10_c5_g_full": 0.8834,
+      "q4_visual_p10_knn_voting_g_full_cat_gen": 0.8479,
+      "latency_p95_ms_config_5": 69.75,
+      "latency_status_sla_200ms": "DAT"
+    },
+    "files": {
+      "eval/q6_queries.json": "10e388d3dc88ae7393a8e7b2549d672155bb1a18a992ae4455d791972855c96f",
+      "eval/results_3f.json": "4cdf6375a45fff8f9c7db5afd3ce5d34c2a29fb8096769ac3e3c231771c26d60",
+      "eval/ab_mapping.json": "2bab34f1950ce2e9b894f0fe9d663776745940f70a3a556b6453e49cff6bb1fc",
+      "eval/ab_blind_heldout.csv": "ee5ffe73ada0b4afac3c3054f91ec988de44e59a4f721ef91f47c436bc760d91",
+      "reports/phase3f_reconciliation.md": "616beb68f9fa02cb18d3f9e99e236f0e9cd80b7de35a636a450dd00ba4f30b6a",
+      "reports/phase3f_latency_benchmark.json": "7837d70eaa1f15938c2c4a5506c5b5904ff8b8c27f565b1b29355eaf1134fcf4",
+      "reports/q6_val_grid_results.json": "46a7672eeebf4d4f26f221c39c5dc72cec4ee2cc98b3079a679a482ddf2de16f"
+    }
   }
 }

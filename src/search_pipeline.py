@@ -52,7 +52,9 @@ class VisualSearchEngine:
         filter_mode: str = "relaxed", # "relaxed" | "soft" | "hard" | "none"
         enable_bm25: bool = True,
         enable_text_fusion: bool = True,
-        min_candidates: int = 20
+        min_candidates: int = 20,
+        use_usage: bool = False,
+        use_season: bool = False
     ):
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         print(f"[VisualSearchEngine] Initializing on {self.device}...")
@@ -66,6 +68,8 @@ class VisualSearchEngine:
         self.enable_bm25 = enable_bm25
         self.enable_text_fusion = enable_text_fusion
         self.min_candidates = min_candidates
+        self.use_usage = use_usage
+        self.use_season = use_season
 
         # 1. Attribute index & catalog
         self.attr_idx = AttributeIndex(catalog_path=catalog_path)
@@ -87,6 +91,15 @@ class VisualSearchEngine:
         self.emb_txt_raw = np.load(text_index_path)
         self.emb_img_c = self.scorer.center_vectors(self.emb_img_raw)
         self.emb_txt_c = self.scorer.center_vectors(self.emb_txt_raw)
+
+        # Move to GPU FP16 tensors if CUDA available
+        if self.device == "cuda":
+            print("[VisualSearchEngine] Caching embeddings on GPU (FP16)...")
+            self.t_emb_img_c = torch.tensor(self.emb_img_c, dtype=torch.float16, device=self.device)
+            self.t_emb_txt_c = torch.tensor(self.emb_txt_c, dtype=torch.float16, device=self.device)
+        else:
+            self.t_emb_img_c = None
+            self.t_emb_txt_c = None
 
         # 5. Model
         print(f"[VisualSearchEngine] Loading SigLIP model on {self.device}...")
@@ -111,7 +124,7 @@ class VisualSearchEngine:
 
     def encode_text(self, text: str) -> np.ndarray:
         with torch.no_grad():
-            inp = self.processor(text=[text], padding="max_length", max_length=64, truncation=True, return_tensors="pt")
+            inp = self.processor(text=[text], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
             feat = self.model.encode_text(inp["input_ids"].to(self.device), None)
             vec = feat.cpu().numpy()[0]
         norm = max(float(np.linalg.norm(vec)), 1e-12)
@@ -149,9 +162,17 @@ class VisualSearchEngine:
             gallery_mask = np.ones(self.N, dtype=bool)
 
         # 1. Parse Query
-        parsed = self.parser.parse(query) if self.enable_parser else {
-            "raw": query, "articleType": None, "gender": None, "baseColour": None, "brand": None
-        }
+        if self.enable_parser:
+            parsed = self.parser.parse(query)
+            if not self.use_usage and "usage" in parsed:
+                parsed["usage"] = None
+            if not self.use_season and "season" in parsed:
+                parsed["season"] = None
+        else:
+            parsed = {
+                "raw": query, "articleType": None, "gender": None, "baseColour": None, "brand": None,
+                "usage": None, "season": None
+            }
 
         # 2. Encode Query
         q_vec_c = self.encode_text(query)
@@ -172,32 +193,74 @@ class VisualSearchEngine:
             tier = "all"
 
         # 4. Dense Scoring
-        sims_img = np.dot(self.emb_img_c[cand_idxs], q_vec_c)
-        if self.enable_text_fusion:
-            sims_txt = np.dot(self.emb_txt_c[cand_idxs], q_vec_c)
-            dense_scores = self.alpha * sims_img + (1.0 - self.alpha) * sims_txt
-        else:
-            dense_scores = sims_img
+        if self.device == "cuda" and self.t_emb_img_c is not None:
+            cand_t = torch.tensor(cand_idxs, dtype=torch.long, device=self.device)
+            q_t = torch.tensor(q_vec_c, dtype=torch.float16, device=self.device)
+            sims_img_t = torch.matmul(self.t_emb_img_c[cand_t], q_t)
+            if self.enable_text_fusion:
+                sims_txt_t = torch.matmul(self.t_emb_txt_c[cand_t], q_t)
+                dense_scores_t = self.alpha * sims_img_t + (1.0 - self.alpha) * sims_txt_t
+            else:
+                dense_scores_t = sims_img_t
 
-        # Soft attribute bonus
-        if self.filter_mode in ["relaxed", "soft"] and self.gamma > 0:
-            bonus = self.attr_idx.compute_attribute_soft_bonus(
-                parsed, cand_idxs,
-                gamma_type=self.gamma, gamma_gender=self.gamma, gamma_colour=self.gamma, gamma_brand=self.gamma
-            )
-            dense_scores = dense_scores + bonus
+            # Soft attribute bonus
+            if self.filter_mode in ["relaxed", "soft"] and self.gamma > 0:
+                bonus = self.attr_idx.compute_attribute_soft_bonus(
+                    parsed, cand_idxs,
+                    gamma_type=self.gamma, gamma_gender=self.gamma, gamma_colour=self.gamma, gamma_brand=self.gamma
+                )
+                dense_scores_t = dense_scores_t + torch.tensor(bonus, dtype=torch.float16, device=self.device)
 
-        # 5. Hybrid Search with BM25
-        if self.enable_bm25:
-            dense_order = cand_idxs[np.argsort(-dense_scores)[:100]]
-            cand_mask = np.zeros(self.N, dtype=bool)
-            cand_mask[cand_idxs] = True
-            sparse_order, _ = self.bm25.search(query, top_k=100, mask=cand_mask)
-            final_idxs, rrf_scores = rrf_merge(dense_order, sparse_order, k=self.rrf_k, top_k=top_k)
+            if self.enable_bm25:
+                k_top = min(100, len(cand_idxs))
+                top_pos = torch.topk(dense_scores_t, k=k_top)[1].cpu().numpy()
+                dense_order = cand_idxs[top_pos]
+                cand_mask = np.zeros(self.N, dtype=bool)
+                cand_mask[cand_idxs] = True
+                sparse_order, _ = self.bm25.search(query, top_k=100, mask=cand_mask)
+                final_idxs, rrf_scores = rrf_merge(dense_order, sparse_order, k=self.rrf_k, top_k=top_k)
+            else:
+                k_top = min(top_k, len(cand_idxs))
+                topk_vals, top_pos = torch.topk(dense_scores_t, k=k_top)
+                final_idxs = cand_idxs[top_pos.cpu().numpy()]
+                rrf_scores = topk_vals.float().cpu().numpy()
         else:
-            top_cand_pos = np.argsort(-dense_scores)[:top_k]
-            final_idxs = cand_idxs[top_cand_pos]
-            rrf_scores = dense_scores[top_cand_pos]
+            sims_img = np.dot(self.emb_img_c[cand_idxs], q_vec_c)
+            if self.enable_text_fusion:
+                sims_txt = np.dot(self.emb_txt_c[cand_idxs], q_vec_c)
+                dense_scores = self.alpha * sims_img + (1.0 - self.alpha) * sims_txt
+            else:
+                dense_scores = sims_img
+
+            # Soft attribute bonus
+            if self.filter_mode in ["relaxed", "soft"] and self.gamma > 0:
+                bonus = self.attr_idx.compute_attribute_soft_bonus(
+                    parsed, cand_idxs,
+                    gamma_type=self.gamma, gamma_gender=self.gamma, gamma_colour=self.gamma, gamma_brand=self.gamma
+                )
+                dense_scores = dense_scores + bonus
+
+            # 5. Hybrid Search with BM25
+            if self.enable_bm25:
+                k_dense = min(100, len(cand_idxs))
+                if len(cand_idxs) > k_dense:
+                    part_pos = np.argpartition(-dense_scores, k_dense)[:k_dense]
+                    dense_order = cand_idxs[part_pos[np.argsort(-dense_scores[part_pos])]]
+                else:
+                    dense_order = cand_idxs[np.argsort(-dense_scores)]
+                cand_mask = np.zeros(self.N, dtype=bool)
+                cand_mask[cand_idxs] = True
+                sparse_order, _ = self.bm25.search(query, top_k=100, mask=cand_mask)
+                final_idxs, rrf_scores = rrf_merge(dense_order, sparse_order, k=self.rrf_k, top_k=top_k)
+            else:
+                k_top = min(top_k, len(cand_idxs))
+                if len(cand_idxs) > k_top:
+                    part_pos = np.argpartition(-dense_scores, k_top)[:k_top]
+                    sort_order = part_pos[np.argsort(-dense_scores[part_pos])]
+                else:
+                    sort_order = np.argsort(-dense_scores)[:k_top]
+                final_idxs = cand_idxs[sort_order]
+                rrf_scores = dense_scores[sort_order]
 
         latency_ms = (time.perf_counter() - t0) * 1000.0
 

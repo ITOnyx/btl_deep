@@ -1,0 +1,97 @@
+{
+  "n_queries": 200,
+  "seed": 42,
+  "device": "cuda",
+  "breakdown": {
+    "parse_query_ms": {
+      "mean": 1.22,
+      "p95": 2.52
+    },
+    "filter_candidates_ms": {
+      "mean": 0.61,
+      "p95": 1.89
+    },
+    "encode_text_ms": {
+      "mean": 33.36,
+      "p95": 60.97
+    },
+    "dense_topk_gpu_ms": {
+      "mean": 2.21,
+      "p95": 5.16
+    },
+    "sparse_bm25_ms": {
+      "mean": 4.28,
+      "p95": 7.62
+    },
+    "rrf_merge_ms": {
+      "mean": 0.2,
+      "p95": 0.37
+    },
+    "total_ms": {
+      "mean": 41.87,
+      "p95": 78.53
+    }
+  },
+  "configurations": [
+    {
+      "config_id": 0,
+      "config_name": "Config 0: Dense Model Only",
+      "mean_ms": 35.08,
+      "p50_ms": 29.25,
+      "p95_ms": 64.32,
+      "p99_ms": 94.76,
+      "sla_p95_target_ms": 200.0,
+      "status": "\u0110\u1ea0T"
+    },
+    {
+      "config_id": 1,
+      "config_name": "Config 1: Candidate Filter + Dense",
+      "mean_ms": 33.41,
+      "p50_ms": 29.75,
+      "p95_ms": 52.31,
+      "p99_ms": 92.52,
+      "sla_p95_target_ms": 200.0,
+      "status": "\u0110\u1ea0T"
+    },
+    {
+      "config_id": 2,
+      "config_name": "Config 2: Candidate Filter + Soft Bonus + Dense",
+      "mean_ms": 37.44,
+      "p50_ms": 31.54,
+      "p95_ms": 67.74,
+      "p99_ms": 96.79,
+      "sla_p95_target_ms": 200.0,
+      "status": "\u0110\u1ea0T"
+    },
+    {
+      "config_id": 3,
+      "config_name": "Config 3: Candidate Filter + Soft Bonus + Text Fusion (alpha*=1.0)",
+      "mean_ms": 33.59,
+      "p50_ms": 29.43,
+      "p95_ms": 53.57,
+      "p99_ms": 87.91,
+      "sla_p95_target_ms": 200.0,
+      "status": "\u0110\u1ea0T"
+    },
+    {
+      "config_id": 4,
+      "config_name": "Config 4: BM25 Sparse Alone",
+      "mean_ms": 4.86,
+      "p50_ms": 4.44,
+      "p95_ms": 8.98,
+      "p99_ms": 10.53,
+      "sla_p95_target_ms": 200.0,
+      "status": "\u0110\u1ea0T"
+    },
+    {
+      "config_id": 5,
+      "config_name": "Config 5: Full System (Hybrid Dense+BM25+RRF)",
+      "mean_ms": 39.63,
+      "p50_ms": 35.51,
+      "p95_ms": 69.75,
+      "p99_ms": 87.7,
+      "sla_p95_target_ms": 200.0,
+      "status": "\u0110\u1ea0T"
+    }
+  ]
+}

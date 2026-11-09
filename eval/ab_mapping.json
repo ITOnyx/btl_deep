@@ -1,0 +1,152 @@
+{
+  "x001": {
+    "query": "sơ mi nam xanh navy",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x002": {
+    "query": "áo thun nữ màu hồng",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x003": {
+    "query": "quần jean nam màu xanh",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x004": {
+    "query": "giày cao gót nữ màu đen",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x005": {
+    "query": "túi xách nữ màu đỏ",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x006": {
+    "query": "dép xỏ ngón nam màu đen",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x007": {
+    "query": "ao thun nam mau xam",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x008": {
+    "query": "giay the thao nam mau den",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x009": {
+    "query": "vay nu mau xanh la",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x010": {
+    "query": "quan short nu mau trang",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x011": {
+    "query": "áo thun Puma nam",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x012": {
+    "query": "giày Nike nam",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x013": {
+    "query": "giày Adidas nữ",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x014": {
+    "query": "đồng hồ Fossil nam",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x015": {
+    "query": "áo kurta Fabindia nam",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x016": {
+    "query": "giày cao gót Catwalk",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x017": {
+    "query": "túi xách Lavie nữ",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x018": {
+    "query": "áo thun Benetton nam",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x019": {
+    "query": "áo sơ mi nam dài tay đi làm",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x020": {
+    "query": "giày chạy bộ nam",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x021": {
+    "query": "áo khoác nữ mùa đông",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x022": {
+    "query": "đầm nữ đi tiệc màu đen",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x023": {
+    "query": "quần short nam thể thao màu xám",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x024": {
+    "query": "ba lô đi học màu xanh dương",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x025": {
+    "query": "đồ đi biển",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x026": {
+    "query": "quà tặng cho bố",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x027": {
+    "query": "đồ tập gym",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  },
+  "x028": {
+    "query": "đồ mặc ở nhà cho nữ",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x029": {
+    "query": "cà vạt nam",
+    "row_A": "config_5",
+    "row_B": "config_0"
+  },
+  "x030": {
+    "query": "khăn quàng cổ nữ",
+    "row_A": "config_0",
+    "row_B": "config_5"
+  }
+}

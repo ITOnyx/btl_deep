@@ -59,14 +59,16 @@ embedding:
   fp16: true
 
 inference:
-  phase: "3e"
+  phase: "3f"
   gamma: 0.3                      # winning parameter from validation grid
-  alpha: 0.5                      # winning parameter from validation grid
+  alpha: 1.0                      # selected alpha*=1.0 (gap=0.0052 <= 0.0100 to save 170MB RAM)
   rrf_k: 60                       # fixed reciprocal rank fusion parameter
   min_candidates: 20              # multi-level relaxation threshold
   enable_parser: true
   enable_bm25: true
-  enable_text_fusion: true
+  enable_text_fusion: false       # frozen to false based on F3 rule
+  use_usage: false                # independent filter verification flag
+  use_season: false               # independent filter verification flag
   filter_mode: "relaxed"          # "relaxed" | "soft" | "hard" | "none"
   scoring_mode: "mean_centered"   # mu_shared centering
 
