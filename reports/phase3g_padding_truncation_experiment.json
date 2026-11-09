@@ -1,0 +1,39 @@
+{
+  "task": "Isolation of truncation vs padding length in SigLIP text encoding",
+  "queries_count": 1290,
+  "results": {
+    "full_128_pad_128": {
+      "name": "Condition A: Full 128, Pad 128 (Colab Baseline)",
+      "metrics": {
+        "recall_at_1": 0.0054,
+        "recall_at_5": 0.0326,
+        "recall_at_10": 0.0535,
+        "mrr": 0.0248,
+        "mean_rank": 365.88,
+        "median_rank": 293.5
+      }
+    },
+    "truncate_64_pad_128": {
+      "name": "Condition B: Truncate 64, then Pad to 128",
+      "metrics": {
+        "recall_at_1": 0.0147,
+        "recall_at_5": 0.0535,
+        "recall_at_10": 0.0837,
+        "mrr": 0.0417,
+        "mean_rank": 284.78,
+        "median_rank": 224.5
+      }
+    },
+    "truncate_64_pad_64": {
+      "name": "Condition C: Truncate 64, Pad 64 (Short Sequence)",
+      "metrics": {
+        "recall_at_1": 0.0023,
+        "recall_at_5": 0.0155,
+        "recall_at_10": 0.038,
+        "mrr": 0.0165,
+        "mean_rank": 387.34,
+        "median_rank": 330.5
+      }
+    }
+  }
+}

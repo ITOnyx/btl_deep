@@ -20,6 +20,14 @@
       "delta_p10_ci95": [
         0.51,
         0.7067
+      ],
+      "clopper_pearson_ci95": [
+        0.8278,
+        0.9992
+      ],
+      "win_rate_ci95_exact": [
+        0.8278,
+        0.9992
       ]
     },
     "spec_26q": {
@@ -41,6 +49,14 @@
       "delta_p10_ci95": [
         0.5885,
         0.7577
+      ],
+      "clopper_pearson_ci95": [
+        0.8677,
+        1.0
+      ],
+      "win_rate_ci95_exact": [
+        0.8677,
+        1.0
       ]
     },
     "vague_4q": {
@@ -62,6 +78,14 @@
       "delta_p10_ci95": [
         0.0,
         0.35
+      ],
+      "clopper_pearson_ci95": [
+        0.1941,
+        0.9937
+      ],
+      "win_rate_ci95_exact": [
+        0.1941,
+        0.9937
       ]
     },
     "brand_8q": {
@@ -83,7 +107,18 @@
       "delta_p10_ci95": [
         0.5875,
         0.875
-      ]
+      ],
+      "clopper_pearson_ci95": [
+        0.6306,
+        1.0
+      ],
+      "win_rate_ci95_exact": [
+        0.6306,
+        1.0
+      ],
+      "metadata_p10_mean_c5": 0.8,
+      "metadata_p10_mean_c0": 0.05,
+      "note": "Điểm chấm tay (0.8625) chỉ phản ánh loại sản phẩm và giới tính do không xác minh được logo brand bằng mắt; P@10 chuẩn theo metadata brand là 0.8000."
     },
     "standard_18q": {
       "group_name": "Standard Attribute Queries (N=18)",
@@ -104,6 +139,14 @@
       "delta_p10_ci95": [
         0.5389,
         0.7389
+      ],
+      "clopper_pearson_ci95": [
+        0.8147,
+        1.0
+      ],
+      "win_rate_ci95_exact": [
+        0.8147,
+        1.0
       ]
     }
   },
@@ -118,7 +161,8 @@
       "human_c0": 1,
       "meta_c0": 0,
       "diff_c0": 1,
-      "notes": "B lẫn đồng hồ, dây chuyền, mũ len, thắt lưng"
+      "notes": "B lẫn đồng hồ, dây chuyền, mũ len, thắt lưng",
+      "explanation": "Cột ghi chú không giải thích lý do trừ điểm ở hàng A; nguyên nhân điểm tay 7/10 so với metadata 10/10 là chưa xác định từ dữ liệu chấm."
     },
     {
       "qid": "x004",
@@ -129,7 +173,8 @@
       "human_c0": 3,
       "meta_c0": 3,
       "diff_c0": 0,
-      "notes": "A chỉ ~4 đôi có gót cao; B lẫn đồ lót, áo, boxer"
+      "notes": "A chỉ ~4 đôi có gót cao; B lẫn đồ lót, áo, boxer",
+      "explanation": "Khớp đúng cột notes: Người chấm thấy chỉ ~4 đôi có gót cao rõ rệt, trong khi metadata gán nhãn Heels cho cả sandal gót thấp/đế xuồng."
     },
     {
       "qid": "x007",
@@ -140,7 +185,8 @@
       "human_c0": 3,
       "meta_c0": 4,
       "diff_c0": -1,
-      "notes": "A lẫn sandal, tất, áo khoác, quần"
+      "notes": "A lẫn sandal, tất, áo khoác, quần",
+      "explanation": "Khớp đúng cột notes: Người chấm ghi A lẫn sandal, tất, áo khoác, quần (ở hàng C0 là Row A, C5 là Row B được 6 đúng)."
     },
     {
       "qid": "x008",
@@ -151,7 +197,8 @@
       "human_c0": 0,
       "meta_c0": 0,
       "diff_c0": 0,
-      "notes": "A toàn sandal, giày lười, áo, balo"
+      "notes": "A toàn sandal, giày lười, áo, balo",
+      "explanation": "Cột notes chỉ nhận xét về hàng A (C0: 0/10); lý do C5 đạt 8/10 thay vì 10/10 không được ghi trong notes, ghi nhận là chưa xác định."
     },
     {
       "qid": "x010",
@@ -162,7 +209,8 @@
       "human_c0": 0,
       "meta_c0": 0,
       "diff_c0": 0,
-      "notes": "B toàn short/legging nữ nhưng chỉ ~3 cái trắng/kem"
+      "notes": "B toàn short/legging nữ nhưng chỉ ~3 cái trắng/kem",
+      "explanation": "Khớp đúng cột notes: B (C5) toàn short/legging nữ nhưng người chấm chỉ thấy ~3 cái màu trắng/kem; catalog thực tế chỉ có 6 sp thỏa mãn."
     },
     {
       "qid": "x011",
@@ -173,7 +221,8 @@
       "human_c0": 2,
       "meta_c0": 0,
       "diff_c0": 2,
-      "notes": "B nhiều logo Puma; A lẫn balo, giày, sơ mi"
+      "notes": "B nhiều logo Puma; A lẫn balo, giày, sơ mi",
+      "explanation": "Khớp đúng cột notes: Hàng B (C5) thấy nhiều logo Puma; hàng A (C0) người chấm đếm 2 sp đúng kiểu dáng nhưng metadata brand xác nhận là 0."
     },
     {
       "qid": "x016",
@@ -184,7 +233,8 @@
       "human_c0": 2,
       "meta_c0": 0,
       "diff_c0": 2,
-      "notes": "B toàn giày nữ nhưng chỉ ~3-4 đôi có gót; A lẫn áo, đồng hồ, quần, túi"
+      "notes": "B toàn giày nữ nhưng chỉ ~3-4 đôi có gót; A lẫn áo, đồng hồ, quần, túi",
+      "explanation": "Khớp đúng cột notes: Hàng B (C5) là giày nữ nhưng người chấm chỉ thấy ~3-4 đôi có gót rõ ràng."
     },
     {
       "qid": "x017",
@@ -195,7 +245,8 @@
       "human_c0": 1,
       "meta_c0": 0,
       "diff_c0": 1,
-      "notes": "Catalog không có Lavie; chấm theo loại + giới"
+      "notes": "Catalog không có Lavie; chấm theo loại + giới",
+      "explanation": "Khớp đúng cột notes: Catalog rỗng brand Lavie; người chấm chấm 10/10 theo loại (Handbags) và giới tính (Women)."
     },
     {
       "qid": "x018",
@@ -206,7 +257,8 @@
       "human_c0": 1,
       "meta_c0": 0,
       "diff_c0": 1,
-      "notes": "A có 1 áo ghi United Colors; B lẫn quần, giày, kính"
+      "notes": "A có 1 áo ghi United Colors; B lẫn quần, giày, kính",
+      "explanation": "Khớp đúng cột notes: Người chấm ghi nhận áo ghi United Colors; C5 trả về 10 áo thun nam Benetton."
     },
     {
       "qid": "x019",
@@ -217,7 +269,8 @@
       "human_c0": 2,
       "meta_c0": 2,
       "diff_c0": 0,
-      "notes": "A nhiều áo ngắn tay; B lẫn túi, đồng hồ, cà vạt"
+      "notes": "A nhiều áo ngắn tay; B lẫn túi, đồng hồ, cà vạt",
+      "explanation": "Khớp đúng cột notes: A (C5) lẫn nhiều áo ngắn tay do catalog không có trường metadata sleeveLength."
     }
   ],
   "decoded_details": [
@@ -791,5 +844,18 @@
       "diff_c5_human_vs_meta": 0,
       "diff_c0_human_vs_meta": 0
     }
+  ],
+  "metadata": {
+    "evaluated_by": "Claude (AI), single rater",
+    "evaluation_method": "Visual inspection from contact sheet images (blind_ab_x001..x030.png)",
+    "blind_state": "Sealed mapping unviewed during rating; weak blind due to visual category uniformity in system rows",
+    "scope_of_conclusion": "Applies strictly to Full System (Parser + Metadata Filtering/Bonus + BM25) vs Pure Embedding; DOES NOT apply to SigLIP model alone"
+  },
+  "limitations": [
+    "Một người chấm duy nhất: Claude (AI), không có đánh giá chéo liên người chấm (inter-rater reliability).",
+    "Không xác minh được thương hiệu bằng mắt: Với các sản phẩm thời trang không in logo to rõ trên ảnh, người chấm chỉ đánh giá theo loại sản phẩm và giới tính; P@10 brand thực tế phải căn cứ theo metadata.",
+    "Blind yếu (Weak blinding): Hàng kết quả của Hệ thống C5 có độ đồng nhất cao về danh mục sản phẩm (do bộ lọc/bonus), khiến người chấm có thể gián tiếp nhận ra hàng của hệ thống.",
+    "Hậu nghiệm đối với Benetton: Câu x018 sử dụng alias 'benetton' được thêm sau khi đã xem kết quả heldout ban đầu.",
+    "Phạm vi kết luận: Kết quả thắng áp đảo phản ánh sức mạnh của Hệ sinh thái kỹ thuật (Parser + Metadata + BM25 + Scorer), không đại diện cho riêng năng lực của mô hình SigLIP thuần."
   ]
 }
