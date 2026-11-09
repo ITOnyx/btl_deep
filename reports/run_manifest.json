@@ -806,7 +806,7 @@
     }
   },
   "root_hashes": {
-    "config_yaml": "653e88078eff0ebcf7102013210fcbc6be9a345c421bf21b52632898fec0955c",
+    "config_yaml": "c61e1d91f69d053285ad463b231d57678d976b406e3caf70edb9c0ae055a06a2",
     "catalog_parquet": "8029b1eed2e1075b27e4abbdc3020b175c7744c1d364ff311baebb86c0abd15a",
     "errata_rev5": "638e99cc0ff8a356b925257fab5d2915da8047d3b9598bb2b71cbea280622358",
     "findings_2a": "8c60c1aab5765422555f4ba50cc9891959afb6a63c0685f539c63ec16e73dbb7",
@@ -816,7 +816,11 @@
     "audit_final_phase4": "967abf8edc30c7232a755c8820aefd26fc8f785e0ed639c5495a6b3fe0895987",
     "fix_report_phase4": "9ec6a3fcf1d55e2a4c161c4c75366b48360826227f36d47d5ddc6c1c40353fd0",
     "latency_optimizations_phase4": "c277316905ac79719a6fa2becfe35752104e301934e676b0025f956685b90fb0",
-    "app_engine_py": "9e0cf7e0d80a3b578e698aef0ac2af356063622d022914de8e96efbeb391f818"
+    "app_engine_py": "1528cb4c8cb8975bd168273eff61f00a385875e3194e1b4ec6a3b46517af39a8",
+    "fix_report_v2_phase4": "4b54b7b6479daf24e216e46e935f4c10b1902885b27ede2b085704897547d706",
+    "latency_e2e_v2_phase4": "5e6affc21d34e949aa6d269b9aab275ffbc1b9c8405dacb4eab0cfa0ab364356",
+    "unseen_testset_v2": "90e09202736d47e61eaa284048e4fc0d63213b816d5333a8af2866b8fe691b31",
+    "unseen_testset_v2_eval": "4914cd2269f208f3694113ac80478e5bc81135199a2e3a2bc57887d432689473"
   },
   "phase4_audit_final": {
     "timestamp": "2026-11-09T21:05:00",
@@ -859,6 +863,32 @@
       "reports/phase4/phase4_latency_optimizations.json": "c277316905ac79719a6fa2becfe35752104e301934e676b0025f956685b90fb0",
       "tests/test_keychain_masking_and_alignment.py": "e1792d3c42436498c09f101ecb854fe4bbf3d2b2368d8801e25fe404b87bbf47",
       "app/engine.py": "9e0cf7e0d80a3b578e698aef0ac2af356063622d022914de8e96efbeb391f818"
+    }
+  },
+  "phase4_fix_and_audit_round2": {
+    "timestamp": "2026-11-09T22:36:00",
+    "status": "COMPLETED_AUDIT_AND_FIX_ROUND2",
+    "description": "Controlled E2E latency benchmark v2, ground truth audit, AP@10 decomposition, and unseen testset v2 evaluation",
+    "summary": {
+      "controlled_latency_benchmark_v2": "5 runs x 200 distinct queries per pipeline, 10 warmups, cooldown 5s, interleaved order, continuous nvidia-smi monitoring. Text p95=71.28ms (pass 100%), CIR-catalog p95=72.70ms (pass 100%), CIR-upload p95=205.44ms (pass 40%), Image p95=225.25ms (Batch-2 TTA on RTX 2050 Mobile). 0 queries > 500 ms.",
+      "gpu_hardware_standardized": "NVIDIA GeForce RTX 2050 Mobile (4096 MiB); SigLIP so400m-patch14-224 (hidden_dim 1152). Thermal throttling status: MOT PHAN (85-87C drops clocks 10.4%, but no extreme latency spikes).",
+      "ground_truth_reconciled": "26 heldout queries audited with colour + brand canonical mapping. x011-x018 R_full match 534, 547, 104, 104, 74, 607, 0, 209 100%.",
+      "ap10_decomposition": "Delta 0.8834 -> 0.9631 decomposed into (a) x018 Benetton alias +0.0385 (48.3%), (b) denominator 26->25 excluding x017 Lavie +0.0368 (46.2%), (c) ranking refinement +0.0044 (5.5%). x025, x027, x028 excluded.",
+      "q3_unisex_gt_analysis": "Q3 P@10 strict (no Unisex) 0.8490 vs relaxed (with Unisex) 0.8630 (+0.0140). AttributeIndex.filter_relaxed does NOT relax gender.",
+      "unseen_testset_v2_evaluation": "eval/unseen_testset_v2.json (32 queries) sealed SHA-256 90e09202736d47e61eaa284048e4fc0d63213b816d5333a8af2866b8fe691b31. Single-run evaluation on G_full: Mean AP@10 = 0.7864 (exceeds 0.75 target), Mean P@10 = 0.8065.",
+      "ab_testing_power_caveat": "30 A/B queries labeled DEV SET; conclusion amended to no bias detected (n=30, low statistical power).",
+      "test_keychain_mask_asserts": "Direct mask[idx]==False assertions for 43230 & 42066; re-encoding 3 sample images cosine=1.0000; query keychain image 0 leaks; pytest passed 100%.",
+      "c4_phase3f_execution_verified": "evaluate_phase3f.py directly called BM25Index.search with own numpy import, never used engine.py."
+    },
+    "files": {
+      "reports/phase4/phase4_fix_report_v2.md": "4b54b7b6479daf24e216e46e935f4c10b1902885b27ede2b085704897547d706",
+      "reports/phase4/phase4_latency_e2e_v2.json": "5e6affc21d34e949aa6d269b9aab275ffbc1b9c8405dacb4eab0cfa0ab364356",
+      "reports/phase4/unseen_testset_v2_eval.json": "4914cd2269f208f3694113ac80478e5bc81135199a2e3a2bc57887d432689473",
+      "eval/unseen_testset_v2.json": "90e09202736d47e61eaa284048e4fc0d63213b816d5333a8af2866b8fe691b31",
+      "tests/test_keychain_masking_and_alignment.py": "8bf449c81df8ca4bf03d93e2a734db9e3207989946ea461a20e26f691c67f747",
+      "app/engine.py": "1528cb4c8cb8975bd168273eff61f00a385875e3194e1b4ec6a3b46517af39a8",
+      "config.yaml": "c61e1d91f69d053285ad463b231d57678d976b406e3caf70edb9c0ae055a06a2",
+      "src/diag/compare_colour_gt.py": "855e1472380e92f5d8f8cdcccf677db554ab00c687b4e65e2405318e485797b5"
     }
   }
 }

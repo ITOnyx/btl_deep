@@ -1,0 +1,496 @@
+{
+  "timestamp": "2026-11-09T22:35:16+0700",
+  "hardware": "NVIDIA GeForce RTX 2050 Mobile (4096 MiB)",
+  "model_architecture": "SigLIP so400m-patch14-224 (hidden_dim 1152)",
+  "protocol": "Interleaved 5 runs x 200 distinct queries/run with 10 warmups, cooldown pauses, and continuous nvidia-smi telemetry",
+  "sla_definition": {
+    "metric": "p95",
+    "threshold_ms": 200.0
+  },
+  "pipelines": {
+    "text_to_image": {
+      "entrypoint": "app.engine.SearchService.search_text(config_mode='c5')",
+      "sla_target": "p95 < 200 ms",
+      "runs": [
+        {
+          "queries_count": 200,
+          "p50_ms": 39.82,
+          "p95_ms": 83.8,
+          "p99_ms": 129.74,
+          "max_ms": 193.6,
+          "min_ms": 28.11,
+          "mean_ms": 46.01,
+          "queries_over_200ms": 0,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 9,
+            "temp_min": 59.0,
+            "temp_max": 68.0,
+            "temp_mean": 65.2,
+            "clock_min": 285.0,
+            "clock_max": 1762.0,
+            "clock_mean": 1592.0,
+            "mem_mean": 2333.0
+          },
+          "run": 1
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 34.59,
+          "p95_ms": 66.43,
+          "p99_ms": 96.22,
+          "max_ms": 105.37,
+          "min_ms": 27.38,
+          "mean_ms": 39.46,
+          "queries_over_200ms": 0,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 8,
+            "temp_min": 77.0,
+            "temp_max": 83.0,
+            "temp_mean": 81.2,
+            "clock_min": 480.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1570.0,
+            "mem_mean": 2333.0
+          },
+          "run": 2
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 32.34,
+          "p95_ms": 73.02,
+          "p99_ms": 114.64,
+          "max_ms": 128.87,
+          "min_ms": 27.43,
+          "mean_ms": 38.61,
+          "queries_over_200ms": 0,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 7,
+            "temp_min": 79.0,
+            "temp_max": 84.0,
+            "temp_mean": 83.0,
+            "clock_min": 420.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1536.0,
+            "mem_mean": 2346.0
+          },
+          "run": 3
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 35.35,
+          "p95_ms": 67.65,
+          "p99_ms": 90.92,
+          "max_ms": 134.71,
+          "min_ms": 25.72,
+          "mean_ms": 40.59,
+          "queries_over_200ms": 0,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 8,
+            "temp_min": 79.0,
+            "temp_max": 85.0,
+            "temp_mean": 82.9,
+            "clock_min": 457.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1563.0,
+            "mem_mean": 2347.0
+          },
+          "run": 4
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 34.28,
+          "p95_ms": 65.52,
+          "p99_ms": 109.6,
+          "max_ms": 191.29,
+          "min_ms": 26.86,
+          "mean_ms": 39.75,
+          "queries_over_200ms": 0,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 8,
+            "temp_min": 78.0,
+            "temp_max": 85.0,
+            "temp_mean": 83.1,
+            "clock_min": 540.0,
+            "clock_max": 1740.0,
+            "clock_mean": 1561.0,
+            "mem_mean": 2347.0
+          },
+          "run": 5
+        }
+      ]
+    },
+    "image_to_image": {
+      "entrypoint": "app.engine.SearchService.search_image(use_flip_aug=True, use_knn_voting=True) [Batch-2 TTA]",
+      "sla_target": "p95 < 200 ms",
+      "runs": [
+        {
+          "queries_count": 200,
+          "p50_ms": 169.62,
+          "p95_ms": 245.02,
+          "p99_ms": 299.73,
+          "max_ms": 440.42,
+          "min_ms": 103.16,
+          "mean_ms": 174.22,
+          "queries_over_200ms": 51,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": false,
+          "gpu_telemetry": {
+            "samples_count": 32,
+            "temp_min": 62.0,
+            "temp_max": 73.0,
+            "temp_mean": 70.1,
+            "clock_min": 367.0,
+            "clock_max": 1755.0,
+            "clock_mean": 1632.0,
+            "mem_mean": 2334.0
+          },
+          "run": 1
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 144.75,
+          "p95_ms": 235.02,
+          "p99_ms": 256.53,
+          "max_ms": 291.75,
+          "min_ms": 102.97,
+          "mean_ms": 152.83,
+          "queries_over_200ms": 21,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": false,
+          "gpu_telemetry": {
+            "samples_count": 28,
+            "temp_min": 75.0,
+            "temp_max": 83.0,
+            "temp_mean": 81.1,
+            "clock_min": 322.0,
+            "clock_max": 1740.0,
+            "clock_mean": 1581.0,
+            "mem_mean": 2336.0
+          },
+          "run": 2
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 142.26,
+          "p95_ms": 217.64,
+          "p99_ms": 276.23,
+          "max_ms": 341.65,
+          "min_ms": 104.72,
+          "mean_ms": 151.16,
+          "queries_over_200ms": 20,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": false,
+          "gpu_telemetry": {
+            "samples_count": 28,
+            "temp_min": 74.0,
+            "temp_max": 84.0,
+            "temp_mean": 81.1,
+            "clock_min": 525.0,
+            "clock_max": 1740.0,
+            "clock_mean": 1581.0,
+            "mem_mean": 2334.0
+          },
+          "run": 3
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 142.19,
+          "p95_ms": 211.07,
+          "p99_ms": 277.89,
+          "max_ms": 279.06,
+          "min_ms": 104.15,
+          "mean_ms": 149.56,
+          "queries_over_200ms": 22,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": false,
+          "gpu_telemetry": {
+            "samples_count": 28,
+            "temp_min": 80.0,
+            "temp_max": 86.0,
+            "temp_mean": 84.6,
+            "clock_min": 345.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1544.0,
+            "mem_mean": 2344.0
+          },
+          "run": 4
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 142.67,
+          "p95_ms": 217.5,
+          "p99_ms": 281.78,
+          "max_ms": 296.58,
+          "min_ms": 103.03,
+          "mean_ms": 153.29,
+          "queries_over_200ms": 21,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": false,
+          "gpu_telemetry": {
+            "samples_count": 29,
+            "temp_min": 81.0,
+            "temp_max": 87.0,
+            "temp_mean": 85.3,
+            "clock_min": 457.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1524.0,
+            "mem_mean": 2350.0
+          },
+          "run": 5
+        }
+      ]
+    },
+    "cir_catalog": {
+      "entrypoint": "app.engine.SearchService.search_cir(force_upload=False) [Catalog Cache]",
+      "sla_target": "p95 < 200 ms",
+      "runs": [
+        {
+          "queries_count": 200,
+          "p50_ms": 35.63,
+          "p95_ms": 77.5,
+          "p99_ms": 105.3,
+          "max_ms": 112.0,
+          "min_ms": 28.43,
+          "mean_ms": 42.47,
+          "queries_over_200ms": 0,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 8,
+            "temp_min": 68.0,
+            "temp_max": 76.0,
+            "temp_mean": 74.0,
+            "clock_min": 427.0,
+            "clock_max": 1747.0,
+            "clock_mean": 1539.0,
+            "mem_mean": 2335.0
+          },
+          "run": 1
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 33.51,
+          "p95_ms": 74.5,
+          "p99_ms": 102.0,
+          "max_ms": 107.85,
+          "min_ms": 27.71,
+          "mean_ms": 39.29,
+          "queries_over_200ms": 0,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 8,
+            "temp_min": 74.0,
+            "temp_max": 82.0,
+            "temp_mean": 80.1,
+            "clock_min": 427.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1548.0,
+            "mem_mean": 2336.0
+          },
+          "run": 2
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 33.69,
+          "p95_ms": 73.46,
+          "p99_ms": 89.45,
+          "max_ms": 103.34,
+          "min_ms": 27.56,
+          "mean_ms": 39.24,
+          "queries_over_200ms": 0,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 8,
+            "temp_min": 78.0,
+            "temp_max": 84.0,
+            "temp_mean": 82.2,
+            "clock_min": 382.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1561.0,
+            "mem_mean": 2333.0
+          },
+          "run": 3
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 32.52,
+          "p95_ms": 72.45,
+          "p99_ms": 101.4,
+          "max_ms": 203.27,
+          "min_ms": 27.97,
+          "mean_ms": 38.06,
+          "queries_over_200ms": 1,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 7,
+            "temp_min": 77.0,
+            "temp_max": 84.0,
+            "temp_mean": 82.6,
+            "clock_min": 562.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1538.0,
+            "mem_mean": 2348.0
+          },
+          "run": 4
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 34.48,
+          "p95_ms": 65.58,
+          "p99_ms": 87.17,
+          "max_ms": 118.98,
+          "min_ms": 27.57,
+          "mean_ms": 39.98,
+          "queries_over_200ms": 0,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 8,
+            "temp_min": 81.0,
+            "temp_max": 86.0,
+            "temp_mean": 85.1,
+            "clock_min": 285.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1474.0,
+            "mem_mean": 2362.0
+          },
+          "run": 5
+        }
+      ]
+    },
+    "cir_upload": {
+      "entrypoint": "app.engine.SearchService.search_cir(force_upload=True) [ViT Forward Pass]",
+      "sla_target": "p95 < 200 ms",
+      "runs": [
+        {
+          "queries_count": 200,
+          "p50_ms": 135.7,
+          "p95_ms": 233.88,
+          "p99_ms": 306.18,
+          "max_ms": 323.15,
+          "min_ms": 84.31,
+          "mean_ms": 144.25,
+          "queries_over_200ms": 22,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": false,
+          "gpu_telemetry": {
+            "samples_count": 26,
+            "temp_min": 69.0,
+            "temp_max": 79.0,
+            "temp_mean": 76.0,
+            "clock_min": 382.0,
+            "clock_max": 1747.0,
+            "clock_mean": 1645.0,
+            "mem_mean": 2335.0
+          },
+          "run": 1
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 113.36,
+          "p95_ms": 206.54,
+          "p99_ms": 270.94,
+          "max_ms": 278.66,
+          "min_ms": 72.03,
+          "mean_ms": 122.34,
+          "queries_over_200ms": 11,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": false,
+          "gpu_telemetry": {
+            "samples_count": 23,
+            "temp_min": 70.0,
+            "temp_max": 80.0,
+            "temp_mean": 78.3,
+            "clock_min": 532.0,
+            "clock_max": 1740.0,
+            "clock_mean": 1574.0,
+            "mem_mean": 2335.0
+          },
+          "run": 2
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 113.46,
+          "p95_ms": 194.46,
+          "p99_ms": 276.57,
+          "max_ms": 294.61,
+          "min_ms": 80.73,
+          "mean_ms": 122.41,
+          "queries_over_200ms": 10,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 23,
+            "temp_min": 77.0,
+            "temp_max": 85.0,
+            "temp_mean": 83.0,
+            "clock_min": 330.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1573.0,
+            "mem_mean": 2340.0
+          },
+          "run": 3
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 111.31,
+          "p95_ms": 204.25,
+          "p99_ms": 248.86,
+          "max_ms": 286.98,
+          "min_ms": 74.05,
+          "mean_ms": 121.87,
+          "queries_over_200ms": 11,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": false,
+          "gpu_telemetry": {
+            "samples_count": 23,
+            "temp_min": 79.0,
+            "temp_max": 86.0,
+            "temp_mean": 83.8,
+            "clock_min": 360.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1591.0,
+            "mem_mean": 2348.0
+          },
+          "run": 4
+        },
+        {
+          "queries_count": 200,
+          "p50_ms": 110.98,
+          "p95_ms": 188.08,
+          "p99_ms": 249.51,
+          "max_ms": 284.97,
+          "min_ms": 75.18,
+          "mean_ms": 119.71,
+          "queries_over_200ms": 8,
+          "queries_over_500ms": 0,
+          "sla_p95_passed": true,
+          "gpu_telemetry": {
+            "samples_count": 22,
+            "temp_min": 79.0,
+            "temp_max": 86.0,
+            "temp_mean": 84.5,
+            "clock_min": 337.0,
+            "clock_max": 1732.0,
+            "clock_mean": 1568.0,
+            "mem_mean": 2354.0
+          },
+          "run": 5
+        }
+      ]
+    }
+  }
+}

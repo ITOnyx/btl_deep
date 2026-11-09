@@ -68,7 +68,8 @@ app:
 scope:
   index_scope: "fashion_only"   # fashion_only | all
   exclude_master_categories: ["Personal Care", "Home", "Sporting Goods"]
-  exclude_article_types: ["Ipad", "Free Gifts", "Fragrance Gift Set", "Key chain"]   # agent đề xuất thêm, tôi duyệt
+  exclude_article_types: ["Ipad", "Free Gifts", "Fragrance Gift Set", "Key chain", "Water Bottle", "Perfume and Body Mist"]   # Loại bỏ phụ kiện phi thời trang
+  include_article_type_exceptions: ["Wristbands"]  # Ngoại lệ giữ lại từ Sporting Goods (tái tạo chính xác 38.644 sản phẩm in_scope)
   keep_fashion_article_types_in_free_items: true  # Backpacks, Handbags, Wallets, Ties, Scarves, Clutches, Laptop Bag...
 
 embedding:
