@@ -1,38 +1,60 @@
 {
   "task": "Isolation of truncation vs padding length in SigLIP text encoding",
   "queries_count": 1290,
+  "caption_format": "[{category}] {title} ({attrs})",
   "results": {
     "full_128_pad_128": {
-      "name": "Condition A: Full 128, Pad 128 (Colab Baseline)",
-      "metrics": {
-        "recall_at_1": 0.0054,
-        "recall_at_5": 0.0326,
-        "recall_at_10": 0.0535,
-        "mrr": 0.0248,
-        "mean_rank": 365.88,
-        "median_rank": 293.5
+      "g_test": {
+        "recall_at_1": 0.1116,
+        "recall_at_5": 0.3543,
+        "recall_at_10": 0.5225,
+        "mrr": 0.2363,
+        "mean_rank": 35.15,
+        "median_rank": 10.0
+      },
+      "g_full": {
+        "recall_at_1": 0.0085,
+        "recall_at_5": 0.038,
+        "recall_at_10": 0.0628,
+        "mrr": 0.03,
+        "mean_rank": 1038.21,
+        "median_rank": 272.5
       }
     },
     "truncate_64_pad_128": {
-      "name": "Condition B: Truncate 64, then Pad to 128",
-      "metrics": {
+      "g_test": {
+        "recall_at_1": 0.1682,
+        "recall_at_5": 0.469,
+        "recall_at_10": 0.6186,
+        "mrr": 0.3095,
+        "mean_rank": 21.56,
+        "median_rank": 6.0
+      },
+      "g_full": {
         "recall_at_1": 0.0147,
-        "recall_at_5": 0.0535,
-        "recall_at_10": 0.0837,
-        "mrr": 0.0417,
-        "mean_rank": 284.78,
-        "median_rank": 224.5
+        "recall_at_5": 0.062,
+        "recall_at_10": 0.0969,
+        "mrr": 0.0453,
+        "mean_rank": 644.08,
+        "median_rank": 171.0
       }
     },
     "truncate_64_pad_64": {
-      "name": "Condition C: Truncate 64, Pad 64 (Short Sequence)",
-      "metrics": {
-        "recall_at_1": 0.0023,
-        "recall_at_5": 0.0155,
-        "recall_at_10": 0.038,
-        "mrr": 0.0165,
-        "mean_rank": 387.34,
-        "median_rank": 330.5
+      "g_test": {
+        "recall_at_1": 0.0233,
+        "recall_at_5": 0.069,
+        "recall_at_10": 0.1225,
+        "mrr": 0.0592,
+        "mean_rank": 179.71,
+        "median_rank": 111.0
+      },
+      "g_full": {
+        "recall_at_1": 0.0016,
+        "recall_at_5": 0.0078,
+        "recall_at_10": 0.0109,
+        "mrr": 0.0066,
+        "mean_rank": 5204.82,
+        "median_rank": 3102.0
       }
     }
   }

@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "task": "Image-to-Image latency telemetry and slow queries audit",
+    "device": "cuda",
+    "n_runs": 5,
+    "images_per_run": 200,
+    "warmup_queries": 10,
+    "timestamp": "2026-11-09T15:51:50.824778"
+  },
+  "runs_summary": [
+    {
+      "mean": 83.34,
+      "p50": 79.08,
+      "p95": 138.22,
+      "p99": 175.15,
+      "max": 213.2
+    },
+    {
+      "mean": 87.33,
+      "p50": 84.7,
+      "p95": 147.2,
+      "p99": 187.61,
+      "max": 216.87
+    },
+    {
+      "mean": 83.75,
+      "p50": 79.4,
+      "p95": 142.08,
+      "p99": 193.16,
+      "max": 202.72
+    },
+    {
+      "mean": 87.45,
+      "p50": 83.41,
+      "p95": 139.91,
+      "p99": 189.84,
+      "max": 217.45
+    },
+    {
+      "mean": 84.22,
+      "p50": 82.48,
+      "p95": 134.78,
+      "p99": 170.07,
+      "max": 173.55
+    }
+  ],
+  "run_telemetry": [
+    {
+      "run_idx": 1,
+      "duration_s": 16.67,
+      "gpu_smi_start": {
+        "timestamp": "2026/11/09 15:50:24.726",
+        "temperature_c": 64.0,
+        "utilization_gpu_pct": 42.0,
+        "graphics_clock_mhz": 1762.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 21.71
+      },
+      "gpu_smi_end": {
+        "timestamp": "2026/11/09 15:50:41.547",
+        "temperature_c": 71.0,
+        "utilization_gpu_pct": 45.0,
+        "graphics_clock_mhz": 1747.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 27.13
+      },
+      "stats": {
+        "mean": 83.34,
+        "p50": 79.08,
+        "p95": 138.22,
+        "p99": 175.15,
+        "max": 213.2
+      },
+      "slow_queries_count": 0
+    },
+    {
+      "run_idx": 2,
+      "duration_s": 17.47,
+      "gpu_smi_start": {
+        "timestamp": "2026/11/09 15:50:41.638",
+        "temperature_c": 71.0,
+        "utilization_gpu_pct": 41.0,
+        "graphics_clock_mhz": 1732.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 25.83
+      },
+      "gpu_smi_end": {
+        "timestamp": "2026/11/09 15:50:59.193",
+        "temperature_c": 73.0,
+        "utilization_gpu_pct": 49.0,
+        "graphics_clock_mhz": 1747.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 26.36
+      },
+      "stats": {
+        "mean": 87.33,
+        "p50": 84.7,
+        "p95": 147.2,
+        "p99": 187.61,
+        "max": 216.87
+      },
+      "slow_queries_count": 0
+    },
+    {
+      "run_idx": 3,
+      "duration_s": 16.75,
+      "gpu_smi_start": {
+        "timestamp": "2026/11/09 15:50:59.298",
+        "temperature_c": 73.0,
+        "utilization_gpu_pct": 44.0,
+        "graphics_clock_mhz": 1747.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 24.77
+      },
+      "gpu_smi_end": {
+        "timestamp": "2026/11/09 15:51:16.139",
+        "temperature_c": 77.0,
+        "utilization_gpu_pct": 46.0,
+        "graphics_clock_mhz": 1740.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 26.89
+      },
+      "stats": {
+        "mean": 83.75,
+        "p50": 79.4,
+        "p95": 142.08,
+        "p99": 193.16,
+        "max": 202.72
+      },
+      "slow_queries_count": 0
+    },
+    {
+      "run_idx": 4,
+      "duration_s": 17.49,
+      "gpu_smi_start": {
+        "timestamp": "2026/11/09 15:51:16.216",
+        "temperature_c": 77.0,
+        "utilization_gpu_pct": 41.0,
+        "graphics_clock_mhz": 1717.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 25.9
+      },
+      "gpu_smi_end": {
+        "timestamp": "2026/11/09 15:51:33.786",
+        "temperature_c": 78.0,
+        "utilization_gpu_pct": 46.0,
+        "graphics_clock_mhz": 1740.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 27.49
+      },
+      "stats": {
+        "mean": 87.45,
+        "p50": 83.41,
+        "p95": 139.91,
+        "p99": 189.84,
+        "max": 217.45
+      },
+      "slow_queries_count": 0
+    },
+    {
+      "run_idx": 5,
+      "duration_s": 16.85,
+      "gpu_smi_start": {
+        "timestamp": "2026/11/09 15:51:33.866",
+        "temperature_c": 78.0,
+        "utilization_gpu_pct": 46.0,
+        "graphics_clock_mhz": 1740.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 27.49
+      },
+      "gpu_smi_end": {
+        "timestamp": "2026/11/09 15:51:50.810",
+        "temperature_c": 80.0,
+        "utilization_gpu_pct": 32.0,
+        "graphics_clock_mhz": 1717.0,
+        "memory_clock_mhz": 6000.0,
+        "power_draw_w": 26.03
+      },
+      "stats": {
+        "mean": 84.22,
+        "p50": 82.48,
+        "p95": 134.78,
+        "p99": 170.07,
+        "max": 173.55
+      },
+      "slow_queries_count": 0
+    }
+  ],
+  "all_slow_queries_over_500ms": []
+}
