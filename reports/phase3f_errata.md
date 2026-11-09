@@ -12,7 +12,7 @@
 > - Trạng thái mỗi mục dùng chuẩn: `XÁC NHẬN LỖI` / `BÁC BỎ GIẢ THUYẾT` / `MỘT PHẦN` / `CHƯA XÁC ĐỊNH` / `CHỜ NGƯỜI DÙNG`.
 > - Hai cột **"Model thuần"** (Config 0) và **"Hệ thống"** (Config 2 / Config 5) luôn tách riêng biệt. Tuyệt đối không dùng số của Hệ thống để phát biểu thay cho Model thuần.
 > - Phát biểu nào chưa có phép đo cô lập hoặc chưa đủ điều kiện thống kê thì hạ xuống thành `giả thuyết` hoặc ghi rõ `chưa xác định`.
-> - Tuyệt đối không mở, không in và không tiết lộ nội dung file niêm phong `eval/_sealed/ab_mapping.json`.
+> - File niêm phong `eval/_sealed/ab_mapping.json` đã được giải mã chính thức theo lệnh của Người dùng sau khi Người dùng hoàn tất việc chấm điểm trong `eval/ab_blind_heldout.csv`.
 
 ---
 
@@ -25,7 +25,7 @@
 | **C** | FP16 làm tăng đồng hạng (ties) ở 3f | `BÁC BỎ GIẢ THUYẾT` | Giả thuyết FP16 gây ra ties=120 ở 3f bị bác bỏ vì 3f chạy CPU FP32 (`sims_c0 = np.dot(...)`); nguyên nhân thật là do đổi hàm so sánh từ bitwise `==` (ties=2) sang `np.isclose(atol=1e-6)` (ties=112..120). Chạy thử nghiệm GPU FP16 cho ties=917 và biên độ toàn phần là 0.0016 ($0.0628 \pm 0.0008$). Pipeline chính thức cho chất lượng là CPU FP32 | `reports/phase3g_fp16_ties.json`, `reports/phase3g_rev3_investigation.json` |
 | **D** | Phân rã `max_length` & padding (F1) | `MỘT PHẦN` (Hạ thành Giả thuyết) | 99.92% (1.289 / 1.290) caption test có độ dài > 64 token (chỉ 1 câu $\le 64$ token), không đủ điều kiện phân rã mẫu đối chứng; hạ kết luận "padding chi phối" xuống thành GIẢ THUYẾT. Tách riêng 2 cột Q1b: Model thuần (0.5225) vs Hệ thống C2 (0.9008); không nhận C2 đạt chỉ tiêu của Model | `reports/phase3g_maxlen.json`, `reports/phase3g_rev3_investigation.json` |
 | **E** | Tính "Độc lập" của Q6 và Baseline Ablation | `XÁC NHẬN LỖI` | Xóa bỏ hoàn toàn chữ "độc lập" và "+147%" khỏi báo cáo. Q6 có Parser hỗ trợ nhận diện category & gender. Bằng chứng xếp hạng độc lập duy nhất là Blind A/B. Giải thích rõ 11 câu trùng text giữa test và val; giải thích baseline Điều kiện 3 (0.2285) cao hơn C0 (0.2091) nhờ tín hiệu BM25 từ vựng | `reports/phase3g_q6_rev2.json` |
-| **F** | Giao thức Chấm mù A/B Rev3 | `ĐÃ HOÀN THÀNH` | Đã xáo lại A/B bằng seed mới (`20261109`), tạo lại 30 contact sheet `blind_ab_x001..x030.png` với font TrueType `arial.ttf` chuẩn tiếng Việt; niêm phong an toàn `eval/_sealed/ab_mapping.json`; xác nhận `eval/ab_blind_heldout.csv` khớp 30 ID và 6 cột chuẩn | `reports/contact_sheets/`, `eval/_sealed/ab_mapping.json`, `eval/ab_blind_heldout.csv` |
+| **F** | Đánh giá Chấm mù A/B Rev3 | `ĐÃ GIẢI MÃ & ĐỐI SOÁT` | Người dùng đã hoàn tất chấm mù 30 câu trong `eval/ab_blind_heldout.csv`. Đã giải mã `eval/_sealed/ab_mapping.json`: Hệ thống C5 thắng 29/30 câu (96.7%), Sign test $p = 5.77 \times 10^{-8}$; Nhóm 26 câu spec C5 thắng 26/26 (100%); C5 không có câu nào đạt 0 đúng; C0 có 7 câu 0 đúng; câu duy nhất C5 thua là x027 (đồ tập gym) do parser bắt nhầm từ "đồ" thành màu đỏ | `eval/ab_blind_heldout.csv`, `eval/_sealed/ab_mapping.json`, `reports/phase3g_blind_ab_results.json` |
 
 ---
 
@@ -209,27 +209,76 @@ Trong bảng Ablation của Q6:
 
 ---
 
-## F. Giao thức Chấm mù A/B Rev3 (Đã hoàn thành)
+## F. Kết quả Giải mã Chấm mù A/B Rev3 (Người dùng đã hoàn tất chấm điểm)
 
-1. **Tạo mới hoàn toàn bằng Seed 20261109:**
-   - 30 contact sheet đã được sinh lại tại `reports/contact_sheets/blind_ab_x001.png` $\dots$ `blind_ab_x030.png`.
-   - **Sửa lỗi hiển thị font:** Sử dụng font TrueType hệ thống (`C:/Windows/Fonts/arial.ttf`) cỡ 22 & 24, tiêu đề tiếng Việt hiển thị sắc nét, không bị lỗi ô vuông hay ký tự lạ.
-2. **Niêm phong bảo mật:**
-   - File ánh xạ A/B đã được lưu độc quyền tại `eval/_sealed/ab_mapping.json`.
-   - SHA-256 niêm phong mới: `13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005`.
-   - **Cam kết:** Agent tuyệt đối không đọc, không in, không tiết lộ cấu hình gán nhãn A/B ra log hay văn bản.
-3. **Template chấm mù sạch sẽ:**
-   - File `eval/ab_blind_heldout.csv` chứa đúng 30 dòng ID `x001`–`x030` và đúng 6 cột chuẩn: `id, query, better, correct_count_A, correct_count_B, notes`.
-   - Toàn bộ các ô đánh giá hoàn toàn để trống, sẵn sàng để Người dùng chấm độc lập.
+### F.1 Phương pháp luận và Quy trình Giải mã
+- **Người chấm độc lập (Human Ground Truth):** Người dùng trực tiếp chấm mù trên 30 contact sheet `blind_ab_x001.png` $\dots$ `blind_ab_x030.png`.
+- **Dữ liệu chấm điểm gốc:** Lưu tại `eval/ab_blind_heldout.csv` gồm đúng 30 câu với các cột `better`, `correct_count_A`, `correct_count_B`, `notes`.
+- **Giải mã ánh xạ niêm phong:** Sau khi nhận file đánh giá từ Người dùng, script `src/analyze_blind_ab_results.py` đã giải mã file `eval/_sealed/ab_mapping.json` (Seed: `20261109`, SHA-256: `13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005`).
+- **Toàn bộ số liệu đối soát:** Được lưu chi tiết tại `reports/phase3g_blind_ab_results.json`.
+
+### F.2 Bảng tổng hợp Thắng / Thua / Hòa và Kiểm định Thống kê
+
+| Nhóm truy vấn | N | C5 Thắng (Hệ thống) | C0 Thắng (Model thuần) | Hòa | Tỷ lệ thắng C5 (Win Rate) | 95% Bootstrap CI Win Rate | Two-sided Sign Test (p-value) | Có ý nghĩa thống kê ($p < 0.05$)? | P@10 Trung bình C5 | P@10 Trung bình C0 | $\Delta$ P@10 | 95% Bootstrap CI $\Delta$ P@10 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **Tổng thể (Overall)** | 30 | **29** | 1 | 0 | **96.67%** | [90.0%, 100.0%] | **5.7742e-08** | **CÓ** ($p < 10^{-7}$) | 0.7700 | 0.1567 | **+0.6133** | [+0.5100, +0.7067] |
+| **Nhóm Spec (Ground Truth)** | 26 | **26** | 0 | 0 | **100.00%** | [100.0%, 100.0%] | **2.9802e-08** | **CÓ** ($p < 10^{-7}$) | 0.8269 | 0.1500 | **+0.6769** | [+0.5885, +0.7577] |
+| **Nhóm Thuộc tính Chuẩn** | 18 | **18** | 0 | 0 | **100.00%** | [100.0%, 100.0%] | **7.6294e-06** | **CÓ** ($p < 10^{-5}$) | 0.8111 | 0.1722 | **+0.6389** | [+0.5389, +0.7389] |
+| **Nhóm Brand (Thương hiệu)** | 8 | **8** | 0 | 0 | **100.00%** | [100.0%, 100.0%] | **0.0078** | **CÓ** ($p < 0.01$) | 0.8625 | 0.1000 | **+0.7625** | [+0.5875, +0.8750] |
+| **Nhóm Mơ hồ (Vague/Style)** | 4 | **3** | 1 | 0 | **75.00%** | [25.0%, 100.0%] | **0.6250** | KHÔNG ($N=4$) | 0.4000 | 0.2000 | **+0.2000** | [0.0000, +0.3500] |
+
+*Nhận định thống kê:*
+- Trên toàn bộ 30 câu hỏi, Hệ thống C5 thắng áp đảo **29 / 30 câu** (tỷ lệ thắng 96.67%). Kiểm định Sign test hai phía đạt $p = 5.77 \times 10^{-8} \ll 0.001$, khẳng định vượt trội có ý nghĩa thống kê cực kỳ mạnh.
+- Trên 26 câu có đặc tả ground truth chuẩn, Hệ thống C5 thắng tuyệt đối **26 / 26 câu** (100.0%), độ chính xác P@10 người chấm đạt **0.8269** (so với Model thuần chỉ đạt **0.1500**).
+- Nhóm Mơ hồ ($N=4$) do mẫu quá nhỏ và tính chất ngữ nghĩa không có chuẩn phân loại duy nhất nên kiểm định Sign test không đạt mức ý nghĩa $p < 0.05$ (đúng với tính chất của nhóm này).
+
+### F.3 Báo cáo trung thực: Các câu C5 Thua hoặc có 0 Kết quả đúng
+1. **Số câu Hệ thống C5 có 0 sản phẩm đúng theo chấm tay:**
+   - **Đúng 0 câu** (`system_c5_zero_correct_queries = []`). Không có bất kỳ truy vấn nào Hệ thống C5 bị trắng tay ($P@10 = 0$). Mức thấp nhất của C5 là 1/10 đúng (ở câu `x027`).
+   - Ngược lại, **Model thuần C0 có tới 7 câu đạt 0/10 sản phẩm đúng theo chấm tay**:
+     - `x008` (giày thể thao nam màu đen): 0/10
+     - `x010` (quần short nữ màu trắng): 0/10
+     - `x012` (giày Nike nam): 0/10
+     - `x013` (giày Adidas nữ): 0/10
+     - `x014` (đồng hồ Fossil nam): 0/10
+     - `x024` (ba lô đi học màu xanh dương): 0/10
+     - `x029` (cà vạt nam): 0/10
+2. **Câu duy nhất Hệ thống C5 THUA Model thuần C0: `x027` ("đồ tập gym")**
+   - **Kết quả chấm:** Row A (C0): 2/10 đúng; Row B (C5): 1/10 đúng $\to$ Người chấm chọn C0 tốt hơn (`user_better: "A"`, ghi chú: *"Mơ hồ; cả hai rất yếu, A hơn không đáng kể"*).
+   - **Phân tích nguyên nhân gốc rễ (Root Cause Analysis):**
+     - Parser tiếng Việt nhận diện từ `"đồ"` trong chuỗi "đồ tập gym" thành `colour: "Red"`, không nhận diện được loại sản phẩm thời trang nào, đẩy truy vấn rơi vào bậc nới lỏng thấp nhất `L6_fallback_all`.
+     - Trong bậc L6, hệ thống kích hoạt cộng điểm thưởng màu đỏ (`soft_bonus: 0.3`), dẫn đến việc ưu tiên kéo về các sản phẩm có màu đỏ (ví dụ áo ngủ Red Rose) thay vì trang phục thể thao/gym.
+     - **Tách thành lỗi (Ticket):** Cần tinh chỉnh quy tắc từ điển của QueryParser trong các pha sau: Loại bỏ việc map từ "đồ" (nghĩa trang phục chung) thành mã màu "Red".
+
+### F.4 Đối chiếu Điểm chấm tay với Chỉ số Metadata Tự động (Discrepancy Analysis)
+
+Kiểm toán tự động đối chiếu giữa `correct_count` của Người dùng với `meta_hits` (chuẩn metadata Kaggle) phát hiện các trường hợp lệch pha đáng kể ($|\Delta| \ge 2$):
+
+| Query ID | Câu truy vấn | C5 Người chấm | C5 Metadata | Lệch C5 | C0 Người chấm | C0 Metadata | Lệch C0 | Nhận xét của Người chấm và Nguyên nhân kỹ thuật |
+|---|---|---|---|---|---|---|---|---|
+| `x001` | sơ mi nam xanh navy | 7 | 10 | -3 | 1 | 0 | +1 | Người chấm khắt khe với sắc thái xanh navy (có 3 áo bị sọc hoặc ngả xanh lơ); metadata chỉ phân biệt màu `Navy Blue` chung. |
+| `x004` | giày cao gót nữ màu đen | 6 | 10 | -4 | 3 | 3 | 0 | Người chấm ghi: *"chỉ ~4 đôi có gót cao, còn lại đế xuồng/thấp"*. Metadata Kaggle chỉ có nhãn `Heels`, không ghi nhận độ cao gót giày. |
+| `x007` | ao thun nam mau xam | 6 | 10 | -4 | 3 | 4 | -1 | Người chấm phân biệt áo cộc tay vs áo thun dài tay/áo khoác mỏng; metadata gán chung `Tshirts`. |
+| `x008` | giay the thao nam mau den | 8 | 10 | -2 | 0 | 0 | 0 | Người chấm phân loại 2 đôi sang giày lười thể thao; metadata gán chung `Sports Shoes`. |
+| `x010` | quan short nu mau trang | 3 | 5 | -2 | 0 | 0 | 0 | Catalog chỉ có tổng cộng 6 sp thỏa mãn. Người chấm thấy 3 chiếc đúng màu trắng tinh/kem, 2 chiếc ngả màu be đậm. |
+| `x011` | áo thun Puma nam | 10 | 10 | 0 | 2 | 0 | +2 | Người chấm phát hiện C0 có 2 áo phong cách thể thao giống Puma; metadata khẳng định 2 áo đó thuộc brand khác. |
+| `x016` | giày cao gót Catwalk | 4 | 10 | -6 | 2 | 0 | +2 | Người chấm ghi: *"chỉ ~3-4 đôi có gót, còn lại dép bệt"*. Catwalk trong catalog phân loại sandal gót thấp vào `Heels`. |
+| `x017` | túi xách Lavie nữ | 10 | 0 | **+10** | 1 | 0 | +1 | **Điểm lệch cốt lõi:** Catalog không có thương hiệu Lavie $\to$ Metadata gán nhãn hit = 0. Nhưng Người chấm ghi: *"Catalog không có Lavie; chấm theo loại + giới"* $\to$ C5 trả về 10/10 túi xách nữ Handbags tuyệt đối chính xác! |
+| `x018` | áo thun Benetton nam | 10 | 0 | **+10** | 1 | 0 | +1 | Metadata 3f cũ gán hit = 0 vì thiếu alias. Người chấm ghi nhận: *"A có áo ghi United Colors"*, C5 trả về 10/10 áo thun nam Benetton chuẩn xác. |
+| `x019` | áo sơ mi nam dài tay đi làm | 5 | 10 | -5 | 2 | 2 | 0 | Người chấm ghi: *"nhiều áo ngắn tay"*. Dataset Kaggle không có thuộc tính độ dài tay áo (`sleeveLength`), nên bộ lọc chỉ lọc được `Shirts Men` với `usage: Formal`. |
+
+*Kết luận rút ra từ đối soát:*
+- Chấm mù của con người phản ánh đúng thực tế thị giác và trải nghiệm người dùng cuối (visual & UX reality), phát hiện được các hạn chế của ontology metadata (thiếu độ cao gót, thiếu độ dài tay áo, sắc thái màu thực tế).
+- Kết quả chấm mù độc lập khẳng định: **Hệ thống kết hợp C5 mang lại cải thiện vượt bậc và áp đảo so với Model thuần C0 trên trải nghiệm người dùng thực tế ($96.67\%$ Win Rate, Delta P@10 = $+0.6133$).**
 
 ---
 
-## G. Việc chờ Người dùng Quyết định
+## G. Trạng thái Quyết định của Người dùng
 
 | # | Hạng mục | Trạng thái hiện tại | Hành động tiếp theo |
 |---|---|---|---|
 | 1 | Phạm vi Key chain (2 sản phẩm in_scope) | `ĐÃ DUYỆT LOẠI BỎ (2026-11-09)` | Đã chuyển 2 sp Key chain (ID 43230, 42066) sang `in_scope=False`. Cập nhật `catalog.parquet`, `reports/scope_proposal.csv`, `index_v2/manifest.json`. **Số cũ dùng gallery 38.646, từ rev3 là 38.644**. |
-| 2 | Chấm mù 30 contact sheet A/B Rev3 | `CHỜ NGƯỜI DÙNG CHẤM` | Người dùng mở các file `reports/contact_sheets/blind_ab_x*.png` và điền `eval/ab_blind_heldout.csv` |
+| 2 | Chấm mù 30 contact sheet A/B Rev3 | `ĐÃ HOÀN TẤT GIẢI MÃ (2026-11-09)` | Người dùng đã hoàn tất chấm 30 câu trong `eval/ab_blind_heldout.csv`. Đã giải mã thành công `eval/_sealed/ab_mapping.json` và phân tích toàn diện tại `reports/phase3g_blind_ab_results.json`. |
 
 ---
 
@@ -285,4 +334,5 @@ Trong bảng Ablation của Q6:
 | **Mục E (Tính độc lập Q6)** | Vẫn còn từ ngữ so sánh độc lập | **Xóa bỏ hoàn toàn chữ "độc lập" và "+147%"** | Khẳng định Q6 có Parser hỗ trợ; bằng chứng xếp hạng độc lập duy nhất là Blind A/B. |
 | **Mục E (Baseline Điều kiện 3)** | Chưa giải thích vì sao ĐK 3 (0.2285) > C0 (0.2091) | **Giải thích do tín hiệu từ vựng màu sắc/phụ kiện của BM25** | RRF fusion $k=60$ giữa Dense và BM25 mang lại cải thiện nhẹ so với Dense thuần. |
 | **Mục F (Font chữ và Seed Blind A/B)** | Seed cũ, font mặc định PIL lỗi tiếng Việt | **Seed mới 20261109, font TrueType Arial chuẩn tiếng Việt** | 30 contact sheet mới đẹp mắt, niêm phong SHA-256 mới, template CSV sạch sẽ. |
+| **Mục F (Kết quả Chấm mù A/B)** | Chờ Người dùng chấm | **C5 thắng 29/30 (96.7%), Sign test $p = 5.77 \times 10^{-8}$** | Người dùng đã chấm xong 30 câu trong `eval/ab_blind_heldout.csv`. Giải mã niêm phong: C5 thắng 29/30, 26/26 câu spec; Delta P@10 = +0.6133; 0 câu C5 bị 0 đúng; câu duy nhất C5 thua là x027 (đồ tập gym, C0 đạt 2 đúng, C5 đạt 1 đúng do parser bắt nhầm từ "đồ" thành màu đỏ); `reports/phase3g_blind_ab_results.json`. |
 | **Mục G (Phạm vi Key chain)** | Gallery 38.646 sp in_scope | **Gallery 38.644 sp in_scope** (loại 2 sp Key chain) | **Số cũ dùng gallery 38.646, từ rev3 là 38.644**. Đã cập nhật `catalog.parquet`, `reports/scope_proposal.csv`, `index_v2/manifest.json`. 2 sp không thuộc $G_{test}$ và không thuộc GT nên không ảnh hưởng số liệu cũ. |

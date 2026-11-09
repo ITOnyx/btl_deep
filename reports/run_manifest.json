@@ -347,7 +347,7 @@
       }
     },
     "files": {
-      "reports/phase3f_errata.md": "eea3b1778c36587401762e256152219c219f8848ecab8f4cadd6bd8bd8066ed4",
+      "reports/phase3f_errata.md": "c61161d9242db6b9f5dede40b17336ff440a386310108605a80bff611080d8b1",
       "reports/phase3f_errata_rev2.md": "ea2b606b9c488892a2397c9b7c970064b04e0efa78111440b714b19850f79635",
       "reports/phase3f_errata_rev1.md": "613d8dcfa11c58fbedde5fa60477c1f116fcc600885ada4a2c7248ff11172791",
       "reports/phase3f_reconciliation.md": "499aa4084ce6d94c7ff880f61f078f93d2e320af222cd3446e4344fc0702a4e0",
@@ -356,12 +356,123 @@
       "reports/phase3g_q6_rev2.json": "60528953571339d35a7c216ec0f6721cea15d92313374655b7ffec2511258949",
       "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
       "eval/_sealed/ab_mapping.json": "13a3c0399f1662fa672b802331c6fd8e8e0d29c1738e67d80ac227a931e32005",
-      "eval/ab_blind_heldout.csv": "ee5ffe73ada0b4afac3c3054f91ec988de44e59a4f721ef91f47c436bc760d91",
+      "eval/ab_blind_heldout.csv": "f13e592f8a8f6df7a25dc471336e96acea85d9120d21d35c257fec8144ec1905",
       "reports/scope_proposal.csv": "04f0050c9947f19832440da897c0be32ce99902af5ad3de9cf77a6c069f8b9b2",
       "data/catalog/catalog.parquet": "8029b1eed2e1075b27e4abbdc3020b175c7744c1d364ff311baebb86c0abd15a",
-      "index_v2/manifest.json": "f27774524951e53c3f48121edabcbc3cecb0c19d72d260c8b9ed46184719c163"
+      "index_v2/manifest.json": "f27774524951e53c3f48121edabcbc3cecb0c19d72d260c8b9ed46184719c163",
+      "reports/phase3g_blind_ab_results.json": "b8a2fcbfde9790a53831ff2dc0454aa7f240cd9b27c1239c5df06b181cc9ac4b"
     },
     "in_scope_catalog_items": 38644,
-    "key_chain_excluded_count": 2
+    "key_chain_excluded_count": 2,
+    "blind_ab_evaluation": {
+      "status": "DECODED_AND_EVALUATED",
+      "evaluated_by": "USER (human ground truth)",
+      "timestamp": "2026-11-09T14:27:00",
+      "overall_30q": {
+        "group_name": "Overall (All 30 Queries)",
+        "total_queries": 30,
+        "c5_wins": 29,
+        "c0_wins": 1,
+        "ties": 0,
+        "win_rate": 0.9667,
+        "win_rate_ci95": [
+          0.9,
+          1.0
+        ],
+        "sign_test_two_sided_p_value": 5.774199962615967e-08,
+        "is_statistically_significant_p05": true,
+        "human_p10_mean_c5": 0.77,
+        "human_p10_mean_c0": 0.1567,
+        "delta_p10_mean": 0.6133,
+        "delta_p10_ci95": [
+          0.51,
+          0.7067
+        ]
+      },
+      "spec_26q": {
+        "group_name": "Spec Ground Truth Queries (N=26)",
+        "total_queries": 26,
+        "c5_wins": 26,
+        "c0_wins": 0,
+        "ties": 0,
+        "win_rate": 1.0,
+        "win_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "sign_test_two_sided_p_value": 2.9802322387695312e-08,
+        "is_statistically_significant_p05": true,
+        "human_p10_mean_c5": 0.8269,
+        "human_p10_mean_c0": 0.15,
+        "delta_p10_mean": 0.6769,
+        "delta_p10_ci95": [
+          0.5885,
+          0.7577
+        ]
+      },
+      "brand_8q": {
+        "group_name": "Brand Queries (x011-x018, N=8)",
+        "total_queries": 8,
+        "c5_wins": 8,
+        "c0_wins": 0,
+        "ties": 0,
+        "win_rate": 1.0,
+        "win_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "sign_test_two_sided_p_value": 0.0078125,
+        "is_statistically_significant_p05": true,
+        "human_p10_mean_c5": 0.8625,
+        "human_p10_mean_c0": 0.1,
+        "delta_p10_mean": 0.7625,
+        "delta_p10_ci95": [
+          0.5875,
+          0.875
+        ]
+      },
+      "standard_18q": {
+        "group_name": "Standard Attribute Queries (N=18)",
+        "total_queries": 18,
+        "c5_wins": 18,
+        "c0_wins": 0,
+        "ties": 0,
+        "win_rate": 1.0,
+        "win_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "sign_test_two_sided_p_value": 7.62939453125e-06,
+        "is_statistically_significant_p05": true,
+        "human_p10_mean_c5": 0.8111,
+        "human_p10_mean_c0": 0.1722,
+        "delta_p10_mean": 0.6389,
+        "delta_p10_ci95": [
+          0.5389,
+          0.7389
+        ]
+      },
+      "vague_4q": {
+        "group_name": "Vague / Style Queries (x025-x028, N=4)",
+        "total_queries": 4,
+        "c5_wins": 3,
+        "c0_wins": 1,
+        "ties": 0,
+        "win_rate": 0.75,
+        "win_rate_ci95": [
+          0.25,
+          1.0
+        ],
+        "sign_test_two_sided_p_value": 0.625,
+        "is_statistically_significant_p05": false,
+        "human_p10_mean_c5": 0.4,
+        "human_p10_mean_c0": 0.2,
+        "delta_p10_mean": 0.2,
+        "delta_p10_ci95": [
+          0.0,
+          0.35
+        ]
+      }
+    }
   }
 }
