@@ -1,159 +1,253 @@
 """
-Query Parser for Fashion Retrieval (src/query_parser.py)
-Extracts structured attributes: articleType, gender, baseColour from natural Vietnamese queries.
-Supports both accented and unaccented input.
+Comprehensive Fashion Query Parser (src/query_parser.py)
+Phase 3e: Rule-based, accent-insensitive, longest-match-first parser for Vietnamese fashion queries.
+
+Extracts:
+- articleType: canonical English articleType or None
+- gender: Boys, Girls, Men, Women, Unisex or None
+- baseColour: canonical English baseColour or None
+- colour_family: color family from eval/families.json or None
+- usage: Casual, Sports, Formal, Ethnic, Party, Smart Casual, Travel or None
+- season: Summer, Winter, Spring, Fall or None
+- brand: matched brand from src/brands.json or None
+- unparsed_tokens: list of remaining tokens
+- confidence: parsing confidence score [0.0, 1.0]
 """
+
 import re
-from typing import Dict, List, Optional, Any
+import json
+import unicodedata
+from pathlib import Path
+from typing import Dict, List, Optional, Any, Tuple
 
-from src.vi_vocab import (
-    remove_diacritics,
-    GENDER_MAP,
-    COLOUR_MAP,
-    ARTICLE_TYPE_MAP
-)
+def remove_diacritics(text: str) -> str:
+    """Removes Vietnamese tone marks and accents for search normalization."""
+    if not text:
+        return ""
+    normalized = unicodedata.normalize("NFD", text)
+    without_combining = "".join(ch for ch in normalized if unicodedata.category(ch) != "Mn")
+    res = without_combining.replace("đ", "d").replace("Đ", "D")
+    return re.sub(r"\s+", " ", res).lower().strip()
 
-# Canonical keyword dictionary mapped to English schema
-# Evaluated on unaccented lowercase tokens
 
-GENDER_PATTERNS = [
-    (r"\b(be trai|con trai|be nam)\b", "Boys"),
-    (r"\b(be gai|con gai|be nu)\b", "Girls"),
-    (r"\b(nam nu|unisex|cho ca nam va nu|dung chung)\b", "Unisex"),
-    (r"\b(nam|cho nam|dan ong|phaimanh|men)\b", "Men"),
-    (r"\b(nu|cho nu|phu nu|chi em|phaidep|women)\b", "Women"),
-]
+class QueryParser:
+    def __init__(
+        self,
+        lexicon_path: str = "src/lexicon_vi.json",
+        brands_path: str = "src/brands.json",
+        families_path: str = "eval/families.json"
+    ):
+        # 1. Load Lexicon
+        lex_p = Path(lexicon_path)
+        if lex_p.exists():
+            with open(lex_p, "r", encoding="utf-8") as f:
+                self.lexicon = json.load(f)
+        else:
+            self.lexicon = {"genders": {}, "colours": {}, "article_types": {}, "usages": {}, "seasons": {}}
 
-# Colour keywords
-COLOUR_PATTERNS = [
-    (r"\b(xanh navy|navy blue|xanh than|navy)\b", ["Navy Blue"]),
-    (r"\b(xanh duong|blue|xanh lam|da troi)\b", ["Blue"]),
-    (r"\b(xanh la|green|xanh luc|xanh bo)\b", ["Green"]),
-    (r"\b(xanh ngoc|xanh mong ket|teal|turquoise)\b", ["Teal", "Turquoise Blue"]),
-    (r"\b(xanh reu|o liu|olive)\b", ["Olive"]),
-    (r"\b(den|black|huyen)\b", ["Black"]),
-    (r"\b(trang nga|off white)\b", ["Off White"]),
-    (r"\b(trang|white|bach)\b", ["White"]),
-    (r"\b(xam melange|xam tieu|grey melange)\b", ["Grey Melange"]),
-    (r"\b(xam than|charcoal)\b", ["Charcoal"]),
-    (r"\b(xam|ghi|grey|gray)\b", ["Grey"]),
-    (r"\b(do ruou|burgundy)\b", ["Burgundy"]),
-    (r"\b(do do|do hat de|maroon)\b", ["Maroon"]),
-    (r"\b(do|red)\b", ["Red"]),
-    (r"\b(hong canh sen|magenta)\b", ["Magenta"]),
-    (r"\b(hong dao|peach)\b", ["Peach"]),
-    (r"\b(hong|pink)\b", ["Pink"]),
-    (r"\b(vang kim|gold)\b", ["Gold"]),
-    (r"\b(vang mu tat|mustard)\b", ["Mustard"]),
-    (r"\b(vang|yellow)\b", ["Yellow"]),
-    (r"\b(tim oai huong|lavender)\b", ["Lavender"]),
-    (r"\b(tim|purple)\b", ["Purple"]),
-    (r"\b(nau ca phe|coffee brown)\b", ["Coffee Brown"]),
-    (r"\b(nau|brown)\b", ["Brown"]),
-    (r"\b(be|beige)\b", ["Beige"]),
-    (r"\b(kem|cream)\b", ["Cream"]),
-    (r"\b(kaki|khaki)\b", ["Khaki"]),
-    (r"\b(bac|silver)\b", ["Silver"]),
-    (r"\b(dong|bronze|copper)\b", ["Bronze", "Copper"]),
-    (r"\b(cam|orange)\b", ["Orange"]),
-    (r"\b(nhieu mau|multi)\b", ["Multi"]),
-]
+        # 2. Load Brands
+        b_p = Path(brands_path)
+        if b_p.exists():
+            with open(b_p, "r", encoding="utf-8") as f:
+                self.brands_dict = json.load(f)
+        else:
+            self.brands_dict = {}
 
-# ArticleType keywords
-ARTICLE_PATTERNS = [
-    # Áo
-    (r"\b(ao polo|polo)\b", ["Tshirts"]),
-    (r"\b(ao thun|ao phong|tshirt|t-shirt|tee)\b", ["Tshirts"]),
-    (r"\b(ao so mi|so mi|somi|shirt)\b", ["Shirts"]),
-    (r"\b(ao khoac gio|ao gio|ao mua|rain jacket)\b", ["Rain Jacket", "Jackets"]),
-    (r"\b(ao blazer|blazer)\b", ["Blazers", "Jackets"]),
-    (r"\b(ao khoac|jacket)\b", ["Jackets"]),
-    (r"\b(ao len|sweater)\b", ["Sweaters"]),
-    (r"\b(ao hoodie|ao ni|sweatshirt)\b", ["Sweatshirts"]),
-    (r"\b(ao sat nach|ao ba lo|ao may o|innerwear)\b", ["Innerwear Vests", "Tshirts"]),
-    (r"\b(ao kieu|blouse|top|croptop)\b", ["Tops"]),
-    (r"\b(ao kurta|kurta|kurti)\b", ["Kurtas", "Kurtis", "Kurta Sets"]),
-    (r"\b(ao saree|saree|sari)\b", ["Sarees"]),
-    # Quần & Váy
-    (r"\b(quan jean|quan bo|jeans?)\b", ["Jeans"]),
-    (r"\b(quan tay|quan au|quan cong so|trouser)\b", ["Trousers"]),
-    (r"\b(quan kaki|kaki)\b", ["Trousers"]),
-    (r"\b(quan short|quan dung|quan dui|short)\b", ["Shorts"]),
-    (r"\b(quan jogger|quan the thao|track pant)\b", ["Track Pants"]),
-    (r"\b(quan legging|quan bo om|legging|tight)\b", ["Leggings", "Tights"]),
-    (r"\b(quan lot boxer|boxer|trunk)\b", ["Boxers", "Trunk"]),
-    (r"\b(quan lot|brief)\b", ["Briefs"]),
-    (r"\b(chan vay chu a|chan vay xoe|chan vay|skirt)\b", ["Skirts"]),
-    (r"\b(vay dam|dam du tiec|dam suong|vay lien|dam|dress)\b", ["Dresses"]),
-    (r"\b(jumpsuit|do bay)\b", ["Jumpsuit"]),
-    (r"\b(do ngu|night suit|nightdress)\b", ["Night suits", "Nightdress"]),
-    # Giày dép
-    (r"\b(giay the thao|giay chay bo|giay da bong|giay tap gym|giay sneaker|sneaker)\b", ["Sports Shoes", "Casual Shoes"]),
-    (r"\b(giay tay|giay da bong|giay cong so|formal shoe)\b", ["Formal Shoes"]),
-    (r"\b(giay luoi|giay vai|giay canvas|giay casual|casual shoe)\b", ["Casual Shoes"]),
-    (r"\b(giay cao got|cao got|heel)\b", ["Heels"]),
-    (r"\b(giay bup be|giay bet|de bet|flat)\b", ["Flats"]),
-    (r"\b(giay bot|bot da|bootie|boot)\b", ["Booties"]),
-    (r"\b(sandal the thao|sports sandal)\b", ["Sports Sandals", "Sandals"]),
-    (r"\b(dep quai hau|sandal|xang dan)\b", ["Sandals"]),
-    (r"\b(dep kep|dep xo ngon|dep tong|flip flop)\b", ["Flip Flops"]),
-    (r"\b(tat vo|tat|vo|sock)\b", ["Socks"]),
-    # Túi balo ví
-    (r"\b(balo laptop|laptop bag)\b", ["Laptop Bag", "Backpacks"]),
-    (r"\b(balo du lich|balo phuot|balo|rucksack)\b", ["Backpacks", "Rucksacks"]),
-    (r"\b(tui xach tay|tui xach nu|tui cong so|handbag)\b", ["Handbags"]),
-    (r"\b(tui deo cheo|tui messenger|messenger bag)\b", ["Messenger Bag", "Handbags"]),
-    (r"\b(tui bao tu|tui deo hong|waist pouch)\b", ["Waist Pouch"]),
-    (r"\b(tui trong|duffel bag)\b", ["Duffel Bag"]),
-    (r"\b(vi cam tay|clutch)\b", ["Clutches", "Wallets"]),
-    (r"\b(vi da nam|vi da|bop tien|bop da|bop|vi|wallet)\b", ["Wallets"]),
-    # Đồng hồ & Phụ kiện
-    (r"\b(dong ho deo tay|dong ho|watch)\b", ["Watches"]),
-    (r"\b(kinh ram|kinh mat|mat kinh|kinh phi cong|sunglass)\b", ["Sunglasses"]),
-    (r"\b(that lung|day nit|day lung|belt)\b", ["Belts"]),
-    (r"\b(ca vat|cavat|tie)\b", ["Ties"]),
-    (r"\b(mu luoi trai|non ket|mu|non|cap)\b", ["Caps", "Hat"]),
-    (r"\b(khan quang|khan len|scarf|muffler)\b", ["Scarves", "Mufflers"]),
-    (r"\b(bong tai|hoa tai|khuyen tai|earring)\b", ["Earrings"]),
-    (r"\b(day chuyen|vong co|mat trai tim|necklace|pendant)\b", ["Necklace and Chains", "Pendant"]),
-    (r"\b(vong tay|lac tay|bangle|bracelet)\b", ["Bracelet", "Bangle"]),
-    (r"\b(nhan|ring)\b", ["Ring"]),
-]
+        # 3. Load Color Families
+        fam_p = Path(families_path)
+        self.color_to_family = {}
+        if fam_p.exists():
+            with open(fam_p, "r", encoding="utf-8") as f:
+                fam_data = json.load(f)
+                for fam_name, color_list in fam_data.get("colour_families", {}).items():
+                    for col in color_list:
+                        self.color_to_family[col.lower()] = fam_name
 
+        # Build longest-match-first match tables: (regex, canonical_value)
+        self.brand_patterns = self._compile_phrase_patterns(
+            {b: [b, remove_diacritics(b)] for b in self.brands_dict.keys()}
+        )
+        self.gender_patterns = self._compile_phrase_patterns(self.lexicon.get("genders", {}))
+        self.colour_patterns = self._compile_phrase_patterns(self.lexicon.get("colours", {}))
+        self.article_patterns = self._compile_phrase_patterns(self.lexicon.get("article_types", {}))
+        self.usage_patterns = self._compile_phrase_patterns(self.lexicon.get("usages", {}))
+        self.season_patterns = self._compile_phrase_patterns(self.lexicon.get("seasons", {}))
+
+    def _compile_phrase_patterns(self, mapping: Dict[str, List[str]]) -> List[Tuple[re.Pattern, str, str]]:
+        """
+        Creates regex patterns sorted by phrase length descending (longest match first).
+        Returns list of (compiled_pattern, canonical_key, raw_phrase)
+        """
+        entries = []
+        for canonical, phrases in mapping.items():
+            for p in phrases:
+                clean_p = remove_diacritics(p)
+                if clean_p:
+                    entries.append((clean_p, canonical))
+
+        # Deduplicate and sort by length descending (longest phrase first)
+        seen = set()
+        unique_entries = []
+        for phrase, canonical in entries:
+            key = (phrase, canonical)
+            if key not in seen:
+                seen.add(key)
+                unique_entries.append((phrase, canonical))
+
+        unique_entries.sort(key=lambda x: len(x[0].split()), reverse=True)
+
+        compiled = []
+        for phrase, canonical in unique_entries:
+            # Word boundary regex matching
+            escaped = re.escape(phrase)
+            pattern = re.compile(rf"(?:\b|^){escaped}(?:\b|$)", re.IGNORECASE)
+            compiled.append((pattern, canonical, phrase))
+
+        return compiled
+
+    def parse(self, query: str) -> Dict[str, Any]:
+        """
+        Parses a natural text query into structured fields.
+        """
+        raw_clean = remove_diacritics(query)
+        current_text = f" {raw_clean} "
+        
+        parsed_brand = None
+        parsed_gender = None
+        parsed_article_type = None
+        parsed_colour = None
+        parsed_usage = None
+        parsed_season = None
+
+        # Helper to blank out matched substring
+        def mask_match(match_obj, text):
+            start, end = match_obj.span()
+            return text[:start] + " " * (end - start) + text[end:]
+
+        # 1. Match Brand (longest match first)
+        for pat, canonical, phrase in self.brand_patterns:
+            m = pat.search(current_text)
+            if m:
+                parsed_brand = canonical
+                current_text = mask_match(m, current_text)
+                break
+
+        # 2. Match Article Type (longest match first)
+        for pat, canonical, phrase in self.article_patterns:
+            m = pat.search(current_text)
+            if m:
+                parsed_article_type = canonical
+                current_text = mask_match(m, current_text)
+                break
+
+        # 3. Match Gender (longest match first)
+        for pat, canonical, phrase in self.gender_patterns:
+            m = pat.search(current_text)
+            if m:
+                parsed_gender = canonical
+                current_text = mask_match(m, current_text)
+                break
+
+        # 4. Match Colour (longest match first)
+        for pat, canonical, phrase in self.colour_patterns:
+            m = pat.search(current_text)
+            if m:
+                parsed_colour = canonical
+                current_text = mask_match(m, current_text)
+                break
+
+        # 5. Match Usage
+        for pat, canonical, phrase in self.usage_patterns:
+            m = pat.search(current_text)
+            if m:
+                parsed_usage = canonical
+                current_text = mask_match(m, current_text)
+                break
+
+        # 6. Match Season
+        for pat, canonical, phrase in self.season_patterns:
+            m = pat.search(current_text)
+            if m:
+                parsed_season = canonical
+                current_text = mask_match(m, current_text)
+                break
+
+        # Map colour family
+        colour_family = None
+        if parsed_colour:
+            colour_family = self.color_to_family.get(parsed_colour.lower(), parsed_colour)
+
+        # Unparsed tokens
+        clean_remaining = re.sub(r"\s+", " ", current_text).strip()
+        unparsed_tokens = [t for t in clean_remaining.split() if t]
+
+        # Confidence calculation
+        total_tokens = len(raw_clean.split())
+        if total_tokens == 0:
+            confidence = 0.0
+        else:
+            matched_tokens = max(0, total_tokens - len(unparsed_tokens))
+            coverage_ratio = matched_tokens / total_tokens
+            
+            # Weighted importance of key fields
+            field_weight = 0.0
+            if parsed_article_type:
+                field_weight += 0.45
+            if parsed_gender:
+                field_weight += 0.20
+            if parsed_colour:
+                field_weight += 0.20
+            if parsed_brand:
+                field_weight += 0.15
+                
+            confidence = round(0.4 * coverage_ratio + 0.6 * min(1.0, field_weight), 4)
+            if not parsed_article_type and not parsed_gender and not parsed_colour and not parsed_brand:
+                confidence = 0.0
+
+        return {
+            "raw_query": query,
+            "articleType": parsed_article_type,
+            "gender": parsed_gender,
+            "baseColour": parsed_colour,
+            "colour_family": colour_family,
+            "usage": parsed_usage,
+            "season": parsed_season,
+            "brand": parsed_brand,
+            "unparsed_tokens": unparsed_tokens,
+            "confidence": confidence
+        }
+
+# Module-level instance for simple calling
+_default_parser = None
 
 def parse_query(query: str) -> Dict[str, Any]:
-    """
-    Parses a search query and extracts structured attributes:
-    - articleType: list of possible articleType strings or None
-    - gender: string (Men/Women/Boys/Girls/Unisex) or None
-    - colour: list of baseColour strings or None
-    """
-    clean_q = remove_diacritics(query.lower()).strip()
+    global _default_parser
+    if _default_parser is None:
+        _default_parser = QueryParser()
+    return _default_parser.parse(query)
 
-    # 1. Extract Gender
-    parsed_gender = None
-    for pattern, gen in GENDER_PATTERNS:
-        if re.search(pattern, clean_q):
-            parsed_gender = gen
-            break
-
-    # 2. Extract Colour
-    parsed_colour = None
-    for pattern, cols in COLOUR_PATTERNS:
-        if re.search(pattern, clean_q):
-            parsed_colour = cols
-            break
-
-    # 3. Extract ArticleType
-    parsed_article_types = None
-    for pattern, arts in ARTICLE_PATTERNS:
-        if re.search(pattern, clean_q):
-            parsed_article_types = arts
-            break
-
-    return {
-        "articleType": parsed_article_types,
-        "gender": parsed_gender,
-        "colour": parsed_colour,
-        "raw_query": query
-    }
+if __name__ == "__main__":
+    import sys
+    sys.stdout.reconfigure(encoding='utf-8')
+    parser = QueryParser()
+    test_queries = [
+        "áo thun Puma nam màu đen",
+        "giày thể thao Nike chạy bộ màu xanh navy",
+        "váy đầm dự tiệc nữ màu đỏ",
+        "đồng hồ Casio nam dây bạc công sở",
+        "quần jean nữ ống rộng màu xanh nhạt",
+        "United Colors of Benetton áo sơ mi nam trắng",
+        "túi xách da nữ Lino Perros màu be",
+        "random nonsense từ lạ hoắc xyz123"
+    ]
+    print("\n--- TEST QUERY PARSER SAMPLES ---")
+    for q in test_queries:
+        res = parser.parse(q)
+        print(f"\nQuery: '{q}'")
+        print(f"  articleType  : {res['articleType']}")
+        print(f"  gender       : {res['gender']}")
+        print(f"  baseColour   : {res['baseColour']} (family: {res['colour_family']})")
+        print(f"  brand        : {res['brand']}")
+        print(f"  usage/season : {res['usage']} / {res['season']}")
+        print(f"  unparsed     : {res['unparsed_tokens']}")
+        print(f"  confidence   : {res['confidence']}")

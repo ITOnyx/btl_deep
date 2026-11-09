@@ -57,3 +57,16 @@ scope:
 embedding:
   batch_size: 64
   fp16: true
+
+inference:
+  phase: "3e"
+  gamma: 0.3                      # winning parameter from validation grid
+  alpha: 0.5                      # winning parameter from validation grid
+  rrf_k: 60                       # fixed reciprocal rank fusion parameter
+  min_candidates: 20              # multi-level relaxation threshold
+  enable_parser: true
+  enable_bm25: true
+  enable_text_fusion: true
+  filter_mode: "relaxed"          # "relaxed" | "soft" | "hard" | "none"
+  scoring_mode: "mean_centered"   # mu_shared centering
+

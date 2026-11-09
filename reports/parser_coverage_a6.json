@@ -1,0 +1,92 @@
+{
+  "Q2": {
+    "total_queries": 61,
+    "article_type_accuracy": 100.0,
+    "gender_accuracy": 100.0,
+    "colour_accuracy": 100.0,
+    "all_three_correct": 100.0,
+    "nothing_parsed_count": 0,
+    "nothing_parsed_percent": 0.0,
+    "frequent_unparsed_tokens": [
+      [
+        "mau",
+        9
+      ],
+      [
+        "ao",
+        1
+      ]
+    ]
+  },
+  "Q3": {
+    "total_queries": 100,
+    "article_type_accuracy": 92.0,
+    "gender_accuracy": 86.0,
+    "colour_accuracy": 86.0,
+    "brand_extracted_count": 0,
+    "nothing_parsed_count": 0,
+    "nothing_parsed_percent": 0.0,
+    "frequent_unparsed_tokens": [
+      [
+        "da",
+        11
+      ],
+      [
+        "co",
+        8
+      ],
+      [
+        "di",
+        8
+      ],
+      [
+        "mat",
+        8
+      ],
+      [
+        "day",
+        6
+      ],
+      [
+        "tron",
+        5
+      ],
+      [
+        "de",
+        5
+      ],
+      [
+        "dung",
+        5
+      ],
+      [
+        "bo",
+        5
+      ],
+      [
+        "lam",
+        4
+      ],
+      [
+        "ao",
+        4
+      ],
+      [
+        "chong",
+        4
+      ],
+      [
+        "tinh",
+        4
+      ],
+      [
+        "sang",
+        4
+      ],
+      [
+        "tay",
+        3
+      ]
+    ]
+  }
+}

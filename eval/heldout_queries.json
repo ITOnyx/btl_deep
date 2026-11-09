@@ -1,0 +1,396 @@
+[
+    {
+        "id": "x001",
+        "group": "simple",
+        "query": "sơ mi nam xanh navy",
+        "spec": {
+            "articleType": [
+                "Shirts"
+            ],
+            "gender": "Men",
+            "colour": [
+                "Navy Blue"
+            ]
+        },
+        "note": ""
+    },
+    {
+        "id": "x002",
+        "group": "simple",
+        "query": "áo thun nữ màu hồng",
+        "spec": {
+            "articleType": [
+                "Tshirts",
+                "Tops"
+            ],
+            "gender": "Women",
+            "colour": [
+                "Pink"
+            ]
+        },
+        "note": ""
+    },
+    {
+        "id": "x003",
+        "group": "simple",
+        "query": "quần jean nam màu xanh",
+        "spec": {
+            "articleType": [
+                "Jeans"
+            ],
+            "gender": "Men",
+            "colour": [
+                "Blue",
+                "Navy Blue"
+            ]
+        },
+        "note": ""
+    },
+    {
+        "id": "x004",
+        "group": "simple",
+        "query": "giày cao gót nữ màu đen",
+        "spec": {
+            "articleType": [
+                "Heels"
+            ],
+            "gender": "Women",
+            "colour": [
+                "Black"
+            ]
+        },
+        "note": ""
+    },
+    {
+        "id": "x005",
+        "group": "simple",
+        "query": "túi xách nữ màu đỏ",
+        "spec": {
+            "articleType": [
+                "Handbags"
+            ],
+            "gender": "Women",
+            "colour": [
+                "Red"
+            ]
+        },
+        "note": ""
+    },
+    {
+        "id": "x006",
+        "group": "simple",
+        "query": "dép xỏ ngón nam màu đen",
+        "spec": {
+            "articleType": [
+                "Flip Flops"
+            ],
+            "gender": "Men",
+            "colour": [
+                "Black"
+            ]
+        },
+        "note": ""
+    },
+    {
+        "id": "x007",
+        "group": "simple_unaccented",
+        "query": "ao thun nam mau xam",
+        "spec": {
+            "articleType": [
+                "Tshirts"
+            ],
+            "gender": "Men",
+            "colour": [
+                "Grey"
+            ]
+        },
+        "note": "không dấu"
+    },
+    {
+        "id": "x008",
+        "group": "simple_unaccented",
+        "query": "giay the thao nam mau den",
+        "spec": {
+            "articleType": [
+                "Sports Shoes"
+            ],
+            "gender": "Men",
+            "colour": [
+                "Black"
+            ]
+        },
+        "note": "không dấu"
+    },
+    {
+        "id": "x009",
+        "group": "simple_unaccented",
+        "query": "vay nu mau xanh la",
+        "spec": {
+            "articleType": [
+                "Dresses",
+                "Skirts"
+            ],
+            "gender": "Women",
+            "colour": [
+                "Green"
+            ]
+        },
+        "note": "không dấu; 'váy' gồm đầm và chân váy"
+    },
+    {
+        "id": "x010",
+        "group": "simple_unaccented",
+        "query": "quan short nu mau trang",
+        "spec": {
+            "articleType": [
+                "Shorts"
+            ],
+            "gender": "Women",
+            "colour": [
+                "White"
+            ]
+        },
+        "note": "không dấu"
+    },
+    {
+        "id": "x011",
+        "group": "brand",
+        "query": "áo thun Puma nam",
+        "spec": {
+            "articleType": [
+                "Tshirts"
+            ],
+            "gender": "Men",
+            "brand": "Puma"
+        },
+        "note": ""
+    },
+    {
+        "id": "x012",
+        "group": "brand",
+        "query": "giày Nike nam",
+        "spec": {
+            "articleType": [
+                "Sports Shoes",
+                "Casual Shoes"
+            ],
+            "gender": "Men",
+            "brand": "Nike"
+        },
+        "note": ""
+    },
+    {
+        "id": "x013",
+        "group": "brand",
+        "query": "giày Adidas nữ",
+        "spec": {
+            "articleType": [
+                "Sports Shoes",
+                "Casual Shoes"
+            ],
+            "gender": "Women",
+            "brand": "Adidas"
+        },
+        "note": "tên thương hiệu theo brands.json sau khi gộp biến thể"
+    },
+    {
+        "id": "x014",
+        "group": "brand",
+        "query": "đồng hồ Fossil nam",
+        "spec": {
+            "articleType": [
+                "Watches"
+            ],
+            "gender": "Men",
+            "brand": "Fossil"
+        },
+        "note": ""
+    },
+    {
+        "id": "x015",
+        "group": "brand",
+        "query": "áo kurta Fabindia nam",
+        "spec": {
+            "articleType": [
+                "Kurtas"
+            ],
+            "gender": "Men",
+            "brand": "Fabindia"
+        },
+        "note": ""
+    },
+    {
+        "id": "x016",
+        "group": "brand",
+        "query": "giày cao gót Catwalk",
+        "spec": {
+            "articleType": [
+                "Heels"
+            ],
+            "gender": "Women",
+            "brand": "Catwalk"
+        },
+        "note": ""
+    },
+    {
+        "id": "x017",
+        "group": "brand",
+        "query": "túi xách Lavie nữ",
+        "spec": {
+            "articleType": [
+                "Handbags"
+            ],
+            "gender": "Women",
+            "brand": "Lavie"
+        },
+        "note": ""
+    },
+    {
+        "id": "x018",
+        "group": "brand",
+        "query": "áo thun Benetton nam",
+        "spec": {
+            "articleType": [
+                "Tshirts"
+            ],
+            "gender": "Men",
+            "brand": "Benetton"
+        },
+        "note": "gồm cả nhãn United Colors of Benetton nếu đã gộp"
+    },
+    {
+        "id": "x019",
+        "group": "extra_words",
+        "query": "áo sơ mi nam dài tay đi làm",
+        "spec": {
+            "articleType": [
+                "Shirts"
+            ],
+            "gender": "Men"
+        },
+        "note": "dài tay và đi làm không chấm tự động"
+    },
+    {
+        "id": "x020",
+        "group": "extra_words",
+        "query": "giày chạy bộ nam",
+        "spec": {
+            "articleType": [
+                "Sports Shoes"
+            ],
+            "gender": "Men"
+        },
+        "note": "chạy bộ chấm thêm bằng tay"
+    },
+    {
+        "id": "x021",
+        "group": "extra_words",
+        "query": "áo khoác nữ mùa đông",
+        "spec": {
+            "articleType": [
+                "Jackets"
+            ],
+            "gender": "Women"
+        },
+        "note": "mùa đông không chấm tự động"
+    },
+    {
+        "id": "x022",
+        "group": "extra_words",
+        "query": "đầm nữ đi tiệc màu đen",
+        "spec": {
+            "articleType": [
+                "Dresses"
+            ],
+            "gender": "Women",
+            "colour": [
+                "Black"
+            ]
+        },
+        "note": "đi tiệc không chấm tự động"
+    },
+    {
+        "id": "x023",
+        "group": "extra_words",
+        "query": "quần short nam thể thao màu xám",
+        "spec": {
+            "articleType": [
+                "Shorts"
+            ],
+            "gender": "Men",
+            "colour": [
+                "Grey"
+            ]
+        },
+        "note": "thể thao không chấm tự động"
+    },
+    {
+        "id": "x024",
+        "group": "extra_words",
+        "query": "ba lô đi học màu xanh dương",
+        "spec": {
+            "articleType": [
+                "Backpacks"
+            ],
+            "colour": [
+                "Blue",
+                "Navy Blue"
+            ]
+        },
+        "note": "đi học không chấm tự động"
+    },
+    {
+        "id": "x025",
+        "group": "vague",
+        "query": "đồ đi biển",
+        "spec": null,
+        "note": "chỉ chấm tay"
+    },
+    {
+        "id": "x026",
+        "group": "vague",
+        "query": "quà tặng cho bố",
+        "spec": null,
+        "note": "chỉ chấm tay"
+    },
+    {
+        "id": "x027",
+        "group": "vague",
+        "query": "đồ tập gym",
+        "spec": null,
+        "note": "chỉ chấm tay"
+    },
+    {
+        "id": "x028",
+        "group": "vague",
+        "query": "đồ mặc ở nhà cho nữ",
+        "spec": null,
+        "note": "chỉ chấm tay"
+    },
+    {
+        "id": "x029",
+        "group": "rare",
+        "query": "cà vạt nam",
+        "spec": {
+            "articleType": [
+                "Ties"
+            ],
+            "gender": "Men"
+        },
+        "note": "nhóm hiếm"
+    },
+    {
+        "id": "x030",
+        "group": "rare",
+        "query": "khăn quàng cổ nữ",
+        "spec": {
+            "articleType": [
+                "Scarves",
+                "Mufflers",
+                "Stoles"
+            ],
+            "gender": "Women"
+        },
+        "note": "nhóm hiếm"
+    }
+]

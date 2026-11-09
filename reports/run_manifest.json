@@ -141,5 +141,52 @@
       "report_addendum_path": "reports/phase3d_addendum.md",
       "report_addendum_sha256": "4ddd2f7a464434edefe918393c722ae00255fb2fdca64006a2e7dcf9062f2600"
     }
+  },
+  "phase3e_frozen_assets": {
+    "timestamp": "2026-11-09T09:38:46",
+    "src/lexicon_vi.json": "f994b9407b2918cee5bc64ee995cb93f4d05953f16852e988e2b00284683a696",
+    "src/brands.json": "99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96",
+    "src/query_parser.py": "63e1487d79ddf5cec6d7c22273018b46352c8f30b39a9d3d59580e086c86e52b",
+    "eval/heldout_queries.json": "1301a941a8c91556835cbd3e23fb521d2711bb3582c036da76f774fa5ccb0f65",
+    "eval/q5_brand.json": "ad9fe474b06ee2708e5ec7687f19bab68c740fac8f3d28ca0dce1878ecb89fb8"
+  },
+  "phase3e_eval": {
+    "timestamp": "2026-11-09T10:23:10",
+    "frozen_hyperparameters": {
+      "gamma_soft_bonus": 0.3,
+      "alpha_text_fusion": 0.5,
+      "rrf_k": 60,
+      "min_candidates": 20
+    },
+    "key_metrics": {
+      "q1b_paired_r10_model_thuan_g_test": 0.1225,
+      "q1b_paired_r10_soft_scoring_g_test": 0.8271,
+      "q1b_paired_mrr_soft_scoring_g_test": 0.4667,
+      "q1b_paired_medrank_soft_scoring_g_test": 3.0,
+      "q1b_paired_r10_soft_scoring_g_full": 0.2326,
+      "q2_attribute_p10_full_system_g_test": 0.723,
+      "q2_attribute_ap10_full_system_g_full": 1.0,
+      "q3_handwritten_p10_full_system_g_test": 0.6184,
+      "q3_handwritten_ap10_full_system_g_full": 0.8755,
+      "q5_brand_p10_full_system_g_full": 0.8947,
+      "q5_brand_ap10_full_system_g_full": 0.9761,
+      "heldout_spec_ap10_full_system_g_full": 0.8786,
+      "heldout_unaccented_ap10_g_full": 0.9705,
+      "q4_visual_p10_knn_voting_g_full_cat_gen": 0.8479,
+      "q4_visual_p10_knn_voting_g_full_full_spec": 0.4819,
+      "latency_p50_ms_config_5": 57.98,
+      "latency_p95_ms_config_2_soft_scoring": 108.7,
+      "extra_ram_footprint_mb": 181.08
+    },
+    "files": {
+      "results_3e_path": "eval/results_3e.json",
+      "results_3e_sha256": "dfb701e8ad861b3f84ee56a2468d4ce59e005b62d91acd87a878a5ec19df08c2",
+      "report_3e_path": "reports/phase3e_inference_only.md",
+      "report_3e_sha256": "c58924dac25fb46d0a5487f9cdd379a98f67418f006769f982aae49175b8013d",
+      "text_embeddings_v2_path": "index_v2/text_embeddings_v2.npy",
+      "text_embeddings_v2_sha256": "e88989486a3aa8e7e7cebb4ea266419402d19659495b452d383c3909a125809d",
+      "manual_ratings_heldout_path": "eval/manual_ratings_heldout.csv",
+      "manual_ratings_heldout_sha256": "ed03caecacf6cd7864dd51b19874bccce1da0a9894e849d3e6afea9772d204ef"
+    }
   }
 }

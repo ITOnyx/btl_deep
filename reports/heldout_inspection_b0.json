@@ -1,0 +1,548 @@
+[
+  {
+    "id": "x001",
+    "group": "simple",
+    "query": "sơ mi nam xanh navy",
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "colour": [
+        "Navy Blue"
+      ]
+    },
+    "strict_full": 166,
+    "strict_test": 5,
+    "family_full": 822,
+    "family_test": 21,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x002",
+    "group": "simple",
+    "query": "áo thun nữ màu hồng",
+    "spec": {
+      "articleType": [
+        "Tshirts",
+        "Tops"
+      ],
+      "gender": "Women",
+      "colour": [
+        "Pink"
+      ]
+    },
+    "strict_full": 315,
+    "strict_test": 13,
+    "family_full": 437,
+    "family_test": 16,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x003",
+    "group": "simple",
+    "query": "quần jean nam màu xanh",
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "colour": [
+        "Blue",
+        "Navy Blue"
+      ]
+    },
+    "strict_full": 224,
+    "strict_test": 9,
+    "family_full": 224,
+    "family_test": 9,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x004",
+    "group": "simple",
+    "query": "giày cao gót nữ màu đen",
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "colour": [
+        "Black"
+      ]
+    },
+    "strict_full": 320,
+    "strict_test": 4,
+    "family_full": 470,
+    "family_test": 9,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x005",
+    "group": "simple",
+    "query": "túi xách nữ màu đỏ",
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "colour": [
+        "Red"
+      ]
+    },
+    "strict_full": 106,
+    "strict_test": 4,
+    "family_full": 177,
+    "family_test": 8,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x006",
+    "group": "simple",
+    "query": "dép xỏ ngón nam màu đen",
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": "Men",
+      "colour": [
+        "Black"
+      ]
+    },
+    "strict_full": 168,
+    "strict_test": 1,
+    "family_full": 168,
+    "family_test": 1,
+    "low_support": true,
+    "warnings": []
+  },
+  {
+    "id": "x007",
+    "group": "simple_unaccented",
+    "query": "ao thun nam mau xam",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "colour": [
+        "Grey"
+      ]
+    },
+    "strict_full": 536,
+    "strict_test": 15,
+    "family_full": 555,
+    "family_test": 16,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x008",
+    "group": "simple_unaccented",
+    "query": "giay the thao nam mau den",
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "colour": [
+        "Black"
+      ]
+    },
+    "strict_full": 440,
+    "strict_test": 6,
+    "family_full": 1156,
+    "family_test": 20,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x009",
+    "group": "simple_unaccented",
+    "query": "vay nu mau xanh la",
+    "spec": {
+      "articleType": [
+        "Dresses",
+        "Skirts"
+      ],
+      "gender": "Women",
+      "colour": [
+        "Green"
+      ]
+    },
+    "strict_full": 13,
+    "strict_test": 1,
+    "family_full": 15,
+    "family_test": 1,
+    "low_support": true,
+    "warnings": []
+  },
+  {
+    "id": "x010",
+    "group": "simple_unaccented",
+    "query": "quan short nu mau trang",
+    "spec": {
+      "articleType": [
+        "Shorts"
+      ],
+      "gender": "Women",
+      "colour": [
+        "White"
+      ]
+    },
+    "strict_full": 6,
+    "strict_test": 0,
+    "family_full": 8,
+    "family_test": 1,
+    "low_support": true,
+    "warnings": []
+  },
+  {
+    "id": "x011",
+    "group": "brand",
+    "query": "áo thun Puma nam",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "brand": "Puma"
+    },
+    "strict_full": 536,
+    "strict_test": 12,
+    "family_full": 536,
+    "family_test": 12,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x012",
+    "group": "brand",
+    "query": "giày Nike nam",
+    "spec": {
+      "articleType": [
+        "Sports Shoes",
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "brand": "Nike"
+    },
+    "strict_full": 550,
+    "strict_test": 16,
+    "family_full": 550,
+    "family_test": 16,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x013",
+    "group": "brand",
+    "query": "giày Adidas nữ",
+    "spec": {
+      "articleType": [
+        "Sports Shoes",
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "brand": "Adidas"
+    },
+    "strict_full": 132,
+    "strict_test": 9,
+    "family_full": 132,
+    "family_test": 9,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x014",
+    "group": "brand",
+    "query": "đồng hồ Fossil nam",
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "brand": "Fossil"
+    },
+    "strict_full": 105,
+    "strict_test": 3,
+    "family_full": 105,
+    "family_test": 3,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x015",
+    "group": "brand",
+    "query": "áo kurta Fabindia nam",
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Men",
+      "brand": "Fabindia"
+    },
+    "strict_full": 74,
+    "strict_test": 3,
+    "family_full": 75,
+    "family_test": 3,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x016",
+    "group": "brand",
+    "query": "giày cao gót Catwalk",
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "brand": "Catwalk"
+    },
+    "strict_full": 607,
+    "strict_test": 22,
+    "family_full": 671,
+    "family_test": 23,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x017",
+    "group": "brand",
+    "query": "túi xách Lavie nữ",
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "brand": "Lavie"
+    },
+    "strict_full": 0,
+    "strict_test": 0,
+    "family_full": 0,
+    "family_test": 0,
+    "low_support": true,
+    "warnings": [
+      "brand 'Lavie' not in catalog"
+    ]
+  },
+  {
+    "id": "x018",
+    "group": "brand",
+    "query": "áo thun Benetton nam",
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "brand": "Benetton"
+    },
+    "strict_full": 209,
+    "strict_test": 7,
+    "family_full": 209,
+    "family_test": 7,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x019",
+    "group": "extra_words",
+    "query": "áo sơ mi nam dài tay đi làm",
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men"
+    },
+    "strict_full": 2597,
+    "strict_test": 90,
+    "family_full": 2597,
+    "family_test": 90,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x020",
+    "group": "extra_words",
+    "query": "giày chạy bộ nam",
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men"
+    },
+    "strict_full": 1460,
+    "strict_test": 39,
+    "family_full": 3684,
+    "family_test": 106,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x021",
+    "group": "extra_words",
+    "query": "áo khoác nữ mùa đông",
+    "spec": {
+      "articleType": [
+        "Jackets"
+      ],
+      "gender": "Women"
+    },
+    "strict_full": 56,
+    "strict_test": 1,
+    "family_full": 56,
+    "family_test": 1,
+    "low_support": true,
+    "warnings": []
+  },
+  {
+    "id": "x022",
+    "group": "extra_words",
+    "query": "đầm nữ đi tiệc màu đen",
+    "spec": {
+      "articleType": [
+        "Dresses"
+      ],
+      "gender": "Women",
+      "colour": [
+        "Black"
+      ]
+    },
+    "strict_full": 103,
+    "strict_test": 3,
+    "family_full": 103,
+    "family_test": 3,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x023",
+    "group": "extra_words",
+    "query": "quần short nam thể thao màu xám",
+    "spec": {
+      "articleType": [
+        "Shorts"
+      ],
+      "gender": "Men",
+      "colour": [
+        "Grey"
+      ]
+    },
+    "strict_full": 45,
+    "strict_test": 3,
+    "family_full": 52,
+    "family_test": 3,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x024",
+    "group": "extra_words",
+    "query": "ba lô đi học màu xanh dương",
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "colour": [
+        "Blue",
+        "Navy Blue"
+      ]
+    },
+    "strict_full": 148,
+    "strict_test": 10,
+    "family_full": 168,
+    "family_test": 11,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x025",
+    "group": "vague",
+    "query": "đồ đi biển",
+    "spec": null,
+    "strict_full": 0,
+    "strict_test": 0,
+    "family_full": 0,
+    "family_test": 0,
+    "low_support": true,
+    "note": "spec_is_null"
+  },
+  {
+    "id": "x026",
+    "group": "vague",
+    "query": "quà tặng cho bố",
+    "spec": null,
+    "strict_full": 0,
+    "strict_test": 0,
+    "family_full": 0,
+    "family_test": 0,
+    "low_support": true,
+    "note": "spec_is_null"
+  },
+  {
+    "id": "x027",
+    "group": "vague",
+    "query": "đồ tập gym",
+    "spec": null,
+    "strict_full": 0,
+    "strict_test": 0,
+    "family_full": 0,
+    "family_test": 0,
+    "low_support": true,
+    "note": "spec_is_null"
+  },
+  {
+    "id": "x028",
+    "group": "vague",
+    "query": "đồ mặc ở nhà cho nữ",
+    "spec": null,
+    "strict_full": 0,
+    "strict_test": 0,
+    "family_full": 0,
+    "family_test": 0,
+    "low_support": true,
+    "note": "spec_is_null"
+  },
+  {
+    "id": "x029",
+    "group": "rare",
+    "query": "cà vạt nam",
+    "spec": {
+      "articleType": [
+        "Ties"
+      ],
+      "gender": "Men"
+    },
+    "strict_full": 216,
+    "strict_test": 7,
+    "family_full": 216,
+    "family_test": 7,
+    "low_support": false,
+    "warnings": []
+  },
+  {
+    "id": "x030",
+    "group": "rare",
+    "query": "khăn quàng cổ nữ",
+    "spec": {
+      "articleType": [
+        "Scarves",
+        "Mufflers",
+        "Stoles"
+      ],
+      "gender": "Women"
+    },
+    "strict_full": 163,
+    "strict_test": 7,
+    "family_full": 163,
+    "family_test": 7,
+    "low_support": false,
+    "warnings": []
+  }
+]

@@ -1,0 +1,1052 @@
+{
+  "genders": {
+    "Boys": [
+      "be trai",
+      "con trai",
+      "be nam",
+      "tre em nam",
+      "cau be",
+      "thieu nhi nam",
+      "boys",
+      "boy"
+    ],
+    "Girls": [
+      "be gai",
+      "con gai",
+      "be nu",
+      "tre em nu",
+      "co be",
+      "thieu nhi nu",
+      "girls",
+      "girl"
+    ],
+    "Unisex": [
+      "unisex",
+      "nam nu",
+      "nam va nu",
+      "cho ca nam va nu",
+      "dung chung",
+      "ca hai gioi",
+      "moi gioi tinh"
+    ],
+    "Men": [
+      "nam",
+      "dan ong",
+      "cho nam",
+      "phai manh",
+      "canh may rau",
+      "quy ong",
+      "men",
+      "mens",
+      "male"
+    ],
+    "Women": [
+      "nu",
+      "phu nu",
+      "cho nu",
+      "phai dep",
+      "chi em",
+      "quy co",
+      "women",
+      "womens",
+      "female",
+      "phai yeu"
+    ]
+  },
+  "colours": {
+    "Black": [
+      "den",
+      "mau den",
+      "sac den",
+      "huyen",
+      "black",
+      "den tuyen"
+    ],
+    "White": [
+      "trang",
+      "mau trang",
+      "sac trang",
+      "bach",
+      "white",
+      "trang tinh"
+    ],
+    "Blue": [
+      "xanh duong",
+      "xanh lam",
+      "xanh bien",
+      "blue",
+      "mau xanh bien",
+      "xanh da troi",
+      "xanh nhat",
+      "xanh troi",
+      "mau xanh"
+    ],
+    "Brown": [
+      "nau",
+      "mau nau",
+      "sac nau",
+      "brown",
+      "nau dat",
+      "nau sam"
+    ],
+    "Grey": [
+      "xam",
+      "mau xam",
+      "ghi",
+      "mau ghi",
+      "grey",
+      "gray"
+    ],
+    "Red": [
+      "do",
+      "mau do",
+      "sac do",
+      "red",
+      "do tuoi",
+      "do tham"
+    ],
+    "Green": [
+      "xanh la",
+      "xanh la cay",
+      "xanh luc",
+      "green",
+      "mau xanh la",
+      "xanh tuoi"
+    ],
+    "Navy Blue": [
+      "xanh navy",
+      "navy",
+      "xanh than",
+      "navy blue",
+      "xanh tim than",
+      "mau xanh navy"
+    ],
+    "Pink": [
+      "hong",
+      "mau hong",
+      "sac hong",
+      "pink",
+      "hong phan",
+      "hong nhe"
+    ],
+    "Purple": [
+      "tim",
+      "mau tim",
+      "sac tim",
+      "purple",
+      "tim hue",
+      "tim dam"
+    ],
+    "Silver": [
+      "bac",
+      "mau bac",
+      "anh bac",
+      "silver",
+      "mau anh bac",
+      "sang bac"
+    ],
+    "Yellow": [
+      "vang",
+      "mau vang",
+      "sac vang",
+      "yellow",
+      "vang tuoi",
+      "vang chanh"
+    ],
+    "Beige": [
+      "be",
+      "mau be",
+      "sac be",
+      "beige",
+      "be sang",
+      "mau cat"
+    ],
+    "Gold": [
+      "vang kim",
+      "vang dong",
+      "gold",
+      "anh kim",
+      "mau vang kim",
+      "mau vang gold"
+    ],
+    "Maroon": [
+      "do hat de",
+      "do do",
+      "maroon",
+      "mau hat de",
+      "do sam",
+      "do booc do"
+    ],
+    "Orange": [
+      "cam",
+      "mau cam",
+      "sac cam",
+      "orange",
+      "cam tuoi",
+      "cam sang"
+    ],
+    "Olive": [
+      "xanh o liu",
+      "o liu",
+      "olive",
+      "xanh olive",
+      "mau o liu",
+      "xanh reu nhe"
+    ],
+    "Multi": [
+      "nhieu mau",
+      "hoa tiet nhieu mau",
+      "da sac",
+      "multi",
+      "nhieu mau sac",
+      "hoa van"
+    ],
+    "Cream": [
+      "kem",
+      "mau kem",
+      "sac kem",
+      "cream",
+      "trang kem",
+      "kem nhe"
+    ],
+    "Steel": [
+      "xam thep",
+      "mau thep",
+      "steel",
+      "xanh thep",
+      "mau xam thep",
+      "thep"
+    ],
+    "Charcoal": [
+      "xam than",
+      "than chi",
+      "charcoal",
+      "mau xam than",
+      "den than",
+      "xam dam"
+    ],
+    "Off White": [
+      "trang nga",
+      "off white",
+      "trang sua",
+      "mau trang nga",
+      "trang duc",
+      "nga"
+    ],
+    "Grey Melange": [
+      "xam tieu",
+      "xam melange",
+      "grey melange",
+      "muoi tieu",
+      "mau xam tieu",
+      "ghi tieu"
+    ],
+    "Peach": [
+      "hong dao",
+      "mau dao",
+      "peach",
+      "mau hong dao",
+      "cam dao",
+      "sac dao"
+    ],
+    "Lavender": [
+      "oai huong",
+      "lavender",
+      "tim oai huong",
+      "tim nhat",
+      "mau lavender",
+      "hoa oai huong"
+    ],
+    "Khaki": [
+      "kaki",
+      "mau kaki",
+      "khaki",
+      "vang kaki",
+      "kaki sang",
+      "sac kaki"
+    ],
+    "Teal": [
+      "xanh mong ket",
+      "teal",
+      "mau mong ket",
+      "xanh lam pha luc",
+      "xanh co vit",
+      "mau teal"
+    ],
+    "Magenta": [
+      "canh sen",
+      "magenta",
+      "hong canh sen",
+      "do canh sen",
+      "mau magenta",
+      "tim sen"
+    ],
+    "Tan": [
+      "nau ram nang",
+      "tan",
+      "mau tan",
+      "nau sang",
+      "mau da bo",
+      "nau nhe"
+    ],
+    "Mustard": [
+      "vang mu tat",
+      "mu tat",
+      "mustard",
+      "vang mustard",
+      "mau mu tat",
+      "vang dam"
+    ],
+    "Bronze": [
+      "dong",
+      "mau dong",
+      "bronze",
+      "dong thau",
+      "anh dong",
+      "sac dong"
+    ],
+    "Copper": [
+      "dong do",
+      "copper",
+      "mau copper",
+      "mau dong do",
+      "anh dong do",
+      "dong nguyen chat"
+    ],
+    "Turquoise Blue": [
+      "xanh ngoc lam",
+      "turquoise",
+      "turquoise blue",
+      "ngoc lam",
+      "mau xanh ngoc",
+      "xanh ngoc"
+    ],
+    "Rust": [
+      "do ri set",
+      "ri set",
+      "rust",
+      "mau ri set",
+      "nau do",
+      "do gach"
+    ],
+    "Skin": [
+      "mau da",
+      "mau da nguoi",
+      "skin",
+      "tone da",
+      "sac da",
+      "mau nude da"
+    ],
+    "Burgundy": [
+      "do ruou",
+      "burgundy",
+      "do vang",
+      "mau burgundy",
+      "do ruou vang",
+      "do man"
+    ],
+    "Metallic": [
+      "anh kim",
+      "kim loai",
+      "metallic",
+      "mau anh kim",
+      "anh kim loai",
+      "sang kim"
+    ],
+    "Coffee Brown": [
+      "nau ca phe",
+      "coffee brown",
+      "ca phe",
+      "mau ca phe",
+      "nau dam",
+      "nau socola"
+    ],
+    "Sea Green": [
+      "xanh bien sau",
+      "sea green",
+      "xanh bien dam",
+      "mau sea green",
+      "xanh ngoc bien",
+      "xanh luc bien"
+    ],
+    "Mushroom Brown": [
+      "nau nam",
+      "mushroom brown",
+      "mau nau nam",
+      "nau xam dat",
+      "sac nau nam",
+      "nau tro"
+    ],
+    "Nude": [
+      "mau nude",
+      "nude",
+      "nude sang",
+      "sac nude",
+      "mau nude nhe",
+      "tong nude"
+    ],
+    "Rose": [
+      "hong canh hong",
+      "rose",
+      "mau hoa hong",
+      "hong rose",
+      "sac hoa hong",
+      "hong tham"
+    ],
+    "Taupe": [
+      "nau xam",
+      "taupe",
+      "mau taupe",
+      "xam nau",
+      "nau xam taupe",
+      "sac taupe"
+    ],
+    "Mauve": [
+      "tim hoa ca",
+      "mauve",
+      "hoa ca",
+      "mau mauve",
+      "tim mauve",
+      "tim nhat hoa ca"
+    ],
+    "Lime Green": [
+      "xanh chanh",
+      "lime green",
+      "xanh vo chanh",
+      "mau xanh chanh",
+      "xanh non",
+      "xanh chuoi"
+    ],
+    "Fluorescent Green": [
+      "xanh da quang",
+      "fluorescent green",
+      "xanh phat quang",
+      "xanh neon",
+      "da quang",
+      "mau xanh neon"
+    ],
+    "Unknown": [
+      "khong ro mau",
+      "mau khac",
+      "unknown colour",
+      "chua xac dinh"
+    ]
+  },
+  "article_types": {
+    "Tshirts": [
+      "ao thun",
+      "ao phong",
+      "ao polo",
+      "polo",
+      "tshirt",
+      "t-shirt",
+      "ao tee",
+      "ao coc tay",
+      "ao thun co tron",
+      "ao thun co be"
+    ],
+    "Shirts": [
+      "ao so mi",
+      "so mi",
+      "somi",
+      "shirt",
+      "ao so mi tay dai",
+      "ao so mi tay ngan",
+      "ao so mi cong so",
+      "ao chemise"
+    ],
+    "Casual Shoes": [
+      "giay thuong ngay",
+      "giay casual",
+      "giay vai",
+      "giay luoi",
+      "giay de bet",
+      "giay di choi",
+      "giay canvas",
+      "casual shoes",
+      "giay sneaker casual"
+    ],
+    "Watches": [
+      "dong ho",
+      "dong ho deo tay",
+      "watch",
+      "dong ho kim",
+      "dong ho dien tu",
+      "dong ho thoi trang",
+      "dong ho quai da",
+      "dong ho day kim loai"
+    ],
+    "Kurtas": [
+      "ao kurta",
+      "kurta",
+      "ao truyen thong an do",
+      "ao dai an do",
+      "trang phuc kurta",
+      "ao kieu kurta"
+    ],
+    "Sports Shoes": [
+      "giay the thao",
+      "giay chay bo",
+      "giay tap gym",
+      "giay sneaker",
+      "sneaker",
+      "giay running",
+      "giay the duc",
+      "sports shoes"
+    ],
+    "Handbags": [
+      "tui xach",
+      "tui xach tay",
+      "handbag",
+      "tui deo vai",
+      "tui cong so",
+      "tui tote",
+      "tui xach thoi trang",
+      "tui deo cheo"
+    ],
+    "Tops": [
+      "ao kieu",
+      "blouse",
+      "ao top",
+      "croptop",
+      "ao croptop",
+      "ao thoi trang",
+      "tops",
+      "ao kieu thoi trang"
+    ],
+    "Heels": [
+      "giay cao got",
+      "cao got",
+      "giay gót nhon",
+      "heels",
+      "giay got vuong",
+      "sandal cao got",
+      "guoc cao got",
+      "guoc nu"
+    ],
+    "Wallets": [
+      "vi",
+      "vi tien",
+      "bop tien",
+      "vi da",
+      "bop da",
+      "wallets",
+      "vi cam tay nam",
+      "vi dung tien"
+    ],
+    "Briefs": [
+      "quan lot",
+      "quan lot tam giac",
+      "quan sip",
+      "quan sip tam giac",
+      "briefs",
+      "quan lot nam",
+      "quan lot nu"
+    ],
+    "Sandals": [
+      "sandal",
+      "dep quai hau",
+      "xang dan",
+      "dep sandal",
+      "sandals",
+      "giay sandal",
+      "dep quai"
+    ],
+    "Sunglasses": [
+      "kinh ram",
+      "kinh mat",
+      "mat kinh",
+      "kinh ram thoi trang",
+      "sunglasses",
+      "kinh phi cong",
+      "kinh chong nang"
+    ],
+    "Flip Flops": [
+      "dep kep",
+      "dep xo ngon",
+      "dep tong",
+      "flip flop",
+      "flip flops",
+      "dep le",
+      "dep kep di bien"
+    ],
+    "Belts": [
+      "that lung",
+      "day nit",
+      "day lung",
+      "belts",
+      "that lung da",
+      "that lung cong so",
+      "day nit da",
+      "that lung khoa kim"
+    ],
+    "Backpacks": [
+      "balo",
+      "ba lo",
+      "balo hoc sinh",
+      "backpacks",
+      "balo du lich",
+      "balo di hoc",
+      "balo deo lung"
+    ],
+    "Socks": [
+      "tat",
+      "vo",
+      "tat vo",
+      "socks",
+      "tat co ngan",
+      "tat co cao",
+      "vo co ngan",
+      "tat the thao"
+    ],
+    "Formal Shoes": [
+      "giay tay",
+      "giay da",
+      "giay cong so",
+      "formal shoes",
+      "giay oxford",
+      "giay derby",
+      "giay da bong"
+    ],
+    "Flats": [
+      "giay bup be",
+      "giay de bet",
+      "giay bet",
+      "flats",
+      "giay luoi de bet",
+      "giay de bang",
+      "giay ballet"
+    ],
+    "Shorts": [
+      "quan short",
+      "quan dui",
+      "quan lung",
+      "shorts",
+      "quan ngo",
+      "quan short the thao",
+      "quan dui mac nha"
+    ],
+    "Bra": [
+      "ao nguc",
+      "ao chip",
+      "bra",
+      "ao nguc ren",
+      "ao nguc the thao",
+      "ao lot co dem"
+    ],
+    "Jeans": [
+      "quan jean",
+      "quan bo",
+      "quan jeans",
+      "jeans",
+      "quan bo ong dung",
+      "quan jean rach",
+      "quan bo skinny"
+    ],
+    "Sarees": [
+      "saree",
+      "sari",
+      "trang phuc saree",
+      "sarees",
+      "khan quan saree",
+      "vay saree an do"
+    ],
+    "Dresses": [
+      "vay dam",
+      "dam du tiec",
+      "vay lien",
+      "dam lien than",
+      "vay",
+      "dam",
+      "dresses",
+      "dam maxi",
+      "dam suong"
+    ],
+    "Earrings": [
+      "bong tai",
+      "khuyen tai",
+      "hoa tai",
+      "earrings",
+      "khuyen tai bac",
+      "bong tai dinh da"
+    ],
+    "Trousers": [
+      "quan tay",
+      "quan au",
+      "quan vai",
+      "trousers",
+      "quan cong so",
+      "quan kaki",
+      "quan au cong so"
+    ],
+    "Clutches": [
+      "vi cam tay",
+      "clutch",
+      "bop cam tay",
+      "vi du tiec",
+      "clutches",
+      "tui cam tay du tiec"
+    ],
+    "Sweatshirts": [
+      "ao ni",
+      "ao sweatshirt",
+      "ao ni chui dau",
+      "sweatshirt",
+      "sweatshirts",
+      "ao thun dai tay ni",
+      "ao ni the thao"
+    ],
+    "Track Pants": [
+      "quan jogger",
+      "quan the thao",
+      "quan track pant",
+      "track pants",
+      "quan gio",
+      "quan tap gym",
+      "quan the duc"
+    ],
+    "Sweaters": [
+      "ao len",
+      "ao len chui dau",
+      "sweater",
+      "sweaters",
+      "ao len dai tay",
+      "ao len mua dong",
+      "ao len det kim"
+    ],
+    "Caps": [
+      "mu luoi trai",
+      "non ket",
+      "mu",
+      "non",
+      "caps",
+      "non luoi trai",
+      "mu snapback",
+      "non the thao"
+    ],
+    "Jackets": [
+      "ao khoac",
+      "ao gio",
+      "jacket",
+      "jackets",
+      "ao khoac ngoai",
+      "ao khoac nhe",
+      "ao khoac the thao"
+    ],
+    "Innerwear Vests": [
+      "ao may o",
+      "ao ba lo",
+      "innerwear vests",
+      "ao sat nach",
+      "ao may o trang",
+      "ao lot ba lo"
+    ],
+    "Kurtis": [
+      "ao kurti",
+      "kurti",
+      "ao kurti ngan",
+      "kurtis",
+      "ao dai cach tan an do",
+      "ao kieu an do"
+    ],
+    "Tunics": [
+      "ao tunic",
+      "tunic",
+      "tunics",
+      "ao dang dai",
+      "ao kieu dang dai",
+      "ao suong dai"
+    ],
+    "Ties": [
+      "ca vat",
+      "cavat",
+      "ties",
+      "tie",
+      "caravat",
+      "ca vat cong so",
+      "ca vat lua"
+    ],
+    "Nightdress": [
+      "vay ngu",
+      "dam ngu",
+      "nightdress",
+      "ao ngu nu",
+      "vay ngu lua",
+      "dam ngu sexy"
+    ],
+    "Pendant": [
+      "mat day chuyen",
+      "pendant",
+      "mat day co",
+      "mat mat day",
+      "mat vong co",
+      "mat trang suc"
+    ],
+    "Night suits": [
+      "bo do ngu",
+      "do ngu",
+      "night suits",
+      "bo mac nha",
+      "bo do pijama",
+      "pijama",
+      "bo ngu nu"
+    ],
+    "Trunk": [
+      "quan lot trunk",
+      "quan sip dui",
+      "trunk",
+      "trunks",
+      "quan lot boxer ngan",
+      "quan sip nam trunk"
+    ],
+    "Capris": [
+      "quan capri",
+      "quan lửng qua goi",
+      "capris",
+      "capri",
+      "quan ngo nu",
+      "quan capri om"
+    ],
+    "Dupatta": [
+      "khan dupatta",
+      "dupatta",
+      "khan choang an do",
+      "khan choang dupatta",
+      "khan truyen thong an do"
+    ],
+    "Ring": [
+      "nhan",
+      "chiec nhan",
+      "ring",
+      "rings",
+      "nhan bac",
+      "nhan vang",
+      "nhan dinh da"
+    ],
+    "Scarves": [
+      "khan quang",
+      "khan quang co",
+      "scarves",
+      "scarf",
+      "khan choang",
+      "khan lua",
+      "khan giu am"
+    ],
+    "Leggings": [
+      "quan legging",
+      "legging",
+      "leggings",
+      "quan bo om",
+      "quan thun om",
+      "quan legging nu"
+    ],
+    "Skirts": [
+      "chan vay",
+      "vay ngan",
+      "skirt",
+      "skirts",
+      "chan vay chu a",
+      "chan vay xoe",
+      "chan vay xep ly"
+    ],
+    "Necklace and Chains": [
+      "day chuyen",
+      "vong co",
+      "necklace",
+      "chains",
+      "day chuyen bac",
+      "day chuyen vang",
+      "vong co nu"
+    ],
+    "Kurta Sets": [
+      "bo kurta",
+      "set kurta",
+      "kurta sets",
+      "bo quan ao kurta",
+      "set trang phuc an do"
+    ],
+    "Accessory Gift Set": [
+      "bo qua tang phu kien",
+      "set phu kien",
+      "accessory gift set",
+      "hop qua tang phu kien",
+      "bo gift set"
+    ],
+    "Cufflinks": [
+      "khuy mang set",
+      "cufflinks",
+      "khuy cai co tay",
+      "khuy cai ao so mi",
+      "nut cai mang set"
+    ],
+    "Stoles": [
+      "khan stole",
+      "stoles",
+      "khan choang nhe",
+      "khan quang dai",
+      "khan stole nu"
+    ],
+    "Duffel Bag": [
+      "tui trong",
+      "tui duffel",
+      "duffel bag",
+      "tui du lich trong",
+      "tui the thao trong"
+    ],
+    "Laptop Bag": [
+      "tui laptop",
+      "cap laptop",
+      "laptop bag",
+      "tui dung laptop",
+      "balo laptop",
+      "cap dung may tinh"
+    ],
+    "Bangle": [
+      "vong tay ban cung",
+      "bangle",
+      "vong tay cung",
+      "bangles",
+      "chiec vong cung",
+      "vong tay an do"
+    ],
+    "Bracelet": [
+      "lac tay",
+      "vong tay mem",
+      "bracelet",
+      "bracelets",
+      "vong tay thoi trang",
+      "lac tay nu",
+      "lac tay bac"
+    ],
+    "Sports Sandals": [
+      "sandal the thao",
+      "sports sandals",
+      "dep sandal the thao",
+      "xang dan the thao",
+      "sandal quai cheo"
+    ],
+    "Lounge Pants": [
+      "quan lounge",
+      "quan mac nha",
+      "lounge pants",
+      "quan thun mac nha",
+      "quan ngu dai"
+    ],
+    "Jewellery Set": [
+      "bo trang suc",
+      "set trang suc",
+      "jewellery set",
+      "bo nu trang",
+      "set vong co hoa tai"
+    ],
+    "Boxers": [
+      "quan boxer",
+      "quan sip dui rong",
+      "boxers",
+      "quan lot boxer",
+      "quan dui boxer",
+      "boxer nam"
+    ],
+    "Mobile Pouch": [
+      "tui dung dien thoai",
+      "mobile pouch",
+      "bao dung dien thoai",
+      "tui mini dien thoai",
+      "vi dung dien thoai"
+    ]
+  },
+  "usages": {
+    "Casual": [
+      "thuong ngay",
+      "dao pho",
+      "casual",
+      "mac hang ngay",
+      "di choi",
+      "phong cach thoai mai"
+    ],
+    "Sports": [
+      "the thao",
+      "tap gym",
+      "chay bo",
+      "da banh",
+      "da bong",
+      "sport",
+      "sports",
+      "van dong"
+    ],
+    "Formal": [
+      "cong so",
+      "di lam",
+      "trang trong",
+      "formal",
+      "lich su",
+      "hoi nghi",
+      "chuyen nghiep"
+    ],
+    "Ethnic": [
+      "truyen thong",
+      "dan toc",
+      "le hoi an do",
+      "ethnic",
+      "an do",
+      "le hoi truyen thong"
+    ],
+    "Party": [
+      "du tiec",
+      "da tiec",
+      "party",
+      "di tiec",
+      "da hoi",
+      "tiec tung",
+      "sang trong du tiec"
+    ],
+    "Smart Casual": [
+      "lich thiep thuong ngay",
+      "smart casual",
+      "ban cong so",
+      "tre trung lich su",
+      "thanh lich"
+    ],
+    "Travel": [
+      "du lich",
+      "di phuot",
+      "da ngoai",
+      "travel",
+      "picnic",
+      "da ngoai du lich"
+    ]
+  },
+  "seasons": {
+    "Summer": [
+      "mua he",
+      "he",
+      "mua nong",
+      "thoang mat",
+      "summer",
+      "ngay he"
+    ],
+    "Winter": [
+      "mua dong",
+      "dong",
+      "mua lanh",
+      "giu am",
+      "winter",
+      "ngay lanh"
+    ],
+    "Spring": [
+      "mua xuan",
+      "xuan",
+      "spring",
+      "ngay xuan",
+      "tiet xuan"
+    ],
+    "Fall": [
+      "mua thu",
+      "thu",
+      "se lanh",
+      "fall",
+      "autumn",
+      "ngay thu"
+    ]
+  }
+}
