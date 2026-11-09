@@ -54,7 +54,11 @@ class AttributeIndex:
         self.known_brands = {}
         if b_p.exists():
             with open(b_p, "r", encoding="utf-8") as f:
-                self.known_brands = json.load(f)
+                raw_b = json.load(f)
+                if isinstance(raw_b, dict) and "canonical_brands" in raw_b:
+                    self.known_brands = raw_b["canonical_brands"]
+                else:
+                    self.known_brands = raw_b
 
         # 4. Extract product brands
         self._extract_product_brands()

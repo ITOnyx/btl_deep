@@ -64,9 +64,20 @@ class QueryParser:
                         self.color_to_family[col.lower()] = fam_name
 
         # Build longest-match-first match tables: (regex, canonical_value)
-        self.brand_patterns = self._compile_phrase_patterns(
-            {b: [b, remove_diacritics(b)] for b in self.brands_dict.keys()}
-        )
+        brand_mapping = {}
+        if isinstance(self.brands_dict, dict) and "canonical_brands" in self.brands_dict:
+            canonicals = self.brands_dict.get("canonical_brands", {})
+            aliases = self.brands_dict.get("aliases", {})
+            for b in canonicals.keys():
+                brand_mapping[b] = [b, remove_diacritics(b)]
+            for alias, canon in aliases.items():
+                if canon not in brand_mapping:
+                    brand_mapping[canon] = [canon, remove_diacritics(canon)]
+                brand_mapping[canon].extend([alias, remove_diacritics(alias)])
+        else:
+            brand_mapping = {b: [b, remove_diacritics(b)] for b in self.brands_dict.keys()}
+
+        self.brand_patterns = self._compile_phrase_patterns(brand_mapping)
         self.gender_patterns = self._compile_phrase_patterns(self.lexicon.get("genders", {}))
         self.colour_patterns = self._compile_phrase_patterns(self.lexicon.get("colours", {}))
         self.article_patterns = self._compile_phrase_patterns(self.lexicon.get("article_types", {}))

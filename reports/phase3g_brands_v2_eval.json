@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "phase": "3g",
+    "task": "Evaluation of brands_v2 with approved aliases on Heldout & Q5",
+    "brands_v1_sha256": "99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96",
+    "brands_v2_sha256": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
+    "note": "v2 là sửa hậu nghiệm sau khi phát hiện heldout x018 thiếu alias; heldout không còn là tập ẩn hoàn toàn cho thay đổi này."
+  },
+  "heldout_brand_queries_detail": [
+    {
+      "id": "x011",
+      "query": "áo thun Puma nam",
+      "brand_spec": "Puma",
+      "r_strict_g_full": 536,
+      "v1_parsed_brand": "Puma",
+      "v2_parsed_brand": "Puma",
+      "v1_ap10": 1.0,
+      "v1_p10": 1.0,
+      "v2_ap10": 1.0,
+      "v2_p10": 1.0,
+      "status": "KHÔNG ĐỔI"
+    },
+    {
+      "id": "x012",
+      "query": "giày Nike nam",
+      "brand_spec": "Nike",
+      "r_strict_g_full": 550,
+      "v1_parsed_brand": "Nike",
+      "v2_parsed_brand": "Nike",
+      "v1_ap10": 0.4798,
+      "v1_p10": 0.7,
+      "v2_ap10": 0.4798,
+      "v2_p10": 0.7,
+      "status": "KHÔNG ĐỔI"
+    },
+    {
+      "id": "x013",
+      "query": "giày Adidas nữ",
+      "brand_spec": "Adidas",
+      "r_strict_g_full": 132,
+      "v1_parsed_brand": "ADIDAS",
+      "v2_parsed_brand": "ADIDAS",
+      "v1_ap10": 0.6242,
+      "v1_p10": 0.7,
+      "v2_ap10": 0.6242,
+      "v2_p10": 0.7,
+      "status": "KHÔNG ĐỔI"
+    },
+    {
+      "id": "x014",
+      "query": "đồng hồ Fossil nam",
+      "brand_spec": "Fossil",
+      "r_strict_g_full": 105,
+      "v1_parsed_brand": "Fossil",
+      "v2_parsed_brand": "Fossil",
+      "v1_ap10": 1.0,
+      "v1_p10": 1.0,
+      "v2_ap10": 1.0,
+      "v2_p10": 1.0,
+      "status": "KHÔNG ĐỔI"
+    },
+    {
+      "id": "x015",
+      "query": "áo kurta Fabindia nam",
+      "brand_spec": "Fabindia",
+      "r_strict_g_full": 74,
+      "v1_parsed_brand": "Fabindia",
+      "v2_parsed_brand": "Fabindia",
+      "v1_ap10": 1.0,
+      "v1_p10": 1.0,
+      "v2_ap10": 1.0,
+      "v2_p10": 1.0,
+      "status": "KHÔNG ĐỔI"
+    },
+    {
+      "id": "x016",
+      "query": "giày cao gót Catwalk",
+      "brand_spec": "Catwalk",
+      "r_strict_g_full": 607,
+      "v1_parsed_brand": "Catwalk",
+      "v2_parsed_brand": "Catwalk",
+      "v1_ap10": 1.0,
+      "v1_p10": 1.0,
+      "v2_ap10": 1.0,
+      "v2_p10": 1.0,
+      "status": "KHÔNG ĐỔI"
+    },
+    {
+      "id": "x017",
+      "query": "túi xách Lavie nữ",
+      "brand_spec": "Lavie",
+      "r_strict_g_full": 0,
+      "v1_parsed_brand": null,
+      "v2_parsed_brand": null,
+      "v1_ap10": 0.0,
+      "v1_p10": 0.0,
+      "v2_ap10": 0.0,
+      "v2_p10": 0.0,
+      "status": "KHÔNG ĐỔI"
+    },
+    {
+      "id": "x018",
+      "query": "áo thun Benetton nam",
+      "brand_spec": "Benetton",
+      "r_strict_g_full": 209,
+      "v1_parsed_brand": null,
+      "v2_parsed_brand": "United Colors of Benetton",
+      "v1_ap10": 0.5181,
+      "v1_p10": 0.6,
+      "v2_ap10": 1.0,
+      "v2_p10": 1.0,
+      "status": "CẢI THIỆN"
+    }
+  ],
+  "metrics_summary": {
+    "heldout_brand_group": {
+      "v1_frozen_3f": {
+        "ap10_all_8": 0.7028,
+        "p10_all_8": 0.75,
+        "ap10_valid_7": 0.8032,
+        "valid_brands_count": "7/8 (chỉ Lavie R=0)"
+      },
+      "v2_approved_aliases": {
+        "ap10_all_8": 0.763,
+        "p10_all_8": 0.8,
+        "ap10_valid_7": 0.872,
+        "valid_brands_count": "7/8 (chỉ Lavie R=0)"
+      },
+      "delta_ap10_all_8": 0.0602,
+      "delta_ap10_valid_7": 0.0688
+    },
+    "heldout_overall_spec": {
+      "v1_frozen_3f": {
+        "ap10": 0.9033,
+        "p10": 0.9077
+      },
+      "v2_approved_aliases": {
+        "ap10": 0.9218,
+        "p10": 0.9231
+      },
+      "delta_ap10": 0.0185
+    },
+    "q5_brand_queries": {
+      "v1_frozen_3f": {
+        "ap10": 0.9507,
+        "p10": 0.8733
+      },
+      "v2_approved_aliases": {
+        "ap10": 0.9507,
+        "p10": 0.8733
+      },
+      "delta_ap10": 0.0
+    },
+    "low_support_queries_g_full": {
+      "v1_frozen_3f": 3,
+      "v2_approved_aliases": 1,
+      "note": "Ở v1 có 2 câu hỗ trợ thấp (x017 Lavie: 0 sp, x018 Benetton: 0 sp do thiếu alias). Ở v2 chỉ còn duy nhất x017 (Lavie) là 0 sp."
+    }
+  }
+}

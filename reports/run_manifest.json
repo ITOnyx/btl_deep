@@ -219,11 +219,17 @@
     }
   },
   "phase3g_errata": {
-    "timestamp": "2026-11-09T12:15:47.389509",
+    "timestamp": "2026-11-09T12:22:59.757685",
     "seed": 42,
-    "status": "AWAITING_USER_APPROVAL_FOR_BRAND_ALIAS",
+    "status": "BRANDS_V2_APPLIED_POST_APPROVAL",
+    "brands_v1_sha256": "99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96",
+    "brands_v2_sha256": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
     "summary": {
-      "brand_audit_status": "AWAITING_APPROVAL",
+      "brand_audit_status": "APPROVED_AND_APPLIED_IN_V2",
+      "heldout_brand_valid_7_ap10_v1": 0.8032,
+      "heldout_brand_valid_7_ap10_v2": 0.872,
+      "heldout_x018_benetton_ap10_v1": 0.5181,
+      "heldout_x018_benetton_ap10_v2": 1.0,
       "latency_benchmark_status": "VERIFIED_RERUN",
       "fp16_ties_status": "ROOT_CAUSE_EXPLAINED",
       "maxlen_padding_status": "CONFIRMED_HYPOTHESIS_PADDING_LENGTH_DOMINATES",
@@ -233,13 +239,15 @@
     "files": {
       "reports/brand_audit_3g.json": "8e182ebd2386a705b7cd405020bf2775fc9a1160c8db90680703ea42ece6b8f7",
       "reports/brand_alias_proposal.csv": "879a2646fd081ec31990ea9e1664fe3df1b7e1e4b53b02f4e7c9020dfc4a0d4d",
+      "src/brands.json": "99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96",
+      "src/brands_v2.json": "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e",
+      "reports/phase3g_brands_v2_eval.json": "daf3363c925f914940c731f0d761990e758da2b8f37add85f88aad1d1da97581",
       "reports/phase3g_latency.json": "5cc220c4f1d6f932776d1cf7a885df38aabc97ddf26aa93b36b965bc96eb0a5f",
       "reports/phase3g_fp16_ties.json": "d6c77183b468836c346cd34d0a392f809ca4b42c67ada39c134fe5c9dbcbb703",
       "reports/phase3g_maxlen.json": "06d93c3ac3d694532fbf730559377564159b16902d9ecb07d847cd6d2326c2c8",
       "reports/phase3g_q6_audit.json": "a282c6e6fad96fd9981d218b81fba818aa9c7796955ec4b4d8c3f2ab0b7b9c15",
-      "reports/phase3f_errata.md": "9f185890f695ac3fd197d047ddb9b89e6abe3c9c01aae947913f28b68b524f75",
+      "reports/phase3f_errata.md": "613d8dcfa11c58fbedde5fa60477c1f116fcc600885ada4a2c7248ff11172791",
       "eval/_sealed/ab_mapping.json": "2bab34f1950ce2e9b894f0fe9d663776745940f70a3a556b6453e49cff6bb1fc",
-      "src/brands.json": "99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96",
       "eval/ab_blind_heldout.csv": "ee5ffe73ada0b4afac3c3054f91ec988de44e59a4f721ef91f47c436bc760d91"
     }
   }

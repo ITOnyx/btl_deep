@@ -1,7 +1,7 @@
 # Errata Pha 3f (Pha 3g): Đính chính báo cáo đối soát
 
 **Dự án:** SigLIP E-commerce Visual Search (`Hoc_sau_ver4`)  
-**Ngày thực hiện:** 2026-11-09 12:15  
+**Ngày thực hiện:** 2026-11-09 12:22  
 **Chế độ:** Suy luận thuần. Không train, không adapter, không sửa checkpoint.  
 **Báo cáo được đính chính:** `reports/phase3f_reconciliation.md` (giữ nguyên, không sửa)
 
@@ -17,7 +17,7 @@
 
 | Mục | Vấn đề | Trạng thái | Ảnh hưởng đến kết luận 3f | File nguồn |
 |---|---|---|---|---|
-| A | Benetton bị ghi "catalog rỗng" | `CHỜ DUYỆT` | Benetton có 209 sp trong catalog; AP@10 nhóm brand sẽ tăng khi áp dụng alias v2 | `reports/brand_audit_3g.json` |
+| A | Benetton bị ghi "catalog rỗng" | `ĐÃ DUYỆT & ÁP DỤNG HẬU NGHIỆM` | Benetton có 209 sp strict; áp dụng brands_v2 đưa x018 AP@10 từ 0.5181 lên 1.0000; Mean AP@10 nhóm brand tăng từ 0.7028 lên 0.763 | `reports/phase3g_brands_v2_eval.json` |
 | B | Bảng latency không khớp JSON | `XÁC NHẬN LỖI` | Đo lại chuẩn xác trên 200 queries; p95 Config 5 là 54.17 ms; luồng ảnh p99=210.19 ms (không đạt) | `reports/phase3g_latency.json` |
 | C | FP16 làm tăng đồng hạng | `XÁC NHẬN LỖI` | FP16 làm ties tăng từ 119 lên 923 trên G_full; giải thích độ lệch mean_rank 1038.18 vs 1038.21 | `reports/phase3g_fp16_ties.json` |
 | D | Nguyên nhân gốc `max_length` | `XÁC NHẬN GIẢ THUYẾT` | SigLIP không có attention mask nên padding length (64 vs 128) tự đổi embedding (cos=0.6560 ở Q2) | `reports/phase3g_maxlen.json` |
@@ -49,28 +49,34 @@ Ghi chú: Với x018, số sp khớp chính xác chuỗi "United Colors of Benet
 ### A.2 Alias đề xuất
 
 - File: `reports/brand_alias_proposal.csv` (23 đề xuất).
-- **Trạng thái duyệt:** `CHỜ DUYỆT bởi người dùng`
-- Chưa có xác nhận của người dùng thì **không** tạo `brands_v2.json`.
+- **Trạng thái duyệt:** `ĐÃ ĐƯỢC NGƯỜI DÙNG DUYỆT lúc 2026-11-09 12:22`.
+- Đã tạo `src/brands_v2.json` (SHA-256: `c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e`), giữ nguyên `src/brands.json` (SHA-256: `99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96`).
 
-### A.3 So sánh v1 và v2 (chỉ điền sau khi alias được duyệt)
+### A.3 So sánh v1 và v2 (chạy lại trên G_full với Config 5)
 
-| Chỉ số | brands v1 (đóng băng 3f) | brands v2 (alias, **sau khi thấy heldout**) |
-|---|---|---|
-| SHA-256 file | `99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96` | `CHỜ DUYỆT (Chưa tạo file v2)` |
-| Heldout nhóm brand, G_full, Config 5: AP@10 | 0.6380 | `CHỜ DUYỆT` |
-| Heldout nhóm brand, G_full, Config 5: P@10 | 0.6750 | `CHỜ DUYỆT` |
-| Heldout spec tổng, G_full, Config 5: AP@10 | 0.8834 | `CHỜ DUYỆT` |
-| Q5 G_full, Config 5: AP@10 | 0.9508 | `CHỜ DUYỆT` |
-| Q5 G_full, Config 5: P@10 | 0.8733 | `CHỜ DUYỆT` |
-| Số câu hỗ trợ thấp trên G_full | 2 (x017, x018) | `1 (chỉ còn x017 Lavie)` |
+| Chỉ số | brands v1 (đóng băng 3f) | brands v2 (alias, **sau khi thấy heldout**) | Chênh lệch (v2 - v1) |
+|---|---|---|---|
+| SHA-256 file | `99d43d0f081e44c41c939ca8ad267c81bbfbcd2c83c888993650342a2d7b8e96` | `c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e` | File mới độc lập |
+| Heldout nhóm brand (8 câu), G_full, Config 5: AP@10 | 0.7028 | 0.763 | +0.0602 |
+| Heldout nhóm brand (8 câu), G_full, Config 5: P@10 | 0.75 | 0.8 | +0.0500 |
+| Heldout nhóm 7 brand hợp lệ (bỏ Lavie R=0): AP@10 | 0.8032 | 0.872 | +0.0688 |
+| Heldout spec tổng (26 câu), G_full, Config 5: AP@10 | 0.9033 | 0.9218 | +0.0185 |
+| Q5 G_full, Config 5: AP@10 | 0.9507 | 0.9507 | 0.0000 |
+| Q5 G_full, Config 5: P@10 | 0.8733 | 0.8733 | 0.0000 |
+| Số câu hỗ trợ thấp trên G_full (< 3 sp) | 3 (x017, x018, x027) | 1 (duy nhất x017 Lavie: 0 sp) | -2 câu |
+
+Chi tiết 8 câu brand Heldout:
+- `x018` ("áo thun Benetton nam"): R=209. v1 AP@10 = 0.5181 (P@10 = 0.6000) → **v2 AP@10 = 1.0000 (P@10 = 1.0000)** (CẢI THIỆN TUYỆT ĐỐI).
+- `x017` ("túi xách Lavie nữ"): R=0. v1 AP@10 = 0.0000 → v2 AP@10 = 0.0000 (do catalog không có sản phẩm nào của Lavie).
+- 6 câu còn lại (x011..x016: Puma, Nike, Adidas, Fossil, Fabindia, Catwalk): giữ nguyên kết quả cao.
 
 ### A.4 Số cần sửa
 
 | Phát biểu cũ | Phát biểu mới |
 |---|---|
-| "6/6 brand hợp lệ" | 7/8 brand hợp lệ trong catalog (chỉ riêng Lavie R = 0; Benetton có 209 sp strict trên G_full nhưng thiếu alias trong brands v1) |
-| "Mean AP@10 6 brand = 0.8507" | Sẽ tính lại trên 7 brand hợp lệ ngay sau khi người dùng duyệt brands_v2 |
-| "2 câu hỗ trợ thấp trên G_full" | 1 câu hỗ trợ thấp thật sự trên G_full (x017 Lavie: 0 sp; x018 Benetton có 209 sp) |
+| "6/6 brand hợp lệ" | 7/8 brand hợp lệ trong catalog (chỉ duy nhất Lavie R = 0; Benetton có 209 sp strict trên G_full và đạt AP@10=1.0000 với brands_v2) |
+| "Mean AP@10 6 brand = 0.8507" | Ở v1 (thiếu alias Benetton), mean AP@10 của 6 brand là 0.8507. Ở v2 (đã có alias Benetton), mean AP@10 của **7 brand hợp lệ đạt 0.8720** (nếu tính cả 8 brand gồm Lavie R=0 là 0.7630) |
+| "2 câu hỗ trợ thấp trên G_full" | Chỉ có **1 câu hỗ trợ thấp thật sự trên G_full** (x017 Lavie: 0 sp; x018 Benetton có 209 sp strict) |
 
 **Ghi chú trung thực:** v2 là sửa **hậu nghiệm** sau khi đã thấy kết quả heldout. Heldout không còn là tập ẩn đối với thay đổi này. Số v1 được giữ để đối chiếu.
 
@@ -313,9 +319,9 @@ Sau khi người dùng nộp CSV đã chấm, sẽ viết script giải mã đ�
 
 | # | Việc | Trạng thái |
 |---|---|---|
-| 1 | Duyệt `reports/brand_alias_proposal.csv` (23 đề xuất alias) | `CHỜ DUYỆT` |
+| 1 | Duyệt `reports/brand_alias_proposal.csv` (23 đề xuất alias) | `ĐÃ DUYỆT (Đã áp dụng và tạo brands_v2.json)` |
 | 2 | Quyết định nếu pipeline `max_length` / padding chưa khớp code train | `ĐÃ XÁC NHẬN KHỚP 100% (max_length=128)` |
-| 3 | Tự chấm `eval/ab_blind_heldout.csv` | `CHỜ NGƯỜI DÙNG CHẤM` |
+| 3 | Tự chấm `eval/ab_blind_heldout.csv` | `CHỜ NGƯỜI DÙNG CHẤM (30 contact sheets)` |
 
 ---
 
@@ -340,7 +346,9 @@ Sau khi người dùng nộp CSV đã chấm, sẽ viết script giải mã đ�
 |---|---|
 | `reports/phase3f_errata.md` | Báo cáo đính chính toàn diện này |
 | `reports/brand_audit_3g.json` | Kiểm toán brand Lavie và Benetton trong catalog |
-| `reports/brand_alias_proposal.csv` | 23 đề xuất alias brand, chờ duyệt |
+| `reports/brand_alias_proposal.csv` | 23 đề xuất alias brand đã được duyệt |
+| `src/brands_v2.json` | Từ điển brand v2 kèm 22 alias (tạo sau duyệt, giữ nguyên brands.json) |
+| `reports/phase3g_brands_v2_eval.json` | Kết quả đánh giá đối chứng v1 vs v2 trên Heldout và Q5 |
 | `reports/phase3g_latency.json` | Benchmark latency đo lại (breakdown + configs + image) |
 | `reports/phase3g_fp16_ties.json` | Phân tích FP32 vs FP16 và đồng hạng |
 | `reports/phase3g_maxlen.json` | Kiểm chứng căn nguyên max_length và padding length |
