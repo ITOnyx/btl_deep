@@ -72,12 +72,29 @@ class SearchService:
             self.config = yaml.safe_load(f)
 
         inf_cfg = self.config.get("inference", {})
+        paths_cfg = self.config.get("paths", {}) or {}
+        self.serving_cfg = self.config.get("serving", {}) or {}
+        self.latency_cfg = self.config.get("latency", {}) or {}
+        default_sla = float(self.latency_cfg.get("sla_ms", 200.0))
+        flows_cfg = self.latency_cfg.get("flows", {}) or {}
+        self.flows_sla: Dict[str, float] = {
+            "text_to_image": float(flows_cfg.get("text_to_image", {}).get("sla_ms", default_sla)),
+            "image_to_image": float(flows_cfg.get("image_to_image", {}).get("sla_ms", default_sla)),
+            "cir_catalog": float(flows_cfg.get("cir_catalog", {}).get("sla_ms", default_sla)),
+            "cir_upload": float(flows_cfg.get("cir_upload", {}).get("sla_ms", default_sla)),
+        }
+
+        ckpt_dir = ROOT_DIR / paths_cfg.get("checkpoint_dir", "data/checkpoints_siglip-vit")
+        catalog_p = ROOT_DIR / paths_cfg.get("catalog", "data/catalog/catalog.parquet")
+        kaggle_dir = ROOT_DIR / paths_cfg.get("kaggle_dir", "data/fashion-dataset")
+        self.kaggle_images_dir = kaggle_dir / "images"
+
         self.engine = VisualSearchEngine(
-            checkpoint_path=str(ROOT_DIR / "data/checkpoints_siglip-vit/best_model.pt"),
-            stats_path=str(ROOT_DIR / "data/checkpoints_siglip-vit/vit_zero_train_stats.npz"),
+            checkpoint_path=str(ckpt_dir / "best_model.pt"),
+            stats_path=str(ckpt_dir / "vit_zero_train_stats.npz"),
             image_index_path=str(ROOT_DIR / "index_v2/image_embeddings_v2.npy"),
             text_index_path=str(ROOT_DIR / "index_v2/text_embeddings_v2.npy"),
-            catalog_path=str(ROOT_DIR / "data/catalog/catalog.parquet"),
+            catalog_path=str(catalog_p),
             gamma=inf_cfg.get("gamma", 0.3),
             alpha=inf_cfg.get("alpha", 1.0),
             rrf_k=inf_cfg.get("rrf_k", 60),
@@ -87,6 +104,32 @@ class SearchService:
             enable_text_fusion=inf_cfg.get("enable_text_fusion", False),
             filter_mode=inf_cfg.get("filter_mode", "relaxed")
         )
+        self._warmup()
+
+    def _warmup(self) -> None:
+        """Warm up CPU/GPU pipelines on startup so the first interactive query runs at steady-state latency."""
+        try:
+            _ = self.engine.search_text("áo thun Puma nam", top_k=5)
+            dummy_pil = Image.new("RGB", (224, 224), color=(128, 128, 128))
+            t1 = self.engine.img_transform(dummy_pil).unsqueeze(0).to(self.engine.device)
+            if self.engine.device == "cuda":
+                t1 = t1.half()
+            tok = self.engine.processor(
+                text=["màu xanh navy"], padding="max_length", max_length=128, truncation=True, return_tensors="pt"
+            )
+            input_ids = tok["input_ids"].to(self.engine.device)
+            with torch.no_grad():
+                img_f = self.engine.model.encode_image(t1)
+                txt_f = self.engine.model.encode_text(input_ids)
+                _ = self.engine.model.cir_combiner(img_f, txt_f)
+                _ = self.engine.model.compose_query(t1, input_ids)
+            self._sync()
+        except Exception:
+            pass
+
+    def get_flow_sla_ms(self, flow_name: str) -> float:
+        """Returns the SLA threshold (ms) configured in config.yaml for a specific flow."""
+        return float(self.flows_sla.get(flow_name, self.latency_cfg.get("sla_ms", 200.0)))
 
     def search_text(
         self,
@@ -130,7 +173,7 @@ class SearchService:
                     row = self.engine.df.iloc[idx]
                     img_p = str(row["path"])
                     if not Path(img_p).exists():
-                        img_p = str(Path("data/fashion-dataset/images") / Path(img_p).name)
+                        img_p = str(self.kaggle_images_dir / Path(img_p).name)
                     results.append({
                         "rank": rank,
                         "item_id": str(row["item_id"]),
@@ -144,7 +187,11 @@ class SearchService:
                         "tier": "bm25_only",
                         "latency_ms": round(lat_ms, 2)
                     })
+                sla_ms = self.get_flow_sla_ms("text_to_image")
                 meta = {
+                    "flow": "text_to_image",
+                    "sla_ms": sla_ms,
+                    "sla_pass": lat_ms <= sla_ms,
                     "parsed": self.engine.parser.parse(query),
                     "tier": "bm25_only",
                     "candidates_count": self.engine.N,
@@ -153,7 +200,12 @@ class SearchService:
                 return results, meta
 
             results = self.engine.search_text(query, top_k=top_k)
-            meta = getattr(self.engine, "last_query_meta", {})
+            meta = dict(getattr(self.engine, "last_query_meta", {}) or {})
+            sla_ms = self.get_flow_sla_ms("text_to_image")
+            total_ms = float(meta.get("breakdown", {}).get("total_ms", results[0]["latency_ms"] if results else 0.0))
+            meta["flow"] = "text_to_image"
+            meta["sla_ms"] = sla_ms
+            meta["sla_pass"] = total_ms <= sla_ms
             return results, meta
         finally:
             self.engine.enable_parser = old_enable_parser
@@ -161,20 +213,37 @@ class SearchService:
             self.engine.enable_bm25 = old_enable_bm25
             self.engine.gamma = old_gamma
 
+    def _sync(self):
+        if self.engine.device == "cuda":
+            torch.cuda.synchronize()
+
+    def resolve_i2i_flip(self, use_flip_aug: Optional[bool] = None, mode: Optional[str] = None) -> bool:
+        """i2i_mode="fast" (1 view) is default; "accurate" = Batch-2 TTA flip. Explicit use_flip_aug wins."""
+        if use_flip_aug is not None:
+            return bool(use_flip_aug)
+        mode = mode or self.serving_cfg.get("i2i_mode", "fast")
+        return mode == "accurate"
+
     def search_image(
         self,
         image_input: Any,
         top_k: int = 10,
         exclude_self_id: Optional[str] = None,
-        use_flip_aug: bool = True,
-        use_knn_voting: bool = True
+        use_flip_aug: Optional[bool] = None,
+        use_knn_voting: bool = True,
+        mode: Optional[str] = None
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         """
-        Visual Search (Image -> Image) with Batch-2 TTA on GPU.
+        Visual Search (Image -> Image). Mode comes from config serving.i2i_mode
+        ("fast": single view, default | "accurate": Batch-2 TTA flip).
+        Per-stage timings (ms) are returned in meta["breakdown"].
         """
+        use_flip_aug = self.resolve_i2i_flip(use_flip_aug, mode)
+        self._sync()
         t0 = time.perf_counter()
         im = Image.open(image_input).convert("RGB") if isinstance(image_input, (str, Path)) else image_input.convert("RGB")
-        
+        t_dec = time.perf_counter()
+
         if use_flip_aug:
             im_flip = ImageOps.mirror(im)
             t1 = self.engine.img_transform(im)
@@ -182,8 +251,12 @@ class SearchService:
             batch = torch.stack([t1, t2]).to(self.engine.device)
             if self.engine.device == "cuda":
                 batch = batch.half()
+            t_pre = time.perf_counter()
             with torch.no_grad():
-                feats = self.engine.model.encode_image(batch).cpu().numpy()
+                feats = self.engine.model.encode_image(batch)
+                self._sync()
+                feats = feats.float().cpu().numpy()
+            t_fwd = time.perf_counter()
             v1 = feats[0] / max(float(np.linalg.norm(feats[0])), 1e-12)
             v2 = feats[1] / max(float(np.linalg.norm(feats[1])), 1e-12)
             aug_vec = v1 + v2
@@ -193,8 +266,12 @@ class SearchService:
             t1 = self.engine.img_transform(im).unsqueeze(0).to(self.engine.device)
             if self.engine.device == "cuda":
                 t1 = t1.half()
+            t_pre = time.perf_counter()
             with torch.no_grad():
-                feat = self.engine.model.encode_image(t1).cpu().numpy()[0]
+                feat = self.engine.model.encode_image(t1)
+                self._sync()
+                feat = feat.float().cpu().numpy()[0]
+            t_fwd = time.perf_counter()
             v1 = feat / max(float(np.linalg.norm(feat)), 1e-12)
             query_vec_c = self.engine.scorer.center_vectors(v1[np.newaxis, :])[0]
 
@@ -206,6 +283,7 @@ class SearchService:
             sims = sims_t.float().cpu().numpy()
         else:
             sims = np.dot(self.engine.emb_img_c, query_vec_c)
+        t_srch = time.perf_counter()
 
         if exclude_self_id and str(exclude_self_id) in self.engine.id_to_idx:
             self_idx = self.engine.id_to_idx[str(exclude_self_id)]
@@ -221,14 +299,15 @@ class SearchService:
             top_pos = np.argsort(-sims)[:top_k]
             final_idxs = top_pos
             final_scores = sims[top_pos]
+        t_rr = time.perf_counter()
 
-        lat_ms = (time.perf_counter() - t0) * 1000.0
+        lat_ms = (t_rr - t0) * 1000.0
         results = []
         for rank, (idx, score) in enumerate(zip(final_idxs, final_scores), start=1):
             row = self.engine.df.iloc[idx]
             img_p = str(row["path"])
             if not Path(img_p).exists():
-                img_p = str(Path("data/fashion-dataset/images") / Path(img_p).name)
+                img_p = str(self.kaggle_images_dir / Path(img_p).name)
             results.append({
                 "rank": rank,
                 "item_id": str(row["item_id"]),
@@ -241,10 +320,22 @@ class SearchService:
                 "score": float(score),
                 "latency_ms": round(lat_ms, 2)
             })
+        sla_ms = self.get_flow_sla_ms("image_to_image")
         meta = {
-            "tier": "visual_search_batch2_tta",
+            "flow": "image_to_image",
+            "i2i_mode": "accurate" if use_flip_aug else "fast",
+            "sla_ms": sla_ms,
+            "sla_pass": lat_ms <= sla_ms,
+            "tier": "visual_search_batch2_tta" if use_flip_aug else "visual_search_fast",
             "latency_ms": round(lat_ms, 2),
-            "use_flip_aug": use_flip_aug
+            "use_flip_aug": use_flip_aug,
+            "breakdown": {
+                "decode_ms": (t_dec - t0) * 1000.0,
+                "preprocess_ms": (t_pre - t_dec) * 1000.0,
+                "vit_forward_ms": (t_fwd - t_pre) * 1000.0,
+                "gallery_search_ms": (t_srch - t_fwd) * 1000.0,
+                "rerank_ms": (t_rr - t_srch) * 1000.0,
+            }
         }
         return results, meta
 
@@ -261,7 +352,9 @@ class SearchService:
         CIR with Catalog Embedding Cache if reference image is in catalog,
         otherwise falls back to ViT Image Tower encoding (CIR-upload).
         """
+        self._sync()
         t0 = time.perf_counter()
+        t_dec = t_pre = t0
         
         cand_id = None
         if not force_upload:
@@ -287,21 +380,27 @@ class SearchService:
             
             tok = self.engine.processor(text=[modifier_text], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
             input_ids = tok["input_ids"].to(self.engine.device)
+            t_pre = time.perf_counter()
             with torch.no_grad():
                 mod_txt_emb = self.engine.model.encode_text(input_ids)
                 cir_feat = self.engine.model.cir_combiner(t_ref_emb, mod_txt_emb)
+                self._sync()
                 cir_vec = cir_feat.cpu().numpy()[0]
         else:
             im = Image.open(ref_image).convert("RGB") if isinstance(ref_image, (str, Path)) else ref_image.convert("RGB")
+            t_dec = time.perf_counter()
             img_tensor = self.engine.img_transform(im).unsqueeze(0).to(self.engine.device)
             if self.engine.device == "cuda":
                 img_tensor = img_tensor.half()
             tok = self.engine.processor(text=[modifier_text], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
             input_ids = tok["input_ids"].to(self.engine.device)
+            t_pre = time.perf_counter()
             with torch.no_grad():
                 cir_feat = self.engine.model.compose_query(img_tensor, input_ids)
+                self._sync()
                 cir_vec = cir_feat.cpu().numpy()[0]
 
+        t_fwd = time.perf_counter()
         norm = max(float(np.linalg.norm(cir_vec)), 1e-12)
         cir_vec = cir_vec / norm
         cir_vec_c = self.engine.scorer.center_vectors(cir_vec[np.newaxis, :])[0]
@@ -338,13 +437,14 @@ class SearchService:
             final_idxs = cand_idxs[top_cand_pos]
             final_scores = sims[top_cand_pos]
 
-        lat_ms = (time.perf_counter() - t0) * 1000.0
+        t_end = time.perf_counter()
+        lat_ms = (t_end - t0) * 1000.0
         results = []
         for rank, (idx, score) in enumerate(zip(final_idxs, final_scores), start=1):
             row = self.engine.df.iloc[idx]
             img_p = str(row["path"])
             if not Path(img_p).exists():
-                img_p = str(Path("data/fashion-dataset/images") / Path(img_p).name)
+                img_p = str(self.kaggle_images_dir / Path(img_p).name)
             results.append({
                 "rank": rank,
                 "item_id": str(row["item_id"]),
@@ -357,9 +457,22 @@ class SearchService:
                 "score": float(score),
                 "latency_ms": round(lat_ms, 2)
             })
+        flow_name = "cir_catalog" if is_catalog_cached else "cir_upload"
+        sla_ms = self.get_flow_sla_ms(flow_name)
         meta = {
+            "flow": flow_name,
+            "sla_ms": sla_ms,
+            "sla_pass": lat_ms <= sla_ms,
             "tier": "cir_cached" if is_catalog_cached else "cir_upload",
             "is_catalog_cached": is_catalog_cached,
-            "latency_ms": round(lat_ms, 2)
+            "catalog_ref_id": cand_id,
+            "latency_ms": round(lat_ms, 2),
+            "breakdown": {
+                "decode_ms": (t_dec - t0) * 1000.0,
+                "preprocess_ms": (t_pre - t_dec) * 1000.0,
+                "vit_forward_ms": (t_fwd - t_pre) * 1000.0,
+                "gallery_search_ms": (t_end - t_fwd) * 1000.0,
+                "rerank_ms": 0.0,
+            }
         }
         return results, meta

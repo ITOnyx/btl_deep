@@ -52,6 +52,10 @@ eval:
   latency_device: "cuda"           # pipeline phục vụ suy luận thời gian thực (VisualSearchEngine)
   latency_precision: "float16"     # GPU PyTorch half-precision
   tie_rule: "conservative"         # báo song song hoặc bi quan (pessimistic / conservative)
+  gender_gt:                       # (gộp vào khối eval duy nhất; trước đây khai báo trùng khóa `eval:` làm YAML bỏ mất seed/n_latency_queries)
+    policy_file: "eval/gender_gt_policy.json"
+    official: "hybrid"             # hybrid | strict | relaxed
+    report_also: ["strict", "relaxed"]
 
 scoring:
   mu_gamma: 0.3                    # trọng số cộng điểm mềm (soft bonus) khi khớp thuộc tính danh mục/giới tính
@@ -74,12 +78,6 @@ serving:
   use_flip_aug: false          # chỉ true khi i2i_mode == accurate
   gpu_preprocess: false        # chỉ bật sau khi qua kiểm tra tương đương
   gpu_preprocess_min_cosine: 0.999
-
-eval:                          # thêm vào khối eval hiện có
-  gender_gt:
-    policy_file: "eval/gender_gt_policy.json"
-    official: "hybrid"         # hybrid | strict | relaxed
-    report_also: ["strict", "relaxed"]
 
 app:
   port: 8501

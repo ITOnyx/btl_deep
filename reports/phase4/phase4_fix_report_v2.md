@@ -111,7 +111,7 @@
 - Áp dụng ánh xạ chuẩn hóa nhãn hiệu (canonical brand alias mapping): Ánh xạ `Benetton` về `United Colors of Benetton` khớp với chuẩn lưu trữ trong `catalog.parquet`.
 
 ### 2.2. Bảng đối soát 26 truy vấn heldout (R_full và R_test)
-Chạy trực tiếp từ `src/diag/compare_colour_gt.py` trên tập `catalog.parquet` ($G_{full} = 38,644$ sản phẩm, $G_{test} = 7,729$ sản phẩm):
+Chạy trực tiếp từ `src/diag/compare_colour_gt.py` trên tập `catalog.parquet` ($G_{full} = 38,644$ sản phẩm, $G_{test} = 1,290$ [SỬA ở Pha 5a: số cũ 7,729 là SAI; catalog `split=="test"` & `in_scope` = 1,290] sản phẩm):
 
 | QID | Text truy vấn | Spec lọc thuộc tính | R_full Cũ | R_full Mới | R_test Cũ | R_test Mới | Ghi chú & Đối chiếu |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :--- |

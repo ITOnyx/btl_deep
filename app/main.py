@@ -1,21 +1,24 @@
 """
 Streamlit Web Application for SigLIP E-commerce Visual Search (app/main.py)
-Project: Hoc_sau_ver4
+Project: Hoc_sau_ver4 (Phase 5)
 Supports:
-1. Text-to-Image Search (Văn bản tiếng Việt -> Ảnh sản phẩm) with QueryParserV2 & Config 5
-2. Image-to-Image Visual Search with Flip Augmentation & k-NN Voting
-3. Composed Image Retrieval (CIR: Reference Image + Modifier Text) via SigLIP CIR Combiner
-4. Invariant Rule 7 Checkpoint Hash Verification
-5. Real-time Latency Breakdown & SLA Monitoring (< 200 ms)
+1. Text-to-Image Search (Văn bản tiếng Việt -> Ảnh sản phẩm) with QueryParserV2 & Config C5/C0/C2/C4
+2. Image-to-Image Visual Search with configurable serving.i2i_mode ("fast" single-view vs "accurate" Batch-2 TTA)
+3. Composed Image Retrieval (CIR) separated into cir_catalog (GPU Cache) and cir_upload (ViT Forward)
+4. Invariant Rule 7 Checkpoint Hash Verification & Frozen Gender GT Policy (Hybrid / Strict / Relaxed)
+5. Per-Flow Real-Time Latency Breakdown & Strict SLA Reporting (< 200 ms per flow)
 """
 
 import os
+import re
 import sys
 import time
 import json
+import hashlib
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 
+import numpy as np
 import streamlit as st
 from PIL import Image
 
@@ -56,9 +59,9 @@ st.markdown("""
         font-size: 0.85rem;
         display: inline-block;
     }
-    .sla-warn {
-        background-color: #FEF9C3;
-        color: #854D0E;
+    .sla-fail {
+        background-color: #FEE2E2;
+        color: #991B1B;
         padding: 0.35rem 0.75rem;
         border-radius: 9999px;
         font-weight: 600;
@@ -68,11 +71,12 @@ st.markdown("""
     .badge-rule7 {
         background-color: #EFF6FF;
         color: #1D4ED8;
-        padding: 0.3rem 0.6rem;
+        padding: 0.35rem 0.65rem;
         border-radius: 6px;
         font-size: 0.8rem;
         font-weight: 600;
         border: 1px solid #BFDBFE;
+        margin-bottom: 0.5rem;
     }
     .metric-card {
         background: #F8FAFC;
@@ -82,25 +86,13 @@ st.markdown("""
         text-align: center;
     }
     .metric-val {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         font-weight: 700;
         color: #0F172A;
     }
     .metric-label {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         color: #64748B;
-    }
-    .product-card {
-        background: white;
-        border: 1px solid #E2E8F0;
-        border-radius: 8px;
-        padding: 0.75rem;
-        margin-bottom: 1rem;
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    .product-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
     .rank-tag {
         font-weight: 700;
@@ -121,8 +113,19 @@ st.markdown("""
 
 @st.cache_resource(show_spinner="Đang khởi tạo VisualSearchEngine & kiểm toán an toàn (Luật 7)...")
 def get_service() -> SearchService:
-    """Cached singleton search service."""
+    """Cached singleton search service loaded from config.yaml."""
     return SearchService(config_path="config.yaml")
+
+
+def load_json_safe(rel_path: str) -> Optional[Dict[str, Any]]:
+    p = ROOT_DIR / rel_path
+    if p.exists():
+        try:
+            with open(p, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return None
+    return None
 
 
 # -------------------------------------------------------------
@@ -137,28 +140,41 @@ except Exception as e:
     rule7_ok = False
     rule7_err = str(e)
 
+if not rule7_ok or service is None:
+    st.error(f"❌ Vi phạm Luật 7!\n{rule7_err}")
+    st.stop()
+
+cfg = service.config
+inf_cfg = cfg.get("inference", {}) or {}
+serving_cfg = cfg.get("serving", {}) or {}
+eval_cfg = cfg.get("eval", {}) or {}
+gender_gt_cfg = eval_cfg.get("gender_gt", {}) or {}
+default_gamma = float(inf_cfg.get("gamma", cfg.get("scoring", {}).get("mu_gamma", 0.3)))
+default_i2i_mode = str(serving_cfg.get("i2i_mode", "fast"))
+default_top_k_list = [5, 10, 20, 30]
+
 
 # -------------------------------------------------------------
 # 2. Sidebar Controls
 # -------------------------------------------------------------
 with st.sidebar:
-    st.image("https://raw.githubusercontent.com/google-research/big_vision/main/big_vision/configs/proj/image_text/siglip.png", width=60) if False else None
     st.title("⚙️ Cấu hình Hệ thống")
 
     # Rule 7 Checkpoint Badge
-    if rule7_ok:
-        st.markdown(
-            f"""<div class="badge-rule7">
-            🔒 <b>Luật 7: Đạt kiểm toán</b><br>
-            <small>Checkpoint Hash: <code>{service.cfg_hash[:12]}...</code></small>
-            </div>""",
-            unsafe_allow_html=True
-        )
-        st.caption(f"📦 Catalog in-scope: **{service.engine.N:,}** sản phẩm")
-        st.caption(f"⚡ Phần cứng: **{service.engine.device.upper()}** (FP16)")
-    else:
-        st.error(f"❌ Vi phạm Luật 7!\n{rule7_err}")
-        st.stop()
+    st.markdown(
+        f"""<div class="badge-rule7">
+        🔒 <b>Luật 7: Đạt kiểm toán</b><br>
+        <small>Checkpoint SHA-256: <code>{service.cfg_hash[:12]}...</code></small><br>
+        <small>Index Manifest: <code>{service.man_hash[:12]}...</code></small>
+        </div>""",
+        unsafe_allow_html=True
+    )
+    st.caption(f"📦 Catalog in-scope: **{service.engine.N:,}** sản phẩm")
+    st.caption(f"⚡ Phần cứng: **{service.engine.device.upper()}** (FP16)")
+    st.caption(
+        f"📏 GT Giới tính đóng băng: **{gender_gt_cfg.get('official', 'hybrid').upper()}** "
+        f"(`{gender_gt_cfg.get('policy_file', 'eval/gender_gt_policy.json')}`)"
+    )
 
     st.markdown("---")
     st.subheader("Cấu hình Tra cứu Văn bản")
@@ -179,21 +195,21 @@ with st.sidebar:
         r"Trọng số cộng điểm mềm (Soft bonus $\gamma$)",
         min_value=0.0,
         max_value=1.0,
-        value=0.3,
+        value=default_gamma,
         step=0.05,
-        help="Thưởng điểm khi sản phẩm khớp các thuộc tính bóc tách (loại SP, giới tính, màu sắc, brand)"
+        help="Thưởng điểm khi sản phẩm khớp các thuộc tính bóc tách (loại SP, giới tính, màu sắc, brand) từ config.yaml"
     )
 
-    top_k = st.selectbox("Số lượng kết quả (Top-K)", options=[5, 10, 20, 30], index=1)
+    top_k = st.selectbox("Số lượng kết quả (Top-K)", options=default_top_k_list, index=1)
 
     st.markdown("---")
-    st.markdown("### ℹ️ Thông tin Dự án")
+    st.markdown("### ⏱️ Định mức SLA theo Luồng (`config.yaml`)")
     st.markdown(
-        """
-        - **Mô hình:** SigLIP So400M-patch14-224 + CIR Combiner
-        - **Bộ phân tích:** QueryParserV2 (hỗ trợ có dấu và không dấu)
-        - **Chỉ tiêu SLA:** Latency < 200 ms/query
-        - **Bản sửa lỗi:** Pha 3g Rev5 (Hoàn tất & Đã duyệt)
+        f"""
+        - `text_to_image`: **< {service.get_flow_sla_ms('text_to_image'):.0f} ms** (p95)
+        - `image_to_image`: **< {service.get_flow_sla_ms('image_to_image'):.0f} ms** (p95, mode `{default_i2i_mode}`)
+        - `cir_catalog`: **< {service.get_flow_sla_ms('cir_catalog'):.0f} ms** (p95, GPU Cache)
+        - `cir_upload`: **< {service.get_flow_sla_ms('cir_upload'):.0f} ms** (p95, ViT Forward)
         """
     )
 
@@ -202,13 +218,13 @@ with st.sidebar:
 # 3. Main Header & App Tabs
 # -------------------------------------------------------------
 st.markdown('<div class="main-title">🛍️ SigLIP E-commerce Visual Search</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle">Hệ sinh thái tra cứu thời trang thông minh: Văn bản tiếng Việt, Ảnh tương đồng và Tìm kiếm kết hợp (CIR)</div>', unsafe_allow_html=True)
+st.markdown('<div class="subtitle">Hệ sinh thái tra cứu thời trang đa phương thức: Văn bản tiếng Việt, Ảnh tương đồng và Tìm kiếm kết hợp (CIR)</div>', unsafe_allow_html=True)
 
 tab_text, tab_image, tab_cir, tab_benchmark = st.tabs([
     "🔍 1. Text tiếng Việt → Ảnh",
     "🖼️ 2. Ảnh → Ảnh (Visual Search)",
     "🎨 3. Ảnh + Text bổ trợ (CIR)",
-    "📊 4. Đối soát & Báo cáo Hệ thống"
+    "📊 4. Đối soát SLA, GT & Báo cáo Hệ thống"
 ])
 
 
@@ -235,15 +251,15 @@ def render_product_grid(results: List[Dict[str, Any]], cols_per_row: int = 5):
                 """, unsafe_allow_html=True)
 
                 img_path = prod.get("image_path", "")
-                if Path(img_path).exists():
+                if img_path and Path(img_path).exists():
                     st.image(img_path, use_container_width=True)
                 else:
-                    st.image("https://via.placeholder.com/224x224.png?text=No+Image", use_container_width=True)
+                    st.warning(f"Không tìm thấy ảnh: {img_path}")
 
                 st.markdown(f"**{prod['name'][:42]}...**" if len(prod['name']) > 42 else f"**{prod['name']}**")
 
                 tags = []
-                if prod.get("brand"):
+                if prod.get("brand") and str(prod.get("brand")) not in ("None", "nan", ""):
                     tags.append(f"<span class='brand-tag'>{prod['brand']}</span>")
                 if prod.get("articleType"):
                     tags.append(f"<span style='font-size:0.75rem; color:#475569;'>{prod['articleType']}</span>")
@@ -257,12 +273,11 @@ def render_product_grid(results: List[Dict[str, Any]], cols_per_row: int = 5):
 
 
 # -------------------------------------------------------------
-# TAB 1: Text-to-Image Search
+# TAB 1: Text-to-Image Search (flow: text_to_image)
 # -------------------------------------------------------------
 with tab_text:
-    st.markdown("### Tra cứu Sản phẩm bằng Văn bản tiếng Việt")
+    st.markdown("### Tra cứu Sản phẩm bằng Văn bản tiếng Việt (`flow: text_to_image`)")
 
-    # Clear distinction between System vs Model Pure
     search_mode_ui = st.radio(
         "🎯 **Chế độ Tìm kiếm:**",
         options=["system", "model_pure"],
@@ -277,11 +292,10 @@ with tab_text:
     effective_config = "c0" if search_mode_ui == "model_pure" else ("c5" if config_choice == "c0" else config_choice)
 
     if effective_config == "c0":
-        st.info("ℹ️ **Đang chọn: Model thuần (SigLIP Dense)** — Truy vấn văn bản được mã hóa trực tiếp qua SigLIP Text Tower và tính cosine similarity với ảnh gallery. Không qua QueryParser, không lọc thuộc tính, không dùng BM25.")
+        st.info("ℹ️ **Đang chọn: Model thuần (SigLIP Dense - C0)** — Truy vấn văn bản được mã hóa trực tiếp qua SigLIP Text Tower (padding='max_length'=128) và tính cosine similarity đã trừ tâm. Không qua QueryParser, không lọc thuộc tính, không dùng BM25.")
     else:
-        st.success("✨ **Đang chọn: Hệ thống (Parser + Metadata + BM25)** — Sử dụng QueryParser V2 trích xuất thuộc tính, nới lỏng ứng viên đa tầng L0..L6, cộng thưởng điểm mềm và kết hợp tìm kiếm từ vựng BM25 qua RRF.")
+        st.success(f"✨ **Đang chọn: Hệ thống ({effective_config.upper()})** — Sử dụng QueryParser V2 trích xuất thuộc tính, nới lỏng ứng viên đa tầng L0..L6, cộng thưởng điểm mềm (γ={gamma_val:.2f}) và kết hợp BM25 qua RRF.")
 
-    # Sample Quick Queries
     st.markdown("**Gợi ý truy vấn mẫu:**")
     sample_cols = st.columns(6)
     sample_queries = [
@@ -306,48 +320,50 @@ with tab_text:
     )
 
     if st.button("🔍 Tìm kiếm", type="primary", use_container_width=True) or query_input:
-        if query_input.strip():
+        cleaned_query = query_input.strip()
+        if cleaned_query:
             with st.spinner("Đang xử lý truy vấn..."):
                 results, meta = service.search_text(
-                    query=query_input.strip(),
+                    query=cleaned_query,
                     config_mode=effective_config,
                     top_k=top_k,
                     gamma=gamma_val
                 )
 
-            # 1. Latency & SLA Indicator
-            total_lat = meta.get("breakdown", {}).get("total_ms", results[0]["latency_ms"] if results else 0.0)
-            is_pass_sla = total_lat <= 200.0
+            # 1. Latency & SLA Indicator (flow: text_to_image)
+            sla_ms = float(meta.get("sla_ms", service.get_flow_sla_ms("text_to_image")))
+            total_lat = float(meta.get("breakdown", {}).get("total_ms", results[0]["latency_ms"] if results else 0.0))
+            is_pass_sla = total_lat <= sla_ms
 
             m_col1, m_col2, m_col3, m_col4, m_col5, m_col6 = st.columns(6)
             with m_col1:
                 st.markdown(
                     f"""<div class="metric-card">
-                        <div class="metric-label">Trạng thái SLA</div>
-                        <div class="{'sla-pass' if is_pass_sla else 'sla-warn'}">
-                            {'🟢 ĐẠT (< 200ms)' if is_pass_sla else '🟡 VƯỢT TRẦN'}
+                        <div class="metric-label">SLA (text_to_image &lt; {sla_ms:.0f}ms)</div>
+                        <div class="{'sla-pass' if is_pass_sla else 'sla-fail'}">
+                            {'🟢 ĐẠT SLA' if is_pass_sla else '🔴 KHÔNG ĐẠT SLA'}
                         </div>
                     </div>""", unsafe_allow_html=True
                 )
             with m_col2:
-                st.markdown(f"""<div class="metric-card"><div class="metric-label">Tổng độ trễ</div><div class="metric-val">{total_lat:.1f} ms</div></div>""", unsafe_allow_html=True)
+                st.markdown(f"""<div class="metric-card"><div class="metric-label">Tổng độ trễ E2E</div><div class="metric-val">{total_lat:.1f} ms</div></div>""", unsafe_allow_html=True)
             with m_col3:
-                parse_ms = meta.get("breakdown", {}).get("parse_ms", 0.0)
-                st.markdown(f"""<div class="metric-card"><div class="metric-label">1. Phân tích ngữ nghĩa</div><div class="metric-val">{parse_ms:.1f} ms</div></div>""", unsafe_allow_html=True)
+                parse_ms = float(meta.get("breakdown", {}).get("parse_ms", 0.0))
+                st.markdown(f"""<div class="metric-card"><div class="metric-label">1. QueryParser V2</div><div class="metric-val">{parse_ms:.1f} ms</div></div>""", unsafe_allow_html=True)
             with m_col4:
-                filter_ms = meta.get("breakdown", {}).get("filter_ms", 0.0)
+                filter_ms = float(meta.get("breakdown", {}).get("filter_ms", 0.0))
                 st.markdown(f"""<div class="metric-card"><div class="metric-label">2. Lọc ứng viên</div><div class="metric-val">{filter_ms:.1f} ms</div></div>""", unsafe_allow_html=True)
             with m_col5:
-                enc_ms = meta.get("breakdown", {}).get("encode_ms", 0.0)
-                st.markdown(f"""<div class="metric-card"><div class="metric-label">3. Mã hóa SigLIP</div><div class="metric-val">{enc_ms:.1f} ms</div></div>""", unsafe_allow_html=True)
+                enc_ms = float(meta.get("breakdown", {}).get("encode_ms", 0.0))
+                st.markdown(f"""<div class="metric-card"><div class="metric-label">3. SigLIP Text Tower</div><div class="metric-val">{enc_ms:.1f} ms</div></div>""", unsafe_allow_html=True)
             with m_col6:
-                search_ms = meta.get("breakdown", {}).get("search_ms", 0.0)
+                search_ms = float(meta.get("breakdown", {}).get("search_ms", 0.0))
                 st.markdown(f"""<div class="metric-card"><div class="metric-label">4. Hybrid/BM25/TopK</div><div class="metric-val">{search_ms:.1f} ms</div></div>""", unsafe_allow_html=True)
 
             st.write("")
 
             # 2. QueryParserV2 Info Expansion
-            parsed = meta.get("parsed", {})
+            parsed = meta.get("parsed", {}) or {}
             with st.expander("🧠 Phân tích Ngữ nghĩa (QueryParser V2)", expanded=True):
                 p_col1, p_col2, p_col3, p_col4, p_col5, p_col6 = st.columns(6)
                 p_col1.metric("Loại sản phẩm", str(parsed.get("articleType") or "—"))
@@ -357,14 +373,14 @@ with tab_text:
                 p_col5.metric("Tầng lọc (Tier)", str(meta.get("tier", "all")))
                 p_col6.metric("Ứng viên xét duyệt", f"{meta.get('candidates_count', 0):,}")
 
-            # 3. Lavie Notice Rule
+            # 3. Lavie Out-of-Catalog Brand Notice Rule
             is_lavie = (
-                (parsed.get("brand") and parsed.get("brand").lower() == "lavie") or
-                "lavie" in [t.lower() for t in parsed.get("unparsed_tokens", [])] or
-                re.search(r"\blavie\b", query, re.IGNORECASE) is not None
+                (parsed.get("brand") and str(parsed.get("brand")).lower() == "lavie") or
+                "lavie" in [str(t).lower() for t in parsed.get("unparsed_tokens", [])] or
+                re.search(r"\blavie\b", cleaned_query, re.IGNORECASE) is not None
             )
             if is_lavie:
-                st.warning("ℹ️ **Thông báo thương hiệu:** Thương hiệu 'Lavie' hiện không có trong catalog; hệ thống đang tự động nới lỏng và hiển thị các sản phẩm túi xách nữ có kiểu dáng tương tự.")
+                st.warning("ℹ️ **Thông báo thương hiệu:** Thương hiệu 'Lavie' hiện không có trong catalog; hệ thống đang tự động nới lỏng và hiển thị các sản phẩm cùng danh mục có kiểu dáng tương tự.")
 
             # 4. Results Grid
             st.markdown(f"#### Kết quả tìm kiếm ({len(results)} sản phẩm):")
@@ -372,10 +388,10 @@ with tab_text:
 
 
 # -------------------------------------------------------------
-# TAB 2: Image-to-Image Visual Search
+# TAB 2: Image-to-Image Visual Search (flow: image_to_image)
 # -------------------------------------------------------------
 with tab_image:
-    st.markdown("### Tra cứu Sản phẩm Tương đồng bằng Ảnh (Visual Search)")
+    st.markdown("### Tra cứu Sản phẩm Tương đồng bằng Ảnh (`flow: image_to_image`)")
 
     img_col1, img_col2 = st.columns([1, 2])
 
@@ -383,13 +399,8 @@ with tab_image:
         st.markdown("**1. Tải ảnh lên hoặc chọn ảnh mẫu:**")
         uploaded_file = st.file_uploader("Chọn tệp ảnh sản phẩm (PNG, JPG):", type=["png", "jpg", "jpeg"])
 
-        # Sample images selector
-        sample_img_paths = [
-            "data/fashion-dataset/images/15970.jpg",
-            "data/fashion-dataset/images/39386.jpg",
-            "data/fashion-dataset/images/59263.jpg",
-            "data/fashion-dataset/images/1855.jpg"
-        ]
+        sample_ids = ["15970", "39386", "59263", "1855"]
+        sample_img_paths = [str(service.kaggle_images_dir / f"{sid}.jpg") for sid in sample_ids]
         available_samples = [p for p in sample_img_paths if Path(p).exists()]
 
         selected_sample_img = None
@@ -397,13 +408,24 @@ with tab_image:
             sample_choice = st.selectbox(
                 "Hoặc chọn nhanh từ ảnh mẫu catalog:",
                 options=["(Không chọn)"] + available_samples,
-                index=0
+                index=1 if uploaded_file is None else 0,
+                format_func=lambda x: x if x == "(Không chọn)" else f"ID {Path(x).stem} ({Path(x).name})"
             )
             if sample_choice != "(Không chọn)":
                 selected_sample_img = sample_choice
 
-        # Toggles
-        use_flip = st.checkbox("Bật Flip Augmentation (TTA tăng cường)", value=True)
+        st.markdown("**2. Chế độ suy luận Ảnh → Ảnh (`serving.i2i_mode`):**")
+        i2i_mode_choice = st.radio(
+            "Chế độ `i2i_mode`:",
+            options=["fast", "accurate"],
+            index=0 if default_i2i_mode == "fast" else 1,
+            format_func=lambda m: (
+                "⚡ fast (1 ảnh gốc - Mặc định config.yaml, p95 ~143 ms ĐẠT SLA < 200ms)"
+                if m == "fast"
+                else "🔬 accurate (Batch-2 TTA Flip - p95 ~211-225 ms KHÔNG ĐẠT SLA 200ms trên RTX 2050)"
+            ),
+            help="Pha 5a chứng minh chế độ 'fast' có P@10=0.6998 tương đương 'accurate' (P@10=0.6997) nhưng giảm độ trễ p95 từ ~211 ms xuống ~143 ms."
+        )
         use_knn = st.checkbox("Bật k-NN Attribute Voting Rescoring", value=True)
 
         query_image = None
@@ -428,186 +450,288 @@ with tab_image:
                         query_image,
                         top_k=top_k,
                         exclude_self_id=exclude_self_id,
-                        use_flip_aug=use_flip,
+                        mode=i2i_mode_choice,
                         use_knn_voting=use_knn
                     )
 
-                lat = img_meta.get("latency_ms", img_results[0]["latency_ms"] if img_results else 0.0)
-                is_pass = lat <= 200.0
+                lat = float(img_meta.get("latency_ms", img_results[0]["latency_ms"] if img_results else 0.0))
+                sla_ms = float(img_meta.get("sla_ms", service.get_flow_sla_ms("image_to_image")))
+                is_pass = lat <= sla_ms
+                bd = img_meta.get("breakdown", {}) or {}
 
-                st.markdown(
-                    f"""<div style="margin-bottom: 1rem;">
-                        <span class="{'sla-pass' if is_pass else 'sla-warn'}">
-                            {'🟢 ĐẠT SLA' if is_pass else '🟡 ĐẠT CÓ ĐIỀU KIỆN'}: {lat:.1f} ms
-                        </span>
-                        <span style="color: #64748B; font-size: 0.85rem; margin-left: 10px;">
-                            (Định mức SLA theo AGENTS.md: &lt; 200 ms)
-                        </span>
-                    </div>""",
-                    unsafe_allow_html=True
-                )
+                ic1, ic2, ic3, ic4, ic5, ic6 = st.columns(6)
+                with ic1:
+                    st.markdown(
+                        f"""<div class="metric-card">
+                            <div class="metric-label">SLA (i2i_{i2i_mode_choice} &lt; {sla_ms:.0f}ms)</div>
+                            <div class="{'sla-pass' if is_pass else 'sla-fail'}">
+                                {'🟢 ĐẠT SLA' if is_pass else '🔴 KHÔNG ĐẠT SLA'}
+                            </div>
+                        </div>""", unsafe_allow_html=True
+                    )
+                with ic2:
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">Tổng độ trễ E2E</div><div class="metric-val">{lat:.1f} ms</div></div>""", unsafe_allow_html=True)
+                with ic3:
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">1. Giải mã ảnh</div><div class="metric-val">{bd.get('decode_ms', 0.0):.1f} ms</div></div>""", unsafe_allow_html=True)
+                with ic4:
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">2. Tiền xử lý</div><div class="metric-val">{bd.get('preprocess_ms', 0.0):.1f} ms</div></div>""", unsafe_allow_html=True)
+                with ic5:
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">3. ViT Forward</div><div class="metric-val">{bd.get('vit_forward_ms', 0.0):.1f} ms</div></div>""", unsafe_allow_html=True)
+                with ic6:
+                    srch_rr = float(bd.get("gallery_search_ms", 0.0)) + float(bd.get("rerank_ms", 0.0))
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">4. Matmul + Rerank</div><div class="metric-val">{srch_rr:.1f} ms</div></div>""", unsafe_allow_html=True)
 
-                st.markdown(f"#### Sản phẩm có thị giác tương đồng nhất ({len(img_results)} sp):")
+                st.write("")
+                st.markdown(f"#### Sản phẩm có thị giác tương đồng nhất ({len(img_results)} sp, chế độ `{i2i_mode_choice}`):")
                 render_product_grid(img_results, cols_per_row=4)
         else:
             st.info("Vui lòng tải lên hoặc chọn một ảnh sản phẩm từ bên trái để bắt đầu tra cứu thị giác.")
 
 
 # -------------------------------------------------------------
-# TAB 3: CIR (Composed Image Retrieval)
+# TAB 3: CIR (Composed Image Retrieval: cir_catalog vs cir_upload)
 # -------------------------------------------------------------
 with tab_cir:
-    st.markdown("### 🎨 Tra cứu Đa phương thức (CIR: Ảnh + Text điều chỉnh) — *(Thử nghiệm, chưa đánh giá)*")
-    st.warning("⚠️ **Ghi chú thử nghiệm:** Tính năng Composed Image Retrieval (CIR) hiện đang ở trạng thái **Thử nghiệm, chưa đánh giá chính thức**. Tỉ lệ thay đổi thuộc tính phụ thuộc vào Attention Combiner của checkpoint và chưa được đưa vào cam kết SLA của dự án.")
-    st.markdown("Kết hợp đặc trưng của một ảnh tham chiếu cùng câu văn bản yêu cầu thay đổi (ví dụ: *'đổi sang màu đỏ'*, *'kiểu dáng cộc tay'*, *'dành cho nữ'*).")
+    st.markdown("### 🎨 Tra cứu Đa phương thức (CIR: Ảnh + Text điều chỉnh) — `cir_catalog` & `cir_upload`")
+    st.warning("⚠️ **Ghi chú thực nghiệm:** Tính năng Composed Image Retrieval (CIR) đạt Hit@10 = 0.3500 trên bộ 20 truy vấn kiểm thử (`phase4_cir_20queries_eval.json`). Độ trễ SLA được tách riêng thành 2 luồng độc lập theo `AGENTS.md`: **`cir_catalog`** (dùng GPU Embedding Cache cho ảnh có sẵn trong catalog, p95 ~66.5 ms — ĐẠT SLA) và **`cir_upload`** (chạy qua ViT Image Tower cho ảnh tải mới từ thiết bị, p95 ~176.1–205.4 ms).")
 
     cir_c1, cir_c2 = st.columns([1, 2])
 
     with cir_c1:
-        st.markdown("**1. Ảnh tham chiếu (Reference Image):**")
-        cir_upload = st.file_uploader("Tải ảnh gốc:", type=["png", "jpg", "jpeg"], key="cir_up")
+        st.markdown("**1. Nguồn ảnh tham chiếu (Reference Image):**")
+        cir_upload = st.file_uploader("Tải ảnh mới từ thiết bị (Luồng `cir_upload`):", type=["png", "jpg", "jpeg"], key="cir_up")
 
-        cir_sample_choices = [
-            "data/fashion-dataset/images/15970.jpg",
-            "data/fashion-dataset/images/39386.jpg",
-            "data/fashion-dataset/images/10866.jpg"
-        ]
+        cir_sample_ids = ["15970", "39386", "10866"]
+        cir_sample_choices = [str(service.kaggle_images_dir / f"{sid}.jpg") for sid in cir_sample_ids]
         avail_cir = [p for p in cir_sample_choices if Path(p).exists()]
         cir_sample = None
         if avail_cir:
-            cir_sc = st.selectbox("Hoặc chọn ảnh mẫu:", ["(Chọn ảnh)"] + avail_cir, index=1)
+            cir_sc = st.selectbox(
+                "Hoặc chọn ảnh có sẵn trong catalog (Luồng `cir_catalog`):",
+                ["(Chọn ảnh)"] + avail_cir,
+                index=1 if cir_upload is None else 0,
+                format_func=lambda x: x if x == "(Chọn ảnh)" else f"ID {Path(x).stem} ({Path(x).name})"
+            )
             if cir_sc != "(Chọn ảnh)":
                 cir_sample = cir_sc
 
+        force_upload_mode = False
         ref_img_pil = None
+        cir_ref_id = None
+
         if cir_upload is not None:
             ref_img_pil = Image.open(cir_upload).convert("RGB")
-            st.image(ref_img_pil, caption="Ảnh tham chiếu tải lên", use_container_width=True)
+            force_upload_mode = True
+            st.image(ref_img_pil, caption="Ảnh tải lên từ thiết bị -> Kích hoạt luồng `cir_upload` (ViT Forward)", use_container_width=True)
         elif cir_sample is not None:
             ref_img_pil = Image.open(cir_sample).convert("RGB")
-            st.image(ref_img_pil, caption=f"Ảnh mẫu: {Path(cir_sample).name}", use_container_width=True)
+            cir_ref_id = Path(cir_sample).stem
+            st.image(ref_img_pil, caption=f"Ảnh mẫu catalog ID {cir_ref_id} ({Path(cir_sample).name})", use_container_width=True)
+            force_upload_mode = st.checkbox(
+                "Bỏ qua Catalog Cache (`force_upload=True` để đo luồng `cir_upload`)",
+                value=False,
+                help="Khi tắt (mặc định), ảnh thuộc catalog dùng thẳng vector trong GPU FP16 cache (`cir_catalog`). Khi bật, hệ thống giải mã và chạy lại qua ViT Image Tower (`cir_upload`)."
+            )
 
         st.markdown("**2. Văn bản điều chỉnh (Modifier Text):**")
         modifier_input = st.text_input(
             "Yêu cầu biến đổi kiểu dáng / màu sắc:",
             value="màu xanh navy",
-            placeholder="Ví dụ: đổi sang màu đỏ, chuyển thành áo phông cộc tay..."
+            placeholder="Ví dụ: màu đỏ, quần short, áo khoác jacket..."
         )
 
-        use_cir_bonus = st.checkbox("Cộng điểm thưởng thuộc tính nếu nhận diện được màu/kiểu mới", value=True)
+        use_cir_bonus = st.checkbox("Cộng điểm thưởng thuộc tính mềm (γ) cho từ khóa điều chỉnh", value=True)
 
     with cir_c2:
         if ref_img_pil is not None and modifier_input.strip():
             if st.button("🎨 Tổng hợp Truy vấn Đa phương thức & Tìm kiếm", type="primary", use_container_width=True):
-                with st.spinner("Đang tổng hợp Cross-Attention qua mô-đun CIRCombiner..."):
+                with st.spinner("Đang tổng hợp đặc trưng qua mô-đun CIRCombiner..."):
                     cir_results, cir_meta = service.search_cir(
-                        ref_image=ref_img_pil,
+                        ref_image=ref_img_pil if force_upload_mode or cir_ref_id is None else cir_sample,
                         modifier_text=modifier_input.strip(),
                         top_k=top_k,
-                        use_soft_bonus=use_cir_bonus
+                        use_soft_bonus=use_cir_bonus,
+                        ref_id=cir_ref_id,
+                        force_upload=force_upload_mode
                     )
 
-                lat = cir_meta.get("latency_ms", cir_results[0]["latency_ms"] if cir_results else 0.0)
-                is_pass = lat <= 200.0
+                flow_executed = str(cir_meta.get("flow", "cir_upload"))
+                sla_ms = float(cir_meta.get("sla_ms", service.get_flow_sla_ms(flow_executed)))
+                lat = float(cir_meta.get("latency_ms", cir_results[0]["latency_ms"] if cir_results else 0.0))
+                is_pass = lat <= sla_ms
+                bd = cir_meta.get("breakdown", {}) or {}
 
-                st.markdown(
-                    f"""<div style="margin-bottom: 1rem;">
-                        <span class="{'sla-pass' if is_pass else 'sla-warn'}">
-                            {'🟢 ĐẠT SLA' if is_pass else '🟡 VƯỢT TRẦN'}: {lat:.1f} ms
-                        </span>
-                        <span style="color: #64748B; font-size: 0.85rem; margin-left: 10px;">
-                            (Độ trễ tổng hợp CIR Combiner + GPU Top-K)
-                        </span>
-                    </div>""",
-                    unsafe_allow_html=True
-                )
+                cc1, cc2, cc3, cc4, cc5, cc6 = st.columns(6)
+                with cc1:
+                    st.markdown(
+                        f"""<div class="metric-card">
+                            <div class="metric-label">SLA ({flow_executed} &lt; {sla_ms:.0f}ms)</div>
+                            <div class="{'sla-pass' if is_pass else 'sla-fail'}">
+                                {'🟢 ĐẠT SLA' if is_pass else '🔴 KHÔNG ĐẠT SLA'}
+                            </div>
+                        </div>""", unsafe_allow_html=True
+                    )
+                with cc2:
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">Tổng độ trễ E2E</div><div class="metric-val">{lat:.1f} ms</div></div>""", unsafe_allow_html=True)
+                with cc3:
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">Luồng thực thi</div><div class="metric-val" style="font-size:1.0rem;">{flow_executed}</div></div>""", unsafe_allow_html=True)
+                with cc4:
+                    dec_pre = float(bd.get("decode_ms", 0.0)) + float(bd.get("preprocess_ms", 0.0))
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">1. Decode + Preproc</div><div class="metric-val">{dec_pre:.1f} ms</div></div>""", unsafe_allow_html=True)
+                with cc5:
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">2. Forward + Combiner</div><div class="metric-val">{bd.get('vit_forward_ms', 0.0):.1f} ms</div></div>""", unsafe_allow_html=True)
+                with cc6:
+                    st.markdown(f"""<div class="metric-card"><div class="metric-label">3. Gallery Search</div><div class="metric-val">{bd.get('gallery_search_ms', 0.0):.1f} ms</div></div>""", unsafe_allow_html=True)
 
-                st.markdown(f"#### Kết quả sau khi biến đổi theo: *\"{modifier_input}\"* ({len(cir_results)} sp):")
+                st.write("")
+                st.markdown(f"#### Kết quả sau khi biến đổi theo: *\"{modifier_input}\"* ({len(cir_results)} sp — luồng `{flow_executed}`):")
                 render_product_grid(cir_results, cols_per_row=4)
         else:
             st.info("Vui lòng cung cấp ảnh tham chiếu và câu mô tả điều chỉnh để thực hiện tìm kiếm đa phương thức CIR.")
 
 
 # -------------------------------------------------------------
-# TAB 4: Benchmarks & Errata Summary
+# TAB 4: Benchmarks, 4-Flow SLA & GT Policy Report
 # -------------------------------------------------------------
 with tab_benchmark:
-    st.markdown("### Báo cáo Đối soát, Hiệu năng & Tuân thủ Luật Bất biến (Pha 3g Rev5)")
+    st.markdown("### 📊 Báo cáo Đối soát Chất lượng, SLA 4 Luồng & Chính sách GT Giới tính")
+
+    lat_v3_data = load_json_safe("reports/phase4/phase4_latency_e2e_v3.json")
+    lat_v2_data = load_json_safe("reports/phase4/phase4_latency_e2e_v2.json")
+    i2i_qual_data = load_json_safe("reports/phase4/phase5a_i2i_quality.json")
+    unseen_v2_data = load_json_safe("reports/phase4/unseen_testset_v2_eval.json")
+    gender_policy_data = load_json_safe(gender_gt_cfg.get("policy_file", "eval/gender_gt_policy.json"))
 
     b_col1, b_col2 = st.columns(2)
 
     with b_col1:
-        st.markdown("#### 1. Đánh giá Paired Retrieval (Q1b trên $G_{test}$)")
-        st.error("⚠️ **NGUYÊN TẮC BẤT BIẾN:** Tuyệt đối không để số đo của Hệ sinh thái kỹ thuật (0.9008) đứng thay cho điểm số của Mô hình thuần SigLIP (0.5225)!")
+        st.markdown("#### 1. Paired Retrieval (Q1b trên $G_{test}$, $n = 1,290$ ảnh test)")
+        st.error("⚠️ **QUY TẮC ĐÁNH GIÁ (AGENTS.md):** Chỉ tiêu dự án (Recall@10 ≥ 0.85, mAP ≥ 0.75) CHỈ đối chiếu trên tập test ($G_{test} = 1,290$ ảnh). Tuyệt đối tách bạch kết quả Model thuần (C0) và Hệ thống (C2).")
 
         sub_c1, sub_c2 = st.columns(2)
         with sub_c1:
             st.markdown(
                 """<div style="background:#FFF1F2; border:1px solid #FECDD3; border-radius:8px; padding:0.8rem; margin-bottom:0.8rem;">
-                <h5 style="color:#BE123C; margin-top:0;">🤖 Cột 1: Model thuần (SigLIP Dense)</h5>
-                <p style="font-size:0.85rem; color:#475569; margin-bottom:0.4rem;"><b>Cấu hình C0</b> (Chỉ trích xuất vector, không can thiệp)</p>
-                <div style="font-size:1.4rem; font-weight:700; color:#BE123C;">Recall@10: 0.5225</div>
+                <h5 style="color:#BE123C; margin-top:0;">🤖 Cột 1: Model thuần (SigLIP Dense C0)</h5>
+                <p style="font-size:0.85rem; color:#475569; margin-bottom:0.4rem;">Chỉ trích xuất vector SigLIP + trừ tâm, không lọc thuộc tính</p>
+                <div style="font-size:1.35rem; font-weight:700; color:#BE123C;">Recall@10: 0.5225</div>
                 <div style="font-size:0.95rem; color:#334155; margin-top:0.2rem;">mAP (MRR): <b>0.2362</b></div>
                 <div style="font-size:0.85rem; color:#64748B;">Recall@1: 0.1116 | Recall@5: 0.3543</div>
-                <div style="font-size:0.85rem; color:#64748B;">G_full Recall@10: <b>0.0628</b></div>
+                <div style="font-size:0.85rem; color:#64748B;">Tham khảo lạc quan $G_{full}$ R@10: <b>0.0628</b></div>
                 <hr style="margin:0.5rem 0;">
                 <span style="background:#FEE2E2; color:#991B1B; padding:0.2rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700;">
-                    ❌ CHƯA ĐẠT CHỈ TIÊU GỐC
+                    ❌ KHÔNG ĐẠT CHỈ TIÊU (R@10 &lt; 0.85, mAP &lt; 0.75)
                 </span>
-                <p style="font-size:0.75rem; color:#64748B; margin-top:0.4rem; margin-bottom:0;">Chỉ tiêu đề ra: R@10 ≥ 0.85, mAP ≥ 0.75. Mô hình SigLIP nguyên bản chưa đạt.</p>
                 </div>""", unsafe_allow_html=True
             )
         with sub_c2:
             st.markdown(
                 """<div style="background:#ECFDF5; border:1px solid #A7F3D0; border-radius:8px; padding:0.8rem; margin-bottom:0.8rem;">
-                <h5 style="color:#047857; margin-top:0;">🛡️ Cột 2: Hệ thống (Parser + Metadata)</h5>
-                <p style="font-size:0.85rem; color:#475569; margin-bottom:0.4rem;"><b>Cấu hình C2</b> (QueryParser V2 + Soft Bonus &gamma;=0.3, strictly no BM25)</p>
-                <div style="margin-bottom:0.5rem;">
+                <h5 style="color:#047857; margin-top:0;">🛡️ Cột 2: Hệ thống (Parser + Soft Bonus C2)</h5>
+                <p style="font-size:0.85rem; color:#475569; margin-bottom:0.4rem;">QueryParser V2 + Soft Bonus &gamma;=0.3 (không dùng BM25)</p>
+                <div style="margin-bottom:0.4rem;">
                     <div style="font-size:1.3rem; font-weight:700; color:#047857;">Recall@10: 0.9008</div>
                     <span style="background:#D1FAE5; color:#065F46; padding:0.15rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700;">
-                        🟢 ĐẠT CHỈ TIÊU DỰ ÁN (&ge; 0.85)
+                        🟢 ĐẠT CHỈ TIÊU R@10 (&ge; 0.85)
                     </span>
                 </div>
-                <div style="margin-bottom:0.5rem;">
-                    <div style="font-size:1.1rem; font-weight:700; color:#B45309;">mAP (MRR): 0.5205</div>
-                    <span style="background:#FEF3C7; color:#92400E; padding:0.15rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700;">
-                        ❌ CHƯA ĐẠT CHỈ TIÊU DỰ ÁN (&ge; 0.75)
+                <div style="margin-bottom:0.4rem;">
+                    <div style="font-size:1.05rem; font-weight:700; color:#B45309;">mAP (MRR): 0.5205</div>
+                    <span style="background:#FEE2E2; color:#991B1B; padding:0.15rem 0.5rem; border-radius:4px; font-size:0.75rem; font-weight:700;">
+                        ❌ KHÔNG ĐẠT CHỈ TIÊU mAP (&lt; 0.75)
                     </span>
                 </div>
-                <div style="font-size:0.85rem; color:#64748B;">Recall@1: 0.3442 | Recall@5: 0.7465</div>
-                <div style="font-size:0.85rem; color:#64748B;">G_full Recall@10: <b>0.2682</b></div>
-                <hr style="margin:0.5rem 0;">
-                <p style="font-size:0.75rem; color:#065F46; margin-top:0.4rem; margin-bottom:0;">*Lưu ý:* Q1b đánh giá paired retrieval theo chuẩn Colab chỉ dùng C0 và C2, không sử dụng BM25 hay Text Fusion.</p>
+                <div style="font-size:0.85rem; color:#64748B;">Recall@1: 0.3442 | Recall@5: 0.7465 | $G_{full}$ R@10: <b>0.2682</b></div>
                 </div>""", unsafe_allow_html=True
             )
 
-        st.caption("*Khẳng định độc lập:* Điểm số Recall@10 đạt 0.9008 là thành quả của Hệ sinh thái kỹ thuật (Parser + Metadata + Soft Bonus), không đại diện cho riêng mô hình SigLIP nguyên bản.")
-
-    with b_col2:
-        st.markdown("#### 2. Đối soát Độ trễ & Phân rã Thời gian (5 Runs)")
+        st.markdown("#### 2. Truy vấn Tự nhiên theo Thuộc tính & Chính sách GT Giới tính Đóng băng")
         st.markdown(
             """
-            | Thành phần xử lý | p50 (ms) | p95 (ms) | p99 (ms) | Trạng thái SLA (< 200 ms) |
-            |---|---|---|---|---|
-            | 1. Query Parser V2 | 1.05 | 2.56 | 3.38 | 🟢 Hoàn toàn đáp ứng |
-            | 2. Attribute Candidate Filter | 0.39 | 1.88 | 3.27 | 🟢 Hoàn toàn đáp ứng |
-            | 3. SigLIP Text Tower (GPU FP16) | 24.52 | 61.28 | 86.21 | 🟢 Hoàn toàn đáp ứng |
-            | 4. Dense Top-K GPU | 1.39 | 5.02 | 7.21 | 🟢 Hoàn toàn đáp ứng |
-            | 5. BM25 Sparse Index | 3.77 | 8.01 | 10.08 | 🟢 Hoàn toàn đáp ứng |
-            | **Toàn bộ Pipeline C5 (Text)** | **61.74** | **112.07** | **142.44** | 🟢 **ĐẠT SLA VỮNG CHẮC** |
-            | **Luồng Ảnh → Ảnh (Visual Search)** | **85.87** | **178.25** | **280.17** | 🟡 **ĐẠT CÓ ĐIỀU KIỆN** (1/5 run vượt 200ms) |
+            - **Chính sách GT Giới tính (`eval/gender_gt_policy.json`, SHA-256 `9c0d2cb5...`):** Đóng băng trước khi chấm điểm trên 50 câu truy vấn viết tay Q3 (Cấu hình phục vụ C5):
+              - **Hybrid (Chính thức — Apparel dùng Strict; Accessories/Footwear cho phép Unisex):** **P@10 = 0.9180**
+              - **Strict (Chặt chẽ — Không tính Unisex cho truy vấn Nam/Nữ):** **P@10 = 0.9010**
+              - **Relaxed (Nới lỏng — Cho phép Unisex toàn bộ danh mục):** **P@10 = 0.9180**
+            - **Các bộ truy vấn thuộc tính khác ($G_{full}$ tham khảo phục vụ C5):**
+              - **Q2 (61 câu thuộc tính tổ hợp):** P@10 = **0.9984**, AP@10 = **0.9982** ($G_{test}$ P@10 = **0.7230**)
+              - **Heldout Spec ($n=25$ hợp lệ trên $G_{full}$, $n=24$ trên $G_{test}$):** $G_{full}$ AP@10 = **0.9646** (P@10 = **0.9680**); $G_{test}$ AP@10 = **0.9418** (P@10 = **0.5958**)
+              - **Unseen Testset v2 (`eval/unseen_testset_v2.json`, $n=32$ câu mới đóng băng SHA-256 `90e09202...`, đo 1 lần duy nhất):** Mean AP@10 = **0.7864**, Mean P@10 = **0.8065**
             """
         )
-        st.caption("*Đính chính Rev5:* Bác bỏ giải thích Cold-Start; đỉnh trễ do nhiệt độ GPU laptop chạm 86°C thermal throttling xuống 442 MHz.")
 
-    st.markdown("---")
-    st.markdown("#### 3. Bảng Kiểm toán Toàn diện Errata Rev5")
-    st.markdown(
-        r"""
-        1. **Tái lập Thực nghiệm Padding:** Condition A (full 128, pad 128) tái lập chuẩn xác $G_{test}$ R@10 = 0.5225, MRR = 0.2363 và $G_{full}$ R@10 = 0.0628. Chứng minh độ dài đệm 128 là yếu tố cấu trúc chi phối.
-        2. **Kiểm toán Key chain:** Đã loại trừ hoàn toàn 2 sản phẩm Key chain khỏi `in_scope` (`catalog.parquet` còn đúng 38.644 sản phẩm). Con số 35 ở Pha 2a là do gõ nhầm template string.
-        3. **Kiểm toán Thương hiệu:** Benetton có 209 sp trên toàn catalog; Lee độc lập có 344 sp (Lee Cooper có 133 sp). Thêm 22 alias hậu nghiệm; đề xuất thông báo cho brand ngoài catalog như Lavie.
-        4. **Đồng hạng (Ties) & FP16:** 923 ties trên gallery thô 38.646 sp vs 917 ties trên gallery in-scope 38.644 sp. Biên độ đối xứng hẹp $\pm 0.0008$ quanh 0.0628.
-        5. **Chấm mù A/B:** Thực hiện bởi Claude AI single rater; 9 khối chạy ngẫu nhiên; bổ sung hạn chế *'người chấm từng thấy mapping cũ'*.
-        """
-    )
+    with b_col2:
+        st.markdown("#### 3. Đối soát Độ trễ & SLA Riêng Từng Luồng (`phase4_latency_e2e_v3.json`)")
+        st.caption("Giao thức: 5 runs độc lập × 200 truy vấn/run, 20 truy vấn warm-up/cấu hình, `torch.cuda.synchronize()` quanh mỗi truy vấn, thứ tự Latin-square, nghỉ 5s giữa các run, giám sát `nvidia-smi` mỗi 1 giây trên GPU NVIDIA GeForce RTX 2050 (4096 MiB, FP16).")
+
+        if lat_v3_data and "5a_baseline" in lat_v3_data.get("phases", {}):
+            phase_5a = lat_v3_data["phases"]["5a_baseline"]
+            res_map = phase_5a.get("results", {})
+            flow_labels = [
+                ("text_to_image", "1. Text → Ảnh (C5 Hybrid)", "text_to_image"),
+                ("image_to_image_fast", "2a. Ảnh → Ảnh (mode=fast, Mặc định)", "image_to_image"),
+                ("image_to_image_accurate", "2b. Ảnh → Ảnh (mode=accurate, Batch-2 TTA)", "image_to_image"),
+                ("cir_catalog", "3a. CIR Catalog (GPU Embedding Cache)", "cir_catalog"),
+                ("cir_upload", "3b. CIR Upload (ViT Forward Pass)", "cir_upload"),
+            ]
+            rows_md = [
+                "| Luồng / Cấu hình | SLA (ms) | Mean p50 (ms) | Mean p95 (ms) | Dải p95 (5 runs) | Mean p99 (ms) | Run đạt SLA | Kết luận SLA |",
+                "| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |"
+            ]
+            for cfg_key, label, flow_key in flow_labels:
+                runs_list = res_map.get(cfg_key, [])
+                if not runs_list:
+                    continue
+                sla_t = runs_list[0].get("sla_ms", 200.0)
+                p50s = [r["p50_ms"] for r in runs_list]
+                p95s = [r["p95_ms"] for r in runs_list]
+                p99s = [r["p99_ms"] for r in runs_list]
+                passes = sum(1 for r in runs_list if r.get("p95_pass", r["p95_ms"] < sla_t))
+                status_str = "🟢 **ĐẠT SLA**" if passes == len(runs_list) else f"🔴 **KHÔNG ĐẠT** ({passes}/{len(runs_list)} run đạt)"
+                rows_md.append(
+                    f"| **{label}** | < {sla_t:.0f} | {np.mean(p50s):.2f} | **{np.mean(p95s):.2f}** | "
+                    f"`{min(p95s):.2f} – {max(p95s):.2f}` | {np.mean(p99s):.2f} | {passes}/{len(runs_list)} | {status_str} |"
+                )
+            st.markdown("\n".join(rows_md))
+            st.caption("*Lưu ý đối chiếu với Round 2 (`phase4_latency_e2e_v2.json`):* Ở lần đo Round 2 trước đó, `cir_upload` có p95 trung bình = **205.44 ms** (2/5 run < 200 ms, 3/5 run 204–234 ms -> KHÔNG ĐẠT 5/5 run) và `image_to_image` (Batch-2 TTA) có p95 trung bình = **225.25 ms** (0/5 run đạt). Ở lần đo `5a_baseline` (`v3`), `image_to_image_fast` (1 ảnh gốc) đạt p95 = **130.67 – 155.49 ms** (ĐẠT 5/5 run), trong khi `image_to_image_accurate` (Batch-2 TTA) có p95 = **195.52 – 222.57 ms** (chỉ 1/5 run < 200 ms -> KHÔNG ĐẠT SLA).")
+
+            with st.expander("🔎 Chi tiết từng Run (Run 1..5), Phân rã Giai đoạn & Nhiệt độ GPU (`phase4_latency_e2e_v3.json`)"):
+                sel_cfg = st.selectbox(
+                    "Chọn luồng để xem chi tiết 5 runs:",
+                    options=[k for k, _, _ in flow_labels],
+                    format_func=lambda k: dict((a, b) for a, b, _ in flow_labels)[k]
+                )
+                sel_runs = res_map.get(sel_cfg, [])
+                if sel_runs:
+                    detail_md = [
+                        "| Run | n | p50 (ms) | p95 (ms) | p99 (ms) | Max (ms) | # > 200ms | GPU Temp Mean/Max (°C) | GPU Clock Mean (MHz) | p95 < 200ms |",
+                        "| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |"
+                    ]
+                    for r in sel_runs:
+                        g = r.get("gpu", {}) or {}
+                        pass_icon = "🟢 Đạt" if r.get("p95_pass") else "🔴 Không đạt"
+                        detail_md.append(
+                            f"| Run {r['run']} | {r['n']} | {r['p50_ms']:.2f} | **{r['p95_ms']:.2f}** | {r['p99_ms']:.2f} | "
+                            f"{r['max_ms']:.2f} | {r['n_over_sla']} | {g.get('temp_mean', '—')} / {g.get('temp_max', '—')} | "
+                            f"{g.get('clock_mean', '—')} | {pass_icon} |"
+                        )
+                    st.markdown("\n".join(detail_md))
+
+        st.markdown("#### 4. Thực nghiệm Chất lượng Ảnh → Ảnh: `fast` vs `accurate` (`phase5a_i2i_quality.json`)")
+        if i2i_qual_data:
+            f_q = i2i_qual_data["fast"]
+            a_q = i2i_qual_data["accurate"]
+            ov_q = i2i_qual_data["C_fast_vs_accurate"]
+            st.markdown(
+                f"""
+                Đánh giá trên toàn bộ **$n = {i2i_qual_data['n_queries']:,}$ ảnh test** (`split == "test"`, gallery $G_{{test}} = 1,290$ sp, CPU float32):
+                | Tiêu chí đánh giá | `i2i_mode = fast` (1 ảnh) | `i2i_mode = accurate` (Batch-2 TTA) | Chênh lệch (`accurate - fast`) |
+                | :--- | :---: | :---: | :---: |
+                | **A. Paired Self-Match Recall@1** | **{f_q['A_paired_self_match']['recall@1']:.4f}** | {a_q['A_paired_self_match']['recall@1']:.4f} | `{a_q['A_paired_self_match']['recall@1'] - f_q['A_paired_self_match']['recall@1']:+.4f}` |
+                | **A. Paired Self-Match Recall@10** | **{f_q['A_paired_self_match']['recall@10']:.4f}** | **{a_q['A_paired_self_match']['recall@10']:.4f}** | `0.0000` |
+                | **B. Attribute NN (loại trừ chính nó) P@10** | **{f_q['B_attribute_nn_excl_self']['P@10']:.4f}** | {a_q['B_attribute_nn_excl_self']['P@10']:.4f} | `{a_q['B_attribute_nn_excl_self']['P@10'] - f_q['B_attribute_nn_excl_self']['P@10']:+.4f}` |
+                | **B. Attribute NN (loại trừ chính nó) Hit@10** | {f_q['B_attribute_nn_excl_self']['Hit@10']:.4f} | **{a_q['B_attribute_nn_excl_self']['Hit@10']:.4f}** | `{a_q['B_attribute_nn_excl_self']['Hit@10'] - f_q['B_attribute_nn_excl_self']['Hit@10']:+.4f}` |
+                | **B. Attribute NN (loại trừ chính nó) AP@10** | **{f_q['B_attribute_nn_excl_self']['AP@10']:.4f}** | {a_q['B_attribute_nn_excl_self']['AP@10']:.4f} | `{a_q['B_attribute_nn_excl_self']['AP@10'] - f_q['B_attribute_nn_excl_self']['AP@10']:+.4f}` |
+                | **C. Độ trùng lặp Top-10 & Cosine Query** | Top-10 Overlap: **{ov_q['top10_overlap_mean']*100:.2f}%** | Top-1 Agreement: **{ov_q['top1_agreement']*100:.2f}%** | Cosine mean: `{ov_q['query_vec_cosine_mean']:.4f}` |
+                """
+            )
+        st.caption("*Kết luận kỹ thuật:* Chế độ `fast` giữ nguyên chất lượng P@10 (`0.6998` vs `0.6997`) và AP@10 (`0.6830` vs `0.6822`) trên tập test $G_{test}$ trong khi giúp luồng Ảnh → Ảnh đạt chuẩn SLA p95 < 200 ms cả 5/5 run.")
