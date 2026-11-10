@@ -25,6 +25,7 @@ sys.path.insert(0, str(ROOT_DIR))
 
 from src.search_pipeline import VisualSearchEngine
 from src.vi_vocab import generate_vietnamese_title
+from src.cir_normalizer import normalize_cir_modifier
 
 def verify_rule_7_checkpoint_hash(
     config_path: str = "config.yaml",
@@ -387,41 +388,86 @@ class SearchService:
                 cand_id = str(ref_image.item_id)
 
         is_catalog_cached = (cand_id is not None)
+        cand_idxs = np.arange(self.engine.N)
+        parsed_mod = self.engine.parser.parse(modifier_text) if modifier_text.strip() else {}
+
+        # Determine reference type and gender for prompt anchoring
+        ref_type = None
+        ref_gender = None
+        if is_catalog_cached:
+            row_ref = self.engine.df.iloc[self.engine.id_to_idx[cand_id]]
+            ref_type = row_ref.get("articleType")
+            ref_gender = row_ref.get("gender")
+        elif ref_id and str(ref_id) in self.engine.id_to_idx:
+            row_ref = self.engine.df.iloc[self.engine.id_to_idx[str(ref_id)]]
+            ref_type = row_ref.get("articleType")
+            ref_gender = row_ref.get("gender")
+
+        # 1. Normalize modifier text for CIR Combiner
+        en_prompt, is_fallback, untranslated = normalize_cir_modifier(
+            modifier_text=modifier_text,
+            parsed_spec=parsed_mod,
+            ref_type=ref_type,
+            ref_gender=ref_gender
+        )
+
+        fallback_msg = None
+        if not modifier_text.strip():
+            is_fallback = True
+        elif is_fallback or not en_prompt.strip():
+            fallback_msg = "Chưa hiểu yêu cầu chỉnh sửa, đang hiển thị kết quả tương tự ảnh gốc"
 
         if is_catalog_cached:
             idx = self.engine.id_to_idx[cand_id]
             raw_emb = self.engine.emb_img_raw[idx]
             t_ref_emb = torch.tensor(raw_emb, dtype=torch.float16, device=self.engine.device).unsqueeze(0)
             
-            tok = self.engine.processor(text=[modifier_text], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
-            input_ids = tok["input_ids"].to(self.engine.device)
-            t_pre = time.perf_counter()
-            with torch.no_grad():
-                mod_txt_emb = self.engine.model.encode_text(input_ids)
-                cir_feat = self.engine.model.cir_combiner(t_ref_emb, mod_txt_emb)
-                self._sync()
-                cir_vec = cir_feat.cpu().numpy()[0]
+            if is_fallback:
+                cir_vec = raw_emb
+            else:
+                tok = self.engine.processor(text=[en_prompt], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
+                input_ids = tok["input_ids"].to(self.engine.device)
+                t_pre = time.perf_counter()
+                with torch.no_grad():
+                    mod_txt_emb = self.engine.model.encode_text(input_ids)
+                    cir_feat = self.engine.model.cir_combiner(t_ref_emb, mod_txt_emb)
+                    self._sync()
+                    cir_vec = cir_feat.cpu().numpy()[0]
         else:
             im = Image.open(ref_image).convert("RGB") if isinstance(ref_image, (str, Path)) else ref_image.convert("RGB")
             t_dec = time.perf_counter()
             img_tensor = self.engine.img_transform(im).unsqueeze(0).to(self.engine.device)
             if self.engine.device == "cuda":
                 img_tensor = img_tensor.half()
-            tok = self.engine.processor(text=[modifier_text], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
-            input_ids = tok["input_ids"].to(self.engine.device)
-            t_pre = time.perf_counter()
-            with torch.no_grad():
-                cir_feat = self.engine.model.compose_query(img_tensor, input_ids)
-                self._sync()
-                cir_vec = cir_feat.cpu().numpy()[0]
+
+            # Predict visual category if ref_type is not yet known
+            if not ref_type and not parsed_mod.get("articleType") and not is_fallback and en_prompt:
+                with torch.no_grad():
+                    v_raw = self.engine.model.encode_image(img_tensor)
+                    v_c = self.engine.scorer.center_vectors(v_raw.cpu().numpy())[0]
+                    q_v = torch.tensor(v_c, dtype=torch.float16, device=self.engine.device)
+                    top1_vis = torch.argmax(torch.matmul(self.engine.t_emb_img_c, q_v)).item()
+                    pred_type = self.engine.df.iloc[top1_vis]["articleType"]
+                    en_prompt, _, _ = normalize_cir_modifier(modifier_text, parsed_mod, ref_type=pred_type)
+
+            if is_fallback:
+                with torch.no_grad():
+                    cir_feat = self.engine.model.encode_image(img_tensor)
+                    self._sync()
+                    cir_vec = cir_feat.cpu().numpy()[0]
+            else:
+                tok = self.engine.processor(text=[en_prompt], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
+                input_ids = tok["input_ids"].to(self.engine.device)
+                t_pre = time.perf_counter()
+                with torch.no_grad():
+                    cir_feat = self.engine.model.compose_query(img_tensor, input_ids)
+                    self._sync()
+                    cir_vec = cir_feat.cpu().numpy()[0]
 
         t_fwd = time.perf_counter()
         norm = max(float(np.linalg.norm(cir_vec)), 1e-12)
         cir_vec = cir_vec / norm
         cir_vec_c = self.engine.scorer.center_vectors(cir_vec[np.newaxis, :])[0]
-
-        cand_idxs = np.arange(self.engine.N)
-        parsed_mod = self.engine.parser.parse(modifier_text)
 
         if self.engine.device == "cuda" and self.engine.t_emb_img_c is not None:
             cand_t = torch.tensor(cand_idxs, dtype=torch.long, device=self.engine.device)
@@ -489,6 +535,9 @@ class SearchService:
             "is_catalog_cached": is_catalog_cached,
             "catalog_ref_id": cand_id,
             "latency_ms": round(lat_ms, 2),
+            "translated_modifier": en_prompt,
+            "fallback_message": fallback_msg,
+            "untranslated_tokens": untranslated,
             "breakdown": {
                 "decode_ms": (t_dec - t0) * 1000.0,
                 "preprocess_ms": (t_pre - t_dec) * 1000.0,

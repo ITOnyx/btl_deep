@@ -1,0 +1,5 @@
+Template,Sys Hit@10 Full (%),Sys Hit@1 Full (%),Type Retention P@10 (%),Pure Hit@10 (no bonus) (%),Pure Type P@10 (%)
+P1_attribute_only,60.0,24.0,25.6,12.0,24.400000000000002
+P2_attribute_and_type,92.0,88.0,84.4,12.0,28.800000000000004
+P3_instruction_action,56.00000000000001,24.0,25.6,8.0,27.6
+P4_full_attr_type_gender,80.0,72.0,82.8,12.0,26.0

@@ -159,10 +159,14 @@ st.markdown("""
     .card-tags-vi {
         font-size: 0.76rem;
         color: #94A3B8;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        line-height: 1.35;
+        min-height: 2.7em;
         margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: break-word;
     }
     .card-meta-row {
         display: flex;
@@ -549,10 +553,12 @@ def render_card_html(prod: Dict[str, Any], show_tech: bool = False) -> str:
     title_esc = html.escape(title_vi, quote=True)
     raw_name_esc = html.escape(raw_name, quote=True)
 
-    # Standardized Vietnamese Tags from vi_map
-    vn_type = VI_MAP.get("articleType", {}).get(art_raw, ARTICLE_TYPE_MAP.get(art_raw, art_raw))
-    vn_col = VI_MAP.get("baseColour", {}).get(col_raw, COLOUR_MAP.get(col_raw, col_raw))
-    vn_gen = VI_MAP.get("gender", {}).get(gen_raw, GENDER_MAP.get(gen_raw, gen_raw))
+    # Standardized Vietnamese Tags from vi_map (single source of truth)
+    vn_type = VI_MAP.get("articleType", {}).get(art_raw, art_raw)
+    if "(" in vn_type:
+        vn_type = re.sub(r"\(.*?\)", "", vn_type).strip()
+    vn_col = VI_MAP.get("baseColour", {}).get(col_raw, col_raw)
+    vn_gen = VI_MAP.get("gender", {}).get(gen_raw, gen_raw)
 
     tag_parts = []
     if vn_type and vn_type.lower() not in ("none", "nan", "unknown", ""):
@@ -872,37 +878,44 @@ with tab_cir:
         st.markdown("**1. Nguồn ảnh tham chiếu:**")
         cir_upload = st.file_uploader("Tải ảnh mới từ thiết bị:", type=["png", "jpg", "jpeg"], key="cir_up")
 
-        cir_sample_ids = ["15970", "39386", "10866"]
-        cir_sample_choices = [str(service.kaggle_images_dir / f"{sid}.jpg") for sid in cir_sample_ids]
-        avail_cir = [p for p in cir_sample_choices if Path(p).exists()]
-        cir_sample = None
-        if avail_cir:
-            cir_sc = st.selectbox(
-                "Hoặc chọn ảnh có sẵn trong catalog:",
-                ["(Chọn ảnh)"] + avail_cir,
-                index=1 if cir_upload is None else 0,
-                format_func=lambda x: x if x == "(Chọn ảnh)" else f"ID {Path(x).stem} ({Path(x).name})"
-            )
-            if cir_sc != "(Chọn ảnh)":
-                cir_sample = cir_sc
-
-        force_upload_mode = False
-        ref_img_pil = None
-        cir_ref_id = None
-
-        if cir_upload is not None:
-            ref_img_pil = Image.open(cir_upload).convert("RGB")
-            force_upload_mode = True
-            st.image(ref_img_pil, caption="Ảnh tải lên từ thiết bị (luồng cir_upload)", use_container_width=True)
-        elif cir_sample is not None:
-            ref_img_pil = Image.open(cir_sample).convert("RGB")
-            cir_ref_id = Path(cir_sample).stem
-            st.image(ref_img_pil, caption=f"Ảnh mẫu catalog ID {cir_ref_id}", use_container_width=True)
-            force_upload_mode = st.checkbox(
-                "Bỏ qua Catalog Cache (`force_upload=True`)",
-                value=False,
-                help="Khi tắt, ảnh catalog dùng vector trong GPU cache. Khi bật, hệ thống chạy lại ViT Image Tower."
-            )
+        has_upload = (cir_upload is not None)
+        if has_upload:
+            st.info("Đang tra cứu theo ảnh tải lên thiết bị. Bấm [×] trên ảnh để chuyển sang chọn ảnh trong catalog.")
+            try:
+                ref_img_pil = Image.open(cir_upload).convert("RGB")
+                w, h = ref_img_pil.size
+                if w < 100 or h < 100:
+                    st.warning(f"Lưu ý: Ảnh có độ phân giải khá nhỏ ({w}×{h} px). Hệ thống vẫn tiến hành tìm kiếm nhưng độ chính xác có thể bị ảnh hưởng.")
+                force_upload_mode = True
+                st.image(ref_img_pil, caption=f"Ảnh tải lên từ thiết bị ({w}×{h} px - luồng cir_upload)", use_container_width=True)
+            except Exception:
+                st.error("Ảnh tải lên bị lỗi hoặc không thể đọc. Vui lòng thử lại với file ảnh khác.")
+                ref_img_pil = None
+        else:
+            cir_sample_ids = ["15970", "39386", "10866"]
+            cir_sample_choices = [str(service.kaggle_images_dir / f"{sid}.jpg") for sid in cir_sample_ids]
+            avail_cir = [p for p in cir_sample_choices if Path(p).exists()]
+            cir_sample = None
+            if avail_cir:
+                cir_sc = st.selectbox(
+                    "Hoặc chọn ảnh có sẵn trong catalog:",
+                    ["(Chọn ảnh)"] + avail_cir,
+                    index=1,
+                    format_func=lambda x: x if x == "(Chọn ảnh)" else f"ID {Path(x).stem} ({Path(x).name})"
+                )
+                if cir_sc != "(Chọn ảnh)":
+                    cir_sample = cir_sc
+                    try:
+                        ref_img_pil = Image.open(cir_sample).convert("RGB")
+                        cir_ref_id = Path(cir_sample).stem
+                        st.image(ref_img_pil, caption=f"Ảnh mẫu catalog ID {cir_ref_id} (luồng cir_catalog)", use_container_width=True)
+                        force_upload_mode = st.checkbox(
+                            "Bỏ qua Catalog Cache (`force_upload=True`)",
+                            value=False,
+                            help="Khi tắt, ảnh catalog dùng vector trong GPU cache. Khi bật, hệ thống chạy lại ViT Image Tower."
+                        )
+                    except Exception:
+                        ref_img_pil = None
 
         st.markdown("**2. Văn bản điều chỉnh:**")
         modifier_input = st.text_input(
@@ -930,7 +943,15 @@ with tab_cir:
                 lat = float(cir_meta.get("latency_ms", cir_results[0]["latency_ms"] if cir_results else 0.0))
                 is_pass = lat <= sla_ms
 
-                st.markdown(f"#### Kết quả sau khi biến đổi theo: *\"{modifier_input}\"* ({len(cir_results)} sp • <span style='color:#38BDF8;'>{lat:.1f} ms</span>):", unsafe_allow_html=True)
+                if cir_meta.get("fallback_message"):
+                    st.warning(f"⚠️ {cir_meta['fallback_message']}")
+
+                tr_mod = cir_meta.get("translated_modifier")
+                mod_display = f"*\"{modifier_input}\"*"
+                if tr_mod and tr_mod != modifier_input and tech_mode:
+                    mod_display += f" *(Prompt chuẩn hóa: `{tr_mod}`)*"
+
+                st.markdown(f"#### Kết quả sau khi biến đổi theo: {mod_display} ({len(cir_results)} sp • <span style='color:#38BDF8;'>{lat:.1f} ms</span>):", unsafe_allow_html=True)
                 render_product_grid(cir_results, cols_per_row=4, show_tech=tech_mode)
 
                 with st.expander("Thông tin hiệu năng CIR", expanded=False):

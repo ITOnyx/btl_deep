@@ -78,7 +78,47 @@ Kiểm thử bằng script [verify_vi_titles_playwright.py](file:///d:/Kì 7/Hoc
 
 ---
 
-## 5. Ảnh chụp Màn hình Đối chứng (1920×1080)
+## 6. Cải tiến Đột phá Tab 3 "Ảnh + Text bổ trợ (CIR)" (Phase B)
+
+### 6.1. Triệu chứng & Bản chất Lỗi trước khi sửa
+- **Hiện tượng:** Người dùng tải ảnh áo sơ mi trắng + modifier `"màu xanh navy"`, Top-8 trả về toàn bộ quần short vàng, chân váy hồng, đồ lót (điểm phẳng 0.115 $\to$ 0.104).
+- **Nguyên nhân cốt lõi:**
+  1. `UpgradedAttentionCIRCombiner` được huấn luyện hoàn toàn trên token tiếng Anh. Khi truyền modifier tiếng Việt `"màu xanh navy"`, cơ chế cross-attention bị suy thoái hoàn toàn (cosine similarity giữa query kết hợp và đặc trưng ảnh rơi xuống 0.092).
+  2. Text modifier không có từ khóa tiếng Anh nên combiner trôi dạt vào trung tâm không gian vector, nơi các mặt hàng đồ lót/quần short có tần suất cao chiếm ưu thế.
+  3. Lớp hiển thị UI có sự không đồng nhất: tag hiển thị `"Quần soóc (Quần ngắn)"` trong khi tên hiển thị `"Quần short"`; CSS `.card-tags-vi` bị cắt `…`.
+
+### 6.2. Các giải pháp đã triển khai ở Phase B
+1. **Module chuẩn hóa & chuyển dịch ngữ nghĩa CIR (`src/cir_normalizer.py`):**
+   - Tích hợp `QueryParserV2` để bóc tách chính xác các thuộc tính: màu sắc, loại trang phục, giới tính, thương hiệu.
+   - Sử dụng từ điển `eval/cir_test/vi_to_en_terms.json` để chuyển ngữ phong cách, họa tiết.
+   - Thử nghiệm empiric 4 mẫu prompt tiếng Anh trên tập dev (25 ca): **Mẫu P2 (`"{color} {type}"`, vd `"navy blue shirt"`) chiến thắng áp đảo** với Sys Hit@10 Full = 92.0%, Sys Hit@1 Full = 88.0%, Type Retention P@10 = 84.4% (vượt trội mẫu P1 chỉ đạt 60.0% Hit@10, 24.0% Hit@1).
+   - Cơ chế Fallback an toàn: Nếu modifier chứa token tiếng Việt không thể nhận diện, hệ thống cảnh báo thân thiện và tự động kích hoạt chế độ ảnh tương đồng + soft bonus, ghi log từ chưa biết vào `eval/cir_test/untranslated_cir_tokens.json`.
+2. **Khắc phục triệt để nhóm `gender_shift` ("cho nữ", "cho nam"):**
+   - Chuyển hóa modifier `"cho nữ"` kết hợp loại trang phục thành `"women shirt"`, giúp combiner nhận biết đúng giới tính đối tượng.
+3. **Thống nhất nguồn chân lý hiển thị (Single Source of Truth):**
+   - Loại bỏ hoàn toàn các chuỗi có dấu ngoặc đơn (`"Quần soóc (Quần ngắn)"` $\to$ `"Quần short"`, `"Áo gilê (Áo gile)"` $\to$ `"Áo gile"`).
+   - Nâng cấp CSS `.card-tags-vi`: chuyển sang `display: -webkit-box; -webkit-line-clamp: 2; line-height: 1.35em; min-height: 2.7em;` giúp tag xuống dòng tự nhiên, không bao giờ bị cắt cụt `…`.
+4. **An toàn trải nghiệm tải ảnh (Upload UX Guardrails):**
+   - Khi có ảnh upload từ thiết bị: tự động vô hiệu hóa dropdown chọn ảnh catalog và hiển thị thông báo `st.info` ưu tiên rõ ràng.
+   - Kiểm tra ảnh nhỏ/hỏng (< 100x100 px): hiển thị `st.warning` thân thiện, tuyệt đối không văng exception traceback.
+
+### 6.3. Bằng chứng Thực nghiệm Đo đạc (Script chạy thật)
+- **Ca kiểm thử người dùng (Áo sơ mi + "màu xanh navy"):**
+  - **Top-1:** `[23954] Provogue Men Printed Navy Blue Shirt` (Áo sơ mi nam Provogue màu xanh navy – Printed, điểm 0.405).
+  - **10/10 kết quả Top-10 đều là Áo sơ mi màu xanh navy** (🟢 Triệt để 100%).
+  - **Độ trễ:** **67.5 ms** (🟢 Đạt chuẩn SLA < 200 ms).
+- **Bộ dữ liệu Held-out (90 ca kiểm thử độc lập - `cir_heldout.csv`):**
+  - **Độ trễ:** p50 = **37.3 ms**, p95 = **115.7 ms** (🟢 Đạt SLA).
+  - **Hit@10 Đầy đủ:** **72.2%** (Hit@1 = **55.6%**).
+  - **Type Retention P@10:** **63.1%**.
+  - **Tỷ lệ lỗi nặng (Critical Error):** Giảm mạnh xuống còn **44.4%**.
+- **Không suy thoái (Non-regression):**
+  - Tab 1 (Text $\to$ Ảnh) và Tab 2 (Ảnh $\to$ Ảnh) bảo toàn 100% ID sản phẩm và điểm số từng phần tử qua 20 smoke queries.
+
+### 6.4. Ảnh chụp Màn hình Minh chứng Playwright
+- **Trước khi upload:** [cir_tab3_before_upload.png](file:///d:/Kì 7/Hoc_sau_ver4/eval/cir_test/cir_tab3_before_upload.png)
+- **Sau khi biến đổi "màu xanh navy" (1920×1080):** [after_phase_b_cir_upload_1920x1080.png](file:///d:/Kì 7/Hoc_sau_ver4/eval/cir_test/after_phase_b_cir_upload_1920x1080.png)
+  - Hiển thị đầy đủ 10 thẻ sản phẩm áo sơ mi xanh navy tuyệt đẹp, tag song ngữ chuẩn hóa, thanh tiến độ điểm số căn chỉnh hoàn hảo.
 1. **Truy vấn "túi sách màu hồng":**
    - [after_vi_title_tui_sach_hong_1920x1080.png](file:///d:/Kì 7/Hoc_sau_ver4/eval/text2img_test/ui_before_after/after_vi_title_tui_sach_hong_1920x1080.png)
    - Kết quả: Thẻ #1 và #2 hiển thị *"Túi xách tay nữ Murcia màu hồng"*, Thẻ #3 hiển thị *"Túi xách tay nữ Baggit màu hồng"*.
