@@ -24,6 +24,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT_DIR))
 
 from src.search_pipeline import VisualSearchEngine
+from src.vi_vocab import generate_vietnamese_title
 
 def verify_rule_7_checkpoint_hash(
     config_path: str = "config.yaml",
@@ -178,6 +179,13 @@ class SearchService:
                         "rank": rank,
                         "item_id": str(row["item_id"]),
                         "name": str(row.get("name", "")),
+                        "name_vi": generate_vietnamese_title(
+                            name=str(row.get("name", "")),
+                            article_type=row.get("articleType"),
+                            gender=row.get("gender"),
+                            base_colour=row.get("baseColour"),
+                            brand=row.get("brand")
+                        ),
                         "articleType": row["articleType"],
                         "gender": row["gender"],
                         "baseColour": row["baseColour"],
@@ -312,6 +320,13 @@ class SearchService:
                 "rank": rank,
                 "item_id": str(row["item_id"]),
                 "name": str(row.get("name", "")),
+                "name_vi": generate_vietnamese_title(
+                    name=str(row.get("name", "")),
+                    article_type=row.get("articleType"),
+                    gender=row.get("gender"),
+                    base_colour=row.get("baseColour"),
+                    brand=row.get("brand")
+                ),
                 "articleType": row["articleType"],
                 "gender": row["gender"],
                 "baseColour": row["baseColour"],
@@ -449,6 +464,13 @@ class SearchService:
                 "rank": rank,
                 "item_id": str(row["item_id"]),
                 "name": str(row.get("name", "")),
+                "name_vi": generate_vietnamese_title(
+                    name=str(row.get("name", "")),
+                    article_type=row.get("articleType"),
+                    gender=row.get("gender"),
+                    base_colour=row.get("baseColour"),
+                    brand=row.get("brand")
+                ),
                 "articleType": row["articleType"],
                 "gender": row["gender"],
                 "baseColour": row["baseColour"],

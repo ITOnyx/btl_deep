@@ -256,7 +256,9 @@ def render_product_grid(results: List[Dict[str, Any]], cols_per_row: int = 5):
                 else:
                     st.warning(f"Không tìm thấy ảnh: {img_path}")
 
-                st.markdown(f"**{prod['name'][:42]}...**" if len(prod['name']) > 42 else f"**{prod['name']}**")
+                title_vi = prod.get("name_vi") or prod.get("name", "")
+                st.markdown(f"**{title_vi}**")
+                st.caption(f"Catalog: *{prod['name']}*")
 
                 tags = []
                 if prod.get("brand") and str(prod.get("brand")) not in ("None", "nan", ""):
@@ -297,8 +299,9 @@ with tab_text:
         st.success(f"✨ **Đang chọn: Hệ thống ({effective_config.upper()})** — Sử dụng QueryParser V2 trích xuất thuộc tính, nới lỏng ứng viên đa tầng L0..L6, cộng thưởng điểm mềm (γ={gamma_val:.2f}) và kết hợp BM25 qua RRF.")
 
     st.markdown("**Gợi ý truy vấn mẫu:**")
-    sample_cols = st.columns(6)
+    sample_cols = st.columns(7)
     sample_queries = [
+        "túi sách màu hồng",
         "áo thun Puma nam",
         "váy dài màu đỏ dạ hội",
         "giày cao gót nữ màu đen",

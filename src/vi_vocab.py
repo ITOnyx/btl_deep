@@ -6,6 +6,7 @@ for gender, articleType, baseColour, and usage.
 
 import unicodedata
 import re
+from typing import Optional, Dict, List, Tuple
 
 def remove_diacritics(text: str) -> str:
     """Removes Vietnamese tone marks and accents for search normalization."""
@@ -263,3 +264,178 @@ def translate_article_type(en_type: str, with_diacritics: bool = True) -> str:
 def translate_usage(en_usage: str, with_diacritics: bool = True) -> str:
     m = USAGE_MAP if with_diacritics else USAGE_MAP_NO_DIACRITICS
     return m.get(en_usage, en_usage)
+
+
+# Natural Vietnamese Fashion Product Title Generator
+VI_TITLE_ARTICLE_TYPES = {
+    "Handbags": "Túi xách",
+    "Tshirts": "Áo thun",
+    "Shirts": "Áo sơ mi",
+    "Jeans": "Quần jean",
+    "Heels": "Giày cao gót",
+    "Sports Shoes": "Giày thể thao",
+    "Casual Shoes": "Giày thời trang",
+    "Sandals": "Sandal",
+    "Flip Flops": "Dép xỏ ngón",
+    "Dresses": "Đầm liền",
+    "Skirts": "Chân váy",
+    "Shorts": "Quần short",
+    "Sweatshirts": "Áo nỉ",
+    "Jackets": "Áo khoác",
+    "Sweaters": "Áo len",
+    "Tops": "Áo kiểu",
+    "Trousers": "Quần tây",
+    "Track Pants": "Quần thể thao bo gấu",
+    "Tracksuits": "Bộ đồ thể thao",
+    "Kurtas": "Áo kurta",
+    "Kurtis": "Áo kurti",
+    "Watches": "Đồng hồ đeo tay",
+    "Belts": "Thắt lưng da",
+    "Wallets": "Ví tiền",
+    "Backpacks": "Balo",
+    "Sunglasses": "Kính mát",
+    "Socks": "Tất vớ",
+    "Swimwear": "Đồ bơi",
+    "Clutches": "Ví cầm tay",
+    "Caps": "Mũ lưỡi trai",
+    "Ties": "Cà vạt",
+    "Scarves": "Khăn choàng",
+    "Leggings": "Quần legging",
+    "Innerwear Vests": "Áo lót may-ô",
+    "Briefs": "Quần lót tam giác",
+    "Bra": "Áo lót nâng ngực",
+    "Nightdress": "Váy ngủ",
+    "Night suits": "Bộ đồ ngủ",
+    "Pendant": "Mặt dây chuyền",
+    "Earrings": "Bông tai",
+    "Necklace and Chains": "Dây chuyền",
+    "Ring": "Nhẫn thời trang",
+    "Duffel Bag": "Túi du lịch duffel",
+    "Laptop Bag": "Túi đựng laptop",
+    "Messenger Bag": "Túi đeo chéo messenger",
+    "Rain Jacket": "Áo mưa jacket",
+    "Rain Trousers": "Quần đi mưa",
+    "Rompers": "Bộ áo liền quần romper",
+    "Jumpsuit": "Bộ jumpsuit liền thân",
+    "Blazers": "Áo blazer",
+    "Suits": "Bộ vest âu phục",
+    "Waistcoat": "Áo gile",
+    "Shoe Accessories": "Phụ kiện giày",
+    "Wristbands": "Băng đeo cổ tay thể thao",
+}
+
+VI_TITLE_GENDERS = {
+    "Men": "nam",
+    "Women": "nữ",
+    "Boys": "bé trai",
+    "Girls": "bé gái",
+    "Unisex": "unisex"
+}
+
+VI_TITLE_COLOURS = {
+    "Pink": "màu hồng",
+    "White": "màu trắng",
+    "Black": "màu đen",
+    "Blue": "màu xanh dương",
+    "Navy Blue": "màu xanh navy",
+    "Red": "màu đỏ",
+    "Grey": "màu xám",
+    "Brown": "màu nâu",
+    "Yellow": "màu vàng",
+    "Green": "màu xanh lá",
+    "Beige": "màu be",
+    "Orange": "màu cam",
+    "Purple": "màu tím",
+    "Khaki": "màu kaki",
+    "Magenta": "màu cánh sen",
+    "Maroon": "màu đỏ mận",
+    "Olive": "màu xanh ô liu",
+    "Peach": "màu đào",
+    "Silver": "màu bạc",
+    "Gold": "màu vàng kim",
+    "Charcoal": "màu than chì",
+    "Cream": "màu kem",
+    "Multi": "phối nhiều màu",
+    "Burgundy": "màu đỏ rượu burgundy",
+    "Copper": "màu đồng",
+    "Bronze": "màu đồng cổ",
+    "Teal": "màu xanh mòng két",
+    "Turquoise Blue": "màu xanh ngọc",
+    "Mustard": "màu vàng mù tạt",
+    "Rust": "màu đỏ gạch rỉ sét",
+    "Tan": "màu nâu da bò tan",
+    "Taupe": "màu nâu xám taupe",
+    "Off White": "màu trắng ngà",
+    "Grey Melange": "màu xám tiêu"
+}
+
+VI_TITLE_MODIFIERS = [
+    ("check", "họa tiết ca rô"),
+    ("checked", "họa tiết ca rô"),
+    ("stripe", "kẻ sọc"),
+    ("striped", "kẻ sọc"),
+    ("stripes", "kẻ sọc"),
+    ("print", "in họa tiết"),
+    ("printed", "in họa tiết"),
+    ("solid", "trơn"),
+    ("slim fit", "ôm dáng"),
+    ("graphic", "in hình"),
+    ("leather", "chất liệu da"),
+    ("leatherette", "giả da cao cấp"),
+    ("denim", "denim"),
+    ("canvas", "vải canvas"),
+    ("sleeveless", "không tay"),
+    ("long sleeve", "dài tay"),
+    ("short sleeve", "ngắn tay"),
+    ("v-neck", "cổ chữ V"),
+    ("round neck", "cổ tròn"),
+    ("floral", "hoa nhí"),
+    ("casual", "phong cách trẻ trung"),
+    ("party", "dự tiệc"),
+    ("sports", "thể thao")
+]
+
+
+def generate_vietnamese_title(
+    name: str = "",
+    article_type: Optional[str] = None,
+    gender: Optional[str] = None,
+    base_colour: Optional[str] = None,
+    brand: Optional[str] = None
+) -> str:
+    """
+    Synthesizes a fluent, natural Vietnamese eCommerce title for any fashion catalog item.
+    Example:
+        article_type='Handbags', gender='Women', base_colour='Pink', brand='Murcia'
+        -> 'Túi xách nữ màu hồng Murcia'
+    """
+    art = VI_TITLE_ARTICLE_TYPES.get(article_type or "", ARTICLE_TYPE_MAP.get(article_type or "", article_type or "Sản phẩm thời trang"))
+    gen = VI_TITLE_GENDERS.get(gender or "", "")
+    col = VI_TITLE_COLOURS.get(base_colour or "", f"màu {(base_colour or '').lower()}" if base_colour else "")
+
+    components = [art]
+    if gen:
+        components.append(gen)
+    if col:
+        components.append(col)
+
+    # Detect extra design elements from English name if not already implied
+    name_lower = (name or "").lower()
+    extras = []
+    for en_pat, vi_desc in VI_TITLE_MODIFIERS:
+        if re.search(rf"\b{re.escape(en_pat)}\b", name_lower):
+            if vi_desc not in " ".join(components) and vi_desc not in extras:
+                extras.append(vi_desc)
+            if len(extras) >= 1:
+                break
+    if extras:
+        components.extend(extras)
+
+    # Brand suffix
+    b_str = str(brand or "").strip()
+    if b_str and b_str.lower() not in ("unknown", "none", "nan", ""):
+        components.append(b_str)
+
+    title_vi = " ".join(components).strip()
+    return title_vi[0].upper() + title_vi[1:] if title_vi else (name or "Sản phẩm")
+

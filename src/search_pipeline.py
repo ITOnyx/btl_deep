@@ -32,6 +32,7 @@ from src.scoring import Scorer
 from src.attr_index import AttributeIndex
 from src.query_parser_v2 import QueryParserV2
 from src.lexical import BM25Index, rrf_merge
+from src.vi_vocab import generate_vietnamese_title
 
 class VisualSearchEngine:
     """
@@ -300,6 +301,13 @@ class VisualSearchEngine:
                 "rank": rank,
                 "item_id": str(row["item_id"]),
                 "name": str(row.get("name", "")),
+                "name_vi": generate_vietnamese_title(
+                    name=str(row.get("name", "")),
+                    article_type=row.get("articleType"),
+                    gender=row.get("gender"),
+                    base_colour=row.get("baseColour"),
+                    brand=row.get("brand")
+                ),
                 "articleType": row["articleType"],
                 "gender": row["gender"],
                 "baseColour": row["baseColour"],
@@ -401,6 +409,13 @@ class VisualSearchEngine:
                 "rank": rank,
                 "item_id": str(row["item_id"]),
                 "name": str(row.get("name", "")),
+                "name_vi": generate_vietnamese_title(
+                    name=str(row.get("name", "")),
+                    article_type=row.get("articleType"),
+                    gender=row.get("gender"),
+                    base_colour=row.get("baseColour"),
+                    brand=row.get("brand")
+                ),
                 "articleType": row["articleType"],
                 "gender": row["gender"],
                 "baseColour": row["baseColour"],
@@ -500,6 +515,13 @@ class VisualSearchEngine:
                 "rank": rank,
                 "item_id": str(row["item_id"]),
                 "name": str(row.get("name", "")),
+                "name_vi": generate_vietnamese_title(
+                    name=str(row.get("name", "")),
+                    article_type=row.get("articleType"),
+                    gender=row.get("gender"),
+                    base_colour=row.get("baseColour"),
+                    brand=row.get("brand")
+                ),
                 "articleType": row["articleType"],
                 "gender": row["gender"],
                 "baseColour": row["baseColour"],
