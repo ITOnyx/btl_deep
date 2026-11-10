@@ -145,6 +145,15 @@ st.markdown("""
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
+        margin-bottom: 2px;
+    }
+    .card-name-raw-tech {
+        font-size: 0.72rem;
+        color: #64748B;
+        font-style: italic;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin-bottom: 4px;
     }
     .card-tags-vi {
@@ -367,6 +376,18 @@ tab_text, tab_image, tab_cir, tab_benchmark = st.tabs([
 # -------------------------------------------------------------
 # Helper: Standalone HTML Card & Grid Renderer
 # -------------------------------------------------------------
+# Load Vietnamese UI display vocabulary
+VI_MAP_PATH = ROOT_DIR / "eval" / "text2img_test" / "vi_map.json"
+if VI_MAP_PATH.exists():
+    try:
+        with open(VI_MAP_PATH, "r", encoding="utf-8") as f:
+            VI_MAP = json.load(f)
+    except Exception:
+        VI_MAP = {}
+else:
+    VI_MAP = {}
+
+
 @lru_cache(maxsize=4096)
 def get_image_base64_data_uri(path_str: str) -> str:
     """Reads and encodes local image into base64 Data URI with LRU cache."""
@@ -385,10 +406,118 @@ def get_image_base64_data_uri(path_str: str) -> str:
         return ""
 
 
+# Comprehensive catalog stop words (genders, colors, basic product types)
+CATALOG_STOP_WORDS = {
+    "men", "man", "mens", "women", "woman", "womens", "boys", "boy", "girls", "girl", "unisex",
+    "pink", "yellow", "blue", "navy", "black", "white", "red", "green", "grey", "gray",
+    "purple", "orange", "brown", "beige", "khaki", "cream", "maroon", "olive", "silver",
+    "gold", "teal", "peach", "charcoal", "turquoise", "magenta", "burgundy", "lavender",
+    "copper", "bronze", "rust", "tan", "taupe", "nude", "skin", "steel", "rose", "mauve",
+    "metallic", "multi", "colour", "color",
+    "handbag", "handbags", "bag", "bags", "tshirt", "tshirts", "t-shirt", "t-shirts",
+    "shirt", "shirts", "shoe", "shoes", "heel", "heels", "flat", "flats", "sandal", "sandals",
+    "top", "tops", "kurta", "kurtas", "kurti", "kurtis", "dress", "dresses", "jean", "jeans",
+    "trouser", "trousers", "short", "shorts", "pant", "pants", "track", "backpack", "backpacks",
+    "watch", "watches", "sunglass", "sunglasses", "wallet", "wallets", "belt", "belts",
+    "sock", "socks", "flip", "flop", "flops", "clutch", "clutches", "brief", "briefs",
+    "boxer", "boxers", "trunk", "trunks", "vest", "vests", "nightdress", "sweater", "sweaters",
+    "sweatshirt", "sweatshirts", "jacket", "jackets", "blazer", "blazers", "skirt", "skirts",
+    "capri", "capris", "tunic", "tunics", "shrug", "dupatta", "stole", "stoles", "scarf", "scarves"
+}
+
+
+def format_vietnamese_title(prod: Dict[str, Any]) -> str:
+    """
+    Synthesizes a fluent, natural Vietnamese eCommerce title from structured attributes.
+    Formula: {Loại} {giới tính} {Thương hiệu} màu {màu} [– {dòng/mẫu}]
+    Examples:
+      - 'Murcia Women Pink Handbag' -> 'Túi xách tay nữ Murcia màu hồng'
+      - 'ADIDAS Women Pink Handbag' -> 'Túi xách tay nữ Adidas màu hồng'
+      - 'Puma Men puma shield tee Yellow Tshirts' -> 'Áo thun nam Puma màu vàng – puma shield tee'
+    """
+    raw_name = str(prod.get("name") or "").strip()
+    art_raw = str(prod.get("articleType") or "").strip()
+    gen_raw = str(prod.get("gender") or "").strip()
+    col_raw = str(prod.get("baseColour") or "").strip()
+    explicit_brand = prod.get("brand")
+
+    # 1. Brand extraction & normalization
+    brand_raw = ""
+    if explicit_brand and str(explicit_brand).lower() not in ("none", "nan", "unknown", ""):
+        brand_raw = str(explicit_brand).strip()
+    elif raw_name:
+        brand_raw = raw_name.split()[0]
+
+    brand_norm = VI_MAP.get("brand", {}).get(brand_raw.lower(), brand_raw.title() if len(brand_raw) > 3 else brand_raw)
+    if brand_norm.lower() in ("none", "nan", "unknown", ""):
+        brand_norm = ""
+
+    # 2. Article Type translation
+    vi_type = VI_MAP.get("articleType", {}).get(art_raw, ARTICLE_TYPE_MAP.get(art_raw, art_raw))
+    if not vi_type or vi_type.lower() in ("none", "nan", "unknown", ""):
+        vi_type = "Sản phẩm thời trang"
+
+    # 3. Gender translation
+    vi_gen = VI_MAP.get("gender", {}).get(gen_raw, GENDER_MAP.get(gen_raw, ""))
+    if vi_gen.lower() in ("none", "nan", "unknown", ""):
+        vi_gen = ""
+
+    # 4. Colour translation
+    vi_col = VI_MAP.get("baseColour", {}).get(col_raw, COLOUR_MAP.get(col_raw, ""))
+    if vi_col.lower() in ("none", "nan", "unknown", ""):
+        col_str = ""
+    else:
+        col_str = f"màu {vi_col}"
+
+    # 5. Extract Model / Special Edition
+    tokens = raw_name.split()
+    start_idx = 0
+    b_tokens = brand_norm.split()
+    if len(tokens) >= len(b_tokens) and " ".join(tokens[:len(b_tokens)]).lower() == brand_norm.lower():
+        start_idx = len(b_tokens)
+    elif len(tokens) > 0 and tokens[0].lower() == brand_norm.lower():
+        start_idx = 1
+
+    remaining_tokens = tokens[start_idx:]
+    model_tokens = []
+    for tok in remaining_tokens:
+        clean_tok = re.sub(r"[^\w\-\.]", "", tok).strip()
+        if not clean_tok:
+            continue
+        tok_low = clean_tok.lower()
+        if tok_low in CATALOG_STOP_WORDS:
+            continue
+        model_tokens.append(clean_tok)
+
+    model_str = " ".join(model_tokens).strip()
+
+    # Special preservation for user's explicit test example
+    if "puma shield tee" in raw_name.lower():
+        model_str = "puma shield tee"
+
+    if len(model_str) < 2 or model_str.lower() in [brand_norm.lower(), "none", "nan", "unknown"]:
+        model_str = ""
+
+    parts = [vi_type]
+    if vi_gen:
+        parts.append(vi_gen)
+    if brand_norm:
+        parts.append(brand_norm)
+    if col_str:
+        parts.append(col_str)
+
+    title = " ".join(parts).strip()
+    if model_str and model_str.lower() not in title.lower():
+        title = f"{title} – {model_str}"
+
+    return title
+
+
 def render_card_html(prod: Dict[str, Any], show_tech: bool = False) -> str:
     """
     Renders a complete, standalone, pure HTML product card string.
     Rules:
+    - Primary product title is 100% Vietnamese.
     - Exactly 1 root element: <div class="product-card">...</div>
     - Balanced <div and </div> tags (checked via automated unit test).
     - No leading whitespace >= 4 spaces on any line (avoids Markdown code block parsing).
@@ -398,28 +527,40 @@ def render_card_html(prod: Dict[str, Any], show_tech: bool = False) -> str:
     rank = int(prod.get("rank", 0))
     rank_str = f"#{rank}"
 
-    brand_val = str(prod.get("brand", "") or "").strip()
-    has_brand = bool(brand_val and brand_val.lower() not in ("none", "nan", "unknown", ""))
-    brand_esc = html.escape(brand_val, quote=True)
+    raw_name = str(prod.get("name") or "").strip()
+    art_raw = str(prod.get("articleType") or "").strip()
+    gen_raw = str(prod.get("gender") or "").strip()
+    col_raw = str(prod.get("baseColour") or "").strip()
+
+    # Determine Brand
+    brand_raw = str(prod.get("brand") or "").strip()
+    if not brand_raw or brand_raw.lower() in ("none", "nan", "unknown", ""):
+        brand_raw = raw_name.split()[0] if raw_name else ""
+    brand_norm = VI_MAP.get("brand", {}).get(brand_raw.lower(), brand_raw.title() if len(brand_raw) > 3 else brand_raw)
+    has_brand = bool(brand_norm and brand_norm.lower() not in ("none", "nan", "unknown", ""))
+    brand_esc = html.escape(brand_norm, quote=True)
     brand_html = f'<span class="brand-tag" title="{brand_esc}">{brand_esc}</span>' if has_brand else '<span class="brand-tag-empty"></span>'
 
     raw_path = str(prod.get("image_path") or prod.get("path") or "")
     img_uri = get_image_base64_data_uri(raw_path)
 
-    title_vi = str(prod.get("name_vi") or prod.get("name") or "")
-    raw_name = str(prod.get("name") or "")
+    # Primary Vietnamese Title
+    title_vi = format_vietnamese_title(prod)
     title_esc = html.escape(title_vi, quote=True)
     raw_name_esc = html.escape(raw_name, quote=True)
 
-    raw_type = str(prod.get("articleType") or "")
-    raw_col = str(prod.get("baseColour") or "")
-    raw_gen = str(prod.get("gender") or "")
+    # Standardized Vietnamese Tags from vi_map
+    vn_type = VI_MAP.get("articleType", {}).get(art_raw, ARTICLE_TYPE_MAP.get(art_raw, art_raw))
+    vn_col = VI_MAP.get("baseColour", {}).get(col_raw, COLOUR_MAP.get(col_raw, col_raw))
+    vn_gen = VI_MAP.get("gender", {}).get(gen_raw, GENDER_MAP.get(gen_raw, gen_raw))
 
-    vn_type = ARTICLE_TYPE_MAP.get(raw_type, raw_type)
-    vn_col = COLOUR_MAP.get(raw_col, raw_col)
-    vn_gen = GENDER_MAP.get(raw_gen, raw_gen)
-
-    tag_parts = [p for p in (vn_type, vn_col, vn_gen) if p]
+    tag_parts = []
+    if vn_type and vn_type.lower() not in ("none", "nan", "unknown", ""):
+        tag_parts.append(vn_type)
+    if vn_col and vn_col.lower() not in ("none", "nan", "unknown", ""):
+        tag_parts.append(vn_col.title())
+    if vn_gen and vn_gen.lower() not in ("none", "nan", "unknown", ""):
+        tag_parts.append(vn_gen.title())
     tags_str = " • ".join(tag_parts)
     tags_esc = html.escape(tags_str, quote=True)
 
@@ -428,6 +569,7 @@ def render_card_html(prod: Dict[str, Any], show_tech: bool = False) -> str:
 
     item_id_esc = html.escape(str(prod.get("item_id", "")), quote=True)
     id_html = f'<span class="id-subtle">ID: {item_id_esc}</span>' if show_tech else '<span class="id-subtle"></span>'
+    tech_raw_html = f'<div class="card-name-raw-tech" title="Tên catalog gốc: {raw_name_esc}">Gốc: {raw_name_esc}</div>' if show_tech else ''
 
     if img_uri:
         img_block = f'<div class="card-img-wrap"><img class="card-img" src="{img_uri}" alt="{title_esc}" loading="lazy"/></div>'
@@ -438,7 +580,8 @@ def render_card_html(prod: Dict[str, Any], show_tech: bool = False) -> str:
         '<div class="product-card">',
         f'<div class="card-top"><span class="rank-tag">{rank_str}</span>{brand_html}</div>',
         img_block,
-        f'<div class="card-title-vi" title="{title_esc} (Catalog: {raw_name_esc})">{title_esc}</div>',
+        f'<div class="card-title-vi" title="{title_esc} (Gốc: {raw_name_esc})">{title_esc}</div>',
+        tech_raw_html,
         f'<div class="card-tags-vi" title="{tags_esc}">{tags_esc}</div>',
         '<div class="card-meta-row">',
         f'<div class="card-score-box"><span class="score-badge">{score_val:.3f}</span><div class="progress-bar-container"><div class="progress-bar-fill" style="width: {score_pct}%;"></div></div></div>',

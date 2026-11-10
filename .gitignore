@@ -28,6 +28,8 @@ checkpoint*
 
 # Large generated files
 reports/contact_sheets/*.png
+eval/**/*.png
+_backup_ui/
 *.parquet
 data/catalog/*.json
 

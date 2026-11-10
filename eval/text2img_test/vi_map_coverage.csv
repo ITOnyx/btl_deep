@@ -1,0 +1,155 @@
+﻿thuoc_tinh,gia_tri_goc,ban_dich_vi,so_san_pham,da_phu,can_duyet
+gender,Boys,bé trai,578,True,False
+gender,Girls,bé gái,437,True,False
+gender,Men,nam,19855,True,False
+gender,Unisex,unisex,1913,True,False
+gender,Women,nữ,15861,True,False
+baseColour,Beige,be,661,True,False
+baseColour,Black,đen,8710,True,False
+baseColour,Blue,xanh dương,4265,True,False
+baseColour,Bronze,đồng,70,True,False
+baseColour,Brown,nâu,2921,True,False
+baseColour,Burgundy,đỏ burgundy,32,True,False
+baseColour,Charcoal,xám than,207,True,False
+baseColour,Coffee Brown,nâu cà phê,25,True,False
+baseColour,Copper,đồng đỏ,66,True,False
+baseColour,Cream,kem,332,True,False
+baseColour,Fluorescent Green,xanh dạ quang,3,True,False
+baseColour,Gold,vàng kim,496,True,False
+baseColour,Green,xanh lá,1858,True,False
+baseColour,Grey,xám,2566,True,False
+baseColour,Grey Melange,xám melange,144,True,False
+baseColour,Khaki,kaki,125,True,False
+baseColour,Lavender,tím lavender,135,True,False
+baseColour,Lime Green,xanh chanh,5,True,False
+baseColour,Magenta,đỏ cánh sen,107,True,False
+baseColour,Maroon,đỏ maroon,494,True,False
+baseColour,Mauve,tím mauve,10,True,False
+baseColour,Metallic,ánh kim,32,True,False
+baseColour,Multi,nhiều màu,380,True,False
+baseColour,Mushroom Brown,nâu nấm,16,True,False
+baseColour,Mustard,vàng mù tạt,95,True,False
+baseColour,Navy Blue,xanh navy,1674,True,False
+baseColour,Nude,màu nude,14,True,False
+baseColour,Off White,trắng ngà,172,True,False
+baseColour,Olive,xanh ô liu,388,True,False
+baseColour,Orange,cam,441,True,False
+baseColour,Peach,đào,142,True,False
+baseColour,Pink,hồng,1443,True,False
+baseColour,Purple,tím,1418,True,False
+baseColour,Red,đỏ,2102,True,False
+baseColour,Rose,hồng hoa,10,True,False
+baseColour,Rust,đỏ rỉ sét,60,True,False
+baseColour,Sea Green,xanh biển,16,True,False
+baseColour,Silver,bạc,932,True,False
+baseColour,Skin,màu da,40,True,False
+baseColour,Steel,xám thép,296,True,False
+baseColour,Tan,nâu tan,106,True,False
+baseColour,Taupe,nâu xám taupe,10,True,False
+baseColour,Teal,xanh teal,117,True,False
+baseColour,Turquoise Blue,xanh ngọc lam,63,True,False
+baseColour,Unknown,(bỏ qua),5,True,False
+baseColour,White,trắng,4769,True,False
+baseColour,Yellow,vàng,671,True,False
+articleType,Accessory Gift Set,Bộ quà tặng phụ kiện,92,True,False
+articleType,Baby Dolls,Váy ngủ babydoll,16,True,False
+articleType,Backpacks,Balo,707,True,False
+articleType,Bangle,Vòng tay bản cứng,78,True,False
+articleType,Bath Robe,Áo choàng tắm,20,True,False
+articleType,Belts,Thắt lưng,792,True,False
+articleType,Blazers,Áo blazer,8,True,False
+articleType,Booties,Giày bốt ngắn,12,True,False
+articleType,Boxers,Quần lót boxer,50,True,False
+articleType,Bra,Áo ngực bra,451,True,False
+articleType,Bracelet,Vòng đeo tay,62,True,False
+articleType,Briefs,Quần lót tam giác,838,True,False
+articleType,Camisoles,Áo hai dây camisole,39,True,False
+articleType,Capris,Quần lửng capri,137,True,False
+articleType,Caps,Mũ lưỡi trai,257,True,False
+articleType,Casual Shoes,Giày thường,2547,True,False
+articleType,Churidar,Quần bó Churidar,25,True,False
+articleType,Clothing Set,Set trang phục bộ,8,True,False
+articleType,Clutches,Ví cầm tay,289,True,False
+articleType,Cufflinks,Khuy măng sét,92,True,False
+articleType,Dresses,Đầm,423,True,False
+articleType,Duffel Bag,Túi trống du lịch,88,True,False
+articleType,Dupatta,Khăn choàng dupatta,115,True,False
+articleType,Earrings,Bông tai,377,True,False
+articleType,Flats,Giày búp bê,458,True,False
+articleType,Flip Flops,Dép tông,804,True,False
+articleType,Formal Shoes,Giày tây công sở,506,True,False
+articleType,Gloves,Găng tay,20,True,False
+articleType,Handbags,Túi xách tay,1736,True,False
+articleType,Hat,Nón rộng vành,2,True,False
+articleType,Headband,Băng đô cài tóc,5,True,False
+articleType,Heels,Giày cao gót,1269,True,False
+articleType,Innerwear Vests,Áo lót ba lỗ,237,True,False
+articleType,Jackets,Áo khoác,251,True,False
+articleType,Jeans,Quần jean,450,True,False
+articleType,Jeggings,Quần jegging,26,True,False
+articleType,Jewellery Set,Bộ trang sức,52,True,False
+articleType,Jumpsuit,Bộ đồ bay jumpsuit,16,True,False
+articleType,Kurta Sets,Bộ áo kurta,94,True,False
+articleType,Kurtas,Áo Kurta,1837,True,False
+articleType,Kurtis,Áo Kurti,234,True,False
+articleType,Laptop Bag,Túi đựng laptop,80,True,False
+articleType,Leggings,Quần legging,105,True,False
+articleType,Lehenga Choli,Trang phục lehenga choli,4,True,False
+articleType,Lounge Pants,Quần dài mặc nhà,57,True,False
+articleType,Lounge Shorts,Quần đùi mặc nhà,32,True,False
+articleType,Messenger Bag,Túi đeo chéo messenger,43,True,False
+articleType,Mobile Pouch,Túi đeo điện thoại,47,True,False
+articleType,Mufflers,Khăn len quàng cổ,38,True,False
+articleType,Necklace and Chains,Dây chuyền vòng cổ,95,True,False
+articleType,Nehru Jackets,Áo khoác cổ đứng Nehru,5,True,False
+articleType,Night suits,Bộ đồ ngủ,139,True,False
+articleType,Nightdress,Váy ngủ,188,True,False
+articleType,Patiala,Quần patiala thụng,35,True,False
+articleType,Pendant,Mặt dây chuyền,149,True,False
+articleType,Rain Jacket,Áo mưa,18,True,False
+articleType,Rain Trousers,Quần đi mưa,2,True,False
+articleType,Ring,Nhẫn,113,True,False
+articleType,Robe,Áo choàng,4,True,False
+articleType,Rompers,Bộ áo liền quần rompers,12,True,False
+articleType,Rucksacks,Balo phượt,11,True,False
+articleType,Salwar,Quần thụng Salwar,31,True,False
+articleType,Salwar and Dupatta,Bộ đồ Salwar & khăn,7,True,False
+articleType,Sandals,Dép quai hậu,810,True,False
+articleType,Sarees,Trang phục saree truyền thống,427,True,False
+articleType,Scarves,Khăn quàng cổ,108,True,False
+articleType,Shapewear,Đồ lót định hình,9,True,False
+articleType,Shirts,Áo sơ mi,2921,True,False
+articleType,Shoe Accessories,Phụ kiện giày,22,True,False
+articleType,Shoe Laces,Dây giày,1,True,False
+articleType,Shorts,Quần short,452,True,False
+articleType,Shrug,Áo khoác lửng shrug,6,True,False
+articleType,Skirts,Chân váy,103,True,False
+articleType,Socks,Tất vớ,666,True,False
+articleType,Sports Sandals,Sandal thể thao,62,True,False
+articleType,Sports Shoes,Giày thể thao,1795,True,False
+articleType,Stockings,Quần tất dài,28,True,False
+articleType,Stoles,Khăn quàng stole,90,True,False
+articleType,Sunglasses,Kính mát,810,True,False
+articleType,Suspenders,Dây đeo quần chữ Y,2,True,False
+articleType,Sweaters,Áo len,275,True,False
+articleType,Sweatshirts,Áo nỉ,280,True,False
+articleType,Swimwear,Đồ bơi,15,True,False
+articleType,Tablet Sleeve,Túi đựng máy tính bảng,3,True,False
+articleType,Ties,Cà vạt,216,True,False
+articleType,Ties and Cufflinks,Bộ cà vạt và khuy măng sét,2,True,False
+articleType,Tights,Quần tất bó,8,True,False
+articleType,Tops,Áo kiểu,1625,True,False
+articleType,Track Pants,Quần thể thao,278,True,False
+articleType,Tracksuits,Bộ quần áo thể thao,29,True,False
+articleType,Travel Accessory,Phụ kiện du lịch,16,True,False
+articleType,Trolley Bag,Vali kéo,3,True,False
+articleType,Trousers,Quần tây,364,True,False
+articleType,Trunk,Quần lót trunk,139,True,False
+articleType,Tshirts,Áo thun,6687,True,False
+articleType,Tunics,Áo tunic,227,True,False
+articleType,Umbrellas,Ô (Dù),6,True,False
+articleType,Waist Pouch,Túi bao tử đeo hông,17,True,False
+articleType,Waistcoat,Áo gile (Áo ghi-lê),15,True,False
+articleType,Wallets,Ví tiền,886,True,False
+articleType,Watches,Đồng hồ,2502,True,False
+articleType,Wristbands,Băng đeo cổ tay,4,True,False
