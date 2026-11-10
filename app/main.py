@@ -875,6 +875,11 @@ with tab_cir:
     cir_c1, cir_c2 = st.columns([1, 2])
 
     with cir_c1:
+        ref_img_pil = None
+        cir_ref_id = None
+        force_upload_mode = False
+        cir_sample = None
+
         st.markdown("**1. Nguồn ảnh tham chiếu:**")
         cir_upload = st.file_uploader("Tải ảnh mới từ thiết bị:", type=["png", "jpg", "jpeg"], key="cir_up")
 
@@ -895,7 +900,6 @@ with tab_cir:
             cir_sample_ids = ["15970", "39386", "10866"]
             cir_sample_choices = [str(service.kaggle_images_dir / f"{sid}.jpg") for sid in cir_sample_ids]
             avail_cir = [p for p in cir_sample_choices if Path(p).exists()]
-            cir_sample = None
             if avail_cir:
                 cir_sc = st.selectbox(
                     "Hoặc chọn ảnh có sẵn trong catalog:",
@@ -917,11 +921,26 @@ with tab_cir:
                     except Exception:
                         ref_img_pil = None
 
-        st.markdown("**2. Văn bản điều chỉnh:**")
+        st.markdown("**2. Văn bản điều chỉnh & Neo danh mục:**")
         modifier_input = st.text_input(
             "Yêu cầu biến đổi kiểu dáng / màu sắc:",
             value="màu xanh navy",
-            placeholder="Ví dụ: màu đỏ, quần short, áo khoác..."
+            placeholder="Ví dụ: màu đỏ, chuyển thành chân váy, áo khoác..."
+        )
+        cir_lambda = st.slider(
+            "Mức độ biến đổi theo yêu cầu chữ",
+            min_value=0.0,
+            max_value=1.0,
+            value=0.5,
+            step=0.05,
+            key="cir_lambda_slider",
+            help="0.0 = giữ tối đa ảnh gốc; 0.5 = cân bằng ảnh và chữ; 1.0 = ưu tiên mạnh theo văn bản điều chỉnh."
+        )
+        use_cir_anchor = st.checkbox(
+            "Khóa giữ nguyên loại trang phục gốc (Khuyến nghị)",
+            value=True,
+            key="cir_dynamic_anchor_cb",
+            help="Tự động giữ nguyên loại sản phẩm gốc khi chỉ đổi màu/giới tính/họa tiết, và chuyển loại khi văn bản yêu cầu loại mới."
         )
         use_cir_bonus = st.checkbox("Cộng điểm thưởng thuộc tính mềm cho từ khóa điều chỉnh", value=True)
 
@@ -935,7 +954,9 @@ with tab_cir:
                         top_k=top_k,
                         use_soft_bonus=use_cir_bonus,
                         ref_id=cir_ref_id,
-                        force_upload=force_upload_mode
+                        force_upload=force_upload_mode,
+                        dynamic_category_anchor=use_cir_anchor,
+                        modifier_weight=cir_lambda
                     )
 
                 flow_executed = str(cir_meta.get("flow", "cir_upload"))
@@ -945,6 +966,22 @@ with tab_cir:
 
                 if cir_meta.get("fallback_message"):
                     st.warning(f"⚠️ {cir_meta['fallback_message']}")
+
+                # Compact Dynamic Category Anchor Status (100% Vietnamese via vi_map.json)
+                target_type_en = cir_meta.get("target_type")
+                target_type_vi = VI_MAP.get("articleType", {}).get(target_type_en, target_type_en) if target_type_en else None
+                if cir_meta.get("anchor_fallback_soft"):
+                    st.info("ℹ️ Không đủ chắc chắn về loại gốc, dùng xếp hạng mềm.")
+                elif cir_meta.get("anchor_active") and target_type_vi:
+                    if cir_meta.get("intent_state") == "B_category_mutation":
+                        st.caption(f"🎯 Trạng thái neo: **Đang chuyển sang loại mới: {target_type_vi}** (λ = {cir_lambda:.2f})")
+                    else:
+                        st.caption(f"🔒 Trạng thái neo: **Đang giữ loại: {target_type_vi}** (λ = {cir_lambda:.2f})")
+                else:
+                    st.caption(f"🔓 Trạng thái neo: **Không khóa loại** (λ = {cir_lambda:.2f})")
+
+                if cir_meta.get("anchor_shortage_notice"):
+                    st.warning(f"ℹ️ {cir_meta['anchor_shortage_notice']}")
 
                 tr_mod = cir_meta.get("translated_modifier")
                 mod_display = f"*\"{modifier_input}\"*"

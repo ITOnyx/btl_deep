@@ -40,13 +40,18 @@ def run_playwright():
         page.screenshot(path=str(out_dir / "cir_tab3_before_upload.png"))
         print("Captured: cir_tab3_before_upload.png", flush=True)
 
-        # 2. Upload file
-        uploader = page.locator("input[data-testid='stFileUploaderDropzoneInput']").first
+        # 2. Upload file STRICTLY into Tab 3 uploader (.last = 2nd uploader on page, Tab 2 is .first)
+        uploader = page.locator("input[data-testid='stFileUploaderDropzoneInput']").last
         uploader.set_input_files(str(shirt_path))
-        print("Uploaded shirt file, waiting 3s for Streamlit to process...", flush=True)
-        time.sleep(3)
+        print("Uploaded shirt file to Tab 3 uploader (.last), waiting for Streamlit to process...", flush=True)
+        page.locator("text=Đang tra cứu theo ảnh tải lên thiết bị").wait_for(state="visible", timeout=15000)
+        time.sleep(2)
 
-        # 3. Click search button
+        # Verify catalog selectbox in Tab 3 is hidden when upload is active
+        assert page.locator("text=Hoặc chọn ảnh có sẵn trong catalog:").count() == 0, "Catalog selectbox must be hidden/disabled during upload!"
+        assert page.locator("text=luồng cir_upload").count() > 0, "Expected cir_upload caption!"
+
+        # 3. Click search button inside Tab 3
         search_btn = page.locator("button:has-text('Tổng hợp Truy vấn & Tìm kiếm')")
         search_btn.click()
         print("Clicked search button, waiting for results...", flush=True)
@@ -59,21 +64,32 @@ def run_playwright():
         print(f"Rendered {card_count} visible product cards.", flush=True)
         assert card_count > 0
 
-        # Check top-1 card title and tags
+        # Check top-1 & ALL 10 cards title and tags
         top1_title = cards.first.locator(".card-title-vi").inner_text()
         top1_tags = cards.first.locator(".card-tags-vi").inner_text()
         print(f"Top-1 Title: {top1_title}", flush=True)
         print(f"Top-1 Tags:  {top1_tags}", flush=True)
 
-        # Check for raw </div>
+        all_titles = [cards.nth(i).locator(".card-title-vi").inner_text() for i in range(card_count)]
+        all_tags = [cards.nth(i).locator(".card-tags-vi").inner_text() for i in range(card_count)]
+        shirt_navy_cnt = sum(
+            1 for t, tg in zip(all_titles, all_tags)
+            if "áo sơ mi" in t.lower() and "xanh navy" in t.lower()
+        )
+        print(f"Shirts + Navy Blue count: {shirt_navy_cnt}/{card_count}", flush=True)
+        assert shirt_navy_cnt == 10 and card_count == 10, f"Expected 10/10 Navy Blue Shirts, got {shirt_navy_cnt}/{card_count}"
+
+        # Check Slider, Checkbox, Anchor Status, and no raw </div>
         body_text = page.locator("body").inner_text()
         assert "</div>" not in body_text, "Found raw </div> in body!"
         assert "Quần soóc (Quần ngắn)" not in body_text, "Found deprecated parenthesized tag!"
         assert "Quần short nữ màu vàng" not in top1_title, "Bug not fixed: Top-1 is still yellow short!"
-        assert "áo sơ mi" in top1_title.lower() or "sơ mi" in top1_title.lower(), "Top-1 must be shirt!"
+        assert "Mức độ biến đổi theo yêu cầu chữ" in body_text, "Missing lambda slider!"
+        assert "Khóa giữ nguyên loại trang phục gốc" in body_text, "Missing dynamic anchor checkbox!"
+        assert "Đang giữ loại: Áo sơ mi" in body_text, "Missing compact anchor status text!"
 
         # Screenshot after fix
-        after_shot = out_dir / "after_phase_b_cir_upload_1920x1080.png"
+        after_shot = out_dir / "after_step3_cir_upload_1920x1080.png"
         page.screenshot(path=str(after_shot))
         print(f"🟢 Captured final screenshot: {after_shot}", flush=True)
 

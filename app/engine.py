@@ -25,7 +25,11 @@ sys.path.insert(0, str(ROOT_DIR))
 
 from src.search_pipeline import VisualSearchEngine
 from src.vi_vocab import generate_vietnamese_title
-from src.cir_normalizer import normalize_cir_modifier
+from src.cir_normalizer import (
+    normalize_cir_modifier,
+    sanitize_parsed_modifier,
+    classify_cir_intent,
+)
 
 def verify_rule_7_checkpoint_hash(
     config_path: str = "config.yaml",
@@ -355,6 +359,208 @@ class SearchService:
         }
         return results, meta
 
+    def _get_related_article_types(self, target_type: str) -> List[str]:
+        """
+        Returns symmetric related articleTypes from eval/families.json for graceful fallback
+        when hard category filtering yields fewer than top_k items.
+        """
+        if not target_type:
+            return []
+        art_fams = getattr(self.engine, "art_families", {}) or {}
+        related = []
+        # Direct family list
+        if target_type in art_fams:
+            for t in art_fams[target_type]:
+                if t != target_type and t not in related:
+                    related.append(t)
+        # Symmetric reverse lookup
+        for fam_key, fam_list in art_fams.items():
+            if target_type in fam_list:
+                if fam_key != target_type and fam_key not in related:
+                    related.append(fam_key)
+                for t in fam_list:
+                    if t != target_type and t not in related:
+                        related.append(t)
+        return related
+
+    def _infer_upload_article_type(
+        self,
+        v_raw: torch.Tensor,
+        top_k_knn: int = 10,
+        conf_threshold: float = 0.62,
+        min_visual_sim: float = 0.65
+    ) -> Dict[str, Any]:
+        """
+        Infers articleType for an uploaded image using visual-only weighted k-NN voting
+        in the centered image embedding gallery.
+        Weight for rank r (0-based): max(sim, 0)^2 / log2(r + 2).
+        Both vote ratio >= conf_threshold and top1_sim >= min_visual_sim are required for hard locking.
+        """
+        v_np = v_raw.float().cpu().numpy()
+        v_c = self.engine.scorer.center_vectors(v_np)[0]
+
+        if self.engine.device == "cuda" and self.engine.t_emb_img_c is not None:
+            q_v = torch.tensor(v_c, dtype=torch.float16, device=self.engine.device)
+            sims_t = torch.matmul(self.engine.t_emb_img_c, q_v)
+            k_nn = min(top_k_knn, self.engine.N)
+            top_vals_t, top_idxs_t = torch.topk(sims_t, k=k_nn)
+            top_vals = top_vals_t.float().cpu().numpy()
+            top_idxs = top_idxs_t.cpu().numpy()
+        else:
+            sims = np.dot(self.engine.emb_img_c, v_c)
+            k_nn = min(top_k_knn, self.engine.N)
+            top_idxs = np.argsort(-sims, kind="stable")[:k_nn]
+            top_vals = sims[top_idxs]
+
+        top1_sim = float(top_vals[0]) if len(top_vals) > 0 else 0.0
+        scores_by_type: Dict[str, float] = {}
+        for r_i, (idx, sim_val) in enumerate(zip(top_idxs, top_vals)):
+            s = max(float(sim_val), 0.0)
+            w = (s ** 2) / float(np.log2(r_i + 2.0))
+            at = str(self.engine.df.iloc[int(idx)]["articleType"])
+            scores_by_type[at] = scores_by_type.get(at, 0.0) + w
+
+        total_w = sum(scores_by_type.values())
+        if total_w <= 1e-12:
+            return {
+                "pred_type": None,
+                "confidence": 0.0,
+                "top1_sim": top1_sim,
+                "confident": False,
+                "type_probs": {}
+            }
+
+        type_probs = {k: v / total_w for k, v in scores_by_type.items()}
+        best_type, best_prob = max(type_probs.items(), key=lambda x: x[1])
+        confident = (best_prob >= conf_threshold) and (top1_sim >= min_visual_sim)
+
+        return {
+            "pred_type": best_type,
+            "confidence": float(best_prob),
+            "top1_sim": top1_sim,
+            "confident": confident,
+            "type_probs": type_probs
+        }
+
+    @staticmethod
+    def interpolate_cir_vector(e_img_raw: np.ndarray, e_comb_raw: np.ndarray, modifier_weight: float) -> np.ndarray:
+        """
+        Computes normalized linear interpolation:
+            e_query = normalize((1 - lambda) * normalize(e_img) + lambda * normalize(e_combiner))
+        """
+        lam = max(0.0, min(1.0, float(modifier_weight)))
+        e_img_n = e_img_raw / max(float(np.linalg.norm(e_img_raw)), 1e-12)
+        if lam <= 0.0:
+            return e_img_n
+        e_comb_n = e_comb_raw / max(float(np.linalg.norm(e_comb_raw)), 1e-12)
+        if lam >= 1.0:
+            return e_comb_n
+        e_mix = (1.0 - lam) * e_img_n + lam * e_comb_n
+        return e_mix / max(float(np.linalg.norm(e_mix)), 1e-12)
+
+    def _select_with_category_anchor(
+        self,
+        sims_all: np.ndarray,
+        top_k: int,
+        target_type: Optional[str],
+        anchor_active: bool,
+        anchor_mode: str,
+        anchor_fallback_soft: bool,
+        upload_type_probs: Dict[str, float],
+        candidate_pool_k: Optional[int],
+        expand_pool_if_short: bool = True
+    ) -> Tuple[np.ndarray, np.ndarray, List[str], int, int, Optional[str]]:
+        """
+        Applies dynamic category anchor filtering/reranking cleanly and deterministically.
+
+        When `anchor_active` and not `anchor_fallback_soft`:
+        - Fetches candidate pool (top `candidate_pool_k` sorted by score descending, or full gallery if None).
+        - Filters candidates matching `articleType == target_type`.
+        - If fewer than `top_k` results remain in pool and `expand_pool_if_short=True`, searches remaining gallery items matching `target_type`.
+        - If still fewer than `top_k` results remain:
+          1) Supplements from related family types (eval/families.json) by descending score.
+          2) If still < `top_k`, returns only the N valid matching items + shortage message (never silently pads wrong types).
+
+        Returns:
+            (final_idxs, final_scores, match_tiers, exact_count, family_count, shortage_notice)
+        """
+        n_total = len(sims_all)
+        sorted_order = np.argsort(-sims_all, kind="stable")
+
+        # Soft rerank fallback (below upload confidence threshold or explicit soft mode)
+        if anchor_fallback_soft or anchor_mode == "soft":
+            if upload_type_probs:
+                soft_bonus = np.zeros(n_total, dtype=np.float32)
+                for art_t, prob in upload_type_probs.items():
+                    if art_t in self.engine.attr_idx.art2id:
+                        tid = self.engine.attr_idx.art2id[art_t]
+                        soft_bonus += np.where(self.engine.attr_idx.article_type_ids == tid, 0.20 * prob, 0.0).astype(np.float32)
+                adj_sims = sims_all + soft_bonus
+                adj_order = np.argsort(-adj_sims, kind="stable")[:top_k]
+                return adj_order, adj_sims[adj_order], ["soft_rerank"] * len(adj_order), 0, 0, None
+            elif target_type and target_type in self.engine.attr_idx.art2id:
+                tid = self.engine.attr_idx.art2id[target_type]
+                soft_bonus = np.where(self.engine.attr_idx.article_type_ids == tid, 0.25, 0.0).astype(np.float32)
+                adj_sims = sims_all + soft_bonus
+                adj_order = np.argsort(-adj_sims, kind="stable")[:top_k]
+                return adj_order, adj_sims[adj_order], ["soft_rerank"] * len(adj_order), 0, 0, None
+
+        # Anchor disabled or unknown target_type
+        if not anchor_active or not target_type or target_type not in self.engine.attr_idx.art2id:
+            sel = sorted_order[:top_k]
+            return sel, sims_all[sel], ["unconstrained"] * len(sel), len(sel), 0, None
+
+        # Hard/Auto Category Lock on candidate pool
+        pool_limit = min(int(candidate_pool_k), n_total) if candidate_pool_k is not None else n_total
+        pool_idxs = sorted_order[:pool_limit]
+        art_ids = self.engine.attr_idx.article_type_ids
+        target_tid = self.engine.attr_idx.art2id[target_type]
+
+        exact_mask = (art_ids[pool_idxs] == target_tid)
+        exact_idxs = pool_idxs[exact_mask]
+        selected_idxs = [int(x) for x in exact_idxs[:top_k]]
+
+        # Expand to full gallery exact matches if pool yielded < top_k (crucial for Category Mutation or rare colors)
+        if len(selected_idxs) < top_k and expand_pool_if_short and pool_limit < n_total:
+            all_exact_mask = (art_ids[sorted_order] == target_tid)
+            selected_idxs = [int(x) for x in sorted_order[all_exact_mask][:top_k]]
+
+        match_tiers = ["exact_type"] * len(selected_idxs)
+        exact_count = len(selected_idxs)
+        family_count = 0
+        shortage_notice = None
+
+        # If exact matches still < top_k, expand to related articleType families,
+        # or report exact N items found without silently padding unrelated categories
+        if len(selected_idxs) < top_k:
+            related_types = self._get_related_article_types(target_type)
+            related_tids = [self.engine.attr_idx.art2id[t] for t in related_types if t in self.engine.attr_idx.art2id]
+            search_scope = sorted_order if expand_pool_if_short else pool_idxs
+            if related_tids:
+                already_set = set(selected_idxs)
+                fam_mask = np.isin(art_ids[search_scope], related_tids)
+                for idx in search_scope[fam_mask]:
+                    i_int = int(idx)
+                    if i_int not in already_set:
+                        selected_idxs.append(i_int)
+                        match_tiers.append("family_fallback")
+                        already_set.add(i_int)
+                        family_count += 1
+                        if len(selected_idxs) >= top_k:
+                            break
+
+            if len(selected_idxs) < top_k:
+                shortage_notice = f"Chỉ có {len(selected_idxs)} sản phẩm phù hợp (trong nhóm loại {target_type})"
+            elif family_count > 0:
+                shortage_notice = (
+                    f"Chỉ có {exact_count} sản phẩm đúng loại {target_type}; "
+                    f"đã bổ sung {family_count} sản phẩm cùng nhóm loại gần nhất"
+                )
+
+        final_idxs = np.array(selected_idxs, dtype=np.int64)
+        final_scores = sims_all[final_idxs] if len(final_idxs) > 0 else np.array([], dtype=np.float32)
+        return final_idxs, final_scores, match_tiers, exact_count, family_count, shortage_notice
+
     def search_cir(
         self,
         ref_image: Any,
@@ -362,16 +568,30 @@ class SearchService:
         top_k: int = 10,
         use_soft_bonus: bool = True,
         ref_id: Optional[str] = None,
-        force_upload: bool = False
+        force_upload: bool = False,
+        dynamic_category_anchor: bool = True,
+        anchor_mode: str = "auto",
+        modifier_weight: float = 0.5,
+        candidate_pool_k: Optional[int] = 500,
+        expand_pool_if_short: bool = True,
+        upload_knn_k: int = 10,
+        upload_conf_threshold: float = 0.62,
+        upload_min_sim: float = 0.65
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
         """
-        CIR with Catalog Embedding Cache if reference image is in catalog,
-        otherwise falls back to ViT Image Tower encoding (CIR-upload).
+        Composed Image Retrieval (CIR) with Dynamic Category Locking and Vector Interpolation Slider.
+
+        Parameters:
+        - dynamic_category_anchor: Enable two-state Category Locking (State A attribute shift vs State B category mutation).
+        - anchor_mode: "auto" (lock when confident, soft rerank when uncertain) | "hard" | "soft" | "off".
+        - modifier_weight (lambda): Blend in [0.0, 1.0]: e_query = normalize((1 - lambda)*e_img + lambda*e_combiner).
+        - candidate_pool_k: Top-K candidate pool retrieved before category locking (None = full gallery).
         """
         self._sync()
         t0 = time.perf_counter()
         t_dec = t_pre = t0
-        
+        lam = max(0.0, min(1.0, float(modifier_weight)))
+
         cand_id = None
         if not force_upload:
             if ref_id and str(ref_id) in self.engine.id_to_idx:
@@ -389,26 +609,69 @@ class SearchService:
 
         is_catalog_cached = (cand_id is not None)
         cand_idxs = np.arange(self.engine.N)
-        parsed_mod = self.engine.parser.parse(modifier_text) if modifier_text.strip() else {}
+        raw_parsed_mod = self.engine.parser.parse(modifier_text) if modifier_text.strip() else {}
 
-        # Determine reference type and gender for prompt anchoring
+        # Sanitize parser false positives ('đậm'->Dresses, 'có mũ'->Caps) and recover color typos
+        clean_spec, extra_style_terms, diag_info = sanitize_parsed_modifier(modifier_text, raw_parsed_mod)
+
+        # Determine reference type/gender and image raw vector
         ref_type = None
         ref_gender = None
-        if is_catalog_cached:
-            row_ref = self.engine.df.iloc[self.engine.id_to_idx[cand_id]]
-            ref_type = row_ref.get("articleType")
-            ref_gender = row_ref.get("gender")
-        elif ref_id and str(ref_id) in self.engine.id_to_idx:
-            row_ref = self.engine.df.iloc[self.engine.id_to_idx[str(ref_id)]]
-            ref_type = row_ref.get("articleType")
-            ref_gender = row_ref.get("gender")
+        ref_type_source = "unknown"
+        upload_knn_info = {
+            "pred_type": None, "confidence": 0.0, "top1_sim": 0.0, "confident": False, "type_probs": {}
+        }
 
-        # 1. Normalize modifier text for CIR Combiner
+        if is_catalog_cached:
+            idx = self.engine.id_to_idx[cand_id]
+            row_ref = self.engine.df.iloc[idx]
+            ref_type = row_ref.get("articleType")
+            ref_gender = row_ref.get("gender")
+            ref_type_source = "catalog_metadata"
+            e_img_raw = self.engine.emb_img_raw[idx]
+            e_img_raw = e_img_raw / max(float(np.linalg.norm(e_img_raw)), 1e-12)
+            t_ref_emb = torch.tensor(self.engine.emb_img_raw[idx], dtype=torch.float16 if self.engine.device == "cuda" else torch.float32, device=self.engine.device).unsqueeze(0)
+        else:
+            im = Image.open(ref_image).convert("RGB") if isinstance(ref_image, (str, Path)) else ref_image.convert("RGB")
+            t_dec = time.perf_counter()
+            img_tensor = self.engine.img_transform(im).unsqueeze(0).to(self.engine.device)
+            if self.engine.device == "cuda":
+                img_tensor = img_tensor.half()
+
+            with torch.no_grad():
+                v_raw = self.engine.model.encode_image(img_tensor)
+            t_ref_emb = v_raw
+            e_img_raw = v_raw.float().cpu().numpy()[0]
+            e_img_raw = e_img_raw / max(float(np.linalg.norm(e_img_raw)), 1e-12)
+
+            if ref_id and str(ref_id) in self.engine.id_to_idx:
+                row_ref = self.engine.df.iloc[self.engine.id_to_idx[str(ref_id)]]
+                ref_type = row_ref.get("articleType")
+                ref_gender = row_ref.get("gender")
+                ref_type_source = "catalog_metadata"
+            else:
+                upload_knn_info = self._infer_upload_article_type(
+                    v_raw,
+                    top_k_knn=upload_knn_k,
+                    conf_threshold=upload_conf_threshold,
+                    min_visual_sim=upload_min_sim
+                )
+                ref_type = upload_knn_info["pred_type"]
+                ref_type_source = "upload_knn"
+
+        # 1. Intent classification (State A: Attribute Shift vs State B: Category Mutation)
+        intent_info = classify_cir_intent(modifier_text, clean_spec, ref_type=ref_type)
+        intent_state = intent_info["intent_state"]
+        target_type = intent_info["target_type"]
+
+        # 2. Translate normalized modifier to optimal P2 English prompt
+        prompt_ref_type = target_type if intent_state == "B_category_mutation" else ref_type
         en_prompt, is_fallback, untranslated = normalize_cir_modifier(
             modifier_text=modifier_text,
-            parsed_spec=parsed_mod,
-            ref_type=ref_type,
-            ref_gender=ref_gender
+            parsed_spec=clean_spec,
+            ref_type=prompt_ref_type,
+            ref_gender=ref_gender,
+            extra_style_terms=extra_style_terms
         )
 
         fallback_msg = None
@@ -417,92 +680,88 @@ class SearchService:
         elif is_fallback or not en_prompt.strip():
             fallback_msg = "Chưa hiểu yêu cầu chỉnh sửa, đang hiển thị kết quả tương tự ảnh gốc"
 
-        if is_catalog_cached:
-            idx = self.engine.id_to_idx[cand_id]
-            raw_emb = self.engine.emb_img_raw[idx]
-            t_ref_emb = torch.tensor(raw_emb, dtype=torch.float16, device=self.engine.device).unsqueeze(0)
-            
-            if is_fallback:
-                cir_vec = raw_emb
-            else:
-                tok = self.engine.processor(text=[en_prompt], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
-                input_ids = tok["input_ids"].to(self.engine.device)
-                t_pre = time.perf_counter()
-                with torch.no_grad():
-                    mod_txt_emb = self.engine.model.encode_text(input_ids)
-                    cir_feat = self.engine.model.cir_combiner(t_ref_emb, mod_txt_emb)
-                    self._sync()
-                    cir_vec = cir_feat.cpu().numpy()[0]
+        # 3. Compose CIR query vector and interpolate with lambda
+        e_comb_raw = None
+        if is_fallback or lam <= 0.0:
+            cir_vec = e_img_raw
+            t_pre = time.perf_counter()
         else:
-            im = Image.open(ref_image).convert("RGB") if isinstance(ref_image, (str, Path)) else ref_image.convert("RGB")
-            t_dec = time.perf_counter()
-            img_tensor = self.engine.img_transform(im).unsqueeze(0).to(self.engine.device)
-            if self.engine.device == "cuda":
-                img_tensor = img_tensor.half()
-
-            # Predict visual category if ref_type is not yet known
-            if not ref_type and not parsed_mod.get("articleType") and not is_fallback and en_prompt:
-                with torch.no_grad():
-                    v_raw = self.engine.model.encode_image(img_tensor)
-                    v_c = self.engine.scorer.center_vectors(v_raw.cpu().numpy())[0]
-                    q_v = torch.tensor(v_c, dtype=torch.float16, device=self.engine.device)
-                    top1_vis = torch.argmax(torch.matmul(self.engine.t_emb_img_c, q_v)).item()
-                    pred_type = self.engine.df.iloc[top1_vis]["articleType"]
-                    en_prompt, _, _ = normalize_cir_modifier(modifier_text, parsed_mod, ref_type=pred_type)
-
-            if is_fallback:
-                with torch.no_grad():
-                    cir_feat = self.engine.model.encode_image(img_tensor)
-                    self._sync()
-                    cir_vec = cir_feat.cpu().numpy()[0]
-            else:
-                tok = self.engine.processor(text=[en_prompt], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
-                input_ids = tok["input_ids"].to(self.engine.device)
-                t_pre = time.perf_counter()
-                with torch.no_grad():
-                    cir_feat = self.engine.model.compose_query(img_tensor, input_ids)
-                    self._sync()
-                    cir_vec = cir_feat.cpu().numpy()[0]
+            tok = self.engine.processor(text=[en_prompt], padding="max_length", max_length=128, truncation=True, return_tensors="pt")
+            input_ids = tok["input_ids"].to(self.engine.device)
+            t_pre = time.perf_counter()
+            with torch.no_grad():
+                mod_txt_emb = self.engine.model.encode_text(input_ids)
+                cir_feat = self.engine.model.cir_combiner(t_ref_emb, mod_txt_emb)
+                self._sync()
+                e_comb_raw = cir_feat.float().cpu().numpy()[0]
+            cir_vec = self.interpolate_cir_vector(e_img_raw, e_comb_raw, lam)
 
         t_fwd = time.perf_counter()
-        norm = max(float(np.linalg.norm(cir_vec)), 1e-12)
-        cir_vec = cir_vec / norm
         cir_vec_c = self.engine.scorer.center_vectors(cir_vec[np.newaxis, :])[0]
 
+        # 4. Compute similarity + soft bonus across gallery
         if self.engine.device == "cuda" and self.engine.t_emb_img_c is not None:
-            cand_t = torch.tensor(cand_idxs, dtype=torch.long, device=self.engine.device)
             q_t = torch.tensor(cir_vec_c, dtype=torch.float16, device=self.engine.device)
-            sims_t = torch.matmul(self.engine.t_emb_img_c[cand_t], q_t)
-
-            if use_soft_bonus and self.engine.gamma > 0:
-                bonus = self.engine.attr_idx.compute_attribute_soft_bonus(
-                    parsed_mod, cand_idxs,
-                    gamma_type=self.engine.gamma, gamma_gender=self.engine.gamma, gamma_colour=self.engine.gamma, gamma_brand=self.engine.gamma
-                )
-                sims_t = sims_t + torch.tensor(bonus, dtype=torch.float16, device=self.engine.device)
-
-            k_top = min(top_k, len(cand_idxs))
-            topk_vals, top_pos = torch.topk(sims_t, k=k_top)
-            final_idxs = cand_idxs[top_pos.cpu().numpy()]
-            final_scores = topk_vals.float().cpu().numpy()
+            sims_t = torch.matmul(self.engine.t_emb_img_c, q_t)
+            sims_all = sims_t.float().cpu().numpy()
         else:
-            sims = np.dot(self.engine.emb_img_c, cir_vec_c)
-            if use_soft_bonus and self.engine.gamma > 0:
-                bonus = self.engine.attr_idx.compute_attribute_soft_bonus(
-                    parsed_mod, cand_idxs,
-                    gamma_type=self.engine.gamma, gamma_gender=self.engine.gamma, gamma_colour=self.engine.gamma, gamma_brand=self.engine.gamma
-                )
-                sims = sims + bonus
-            k_top = min(top_k, len(cand_idxs))
-            top_cand_pos = np.argsort(-sims)[:k_top]
-            final_idxs = cand_idxs[top_cand_pos]
-            final_scores = sims[top_cand_pos]
+            sims_all = np.dot(self.engine.emb_img_c, cir_vec_c)
+
+        # Build aligned soft-bonus spec (inherit target_type if locking so bonus agrees with anchor)
+        bonus_spec = dict(clean_spec)
+        if use_soft_bonus and self.engine.gamma > 0:
+            if not bonus_spec.get("articleType") and target_type:
+                if ref_type_source == "catalog_metadata" or upload_knn_info["confident"] or intent_state == "B_category_mutation":
+                    bonus_spec["articleType"] = target_type
+            bonus = self.engine.attr_idx.compute_attribute_soft_bonus(
+                bonus_spec, cand_idxs,
+                gamma_type=self.engine.gamma, gamma_gender=self.engine.gamma,
+                gamma_colour=self.engine.gamma, gamma_brand=self.engine.gamma
+            )
+            sims_all = sims_all + bonus
+
+        # 5. Determine Dynamic Category Anchor status & apply locking / soft fallback
+        eff_mode = "off" if (not dynamic_category_anchor or anchor_mode == "off") else anchor_mode
+        anchor_active = (eff_mode != "off")
+        anchor_fallback_soft = False
+        anchor_status_msg = ""
+
+        if not anchor_active:
+            anchor_status_msg = "Không khóa loại (Chế độ tự do)"
+        elif eff_mode == "soft":
+            anchor_fallback_soft = True
+            anchor_status_msg = f"Xếp hạng mềm theo loại: {target_type or 'chưa xác định'}"
+        elif intent_state == "B_category_mutation" and target_type:
+            anchor_status_msg = f"Đang chuyển sang loại mới: {target_type}"
+        elif ref_type_source == "catalog_metadata" and target_type:
+            anchor_status_msg = f"Đang giữ loại: {target_type}"
+        elif ref_type_source == "upload_knn":
+            if upload_knn_info["confident"] and target_type:
+                anchor_status_msg = f"Đang giữ loại (Upload ~{upload_knn_info['confidence']*100:.0f}%): {target_type}"
+            else:
+                anchor_fallback_soft = True
+                anchor_status_msg = "Không đủ chắc chắn về loại gốc, dùng xếp hạng mềm"
+        else:
+            anchor_active = False
+            anchor_status_msg = "Chưa xác định được loại gốc, dùng xếp hạng tự do"
+
+        final_idxs, final_scores, match_tiers, exact_count, family_count, shortage_notice = self._select_with_category_anchor(
+            sims_all=sims_all,
+            top_k=top_k,
+            target_type=target_type,
+            anchor_active=anchor_active,
+            anchor_mode=eff_mode,
+            anchor_fallback_soft=anchor_fallback_soft,
+            upload_type_probs=upload_knn_info["type_probs"] if anchor_fallback_soft else {},
+            candidate_pool_k=candidate_pool_k,
+            expand_pool_if_short=expand_pool_if_short
+        )
 
         t_end = time.perf_counter()
         lat_ms = (t_end - t0) * 1000.0
         results = []
-        for rank, (idx, score) in enumerate(zip(final_idxs, final_scores), start=1):
-            row = self.engine.df.iloc[idx]
+        for rank, (idx, score, m_tier) in enumerate(zip(final_idxs, final_scores, match_tiers), start=1):
+            row = self.engine.df.iloc[int(idx)]
             img_p = str(row["path"])
             if not Path(img_p).exists():
                 img_p = str(self.kaggle_images_dir / Path(img_p).name)
@@ -523,8 +782,10 @@ class SearchService:
                 "brand": str(row.get("brand", "")),
                 "image_path": img_p,
                 "score": float(score),
+                "anchor_match_type": m_tier,
                 "latency_ms": round(lat_ms, 2)
             })
+
         flow_name = "cir_catalog" if is_catalog_cached else "cir_upload"
         sla_ms = self.get_flow_sla_ms(flow_name)
         meta = {
@@ -538,6 +799,28 @@ class SearchService:
             "translated_modifier": en_prompt,
             "fallback_message": fallback_msg,
             "untranslated_tokens": untranslated,
+            # Dynamic Category Anchor & Slider metadata
+            "intent_state": intent_state,
+            "target_type": target_type,
+            "ref_type": ref_type,
+            "ref_type_source": ref_type_source,
+            "upload_type_pred": upload_knn_info["pred_type"],
+            "upload_type_confidence": upload_knn_info["confidence"],
+            "upload_top1_sim": upload_knn_info["top1_sim"],
+            "upload_type_confident": upload_knn_info["confident"],
+            "anchor_active": anchor_active,
+            "anchor_mode": eff_mode,
+            "anchor_fallback_soft": anchor_fallback_soft,
+            "anchor_status_msg": anchor_status_msg,
+            "anchor_shortage_notice": shortage_notice,
+            "exact_match_count": exact_count,
+            "family_fallback_count": family_count,
+            "modifier_weight": lam,
+            "candidate_pool_k": candidate_pool_k,
+            "typo_color_recovered": diag_info.get("typo_color_recovered"),
+            "disambiguated_type_dropped": diag_info.get("disambiguated_type_dropped"),
+            "query_vec_img_cosine": float(np.dot(cir_vec, e_img_raw)),
+            "query_vec_comb_cosine": float(np.dot(cir_vec, e_comb_raw / max(float(np.linalg.norm(e_comb_raw)), 1e-12))) if e_comb_raw is not None else None,
             "breakdown": {
                 "decode_ms": (t_dec - t0) * 1000.0,
                 "preprocess_ms": (t_pre - t_dec) * 1000.0,
