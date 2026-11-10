@@ -9,8 +9,11 @@ import re
 import sys
 import time
 import json
+import html
+import base64
 import hashlib
 from pathlib import Path
+from functools import lru_cache
 from typing import Dict, List, Any, Optional
 
 import numpy as np
@@ -58,12 +61,32 @@ st.markdown("""
         line-height: 1.4;
     }
 
-    /* Product Card Styling */
+    /* Product Card Styling (Polished & Standalone Grid) */
+    .product-card {
+        background: #1E293B;
+        border: 1px solid #334155;
+        border-radius: 8px;
+        padding: 0.65rem 0.65rem 0.75rem 0.65rem;
+        margin-bottom: 0.85rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+        height: 100%;
+        min-height: 380px;
+    }
+    .product-card:hover {
+        border-color: #38BDF8;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
     .card-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 6px;
+        min-height: 22px;
     }
     .rank-tag {
         font-weight: 700;
@@ -83,8 +106,36 @@ st.markdown("""
         white-space: nowrap;
         display: inline-block;
     }
+    .brand-tag-empty {
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+    }
+    .card-img-wrap {
+        width: 100%;
+        height: 190px;
+        background: #0B132B;
+        border-radius: 6px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+    .card-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    .card-img-fallback {
+        color: #64748B;
+        font-size: 0.78rem;
+        text-align: center;
+        padding: 1rem;
+    }
     .card-title-vi {
-        font-size: 0.92rem;
+        font-size: 0.90rem;
         font-weight: 600;
         color: #F8FAFC;
         line-height: 1.35;
@@ -94,7 +145,6 @@ st.markdown("""
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
-        margin-top: 6px;
         margin-bottom: 4px;
     }
     .card-tags-vi {
@@ -103,15 +153,22 @@ st.markdown("""
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
     .card-meta-row {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin-top: 6px;
-        padding-top: 4px;
+        align-items: flex-end;
+        margin-top: auto;
+        padding-top: 6px;
         border-top: 1px solid #334155;
+    }
+    .card-score-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1;
+        margin-right: 8px;
     }
     .score-badge {
         font-weight: 700;
@@ -121,10 +178,26 @@ st.markdown("""
         border-radius: 4px;
         font-size: 0.8rem;
         font-family: monospace;
+        display: inline-block;
+    }
+    .progress-bar-container {
+        width: 100%;
+        max-width: 90px;
+        background-color: #334155;
+        border-radius: 3px;
+        height: 4px;
+        margin-top: 4px;
+        overflow: hidden;
+    }
+    .progress-bar-fill {
+        height: 100%;
+        background-color: #38BDF8;
+        border-radius: 3px;
     }
     .id-subtle {
         font-size: 0.72rem;
         color: #64748B;
+        white-space: nowrap;
     }
 
     /* Metric Cards in Dark Mode */
@@ -292,9 +365,93 @@ tab_text, tab_image, tab_cir, tab_benchmark = st.tabs([
 
 
 # -------------------------------------------------------------
-# Helper: Render Product Card Grid (Standardized Height & Clean Typography)
+# Helper: Standalone HTML Card & Grid Renderer
 # -------------------------------------------------------------
+@lru_cache(maxsize=4096)
+def get_image_base64_data_uri(path_str: str) -> str:
+    """Reads and encodes local image into base64 Data URI with LRU cache."""
+    if not path_str:
+        return ""
+    p = Path(path_str)
+    if not p.is_file():
+        return ""
+    try:
+        with open(p, "rb") as f:
+            data = base64.b64encode(f.read()).decode("ascii")
+        ext = p.suffix.lower()
+        mime = "image/png" if ext == ".png" else "image/jpeg"
+        return f"data:{mime};base64,{data}"
+    except Exception:
+        return ""
+
+
+def render_card_html(prod: Dict[str, Any], show_tech: bool = False) -> str:
+    """
+    Renders a complete, standalone, pure HTML product card string.
+    Rules:
+    - Exactly 1 root element: <div class="product-card">...</div>
+    - Balanced <div and </div> tags (checked via automated unit test).
+    - No leading whitespace >= 4 spaces on any line (avoids Markdown code block parsing).
+    - No blank lines.
+    - All dynamic values escaped via html.escape.
+    """
+    rank = int(prod.get("rank", 0))
+    rank_str = f"#{rank}"
+
+    brand_val = str(prod.get("brand", "") or "").strip()
+    has_brand = bool(brand_val and brand_val.lower() not in ("none", "nan", "unknown", ""))
+    brand_esc = html.escape(brand_val, quote=True)
+    brand_html = f'<span class="brand-tag" title="{brand_esc}">{brand_esc}</span>' if has_brand else '<span class="brand-tag-empty"></span>'
+
+    raw_path = str(prod.get("image_path") or prod.get("path") or "")
+    img_uri = get_image_base64_data_uri(raw_path)
+
+    title_vi = str(prod.get("name_vi") or prod.get("name") or "")
+    raw_name = str(prod.get("name") or "")
+    title_esc = html.escape(title_vi, quote=True)
+    raw_name_esc = html.escape(raw_name, quote=True)
+
+    raw_type = str(prod.get("articleType") or "")
+    raw_col = str(prod.get("baseColour") or "")
+    raw_gen = str(prod.get("gender") or "")
+
+    vn_type = ARTICLE_TYPE_MAP.get(raw_type, raw_type)
+    vn_col = COLOUR_MAP.get(raw_col, raw_col)
+    vn_gen = GENDER_MAP.get(raw_gen, raw_gen)
+
+    tag_parts = [p for p in (vn_type, vn_col, vn_gen) if p]
+    tags_str = " • ".join(tag_parts)
+    tags_esc = html.escape(tags_str, quote=True)
+
+    score_val = float(prod.get("score", 0.0))
+    score_pct = max(0, min(100, int(score_val * 2500)))
+
+    item_id_esc = html.escape(str(prod.get("item_id", "")), quote=True)
+    id_html = f'<span class="id-subtle">ID: {item_id_esc}</span>' if show_tech else '<span class="id-subtle"></span>'
+
+    if img_uri:
+        img_block = f'<div class="card-img-wrap"><img class="card-img" src="{img_uri}" alt="{title_esc}" loading="lazy"/></div>'
+    else:
+        img_block = '<div class="card-img-wrap"><div class="card-img-fallback">(Không tìm thấy ảnh)</div></div>'
+
+    lines = [
+        '<div class="product-card">',
+        f'<div class="card-top"><span class="rank-tag">{rank_str}</span>{brand_html}</div>',
+        img_block,
+        f'<div class="card-title-vi" title="{title_esc} (Catalog: {raw_name_esc})">{title_esc}</div>',
+        f'<div class="card-tags-vi" title="{tags_esc}">{tags_esc}</div>',
+        '<div class="card-meta-row">',
+        f'<div class="card-score-box"><span class="score-badge">{score_val:.3f}</span><div class="progress-bar-container"><div class="progress-bar-fill" style="width: {score_pct}%;"></div></div></div>',
+        id_html,
+        '</div>',
+        '</div>'
+    ]
+
+    return "".join(lines)
+
+
 def render_product_grid(results: List[Dict[str, Any]], cols_per_row: int = 5, show_tech: bool = False):
+    """Renders a grid of product cards with exactly ONE st.markdown call per card."""
     if not results:
         st.info("Không tìm thấy sản phẩm phù hợp với mô tả.")
         return
@@ -303,87 +460,9 @@ def render_product_grid(results: List[Dict[str, Any]], cols_per_row: int = 5, sh
         cols = st.columns(cols_per_row)
         for col_idx, item_idx in enumerate(range(i, min(i + cols_per_row, len(results)))):
             prod = results[item_idx]
+            card_html = render_card_html(prod, show_tech=show_tech)
             with cols[col_idx]:
-                # 1. Top row: Rank & Brand
-                rank_str = f"#{prod['rank']}"
-                brand_val = str(prod.get("brand", "")).strip()
-                has_brand = bool(brand_val and brand_val not in ("None", "nan", "Unknown", ""))
-
-                brand_html = f"<span class='brand-tag' title='{brand_val}'>{brand_val}</span>" if has_brand else ""
-                st.markdown(
-                    f"""<div class="card-top">
-                        <span class="rank-tag">{rank_str}</span>
-                        {brand_html}
-                    </div>""",
-                    unsafe_allow_html=True
-                )
-
-                # 2. Product Image
-                img_path = prod.get("image_path", "")
-                if img_path and Path(img_path).exists():
-                    st.image(img_path, use_container_width=True)
-                else:
-                    # Clean fallback placeholder
-                    st.markdown(
-                        """<div style="height:190px; background:#0B132B; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#64748B; font-size:0.8rem;">
-                        (Không tìm thấy ảnh)
-                        </div>""",
-                        unsafe_allow_html=True
-                    )
-
-                # 3. Product Title (Vietnamese primary, English catalog in tooltip)
-                title_vi = prod.get("name_vi") or prod.get("name", "")
-                raw_name = prod.get("name", "")
-                st.markdown(
-                    f"""<div class="card-title-vi" title="{title_vi} (Catalog: {raw_name})">
-                        {title_vi}
-                    </div>""",
-                    unsafe_allow_html=True
-                )
-
-                # 4. Standardized Vietnamese Tags from vi_map
-                raw_type = prod.get("articleType", "")
-                raw_col = prod.get("baseColour", "")
-                raw_gen = prod.get("gender", "")
-
-                vn_type = ARTICLE_TYPE_MAP.get(raw_type, raw_type)
-                vn_col = COLOUR_MAP.get(raw_col, raw_col)
-                vn_gen = GENDER_MAP.get(raw_gen, raw_gen)
-
-                tag_parts = []
-                if vn_type:
-                    tag_parts.append(vn_type)
-                if vn_col:
-                    tag_parts.append(vn_col)
-                if vn_gen:
-                    tag_parts.append(vn_gen)
-                tags_str = " • ".join(tag_parts)
-
-                st.markdown(
-                    f"""<div class="card-tags-vi" title="{tags_str}">
-                        {tags_str}
-                    </div>""",
-                    unsafe_allow_html=True
-                )
-
-                # 5. Score & ID Row
-                score_val = float(prod.get("score", 0.0))
-                score_pct = max(0, min(100, int(score_val * 2500))) # normalized visual progress
-                id_html = f"<span class='id-subtle'>ID: {prod['item_id']}</span>" if show_tech else ""
-
-                st.markdown(
-                    f"""<div class="card-meta-row">
-                        <div>
-                            <span class="score-badge">{score_val:.3f}</span>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar-fill" style="width: {score_pct}%;"></div>
-                            </div>
-                        </div>
-                        {id_html}
-                    </div>""",
-                    unsafe_allow_html=True
-                )
-                st.write("")
+                st.markdown(card_html, unsafe_allow_html=True)
 
 
 # -------------------------------------------------------------

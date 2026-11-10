@@ -1,65 +1,97 @@
-# NHẬT KÝ THAY ĐỔI GIAO DIỆN (UI_CHANGELOG.md)
-**Dự án:** SigLIP E-commerce Visual Search (Hoc_sau_ver4)  
-**Nhánh git:** `ui-cleanup` | **Thời điểm thực hiện:** 2026-11-10  
-**Bản sao lưu gốc:** `_backup_ui/20261110_194135/main.py`
+# BÁO CÁO CẢI TIẾN GIAO DIỆN & SỬA LỖI THẺ SẢN PHẨM (UI CHANGELOG)
+
+**Dự án:** SigLIP E-commerce Visual Search (`Hoc_sau_ver4`)  
+**Nhánh Git:** `ui-cleanup`  
+**Ngày thực hiện:** 10/11/2026  
+**Mục tiêu:** Sửa dứt điểm lỗi HTML thô `</div>` đè lên điểm số, chuẩn hóa thẻ sản phẩm bằng hàm thuần `render_card_html`, đối soát độ trễ SLA và bảo toàn 100% độ chính xác mô hình.
 
 ---
 
-## 1. TỔNG QUAN CÁC THAY ĐỔI & LÝ DO THỰC HIỆN
+## 1. Triệu chứng & Nguyên nhân Gốc rễ (Root Cause)
 
-| Thành phần | Trước khi sửa | Sau khi sửa | Lý do & Chuẩn mực |
-| :--- | :--- | :--- | :--- |
-| **Chế độ hiển thị** | Hiển thị tất cả thông số kỹ thuật (C5/C0, SHA-256, GPU FP16, GT policy, v.v.) trực tiếp trên giao diện chính và sidebar. | Tách làm 2 chế độ: Mặc định là **Chế độ Người dùng** tinh gọn; bổ sung công tắc **"Chế độ kỹ thuật"** trong Sidebar. Thông tin kiểm toán Luật 7 luôn xem được qua 1 lần click expander. | Giúp người dùng thông thường tập trung mua sắm và tra cứu thời trang; chuyên gia/kỹ sư kiểm toán vẫn xem đủ thông số khi cần. |
-| **Tiêu đề & Đầu trang** | Tiêu đề chìm trong nền tối; lộ mã kỹ thuật `( flow: text_to_image )`; lạm dụng emoji (🛍️🔍🖼️🎨📊🎯🛡️✨...). | Tiêu đề màu `#F8FAFC`, tương phản cao đạt chuẩn **WCAG AA**; bỏ hoàn toàn `( flow: text_to_image )`; bỏ emoji rác, chỉ giữ 1 biểu tượng trang nhã cho tên tab. | Tăng tính chuyên nghiệp, thẩm mỹ và khả năng tiếp cận (Accessibility WCAG AA). |
-| **Điều khiển tìm kiếm (Tab 1)** | Nhãn radio rất dài ("Hệ thống (Parser + Metadata + BM25) [Cấu hình C5 Hybrid]"); khối mô tả xanh lá chữ dày đặc; xung đột ngầm giữa radio Tab 1 và selectbox Sidebar. | Radio rút gọn thành **"Hệ thống đầy đủ"** / **"Model thuần"**; chi tiết đưa vào tooltip `help`; khối mô tả thu gọn 1 dòng caption; đưa cấu hình nâng cao (C2, C4, $\gamma$) vào `Tùy chọn nâng cao` (expander). Đồng bộ hóa 1 nguồn sự thật. | Giao diện gọn gàng, loại bỏ xung đột logic giữa Tab 1 và Sidebar. |
-| **Gợi ý mẫu (Thử ngay)** | 7 nút xếp hàng ngang kích thước không đều, bấm vào chỉ điền chữ nhưng không tự tìm kiếm. | 7 nút chia cột đều đặn với nhãn **"Thử ngay:"**; bấm nút là tự động điền và **tự động kích hoạt tìm kiếm ngay**. | Nâng cao trải nghiệm người dùng (1-click search). |
-| **Thanh tìm kiếm & Top-K** | Ô nhập và nút "Tìm kiếm" màu đỏ rực tách làm 2 hàng riêng biệt; Top-K bị giấu trong sidebar đã thu gọn. | Đưa ô nhập văn bản, ô chọn **Top-K (5, 10, 20, 50)** và nút **Tìm kiếm** (màu xanh navy dịu) lên **cùng một hàng ngang**; hỗ trợ nhấn phím Enter để tìm kiếm. | Thao tác tập trung, tiện lợi, đúng thói quen của người dùng eCommerce. |
-| **Thẻ sản phẩm (Grid)** | Chiều cao thẻ lệch nhau do tên 1 dòng vs 2 dòng; lặp dòng `Catalog: ...`; điểm số hiển thị dạng mã monospace thô `0.0311`; tag hiển thị tiếng Anh lộn xộn (Tshirts • Yellow • Men). | Cố định chiều cao thẻ; tên tiếng Việt hiển thị **tối đa 2 dòng kèm dấu ba chấm (`...`)** và tooltip hiển thị tên đầy đủ; bỏ dòng `Catalog: ...` thừa (đưa vào tooltip); 3 tag chuẩn hóa hoàn toàn sang **tiếng Việt** (`vi_map.json`: Loại • Màu • Giới tính); điểm làm tròn 3 chữ số (`0.031`) kèm **thanh tiến độ mini trực quan**. | Thẻ sản phẩm thẳng hàng tăm tắp, cân đối, thuần Việt và hiện đại. |
-| **Thẻ SLA & Pipeline** | Hàng 6 thẻ nền trắng chữ xám mờ lệch tông với theme tối, chiếm diện tích lớn ngay trên kết quả. | Chuyển thành khối **"Thông tin hiệu năng & SLA chi tiết"** (expander) đặt **SAU** kết quả tìm kiếm, thiết kế nền tối `#1E293B`, chữ sáng rõ ràng. | Ưu tiên hiển thị sản phẩm trước; chỉ mở xem hiệu năng kỹ thuật khi cần. |
-| **Cấu hình Streamlit Chrome** | Hiện thanh "Deploy" và menu ba chấm của Streamlit gây xao nhãng. | Thêm `.streamlit/config.toml` cấu hình `toolbarMode="minimal"`, ẩn thanh deploy và thiết lập bảng màu dark theme WCAG AA. | Giao diện chuẩn sản phẩm đóng gói (production-ready). |
+### 1.1. Triệu chứng
+- Ở mỗi thẻ sản phẩm (Tab 1, Text→Ảnh), ngay dòng điểm số (ví dụ `0.031` + thanh tiến độ) xuất hiện một khung code block màu tối chứa chữ `</div>` cùng biểu tượng copy của Streamlit, đè trực tiếp lên huy hiệu điểm.
+- Lỗi xuất hiện ở cả 10 thẻ kết quả của truy vấn `"túi sách màu hồng"` và lặp lại ở các truy vấn khác.
 
----
-
-## 2. DANH SÁCH TỆP THAY ĐỔI (DIFF)
-1. `app/main.py`: Tái cấu trúc lớp giao diện người dùng, áp dụng CSS Dark Mode hiện đại, chuẩn hóa thẻ sản phẩm, đồng bộ điều khiển.
-2. `.streamlit/config.toml`: Tệp cấu hình giao diện Streamlit (toolbarMode, theme tối).
-3. `eval/text2img_test/ui_before_after/`: 16 ảnh chụp màn hình kiểm chứng trước và sau khi làm sạch ở cả 2 độ phân giải (1920×1080 và 1280×720).
+### 1.2. Nguyên nhân kỹ thuật chính xác
+- **Thụt lề $\ge 4$ khoảng trắng trong chuỗi Markdown:** Trong `app/main.py` (trước khi sửa), khối HTML thẻ sản phẩm được viết dưới dạng multiline f-string lồng trong vòng lặp hiển thị. Các dòng con như:
+  ```html
+                              <div class="progress-bar-container">
+                                  <div class="progress-bar-fill" style="width: 77%;"></div>
+                              </div>
+                          </div>
+                      </div>
+  ```
+  có độ thụt lề từ **24 đến 32 khoảng trắng** ở đầu dòng. Theo đặc tả Markdown (CommonMark), bất kỳ dòng nào bắt đầu bằng $\ge 4$ khoảng trắng sẽ tự động bị phân tích cú pháp thành **Indented Code Block** (`<pre><code>...</code></pre>`).
+- **Phân mảnh lời gọi Markdown:** Thẻ sản phẩm trước đó bị chia cắt thành 4 lời gọi `st.markdown` rời rạc xen kẽ với 1 lời gọi `st.image`, không có container HTML bao bọc thống nhất (`.product-card`), khiến layout flexbox không kiểm soát được chiều cao và vị trí các thành phần.
 
 ---
 
-## 3. HƯỚNG DẪN HOÀN TÁC (ROLLBACK)
-Nếu muốn hoàn tác giao diện về trạng thái trước khi làm sạch:
-```powershell
-# Cách 1: Chuyển lại nhánh master
-git checkout master
+## 2. Giải pháp Kỹ thuật & Cải tiến Thực hiện
 
-# Cách 2: Phục hồi tệp từ thư mục sao lưu
-Copy-Item -Path _backup_ui/20261110_194135/main.py -Destination app/main.py -Force
-Remove-Item -Path .streamlit/config.toml -Force
-```
+### 2.1. Hàm thuần `render_card_html(prod, show_tech)`
+- **Đóng gói container duy nhất:** Mỗi thẻ sản phẩm là một khối HTML độc lập `<div class="product-card">...</div>`.
+- **Triệt tiêu thụt lề:** Toàn bộ chuỗi HTML được ghép bằng `"".join(lines)`, đảm bảo **không có bất kỳ khoảng trắng thụt lề nào $\ge 4$ spaces** và **không có dòng trống**.
+- **Cân bằng thẻ mở/đóng tuyệt đối:** Hàm được kiểm tra tự động qua unit test: chính xác **9 thẻ `<div` mở** và **9 thẻ `</div>` đóng**.
+- **Bảo mật & Tránh vỡ layout:** Tất cả dữ liệu động (`name_vi`, `name`, `brand`, `articleType`, `baseColour`, `gender`, `item_id`) đều được xử lý qua `html.escape(..., quote=True)`. Các ký tự nhạy cảm như `<`, `>`, `&`, `'`, `"` không thể làm vỡ cấu trúc thẻ.
+- **Một lời gọi duy nhất:** Trong `render_product_grid`, mỗi thẻ chỉ sử dụng đúng **MỘT lời gọi `st.markdown(card_html, unsafe_allow_html=True)`**.
 
----
+### 2.2. Tối ưu ảnh với In-Memory LRU Base64 Cache
+- Triển khai `@lru_cache(maxsize=4096) def get_image_base64_data_uri(path_str: str) -> str`.
+- Ảnh sản phẩm được đọc trực tiếp và nhúng an toàn qua Base64 Data URI trong thẻ `<img class="card-img" ... loading="lazy"/>`.
+- Thẻ có container cố định `.card-img-wrap` (chiều cao 190px, background `#0B132B`, `object-fit: contain`). Nếu thiếu ảnh, hiển thị placeholder sạch đẹp thay vì làm hỏng layout.
 
-## 4. KẾT QUẢ KIỂM ĐỊNH SAU KHI SỬA (VERIFICATION)
-1. **Đối soát 20 truy vấn đại diện (Smoke Test):**
-   - Chạy kiểm thử tự động so sánh trực tiếp với `eval/text2img_test/results_raw.parquet`.
-   - Kết quả: **20/20 câu truy vấn (100%) có danh sách Top-K ID và Điểm số TRÙNG KHỚP TUYỆT ĐỐI** so với trước khi sửa UI (không lệch dù chỉ 1 ID hay 1 chữ số thập phân).
-2. **Độ bền các Tab 2, Tab 3, Tab 4:**
-   - Đã kiểm tra mở lần lượt Tab 2 (Ảnh → Ảnh), Tab 3 (CIR Đa phương thức) và Tab 4 (Đối soát SLA & GT).
-   - Tất cả các tab hoạt động bình thường, bố cục không bị vỡ.
-3. **Kiểm toán Console Trình duyệt (Playwright):**
-   - Ghi nhận: **0 lỗi console, 0 pageerror**.
+### 2.3. Căn chỉnh layout & Responsive (1920×1080 và 1280×720)
+- Container `.product-card` dùng `display: flex; flex-direction: column; justify-content: space-between; min-height: 380px;`.
+- Phần điểm số `.score-badge` và thanh tiến độ `.progress-bar-container` được đưa vào `.card-meta-row` với `margin-top: auto`. Điều này đảm bảo huy hiệu điểm và thanh tiến độ luôn **thẳng hàng tăm tắp** giữa các thẻ trong cùng một hàng, bất kể tiêu đề sản phẩm dài 1 hay 2 dòng.
 
 ---
 
-## 5. ĐỐI CHIẾU DANH MỤC YÊU CẦU MỤC 10
+## 3. Đo đạc Độ trễ Độc lập (SLA Benchmark: `"túi sách màu hồng"`)
 
-- [x] **A. Hai chế độ hiển thị:** Mặc định "Người dùng", công tắc "Chế độ kỹ thuật" trong sidebar; khối kiểm toán Luật 7 truy cập 1 chạm.
-- [x] **B. Đầu trang:** Tiêu đề sáng WCAG AA; bỏ `flow: text_to_image`; bỏ emoji thừa, biểu tượng tab nhất quán.
-- [x] **C. Điều khiển tìm kiếm:** Radio rút gọn "Hệ thống đầy đủ" / "Model thuần"; khối mô tả 1 dòng; gợi ý mẫu xếp lưới đều 7 cột bấm tự tìm; ô nhập + Top-K + nút tìm kiếm cùng 1 hàng; tùy chọn nâng cao trong expander; đồng bộ điều khiển.
-- [x] **D. Thẻ sản phẩm:** Chiều cao cố định đồng nhất; tên tiếng Việt 2 dòng cắt bằng `...` kèm tooltip; bỏ dòng Catalog trùng; 3 tag tiếng Việt (Loại • Màu • Giới tính); điểm làm tròn 3 chữ số kèm thanh tiến độ; ID để mờ ở chế độ kỹ thuật.
-- [x] **E. Bố cục & Trạng thái:** Lưới 5 cột co giãn; spinner khi tìm; thông báo thân thiện khi rỗng, không hiện traceback; hiện thời gian truy vấn (ms) nhỏ cạnh tiêu đề.
-- [x] **F. Thẻ SLA/pipeline:** Chuyển vào khối expander sau kết quả, nền tối đồng bộ, hiện số đo thật.
-- [x] **G. Streamlit chrome:** `toolbarMode="minimal"`, ẩn Deploy/menu, layout="wide".
-- [x] **H. Nhất quán:** Toàn bộ nhãn tiếng Việt chuẩn; giữ dark theme; không reload model khi tương tác; độ trễ UI thêm = 0 ms.
-- *Không có mục nào trong Mục 10 bị bỏ sót.*
+Được thực hiện độc lập bởi script [benchmark_card_latency.py](file:///d:/Kì 7/Hoc_sau_ver4/eval/text2img_test/benchmark_card_latency.py) và lưu tại [latency_benchmark_tui_sach_hong.json](file:///d:/Kì 7/Hoc_sau_ver4/eval/text2img_test/latency_benchmark_tui_sach_hong.json):
+
+### 3.1. Bản chất con số hiển thị trên tiêu đề kết quả (ví dụ 363.6 ms)
+- Con số trên tiêu đề lấy trực tiếp từ `meta["breakdown"]["total_ms"]`, đo **thời gian thực thi E2E của backend `service.search_text()`** (gồm QueryParser V2, lọc ứng viên đa tầng, SigLIP Text Tower encode và Hybrid/BM25/Top-K).
+- Ở lần chạy đầu tiên (cold run) ngay sau khi khởi động app, PyTorch nạp CUDA context, tokenizer và biên dịch kernel GPU gây ra độ trễ khởi động ~350-380 ms.
+
+### 3.2. Kết quả 20 lần chạy ấm liên tiếp (Warm Runs)
+| Chỉ số đo | Giá trị đo được | Quy định SLA | Đánh giá |
+| :--- | :---: | :---: | :---: |
+| **Độ trễ trung vị (p50)** | **56.49 ms** | < 200 ms | 🟢 ĐẠT |
+| **Phân vị 95 (p95)** | **73.45 ms** | < 200 ms | 🟢 ĐẠT |
+| **Phân vị 99 (p99)** | **73.53 ms** | < 200 ms | 🟢 ĐẠT |
+| **Lớn nhất (max)** | **73.55 ms** | < 200 ms | 🟢 ĐẠT |
+| **Nhỏ nhất (min)** | **45.81 ms** | < 200 ms | 🟢 ĐẠT |
+| **Trung bình (mean)** | **59.16 ms** | < 200 ms | 🟢 ĐẠT |
+
+**Phân rã trung bình từng thành phần (Warm):**
+1. `QueryParser V2`: 1.30 ms (p95: 1.75 ms)
+2. `Lọc ứng viên L0..L6`: 0.26 ms (p95: 0.39 ms)
+3. `SigLIP Text Tower GPU`: 51.13 ms (p95: 62.96 ms)
+4. `Hybrid/BM25/TopK`: 6.40 ms (p95: 8.13 ms)
+
+### 3.3. Thời gian dựng giao diện UI (`render_card_html` cho 10 thẻ)
+- **Lần đầu (Cold render - đọc đĩa 10 ảnh JPEG gốc):** 97.36 ms (trung bình ~9.7 ms/ảnh).
+- **Lần ấm (Warm render - có cache Base64):** p50 = **7.75 ms**, p95 = **11.22 ms** (trung bình **~0.7 ms/thẻ**).
+- **Kết luận:** Lớp UI mới chỉ tốn ~7.75 ms cho toàn bộ 10 thẻ, hoàn toàn không gây trễ thêm quá 50 ms so với phiên bản gốc.
+
+---
+
+## 4. Kết quả Kiểm thử Tự động & Nghiệm thu
+
+1. **Kiểm thử Playwright ([verify_playwright_fix.py](file:///d:/Kì 7/Hoc_sau_ver4/eval/text2img_test/verify_playwright_fix.py)):**
+   - Quét toàn bộ DOM và text của trang web: **0 ký tự `</div>`, `<div`, `</span>` hay `</` nào xuất hiện dưới dạng văn bản**.
+   - Cả 10 thẻ đều có đầy đủ huy hiệu điểm (`.score-badge`), thanh tiến độ (`.progress-bar-fill`) và ảnh hiển thị rõ ràng.
+   - Kiểm tra trên 7 câu gợi ý mẫu: Toàn bộ **7/7 câu đạt chuẩn 100% (0 lỗi HTML thô)**.
+2. **Kiểm thử các ca biên ([test_card_edge_cases.py](file:///d:/Kì 7/Hoc_sau_ver4/eval/text2img_test/test_card_edge_cases.py)):**
+   - Tên cực dài (>200 ký tự): Thẻ tự co giãn hoặc cắt bằng ellipsis, không vỡ layout.
+   - Tên chứa XSS/HTML (`<script>`, `<b>`, `&`, `'`): Thoát mã an toàn 100%.
+   - Thương hiệu rỗng: Hiển thị nhãn trống ẩn, không xô lệch rank tag.
+   - Thiếu ảnh: Hiển thị placeholder chuẩn mực.
+   - Chế độ kỹ thuật bật/tắt: ID sản phẩm hiển thị đúng vị trí.
+3. **Bảo toàn 100% kết quả mô hình ([verify_post_cleanup.py](file:///d:/Kì 7/Hoc_sau_ver4/eval/text2img_test/verify_post_cleanup.py)):**
+   - Chạy đối soát lại 20 truy vấn smoke test: **100% khớp tuyệt đối cả về ID sản phẩm và điểm số** so với trước khi sửa. Không có bất kỳ sự thay đổi nào đối với logic tìm kiếm.
+4. **Ảnh chụp đối chứng:**
+   - 1920×1080: [after_fix_tui_sach_hong_1920x1080.png](file:///d:/Kì 7/Hoc_sau_ver4/eval/text2img_test/ui_before_after/after_fix_tui_sach_hong_1920x1080.png)
+   - 1280×720: [after_fix_tui_sach_hong_1280x720.png](file:///d:/Kì 7/Hoc_sau_ver4/eval/text2img_test/ui_before_after/after_fix_tui_sach_hong_1280x720.png)
