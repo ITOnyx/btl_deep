@@ -1,0 +1,712 @@
+id,nhóm,truy_vấn,kỳ_vọng,ghi_chú
+Q_A_0001,A,áo thun (áo phông),"{""articleType"": ""Tshirts""}",Loại sản phẩm: Tshirts
+Q_A_0002,A,áo phông,"{""articleType"": ""Tshirts""}",Cách gọi khác của Tshirts
+Q_A_0003,A,áo sơ mi,"{""articleType"": ""Shirts""}",Loại sản phẩm: Shirts
+Q_A_0004,A,giày thường ngày,"{""articleType"": ""Casual Shoes""}",Loại sản phẩm: Casual Shoes
+Q_A_0005,A,giày đi chơi,"{""articleType"": ""Casual Shoes""}",Cách gọi khác của Casual Shoes
+Q_A_0006,A,đồng hồ đeo tay,"{""articleType"": ""Watches""}",Loại sản phẩm: Watches
+Q_A_0007,A,áo kurta truyền thống,"{""articleType"": ""Kurtas""}",Loại sản phẩm: Kurtas
+Q_A_0008,A,giày thể thao,"{""articleType"": ""Sports Shoes""}",Loại sản phẩm: Sports Shoes
+Q_A_0009,A,túi xách tay,"{""articleType"": ""Handbags""}",Loại sản phẩm: Handbags
+Q_A_0010,A,túi xách tay,"{""articleType"": ""Handbags""}",Cách gọi khác của Handbags
+Q_A_0011,A,áo kiểu nữ,"{""articleType"": ""Tops""}",Loại sản phẩm: Tops
+Q_A_0012,A,giày cao gót,"{""articleType"": ""Heels""}",Loại sản phẩm: Heels
+Q_A_0013,A,ví tiền (bóp tiền),"{""articleType"": ""Wallets""}",Loại sản phẩm: Wallets
+Q_A_0014,A,quần lót tam giác,"{""articleType"": ""Briefs""}",Loại sản phẩm: Briefs
+Q_A_0015,A,giày xăng-đan (sandal),"{""articleType"": ""Sandals""}",Loại sản phẩm: Sandals
+Q_A_0016,A,kính râm (kính mát),"{""articleType"": ""Sunglasses""}",Loại sản phẩm: Sunglasses
+Q_A_0017,A,dép xỏ ngón (dép kẹp),"{""articleType"": ""Flip Flops""}",Loại sản phẩm: Flip Flops
+Q_A_0018,A,thắt lưng (dây nịt),"{""articleType"": ""Belts""}",Loại sản phẩm: Belts
+Q_A_0019,A,balo,"{""articleType"": ""Backpacks""}",Loại sản phẩm: Backpacks
+Q_A_0020,A,ba lô,"{""articleType"": ""Backpacks""}",Cách gọi khác của Backpacks
+Q_A_0021,A,tất (vớ),"{""articleType"": ""Socks""}",Loại sản phẩm: Socks
+Q_A_0022,A,giày tây công sở,"{""articleType"": ""Formal Shoes""}",Loại sản phẩm: Formal Shoes
+Q_A_0023,A,giày búp bê đế bệt,"{""articleType"": ""Flats""}",Loại sản phẩm: Flats
+Q_A_0024,A,quần soóc (quần ngắn),"{""articleType"": ""Shorts""}",Loại sản phẩm: Shorts
+Q_A_0025,A,áo ngực,"{""articleType"": ""Bra""}",Loại sản phẩm: Bra
+Q_A_0026,A,quần jean (quần bò),"{""articleType"": ""Jeans""}",Loại sản phẩm: Jeans
+Q_A_0027,A,quần bò,"{""articleType"": ""Jeans""}",Cách gọi khác của Jeans
+Q_A_0028,A,trang phục saree truyền thống,"{""articleType"": ""Sarees""}",Loại sản phẩm: Sarees
+Q_A_0029,A,váy liền (đầm),"{""articleType"": ""Dresses""}",Loại sản phẩm: Dresses
+Q_A_0030,A,váy liền thân,"{""articleType"": ""Dresses""}",Cách gọi khác của Dresses
+Q_A_0031,A,bông tai (hoa tai),"{""articleType"": ""Earrings""}",Loại sản phẩm: Earrings
+Q_A_0032,A,quần âu (quần tây),"{""articleType"": ""Trousers""}",Loại sản phẩm: Trousers
+Q_A_0033,A,ví cầm tay clutch,"{""articleType"": ""Clutches""}",Loại sản phẩm: Clutches
+Q_A_0034,A,áo nỉ chui đầu,"{""articleType"": ""Sweatshirts""}",Loại sản phẩm: Sweatshirts
+Q_A_0035,A,quần thể thao bo gấu,"{""articleType"": ""Track Pants""}",Loại sản phẩm: Track Pants
+Q_A_0036,A,áo len chui đầu,"{""articleType"": ""Sweaters""}",Loại sản phẩm: Sweaters
+Q_A_0037,A,mũ lưỡi trai,"{""articleType"": ""Caps""}",Loại sản phẩm: Caps
+Q_A_0038,A,áo khoác jacket,"{""articleType"": ""Jackets""}",Loại sản phẩm: Jackets
+Q_A_0039,A,áo may ô lót trong,"{""articleType"": ""Innerwear Vests""}",Loại sản phẩm: Innerwear Vests
+Q_A_0040,A,áo kurti ngắn,"{""articleType"": ""Kurtis""}",Loại sản phẩm: Kurtis
+Q_A_0041,A,áo tunic dáng dài,"{""articleType"": ""Tunics""}",Loại sản phẩm: Tunics
+Q_A_0042,A,cà vạt,"{""articleType"": ""Ties""}",Loại sản phẩm: Ties
+Q_A_0043,A,váy ngủ,"{""articleType"": ""Nightdress""}",Loại sản phẩm: Nightdress
+Q_A_0044,A,mặt dây chuyền,"{""articleType"": ""Pendant""}",Loại sản phẩm: Pendant
+Q_A_0045,A,bộ đồ ngủ,"{""articleType"": ""Night suits""}",Loại sản phẩm: Night suits
+Q_A_0046,A,quần lót đùi nam (trunk),"{""articleType"": ""Trunk""}",Loại sản phẩm: Trunk
+Q_A_0047,A,quần lửng capri,"{""articleType"": ""Capris""}",Loại sản phẩm: Capris
+Q_A_0048,A,khăn choàng dupatta,"{""articleType"": ""Dupatta""}",Loại sản phẩm: Dupatta
+Q_A_0049,A,nhẫn,"{""articleType"": ""Ring""}",Loại sản phẩm: Ring
+Q_A_0050,A,khăn quàng cổ,"{""articleType"": ""Scarves""}",Loại sản phẩm: Scarves
+Q_A_0051,A,quần legging,"{""articleType"": ""Leggings""}",Loại sản phẩm: Leggings
+Q_A_0052,A,chân váy,"{""articleType"": ""Skirts""}",Loại sản phẩm: Skirts
+Q_A_0053,A,dây chuyền và vòng cổ,"{""articleType"": ""Necklace and Chains""}",Loại sản phẩm: Necklace and Chains
+Q_A_0054,A,bộ áo kurta,"{""articleType"": ""Kurta Sets""}",Loại sản phẩm: Kurta Sets
+Q_A_0055,A,bộ quà tặng phụ kiện,"{""articleType"": ""Accessory Gift Set""}",Loại sản phẩm: Accessory Gift Set
+Q_A_0056,A,khuy măng sét,"{""articleType"": ""Cufflinks""}",Loại sản phẩm: Cufflinks
+Q_A_0057,A,khăn choàng vai,"{""articleType"": ""Stoles""}",Loại sản phẩm: Stoles
+Q_A_0058,A,túi trống du lịch,"{""articleType"": ""Duffel Bag""}",Loại sản phẩm: Duffel Bag
+Q_A_0059,A,túi đựng laptop,"{""articleType"": ""Laptop Bag""}",Loại sản phẩm: Laptop Bag
+Q_A_0060,A,vòng tay bản cứng,"{""articleType"": ""Bangle""}",Loại sản phẩm: Bangle
+Q_A_0061,A,vòng tay (lắc tay),"{""articleType"": ""Bracelet""}",Loại sản phẩm: Bracelet
+Q_A_0062,A,sandal thể thao,"{""articleType"": ""Sports Sandals""}",Loại sản phẩm: Sports Sandals
+Q_A_0063,A,quần dài mặc nhà,"{""articleType"": ""Lounge Pants""}",Loại sản phẩm: Lounge Pants
+Q_A_0064,A,bộ trang sức,"{""articleType"": ""Jewellery Set""}",Loại sản phẩm: Jewellery Set
+Q_A_0065,A,quần lót boxer,"{""articleType"": ""Boxers""}",Loại sản phẩm: Boxers
+Q_A_0066,A,túi đeo điện thoại,"{""articleType"": ""Mobile Pouch""}",Loại sản phẩm: Mobile Pouch
+Q_A_0067,A,túi đeo chéo messenger,"{""articleType"": ""Messenger Bag""}",Loại sản phẩm: Messenger Bag
+Q_A_0068,A,áo hai dây camisole,"{""articleType"": ""Camisoles""}",Loại sản phẩm: Camisoles
+Q_A_0069,A,khăn quàng cổ len,"{""articleType"": ""Mufflers""}",Loại sản phẩm: Mufflers
+Q_A_0070,A,quần patiala thụng,"{""articleType"": ""Patiala""}",Loại sản phẩm: Patiala
+Q_A_0071,A,quần đùi mặc nhà,"{""articleType"": ""Lounge Shorts""}",Loại sản phẩm: Lounge Shorts
+Q_A_0072,A,quần salwar,"{""articleType"": ""Salwar""}",Loại sản phẩm: Salwar
+Q_A_0073,A,bộ quần áo thể thao,"{""articleType"": ""Tracksuits""}",Loại sản phẩm: Tracksuits
+Q_A_0074,A,quần tất dài,"{""articleType"": ""Stockings""}",Loại sản phẩm: Stockings
+Q_A_0075,A,quần jegging,"{""articleType"": ""Jeggings""}",Loại sản phẩm: Jeggings
+Q_A_0076,A,quần ống túm churidar,"{""articleType"": ""Churidar""}",Loại sản phẩm: Churidar
+Q_A_0077,A,phụ kiện giày,"{""articleType"": ""Shoe Accessories""}",Loại sản phẩm: Shoe Accessories
+Q_A_0078,A,áo choàng tắm,"{""articleType"": ""Bath Robe""}",Loại sản phẩm: Bath Robe
+Q_A_0079,A,găng tay,"{""articleType"": ""Gloves""}",Loại sản phẩm: Gloves
+Q_B_0080,B,áo thun (áo phông) màu đen,"{""articleType"": ""Tshirts"", ""baseColour"": ""Black""}",Loại Tshirts + màu Black
+Q_B_0081,B,áo thun (áo phông) màu trắng,"{""articleType"": ""Tshirts"", ""baseColour"": ""White""}",Loại Tshirts + màu White
+Q_B_0082,B,áo thun (áo phông) xanh dương,"{""articleType"": ""Tshirts"", ""baseColour"": ""Blue""}",Loại Tshirts + màu Blue
+Q_B_0083,B,áo thun (áo phông) màu xám,"{""articleType"": ""Tshirts"", ""baseColour"": ""Grey""}",Loại Tshirts + màu Grey
+Q_B_0084,B,áo thun (áo phông) màu đỏ,"{""articleType"": ""Tshirts"", ""baseColour"": ""Red""}",Loại Tshirts + màu Red
+Q_B_0085,B,áo thun (áo phông) xanh lá,"{""articleType"": ""Tshirts"", ""baseColour"": ""Green""}",Loại Tshirts + màu Green
+Q_B_0086,B,áo thun (áo phông) xanh navy (xanh than),"{""articleType"": ""Tshirts"", ""baseColour"": ""Navy Blue""}",Loại Tshirts + màu Navy Blue
+Q_B_0087,B,áo thun (áo phông) màu tím,"{""articleType"": ""Tshirts"", ""baseColour"": ""Purple""}",Loại Tshirts + màu Purple
+Q_B_0088,B,áo sơ mi xanh dương,"{""articleType"": ""Shirts"", ""baseColour"": ""Blue""}",Loại Shirts + màu Blue
+Q_B_0089,B,áo sơ mi màu trắng,"{""articleType"": ""Shirts"", ""baseColour"": ""White""}",Loại Shirts + màu White
+Q_B_0090,B,áo sơ mi màu đen,"{""articleType"": ""Shirts"", ""baseColour"": ""Black""}",Loại Shirts + màu Black
+Q_B_0091,B,áo sơ mi màu đỏ,"{""articleType"": ""Shirts"", ""baseColour"": ""Red""}",Loại Shirts + màu Red
+Q_B_0092,B,áo sơ mi xanh lá,"{""articleType"": ""Shirts"", ""baseColour"": ""Green""}",Loại Shirts + màu Green
+Q_B_0093,B,áo sơ mi màu tím,"{""articleType"": ""Shirts"", ""baseColour"": ""Purple""}",Loại Shirts + màu Purple
+Q_B_0094,B,áo sơ mi xanh navy (xanh than),"{""articleType"": ""Shirts"", ""baseColour"": ""Navy Blue""}",Loại Shirts + màu Navy Blue
+Q_B_0095,B,áo sơ mi màu xám,"{""articleType"": ""Shirts"", ""baseColour"": ""Grey""}",Loại Shirts + màu Grey
+Q_B_0096,B,quần jean (quần bò) xanh dương,"{""articleType"": ""Jeans"", ""baseColour"": ""Blue""}",Loại Jeans + màu Blue
+Q_B_0097,B,quần jean (quần bò) màu đen,"{""articleType"": ""Jeans"", ""baseColour"": ""Black""}",Loại Jeans + màu Black
+Q_B_0098,B,quần jean (quần bò) xanh navy (xanh than),"{""articleType"": ""Jeans"", ""baseColour"": ""Navy Blue""}",Loại Jeans + màu Navy Blue
+Q_B_0099,B,quần jean (quần bò) màu xám,"{""articleType"": ""Jeans"", ""baseColour"": ""Grey""}",Loại Jeans + màu Grey
+Q_B_0100,B,quần jean (quần bò) màu unknown,"{""articleType"": ""Jeans"", ""baseColour"": ""Unknown""}",Loại Jeans + màu Unknown
+Q_B_0101,B,quần jean (quần bò) màu trắng,"{""articleType"": ""Jeans"", ""baseColour"": ""White""}",Loại Jeans + màu White
+Q_B_0102,B,quần jean (quần bò) màu nâu,"{""articleType"": ""Jeans"", ""baseColour"": ""Brown""}",Loại Jeans + màu Brown
+Q_B_0103,B,quần jean (quần bò) màu hoa oải hương tím nhạt,"{""articleType"": ""Jeans"", ""baseColour"": ""Lavender""}",Loại Jeans + màu Lavender
+Q_B_0104,B,túi xách tay màu đen,"{""articleType"": ""Handbags"", ""baseColour"": ""Black""}",Loại Handbags + màu Black
+Q_B_0105,B,túi xách tay màu nâu,"{""articleType"": ""Handbags"", ""baseColour"": ""Brown""}",Loại Handbags + màu Brown
+Q_B_0106,B,túi xách tay xanh dương,"{""articleType"": ""Handbags"", ""baseColour"": ""Blue""}",Loại Handbags + màu Blue
+Q_B_0107,B,túi xách tay màu tím,"{""articleType"": ""Handbags"", ""baseColour"": ""Purple""}",Loại Handbags + màu Purple
+Q_B_0108,B,túi xách tay màu đỏ,"{""articleType"": ""Handbags"", ""baseColour"": ""Red""}",Loại Handbags + màu Red
+Q_B_0109,B,túi xách tay màu hồng,"{""articleType"": ""Handbags"", ""baseColour"": ""Pink""}",Loại Handbags + màu Pink
+Q_B_0110,B,túi xách tay màu be,"{""articleType"": ""Handbags"", ""baseColour"": ""Beige""}",Loại Handbags + màu Beige
+Q_B_0111,B,túi xách tay xanh lá,"{""articleType"": ""Handbags"", ""baseColour"": ""Green""}",Loại Handbags + màu Green
+Q_B_0112,B,giày thường ngày màu đen,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Black""}",Loại Casual Shoes + màu Black
+Q_B_0113,B,giày thường ngày màu nâu,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Brown""}",Loại Casual Shoes + màu Brown
+Q_B_0114,B,giày thường ngày màu trắng,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""White""}",Loại Casual Shoes + màu White
+Q_B_0115,B,giày thường ngày màu xám,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Grey""}",Loại Casual Shoes + màu Grey
+Q_B_0116,B,giày thường ngày xanh dương,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Blue""}",Loại Casual Shoes + màu Blue
+Q_B_0117,B,giày thường ngày xanh navy (xanh than),"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Navy Blue""}",Loại Casual Shoes + màu Navy Blue
+Q_B_0118,B,giày thường ngày màu đỏ,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Red""}",Loại Casual Shoes + màu Red
+Q_B_0119,B,giày thường ngày xanh lá,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Green""}",Loại Casual Shoes + màu Green
+Q_B_0120,B,váy liền (đầm) màu đen,"{""articleType"": ""Dresses"", ""baseColour"": ""Black""}",Loại Dresses + màu Black
+Q_B_0121,B,váy liền (đầm) xanh dương,"{""articleType"": ""Dresses"", ""baseColour"": ""Blue""}",Loại Dresses + màu Blue
+Q_B_0122,B,váy liền (đầm) màu hồng,"{""articleType"": ""Dresses"", ""baseColour"": ""Pink""}",Loại Dresses + màu Pink
+Q_B_0123,B,váy liền (đầm) màu trắng,"{""articleType"": ""Dresses"", ""baseColour"": ""White""}",Loại Dresses + màu White
+Q_B_0124,B,váy liền (đầm) xanh navy (xanh than),"{""articleType"": ""Dresses"", ""baseColour"": ""Navy Blue""}",Loại Dresses + màu Navy Blue
+Q_B_0125,B,váy liền (đầm) màu tím,"{""articleType"": ""Dresses"", ""baseColour"": ""Purple""}",Loại Dresses + màu Purple
+Q_B_0126,B,váy liền (đầm) màu đỏ,"{""articleType"": ""Dresses"", ""baseColour"": ""Red""}",Loại Dresses + màu Red
+Q_B_0127,B,váy liền (đầm) màu xám,"{""articleType"": ""Dresses"", ""baseColour"": ""Grey""}",Loại Dresses + màu Grey
+Q_B_0128,B,giày cao gót màu đen,"{""articleType"": ""Heels"", ""baseColour"": ""Black""}",Loại Heels + màu Black
+Q_B_0129,B,giày cao gót màu nâu,"{""articleType"": ""Heels"", ""baseColour"": ""Brown""}",Loại Heels + màu Brown
+Q_B_0130,B,giày cao gót vàng kim,"{""articleType"": ""Heels"", ""baseColour"": ""Gold""}",Loại Heels + màu Gold
+Q_B_0131,B,giày cao gót xanh dương,"{""articleType"": ""Heels"", ""baseColour"": ""Blue""}",Loại Heels + màu Blue
+Q_B_0132,B,giày cao gót màu be,"{""articleType"": ""Heels"", ""baseColour"": ""Beige""}",Loại Heels + màu Beige
+Q_B_0133,B,giày cao gót màu trắng,"{""articleType"": ""Heels"", ""baseColour"": ""White""}",Loại Heels + màu White
+Q_B_0134,B,giày cao gót màu bạc,"{""articleType"": ""Heels"", ""baseColour"": ""Silver""}",Loại Heels + màu Silver
+Q_B_0135,B,giày cao gót màu đỏ,"{""articleType"": ""Heels"", ""baseColour"": ""Red""}",Loại Heels + màu Red
+Q_B_0136,B,đồng hồ đeo tay màu đen,"{""articleType"": ""Watches"", ""baseColour"": ""Black""}",Loại Watches + màu Black
+Q_B_0137,B,đồng hồ đeo tay màu trắng,"{""articleType"": ""Watches"", ""baseColour"": ""White""}",Loại Watches + màu White
+Q_B_0138,B,đồng hồ đeo tay màu bạc,"{""articleType"": ""Watches"", ""baseColour"": ""Silver""}",Loại Watches + màu Silver
+Q_B_0139,B,đồng hồ đeo tay xám thép,"{""articleType"": ""Watches"", ""baseColour"": ""Steel""}",Loại Watches + màu Steel
+Q_B_0140,B,đồng hồ đeo tay xanh dương,"{""articleType"": ""Watches"", ""baseColour"": ""Blue""}",Loại Watches + màu Blue
+Q_B_0141,B,đồng hồ đeo tay màu xám,"{""articleType"": ""Watches"", ""baseColour"": ""Grey""}",Loại Watches + màu Grey
+Q_B_0142,B,đồng hồ đeo tay màu hồng,"{""articleType"": ""Watches"", ""baseColour"": ""Pink""}",Loại Watches + màu Pink
+Q_B_0143,B,đồng hồ đeo tay vàng kim,"{""articleType"": ""Watches"", ""baseColour"": ""Gold""}",Loại Watches + màu Gold
+Q_B_0144,B,quần soóc (quần ngắn) màu đen,"{""articleType"": ""Shorts"", ""baseColour"": ""Black""}",Loại Shorts + màu Black
+Q_B_0145,B,quần soóc (quần ngắn) xanh dương,"{""articleType"": ""Shorts"", ""baseColour"": ""Blue""}",Loại Shorts + màu Blue
+Q_B_0146,B,quần soóc (quần ngắn) xanh navy (xanh than),"{""articleType"": ""Shorts"", ""baseColour"": ""Navy Blue""}",Loại Shorts + màu Navy Blue
+Q_B_0147,B,quần soóc (quần ngắn) màu xám,"{""articleType"": ""Shorts"", ""baseColour"": ""Grey""}",Loại Shorts + màu Grey
+Q_B_0148,B,quần soóc (quần ngắn) màu trắng,"{""articleType"": ""Shorts"", ""baseColour"": ""White""}",Loại Shorts + màu White
+Q_B_0149,B,quần soóc (quần ngắn) màu đỏ,"{""articleType"": ""Shorts"", ""baseColour"": ""Red""}",Loại Shorts + màu Red
+Q_B_0150,B,quần soóc (quần ngắn) màu nâu,"{""articleType"": ""Shorts"", ""baseColour"": ""Brown""}",Loại Shorts + màu Brown
+Q_B_0151,B,quần soóc (quần ngắn) màu be,"{""articleType"": ""Shorts"", ""baseColour"": ""Beige""}",Loại Shorts + màu Beige
+Q_B_0152,B,áo kurta truyền thống xanh dương,"{""articleType"": ""Kurtas"", ""baseColour"": ""Blue""}",Loại Kurtas + màu Blue
+Q_B_0153,B,áo kurta truyền thống màu trắng,"{""articleType"": ""Kurtas"", ""baseColour"": ""White""}",Loại Kurtas + màu White
+Q_B_0154,B,áo kurta truyền thống xanh lá,"{""articleType"": ""Kurtas"", ""baseColour"": ""Green""}",Loại Kurtas + màu Green
+Q_B_0155,B,áo kurta truyền thống màu đen,"{""articleType"": ""Kurtas"", ""baseColour"": ""Black""}",Loại Kurtas + màu Black
+Q_B_0156,B,áo kurta truyền thống màu hồng,"{""articleType"": ""Kurtas"", ""baseColour"": ""Pink""}",Loại Kurtas + màu Pink
+Q_B_0157,B,áo kurta truyền thống màu đỏ,"{""articleType"": ""Kurtas"", ""baseColour"": ""Red""}",Loại Kurtas + màu Red
+Q_B_0158,B,áo kurta truyền thống màu nâu,"{""articleType"": ""Kurtas"", ""baseColour"": ""Brown""}",Loại Kurtas + màu Brown
+Q_B_0159,B,áo kurta truyền thống màu tím,"{""articleType"": ""Kurtas"", ""baseColour"": ""Purple""}",Loại Kurtas + màu Purple
+Q_B_0160,B,áo khoác jacket màu đen,"{""articleType"": ""Jackets"", ""baseColour"": ""Black""}",Loại Jackets + màu Black
+Q_B_0161,B,áo khoác jacket xanh dương,"{""articleType"": ""Jackets"", ""baseColour"": ""Blue""}",Loại Jackets + màu Blue
+Q_B_0162,B,áo khoác jacket xanh navy (xanh than),"{""articleType"": ""Jackets"", ""baseColour"": ""Navy Blue""}",Loại Jackets + màu Navy Blue
+Q_B_0163,B,áo khoác jacket màu xám,"{""articleType"": ""Jackets"", ""baseColour"": ""Grey""}",Loại Jackets + màu Grey
+Q_B_0164,B,áo khoác jacket màu đỏ,"{""articleType"": ""Jackets"", ""baseColour"": ""Red""}",Loại Jackets + màu Red
+Q_B_0165,B,áo khoác jacket màu trắng,"{""articleType"": ""Jackets"", ""baseColour"": ""White""}",Loại Jackets + màu White
+Q_B_0166,B,áo khoác jacket xanh ô liu,"{""articleType"": ""Jackets"", ""baseColour"": ""Olive""}",Loại Jackets + màu Olive
+Q_B_0167,B,áo khoác jacket màu hồng,"{""articleType"": ""Jackets"", ""baseColour"": ""Pink""}",Loại Jackets + màu Pink
+Q_B_0168,B,áo len chui đầu màu xám,"{""articleType"": ""Sweaters"", ""baseColour"": ""Grey""}",Loại Sweaters + màu Grey
+Q_B_0169,B,áo len chui đầu màu đen,"{""articleType"": ""Sweaters"", ""baseColour"": ""Black""}",Loại Sweaters + màu Black
+Q_B_0170,B,áo len chui đầu xanh dương,"{""articleType"": ""Sweaters"", ""baseColour"": ""Blue""}",Loại Sweaters + màu Blue
+Q_B_0171,B,áo len chui đầu xanh navy (xanh than),"{""articleType"": ""Sweaters"", ""baseColour"": ""Navy Blue""}",Loại Sweaters + màu Navy Blue
+Q_B_0172,B,áo len chui đầu màu đỏ,"{""articleType"": ""Sweaters"", ""baseColour"": ""Red""}",Loại Sweaters + màu Red
+Q_B_0173,B,áo len chui đầu xanh lá,"{""articleType"": ""Sweaters"", ""baseColour"": ""Green""}",Loại Sweaters + màu Green
+Q_B_0174,B,áo len chui đầu màu tím,"{""articleType"": ""Sweaters"", ""baseColour"": ""Purple""}",Loại Sweaters + màu Purple
+Q_B_0175,B,áo len chui đầu màu trắng,"{""articleType"": ""Sweaters"", ""baseColour"": ""White""}",Loại Sweaters + màu White
+Q_C_0176,C,áo thun (áo phông) nam,"{""articleType"": ""Tshirts"", ""gender"": ""Men""}",Loại Tshirts + giới tính Men
+Q_C_0177,C,áo thun (áo phông) nữ,"{""articleType"": ""Tshirts"", ""gender"": ""Women""}",Loại Tshirts + giới tính Women
+Q_C_0178,C,áo thun (áo phông) bé trai,"{""articleType"": ""Tshirts"", ""gender"": ""Boys""}",Loại Tshirts + giới tính Boys
+Q_C_0179,C,áo thun (áo phông) bé gái,"{""articleType"": ""Tshirts"", ""gender"": ""Girls""}",Loại Tshirts + giới tính Girls
+Q_C_0180,C,áo thun (áo phông) unisex,"{""articleType"": ""Tshirts"", ""gender"": ""Unisex""}",Loại Tshirts + giới tính Unisex
+Q_C_0181,C,áo sơ mi nam,"{""articleType"": ""Shirts"", ""gender"": ""Men""}",Loại Shirts + giới tính Men
+Q_C_0182,C,áo sơ mi nữ,"{""articleType"": ""Shirts"", ""gender"": ""Women""}",Loại Shirts + giới tính Women
+Q_C_0183,C,áo sơ mi bé trai,"{""articleType"": ""Shirts"", ""gender"": ""Boys""}",Loại Shirts + giới tính Boys
+Q_C_0184,C,áo sơ mi bé gái,"{""articleType"": ""Shirts"", ""gender"": ""Girls""}",Loại Shirts + giới tính Girls
+Q_C_0185,C,quần jean (quần bò) nam,"{""articleType"": ""Jeans"", ""gender"": ""Men""}",Loại Jeans + giới tính Men
+Q_C_0186,C,quần jean (quần bò) nữ,"{""articleType"": ""Jeans"", ""gender"": ""Women""}",Loại Jeans + giới tính Women
+Q_C_0187,C,quần jean (quần bò) bé trai,"{""articleType"": ""Jeans"", ""gender"": ""Boys""}",Loại Jeans + giới tính Boys
+Q_C_0188,C,quần jean (quần bò) bé gái,"{""articleType"": ""Jeans"", ""gender"": ""Girls""}",Loại Jeans + giới tính Girls
+Q_C_0189,C,quần jean (quần bò) unisex,"{""articleType"": ""Jeans"", ""gender"": ""Unisex""}",Loại Jeans + giới tính Unisex
+Q_C_0190,C,giày thường ngày nam,"{""articleType"": ""Casual Shoes"", ""gender"": ""Men""}",Loại Casual Shoes + giới tính Men
+Q_C_0191,C,giày thường ngày nữ,"{""articleType"": ""Casual Shoes"", ""gender"": ""Women""}",Loại Casual Shoes + giới tính Women
+Q_C_0192,C,giày thường ngày bé trai,"{""articleType"": ""Casual Shoes"", ""gender"": ""Boys""}",Loại Casual Shoes + giới tính Boys
+Q_C_0193,C,giày thường ngày bé gái,"{""articleType"": ""Casual Shoes"", ""gender"": ""Girls""}",Loại Casual Shoes + giới tính Girls
+Q_C_0194,C,giày thường ngày unisex,"{""articleType"": ""Casual Shoes"", ""gender"": ""Unisex""}",Loại Casual Shoes + giới tính Unisex
+Q_C_0195,C,đồng hồ đeo tay nam,"{""articleType"": ""Watches"", ""gender"": ""Men""}",Loại Watches + giới tính Men
+Q_C_0196,C,đồng hồ đeo tay nữ,"{""articleType"": ""Watches"", ""gender"": ""Women""}",Loại Watches + giới tính Women
+Q_C_0197,C,đồng hồ đeo tay bé trai,"{""articleType"": ""Watches"", ""gender"": ""Boys""}",Loại Watches + giới tính Boys
+Q_C_0198,C,đồng hồ đeo tay bé gái,"{""articleType"": ""Watches"", ""gender"": ""Girls""}",Loại Watches + giới tính Girls
+Q_C_0199,C,đồng hồ đeo tay unisex,"{""articleType"": ""Watches"", ""gender"": ""Unisex""}",Loại Watches + giới tính Unisex
+Q_C_0200,C,quần soóc (quần ngắn) nam,"{""articleType"": ""Shorts"", ""gender"": ""Men""}",Loại Shorts + giới tính Men
+Q_C_0201,C,quần soóc (quần ngắn) nữ,"{""articleType"": ""Shorts"", ""gender"": ""Women""}",Loại Shorts + giới tính Women
+Q_C_0202,C,quần soóc (quần ngắn) bé trai,"{""articleType"": ""Shorts"", ""gender"": ""Boys""}",Loại Shorts + giới tính Boys
+Q_C_0203,C,quần soóc (quần ngắn) bé gái,"{""articleType"": ""Shorts"", ""gender"": ""Girls""}",Loại Shorts + giới tính Girls
+Q_C_0204,C,quần âu (quần tây) nam,"{""articleType"": ""Trousers"", ""gender"": ""Men""}",Loại Trousers + giới tính Men
+Q_C_0205,C,quần âu (quần tây) nữ,"{""articleType"": ""Trousers"", ""gender"": ""Women""}",Loại Trousers + giới tính Women
+Q_C_0206,C,quần âu (quần tây) bé trai,"{""articleType"": ""Trousers"", ""gender"": ""Boys""}",Loại Trousers + giới tính Boys
+Q_C_0207,C,quần âu (quần tây) bé gái,"{""articleType"": ""Trousers"", ""gender"": ""Girls""}",Loại Trousers + giới tính Girls
+Q_C_0208,C,áo khoác jacket nam,"{""articleType"": ""Jackets"", ""gender"": ""Men""}",Loại Jackets + giới tính Men
+Q_C_0209,C,áo khoác jacket nữ,"{""articleType"": ""Jackets"", ""gender"": ""Women""}",Loại Jackets + giới tính Women
+Q_C_0210,C,áo khoác jacket bé trai,"{""articleType"": ""Jackets"", ""gender"": ""Boys""}",Loại Jackets + giới tính Boys
+Q_C_0211,C,áo khoác jacket unisex,"{""articleType"": ""Jackets"", ""gender"": ""Unisex""}",Loại Jackets + giới tính Unisex
+Q_C_0212,C,giày xăng-đan (sandal) nam,"{""articleType"": ""Sandals"", ""gender"": ""Men""}",Loại Sandals + giới tính Men
+Q_C_0213,C,giày xăng-đan (sandal) nữ,"{""articleType"": ""Sandals"", ""gender"": ""Women""}",Loại Sandals + giới tính Women
+Q_C_0214,C,giày xăng-đan (sandal) bé trai,"{""articleType"": ""Sandals"", ""gender"": ""Boys""}",Loại Sandals + giới tính Boys
+Q_C_0215,C,giày xăng-đan (sandal) bé gái,"{""articleType"": ""Sandals"", ""gender"": ""Girls""}",Loại Sandals + giới tính Girls
+Q_C_0216,C,giày xăng-đan (sandal) unisex,"{""articleType"": ""Sandals"", ""gender"": ""Unisex""}",Loại Sandals + giới tính Unisex
+Q_C_0217,C,dép xỏ ngón (dép kẹp) nam,"{""articleType"": ""Flip Flops"", ""gender"": ""Men""}",Loại Flip Flops + giới tính Men
+Q_C_0218,C,dép xỏ ngón (dép kẹp) nữ,"{""articleType"": ""Flip Flops"", ""gender"": ""Women""}",Loại Flip Flops + giới tính Women
+Q_C_0219,C,dép xỏ ngón (dép kẹp) bé trai,"{""articleType"": ""Flip Flops"", ""gender"": ""Boys""}",Loại Flip Flops + giới tính Boys
+Q_C_0220,C,dép xỏ ngón (dép kẹp) bé gái,"{""articleType"": ""Flip Flops"", ""gender"": ""Girls""}",Loại Flip Flops + giới tính Girls
+Q_C_0221,C,dép xỏ ngón (dép kẹp) unisex,"{""articleType"": ""Flip Flops"", ""gender"": ""Unisex""}",Loại Flip Flops + giới tính Unisex
+Q_C_0222,C,áo len chui đầu nam,"{""articleType"": ""Sweaters"", ""gender"": ""Men""}",Loại Sweaters + giới tính Men
+Q_C_0223,C,áo len chui đầu nữ,"{""articleType"": ""Sweaters"", ""gender"": ""Women""}",Loại Sweaters + giới tính Women
+Q_C_0224,C,quần thể thao bo gấu nam,"{""articleType"": ""Track Pants"", ""gender"": ""Men""}",Loại Track Pants + giới tính Men
+Q_C_0225,C,quần thể thao bo gấu nữ,"{""articleType"": ""Track Pants"", ""gender"": ""Women""}",Loại Track Pants + giới tính Women
+Q_C_0226,C,quần thể thao bo gấu unisex,"{""articleType"": ""Track Pants"", ""gender"": ""Unisex""}",Loại Track Pants + giới tính Unisex
+Q_D_0227,D,áo thun (áo phông) nam màu đen,"{""articleType"": ""Tshirts"", ""baseColour"": ""Black"", ""gender"": ""Men""}",Loại Tshirts + Black + Men
+Q_D_0228,D,áo thun (áo phông) nam xanh dương,"{""articleType"": ""Tshirts"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Loại Tshirts + Blue + Men
+Q_D_0229,D,áo thun (áo phông) nam màu trắng,"{""articleType"": ""Tshirts"", ""baseColour"": ""White"", ""gender"": ""Men""}",Loại Tshirts + White + Men
+Q_D_0230,D,áo thun (áo phông) nam màu xám,"{""articleType"": ""Tshirts"", ""baseColour"": ""Grey"", ""gender"": ""Men""}",Loại Tshirts + Grey + Men
+Q_D_0231,D,áo thun (áo phông) nam màu đỏ,"{""articleType"": ""Tshirts"", ""baseColour"": ""Red"", ""gender"": ""Men""}",Loại Tshirts + Red + Men
+Q_D_0232,D,áo thun (áo phông) nam xanh lá,"{""articleType"": ""Tshirts"", ""baseColour"": ""Green"", ""gender"": ""Men""}",Loại Tshirts + Green + Men
+Q_D_0233,D,áo thun (áo phông) nữ màu trắng,"{""articleType"": ""Tshirts"", ""baseColour"": ""White"", ""gender"": ""Women""}",Loại Tshirts + White + Women
+Q_D_0234,D,áo thun (áo phông) nữ màu hồng,"{""articleType"": ""Tshirts"", ""baseColour"": ""Pink"", ""gender"": ""Women""}",Loại Tshirts + Pink + Women
+Q_D_0235,D,áo thun (áo phông) nữ xanh dương,"{""articleType"": ""Tshirts"", ""baseColour"": ""Blue"", ""gender"": ""Women""}",Loại Tshirts + Blue + Women
+Q_D_0236,D,áo thun (áo phông) nữ màu đen,"{""articleType"": ""Tshirts"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Loại Tshirts + Black + Women
+Q_D_0237,D,áo thun (áo phông) nữ xanh lá,"{""articleType"": ""Tshirts"", ""baseColour"": ""Green"", ""gender"": ""Women""}",Loại Tshirts + Green + Women
+Q_D_0238,D,áo thun (áo phông) nữ màu tím,"{""articleType"": ""Tshirts"", ""baseColour"": ""Purple"", ""gender"": ""Women""}",Loại Tshirts + Purple + Women
+Q_D_0239,D,áo thun (áo phông) bé trai màu trắng,"{""articleType"": ""Tshirts"", ""baseColour"": ""White"", ""gender"": ""Boys""}",Loại Tshirts + White + Boys
+Q_D_0240,D,áo thun (áo phông) bé trai màu đỏ,"{""articleType"": ""Tshirts"", ""baseColour"": ""Red"", ""gender"": ""Boys""}",Loại Tshirts + Red + Boys
+Q_D_0241,D,áo thun (áo phông) bé trai màu vàng,"{""articleType"": ""Tshirts"", ""baseColour"": ""Yellow"", ""gender"": ""Boys""}",Loại Tshirts + Yellow + Boys
+Q_D_0242,D,áo thun (áo phông) bé trai xanh dương,"{""articleType"": ""Tshirts"", ""baseColour"": ""Blue"", ""gender"": ""Boys""}",Loại Tshirts + Blue + Boys
+Q_D_0243,D,áo thun (áo phông) bé trai xanh lá,"{""articleType"": ""Tshirts"", ""baseColour"": ""Green"", ""gender"": ""Boys""}",Loại Tshirts + Green + Boys
+Q_D_0244,D,áo thun (áo phông) bé trai màu đen,"{""articleType"": ""Tshirts"", ""baseColour"": ""Black"", ""gender"": ""Boys""}",Loại Tshirts + Black + Boys
+Q_D_0245,D,áo thun (áo phông) bé gái màu hồng,"{""articleType"": ""Tshirts"", ""baseColour"": ""Pink"", ""gender"": ""Girls""}",Loại Tshirts + Pink + Girls
+Q_D_0246,D,áo thun (áo phông) bé gái màu trắng,"{""articleType"": ""Tshirts"", ""baseColour"": ""White"", ""gender"": ""Girls""}",Loại Tshirts + White + Girls
+Q_D_0247,D,áo thun (áo phông) bé gái xanh dương,"{""articleType"": ""Tshirts"", ""baseColour"": ""Blue"", ""gender"": ""Girls""}",Loại Tshirts + Blue + Girls
+Q_D_0248,D,áo thun (áo phông) bé gái màu vàng,"{""articleType"": ""Tshirts"", ""baseColour"": ""Yellow"", ""gender"": ""Girls""}",Loại Tshirts + Yellow + Girls
+Q_D_0249,D,áo thun (áo phông) bé gái xanh lá,"{""articleType"": ""Tshirts"", ""baseColour"": ""Green"", ""gender"": ""Girls""}",Loại Tshirts + Green + Girls
+Q_D_0250,D,áo thun (áo phông) bé gái màu tím,"{""articleType"": ""Tshirts"", ""baseColour"": ""Purple"", ""gender"": ""Girls""}",Loại Tshirts + Purple + Girls
+Q_D_0251,D,áo sơ mi nam xanh dương,"{""articleType"": ""Shirts"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Loại Shirts + Blue + Men
+Q_D_0252,D,áo sơ mi nam màu trắng,"{""articleType"": ""Shirts"", ""baseColour"": ""White"", ""gender"": ""Men""}",Loại Shirts + White + Men
+Q_D_0253,D,áo sơ mi nam màu đen,"{""articleType"": ""Shirts"", ""baseColour"": ""Black"", ""gender"": ""Men""}",Loại Shirts + Black + Men
+Q_D_0254,D,áo sơ mi nam màu đỏ,"{""articleType"": ""Shirts"", ""baseColour"": ""Red"", ""gender"": ""Men""}",Loại Shirts + Red + Men
+Q_D_0255,D,áo sơ mi nam xanh lá,"{""articleType"": ""Shirts"", ""baseColour"": ""Green"", ""gender"": ""Men""}",Loại Shirts + Green + Men
+Q_D_0256,D,áo sơ mi nam màu tím,"{""articleType"": ""Shirts"", ""baseColour"": ""Purple"", ""gender"": ""Men""}",Loại Shirts + Purple + Men
+Q_D_0257,D,áo sơ mi nữ xanh dương,"{""articleType"": ""Shirts"", ""baseColour"": ""Blue"", ""gender"": ""Women""}",Loại Shirts + Blue + Women
+Q_D_0258,D,áo sơ mi nữ màu trắng,"{""articleType"": ""Shirts"", ""baseColour"": ""White"", ""gender"": ""Women""}",Loại Shirts + White + Women
+Q_D_0259,D,áo sơ mi nữ màu đen,"{""articleType"": ""Shirts"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Loại Shirts + Black + Women
+Q_D_0260,D,áo sơ mi nữ màu tím,"{""articleType"": ""Shirts"", ""baseColour"": ""Purple"", ""gender"": ""Women""}",Loại Shirts + Purple + Women
+Q_D_0261,D,áo sơ mi nữ màu hồng,"{""articleType"": ""Shirts"", ""baseColour"": ""Pink"", ""gender"": ""Women""}",Loại Shirts + Pink + Women
+Q_D_0262,D,áo sơ mi nữ màu đỏ,"{""articleType"": ""Shirts"", ""baseColour"": ""Red"", ""gender"": ""Women""}",Loại Shirts + Red + Women
+Q_D_0263,D,áo sơ mi bé trai màu trắng,"{""articleType"": ""Shirts"", ""baseColour"": ""White"", ""gender"": ""Boys""}",Loại Shirts + White + Boys
+Q_D_0264,D,áo sơ mi bé trai màu đen,"{""articleType"": ""Shirts"", ""baseColour"": ""Black"", ""gender"": ""Boys""}",Loại Shirts + Black + Boys
+Q_D_0265,D,áo sơ mi bé trai màu đỏ,"{""articleType"": ""Shirts"", ""baseColour"": ""Red"", ""gender"": ""Boys""}",Loại Shirts + Red + Boys
+Q_D_0266,D,áo sơ mi bé trai xanh navy (xanh than),"{""articleType"": ""Shirts"", ""baseColour"": ""Navy Blue"", ""gender"": ""Boys""}",Loại Shirts + Navy Blue + Boys
+Q_D_0267,D,áo sơ mi bé trai xanh dương,"{""articleType"": ""Shirts"", ""baseColour"": ""Blue"", ""gender"": ""Boys""}",Loại Shirts + Blue + Boys
+Q_D_0268,D,áo sơ mi bé trai xanh lá,"{""articleType"": ""Shirts"", ""baseColour"": ""Green"", ""gender"": ""Boys""}",Loại Shirts + Green + Boys
+Q_D_0269,D,áo sơ mi bé gái xanh dương,"{""articleType"": ""Shirts"", ""baseColour"": ""Blue"", ""gender"": ""Girls""}",Loại Shirts + Blue + Girls
+Q_D_0270,D,quần jean (quần bò) nam xanh dương,"{""articleType"": ""Jeans"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Loại Jeans + Blue + Men
+Q_D_0271,D,quần jean (quần bò) nam màu đen,"{""articleType"": ""Jeans"", ""baseColour"": ""Black"", ""gender"": ""Men""}",Loại Jeans + Black + Men
+Q_D_0272,D,quần jean (quần bò) nam xanh navy (xanh than),"{""articleType"": ""Jeans"", ""baseColour"": ""Navy Blue"", ""gender"": ""Men""}",Loại Jeans + Navy Blue + Men
+Q_D_0273,D,quần jean (quần bò) nam màu xám,"{""articleType"": ""Jeans"", ""baseColour"": ""Grey"", ""gender"": ""Men""}",Loại Jeans + Grey + Men
+Q_D_0274,D,quần jean (quần bò) nam màu unknown,"{""articleType"": ""Jeans"", ""baseColour"": ""Unknown"", ""gender"": ""Men""}",Loại Jeans + Unknown + Men
+Q_D_0275,D,quần jean (quần bò) nam màu trắng,"{""articleType"": ""Jeans"", ""baseColour"": ""White"", ""gender"": ""Men""}",Loại Jeans + White + Men
+Q_D_0276,D,quần jean (quần bò) nữ xanh dương,"{""articleType"": ""Jeans"", ""baseColour"": ""Blue"", ""gender"": ""Women""}",Loại Jeans + Blue + Women
+Q_D_0277,D,quần jean (quần bò) nữ màu đen,"{""articleType"": ""Jeans"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Loại Jeans + Black + Women
+Q_D_0278,D,quần jean (quần bò) nữ xanh navy (xanh than),"{""articleType"": ""Jeans"", ""baseColour"": ""Navy Blue"", ""gender"": ""Women""}",Loại Jeans + Navy Blue + Women
+Q_D_0279,D,quần jean (quần bò) nữ màu xám,"{""articleType"": ""Jeans"", ""baseColour"": ""Grey"", ""gender"": ""Women""}",Loại Jeans + Grey + Women
+Q_D_0280,D,quần jean (quần bò) nữ màu nâu,"{""articleType"": ""Jeans"", ""baseColour"": ""Brown"", ""gender"": ""Women""}",Loại Jeans + Brown + Women
+Q_D_0281,D,quần jean (quần bò) nữ màu hoa oải hương tím nhạt,"{""articleType"": ""Jeans"", ""baseColour"": ""Lavender"", ""gender"": ""Women""}",Loại Jeans + Lavender + Women
+Q_D_0282,D,quần jean (quần bò) bé trai xanh dương,"{""articleType"": ""Jeans"", ""baseColour"": ""Blue"", ""gender"": ""Boys""}",Loại Jeans + Blue + Boys
+Q_D_0283,D,quần jean (quần bò) bé trai màu xám,"{""articleType"": ""Jeans"", ""baseColour"": ""Grey"", ""gender"": ""Boys""}",Loại Jeans + Grey + Boys
+Q_D_0284,D,quần jean (quần bò) bé trai màu đen,"{""articleType"": ""Jeans"", ""baseColour"": ""Black"", ""gender"": ""Boys""}",Loại Jeans + Black + Boys
+Q_D_0285,D,quần jean (quần bò) bé trai xanh navy (xanh than),"{""articleType"": ""Jeans"", ""baseColour"": ""Navy Blue"", ""gender"": ""Boys""}",Loại Jeans + Navy Blue + Boys
+Q_D_0286,D,quần jean (quần bò) bé gái xanh dương,"{""articleType"": ""Jeans"", ""baseColour"": ""Blue"", ""gender"": ""Girls""}",Loại Jeans + Blue + Girls
+Q_D_0287,D,quần jean (quần bò) bé gái xanh navy (xanh than),"{""articleType"": ""Jeans"", ""baseColour"": ""Navy Blue"", ""gender"": ""Girls""}",Loại Jeans + Navy Blue + Girls
+Q_D_0288,D,quần jean (quần bò) bé gái màu đen,"{""articleType"": ""Jeans"", ""baseColour"": ""Black"", ""gender"": ""Girls""}",Loại Jeans + Black + Girls
+Q_D_0289,D,quần jean (quần bò) bé gái màu xám,"{""articleType"": ""Jeans"", ""baseColour"": ""Grey"", ""gender"": ""Girls""}",Loại Jeans + Grey + Girls
+Q_D_0290,D,giày thường ngày nam màu đen,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Black"", ""gender"": ""Men""}",Loại Casual Shoes + Black + Men
+Q_D_0291,D,giày thường ngày nam màu nâu,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Brown"", ""gender"": ""Men""}",Loại Casual Shoes + Brown + Men
+Q_D_0292,D,giày thường ngày nam màu trắng,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""White"", ""gender"": ""Men""}",Loại Casual Shoes + White + Men
+Q_D_0293,D,giày thường ngày nam màu xám,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Grey"", ""gender"": ""Men""}",Loại Casual Shoes + Grey + Men
+Q_D_0294,D,giày thường ngày nam xanh dương,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Loại Casual Shoes + Blue + Men
+Q_D_0295,D,giày thường ngày nam xanh navy (xanh than),"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Navy Blue"", ""gender"": ""Men""}",Loại Casual Shoes + Navy Blue + Men
+Q_D_0296,D,giày thường ngày nữ màu đen,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Loại Casual Shoes + Black + Women
+Q_D_0297,D,giày thường ngày nữ màu trắng,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""White"", ""gender"": ""Women""}",Loại Casual Shoes + White + Women
+Q_D_0298,D,giày thường ngày nữ xanh dương,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Blue"", ""gender"": ""Women""}",Loại Casual Shoes + Blue + Women
+Q_D_0299,D,giày thường ngày nữ màu xám,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Grey"", ""gender"": ""Women""}",Loại Casual Shoes + Grey + Women
+Q_D_0300,D,giày thường ngày nữ màu nâu,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Brown"", ""gender"": ""Women""}",Loại Casual Shoes + Brown + Women
+Q_D_0301,D,giày thường ngày nữ màu đỏ,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Red"", ""gender"": ""Women""}",Loại Casual Shoes + Red + Women
+Q_D_0302,D,giày thường ngày bé trai xanh dương,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Blue"", ""gender"": ""Boys""}",Loại Casual Shoes + Blue + Boys
+Q_D_0303,D,giày thường ngày bé trai màu đen,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Black"", ""gender"": ""Boys""}",Loại Casual Shoes + Black + Boys
+Q_D_0304,D,giày thường ngày bé trai màu đỏ,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Red"", ""gender"": ""Boys""}",Loại Casual Shoes + Red + Boys
+Q_D_0305,D,giày thường ngày bé trai màu xám,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Grey"", ""gender"": ""Boys""}",Loại Casual Shoes + Grey + Boys
+Q_D_0306,D,giày thường ngày bé trai màu nâu,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Brown"", ""gender"": ""Boys""}",Loại Casual Shoes + Brown + Boys
+Q_D_0307,D,giày thường ngày bé trai xanh navy (xanh than),"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Navy Blue"", ""gender"": ""Boys""}",Loại Casual Shoes + Navy Blue + Boys
+Q_D_0308,D,giày thường ngày bé gái màu hồng,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Pink"", ""gender"": ""Girls""}",Loại Casual Shoes + Pink + Girls
+Q_D_0309,D,giày thường ngày bé gái màu đỏ,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Red"", ""gender"": ""Girls""}",Loại Casual Shoes + Red + Girls
+Q_D_0310,D,giày thường ngày bé gái xanh dương,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Blue"", ""gender"": ""Girls""}",Loại Casual Shoes + Blue + Girls
+Q_D_0311,D,giày thường ngày bé gái màu xám,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Grey"", ""gender"": ""Girls""}",Loại Casual Shoes + Grey + Girls
+Q_D_0312,D,giày thường ngày bé gái màu vàng,"{""articleType"": ""Casual Shoes"", ""baseColour"": ""Yellow"", ""gender"": ""Girls""}",Loại Casual Shoes + Yellow + Girls
+Q_D_0313,D,đồng hồ đeo tay nam màu đen,"{""articleType"": ""Watches"", ""baseColour"": ""Black"", ""gender"": ""Men""}",Loại Watches + Black + Men
+Q_D_0314,D,đồng hồ đeo tay nam màu trắng,"{""articleType"": ""Watches"", ""baseColour"": ""White"", ""gender"": ""Men""}",Loại Watches + White + Men
+Q_D_0315,D,đồng hồ đeo tay nam màu bạc,"{""articleType"": ""Watches"", ""baseColour"": ""Silver"", ""gender"": ""Men""}",Loại Watches + Silver + Men
+Q_D_0316,D,đồng hồ đeo tay nam xám thép,"{""articleType"": ""Watches"", ""baseColour"": ""Steel"", ""gender"": ""Men""}",Loại Watches + Steel + Men
+Q_D_0317,D,đồng hồ đeo tay nam xanh dương,"{""articleType"": ""Watches"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Loại Watches + Blue + Men
+Q_D_0318,D,đồng hồ đeo tay nam màu xám,"{""articleType"": ""Watches"", ""baseColour"": ""Grey"", ""gender"": ""Men""}",Loại Watches + Grey + Men
+Q_D_0319,D,đồng hồ đeo tay nữ màu trắng,"{""articleType"": ""Watches"", ""baseColour"": ""White"", ""gender"": ""Women""}",Loại Watches + White + Women
+Q_D_0320,D,đồng hồ đeo tay nữ màu đen,"{""articleType"": ""Watches"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Loại Watches + Black + Women
+Q_D_0321,D,đồng hồ đeo tay nữ màu bạc,"{""articleType"": ""Watches"", ""baseColour"": ""Silver"", ""gender"": ""Women""}",Loại Watches + Silver + Women
+Q_D_0322,D,đồng hồ đeo tay nữ xám thép,"{""articleType"": ""Watches"", ""baseColour"": ""Steel"", ""gender"": ""Women""}",Loại Watches + Steel + Women
+Q_D_0323,D,đồng hồ đeo tay nữ màu hồng,"{""articleType"": ""Watches"", ""baseColour"": ""Pink"", ""gender"": ""Women""}",Loại Watches + Pink + Women
+Q_D_0324,D,đồng hồ đeo tay nữ vàng kim,"{""articleType"": ""Watches"", ""baseColour"": ""Gold"", ""gender"": ""Women""}",Loại Watches + Gold + Women
+Q_D_0325,D,đồng hồ đeo tay bé trai xanh dương,"{""articleType"": ""Watches"", ""baseColour"": ""Blue"", ""gender"": ""Boys""}",Loại Watches + Blue + Boys
+Q_D_0326,D,đồng hồ đeo tay bé trai xanh lá,"{""articleType"": ""Watches"", ""baseColour"": ""Green"", ""gender"": ""Boys""}",Loại Watches + Green + Boys
+Q_D_0327,D,đồng hồ đeo tay bé trai màu cam,"{""articleType"": ""Watches"", ""baseColour"": ""Orange"", ""gender"": ""Boys""}",Loại Watches + Orange + Boys
+Q_D_0328,D,đồng hồ đeo tay bé trai màu đen,"{""articleType"": ""Watches"", ""baseColour"": ""Black"", ""gender"": ""Boys""}",Loại Watches + Black + Boys
+Q_D_0329,D,đồng hồ đeo tay bé trai màu đỏ,"{""articleType"": ""Watches"", ""baseColour"": ""Red"", ""gender"": ""Boys""}",Loại Watches + Red + Boys
+Q_D_0330,D,đồng hồ đeo tay bé gái màu trắng,"{""articleType"": ""Watches"", ""baseColour"": ""White"", ""gender"": ""Girls""}",Loại Watches + White + Girls
+Q_D_0331,D,đồng hồ đeo tay bé gái màu hồng,"{""articleType"": ""Watches"", ""baseColour"": ""Pink"", ""gender"": ""Girls""}",Loại Watches + Pink + Girls
+Q_D_0332,D,đồng hồ đeo tay bé gái màu vàng,"{""articleType"": ""Watches"", ""baseColour"": ""Yellow"", ""gender"": ""Girls""}",Loại Watches + Yellow + Girls
+Q_D_0333,D,đồng hồ đeo tay bé gái xanh dương,"{""articleType"": ""Watches"", ""baseColour"": ""Blue"", ""gender"": ""Girls""}",Loại Watches + Blue + Girls
+Q_D_0334,D,quần soóc (quần ngắn) nam màu đen,"{""articleType"": ""Shorts"", ""baseColour"": ""Black"", ""gender"": ""Men""}",Loại Shorts + Black + Men
+Q_D_0335,D,quần soóc (quần ngắn) nam xanh navy (xanh than),"{""articleType"": ""Shorts"", ""baseColour"": ""Navy Blue"", ""gender"": ""Men""}",Loại Shorts + Navy Blue + Men
+Q_D_0336,D,quần soóc (quần ngắn) nam màu xám,"{""articleType"": ""Shorts"", ""baseColour"": ""Grey"", ""gender"": ""Men""}",Loại Shorts + Grey + Men
+Q_D_0337,D,quần soóc (quần ngắn) nam xanh dương,"{""articleType"": ""Shorts"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Loại Shorts + Blue + Men
+Q_D_0338,D,quần soóc (quần ngắn) nam màu trắng,"{""articleType"": ""Shorts"", ""baseColour"": ""White"", ""gender"": ""Men""}",Loại Shorts + White + Men
+Q_D_0339,D,quần soóc (quần ngắn) nam màu đỏ,"{""articleType"": ""Shorts"", ""baseColour"": ""Red"", ""gender"": ""Men""}",Loại Shorts + Red + Men
+Q_D_0340,D,quần soóc (quần ngắn) nữ xanh dương,"{""articleType"": ""Shorts"", ""baseColour"": ""Blue"", ""gender"": ""Women""}",Loại Shorts + Blue + Women
+Q_D_0341,D,quần soóc (quần ngắn) nữ màu đen,"{""articleType"": ""Shorts"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Loại Shorts + Black + Women
+Q_D_0342,D,quần soóc (quần ngắn) nữ màu trắng,"{""articleType"": ""Shorts"", ""baseColour"": ""White"", ""gender"": ""Women""}",Loại Shorts + White + Women
+Q_D_0343,D,quần soóc (quần ngắn) nữ màu tím,"{""articleType"": ""Shorts"", ""baseColour"": ""Purple"", ""gender"": ""Women""}",Loại Shorts + Purple + Women
+Q_D_0344,D,quần soóc (quần ngắn) nữ màu hồng,"{""articleType"": ""Shorts"", ""baseColour"": ""Pink"", ""gender"": ""Women""}",Loại Shorts + Pink + Women
+Q_D_0345,D,quần soóc (quần ngắn) nữ màu đỏ,"{""articleType"": ""Shorts"", ""baseColour"": ""Red"", ""gender"": ""Women""}",Loại Shorts + Red + Women
+Q_D_0346,D,quần soóc (quần ngắn) bé trai xanh dương,"{""articleType"": ""Shorts"", ""baseColour"": ""Blue"", ""gender"": ""Boys""}",Loại Shorts + Blue + Boys
+Q_D_0347,D,quần soóc (quần ngắn) bé trai màu đen,"{""articleType"": ""Shorts"", ""baseColour"": ""Black"", ""gender"": ""Boys""}",Loại Shorts + Black + Boys
+Q_D_0348,D,quần soóc (quần ngắn) bé trai màu trắng,"{""articleType"": ""Shorts"", ""baseColour"": ""White"", ""gender"": ""Boys""}",Loại Shorts + White + Boys
+Q_D_0349,D,quần soóc (quần ngắn) bé trai màu be,"{""articleType"": ""Shorts"", ""baseColour"": ""Beige"", ""gender"": ""Boys""}",Loại Shorts + Beige + Boys
+Q_D_0350,D,quần soóc (quần ngắn) bé trai màu kaki,"{""articleType"": ""Shorts"", ""baseColour"": ""Khaki"", ""gender"": ""Boys""}",Loại Shorts + Khaki + Boys
+Q_D_0351,D,quần soóc (quần ngắn) bé trai màu xám,"{""articleType"": ""Shorts"", ""baseColour"": ""Grey"", ""gender"": ""Boys""}",Loại Shorts + Grey + Boys
+Q_D_0352,D,quần soóc (quần ngắn) bé gái màu hồng,"{""articleType"": ""Shorts"", ""baseColour"": ""Pink"", ""gender"": ""Girls""}",Loại Shorts + Pink + Girls
+Q_D_0353,D,quần soóc (quần ngắn) bé gái xanh dương,"{""articleType"": ""Shorts"", ""baseColour"": ""Blue"", ""gender"": ""Girls""}",Loại Shorts + Blue + Girls
+Q_D_0354,D,quần soóc (quần ngắn) bé gái màu trắng,"{""articleType"": ""Shorts"", ""baseColour"": ""White"", ""gender"": ""Girls""}",Loại Shorts + White + Girls
+Q_D_0355,D,quần soóc (quần ngắn) bé gái xanh lá,"{""articleType"": ""Shorts"", ""baseColour"": ""Green"", ""gender"": ""Girls""}",Loại Shorts + Green + Girls
+Q_D_0356,D,quần soóc (quần ngắn) bé gái màu tím,"{""articleType"": ""Shorts"", ""baseColour"": ""Purple"", ""gender"": ""Girls""}",Loại Shorts + Purple + Girls
+Q_D_0357,D,quần soóc (quần ngắn) bé gái xanh navy (xanh than),"{""articleType"": ""Shorts"", ""baseColour"": ""Navy Blue"", ""gender"": ""Girls""}",Loại Shorts + Navy Blue + Girls
+Q_D_0358,D,quần âu (quần tây) nam màu đen,"{""articleType"": ""Trousers"", ""baseColour"": ""Black"", ""gender"": ""Men""}",Loại Trousers + Black + Men
+Q_D_0359,D,quần âu (quần tây) nam màu xám,"{""articleType"": ""Trousers"", ""baseColour"": ""Grey"", ""gender"": ""Men""}",Loại Trousers + Grey + Men
+Q_D_0360,D,quần âu (quần tây) nam xanh navy (xanh than),"{""articleType"": ""Trousers"", ""baseColour"": ""Navy Blue"", ""gender"": ""Men""}",Loại Trousers + Navy Blue + Men
+Q_D_0361,D,quần âu (quần tây) nam màu nâu,"{""articleType"": ""Trousers"", ""baseColour"": ""Brown"", ""gender"": ""Men""}",Loại Trousers + Brown + Men
+Q_D_0362,D,quần âu (quần tây) nam màu be,"{""articleType"": ""Trousers"", ""baseColour"": ""Beige"", ""gender"": ""Men""}",Loại Trousers + Beige + Men
+Q_D_0363,D,quần âu (quần tây) nam xanh ô liu,"{""articleType"": ""Trousers"", ""baseColour"": ""Olive"", ""gender"": ""Men""}",Loại Trousers + Olive + Men
+Q_D_0364,D,quần âu (quần tây) nữ màu đen,"{""articleType"": ""Trousers"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Loại Trousers + Black + Women
+Q_D_0365,D,quần âu (quần tây) nữ màu nâu,"{""articleType"": ""Trousers"", ""baseColour"": ""Brown"", ""gender"": ""Women""}",Loại Trousers + Brown + Women
+Q_D_0366,D,quần âu (quần tây) nữ màu be,"{""articleType"": ""Trousers"", ""baseColour"": ""Beige"", ""gender"": ""Women""}",Loại Trousers + Beige + Women
+Q_D_0367,D,quần âu (quần tây) nữ màu xám,"{""articleType"": ""Trousers"", ""baseColour"": ""Grey"", ""gender"": ""Women""}",Loại Trousers + Grey + Women
+Q_D_0368,D,quần âu (quần tây) nữ xanh ô liu,"{""articleType"": ""Trousers"", ""baseColour"": ""Olive"", ""gender"": ""Women""}",Loại Trousers + Olive + Women
+Q_D_0369,D,quần âu (quần tây) nữ xanh navy (xanh than),"{""articleType"": ""Trousers"", ""baseColour"": ""Navy Blue"", ""gender"": ""Women""}",Loại Trousers + Navy Blue + Women
+Q_D_0370,D,quần âu (quần tây) bé trai xanh dương,"{""articleType"": ""Trousers"", ""baseColour"": ""Blue"", ""gender"": ""Boys""}",Loại Trousers + Blue + Boys
+Q_D_0371,D,quần âu (quần tây) bé trai xanh ô liu,"{""articleType"": ""Trousers"", ""baseColour"": ""Olive"", ""gender"": ""Boys""}",Loại Trousers + Olive + Boys
+Q_D_0372,D,quần âu (quần tây) bé trai màu đen,"{""articleType"": ""Trousers"", ""baseColour"": ""Black"", ""gender"": ""Boys""}",Loại Trousers + Black + Boys
+Q_D_0373,D,quần âu (quần tây) bé trai màu kaki,"{""articleType"": ""Trousers"", ""baseColour"": ""Khaki"", ""gender"": ""Boys""}",Loại Trousers + Khaki + Boys
+Q_D_0374,D,quần âu (quần tây) bé gái màu đen,"{""articleType"": ""Trousers"", ""baseColour"": ""Black"", ""gender"": ""Girls""}",Loại Trousers + Black + Girls
+Q_D_0375,D,váy liền (đầm) nữ màu đen,"{""articleType"": ""Dresses"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Loại Dresses + Black + Women
+Q_D_0376,D,váy liền (đầm) nữ xanh dương,"{""articleType"": ""Dresses"", ""baseColour"": ""Blue"", ""gender"": ""Women""}",Loại Dresses + Blue + Women
+Q_D_0377,D,váy liền (đầm) nữ màu hồng,"{""articleType"": ""Dresses"", ""baseColour"": ""Pink"", ""gender"": ""Women""}",Loại Dresses + Pink + Women
+Q_D_0378,D,váy liền (đầm) nữ màu trắng,"{""articleType"": ""Dresses"", ""baseColour"": ""White"", ""gender"": ""Women""}",Loại Dresses + White + Women
+Q_D_0379,D,váy liền (đầm) nữ màu tím,"{""articleType"": ""Dresses"", ""baseColour"": ""Purple"", ""gender"": ""Women""}",Loại Dresses + Purple + Women
+Q_D_0380,D,váy liền (đầm) nữ màu đỏ,"{""articleType"": ""Dresses"", ""baseColour"": ""Red"", ""gender"": ""Women""}",Loại Dresses + Red + Women
+Q_D_0381,D,váy liền (đầm) bé gái màu hồng,"{""articleType"": ""Dresses"", ""baseColour"": ""Pink"", ""gender"": ""Girls""}",Loại Dresses + Pink + Girls
+Q_D_0382,D,váy liền (đầm) bé gái xanh dương,"{""articleType"": ""Dresses"", ""baseColour"": ""Blue"", ""gender"": ""Girls""}",Loại Dresses + Blue + Girls
+Q_D_0383,D,váy liền (đầm) bé gái màu trắng,"{""articleType"": ""Dresses"", ""baseColour"": ""White"", ""gender"": ""Girls""}",Loại Dresses + White + Girls
+Q_D_0384,D,váy liền (đầm) bé gái xanh navy (xanh than),"{""articleType"": ""Dresses"", ""baseColour"": ""Navy Blue"", ""gender"": ""Girls""}",Loại Dresses + Navy Blue + Girls
+Q_D_0385,D,váy liền (đầm) bé gái màu đen,"{""articleType"": ""Dresses"", ""baseColour"": ""Black"", ""gender"": ""Girls""}",Loại Dresses + Black + Girls
+Q_D_0386,D,váy liền (đầm) bé gái đỏ tươi cánh sen magenta,"{""articleType"": ""Dresses"", ""baseColour"": ""Magenta"", ""gender"": ""Girls""}",Loại Dresses + Magenta + Girls
+Q_D_0387,D,áo khoác jacket nam màu đen,"{""articleType"": ""Jackets"", ""baseColour"": ""Black"", ""gender"": ""Men""}",Loại Jackets + Black + Men
+Q_D_0388,D,áo khoác jacket nam xanh navy (xanh than),"{""articleType"": ""Jackets"", ""baseColour"": ""Navy Blue"", ""gender"": ""Men""}",Loại Jackets + Navy Blue + Men
+Q_D_0389,D,áo khoác jacket nam xanh dương,"{""articleType"": ""Jackets"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Loại Jackets + Blue + Men
+Q_D_0390,D,áo khoác jacket nam màu xám,"{""articleType"": ""Jackets"", ""baseColour"": ""Grey"", ""gender"": ""Men""}",Loại Jackets + Grey + Men
+Q_D_0391,D,áo khoác jacket nam màu đỏ,"{""articleType"": ""Jackets"", ""baseColour"": ""Red"", ""gender"": ""Men""}",Loại Jackets + Red + Men
+Q_D_0392,D,áo khoác jacket nam màu trắng,"{""articleType"": ""Jackets"", ""baseColour"": ""White"", ""gender"": ""Men""}",Loại Jackets + White + Men
+Q_D_0393,D,áo khoác jacket nữ màu đen,"{""articleType"": ""Jackets"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Loại Jackets + Black + Women
+Q_D_0394,D,áo khoác jacket nữ xanh dương,"{""articleType"": ""Jackets"", ""baseColour"": ""Blue"", ""gender"": ""Women""}",Loại Jackets + Blue + Women
+Q_D_0395,D,áo khoác jacket nữ màu hồng,"{""articleType"": ""Jackets"", ""baseColour"": ""Pink"", ""gender"": ""Women""}",Loại Jackets + Pink + Women
+Q_D_0396,D,áo khoác jacket nữ màu tím,"{""articleType"": ""Jackets"", ""baseColour"": ""Purple"", ""gender"": ""Women""}",Loại Jackets + Purple + Women
+Q_D_0397,D,áo khoác jacket nữ màu kem,"{""articleType"": ""Jackets"", ""baseColour"": ""Cream"", ""gender"": ""Women""}",Loại Jackets + Cream + Women
+Q_D_0398,D,áo khoác jacket nữ xanh navy (xanh than),"{""articleType"": ""Jackets"", ""baseColour"": ""Navy Blue"", ""gender"": ""Women""}",Loại Jackets + Navy Blue + Women
+Q_D_0399,D,áo khoác jacket bé trai màu đen,"{""articleType"": ""Jackets"", ""baseColour"": ""Black"", ""gender"": ""Boys""}",Loại Jackets + Black + Boys
+Q_D_0400,D,áo khoác jacket bé trai xanh dương,"{""articleType"": ""Jackets"", ""baseColour"": ""Blue"", ""gender"": ""Boys""}",Loại Jackets + Blue + Boys
+Q_D_0401,D,áo khoác jacket bé trai màu đỏ,"{""articleType"": ""Jackets"", ""baseColour"": ""Red"", ""gender"": ""Boys""}",Loại Jackets + Red + Boys
+Q_D_0402,D,áo khoác jacket bé trai màu xám,"{""articleType"": ""Jackets"", ""baseColour"": ""Grey"", ""gender"": ""Boys""}",Loại Jackets + Grey + Boys
+Q_D_0403,D,giày xăng-đan (sandal) nam màu đen,"{""articleType"": ""Sandals"", ""baseColour"": ""Black"", ""gender"": ""Men""}",Loại Sandals + Black + Men
+Q_D_0404,D,giày xăng-đan (sandal) nam màu nâu,"{""articleType"": ""Sandals"", ""baseColour"": ""Brown"", ""gender"": ""Men""}",Loại Sandals + Brown + Men
+Q_D_0405,D,giày xăng-đan (sandal) nam màu xám,"{""articleType"": ""Sandals"", ""baseColour"": ""Grey"", ""gender"": ""Men""}",Loại Sandals + Grey + Men
+Q_D_0406,D,giày xăng-đan (sandal) nam xanh ô liu,"{""articleType"": ""Sandals"", ""baseColour"": ""Olive"", ""gender"": ""Men""}",Loại Sandals + Olive + Men
+Q_E_0407,E,Nike,"{""brand"": ""Nike""}",Chỉ thương hiệu Nike
+Q_E_0408,E,áo thun (áo phông) Nike,"{""brand"": ""Nike"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Nike
+Q_E_0409,E,giày thể thao Nike,"{""brand"": ""Nike"", ""articleType"": ""Sports Shoes""}",giày thể thao thương hiệu Nike
+Q_E_0410,E,giày thể thao Nike nam,"{""brand"": ""Nike"", ""articleType"": ""Sports Shoes"", ""gender"": ""Men""}",Sports Shoes Nike nam
+Q_E_0411,E,ADIDAS,"{""brand"": ""ADIDAS""}",Chỉ thương hiệu ADIDAS
+Q_E_0412,E,áo thun (áo phông) ADIDAS,"{""brand"": ""ADIDAS"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu ADIDAS
+Q_E_0413,E,giày thể thao ADIDAS,"{""brand"": ""ADIDAS"", ""articleType"": ""Sports Shoes""}",giày thể thao thương hiệu ADIDAS
+Q_E_0414,E,giày xăng-đan (sandal) ADIDAS nam,"{""brand"": ""ADIDAS"", ""articleType"": ""Sandals"", ""gender"": ""Men""}",Sandals ADIDAS nam
+Q_E_0415,E,Puma,"{""brand"": ""Puma""}",Chỉ thương hiệu Puma
+Q_E_0416,E,áo thun (áo phông) Puma,"{""brand"": ""Puma"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Puma
+Q_E_0417,E,giày thường ngày Puma,"{""brand"": ""Puma"", ""articleType"": ""Casual Shoes""}",giày thường ngày thương hiệu Puma
+Q_E_0418,E,áo thun (áo phông) Puma nam,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",Tshirts Puma nam
+Q_E_0419,E,United Colors of Benetton,"{""brand"": ""United Colors of Benetton""}",Chỉ thương hiệu United Colors of Benetton
+Q_E_0420,E,áo thun (áo phông) United Colors of Benetton,"{""brand"": ""United Colors of Benetton"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu United Colors of Benetton
+Q_E_0421,E,áo sơ mi United Colors of Benetton,"{""brand"": ""United Colors of Benetton"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu United Colors of Benetton
+Q_E_0422,E,áo thun (áo phông) United Colors of Benetton nam,"{""brand"": ""United Colors of Benetton"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",Tshirts United Colors of Benetton nam
+Q_E_0423,E,Fabindia,"{""brand"": ""Fabindia""}",Chỉ thương hiệu Fabindia
+Q_E_0424,E,áo kurta truyền thống Fabindia,"{""brand"": ""Fabindia"", ""articleType"": ""Kurtas""}",áo kurta truyền thống thương hiệu Fabindia
+Q_E_0425,E,khăn choàng dupatta Fabindia,"{""brand"": ""Fabindia"", ""articleType"": ""Dupatta""}",khăn choàng dupatta thương hiệu Fabindia
+Q_E_0426,E,áo sơ mi Fabindia nam,"{""brand"": ""Fabindia"", ""articleType"": ""Shirts"", ""gender"": ""Men""}",Shirts Fabindia nam
+Q_E_0427,E,Catwalk,"{""brand"": ""Catwalk""}",Chỉ thương hiệu Catwalk
+Q_E_0428,E,giày cao gót Catwalk,"{""brand"": ""Catwalk"", ""articleType"": ""Heels""}",giày cao gót thương hiệu Catwalk
+Q_E_0429,E,giày búp bê đế bệt Catwalk,"{""brand"": ""Catwalk"", ""articleType"": ""Flats""}",giày búp bê đế bệt thương hiệu Catwalk
+Q_E_0430,E,giày cao gót Catwalk nữ,"{""brand"": ""Catwalk"", ""articleType"": ""Heels"", ""gender"": ""Women""}",Heels Catwalk nữ
+Q_E_0431,E,Wrangler,"{""brand"": ""Wrangler""}",Chỉ thương hiệu Wrangler
+Q_E_0432,E,áo thun (áo phông) Wrangler,"{""brand"": ""Wrangler"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Wrangler
+Q_E_0433,E,áo sơ mi Wrangler,"{""brand"": ""Wrangler"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Wrangler
+Q_E_0434,E,áo thun (áo phông) Wrangler nam,"{""brand"": ""Wrangler"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",Tshirts Wrangler nam
+Q_E_0435,E,Arrow,"{""brand"": ""Arrow""}",Chỉ thương hiệu Arrow
+Q_E_0436,E,áo sơ mi Arrow,"{""brand"": ""Arrow"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Arrow
+Q_E_0437,E,áo kiểu nữ Arrow,"{""brand"": ""Arrow"", ""articleType"": ""Tops""}",áo kiểu nữ thương hiệu Arrow
+Q_E_0438,E,váy liền (đầm) Arrow nữ,"{""brand"": ""Arrow"", ""articleType"": ""Dresses"", ""gender"": ""Women""}",Dresses Arrow nữ
+Q_E_0439,E,Lino Perros,"{""brand"": ""Lino Perros""}",Chỉ thương hiệu Lino Perros
+Q_E_0440,E,túi xách tay Lino Perros,"{""brand"": ""Lino Perros"", ""articleType"": ""Handbags""}",túi xách tay thương hiệu Lino Perros
+Q_E_0441,E,ví tiền (bóp tiền) Lino Perros,"{""brand"": ""Lino Perros"", ""articleType"": ""Wallets""}",ví tiền (bóp tiền) thương hiệu Lino Perros
+Q_E_0442,E,thắt lưng (dây nịt) Lino Perros nữ,"{""brand"": ""Lino Perros"", ""articleType"": ""Belts"", ""gender"": ""Women""}",Belts Lino Perros nữ
+Q_E_0443,E,Baggit,"{""brand"": ""Baggit""}",Chỉ thương hiệu Baggit
+Q_E_0444,E,túi xách tay Baggit,"{""brand"": ""Baggit"", ""articleType"": ""Handbags""}",túi xách tay thương hiệu Baggit
+Q_E_0445,E,ví tiền (bóp tiền) Baggit,"{""brand"": ""Baggit"", ""articleType"": ""Wallets""}",ví tiền (bóp tiền) thương hiệu Baggit
+Q_E_0446,E,túi xách tay Baggit nữ,"{""brand"": ""Baggit"", ""articleType"": ""Handbags"", ""gender"": ""Women""}",Handbags Baggit nữ
+Q_E_0447,E,Fastrack,"{""brand"": ""Fastrack""}",Chỉ thương hiệu Fastrack
+Q_E_0448,E,đồng hồ đeo tay Fastrack,"{""brand"": ""Fastrack"", ""articleType"": ""Watches""}",đồng hồ đeo tay thương hiệu Fastrack
+Q_E_0449,E,kính râm (kính mát) Fastrack,"{""brand"": ""Fastrack"", ""articleType"": ""Sunglasses""}",kính râm (kính mát) thương hiệu Fastrack
+Q_E_0450,E,Myntra,"{""brand"": ""Myntra""}",Chỉ thương hiệu Myntra
+Q_E_0451,E,áo thun (áo phông) Myntra,"{""brand"": ""Myntra"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Myntra
+Q_E_0452,E,áo sơ mi Myntra,"{""brand"": ""Myntra"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Myntra
+Q_E_0453,E,áo thun (áo phông) Myntra nam,"{""brand"": ""Myntra"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",Tshirts Myntra nam
+Q_E_0454,E,Fila,"{""brand"": ""Fila""}",Chỉ thương hiệu Fila
+Q_E_0455,E,giày thể thao Fila,"{""brand"": ""Fila"", ""articleType"": ""Sports Shoes""}",giày thể thao thương hiệu Fila
+Q_E_0456,E,giày thường ngày Fila,"{""brand"": ""Fila"", ""articleType"": ""Casual Shoes""}",giày thường ngày thương hiệu Fila
+Q_E_0457,E,dép xỏ ngón (dép kẹp) Fila nam,"{""brand"": ""Fila"", ""articleType"": ""Flip Flops"", ""gender"": ""Men""}",Flip Flops Fila nam
+Q_E_0458,E,French Connection,"{""brand"": ""French Connection""}",Chỉ thương hiệu French Connection
+Q_E_0459,E,áo thun (áo phông) French Connection,"{""brand"": ""French Connection"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu French Connection
+Q_E_0460,E,áo kiểu nữ French Connection,"{""brand"": ""French Connection"", ""articleType"": ""Tops""}",áo kiểu nữ thương hiệu French Connection
+Q_E_0461,E,túi xách tay French Connection nữ,"{""brand"": ""French Connection"", ""articleType"": ""Handbags"", ""gender"": ""Women""}",Handbags French Connection nữ
+Q_E_0462,E,Jealous 21,"{""brand"": ""Jealous 21""}",Chỉ thương hiệu Jealous 21
+Q_E_0463,E,áo kiểu nữ Jealous 21,"{""brand"": ""Jealous 21"", ""articleType"": ""Tops""}",áo kiểu nữ thương hiệu Jealous 21
+Q_E_0464,E,áo thun (áo phông) Jealous 21,"{""brand"": ""Jealous 21"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Jealous 21
+Q_E_0465,E,áo sơ mi Jealous 21 nữ,"{""brand"": ""Jealous 21"", ""articleType"": ""Shirts"", ""gender"": ""Women""}",Shirts Jealous 21 nữ
+Q_E_0466,E,Jockey,"{""brand"": ""Jockey""}",Chỉ thương hiệu Jockey
+Q_E_0467,E,quần lót tam giác Jockey,"{""brand"": ""Jockey"", ""articleType"": ""Briefs""}",quần lót tam giác thương hiệu Jockey
+Q_E_0468,E,quần lót đùi nam (trunk) Jockey,"{""brand"": ""Jockey"", ""articleType"": ""Trunk""}",quần lót đùi nam (trunk) thương hiệu Jockey
+Q_E_0469,E,quần lót tam giác Jockey nam,"{""brand"": ""Jockey"", ""articleType"": ""Briefs"", ""gender"": ""Men""}",Briefs Jockey nam
+Q_E_0470,E,Scullers,"{""brand"": ""Scullers""}",Chỉ thương hiệu Scullers
+Q_E_0471,E,áo sơ mi Scullers,"{""brand"": ""Scullers"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Scullers
+Q_E_0472,E,quần âu (quần tây) Scullers,"{""brand"": ""Scullers"", ""articleType"": ""Trousers""}",quần âu (quần tây) thương hiệu Scullers
+Q_E_0473,E,áo gile (áo ghi-lê) Scullers nam,"{""brand"": ""Scullers"", ""articleType"": ""Waistcoat"", ""gender"": ""Men""}",Waistcoat Scullers nam
+Q_E_0474,E,W,"{""brand"": ""W""}",Chỉ thương hiệu W
+Q_E_0475,E,áo kurta truyền thống W,"{""brand"": ""W"", ""articleType"": ""Kurtas""}",áo kurta truyền thống thương hiệu W
+Q_E_0476,E,áo kurti ngắn W,"{""brand"": ""W"", ""articleType"": ""Kurtis""}",áo kurti ngắn thương hiệu W
+Q_E_0477,E,áo kurta truyền thống W nữ,"{""brand"": ""W"", ""articleType"": ""Kurtas"", ""gender"": ""Women""}",Kurtas W nữ
+Q_E_0478,E,Murcia,"{""brand"": ""Murcia""}",Chỉ thương hiệu Murcia
+Q_E_0479,E,túi xách tay Murcia,"{""brand"": ""Murcia"", ""articleType"": ""Handbags""}",túi xách tay thương hiệu Murcia
+Q_E_0480,E,ví cầm tay clutch Murcia,"{""brand"": ""Murcia"", ""articleType"": ""Clutches""}",ví cầm tay clutch thương hiệu Murcia
+Q_E_0481,E,túi xách tay Murcia nữ,"{""brand"": ""Murcia"", ""articleType"": ""Handbags"", ""gender"": ""Women""}",Handbags Murcia nữ
+Q_E_0482,E,Lee,"{""brand"": ""Lee""}",Chỉ thương hiệu Lee
+Q_E_0483,E,áo thun (áo phông) Lee,"{""brand"": ""Lee"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Lee
+Q_E_0484,E,áo sơ mi Lee,"{""brand"": ""Lee"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Lee
+Q_E_0485,E,áo kiểu nữ Lee nữ,"{""brand"": ""Lee"", ""articleType"": ""Tops"", ""gender"": ""Women""}",Tops Lee nữ
+Q_E_0486,E,Proline,"{""brand"": ""Proline""}",Chỉ thương hiệu Proline
+Q_E_0487,E,áo thun (áo phông) Proline,"{""brand"": ""Proline"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Proline
+Q_E_0488,E,quần thể thao bo gấu Proline,"{""brand"": ""Proline"", ""articleType"": ""Track Pants""}",quần thể thao bo gấu thương hiệu Proline
+Q_E_0489,E,quần thể thao bo gấu Proline nam,"{""brand"": ""Proline"", ""articleType"": ""Track Pants"", ""gender"": ""Men""}",Track Pants Proline nam
+Q_E_0490,E,Wildcraft,"{""brand"": ""Wildcraft""}",Chỉ thương hiệu Wildcraft
+Q_E_0491,E,balo Wildcraft,"{""brand"": ""Wildcraft"", ""articleType"": ""Backpacks""}",balo thương hiệu Wildcraft
+Q_E_0492,E,túi trống du lịch Wildcraft,"{""brand"": ""Wildcraft"", ""articleType"": ""Duffel Bag""}",túi trống du lịch thương hiệu Wildcraft
+Q_E_0493,E,Flying Machine,"{""brand"": ""Flying Machine""}",Chỉ thương hiệu Flying Machine
+Q_E_0494,E,áo thun (áo phông) Flying Machine,"{""brand"": ""Flying Machine"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Flying Machine
+Q_E_0495,E,áo sơ mi Flying Machine,"{""brand"": ""Flying Machine"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Flying Machine
+Q_E_0496,E,áo sơ mi Flying Machine nam,"{""brand"": ""Flying Machine"", ""articleType"": ""Shirts"", ""gender"": ""Men""}",Shirts Flying Machine nam
+Q_E_0497,E,Lotto,"{""brand"": ""Lotto""}",Chỉ thương hiệu Lotto
+Q_E_0498,E,giày thể thao Lotto,"{""brand"": ""Lotto"", ""articleType"": ""Sports Shoes""}",giày thể thao thương hiệu Lotto
+Q_E_0499,E,dép xỏ ngón (dép kẹp) Lotto,"{""brand"": ""Lotto"", ""articleType"": ""Flip Flops""}",dép xỏ ngón (dép kẹp) thương hiệu Lotto
+Q_E_0500,E,dép xỏ ngón (dép kẹp) Lotto nam,"{""brand"": ""Lotto"", ""articleType"": ""Flip Flops"", ""gender"": ""Men""}",Flip Flops Lotto nam
+Q_E_0501,E,Gini and Jony,"{""brand"": ""Gini and Jony""}",Chỉ thương hiệu Gini and Jony
+Q_E_0502,E,áo thun (áo phông) Gini and Jony,"{""brand"": ""Gini and Jony"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Gini and Jony
+Q_E_0503,E,áo kiểu nữ Gini and Jony,"{""brand"": ""Gini and Jony"", ""articleType"": ""Tops""}",áo kiểu nữ thương hiệu Gini and Jony
+Q_E_0504,E,Rocia,"{""brand"": ""Rocia""}",Chỉ thương hiệu Rocia
+Q_E_0505,E,giày búp bê đế bệt Rocia,"{""brand"": ""Rocia"", ""articleType"": ""Flats""}",giày búp bê đế bệt thương hiệu Rocia
+Q_E_0506,E,giày cao gót Rocia,"{""brand"": ""Rocia"", ""articleType"": ""Heels""}",giày cao gót thương hiệu Rocia
+Q_E_0507,E,giày cao gót Rocia nữ,"{""brand"": ""Rocia"", ""articleType"": ""Heels"", ""gender"": ""Women""}",Heels Rocia nữ
+Q_E_0508,E,Fossil,"{""brand"": ""Fossil""}",Chỉ thương hiệu Fossil
+Q_E_0509,E,đồng hồ đeo tay Fossil,"{""brand"": ""Fossil"", ""articleType"": ""Watches""}",đồng hồ đeo tay thương hiệu Fossil
+Q_E_0510,E,ví tiền (bóp tiền) Fossil,"{""brand"": ""Fossil"", ""articleType"": ""Wallets""}",ví tiền (bóp tiền) thương hiệu Fossil
+Q_E_0511,E,thắt lưng (dây nịt) Fossil nữ,"{""brand"": ""Fossil"", ""articleType"": ""Belts"", ""gender"": ""Women""}",Belts Fossil nữ
+Q_E_0512,E,Mark Taylor,"{""brand"": ""Mark Taylor""}",Chỉ thương hiệu Mark Taylor
+Q_E_0513,E,áo sơ mi Mark Taylor,"{""brand"": ""Mark Taylor"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Mark Taylor
+Q_E_0514,E,áo thun (áo phông) Mark Taylor,"{""brand"": ""Mark Taylor"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Mark Taylor
+Q_E_0515,E,áo sơ mi Mark Taylor nam,"{""brand"": ""Mark Taylor"", ""articleType"": ""Shirts"", ""gender"": ""Men""}",Shirts Mark Taylor nam
+Q_E_0516,E,Basics,"{""brand"": ""Basics""}",Chỉ thương hiệu Basics
+Q_E_0517,E,áo sơ mi Basics,"{""brand"": ""Basics"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Basics
+Q_E_0518,E,áo thun (áo phông) Basics,"{""brand"": ""Basics"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Basics
+Q_E_0519,E,áo sơ mi Basics nam,"{""brand"": ""Basics"", ""articleType"": ""Shirts"", ""gender"": ""Men""}",Shirts Basics nam
+Q_E_0520,E,Casio,"{""brand"": ""Casio""}",Chỉ thương hiệu Casio
+Q_E_0521,E,đồng hồ đeo tay Casio,"{""brand"": ""Casio"", ""articleType"": ""Watches""}",đồng hồ đeo tay thương hiệu Casio
+Q_E_0522,E,đồng hồ đeo tay Casio nam,"{""brand"": ""Casio"", ""articleType"": ""Watches"", ""gender"": ""Men""}",Watches Casio nam
+Q_E_0523,E,Lucera,"{""brand"": ""Lucera""}",Chỉ thương hiệu Lucera
+Q_E_0524,E,bông tai (hoa tai) Lucera,"{""brand"": ""Lucera"", ""articleType"": ""Earrings""}",bông tai (hoa tai) thương hiệu Lucera
+Q_E_0525,E,mặt dây chuyền Lucera,"{""brand"": ""Lucera"", ""articleType"": ""Pendant""}",mặt dây chuyền thương hiệu Lucera
+Q_E_0526,E,mặt dây chuyền Lucera nữ,"{""brand"": ""Lucera"", ""articleType"": ""Pendant"", ""gender"": ""Women""}",Pendant Lucera nữ
+Q_E_0527,E,Femella,"{""brand"": ""Femella""}",Chỉ thương hiệu Femella
+Q_E_0528,E,áo kiểu nữ Femella,"{""brand"": ""Femella"", ""articleType"": ""Tops""}",áo kiểu nữ thương hiệu Femella
+Q_E_0529,E,khăn quàng cổ Femella,"{""brand"": ""Femella"", ""articleType"": ""Scarves""}",khăn quàng cổ thương hiệu Femella
+Q_E_0530,E,khăn quàng cổ Femella nữ,"{""brand"": ""Femella"", ""articleType"": ""Scarves"", ""gender"": ""Women""}",Scarves Femella nữ
+Q_E_0531,E,Locomotive,"{""brand"": ""Locomotive""}",Chỉ thương hiệu Locomotive
+Q_E_0532,E,áo thun (áo phông) Locomotive,"{""brand"": ""Locomotive"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Locomotive
+Q_E_0533,E,áo sơ mi Locomotive,"{""brand"": ""Locomotive"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Locomotive
+Q_E_0534,E,áo thun (áo phông) Locomotive nam,"{""brand"": ""Locomotive"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",Tshirts Locomotive nam
+Q_E_0535,E,Peter England,"{""brand"": ""Peter England""}",Chỉ thương hiệu Peter England
+Q_E_0536,E,áo sơ mi Peter England,"{""brand"": ""Peter England"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Peter England
+Q_E_0537,E,thắt lưng (dây nịt) Peter England,"{""brand"": ""Peter England"", ""articleType"": ""Belts""}",thắt lưng (dây nịt) thương hiệu Peter England
+Q_E_0538,E,quần jean (quần bò) Peter England nam,"{""brand"": ""Peter England"", ""articleType"": ""Jeans"", ""gender"": ""Men""}",Jeans Peter England nam
+Q_E_0539,E,Mother Earth,"{""brand"": ""Mother Earth""}",Chỉ thương hiệu Mother Earth
+Q_E_0540,E,áo kurta truyền thống Mother Earth,"{""brand"": ""Mother Earth"", ""articleType"": ""Kurtas""}",áo kurta truyền thống thương hiệu Mother Earth
+Q_E_0541,E,áo kiểu nữ Mother Earth,"{""brand"": ""Mother Earth"", ""articleType"": ""Tops""}",áo kiểu nữ thương hiệu Mother Earth
+Q_E_0542,E,áo kurta truyền thống Mother Earth nữ,"{""brand"": ""Mother Earth"", ""articleType"": ""Kurtas"", ""gender"": ""Women""}",Kurtas Mother Earth nữ
+Q_E_0543,E,Q&Q,"{""brand"": ""Q&Q""}",Chỉ thương hiệu Q&Q
+Q_E_0544,E,đồng hồ đeo tay Q&Q,"{""brand"": ""Q&Q"", ""articleType"": ""Watches""}",đồng hồ đeo tay thương hiệu Q&Q
+Q_E_0545,E,đồng hồ đeo tay Q&Q nam,"{""brand"": ""Q&Q"", ""articleType"": ""Watches"", ""gender"": ""Men""}",Watches Q&Q nam
+Q_E_0546,E,Reid & Taylor,"{""brand"": ""Reid & Taylor""}",Chỉ thương hiệu Reid & Taylor
+Q_E_0547,E,tất (vớ) Reid & Taylor,"{""brand"": ""Reid & Taylor"", ""articleType"": ""Socks""}",tất (vớ) thương hiệu Reid & Taylor
+Q_E_0548,E,cà vạt Reid & Taylor,"{""brand"": ""Reid & Taylor"", ""articleType"": ""Ties""}",cà vạt thương hiệu Reid & Taylor
+Q_E_0549,E,áo sơ mi Reid & Taylor nam,"{""brand"": ""Reid & Taylor"", ""articleType"": ""Shirts"", ""gender"": ""Men""}",Shirts Reid & Taylor nam
+Q_E_0550,E,Maxima,"{""brand"": ""Maxima""}",Chỉ thương hiệu Maxima
+Q_E_0551,E,đồng hồ đeo tay Maxima,"{""brand"": ""Maxima"", ""articleType"": ""Watches""}",đồng hồ đeo tay thương hiệu Maxima
+Q_E_0552,E,đồng hồ đeo tay Maxima nam,"{""brand"": ""Maxima"", ""articleType"": ""Watches"", ""gender"": ""Men""}",Watches Maxima nam
+Q_E_0553,E,Chromozome,"{""brand"": ""Chromozome""}",Chỉ thương hiệu Chromozome
+Q_E_0554,E,quần lót tam giác Chromozome,"{""brand"": ""Chromozome"", ""articleType"": ""Briefs""}",quần lót tam giác thương hiệu Chromozome
+Q_E_0555,E,quần lót đùi nam (trunk) Chromozome,"{""brand"": ""Chromozome"", ""articleType"": ""Trunk""}",quần lót đùi nam (trunk) thương hiệu Chromozome
+Q_E_0556,E,quần lót tam giác Chromozome nam,"{""brand"": ""Chromozome"", ""articleType"": ""Briefs"", ""gender"": ""Men""}",Briefs Chromozome nam
+Q_E_0557,E,Reebok,"{""brand"": ""Reebok""}",Chỉ thương hiệu Reebok
+Q_E_0558,E,giày thể thao Reebok,"{""brand"": ""Reebok"", ""articleType"": ""Sports Shoes""}",giày thể thao thương hiệu Reebok
+Q_E_0559,E,áo thun (áo phông) Reebok,"{""brand"": ""Reebok"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Reebok
+Q_E_0560,E,dép xỏ ngón (dép kẹp) Reebok nam,"{""brand"": ""Reebok"", ""articleType"": ""Flip Flops"", ""gender"": ""Men""}",Flip Flops Reebok nam
+Q_E_0561,E,Vishudh,"{""brand"": ""Vishudh""}",Chỉ thương hiệu Vishudh
+Q_E_0562,E,áo kurta truyền thống Vishudh,"{""brand"": ""Vishudh"", ""articleType"": ""Kurtas""}",áo kurta truyền thống thương hiệu Vishudh
+Q_E_0563,E,bộ áo kurta Vishudh,"{""brand"": ""Vishudh"", ""articleType"": ""Kurta Sets""}",bộ áo kurta thương hiệu Vishudh
+Q_E_0564,E,áo kurta truyền thống Vishudh nữ,"{""brand"": ""Vishudh"", ""articleType"": ""Kurtas"", ""gender"": ""Women""}",Kurtas Vishudh nữ
+Q_E_0565,E,Spykar,"{""brand"": ""Spykar""}",Chỉ thương hiệu Spykar
+Q_E_0566,E,áo sơ mi Spykar,"{""brand"": ""Spykar"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Spykar
+Q_E_0567,E,áo thun (áo phông) Spykar,"{""brand"": ""Spykar"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Spykar
+Q_E_0568,E,áo sơ mi Spykar nam,"{""brand"": ""Spykar"", ""articleType"": ""Shirts"", ""gender"": ""Men""}",Shirts Spykar nam
+Q_E_0569,E,Aurelia,"{""brand"": ""Aurelia""}",Chỉ thương hiệu Aurelia
+Q_E_0570,E,áo kurta truyền thống Aurelia,"{""brand"": ""Aurelia"", ""articleType"": ""Kurtas""}",áo kurta truyền thống thương hiệu Aurelia
+Q_E_0571,E,áo kurti ngắn Aurelia,"{""brand"": ""Aurelia"", ""articleType"": ""Kurtis""}",áo kurti ngắn thương hiệu Aurelia
+Q_E_0572,E,khăn choàng dupatta Aurelia nữ,"{""brand"": ""Aurelia"", ""articleType"": ""Dupatta"", ""gender"": ""Women""}",Dupatta Aurelia nữ
+Q_E_0573,E,Indigo Nation,"{""brand"": ""Indigo Nation""}",Chỉ thương hiệu Indigo Nation
+Q_E_0574,E,áo sơ mi Indigo Nation,"{""brand"": ""Indigo Nation"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Indigo Nation
+Q_E_0575,E,áo thun (áo phông) Indigo Nation,"{""brand"": ""Indigo Nation"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Indigo Nation
+Q_E_0576,E,áo thun (áo phông) Indigo Nation nam,"{""brand"": ""Indigo Nation"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",Tshirts Indigo Nation nam
+Q_E_0577,E,Probase,"{""brand"": ""Probase""}",Chỉ thương hiệu Probase
+Q_E_0578,E,áo thun (áo phông) Probase,"{""brand"": ""Probase"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Probase
+Q_E_0579,E,áo sơ mi Probase,"{""brand"": ""Probase"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Probase
+Q_E_0580,E,quần lót boxer Probase nam,"{""brand"": ""Probase"", ""articleType"": ""Boxers"", ""gender"": ""Men""}",Boxers Probase nam
+Q_E_0581,E,Timberland,"{""brand"": ""Timberland""}",Chỉ thương hiệu Timberland
+Q_E_0582,E,giày thường ngày Timberland,"{""brand"": ""Timberland"", ""articleType"": ""Casual Shoes""}",giày thường ngày thương hiệu Timberland
+Q_E_0583,E,áo thun (áo phông) Timberland,"{""brand"": ""Timberland"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Timberland
+Q_E_0584,E,Hanes,"{""brand"": ""Hanes""}",Chỉ thương hiệu Hanes
+Q_E_0585,E,quần lót tam giác Hanes,"{""brand"": ""Hanes"", ""articleType"": ""Briefs""}",quần lót tam giác thương hiệu Hanes
+Q_E_0586,E,áo may ô lót trong Hanes,"{""brand"": ""Hanes"", ""articleType"": ""Innerwear Vests""}",áo may ô lót trong thương hiệu Hanes
+Q_E_0587,E,quần lót tam giác Hanes nam,"{""brand"": ""Hanes"", ""articleType"": ""Briefs"", ""gender"": ""Men""}",Briefs Hanes nam
+Q_E_0588,E,Red Tape,"{""brand"": ""Red Tape""}",Chỉ thương hiệu Red Tape
+Q_E_0589,E,giày thường ngày Red Tape,"{""brand"": ""Red Tape"", ""articleType"": ""Casual Shoes""}",giày thường ngày thương hiệu Red Tape
+Q_E_0590,E,giày xăng-đan (sandal) Red Tape,"{""brand"": ""Red Tape"", ""articleType"": ""Sandals""}",giày xăng-đan (sandal) thương hiệu Red Tape
+Q_E_0591,E,giày tây công sở Red Tape nam,"{""brand"": ""Red Tape"", ""articleType"": ""Formal Shoes"", ""gender"": ""Men""}",Formal Shoes Red Tape nam
+Q_E_0592,E,Highlander,"{""brand"": ""Highlander""}",Chỉ thương hiệu Highlander
+Q_E_0593,E,áo sơ mi Highlander,"{""brand"": ""Highlander"", ""articleType"": ""Shirts""}",áo sơ mi thương hiệu Highlander
+Q_E_0594,E,quần âu (quần tây) Highlander,"{""brand"": ""Highlander"", ""articleType"": ""Trousers""}",quần âu (quần tây) thương hiệu Highlander
+Q_E_0595,E,áo sơ mi Highlander nam,"{""brand"": ""Highlander"", ""articleType"": ""Shirts"", ""gender"": ""Men""}",Shirts Highlander nam
+Q_E_0596,E,Doodle,"{""brand"": ""Doodle""}",Chỉ thương hiệu Doodle
+Q_E_0597,E,áo thun (áo phông) Doodle,"{""brand"": ""Doodle"", ""articleType"": ""Tshirts""}",áo thun (áo phông) thương hiệu Doodle
+Q_E_0598,E,áo kiểu nữ Doodle,"{""brand"": ""Doodle"", ""articleType"": ""Tops""}",áo kiểu nữ thương hiệu Doodle
+Q_F_0599,F,áo sơ mi công sở nam,"{""articleType"": ""Shirts"", ""usage"": ""Formal"", ""gender"": ""Men""}",Mục đích công sở Formal
+Q_F_0600,F,quần áo thể thao nam,"{""usage"": ""Sports"", ""gender"": ""Men""}",Mục đích thể thao Sports
+Q_F_0601,F,giày thể thao chạy bộ,"{""articleType"": ""Sports Shoes"", ""usage"": ""Sports""}",Giày chạy bộ thể thao
+Q_F_0602,F,váy dạ hội dự tiệc,"{""articleType"": ""Dresses"", ""usage"": ""Party""}",Váy dạ hội dự tiệc Party
+Q_F_0603,F,áo thun mùa hè,"{""articleType"": ""Tshirts"", ""season"": ""Summer""}",Mùa hè Summer
+Q_F_0604,F,áo khoác mùa đông,"{""articleType"": ""Jackets"", ""season"": ""Winter""}",Mùa đông Winter
+Q_F_0605,F,đồ bơi đi biển,"{""usage"": ""Sports""}",Đồ bơi đi biển
+Q_F_0606,F,quần jean ôm skinny,"{""articleType"": ""Jeans""}",Kiểu dáng quần jean ôm
+Q_F_0607,F,áo sơ mi kẻ caro,"{""articleType"": ""Shirts""}",Họa tiết kẻ caro
+Q_F_0608,F,áo thun kẻ sọc,"{""articleType"": ""Tshirts""}",Họa tiết kẻ sọc striped
+Q_F_0609,F,ví da nam công sở,"{""articleType"": ""Wallets"", ""gender"": ""Men""}",Ví da nam công sở
+Q_F_0610,F,đồng hồ dây kim loại,"{""articleType"": ""Watches""}",Đồng hồ dây kim loại metallic
+Q_F_0611,F,dép lê đi biển mùa hè,"{""articleType"": ""Flip Flops"", ""season"": ""Summer""}",Dép tông mùa hè
+Q_F_0612,F,áo khoác len ấm áp,"{""articleType"": ""Sweaters""}",Áo len sweaters
+Q_F_0613,F,kính mát chống nắng đi biển,"{""articleType"": ""Sunglasses""}",Kính râm đi biển
+Q_F_0614,F,váy hoa xòe mùa xuân,"{""articleType"": ""Dresses"", ""season"": ""Spring""}",Váy hoa mùa xuân
+Q_G_0615,G,áo phông nam màu trắng,"{""articleType"": ""Tshirts"", ""baseColour"": ""White"", ""gender"": ""Men""}",Đồng nghĩa: áo phông
+Q_G_0616,G,áo thun nam màu trắng,"{""articleType"": ""Tshirts"", ""baseColour"": ""White"", ""gender"": ""Men""}",Đồng nghĩa: áo thun
+Q_G_0617,G,quần bò nam xanh,"{""articleType"": ""Jeans"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Đồng nghĩa: quần bò
+Q_G_0618,G,quần jean nam xanh,"{""articleType"": ""Jeans"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Đồng nghĩa: quần jean
+Q_G_0619,G,túi sách màu hồng,"{""articleType"": ""Handbags"", ""baseColour"": ""Pink""}",Đồng nghĩa / chính tả: túi sách
+Q_G_0620,G,túi xách màu hồng,"{""articleType"": ""Handbags"", ""baseColour"": ""Pink""}",Đồng nghĩa: túi xách
+Q_G_0621,G,ba lô thời trang,"{""articleType"": ""Backpacks""}",Đồng nghĩa: ba lô
+Q_G_0622,G,balo thời trang,"{""articleType"": ""Backpacks""}",Đồng nghĩa: balo
+Q_G_0623,G,dép xỏ ngón nam,"{""articleType"": ""Flip Flops"", ""gender"": ""Men""}",Đồng nghĩa: dép xỏ ngón
+Q_G_0624,G,dép tông nam,"{""articleType"": ""Flip Flops"", ""gender"": ""Men""}",Đồng nghĩa: dép tông
+Q_G_0625,G,giày bệt nữ màu đen,"{""articleType"": ""Flats"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Đồng nghĩa: giày bệt
+Q_G_0626,G,giày búp bê nữ màu đen,"{""articleType"": ""Flats"", ""baseColour"": ""Black"", ""gender"": ""Women""}",Đồng nghĩa: giày búp bê
+Q_H_0627,H,ao thun puma nam,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",Không dấu: ao thun puma nam
+Q_H_0628,H,quan jean nam mau xanh,"{""articleType"": ""Jeans"", ""gender"": ""Men"", ""baseColour"": ""Blue""}",Không dấu: quan jean nam xanh
+Q_H_0629,H,tui xach nu mau hong,"{""articleType"": ""Handbags"", ""gender"": ""Women"", ""baseColour"": ""Pink""}",Không dấu: tui xach nu mau hong
+Q_H_0630,H,giay the thao nam nike,"{""brand"": ""Nike"", ""articleType"": ""Sports Shoes"", ""gender"": ""Men""}",Không dấu: giay the thao nam nike
+Q_H_0631,H,dam da hoi mau do,"{""articleType"": ""Dresses"", ""baseColour"": ""Red""}",Không dấu: dam da hoi mau do
+Q_H_0632,H,dong ho nu day da,"{""articleType"": ""Watches"", ""gender"": ""Women""}",Không dấu: dong ho nu
+Q_H_0633,H,ao so mi trang nam,"{""articleType"": ""Shirts"", ""gender"": ""Men"", ""baseColour"": ""White""}",Không dấu: ao so mi trang nam
+Q_H_0634,H,quan short nu mau trang,"{""articleType"": ""Shorts"", ""gender"": ""Women"", ""baseColour"": ""White""}",Không dấu: quan short nu trang
+Q_H_0635,H,quần sọt nam,"{""articleType"": ""Shorts"", ""gender"": ""Men""}",Phương ngữ: quần sọt -> Shorts
+Q_H_0636,H,áo thung nam,"{""articleType"": ""Tshirts"", ""gender"": ""Men""}",Sai chính tả: thung -> thun
+Q_H_0637,H,quần jiên nam,"{""articleType"": ""Jeans"", ""gender"": ""Men""}",Sai chính tả: jiên -> jean
+Q_H_0638,H,giầy cao gót đen,"{""articleType"": ""Heels"", ""baseColour"": ""Black""}",Chính tả: giầy -> giày
+Q_H_0639,H,nón kết nam,"{""articleType"": ""Caps"", ""gender"": ""Men""}",Phương ngữ: nón kết -> Caps
+Q_H_0640,H,ÁO THUN NAM PUMA,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",VIẾT HOA TOÀN BỘ
+Q_H_0641,H,qUầN jEaN nAm XaNh,"{""articleType"": ""Jeans"", ""gender"": ""Men"", ""baseColour"": ""Blue""}",Chữ hoa thường lộn xộn
+Q_H_0642,H,   áo sơ mi    nam    trắng   ,"{""articleType"": ""Shirts"", ""gender"": ""Men"", ""baseColour"": ""White""}",Thừa nhiều khoảng trắng
+Q_H_0643,H,"áo thun nam, màu đỏ, size L!","{""articleType"": ""Tshirts"", ""gender"": ""Men"", ""baseColour"": ""Red""}",Chứa dấu phẩy và chấm than
+Q_H_0644,H,áo thun Puma nam 👕,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",Kèm emoji áo
+Q_H_0645,H,giày cao gót nữ 👠 màu đỏ,"{""articleType"": ""Heels"", ""gender"": ""Women"", ""baseColour"": ""Red""}",Kèm emoji giày cao gót
+Q_H_0646,H,túi xách nữ 👜 màu đen,"{""articleType"": ""Handbags"", ""gender"": ""Women"", ""baseColour"": ""Black""}",Kèm emoji túi xách
+Q_H_0647,H,áo thun nam 100% cotton,"{""articleType"": ""Tshirts"", ""gender"": ""Men""}",Chứa số 100 và ký hiệu %
+Q_I_0648,I,áo,"{""articleType"": ""Tshirts""}",Câu 1 từ: áo
+Q_I_0649,I,quần,"{""articleType"": ""Jeans""}",Câu 1 từ: quần
+Q_I_0650,I,giày,"{""articleType"": ""Casual Shoes""}",Câu 1 từ: giày
+Q_I_0651,I,túi,"{""articleType"": ""Handbags""}",Câu 1 từ: túi
+Q_I_0652,I,Puma,"{""brand"": ""Puma""}",Câu 1 từ: brand Puma
+Q_I_0653,I,Nike,"{""brand"": ""Nike""}",Câu 1 từ: brand Nike
+Q_I_0654,I,tôi cần tìm một chiếc áo sơ mi nam dài tay màu trắng thanh lịch để mặc đi làm công sở hàng ngày,"{""articleType"": ""Shirts"", ""gender"": ""Men"", ""baseColour"": ""White""}",Câu tự nhiên dài
+Q_I_0655,I,tìm giúp tôi một chiếc túi xách nữ màu hồng kiểu dáng trẻ trung thanh lịch dành cho phái nữ đi dạo phố,"{""articleType"": ""Handbags"", ""gender"": ""Women"", ""baseColour"": ""Pink""}",Câu tự nhiên dài
+Q_I_0656,I,muốn mua một đôi giày thể thao chạy bộ êm chân thương hiệu Nike cho nam màu xanh dương khỏe khoắn,"{""brand"": ""Nike"", ""articleType"": ""Sports Shoes"", ""gender"": ""Men"", ""baseColour"": ""Blue""}",Câu tự nhiên dài
+Q_I_0657,I,áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời áo thun nam Puma màu vàng tươi chất liệu cotton thoáng mát co giãn tốt thấm hút mồ hôi dành cho người chơi thể thao vận động nhiều ngoài trời ,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men"", ""baseColour"": ""Yellow""}",Câu cực dài > 128 tokens để test truncation
+Q_J_0658,J,black leather handbag,"{""articleType"": ""Handbags"", ""baseColour"": ""Black""}",Tiếng Anh thuần
+Q_J_0659,J,blue denim jeans for men,"{""articleType"": ""Jeans"", ""baseColour"": ""Blue"", ""gender"": ""Men""}",Tiếng Anh thuần
+Q_J_0660,J,red evening party dress,"{""articleType"": ""Dresses"", ""baseColour"": ""Red"", ""usage"": ""Party""}",Tiếng Anh thuần
+Q_J_0661,J,men running shoes nike,"{""brand"": ""Nike"", ""articleType"": ""Sports Shoes"", ""gender"": ""Men""}",Tiếng Anh thuần
+Q_J_0662,J,áo tshirt nam màu đen,"{""articleType"": ""Tshirts"", ""gender"": ""Men"", ""baseColour"": ""Black""}",Trộn Việt-Anh: áo tshirt
+Q_J_0663,J,quần jean denim nam,"{""articleType"": ""Jeans"", ""gender"": ""Men""}",Trộn Việt-Anh: denim jeans
+Q_J_0664,J,túi tote bag nữ,"{""articleType"": ""Handbags"", ""gender"": ""Women""}",Trộn Việt-Anh: tote bag
+Q_J_0665,J,đầm maxi dress đi biển,"{""articleType"": ""Dresses""}",Trộn Việt-Anh: maxi dress
+Q_J_0666,J,áo jacket khoác nam,"{""articleType"": ""Jackets"", ""gender"": ""Men""}",Trộn Việt-Anh: áo jacket
+Q_K_0667,K,áo thun trơn không họa tiết,"{""articleType"": ""Tshirts""}",Phủ định: không họa tiết
+Q_K_0668,K,quần jean trơn không rách,"{""articleType"": ""Jeans""}",Phủ định: không rách
+Q_K_0669,K,áo sơ mi không cổ,"{""articleType"": ""Shirts""}",Phủ định: không cổ
+Q_K_0670,K,áo thun sọc đen trắng,"{""articleType"": ""Tshirts""}",Đa màu: đen trắng
+Q_K_0671,K,đầm liền phối hai màu xanh trắng,"{""articleType"": ""Dresses""}",Đa màu: xanh trắng
+Q_K_0672,K,giày thể thao trắng đen,"{""articleType"": ""Sports Shoes""}",Đa màu: trắng đen
+Q_L_0673,L,xe máy Honda Wave,"{""out_of_scope"": true}",Ngoài phạm vi: xe máy
+Q_L_0674,L,điện thoại iPhone 15 Pro,"{""out_of_scope"": true}",Ngoài phạm vi: điện thoại
+Q_L_0675,L,bánh mì kẹp thịt,"{""out_of_scope"": true}",Ngoài phạm vi: đồ ăn
+Q_L_0676,L,son môi dưỡng ẩm MAC,"{""out_of_scope"": true}",Ngoài phạm vi: mỹ phẩm trang điểm
+Q_L_0677,L,nước hoa Chanel cao cấp,"{""out_of_scope"": true}",Ngoài phạm vi: nước hoa (bị loại khỏi catalog)
+Q_L_0678,L,bàn ghế phòng khách gỗ sồi,"{""out_of_scope"": true}",Ngoài phạm vi: nội thất gia đình
+Q_L_0679,L,máy tính xách tay Dell XPS,"{""out_of_scope"": true}",Ngoài phạm vi: laptop máy tính
+Q_M_0680,M,váy nam màu xanh,"{""conflict"": true, ""note"": ""Váy thường là nữ nhưng truy vấn nam""}",Xung đột: váy nam
+Q_M_0681,M,đồ ngủ nam màu hồng nữ tính,"{""conflict"": true}",Xung đột: đồ ngủ nam màu hồng
+Q_M_0682,M,áo ngực nam,"{""conflict"": true}",Xung đột: áo ngực nam
+Q_M_0683,M,đồ thời trang đẹp,"{""ambiguous"": true}",Mơ hồ: quá chung chung
+Q_M_0684,M,món đồ gì đó màu đỏ,"{""ambiguous"": true, ""baseColour"": ""Red""}",Mơ hồ: chỉ có màu sắc
+Q_N_0685,N,,"{""empty"": true}",Biên: xâu rỗng
+Q_N_0686,N,    ,"{""empty"": true}",Biên: chỉ toàn khoảng trắng
+Q_N_0687,N,a,"{""edge"": true}",Biên: 1 ký tự
+Q_N_0688,N,X,"{""edge"": true}",Biên: 1 ký tự hoa
+Q_N_0689,N,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,"{""edge"": true}",Biên: 5000 ký tự lặp
+Q_N_0690,N,<script>alert('xss')</script>,"{""injection"": true}",Bảo mật: XSS Injection
+Q_N_0691,N,'; DROP TABLE catalog; --,"{""injection"": true}",Bảo mật: SQL Injection
+Q_N_0692,N,"áo thun
+nam
+màu xanh","{""articleType"": ""Tshirts"", ""gender"": ""Men"", ""baseColour"": ""Blue""}",Định dạng: chứa ký tự xuống dòng
+Q_N_0693,N," áo	thun
+nam ","{""articleType"": ""Tshirts"", ""gender"": ""Men""}",Định dạng: tab và crlf
+Q_N_0694,N,こんにちは T-shirt,"{""articleType"": ""Tshirts""}",Đa ngữ: Chữ Nhật Kanji/Hiragana
+Q_N_0695,N,你好 运动鞋,"{""articleType"": ""Sports Shoes""}",Đa ngữ: Chữ Hán giản thể
+Q_N_0696,N,Áo thun ​‌‍ nam,"{""articleType"": ""Tshirts"", ""gender"": ""Men""}",Unicode zero-width characters
+Q_O_0697,O,áo thun Puma nam màu vàng,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men"", ""baseColour"": ""Yellow""}",Lặp lần 1/5 test determinism
+Q_O_0698,O,áo thun Puma nam màu vàng,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men"", ""baseColour"": ""Yellow""}",Lặp lần 2/5 test determinism
+Q_O_0699,O,áo thun Puma nam màu vàng,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men"", ""baseColour"": ""Yellow""}",Lặp lần 3/5 test determinism
+Q_O_0700,O,áo thun Puma nam màu vàng,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men"", ""baseColour"": ""Yellow""}",Lặp lần 4/5 test determinism
+Q_O_0701,O,áo thun Puma nam màu vàng,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men"", ""baseColour"": ""Yellow""}",Lặp lần 5/5 test determinism
+Q_P_0702,P,túi sách màu hồng,"{""articleType"": ""Handbags"", ""baseColour"": ""Pink""}",Mẫu app 1: túi sách màu hồng
+Q_P_0703,P,áo thun Puma nam,"{""brand"": ""Puma"", ""articleType"": ""Tshirts"", ""gender"": ""Men""}",Mẫu app 2: áo thun Puma nam
+Q_P_0704,P,váy dài màu đỏ dạ hội,"{""articleType"": ""Dresses"", ""baseColour"": ""Red"", ""usage"": ""Party""}",Mẫu app 3: váy dài màu đỏ dạ hội
+Q_P_0705,P,giày cao gót nữ màu đen,"{""articleType"": ""Heels"", ""gender"": ""Women"", ""baseColour"": ""Black""}",Mẫu app 4: giày cao gót nữ màu đen
+Q_P_0706,P,ao do nam,"{""baseColour"": ""Red"", ""gender"": ""Men""}",Mẫu app 5: ao do nam (không dấu)
+Q_P_0707,P,đồ đi biển,"{""usage"": ""Sports""}",Mẫu app 6: đồ đi biển
+Q_P_0708,P,túi xách nữ Lavie,"{""articleType"": ""Handbags"", ""gender"": ""Women"", ""brand"": ""Lavie"", ""out_of_catalog_brand"": true}",Mẫu app 7: túi xách nữ Lavie (thương hiệu ngoài catalog)
