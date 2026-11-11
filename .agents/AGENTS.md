@@ -45,10 +45,11 @@ Index mới dựng ở thư mục riêng; không ghi đè index cũ.
 - Chỉ có **một** đường code tiền xử lý dùng chung cho embed index, truy vấn và đánh giá.
 - Trước khi embed số lượng lớn, tái encode 200 ảnh mẫu từ embedding đã lưu của checkpoint: cosine nhỏ nhất phải ≥ 0.999, nếu không thì **dừng ngay**.
 
-**Luật 5 — Không dùng Vintern.**
-- Không gọi, không nạp, không nhắc `Vintern`, `Vintern-1B-v3.5` hay `5CD-AI` trong code, config, script và dữ liệu caption đang dùng.
-- Thêm test quét mã nguồn để chắc chắn không còn chuỗi đó.
-- Ngoại lệ duy nhất: một dòng ghi chú lịch sử trong báo cáo về nguồn caption lúc checkpoint được train (xem mục F). Agent không tự xóa hay viết lại dòng này.
+**Luật 5 — Có thể kết hợp các phương án khác cùng với InternVL2-2B.**
+- `InternVL2-2B` (`OpenGVLab/InternVL2-2B`) giữ vai trò mô hình sinh dense caption chính theo `context.md`; không loại bỏ hay thay thế hoàn toàn bằng mô hình khác.
+- Có thể sử dụng `Vintern` (ví dụ `Vintern-1B-v3.5`) hoặc các phương án bổ trợ khác (hậu xử lý, trích xuất thuộc tính, đối chiếu/hợp nhất caption) để nâng cao chất lượng mô tả tiếng Việt cho `InternVL2-2B`.
+- Mọi bản ghi caption phải ghi rõ `caption_model`, `model_revision`, `seed`, tham số sinh và phương pháp kết hợp/chọn lọc (nếu có) để đảm bảo truy vết và tái lập.
+- Trong đánh giá và báo cáo (Luật 7), phải tách riêng số liệu **chỉ dùng InternVL2-2B** và **kết hợp bổ trợ** (kèm bootstrap CI nếu so sánh hai cấu hình), không dùng nguồn ngoài đề cương để ngầm thay thế baseline.
 
 **Luật 6 — Hash Guard.**
 Engine so SHA-256 của checkpoint trong `config.yaml` với `manifest.json` của index trước khi khởi động. Lệch thì từ chối nạp.

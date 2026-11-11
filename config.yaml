@@ -83,10 +83,18 @@ split:
   test_list_path: "eval/test_split.json"
   test_list_hash_path: "eval/test_split.sha256"
  
-# ---------------------------------------------------------------- Dense caption (InternVL2-2B)
+# ---------------------------------------------------------------- Dense caption (InternVL2-2B + bổ trợ theo Luật 5)
 captioning:
-  caption_model: "OpenGVLab/InternVL2-2B"  # model sinh caption duy nhất
+  caption_model: "OpenGVLab/InternVL2-2B"  # model sinh caption chính (bắt buộc theo context.md, Luật 5)
   model_revision: "TODO"                   # điền commit revision HF khi chạy (bắt buộc ghi lại)
+  allow_auxiliary_methods: true            # Luật 5: cho phép kết hợp Vintern hoặc hậu xử lý bổ trợ cho InternVL2-2B
+  auxiliary_models:                        # không thay thế InternVL2-2B; bật khi chạy cấu hình kết hợp
+    - name: "5CD-AI/Vintern-1B-v3.5"
+      role: "vietnamese_supplement"
+      model_revision: "TODO"
+      enabled: false
+  combination_strategy: "none"             # none | merge | postprocess | attribute_enrich | select
+  require_provenance_fields: ["caption_model", "model_revision", "seed", "generation_params", "combination_method"]
   language: "vi"
   seed: 42
   dtype: "float16"
@@ -143,6 +151,7 @@ eval:
   official_gallery: "test_split"           # chỉ tiêu chính thức chỉ đối chiếu trên gallery test split
   reference_gallery: "full"                # chứa ảnh train => ghi nhãn "ước lượng lạc quan (tham khảo)"
   report_separately: ["model_only", "system"]   # Model thuần vs Hệ thống (parser, lexicon, soft bonus)
+  report_caption_configs_separately: ["internvl2_only", "internvl2_plus_auxiliary"]  # Luật 5: tách riêng baseline và kết hợp bổ trợ
   breakdowns: ["thin_slot", "colour", "gender"]
   min_relevant_per_query: 5
   min_group_size_for_queries: 10
