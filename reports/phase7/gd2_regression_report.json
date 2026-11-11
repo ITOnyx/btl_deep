@@ -1,0 +1,320 @@
+{
+  "candidate_lexicon_summary": {
+    "Swimwear_count": 18,
+    "Jumpsuit_count": 16,
+    "Bath_Robe_count": 9,
+    "Tracksuits_count": 16,
+    "Track_Pants_count": 15
+  },
+  "suites": {
+    "708_queries": {
+      "count": 708,
+      "old_metrics": {
+        "Hit@10": 0.9731638418079096,
+        "P@10": 0.8734463276836157,
+        "AP@10": 0.9257345796003064
+      },
+      "new_metrics": {
+        "Hit@10": 0.9731638418079096,
+        "P@10": 0.8748587570621469,
+        "AP@10": 0.927853223668103
+      },
+      "delta": {
+        "Hit@10": 0.0,
+        "P@10": 0.0014124293785311437,
+        "AP@10": 0.0021186440677966045
+      },
+      "top1_changes_count": 2,
+      "top10_changes_count": 3,
+      "top1_changes": [
+        {
+          "suite": "708_queries",
+          "id": "Q_A_0073",
+          "query": "bộ quần áo thể thao",
+          "spec": {
+            "articleType": "Tracksuits"
+          },
+          "top1_old": "30726",
+          "top1_new": "24346",
+          "p_old": null,
+          "p_new": "Tracksuits",
+          "hit10_old": 1.0,
+          "hit10_new": 1.0,
+          "ap10_old": 0.25,
+          "ap10_new": 1.0,
+          "reason": "articleType changed from None to Tracksuits"
+        },
+        {
+          "suite": "708_queries",
+          "id": "Q_A_0078",
+          "query": "áo choàng tắm",
+          "spec": {
+            "articleType": "Bath Robe"
+          },
+          "top1_old": "11432",
+          "top1_new": "52497",
+          "p_old": null,
+          "p_new": "Bath Robe",
+          "hit10_old": 1.0,
+          "hit10_new": 1.0,
+          "ap10_old": 0.25,
+          "ap10_new": 1.0,
+          "reason": "articleType changed from None to Bath Robe"
+        }
+      ],
+      "top10_changes": [
+        {
+          "suite": "708_queries",
+          "id": "Q_A_0073",
+          "query": "bộ quần áo thể thao",
+          "spec": {
+            "articleType": "Tracksuits"
+          },
+          "parser_old": {
+            "raw_query": "bộ quần áo thể thao",
+            "articleType": null,
+            "gender": null,
+            "baseColour": null,
+            "colour_family": null,
+            "usage": "Sports",
+            "season": null,
+            "brand": null,
+            "unparsed_tokens": [
+              "bo",
+              "quan",
+              "ao"
+            ],
+            "confidence": 0.0
+          },
+          "parser_new": {
+            "raw_query": "bộ quần áo thể thao",
+            "articleType": "Tracksuits",
+            "gender": null,
+            "baseColour": null,
+            "colour_family": null,
+            "usage": null,
+            "season": null,
+            "brand": null,
+            "unparsed_tokens": [],
+            "confidence": 0.67
+          },
+          "dropped_ids": [
+            "30726",
+            "37561",
+            "37563",
+            "29057",
+            "30725",
+            "37528"
+          ],
+          "added_ids": [
+            "26322",
+            "26324",
+            "34257",
+            "16198",
+            "24306",
+            "29043"
+          ],
+          "metrics_old": {
+            "hit10": 1.0,
+            "p10": 0.5,
+            "ap10": 0.25
+          },
+          "metrics_new": {
+            "hit10": 1.0,
+            "p10": 1.0,
+            "ap10": 1.0
+          },
+          "delta_ap10": 0.75
+        },
+        {
+          "suite": "708_queries",
+          "id": "Q_A_0078",
+          "query": "áo choàng tắm",
+          "spec": {
+            "articleType": "Bath Robe"
+          },
+          "parser_old": {
+            "raw_query": "áo choàng tắm",
+            "articleType": null,
+            "gender": null,
+            "baseColour": null,
+            "colour_family": null,
+            "usage": null,
+            "season": null,
+            "brand": null,
+            "unparsed_tokens": [
+              "ao",
+              "choang",
+              "tam"
+            ],
+            "confidence": 0.0
+          },
+          "parser_new": {
+            "raw_query": "áo choàng tắm",
+            "articleType": "Bath Robe",
+            "gender": null,
+            "baseColour": null,
+            "colour_family": null,
+            "usage": null,
+            "season": null,
+            "brand": null,
+            "unparsed_tokens": [],
+            "confidence": 0.67
+          },
+          "dropped_ids": [
+            "11432",
+            "37178",
+            "1651",
+            "52494",
+            "7310",
+            "4621"
+          ],
+          "added_ids": [
+            "52473",
+            "52495",
+            "52505",
+            "52504",
+            "52502",
+            "52475"
+          ],
+          "metrics_old": {
+            "hit10": 1.0,
+            "p10": 0.5,
+            "ap10": 0.25
+          },
+          "metrics_new": {
+            "hit10": 1.0,
+            "p10": 1.0,
+            "ap10": 1.0
+          },
+          "delta_ap10": 0.75
+        },
+        {
+          "suite": "708_queries",
+          "id": "Q_F_0605",
+          "query": "đồ bơi đi biển",
+          "spec": {
+            "usage": "Sports"
+          },
+          "parser_old": {
+            "raw_query": "đồ bơi đi biển",
+            "articleType": null,
+            "gender": null,
+            "baseColour": null,
+            "colour_family": null,
+            "usage": null,
+            "season": null,
+            "brand": null,
+            "unparsed_tokens": [
+              "boi",
+              "di",
+              "bien"
+            ],
+            "confidence": 0.0
+          },
+          "parser_new": {
+            "raw_query": "đồ bơi đi biển",
+            "articleType": "Swimwear",
+            "gender": null,
+            "baseColour": null,
+            "colour_family": null,
+            "usage": null,
+            "season": null,
+            "brand": null,
+            "unparsed_tokens": [
+              "di",
+              "bien"
+            ],
+            "confidence": 0.47
+          },
+          "dropped_ids": [
+            "42973"
+          ],
+          "added_ids": [
+            "42974"
+          ],
+          "metrics_old": {
+            "hit10": 1.0,
+            "p10": 1.0,
+            "ap10": 1.0
+          },
+          "metrics_new": {
+            "hit10": 1.0,
+            "p10": 1.0,
+            "ap10": 1.0
+          },
+          "delta_ap10": 0.0
+        }
+      ]
+    },
+    "handwritten_100": {
+      "count": 100,
+      "old_metrics": {
+        "Hit@10": 0.96,
+        "P@10": 0.88,
+        "AP@10": 0.872134126984127
+      },
+      "new_metrics": {
+        "Hit@10": 0.96,
+        "P@10": 0.88,
+        "AP@10": 0.872134126984127
+      },
+      "delta": {
+        "Hit@10": 0.0,
+        "P@10": 0.0,
+        "AP@10": 0.0
+      },
+      "top1_changes_count": 0,
+      "top10_changes_count": 0,
+      "top1_changes": [],
+      "top10_changes": []
+    },
+    "unseen_32": {
+      "count": 32,
+      "old_metrics": {
+        "Hit@10": 0.84375,
+        "P@10": 0.84375,
+        "AP@10": 0.84375
+      },
+      "new_metrics": {
+        "Hit@10": 0.84375,
+        "P@10": 0.84375,
+        "AP@10": 0.84375
+      },
+      "delta": {
+        "Hit@10": 0.0,
+        "P@10": 0.0,
+        "AP@10": 0.0
+      },
+      "top1_changes_count": 0,
+      "top10_changes_count": 0,
+      "top1_changes": [],
+      "top10_changes": []
+    },
+    "heldout_30": {
+      "count": 30,
+      "old_metrics": {
+        "Hit@10": 0.9,
+        "P@10": 0.8766666666666667,
+        "AP@10": 0.8781084656084656
+      },
+      "new_metrics": {
+        "Hit@10": 0.9,
+        "P@10": 0.8766666666666667,
+        "AP@10": 0.8781084656084656
+      },
+      "delta": {
+        "Hit@10": 0.0,
+        "P@10": 0.0,
+        "AP@10": 0.0
+      },
+      "top1_changes_count": 0,
+      "top10_changes_count": 0,
+      "top1_changes": [],
+      "top10_changes": []
+    }
+  },
+  "total_queries": 870,
+  "total_changed_top1": 2,
+  "total_changed_top10": 3
+}

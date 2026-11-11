@@ -1,108 +1,217 @@
-# Điền các TODO trước khi chạy agent. Dùng dấu / hoặc \\ trong đường dẫn.
+# config.yaml — SigLIP + Dense Captioning E-commerce Visual Search
+# Nguồn: AGENTS.md (luật bất biến) + context.md (đề cương).
+# Dùng dấu / trong đường dẫn. Mọi đường dẫn tương đối so với project_root.
+# Các giá trị đánh dấu [KHỞI ĐẦU] chỉ chốt sau khi người dùng duyệt.
+ 
 project_root: "D:/Kì 7/Hoc_sau_ver4"
-
+seed: 42                                   # Luật: seed cố định cho mọi phân chia và thao tác ngẫu nhiên
+ 
+# ---------------------------------------------------------------- Chỉ tiêu (context.md)
+targets:
+  recall_at_10: 0.85
+  t2i_map: 0.75
+  latency_ms_p95: 200                      # đo riêng từng luồng
+  report_metrics: ["Recall@1", "Recall@5", "Recall@10", "mAP"]
+  no_lowering_targets: true                # Luật 7 + mục C.10: không tự hạ chuẩn
+ 
+# ---------------------------------------------------------------- Đường dẫn
 paths:
   kaggle_dir: "data/fashion-dataset"
-  checkpoint_dir: "data/checkpoints_siglip-vit"      # đường dẫn checkpoints_siglip-vit
-  train_code: "notebooks/siglip_vietnamese_ecommerce_colab_ver2.ipynb"          # notebook/script đã train (để lấy preprocessing)
+  checkpoint_dir: "data/checkpoints_siglip-vit"
+  checkpoint_file: "data/checkpoints_siglip-vit/best_model.pt"   # chỉ đọc
+  train_code: "notebooks/siglip_vietnamese_ecommerce_colab_ver2.ipynb"  # chỉ đọc, để lấy preprocessing
   old_images: "data/images"
   crawled_images: "data/images_crawled/new/images"
   catalog: "data/catalog/catalog.parquet"
   quarantine: "data/_quarantine"
-  index_dir: "index"
+  index_dir: "index"                       # index mới dựng ở index/<index_version>/, không ghi đè index_v* cũ
   reports_dir: "reports"
   eval_dir: "eval"
+  captions_dir: "data/catalog/captions"    # shard caption mới (InternVL2-2B)
+  quarantine_log: "reports/quarantine_log.csv"
   brands_path: "src/brands_v2.json"
   brands_sha256: "c5283096f649351d4433874915e2e32586118200e576f41b3101495859c1898e"
-
+ 
+# ---------------------------------------------------------------- Quyền ghi (Luật 2, 3)
+safety:
+  allowed_write: ["src/", "app/", "reports/", "eval/", "index/", "data/catalog/", "data/_quarantine/", "config.yaml", "README_run.md"]
+  read_only: ["notebooks/", "docs/", "data/checkpoints_siglip-vit/"]
+  never_overwrite_existing: ["index_v*/", "data/catalog/catalog.parquet"]
+  permanent_delete: false                  # chỉ chuyển vào quarantine + ghi log
+  hash_guard: true                         # Luật 6: so checkpoint_hash với manifest.json trước khi nạp
+  allow_training: false                    # Luật 1: cấm train/fine-tune/sửa checkpoint
+ 
+# ---------------------------------------------------------------- Checkpoint (dùng lại, không train)
 checkpoint:
-  format: "pt_state_dict"              # save_pretrained | pt_state_dict | pt_full_model | big_vision
-  model_name: "google/siglip-so400m-patch14-224"          # ví dụ tên model gốc dùng để dựng kiến trúc (nếu là state_dict)
-  text_language_in_training: "vi"   # en | vi | mixed
+  format: "pt_state_dict"
+  model_name: "google/siglip-so400m-patch14-224"
+  text_language_in_training: "vi"
   checkpoint_hash: "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d"
   embedding_dim: 1152
+  l2_normalize: true
   max_text_length: 128
-  text_padding: "max_length"           # khớp code train colab padding='max_length'
-
-image_filter:                 # CHỈ là giá trị khởi đầu; chốt sau khi tôi duyệt contact sheet
+  text_padding: "max_length"
+ 
+# ---------------------------------------------------------------- Tiền xử lý (Luật 4) — MỘT đường code dùng chung
+preprocess:
+  image_resize: [224, 224]
+  image_interpolation: "BILINEAR"
+  image_processor: "SiglipProcessor"
+  text_max_length: 128
+  text_padding: "max_length"
+  parity_check:                            # chạy trước khi embed số lượng lớn
+    n_samples: 200
+    min_cosine: 0.999                      # nhỏ nhất < 0.999 => DỪNG
+    halt_on_fail: true
+ 
+# ---------------------------------------------------------------- Lọc ảnh [KHỞI ĐẦU]
+image_filter:
   min_short_side: 224
   blur_laplacian_var_threshold: 12.0
   phash_hamming_threshold: 1
+  dedup_hashes: ["sha1", "phash"]
   dedup_match_attributes: ["articleType", "gender", "baseColour"]
   dedup_transitive: false
   detect_banner: true
-
+ 
+# ---------------------------------------------------------------- Phân chia dữ liệu
+split:
+  by: "product"                            # chia theo sản phẩm, trước mọi bước khác
+  ratios: { train: 0.8, val: 0.1, test: 0.1 }   # [KHỞI ĐẦU]
+  seed: 42
+  lock_test_list: true
+  test_list_path: "eval/test_split.json"
+  test_list_hash_path: "eval/test_split.sha256"
+ 
+# ---------------------------------------------------------------- Dense caption (InternVL2-2B)
+captioning:
+  caption_model: "OpenGVLab/InternVL2-2B"  # model sinh caption duy nhất
+  model_revision: "TODO"                   # điền commit revision HF khi chạy (bắt buộc ghi lại)
+  language: "vi"
+  seed: 42
+  dtype: "float16"
+  generation:
+    max_new_tokens: 96
+    do_sample: false
+    num_beams: 1
+  pilot_n_images: 200                      # thử 200 ảnh rồi dừng chờ duyệt
+  manual_review_n: 20
+  max_total_tokens: 128                    # đo bằng tokenizer SigLIP; phần phân biệt đứng đầu câu
+  discriminative_first: ["articleType", "gender", "baseColour", "style"]
+  shard_size: 1000
+  resume: true
+  error_log: "reports/caption_errors.csv"
+  vram_check_required: true                # không đủ FP16 => báo phương án, không tự hạ chất lượng
+  allow_auto_quantization: false
+  # Ghi chú: caption cũ đã thay được chuyển vào quarantine kèm log (Luật 2, mục D.7).
+ 
+# ---------------------------------------------------------------- Embedding
+embedding:
+  batch_size: 64
+  fp16: true
+ 
+# ---------------------------------------------------------------- FAISS
 faiss:
   type: "IndexHNSWFlat"
+  dim: 1152
   M: 32
   ef_construction: 200
   ef_search: 128
-  metric: "inner_product"
-
+  metric: "inner_product"                  # trên vector L2-normalized => cosine
+  manifest_name: "manifest.json"
+  manifest_fields: ["checkpoint_hash", "catalog_hash", "n_vectors", "hnsw_params", "commit_hash", "seed"]
+ 
+sanity_check:                              # bắt buộc ở Pha 4
+  max_duplicate_ids: 0
+  max_test_leak_into_train: 0
+  self_query_rank1: true
+  self_query_min_cosine: 0.9999
+  n_vectors_match_manifest: true
+ 
+# ---------------------------------------------------------------- Phạm vi catalog
+scope:
+  index_scope: "fashion_only"
+  exclude_master_categories: ["Personal Care", "Home", "Sporting Goods"]
+  exclude_article_types: ["Ipad", "Free Gifts", "Fragrance Gift Set", "Key chain", "Water Bottle", "Perfume and Body Mist"]
+  include_article_type_exceptions: ["Wristbands"]   # tái tạo 38.644 sản phẩm in_scope
+  keep_fashion_article_types_in_free_items: true    # Backpacks, Handbags, Wallets, Ties, Scarves, Clutches, Laptop Bag...
+ 
+# ---------------------------------------------------------------- Đánh giá
 eval:
   seed: 42
   topk: [1, 5, 10]
+  official_gallery: "test_split"           # chỉ tiêu chính thức chỉ đối chiếu trên gallery test split
+  reference_gallery: "full"                # chứa ảnh train => ghi nhãn "ước lượng lạc quan (tham khảo)"
+  report_separately: ["model_only", "system"]   # Model thuần vs Hệ thống (parser, lexicon, soft bonus)
+  breakdowns: ["thin_slot", "colour", "gender"]
   min_relevant_per_query: 5
+  min_group_size_for_queries: 10
   n_text_queries: 400
-  n_latency_queries: 200
-  handwritten_queries: "eval/handwritten_queries.json"   # tôi tự viết, 50-100 câu
-  min_group_size_for_queries: 10   # nhóm (articleType, gender[, baseColour]) nhỏ hơn thì không sinh truy vấn test
-  quality_device: "cpu"            # pipeline chuẩn đánh giá chất lượng (CPU Scorer centering)
-  quality_precision: "float32"     # chuẩn ma trận float32 cho đánh giá chất lượng
-  latency_device: "cuda"           # pipeline phục vụ suy luận thời gian thực (VisualSearchEngine)
-  latency_precision: "float16"     # GPU PyTorch half-precision
-  tie_rule: "conservative"         # báo song song hoặc bi quan (pessimistic / conservative)
-  gender_gt:                       # (gộp vào khối eval duy nhất; trước đây khai báo trùng khóa `eval:` làm YAML bỏ mất seed/n_latency_queries)
+  handwritten_queries: "eval/handwritten_queries.json"   # 50-100 câu, có dấu và không dấu
+  unseen_queries_run_once: true            # chỉnh parser/lexicon sau khi xem => đổi nhãn DEV SET
+  bootstrap: { n_resamples: 1000, ci: 0.95 }
+  hubness:
+    measure: true
+    top_k: 10
+    try_mean_centering: true               # báo cáo trước/sau
+  quality_device: "cpu"
+  quality_precision: "float32"
+  tie_rule: "conservative"
+  gender_gt:
     policy_file: "eval/gender_gt_policy.json"
-    official: "hybrid"             # hybrid | strict | relaxed
+    official: "hybrid"                     # hybrid | strict | relaxed
     report_also: ["strict", "relaxed"]
-
-scoring:
-  mu_gamma: 0.3                    # trọng số cộng điểm mềm (soft bonus) khi khớp thuộc tính danh mục/giới tính
-  csls: false                      # Cross-Domain Similarity Local Scaling (không kích hoạt)
-
+ 
+# ---------------------------------------------------------------- Độ trễ (đo riêng từng luồng)
 latency:
-  sla_metric: "p95"
-  sla_ms: 200                  # giữ để tương thích code cũ
-  risk_metric: "p99"
+  device: "cuda"
+  precision: "float16"
+  n_queries: 200
   min_runs: 5
   warmup_queries: 20
-  flows:                       # SLA riêng từng luồng, không nới
+  cuda_synchronize: true                   # torch.cuda.synchronize() quanh forward
+  log_gpu_temperature: true
+  percentiles: [50, 95, 99]
+  sla_metric: "p95"
+  risk_metric: "p99"
+  sla_ms: 200                              # giữ để tương thích code cũ
+  flows:
     text_to_image:  { sla_ms: 200 }
     image_to_image: { sla_ms: 200 }
     cir_catalog:    { sla_ms: 200 }
     cir_upload:     { sla_ms: 200 }
-
-serving:
-  i2i_mode: "fast"             # fast (1 ảnh) | accurate (batch-2 TTA flip)
-  use_flip_aug: false          # chỉ true khi i2i_mode == accurate
-  gpu_preprocess: false        # chỉ bật sau khi qua kiểm tra tương đương
-  gpu_preprocess_min_cosine: 0.999
-
-app:
-  port: 8501
-
-scope:
-  index_scope: "fashion_only"   # fashion_only | all
-  exclude_master_categories: ["Personal Care", "Home", "Sporting Goods"]
-  exclude_article_types: ["Ipad", "Free Gifts", "Fragrance Gift Set", "Key chain", "Water Bottle", "Perfume and Body Mist"]   # Loại bỏ phụ kiện phi thời trang
-  include_article_type_exceptions: ["Wristbands"]  # Ngoại lệ giữ lại từ Sporting Goods (tái tạo chính xác 38.644 sản phẩm in_scope)
-  keep_fashion_article_types_in_free_items: true  # Backpacks, Handbags, Wallets, Ties, Scarves, Clutches, Laptop Bag...
-
-embedding:
-  batch_size: 64
-  fp16: true
-
+ 
+# ---------------------------------------------------------------- Chấm điểm
+scoring:
+  mu_gamma: 0.3                            # soft bonus khi khớp danh mục/giới tính (đồng bộ inference.gamma)
+  csls: false
+ 
+# ---------------------------------------------------------------- Suy luận / phục vụ
 inference:
   phase: "3g"
-  gamma: 0.3                      # winning parameter from validation grid
-  alpha: 1.0                      # selected alpha*=1.0 (gap=0.0052 <= 0.0100 to save 170MB RAM)
-  rrf_k: 60                       # fixed reciprocal rank fusion parameter
-  min_candidates: 20              # multi-level relaxation threshold
+  gamma: 0.3
+  alpha: 1.0                               # alpha*=1.0 (gap 0.0052 <= 0.0100, tiết kiệm 170MB RAM)
+  rrf_k: 60
+  min_candidates: 20
   enable_parser: true
   enable_bm25: true
-  enable_text_fusion: false       # frozen to false based on F3 rule
-  use_usage: false                # independent filter verification flag
-  use_season: false               # independent filter verification flag
-  filter_mode: "relaxed"          # "relaxed" tương ứng C1, C2, C3, C5; "none" tương ứng C0 (Dense thuần); C4 là BM25 thuần
-  scoring_mode: "mean_centered"   # mu_shared centering
+  enable_text_fusion: false                # đóng băng theo luật F3
+  use_usage: false
+  use_season: false
+  filter_mode: "relaxed"                   # relaxed = C1,C2,C3,C5; none = C0; C4 = BM25 thuần
+  scoring_mode: "mean_centered"
+  query_languages: ["vi_diacritics", "vi_no_diacritics"]
+  cir_modifier_language_note: "combiner train với modifier tiếng Anh; chỉ cải thiện ở tầng suy luận"
+ 
+serving:
+  index_version: "v2"                      # v2 | v3_S | v3_M | v3_L
+  i2i_mode: "fast"                         # fast (1 ảnh) | accurate (batch-2 TTA flip)
+  use_flip_aug: false                      # chỉ true khi i2i_mode == accurate
+  gpu_preprocess: false                    # chỉ bật sau khi qua kiểm tra tương đương
+  gpu_preprocess_min_cosine: 0.999
+  top_k_display: 10                        # hiển thị Top-10 kèm độ tương đồng
+  modes: ["text_to_image", "image_to_image", "cir"]
+ 
+app:
+  framework: "streamlit"
+  port: 8501

@@ -111,7 +111,7 @@
 
 ## 4. Hạn chế còn lại & Đề xuất cho Pha 7b
 
-1. **Lệch phân bố nặng (Bias nguồn & màu):** Riêng Shopping100k `high` (`33,101` ảnh) tập trung 75%+ vào `Black` (`10,602`), `Blue/Navy` (`10,956`), `White` (`3,987`), và dồn rất mạnh vào vài slot (`(Dresses, Women) +6,522`, `(Tshirts, Men) +5,027`). Nếu nhúng toàn bộ 33k ảnh vào index, không gian vector và prior truy vấn text→ảnh sẽ lệch mạnh sang ảnh studio châu Âu (ghost-mannequin) của Shopping100k.
+1. **Lệch phân bố nặng (Bias nguồn & màu):** Riêng Shopping100k `high` (`33,101` ảnh) tập trung **84.48%** (`27,964 / 33,101`) vào `Black` (`10,777`), `Blue + Navy Blue` (`13,200` = `8,043 Blue` + `5,157 Navy Blue`), `White` (`3,987`), và dồn rất mạnh vào vài slot (`(Dresses, Women) +6,522`, `(Tshirts, Men) +5,027`). Nếu nhúng toàn bộ 33k ảnh vào index, không gian vector và prior truy vấn text→ảnh sẽ lệch mạnh sang ảnh studio châu Âu (ghost-mannequin) của Shopping100k.
 2. **Độ tin cậy màu & nhãn gốc:** Shopping100k có ~12–15% nhãn màu gốc sai (ví dụ `Navy Blue` trên áo hồng đậm, `Beige` trên áo trắng) và `3,987` ảnh `high + White` mang rủi ro *double-agreement bias* (`label=White` + `pixel=White`).
 3. **Đề xuất chọn lọc cho Pha 7b:** **KHÔNG đưa toàn bộ 33.203 ảnh `high` vào index.** Áp dụng **cap theo từng slot `(articleType × gender)`** (ví dụ: ưu tiên lấp các slot `index_v2 < 300` đến ngưỡng mục tiêu `300–400 sp/slot`; các slot đã dày như `(Tshirts, Men) = 5,089` hoặc `(Shirts, Men) = 2,597` chỉ lấy mẫu nhỏ `<= 200–300` đa dạng màu hoặc bằng `0` cho `AttributeIndex`, đồng thời rà nhanh slot `White`). Với 5 nhóm `pending_lexicon=True`, hoàn thiện `lexicon_vi.json` + test parser trước khi mở khóa vào `AttributeIndex`.
 
@@ -121,8 +121,8 @@
 
 ### (7c) Tập đánh giá mở rộng `eval_ext_eligible` (`seen_in_train == 'no'`) & đối chiếu ID với `dense_captions_catalog.json`
 
-- `fashion` (`eval_ext_eligible=True`): **94** ảnh — có ID trong `dense_captions_catalog.json`: **94** (`0` thiếu).
-- `shopping100k` (`eval_ext_eligible=True`): **1,468** ảnh — có ID trong `dense_captions_catalog.json`: **0** (tất cả 1.468 ảnh Shopping100k chưa từng có caption trong file train/test gốc).
+- `fashion` (`eval_ext_eligible=True`): **94** ảnh — khớp khóa trong `dense_captions_catalog.json`: **94** (`0` thiếu).
+- `shopping100k` (`eval_ext_eligible=True`): **1,468** ảnh — khớp khóa trong `dense_captions_catalog.json`: **1,468** (`0` thiếu; gồm 448 khóa đầy đủ `shop100k_<gender>_<cat>_<stem>` và 1,020 khóa ngắn `shop100k_<stem>`, trong đó 17 ảnh có cả 2 khóa đã ưu tiên khóa đầy đủ; 3/1,471 ảnh `shopping100k legacy_test` bị loại ở GĐ3 do `duplicate_internal_sha1`). Bảng đối chiếu chi tiết kèm cột `dense_caption_key` lưu tại [`eval/phase7/eval_ext_dense_captions.csv`](../../eval/phase7/eval_ext_dense_captions.csv).
 
 ### (7b) Các slot mỏng trong `index_v2` (`< 300` sản phẩm) có ứng viên Pha 7a bổ sung (gồm cả `pending_lexicon`)
 

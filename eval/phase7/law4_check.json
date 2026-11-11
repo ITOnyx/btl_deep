@@ -1,0 +1,140 @@
+{
+  "verified": true,
+  "threshold": 0.999,
+  "sample_count": 200,
+  "seed": 42,
+  "metrics_raw": {
+    "min": 0.9993912577629089,
+    "mean": 0.9999800857901573,
+    "p1": 0.9998881077766418,
+    "below_threshold_count": 0
+  },
+  "metrics_centered": {
+    "min": 0.9993987083435059,
+    "mean": 0.9999790692329407
+  },
+  "device": "cuda",
+  "fp16": true,
+  "samples": [
+    {
+      "index": 37,
+      "item_id": "3168",
+      "cosine_raw": 0.9999932646751404,
+      "cosine_centered": 0.9999933242797852
+    },
+    {
+      "index": 212,
+      "item_id": "58148",
+      "cosine_raw": 0.9999837875366211,
+      "cosine_centered": 0.9999823570251465
+    },
+    {
+      "index": 425,
+      "item_id": "7504",
+      "cosine_raw": 0.9999971985816956,
+      "cosine_centered": 0.9999971389770508
+    },
+    {
+      "index": 471,
+      "item_id": "14052",
+      "cosine_raw": 0.9999951720237732,
+      "cosine_centered": 0.9999949336051941
+    },
+    {
+      "index": 752,
+      "item_id": "39972",
+      "cosine_raw": 0.9999861717224121,
+      "cosine_centered": 0.9999861121177673
+    },
+    {
+      "index": 1276,
+      "item_id": "47552",
+      "cosine_raw": 0.9999937415122986,
+      "cosine_centered": 0.9999938607215881
+    },
+    {
+      "index": 1378,
+      "item_id": "50347",
+      "cosine_raw": 0.9999850988388062,
+      "cosine_centered": 0.9999833703041077
+    },
+    {
+      "index": 1639,
+      "item_id": "40126",
+      "cosine_raw": 0.9999664425849915,
+      "cosine_centered": 0.9999653697013855
+    },
+    {
+      "index": 1739,
+      "item_id": "15915",
+      "cosine_raw": 0.9999887943267822,
+      "cosine_centered": 0.9999880194664001
+    },
+    {
+      "index": 1952,
+      "item_id": "30603",
+      "cosine_raw": 0.9999915957450867,
+      "cosine_centered": 0.9999910593032837
+    },
+    {
+      "index": 2058,
+      "item_id": "59654",
+      "cosine_raw": 0.9999900460243225,
+      "cosine_centered": 0.9999889135360718
+    },
+    {
+      "index": 2082,
+      "item_id": "53538",
+      "cosine_raw": 0.9999865293502808,
+      "cosine_centered": 0.9999868869781494
+    },
+    {
+      "index": 2103,
+      "item_id": "29729",
+      "cosine_raw": 0.9999872446060181,
+      "cosine_centered": 0.9999868869781494
+    },
+    {
+      "index": 2847,
+      "item_id": "4342",
+      "cosine_raw": 0.9999872446060181,
+      "cosine_centered": 0.999987006187439
+    },
+    {
+      "index": 3003,
+      "item_id": "17877",
+      "cosine_raw": 0.9999967813491821,
+      "cosine_centered": 0.9999963045120239
+    },
+    {
+      "index": 3087,
+      "item_id": "58171",
+      "cosine_raw": 0.9999929666519165,
+      "cosine_centered": 0.9999920129776001
+    },
+    {
+      "index": 3665,
+      "item_id": "16101",
+      "cosine_raw": 0.9999839663505554,
+      "cosine_centered": 0.9999831914901733
+    },
+    {
+      "index": 3796,
+      "item_id": "22139",
+      "cosine_raw": 0.9999885559082031,
+      "cosine_centered": 0.9999883770942688
+    },
+    {
+      "index": 3858,
+      "item_id": "36995",
+      "cosine_raw": 0.999980092048645,
+      "cosine_centered": 0.9999796152114868
+    },
+    {
+      "index": 4163,
+      "item_id": "27814",
+      "cosine_raw": 0.9999895095825195,
+      "cosine_centered": 0.999988317489624
+    }
+  ]
+}
