@@ -825,7 +825,10 @@
     "app_main_py": "3e2e7c8bb59524343b134b07fd99eae8002dd3a73870ca770fe96a4531a8e77a",
     "readme_run_md": "ef7eb7440606b4403e8c7c421d986554495c2cfb6a9b28cfcc11d85ad1bbead2",
     "latency_e2e_v3_phase5a": "0abbd0be3b261dc2f5792e5e3d1111eb827f2e5238885cbf73647822d33c160d",
-    "phase5a_i2i_quality": "4616674f8b5301feac45dce9775549b37c11e0f3c2d6450013f877eb5f6cc6a8"
+    "phase5a_i2i_quality": "4616674f8b5301feac45dce9775549b37c11e0f3c2d6450013f877eb5f6cc6a8",
+    "candidates_v3_parquet": "76f5e9e19cc0cf08d402740714396f5dbcae78db8ea59fe004b28dd4b7122483",
+    "s100k_mapping_csv": "434eab0f27e33f9eab93a64fbdab658cf8a13e486bfcc72d6d65ef8d31b2ef90",
+    "bao_cao_pha7a_md": "1ba4de09f2224bdc03c07f8e007897db302196ead1ef8af4cf30b39eb5e9498a"
   },
   "phase4_audit_final": {
     "timestamp": "2026-11-09T21:05:00",
@@ -931,6 +934,38 @@
       "reports/phase4/phase5a_i2i_quality.json": "4616674f8b5301feac45dce9775549b37c11e0f3c2d6450013f877eb5f6cc6a8",
       "reports/phase4/phase4_fix_report_v2.md": "701d093400031697b56c7a364e9f6fb309c17f10bc240cb5b466bcc8fbe0aff2",
       "eval/gender_gt_policy.json": "9c0d2cb5e19ab903ba597c73862c8ac98bbc29245721e686d40a8b550c6451c3"
+    }
+  },
+  "phase7a": {
+    "timestamp": "2026-11-11T18:16:30+07:00",
+    "status": "COMPLETED",
+    "seed": 42,
+    "counts": {
+      "inventory_total": 139139,
+      "rejected_gd3_total": 40850,
+      "candidates_v3_total": 98289,
+      "serving_eligible_true": 98279,
+      "serving_eligible_false": 10,
+      "eval_ext_eligible_true": 1562,
+      "bm25_eligible_true": 33203,
+      "pending_lexicon_true": 10370,
+      "shopping100k_attr_confidence": {
+        "low": 49684,
+        "high": 33101,
+        "medium": 15389
+      },
+      "fashion_serving_attr_confidence": {
+        "high": 102,
+        "medium": 3
+      },
+      "shopping100k_high_white": 3987
+    },
+    "files_sha256": {
+      "candidates_v3_parquet": "76f5e9e19cc0cf08d402740714396f5dbcae78db8ea59fe004b28dd4b7122483",
+      "s100k_mapping_csv": "434eab0f27e33f9eab93a64fbdab658cf8a13e486bfcc72d6d65ef8d31b2ef90",
+      "candidates_mapped_gd4_parquet": "6b5572d49cfd0701ad22f8a028eeaa371f7adf3732bfa5a5039374d144f05af7",
+      "clean_candidates_gd3_parquet": "c8674f8fd17834373bb28b03e5e96fbc62839df961ef1e15c1d7b58aca964536",
+      "bao_cao_pha7a_md": "1ba4de09f2224bdc03c07f8e007897db302196ead1ef8af4cf30b39eb5e9498a"
     }
   }
 }
