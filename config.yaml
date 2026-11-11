@@ -74,21 +74,62 @@ image_filter:
   dedup_transitive: false
   detect_banner: true
  
+# ---------------------------------------------------------------- Nguồn dữ liệu (Pha 1)
+sources:
+  kaggle_fashion:
+    path: "data/fashion-dataset"
+    status: "available"
+    format: "styles.csv"
+    schema: "myntra_styles"
+    language: "en"
+    license: "CC0: Public Domain"
+    n_images_raw: 44424
+  shopping100k:
+    path: "data/Shopping100k"
+    status: "available_on_disk_out_of_catalog_scope"
+    format: "attributes_and_images"
+    language: "en"
+    license: "Academic non-commercial"
+    n_images_raw: 100713
+  tiki_crawled:
+    path: "data/images_crawled"
+    status: "not_available"
+    license: "N/A"
+
 # ---------------------------------------------------------------- Phân chia dữ liệu
 split:
+  mode: "inherit_checkpoint_train"          # Kế thừa: sản phẩm checkpoint đã thấy -> train; test chỉ lấy từ unseen
   by: "product"                            # chia theo sản phẩm, trước mọi bước khác
-  ratios: { train: 0.8, val: 0.1, test: 0.1 }   # [KHỞI ĐẦU]
   seed: 42
   lock_test_list: true
   test_list_path: "eval/test_split.json"
   test_list_hash_path: "eval/test_split.sha256"
+  val_list_path: "eval/val_split.json"
  
 # ---------------------------------------------------------------- Dense caption (InternVL2-2B + bổ trợ theo Luật 5)
 captioning:
   caption_model: "OpenGVLab/InternVL2-2B"  # model sinh caption chính (bắt buộc theo context.md, Luật 5)
   model_revision: "TODO"                   # điền commit revision HF khi chạy (bắt buộc ghi lại)
   allow_auxiliary_methods: true            # Luật 5: cho phép kết hợp Vintern hoặc hậu xử lý bổ trợ cho InternVL2-2B
-  auxiliary_models:                        # không thay thế InternVL2-2B; bật khi chạy cấu hình kết hợp
+  configs:
+    A:
+      description: "Chính, lõi: Chỉ InternVL2-2B (+ hậu xử lý chuẩn hóa không đổi nội dung)"
+      primary_model: "OpenGVLab/InternVL2-2B"
+      auxiliary_models: []
+      strategy: "core_only"
+    B:
+      description: "Kết hợp: InternVL2-2B + Bổ trợ (Vintern, trích xuất thuộc tính, hợp nhất luật)"
+      primary_model: "OpenGVLab/InternVL2-2B"
+      auxiliary_models: ["5CD-AI/Vintern-1B-v3.5", "metadata_extractor", "rule_cleaner"]
+      strategy: "merge_deterministic"
+    C:
+      description: "Tham chiếu: Chỉ model bổ trợ (Vintern-1B-v3.5)"
+      primary_model: "5CD-AI/Vintern-1B-v3.5"
+      auxiliary_models: []
+      strategy: "aux_only"
+      reference_only: true
+  aux: []                                  # Danh sách model bổ trợ đăng ký chính thức (rỗng chờ duyệt ở 1.8)
+  auxiliary_models:                        # danh mục khảo sát
     - name: "5CD-AI/Vintern-1B-v3.5"
       role: "vietnamese_supplement"
       model_revision: "TODO"
@@ -141,7 +182,7 @@ scope:
   index_scope: "fashion_only"
   exclude_master_categories: ["Personal Care", "Home", "Sporting Goods"]
   exclude_article_types: ["Ipad", "Free Gifts", "Fragrance Gift Set", "Key chain", "Water Bottle", "Perfume and Body Mist"]
-  include_article_type_exceptions: ["Wristbands"]   # tái tạo 38.644 sản phẩm in_scope
+  include_article_type_exceptions: ["Wristbands"]   # phụ kiện thời trang hợp lệ (bỏ ràng buộc ép 38.644)
   keep_fashion_article_types_in_free_items: true    # Backpacks, Handbags, Wallets, Ties, Scarves, Clutches, Laptop Bag...
  
 # ---------------------------------------------------------------- Đánh giá
@@ -192,11 +233,13 @@ latency:
  
 # ---------------------------------------------------------------- Chấm điểm
 scoring:
+  legacy: true                             # đánh dấu legacy: cần kiểm lại trên val, không chỉnh trên test
   mu_gamma: 0.3                            # soft bonus khi khớp danh mục/giới tính (đồng bộ inference.gamma)
   csls: false
  
 # ---------------------------------------------------------------- Suy luận / phục vụ
 inference:
+  legacy: true                             # đánh dấu legacy: cần kiểm lại trên val, không chỉnh trên test
   phase: "3g"
   gamma: 0.3
   alpha: 1.0                               # alpha*=1.0 (gap 0.0052 <= 0.0100, tiết kiệm 170MB RAM)
