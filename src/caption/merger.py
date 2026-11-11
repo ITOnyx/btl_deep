@@ -3,7 +3,14 @@ Merges InternVL2-2B visual captions with normalized catalog metadata and auxilia
 Enforces zero-hallucination on core discriminative attributes and keeps length <= 128 tokens.
 """
 
+import os
 import re
+
+# Sanitize SSL certificates
+os.environ.pop("CURL_CA_BUNDLE", None)
+os.environ.pop("REQUESTS_CA_BUNDLE", None)
+os.environ.pop("SSL_CERT_FILE", None)
+
 from transformers import AutoTokenizer
 
 MERGE_VERSION = "merge_v1"
@@ -107,13 +114,17 @@ def merge_caption_v1(
     tokens = tokenizer.encode(merged_text, add_special_tokens=True)
     token_len = len(tokens)
 
-    # Truncate if exceeding max_tokens while preserving the prefix
+    # Truncate strictly if exceeding max_tokens while preserving the prefix
     if token_len > max_tokens:
-        # Decode first max_tokens tokens
-        truncated_text = tokenizer.decode(tokens[:max_tokens], skip_special_tokens=True)
-        merged_text = truncated_text.strip()
+        tokens = tokens[:max_tokens - 1]
+        merged_text = tokenizer.decode(tokens, skip_special_tokens=True).strip()
         tokens = tokenizer.encode(merged_text, add_special_tokens=True)
         token_len = len(tokens)
+        while token_len > max_tokens and len(tokens) > 1:
+            tokens = tokens[:-1]
+            merged_text = tokenizer.decode(tokens, skip_special_tokens=True).strip()
+            tokens = tokenizer.encode(merged_text, add_special_tokens=True)
+            token_len = len(tokens)
 
     return {
         "caption": merged_text,

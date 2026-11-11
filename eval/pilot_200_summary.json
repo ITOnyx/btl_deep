@@ -1,0 +1,60 @@
+{
+  "n_samples": 200,
+  "tokens": {
+    "Config_A_InternVL2": {
+      "count": 200,
+      "min": 118,
+      "p25": 120.0,
+      "median": 120.0,
+      "p75": 120.0,
+      "max": 127,
+      "mean": 120.2,
+      "std": 1.2,
+      "gt_128_count": 0,
+      "gt_128_rate": 0.0
+    },
+    "Config_B_Merged": {
+      "count": 200,
+      "min": 126,
+      "p25": 127.0,
+      "median": 128.0,
+      "p75": 128.0,
+      "max": 128,
+      "mean": 127.4,
+      "std": 0.8,
+      "gt_128_count": 0,
+      "gt_128_rate": 0.0
+    },
+    "Config_C_Vintern": {
+      "count": 200,
+      "min": 186,
+      "p25": 297.0,
+      "median": 330.0,
+      "p75": 353.2,
+      "max": 402,
+      "mean": 322.9,
+      "std": 40.1,
+      "gt_128_count": 200,
+      "gt_128_rate": 100.0
+    }
+  },
+  "english_contamination_rate": {
+    "Config_A": 0.0,
+    "Config_B": 1.0,
+    "Config_C": 6.0
+  },
+  "chinese_contamination_rate": {
+    "Config_A": 0.0,
+    "Config_B": 0.0,
+    "Config_C": 0.0
+  },
+  "metadata_match_all_rate": {
+    "Config_A": 0.0,
+    "Config_B": 100.0,
+    "Config_C": 8.0
+  },
+  "avg_latency_sec": {
+    "Config_A_InternVL2": 14.32,
+    "Config_C_Vintern": 18.48
+  }
+}

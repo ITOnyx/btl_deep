@@ -1,0 +1,1602 @@
+{
+  "10013": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 16.032,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "10355": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.996,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "11041": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.761,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "11157": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.521,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "11260": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.101,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "11290": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.219,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "12541": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.288,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "12643": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.7,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "13404": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.835,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "13461": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.53,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "13599": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.16,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "14944": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.661,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "15056": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.988,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "15070": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.013,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "15120": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.158,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "15234": {
+    "raw_caption": "Những điểm được chọn để trình báo cho một mô tả ngắn gọn để được biết được được 25-45 t��",
+    "cleaned_caption": "Những điểm được chọn để trình báo cho một mô tả ngắn gọn để được biết được được 25-45 t��",
+    "latency_sec": 14.777,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "15552": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.916,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "1573": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.586,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16077": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. **Th",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. **Th",
+    "latency_sec": 14.933,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16182": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.319,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16285": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.591,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16335": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.662,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16425": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.018,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16484": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.282,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16962": {
+    "raw_caption": "Các mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ), yêu cầu bẮt buộc:\n\n1.",
+    "cleaned_caption": "Các mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ), yêu cầu bẮt buộc:\n\n1.",
+    "latency_sec": 13.446,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17110": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.095,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17427": {
+    "raw_caption": "Nhận được đưa để trình báo cáo để giải quyết để có thể để thông tin ngắn gọn, số tiền sản phẩ",
+    "cleaned_caption": "Nhận được đưa để trình báo cáo để giải quyết để có thể để thông tin ngắn gọn, số tiền sản phẩ",
+    "latency_sec": 13.66,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17628": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.132,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17843": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.517,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17911": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.982,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17942": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.996,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "18016": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.149,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "18092": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.666,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "18593": {
+    "raw_caption": "Những điểm được chọn để trình báo cho mô tả ngắn gọn sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-",
+    "cleaned_caption": "Những điểm được chọn để trình báo cho mô tả ngắn gọn sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-",
+    "latency_sec": 13.941,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "18691": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.289,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19070": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.424,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19388": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.605,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19495": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.203,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19747": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.021,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19757": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.211,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19773": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.206,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "1982": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.46,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19894": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.669,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "2009": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.919,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "20209": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.588,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "2102": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.526,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "21466": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.835,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "21496": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.615,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "2185": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.24,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "21917": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.798,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "22075": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.417,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "22225": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.975,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "22378": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.542,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "22461": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.816,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "2270": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.027,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "23464": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.307,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "23704": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.941,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "23796": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.351,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "23859": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.351,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "24507": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.552,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "24631": {
+    "raw_caption": "Những điểm được chọn để trình bàn gọn như sau:\n\n1. **Thông tin phân biệt cốt lõi bao gồm:**\n   - **Loại sản phẩm**: Đ",
+    "cleaned_caption": "Những điểm được chọn để trình bàn gọn như sau:\n\n1. **Thông tin phân biệt cốt lõi bao gồm:**\n   - **Loại sản phẩm**: Đ",
+    "latency_sec": 14.406,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "25047": {
+    "raw_caption": "Cần thiết lớn để có thể thực hiện điều tra các mô tả này, được thực hiện bằng cách cấp hàng và các công c�",
+    "cleaned_caption": "Cần thiết lớn để có thể thực hiện điều tra các mô tả này, được thực hiện bằng cách cấp hàng và các công c�",
+    "latency_sec": 14.374,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "25239": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.039,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "25400": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.092,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26321": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.693,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "2644": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.578,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26664": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.156,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26957": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.332,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26969": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.534,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "2697": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.71,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "27413": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.801,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "27470": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.073,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "27719": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.975,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "28697": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.937,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "29073": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.243,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "29236": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.639,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "29352": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.174,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "29411": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.742,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "29669": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.903,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30543": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. **Th",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. **Th",
+    "latency_sec": 13.857,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30591": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.944,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30600": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.733,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30903": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.955,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30930": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.232,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "31149": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.859,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "32203": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.148,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "3328": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.829,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "33337": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.863,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "33512": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.865,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "33559": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 17.896,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "33586": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 16.173,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34104": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.739,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34116": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.316,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "3429": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.277,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34464": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.085,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34644": {
+    "raw_caption": "Những thông tin phân biệt cốt lựi bao gồm:\n\n1. **Loại sản phẩm**: Độc nhất là một sản phẩm độc nhất, mà khô",
+    "cleaned_caption": "Những thông tin phân biệt cốt lựi bao gồm:\n\n1. **Loại sản phẩm**: Độc nhất là một sản phẩm độc nhất, mà khô",
+    "latency_sec": 15.279,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34799": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.247,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "35338": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.597,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "35556": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.269,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "36215": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.582,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "36249": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.958,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37073": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.637,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37083": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.063,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37228": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.976,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37255": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.586,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37677": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.258,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37961": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.282,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "38457": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.961,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "3851": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.887,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "38677": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.185,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "38993": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.057,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "39573": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.524,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "39898": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.625,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "40539": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.205,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "40615": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.634,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "40771": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.482,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "41307": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.211,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "4152": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.58,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "41673": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.668,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "41791": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.001,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "41847": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.806,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "42971": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.929,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "43532": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.84,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "44191": {
+    "raw_caption": "Những điểm được chọn để trình bàn gần 25-45 từ là:\n\n1. **Thông tin phân biệt cốt lõi bao gồm:**\n   - **Loại sản ph�",
+    "cleaned_caption": "Những điểm được chọn để trình bàn gần 25-45 từ là:\n\n1. **Thông tin phân biệt cốt lõi bao gồm:**\n   - **Loại sản ph�",
+    "latency_sec": 14.42,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "44649": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.131,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "44663": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.096,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "44869": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.134,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "4500": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.921,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "4601": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.478,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "46337": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.454,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "46524": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.52,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "46841": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.505,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "47099": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.951,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "47117": {
+    "raw_caption": "Các mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ) được để thể hiện đ",
+    "cleaned_caption": "Các mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ) được để thể hiện đ",
+    "latency_sec": 13.401,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "47312": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.649,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "48579": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.509,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "48743": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.19,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "48760": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.016,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "48964": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.435,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "4947": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.649,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "49888": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.312,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "50031": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.799,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "50536": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.241,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "50659": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.896,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "50733": {
+    "raw_caption": "Nhận được đưa đến mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). Y",
+    "cleaned_caption": "Nhận được đưa đến mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). Y",
+    "latency_sec": 13.958,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51152": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. **Th",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. **Th",
+    "latency_sec": 13.646,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51501": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.407,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51589": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.834,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "5161": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.531,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51665": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.389,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51701": {
+    "raw_caption": "Các mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ) được đưa đến đ��",
+    "cleaned_caption": "Các mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ) được đưa đến đ��",
+    "latency_sec": 14.176,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51809": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.758,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51826": {
+    "raw_caption": "Nhận được đưa đến mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). Y",
+    "cleaned_caption": "Nhận được đưa đến mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). Y",
+    "latency_sec": 14.237,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "52032": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.293,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "52328": {
+    "raw_caption": "Cần thiết làm việc một mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). Y��",
+    "cleaned_caption": "Cần thiết làm việc một mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). Y��",
+    "latency_sec": 14.026,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "52477": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.65,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "52835": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.814,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "5286": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.664,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "52904": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.447,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "52955": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.858,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "5451": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.383,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "54547": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.262,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "54831": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.119,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "54990": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.18,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "56806": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.715,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "5691": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.24,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "56953": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.391,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "57034": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.894,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "57135": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.666,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58218": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.628,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58305": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.112,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58518": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.727,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58551": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.764,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58667": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.526,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58675": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.08,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "59080": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.684,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "59142": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.261,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "59190": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.253,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "59217": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.427,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "59225": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.656,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "5925": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.099,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "59690": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.788,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "59775": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.171,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "6157": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.583,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "6226": {
+    "raw_caption": "Nhận được đưa đến mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). Y",
+    "cleaned_caption": "Nhận được đưa đến mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). Y",
+    "latency_sec": 13.631,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "6676": {
+    "raw_caption": "Những thông tin phân biệt cốt lựi bao gồm:\n\n1. **Loại sản phẩm**: Nike Air Max 270\n2. **Giới tính người mặc**: Độc đặc trưng",
+    "cleaned_caption": "Những thông tin phân biệt cốt lựi bao gồm:\n\n1. **Loại sản phẩm**: Nike Air Max 270\n2. **Giới tính người mặc**: Độc đặc trưng",
+    "latency_sec": 14.234,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "6748": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.85,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "6833": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.452,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7055": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.876,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7420": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.925,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7457": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.165,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7610": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.316,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7766": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 15.04,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7768": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.774,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7837": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.2,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "8787": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.554,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "9246": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.299,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "9310": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.81,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "9705": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 14.194,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "9910": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô",
+    "latency_sec": 13.901,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  }
+}
