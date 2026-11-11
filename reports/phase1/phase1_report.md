@@ -2,6 +2,7 @@
 
 **Dự án:** SigLIP + Dense Captioning cho Hệ thống Tra cứu Sản phẩm Thời trang Tiếng Việt (`Hoc_sau_ver4`)  
 **Mục tiêu Pha 1:** Làm sạch repo cũ, kiểm kê nguồn, lọc chất lượng ảnh, dựng catalog mới (`catalog_rebuild.parquet`) và thiết lập phân chia split chống rò rỉ tuyệt đối (No-Leakage). Không thực hiện caption, không embed.  
+**Commit Hash:** `43677ea`  
 **Seed cố định:** `42` cho mọi phân chia và thao tác ngẫu nhiên.  
 **Thời điểm thực thi:** 2026-11-11  
 
