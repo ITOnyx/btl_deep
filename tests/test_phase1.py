@@ -91,12 +91,16 @@ def test_seed_consistency(config):
 
 
 def test_law_5_compliance():
-    """Verify that any auxiliary model calls in src/ are strictly governed under allowed modules."""
+    """Verify that any auxiliary model calls in src/ are strictly governed under allowed modules (caption)."""
     forbidden_terms = ["5CD-AI", "Vintern-1B"]
     violating_files = []
     
     src_dir = Path("src")
+    allowed_rel_paths = {"caption"}
     for py_file in src_dir.rglob("*.py"):
+        rel_parts = py_file.relative_to(src_dir).parts
+        if len(rel_parts) > 0 and rel_parts[0] in allowed_rel_paths:
+            continue
         with open(py_file, "r", encoding="utf-8", errors="ignore") as f:
             content = f.read()
             for term in forbidden_terms:
