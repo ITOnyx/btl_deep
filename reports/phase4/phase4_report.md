@@ -126,4 +126,5 @@ tests\test_phase4_index.py ...                                           [100%]
 | **Sanity Check 3: Self-Query** | Rank 1 với Cosine $\ge 0.9999$ | **100% Rank 1 (Cosine 1.000000)** | ✅ Đạt |
 | **Sanity Check 4: Khớp Manifest** | Số vector đồng nhất | **Khớp 100%** | ✅ Đạt |
 | **Hash Guard (Luật 6)** | Checkpoint hash | **`e2f82fee26...` trùng khớp** | ✅ Đạt |
+| **Commit Hash** | `631d8e6` | ✅ Đã lưu |
 | **Hành động tiếp theo** | Chuyển sang **Pha 5: Đánh giá Benchmark (Recall@K, mAP), Hubness, SLA Độ trễ** | ⏳ Chờ lệnh **DUYỆT PHA 4** |
