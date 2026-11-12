@@ -114,4 +114,5 @@ tests\test_phase3_parity.py .....                                        [100%]
 | **Hash Guard (Luật 6)** | SHA-256 `e2f82fee26...` khớp tuyệt đối với checkpoint và config | ✅ Đạt |
 | **Tiền xử lý (Luật 4)** | Cosine nhỏ nhất trên 200 mẫu: **0.99966007 $\ge 0.999$** | ✅ Đạt |
 | **VRAM an toàn** | 1.73 GB / 4 GB | ✅ An toàn |
+| **Commit Hash** | `6ef2eec` | ✅ Đã lưu |
 | **Hành động tiếp theo** | Chuyển sang **Pha 4: Dựng FAISS HNSW Index** và tạo gallery test | ⏳ Chờ lệnh **DUYỆT PHA 3** |
