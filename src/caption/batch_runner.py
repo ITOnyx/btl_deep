@@ -5,6 +5,8 @@ Operates in resumable shards (default: 500 items/shard) and logs provenance stri
 
 import os
 import sys
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(line_buffering=True)
 import gc
 import re
 import time

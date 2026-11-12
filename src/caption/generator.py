@@ -5,6 +5,8 @@ Strictly follows Law 4, Law 5, Law D.1-D.8.
 
 import os
 import sys
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(line_buffering=True)
 import gc
 import re
 import time
