@@ -82,3 +82,23 @@ def test_pilot_sample_integrity_and_zero_test_leak():
     pilot_ids = set(str(x["product_id"]) for x in pilot_data)
     overlap = pilot_ids.intersection(test_ids)
     assert len(overlap) == 0, f"Critical violation: Pilot samples leaked into test split: {overlap}"
+
+
+def test_conflict_resolution_and_gender_swapping():
+    """Verify that female words in male garments are automatically fixed."""
+    text_female_in_male = "áo thun nữ màu vàng tươi đẹp dành cho phụ nữ"
+    cleaned, conflicts = detect_and_resolve_conflicts(text_female_in_male, expected_gender_vi="nam", expected_colour_vi="vàng")
+    assert "gender_conflict_female_in_male" in conflicts
+    assert "áo thun nam" in cleaned
+    assert "dành cho phụ nữ" not in cleaned
+    assert "nữ" not in cleaned
+
+
+def test_batch_runner_schema_integrity():
+    """Verify batch runner required columns and provenance tags."""
+    from src.caption.batch_runner import CORE_MODEL_ID, AUX_MODEL_ID, CORE_REVISION, AUX_REVISION, SEED
+    assert "InternVL2-2B" in CORE_MODEL_ID
+    assert "Vintern-1B" in AUX_MODEL_ID
+    assert SEED == 42
+    assert len(CORE_REVISION) == 40
+    assert len(AUX_REVISION) == 40

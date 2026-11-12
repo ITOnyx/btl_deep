@@ -20,8 +20,8 @@
       "median": 128.0,
       "p75": 128.0,
       "max": 128,
-      "mean": 127.4,
-      "std": 0.8,
+      "mean": 127.5,
+      "std": 0.7,
       "gt_128_count": 0,
       "gt_128_rate": 0.0
     },
@@ -40,7 +40,7 @@
   },
   "english_contamination_rate": {
     "Config_A": 0.0,
-    "Config_B": 1.0,
+    "Config_B": 4.5,
     "Config_C": 6.0
   },
   "chinese_contamination_rate": {

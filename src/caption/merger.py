@@ -26,10 +26,12 @@ def get_siglip_tokenizer(model_name="google/siglip-so400m-patch14-224"):
 
 
 def clean_introductory_phrases(text: str) -> str:
-    """Strip repetitive boilerplate conversational prefixes from VLMs."""
+    """Strip repetitive boilerplate conversational prefixes and prompt echoes from VLMs."""
     patterns = [
         r"^(trong hình là|bức ảnh chụp|đây là|sản phẩm là|hình ảnh hiển thị|mô tả:|hình ảnh cho thấy)\s*",
-        r"^(một chiếc|một đôi|một bộ|một mẫu)\s*"
+        r"^(một chiếc|một đôi|một bộ|một mẫu)\s*",
+        r"^(mô tả ngắn gọn|mô tả chi tiết|hãy mô tả|súc tích sản phẩm|yêu cầu bắt buộc)[\s\S]*?:\s*",
+        r"^(thông tin phân biệt|1\.\s*thông tin phân biệt)[\s\S]*?:\s*",
     ]
     cleaned = text.strip()
     for pat in patterns:
@@ -46,12 +48,18 @@ def detect_and_resolve_conflicts(text: str, expected_gender_vi: str, expected_co
     cleaned = text
 
     # Gender conflict
-    if expected_gender_vi == "nam" and re.search(r"\b(dành cho nữ|cho phái đẹp|cho phụ nữ|quý bà|bạn nữ)\b", cleaned, re.IGNORECASE):
-        conflicts.append("gender_conflict_female_in_male")
-        cleaned = re.sub(r"\b(dành cho nữ|cho phái đẹp|cho phụ nữ|quý bà|bạn nữ)\b", "nam", cleaned, flags=re.IGNORECASE)
-    elif expected_gender_vi == "nữ" and re.search(r"\b(dành cho nam|cho phái mạnh|cho đàn ông|quý ông|bạn nam)\b", cleaned, re.IGNORECASE):
-        conflicts.append("gender_conflict_male_in_female")
-        cleaned = re.sub(r"\b(dành cho nam|cho phái mạnh|cho đàn ông|quý ông|bạn nam)\b", "nữ", cleaned, flags=re.IGNORECASE)
+    if expected_gender_vi in ["nam", "bé trai"]:
+        if re.search(r"\b(nữ|phụ nữ|phái đẹp|quý bà|bạn nữ|cô gái)\b", cleaned, re.IGNORECASE):
+            conflicts.append("gender_conflict_female_in_male")
+            cleaned = re.sub(r"\b(áo thun nữ|áo sơ mi nữ|áo khoác nữ|áo nữ|quần nữ|giày nữ|dép nữ|túi nữ)\b", lambda m: m.group(0).replace("nữ", "nam"), cleaned, flags=re.IGNORECASE)
+            cleaned = re.sub(r"\b(dành cho nữ|cho phái đẹp|cho phụ nữ|quý bà|bạn nữ|người phụ nữ|cô gái)\b", "nam", cleaned, flags=re.IGNORECASE)
+            cleaned = re.sub(r"\b(nữ)\b", "nam", cleaned, flags=re.IGNORECASE)
+    elif expected_gender_vi in ["nữ", "bé gái"]:
+        if re.search(r"\b(nam|đàn ông|phái mạnh|quý ông|bạn nam|chàng trai)\b", cleaned, re.IGNORECASE):
+            conflicts.append("gender_conflict_male_in_female")
+            cleaned = re.sub(r"\b(áo thun nam|áo sơ mi nam|áo khoác nam|áo nam|quần nam|giày nam|dép nam|túi nam)\b", lambda m: m.group(0).replace("nam", "nữ"), cleaned, flags=re.IGNORECASE)
+            cleaned = re.sub(r"\b(dành cho nam|cho phái mạnh|cho đàn ông|quý ông|bạn nam|người đàn ông|chàng trai)\b", "nữ", cleaned, flags=re.IGNORECASE)
+            cleaned = re.sub(r"\b(nam)\b", "nữ", cleaned, flags=re.IGNORECASE)
 
     return cleaned, conflicts
 
@@ -91,11 +99,13 @@ def merge_caption_v1(
 
     # Combine prefix and visual details
     body_parts = []
-    if core_clean:
-        body_parts.append(core_clean)
-    if aux_clean and aux_clean.lower() not in core_clean.lower():
-        # Append unique supplementary phrasing from aux
+    # Aux caption (Vintern) provides fluent natural Vietnamese phrasing
+    if aux_clean:
         body_parts.append(aux_clean)
+    # Core caption (InternVL2) provides supplementary visual details if valid and non-echo
+    if core_clean and not any(core_clean.lower().startswith(p) for p in ["mô tả", "yêu cầu"]):
+        if not aux_clean or (core_clean.lower() not in aux_clean.lower()):
+            body_parts.append(core_clean)
 
     body_text = ". ".join(body_parts).strip()
     
