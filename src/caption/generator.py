@@ -104,10 +104,10 @@ def dynamic_preprocess(image, image_size=448, use_thumbnail=True, max_num=2):
     return processed_images
 
 
-def load_image_tensor(image_path: str, input_size=448, max_num=2):
+def load_image_tensor(image_path: str, input_size=448, max_num=1):
     img = Image.open(image_path).convert("RGB")
     transform = build_transform(input_size=input_size)
-    images = dynamic_preprocess(img, image_size=input_size, use_thumbnail=True, max_num=max_num)
+    images = dynamic_preprocess(img, image_size=input_size, use_thumbnail=False, max_num=max_num)
     pixel_values = [transform(patch) for patch in images]
     pixel_values = torch.stack(pixel_values)
     return pixel_values
@@ -170,7 +170,7 @@ class VLMCaptionPipeline:
             return cached
 
         model, tokenizer = self.load_model_8bit(model_id)
-        gen_config = dict(max_new_tokens=96, do_sample=False, num_beams=1)
+        gen_config = dict(max_new_tokens=48, do_sample=False, num_beams=1)
 
         t_start = time.time()
         for idx, sample in enumerate(remaining):
@@ -179,7 +179,7 @@ class VLMCaptionPipeline:
             
             t0 = time.time()
             try:
-                pixel_values = load_image_tensor(img_p, max_num=2).to(torch.float16).cuda()
+                pixel_values = load_image_tensor(img_p, max_num=1).to(torch.float16).cuda()
                 with torch.no_grad():
                     response, _ = model.chat(
                         tokenizer,
@@ -238,7 +238,7 @@ class VLMCaptionPipeline:
             return cached
 
         model, tokenizer = self.load_model_8bit(model_id)
-        gen_config = dict(max_new_tokens=96, do_sample=False, num_beams=1)
+        gen_config = dict(max_new_tokens=48, do_sample=False, num_beams=1)
 
         t_start = time.time()
         for idx, sample in enumerate(remaining):
@@ -247,7 +247,7 @@ class VLMCaptionPipeline:
             
             t0 = time.time()
             try:
-                pixel_values = load_image_tensor(img_p, max_num=2).to(torch.float16).cuda()
+                pixel_values = load_image_tensor(img_p, max_num=1).to(torch.float16).cuda()
                 with torch.no_grad():
                     response, _ = model.chat(
                         tokenizer,
