@@ -159,6 +159,8 @@ def evaluate_t2i_canonical(
     tie_rule: str = "conservative",
     tie_epsilon: float = 1e-5,
     zscore_cosine: bool = False,
+    bm25_scores: Optional[np.ndarray] = None,
+    bm25_weight: float = 0.2,
     compute_breakdowns: bool = False,
     policies: Sequence[str] = ("hybrid",),
     min_relevant_per_query: int = 1,
@@ -214,9 +216,12 @@ def evaluate_t2i_canonical(
                         parsed, meta, weights=slot_weights, gender_policy="hybrid", strict_categories=strict_cats
                     )
                     if hard_tier:
-                        scored.append((mf * 100.0 + base_s, idx))
+                        s_val = mf * 100.0 + base_s
                     else:
-                        scored.append((base_s + gamma * mf, idx))
+                        s_val = base_s + gamma * mf
+                    if bm25_scores is not None:
+                        s_val += bm25_weight * float(bm25_scores[i, idx])
+                    scored.append((s_val, idx))
 
             scored.sort(key=lambda x: x[0], reverse=True)
             scored_items_per_query.append(scored)

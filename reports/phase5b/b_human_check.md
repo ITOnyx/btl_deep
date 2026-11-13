@@ -1,9 +1,10 @@
 # Báo cáo Kiểm tra Tập B-human (`eval/val_queries_b_human.json`) — Bước 2c.7
 
-- **Trạng thái:** **ĐẠT NGƯỠNG TỐI THIỂU (`65 / 60` câu hợp lệ, `61` cụm `spec_cluster_id` độc nhất) — DỪNG TẠI ĐIỂM DỪNG 1 CHỜ DUYỆT BƯỚC 3**
+- **Trạng thái:** **ĐẠT NGƯỠNG TỐI THIỂU (`65 / 60` câu hợp lệ, `61` cụm `spec_cluster_id` độc nhất) — ĐÃ CẬP NHẬT NGUỒN `ai_written`**
 - **Tệp gốc:** `eval/val_queries_b_human.json` (giữ nguyên không sửa; `SHA-256: 21b1b85f40c4a45e6ff8a53e635f4cc4d9b20618253e412e6d9105e40468d4b8`)
-- **Tệp đã xác thực:** `eval/val_queries_b_human.validated.json` (`65` câu hợp lệ, có `spec_cluster_id` và `n_relevant`; `SHA-256: 19f81e8aa35a034f1528dc101e108ad0469201d50372e16afbc5286e78bd8deb`, lưu tại `eval/val_queries_b_human.sha256`)
-- **Cờ nguồn gốc (Mục 5):** **`provenance_unconfirmed`** — Trường `source` hiện giữ nguyên `"human_written"` (`131/131` câu), người dùng chưa xác nhận đã đọc/sửa. Cổng B-human hiện chỉ được mô tả là **"kiểm chứng ngoài mẫu, chưa độc lập tuyệt đối"**.
+- **Tệp đã xác thực:** `eval/val_queries_b_human.validated.json` (`65` câu hợp lệ, có `spec_cluster_id` và `n_relevant`; `SHA-256: 19f81e8aa35a034f1528dc101e108ad0469201d50372e16afbc5286e78bd8deb`, lưu tại `eval/val_queries_b_human.sha256`; khớp 100% danh sách 65 ID so với bản trước; hash giữ nguyên do tệp gốc đã mang `source="ai_written"`).
+- **Nguồn gốc (`source`):** **`ai_written`: 131/131 (100%)** trên tệp gốc và **65/65 (100%)** trên `validated.json`. Do toàn bộ câu là AI soạn, cổng B-human được mô tả chính xác là **"kiểm chứng ngoài mẫu, chưa độc lập tuyệt đối"**.
+- **Thống kê bổ sung (trên 65 câu hợp lệ):** **`31` câu có màu / `34` câu không màu**; `61` cụm độc nhất, trong đó **`4` cụm có $\ge 2$ câu** (`Tshirts__Men__Black`: 2, `Tshirts__Men__Purple`: 2, `Shirts__Men__`: 2, `Watches__Women__Silver`: 2).
 - **Ràng buộc:** Không nạp model, không sửa `parser_v1.py`, `selection_rule_v3.*`, Tập A/B-synth/C, hay `val_queries_b_human.json`.
 
 ---
