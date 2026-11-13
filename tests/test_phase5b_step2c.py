@@ -8,7 +8,7 @@ PROJECT_ROOT = pathlib.Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from scripts.check_b_human import check_b_human_queries, tokenize_norm
+from scripts.check_b_human import check_b_human_queries, detect_dia_class_auto, tokenize_norm
 from src.eval.canonical_eval import evaluate_t2i_canonical
 from src.eval.error_injection import inject_nested_parse_errors
 
@@ -139,3 +139,25 @@ def test_val_ab_c_and_rule_v3_integrity():
     rule_v3 = json.loads((PROJECT_ROOT / "reports/phase5b/selection_rule_v3.json").read_text(encoding="utf-8"))
     assert len(rule_v3["config_grid"]) <= 24
     assert any(c["config_id"] == "cfg_02" and c["parser"] == "parser_v2" for c in rule_v3["config_grid"])
+
+
+def test_dia_class_detection_three_cases_6b(tmp_path):
+    """6b Việc 2: Kiểm tra detect_dia_class_auto cho 3 trường hợp full / none / partial và cảnh báo lệch."""
+    assert detect_dia_class_auto("Mình muốn tìm mua áo thun nam màu xanh") == "full"
+    assert detect_dia_class_auto("minh muon tim mua ao thun nam mau xanh") == "none"
+    assert detect_dia_class_auto("giày the thao nữ màu trắng") == "partial"
+
+    sample = [
+        {
+            "id": "dia_mismatch_test",
+            "query": "giày the thao nữ màu trắng",
+            "dia_class": "full",
+            "spec": {"articleType": ["Sports Shoes"], "gender": "Women", "baseColour": ["White"]},
+        }
+    ]
+    p = tmp_path / "bh_dia.json"
+    p.write_text(json.dumps(sample), encoding="utf-8")
+    rep = check_b_human_queries(p, [], {"Sports Shoes"}, {}, min_queries=1, min_relevant=0)
+    assert rep["warnings_dia_class_mismatch"] == 1
+    assert rep["rows"][0]["dia_class_auto"] == "partial"
+    assert rep["rows"][0]["dia_class_mismatch_warning"] is True
