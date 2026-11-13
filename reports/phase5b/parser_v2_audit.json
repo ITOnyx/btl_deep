@@ -1,0 +1,146 @@
+[
+  {
+    "dataset": "DEV (handwritten_queries)",
+    "n_queries": 100,
+    "slot_pred_nonempty": {
+      "articleType": 99,
+      "gender": 88,
+      "baseColour": 67
+    },
+    "slot_fp_counts": {
+      "baseColour": 1
+    },
+    "slot_fp_rate_over_queries": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.01
+    },
+    "slot_fp_rate_over_preds": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.0149
+    },
+    "slot_fp_empty_spec": {},
+    "slot_fp_mismatch_spec": {
+      "baseColour": 1
+    },
+    "tim_mua_purple_count": 0,
+    "tim_mua_purple_ids": []
+  },
+  {
+    "dataset": "Val A (synthetic)",
+    "n_queries": 240,
+    "slot_pred_nonempty": {
+      "articleType": 240,
+      "gender": 240,
+      "baseColour": 200
+    },
+    "slot_fp_counts": {
+      "gender": 8,
+      "articleType": 1
+    },
+    "slot_fp_rate_over_queries": {
+      "articleType": 0.0042,
+      "gender": 0.0333,
+      "baseColour": 0.0
+    },
+    "slot_fp_rate_over_preds": {
+      "articleType": 0.0042,
+      "gender": 0.0333,
+      "baseColour": 0.0
+    },
+    "slot_fp_empty_spec": {},
+    "slot_fp_mismatch_spec": {
+      "gender": 8,
+      "articleType": 1
+    },
+    "tim_mua_purple_count": 0,
+    "tim_mua_purple_ids": []
+  },
+  {
+    "dataset": "Val B-synth (all)",
+    "n_queries": 245,
+    "slot_pred_nonempty": {
+      "articleType": 178,
+      "gender": 148,
+      "baseColour": 161
+    },
+    "slot_fp_counts": {
+      "baseColour": 5
+    },
+    "slot_fp_rate_over_queries": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.0204
+    },
+    "slot_fp_rate_over_preds": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.0311
+    },
+    "slot_fp_empty_spec": {},
+    "slot_fp_mismatch_spec": {
+      "baseColour": 5
+    },
+    "tim_mua_purple_count": 0,
+    "tim_mua_purple_ids": []
+  },
+  {
+    "dataset": "Val B-synth (clean only)",
+    "n_queries": 165,
+    "slot_pred_nonempty": {
+      "articleType": 130,
+      "gender": 103,
+      "baseColour": 119
+    },
+    "slot_fp_counts": {
+      "baseColour": 3
+    },
+    "slot_fp_rate_over_queries": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.0182
+    },
+    "slot_fp_rate_over_preds": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.0252
+    },
+    "slot_fp_empty_spec": {},
+    "slot_fp_mismatch_spec": {
+      "baseColour": 3
+    },
+    "tim_mua_purple_count": 0,
+    "tim_mua_purple_ids": []
+  },
+  {
+    "dataset": "B-human (validated)",
+    "n_queries": 65,
+    "slot_pred_nonempty": {
+      "articleType": 62,
+      "gender": 40,
+      "baseColour": 30
+    },
+    "slot_fp_counts": {
+      "baseColour": 1,
+      "articleType": 1
+    },
+    "slot_fp_rate_over_queries": {
+      "articleType": 0.0154,
+      "gender": 0.0,
+      "baseColour": 0.0154
+    },
+    "slot_fp_rate_over_preds": {
+      "articleType": 0.0161,
+      "gender": 0.0,
+      "baseColour": 0.0333
+    },
+    "slot_fp_empty_spec": {},
+    "slot_fp_mismatch_spec": {
+      "baseColour": 1,
+      "articleType": 1
+    },
+    "tim_mua_purple_count": 0,
+    "tim_mua_purple_ids": []
+  }
+]
