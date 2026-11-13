@@ -8,7 +8,6 @@ env/
 
 # Raw dataset and checkpoints
 _build/
-scripts/
 data/Shopping100k/
 data/fashion-dataset/
 data/images*

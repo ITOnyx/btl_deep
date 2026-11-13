@@ -1,0 +1,3260 @@
+{
+  "split": "test",
+  "seed": 42,
+  "source": "catalog_attributes",
+  "min_gt_per_pair": 3,
+  "n_pairs": 120,
+  "n_colour_change": 80,
+  "n_gender_change": 40,
+  "n_unique_article_types": 33,
+  "pairs": [
+    {
+      "ref_product_id": "31107",
+      "ref_image_path": "data\\fashion-dataset\\images\\31107.jpg",
+      "ref_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Boys",
+        "baseColour": "Green"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "Green"
+      },
+      "modifier_vi": "mẫu dành cho nam",
+      "gt_product_ids": [
+        "36248",
+        "38584",
+        "15210",
+        "26728",
+        "10460",
+        "19749",
+        "14094",
+        "16912",
+        "17203"
+      ],
+      "n_gt": 9,
+      "source": "catalog_attributes",
+      "id": "cir_test_000"
+    },
+    {
+      "ref_product_id": "4314",
+      "ref_image_path": "data\\fashion-dataset\\images\\4314.jpg",
+      "ref_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Unisex",
+        "baseColour": "White"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "40267",
+        "6567",
+        "3714",
+        "8398",
+        "10826",
+        "10721",
+        "48400",
+        "3891",
+        "48447",
+        "12633",
+        "3864",
+        "12053",
+        "38616",
+        "17235"
+      ],
+      "n_gt": 14,
+      "source": "catalog_attributes",
+      "id": "cir_test_001"
+    },
+    {
+      "ref_product_id": "11714",
+      "ref_image_path": "data\\fashion-dataset\\images\\11714.jpg",
+      "ref_attrs": {
+        "articleType": "Shirts",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu dành cho nam",
+      "gt_product_ids": [
+        "51408",
+        "9256",
+        "51431",
+        "13733",
+        "31661",
+        "59305",
+        "37787",
+        "11083",
+        "33059",
+        "12177",
+        "12047",
+        "41392",
+        "17172",
+        "41598",
+        "33064",
+        "7177"
+      ],
+      "n_gt": 16,
+      "source": "catalog_attributes",
+      "id": "cir_test_002"
+    },
+    {
+      "ref_product_id": "14134",
+      "ref_image_path": "data\\fashion-dataset\\images\\14134.jpg",
+      "ref_attrs": {
+        "articleType": "Track Pants",
+        "gender": "Women",
+        "baseColour": "Grey"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Track Pants",
+        "gender": "Men",
+        "baseColour": "Grey"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "26317",
+        "26260",
+        "26256"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_003"
+    },
+    {
+      "ref_product_id": "7185",
+      "ref_image_path": "data\\fashion-dataset\\images\\7185.jpg",
+      "ref_attrs": {
+        "articleType": "Jeans",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Jeans",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "56795",
+        "9186",
+        "11281",
+        "28804",
+        "28799",
+        "15671",
+        "30100",
+        "28811",
+        "23455"
+      ],
+      "n_gt": 9,
+      "source": "catalog_attributes",
+      "id": "cir_test_004"
+    },
+    {
+      "ref_product_id": "51520",
+      "ref_image_path": "data\\fashion-dataset\\images\\51520.jpg",
+      "ref_attrs": {
+        "articleType": "Watches",
+        "gender": "Women",
+        "baseColour": "White"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Watches",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "29917",
+        "30038",
+        "37474",
+        "28577",
+        "31820",
+        "32318",
+        "45230",
+        "46503",
+        "54646",
+        "23269",
+        "40562"
+      ],
+      "n_gt": 11,
+      "source": "catalog_attributes",
+      "id": "cir_test_005"
+    },
+    {
+      "ref_product_id": "15501",
+      "ref_image_path": "data\\fashion-dataset\\images\\15501.jpg",
+      "ref_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Unisex",
+      "target_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang cho nam nữ",
+      "gt_product_ids": [
+        "19903",
+        "7813",
+        "15882"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_006"
+    },
+    {
+      "ref_product_id": "12895",
+      "ref_image_path": "data\\fashion-dataset\\images\\12895.jpg",
+      "ref_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Boys",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "phiên bản dành cho nam",
+      "gt_product_ids": [
+        "18657",
+        "32736",
+        "15729",
+        "3182"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_007"
+    },
+    {
+      "ref_product_id": "27857",
+      "ref_image_path": "data\\fashion-dataset\\images\\27857.jpg",
+      "ref_attrs": {
+        "articleType": "Shirts",
+        "gender": "Women",
+        "baseColour": "Red"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Red"
+      },
+      "modifier_vi": "mẫu dành cho nam",
+      "gt_product_ids": [
+        "9250",
+        "2169",
+        "2127",
+        "20023",
+        "5021",
+        "10427",
+        "14678"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_008"
+    },
+    {
+      "ref_product_id": "18181",
+      "ref_image_path": "data\\fashion-dataset\\images\\18181.jpg",
+      "ref_attrs": {
+        "articleType": "Jeans",
+        "gender": "Boys",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Jeans",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu dành cho nam",
+      "gt_product_ids": [
+        "56795",
+        "9186",
+        "11281",
+        "28804",
+        "28799",
+        "15671",
+        "30100",
+        "28811",
+        "23455"
+      ],
+      "n_gt": 9,
+      "source": "catalog_attributes",
+      "id": "cir_test_009"
+    },
+    {
+      "ref_product_id": "43220",
+      "ref_image_path": "data\\fashion-dataset\\images\\43220.jpg",
+      "ref_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Unisex",
+        "baseColour": "White"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "5932",
+        "36435",
+        "17827",
+        "15238",
+        "3231",
+        "31213"
+      ],
+      "n_gt": 6,
+      "source": "catalog_attributes",
+      "id": "cir_test_010"
+    },
+    {
+      "ref_product_id": "29509",
+      "ref_image_path": "data\\fashion-dataset\\images\\29509.jpg",
+      "ref_attrs": {
+        "articleType": "Watches",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Watches",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "phiên bản dành cho nam",
+      "gt_product_ids": [
+        "46489",
+        "23270",
+        "45111",
+        "45903"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_011"
+    },
+    {
+      "ref_product_id": "57376",
+      "ref_image_path": "data\\fashion-dataset\\images\\57376.jpg",
+      "ref_attrs": {
+        "articleType": "Briefs",
+        "gender": "Women",
+        "baseColour": "White"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Briefs",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "49967",
+        "28063",
+        "43023"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_012"
+    },
+    {
+      "ref_product_id": "1923",
+      "ref_image_path": "data\\fashion-dataset\\images\\1923.jpg",
+      "ref_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Women",
+        "baseColour": "White"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "3251",
+        "1634",
+        "39634",
+        "43232",
+        "24421",
+        "43371",
+        "46802"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_013"
+    },
+    {
+      "ref_product_id": "7613",
+      "ref_image_path": "data\\fashion-dataset\\images\\7613.jpg",
+      "ref_attrs": {
+        "articleType": "Wallets",
+        "gender": "Men",
+        "baseColour": "Brown"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Wallets",
+        "gender": "Women",
+        "baseColour": "Brown"
+      },
+      "modifier_vi": "đổi sang cho nữ",
+      "gt_product_ids": [
+        "48141",
+        "48140",
+        "35905"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_014"
+    },
+    {
+      "ref_product_id": "38289",
+      "ref_image_path": "data\\fashion-dataset\\images\\38289.jpg",
+      "ref_attrs": {
+        "articleType": "Tops",
+        "gender": "Girls",
+        "baseColour": "Pink"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "Pink"
+      },
+      "modifier_vi": "mẫu dành cho nữ",
+      "gt_product_ids": [
+        "25543",
+        "24923",
+        "26864",
+        "26953",
+        "41772",
+        "41131",
+        "44678",
+        "5133",
+        "12785"
+      ],
+      "n_gt": 9,
+      "source": "catalog_attributes",
+      "id": "cir_test_015"
+    },
+    {
+      "ref_product_id": "27424",
+      "ref_image_path": "data\\fashion-dataset\\images\\27424.jpg",
+      "ref_attrs": {
+        "articleType": "Shorts",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Shorts",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "mẫu dành cho nam",
+      "gt_product_ids": [
+        "28514",
+        "40046",
+        "14932"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_016"
+    },
+    {
+      "ref_product_id": "40744",
+      "ref_image_path": "data\\fashion-dataset\\images\\40744.jpg",
+      "ref_attrs": {
+        "articleType": "Caps",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Unisex",
+      "target_attrs": {
+        "articleType": "Caps",
+        "gender": "Unisex",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "đổi sang cho nam nữ",
+      "gt_product_ids": [
+        "25715",
+        "22636",
+        "44622"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_017"
+    },
+    {
+      "ref_product_id": "36515",
+      "ref_image_path": "data\\fashion-dataset\\images\\36515.jpg",
+      "ref_attrs": {
+        "articleType": "Belts",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Belts",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "đổi sang cho nữ",
+      "gt_product_ids": [
+        "21440",
+        "18019",
+        "33724"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_018"
+    },
+    {
+      "ref_product_id": "21814",
+      "ref_image_path": "data\\fashion-dataset\\images\\21814.jpg",
+      "ref_attrs": {
+        "articleType": "Wallets",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Wallets",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang cho nữ",
+      "gt_product_ids": [
+        "37646",
+        "42921",
+        "17083",
+        "44253",
+        "38440"
+      ],
+      "n_gt": 5,
+      "source": "catalog_attributes",
+      "id": "cir_test_019"
+    },
+    {
+      "ref_product_id": "20988",
+      "ref_image_path": "data\\fashion-dataset\\images\\20988.jpg",
+      "ref_attrs": {
+        "articleType": "Belts",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Belts",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "phiên bản dành cho nam",
+      "gt_product_ids": [
+        "19212",
+        "19213",
+        "14828"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_020"
+    },
+    {
+      "ref_product_id": "15665",
+      "ref_image_path": "data\\fashion-dataset\\images\\15665.jpg",
+      "ref_attrs": {
+        "articleType": "Handbags",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Handbags",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "mẫu dành cho nữ",
+      "gt_product_ids": [
+        "52647",
+        "53685",
+        "38753",
+        "21500",
+        "25153"
+      ],
+      "n_gt": 5,
+      "source": "catalog_attributes",
+      "id": "cir_test_021"
+    },
+    {
+      "ref_product_id": "30782",
+      "ref_image_path": "data\\fashion-dataset\\images\\30782.jpg",
+      "ref_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Women",
+        "baseColour": "White"
+      },
+      "modifier_vi": "mẫu dành cho nữ",
+      "gt_product_ids": [
+        "53815",
+        "20111",
+        "53837",
+        "50331",
+        "11583",
+        "50345",
+        "28714"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_022"
+    },
+    {
+      "ref_product_id": "35545",
+      "ref_image_path": "data\\fashion-dataset\\images\\35545.jpg",
+      "ref_attrs": {
+        "articleType": "Sandals",
+        "gender": "Girls",
+        "baseColour": "Brown"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Sandals",
+        "gender": "Men",
+        "baseColour": "Brown"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "35587",
+        "50776",
+        "37958",
+        "10300",
+        "22894"
+      ],
+      "n_gt": 5,
+      "source": "catalog_attributes",
+      "id": "cir_test_023"
+    },
+    {
+      "ref_product_id": "38334",
+      "ref_image_path": "data\\fashion-dataset\\images\\38334.jpg",
+      "ref_attrs": {
+        "articleType": "Tops",
+        "gender": "Girls",
+        "baseColour": "White"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "White"
+      },
+      "modifier_vi": "mẫu dành cho nữ",
+      "gt_product_ids": [
+        "39722",
+        "58015",
+        "13269"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_024"
+    },
+    {
+      "ref_product_id": "30270",
+      "ref_image_path": "data\\fashion-dataset\\images\\30270.jpg",
+      "ref_attrs": {
+        "articleType": "Sunglasses",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Unisex",
+      "target_attrs": {
+        "articleType": "Sunglasses",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang cho nam nữ",
+      "gt_product_ids": [
+        "38190",
+        "28278",
+        "58531",
+        "38234",
+        "16096",
+        "8625",
+        "38227"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_025"
+    },
+    {
+      "ref_product_id": "6146",
+      "ref_image_path": "data\\fashion-dataset\\images\\6146.jpg",
+      "ref_attrs": {
+        "articleType": "Sandals",
+        "gender": "Unisex",
+        "baseColour": "Brown"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Sandals",
+        "gender": "Men",
+        "baseColour": "Brown"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "35587",
+        "50776",
+        "37958",
+        "10300",
+        "22894"
+      ],
+      "n_gt": 5,
+      "source": "catalog_attributes",
+      "id": "cir_test_026"
+    },
+    {
+      "ref_product_id": "30756",
+      "ref_image_path": "data\\fashion-dataset\\images\\30756.jpg",
+      "ref_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Men",
+        "baseColour": "Green"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Women",
+        "baseColour": "Green"
+      },
+      "modifier_vi": "đổi sang cho nữ",
+      "gt_product_ids": [
+        "11544",
+        "40604",
+        "19067",
+        "40585",
+        "32273",
+        "52104",
+        "36827"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_027"
+    },
+    {
+      "ref_product_id": "20943",
+      "ref_image_path": "data\\fashion-dataset\\images\\20943.jpg",
+      "ref_attrs": {
+        "articleType": "Flip Flops",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Flip Flops",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "phiên bản dành cho nữ",
+      "gt_product_ids": [
+        "47456",
+        "44201",
+        "32817"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_028"
+    },
+    {
+      "ref_product_id": "2936",
+      "ref_image_path": "data\\fashion-dataset\\images\\2936.jpg",
+      "ref_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Women",
+        "baseColour": "Maroon"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "Maroon"
+      },
+      "modifier_vi": "phiên bản dành cho nam",
+      "gt_product_ids": [
+        "13429",
+        "29026",
+        "4859"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_029"
+    },
+    {
+      "ref_product_id": "19980",
+      "ref_image_path": "data\\fashion-dataset\\images\\19980.jpg",
+      "ref_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "Yellow"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Women",
+        "baseColour": "Yellow"
+      },
+      "modifier_vi": "mẫu dành cho nữ",
+      "gt_product_ids": [
+        "22223",
+        "10505",
+        "24888",
+        "25928",
+        "22228",
+        "3068"
+      ],
+      "n_gt": 6,
+      "source": "catalog_attributes",
+      "id": "cir_test_030"
+    },
+    {
+      "ref_product_id": "21155",
+      "ref_image_path": "data\\fashion-dataset\\images\\21155.jpg",
+      "ref_attrs": {
+        "articleType": "Shirts",
+        "gender": "Women",
+        "baseColour": "Green"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Green"
+      },
+      "modifier_vi": "phiên bản dành cho nam",
+      "gt_product_ids": [
+        "6046",
+        "59298",
+        "9258",
+        "33067",
+        "39769",
+        "9479",
+        "6768",
+        "12008",
+        "37770"
+      ],
+      "n_gt": 9,
+      "source": "catalog_attributes",
+      "id": "cir_test_031"
+    },
+    {
+      "ref_product_id": "46441",
+      "ref_image_path": "data\\fashion-dataset\\images\\46441.jpg",
+      "ref_attrs": {
+        "articleType": "Watches",
+        "gender": "Men",
+        "baseColour": "Silver"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Watches",
+        "gender": "Women",
+        "baseColour": "Silver"
+      },
+      "modifier_vi": "phiên bản dành cho nữ",
+      "gt_product_ids": [
+        "51533",
+        "19278",
+        "15281",
+        "45025",
+        "37471",
+        "43219",
+        "50418",
+        "50394"
+      ],
+      "n_gt": 8,
+      "source": "catalog_attributes",
+      "id": "cir_test_032"
+    },
+    {
+      "ref_product_id": "12177",
+      "ref_image_path": "data\\fashion-dataset\\images\\12177.jpg",
+      "ref_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Shirts",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu dành cho nữ",
+      "gt_product_ids": [
+        "11714",
+        "18788",
+        "18759"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_033"
+    },
+    {
+      "ref_product_id": "4573",
+      "ref_image_path": "data\\fashion-dataset\\images\\4573.jpg",
+      "ref_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "18657",
+        "32736",
+        "15729",
+        "3182"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_034"
+    },
+    {
+      "ref_product_id": "46884",
+      "ref_image_path": "data\\fashion-dataset\\images\\46884.jpg",
+      "ref_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Boys",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "mẫu dành cho nam",
+      "gt_product_ids": [
+        "13969",
+        "32495",
+        "36467",
+        "24450",
+        "2812",
+        "57510"
+      ],
+      "n_gt": 6,
+      "source": "catalog_attributes",
+      "id": "cir_test_035"
+    },
+    {
+      "ref_product_id": "15501",
+      "ref_image_path": "data\\fashion-dataset\\images\\15501.jpg",
+      "ref_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "phiên bản dành cho nam",
+      "gt_product_ids": [
+        "13969",
+        "32495",
+        "36467",
+        "24450",
+        "2812",
+        "57510"
+      ],
+      "n_gt": 6,
+      "source": "catalog_attributes",
+      "id": "cir_test_036"
+    },
+    {
+      "ref_product_id": "4696",
+      "ref_image_path": "data\\fashion-dataset\\images\\4696.jpg",
+      "ref_attrs": {
+        "articleType": "Watches",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Watches",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang cho nữ",
+      "gt_product_ids": [
+        "40544",
+        "45144",
+        "8099",
+        "45239",
+        "25612",
+        "46438",
+        "46464"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_037"
+    },
+    {
+      "ref_product_id": "4513",
+      "ref_image_path": "data\\fashion-dataset\\images\\4513.jpg",
+      "ref_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Men",
+      "target_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang cho nam",
+      "gt_product_ids": [
+        "18657",
+        "32736",
+        "15729",
+        "3182"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_038"
+    },
+    {
+      "ref_product_id": "28804",
+      "ref_image_path": "data\\fashion-dataset\\images\\28804.jpg",
+      "ref_attrs": {
+        "articleType": "Jeans",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "gender",
+      "target_attr_value": "Women",
+      "target_attrs": {
+        "articleType": "Jeans",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "đổi sang cho nữ",
+      "gt_product_ids": [
+        "32560",
+        "12331",
+        "7185"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_039"
+    },
+    {
+      "ref_product_id": "57325",
+      "ref_image_path": "data\\fashion-dataset\\images\\57325.jpg",
+      "ref_attrs": {
+        "articleType": "Bra",
+        "gender": "Women",
+        "baseColour": "Grey"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "White",
+      "target_attrs": {
+        "articleType": "Bra",
+        "gender": "Women",
+        "baseColour": "White"
+      },
+      "modifier_vi": "chuyển sang màu trắng",
+      "gt_product_ids": [
+        "53508",
+        "21663",
+        "21654",
+        "59084"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_040"
+    },
+    {
+      "ref_product_id": "43776",
+      "ref_image_path": "data\\fashion-dataset\\images\\43776.jpg",
+      "ref_attrs": {
+        "articleType": "Earrings",
+        "gender": "Women",
+        "baseColour": "White"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Silver",
+      "target_attrs": {
+        "articleType": "Earrings",
+        "gender": "Women",
+        "baseColour": "Silver"
+      },
+      "modifier_vi": "chuyển sang màu bạc",
+      "gt_product_ids": [
+        "58051",
+        "48680",
+        "31703"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_041"
+    },
+    {
+      "ref_product_id": "11442",
+      "ref_image_path": "data\\fashion-dataset\\images\\11442.jpg",
+      "ref_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "Purple"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Grey",
+      "target_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "Grey"
+      },
+      "modifier_vi": "đổi sang màu xám",
+      "gt_product_ids": [
+        "13959",
+        "8446",
+        "9154",
+        "17850"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_042"
+    },
+    {
+      "ref_product_id": "16981",
+      "ref_image_path": "data\\fashion-dataset\\images\\16981.jpg",
+      "ref_attrs": {
+        "articleType": "Sandals",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Brown",
+      "target_attrs": {
+        "articleType": "Sandals",
+        "gender": "Men",
+        "baseColour": "Brown"
+      },
+      "modifier_vi": "mẫu tương tự màu nâu",
+      "gt_product_ids": [
+        "35587",
+        "50776",
+        "37958",
+        "10300",
+        "22894"
+      ],
+      "n_gt": 5,
+      "source": "catalog_attributes",
+      "id": "cir_test_043"
+    },
+    {
+      "ref_product_id": "22561",
+      "ref_image_path": "data\\fashion-dataset\\images\\22561.jpg",
+      "ref_attrs": {
+        "articleType": "Handbags",
+        "gender": "Women",
+        "baseColour": "Maroon"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Brown",
+      "target_attrs": {
+        "articleType": "Handbags",
+        "gender": "Women",
+        "baseColour": "Brown"
+      },
+      "modifier_vi": "mẫu tương tự màu nâu",
+      "gt_product_ids": [
+        "27732",
+        "20962",
+        "53921",
+        "42839",
+        "57229",
+        "43227",
+        "46978",
+        "51958"
+      ],
+      "n_gt": 8,
+      "source": "catalog_attributes",
+      "id": "cir_test_044"
+    },
+    {
+      "ref_product_id": "25018",
+      "ref_image_path": "data\\fashion-dataset\\images\\25018.jpg",
+      "ref_attrs": {
+        "articleType": "Flats",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Yellow",
+      "target_attrs": {
+        "articleType": "Flats",
+        "gender": "Women",
+        "baseColour": "Yellow"
+      },
+      "modifier_vi": "mẫu tương tự màu vàng",
+      "gt_product_ids": [
+        "13552",
+        "13560",
+        "57009"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_045"
+    },
+    {
+      "ref_product_id": "19664",
+      "ref_image_path": "data\\fashion-dataset\\images\\19664.jpg",
+      "ref_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Navy Blue",
+      "target_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "Navy Blue"
+      },
+      "modifier_vi": "mẫu tương tự màu xanh navy",
+      "gt_product_ids": [
+        "7990",
+        "17246",
+        "40266",
+        "7440",
+        "4419",
+        "33576",
+        "2682",
+        "6775"
+      ],
+      "n_gt": 8,
+      "source": "catalog_attributes",
+      "id": "cir_test_046"
+    },
+    {
+      "ref_product_id": "15872",
+      "ref_image_path": "data\\fashion-dataset\\images\\15872.jpg",
+      "ref_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Unisex",
+        "baseColour": "Navy Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "chuyển sang màu đen",
+      "gt_product_ids": [
+        "19903",
+        "7813",
+        "15882"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_047"
+    },
+    {
+      "ref_product_id": "17246",
+      "ref_image_path": "data\\fashion-dataset\\images\\17246.jpg",
+      "ref_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "Navy Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Pink",
+      "target_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "Pink"
+      },
+      "modifier_vi": "đổi sang màu hồng",
+      "gt_product_ids": [
+        "6280",
+        "19979",
+        "10837",
+        "7927"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_048"
+    },
+    {
+      "ref_product_id": "39578",
+      "ref_image_path": "data\\fashion-dataset\\images\\39578.jpg",
+      "ref_attrs": {
+        "articleType": "Heels",
+        "gender": "Women",
+        "baseColour": "Bronze"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Silver",
+      "target_attrs": {
+        "articleType": "Heels",
+        "gender": "Women",
+        "baseColour": "Silver"
+      },
+      "modifier_vi": "chuyển sang màu bạc",
+      "gt_product_ids": [
+        "2900",
+        "41739",
+        "19019"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_049"
+    },
+    {
+      "ref_product_id": "38475",
+      "ref_image_path": "data\\fashion-dataset\\images\\38475.jpg",
+      "ref_attrs": {
+        "articleType": "Wallets",
+        "gender": "Women",
+        "baseColour": "Red"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Brown",
+      "target_attrs": {
+        "articleType": "Wallets",
+        "gender": "Women",
+        "baseColour": "Brown"
+      },
+      "modifier_vi": "chuyển sang màu nâu",
+      "gt_product_ids": [
+        "48141",
+        "48140",
+        "35905"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_050"
+    },
+    {
+      "ref_product_id": "38542",
+      "ref_image_path": "data\\fashion-dataset\\images\\38542.jpg",
+      "ref_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Men",
+        "baseColour": "Red"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Navy Blue",
+      "target_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Men",
+        "baseColour": "Navy Blue"
+      },
+      "modifier_vi": "chuyển sang màu xanh navy",
+      "gt_product_ids": [
+        "35656",
+        "17483",
+        "35690",
+        "35670",
+        "35685"
+      ],
+      "n_gt": 5,
+      "source": "catalog_attributes",
+      "id": "cir_test_051"
+    },
+    {
+      "ref_product_id": "40629",
+      "ref_image_path": "data\\fashion-dataset\\images\\40629.jpg",
+      "ref_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Women",
+        "baseColour": "Olive"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang màu đen",
+      "gt_product_ids": [
+        "22080",
+        "58652",
+        "11811",
+        "24360"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_052"
+    },
+    {
+      "ref_product_id": "32859",
+      "ref_image_path": "data\\fashion-dataset\\images\\32859.jpg",
+      "ref_attrs": {
+        "articleType": "Heels",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Heels",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "đổi sang màu xanh dương",
+      "gt_product_ids": [
+        "56958",
+        "33514",
+        "35471",
+        "39591",
+        "13040",
+        "49586",
+        "35474"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_053"
+    },
+    {
+      "ref_product_id": "10099",
+      "ref_image_path": "data\\fashion-dataset\\images\\10099.jpg",
+      "ref_attrs": {
+        "articleType": "Watches",
+        "gender": "Men",
+        "baseColour": "Grey"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Watches",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "chuyển sang màu đen",
+      "gt_product_ids": [
+        "21712",
+        "29916",
+        "45235",
+        "30096",
+        "25603",
+        "29417",
+        "30095",
+        "54639",
+        "58454",
+        "10326",
+        "21676",
+        "59243"
+      ],
+      "n_gt": 12,
+      "source": "catalog_attributes",
+      "id": "cir_test_054"
+    },
+    {
+      "ref_product_id": "34766",
+      "ref_image_path": "data\\fashion-dataset\\images\\34766.jpg",
+      "ref_attrs": {
+        "articleType": "Handbags",
+        "gender": "Women",
+        "baseColour": "Pink"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Beige",
+      "target_attrs": {
+        "articleType": "Handbags",
+        "gender": "Women",
+        "baseColour": "Beige"
+      },
+      "modifier_vi": "chuyển sang màu be",
+      "gt_product_ids": [
+        "34765",
+        "48186",
+        "27038"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_055"
+    },
+    {
+      "ref_product_id": "12047",
+      "ref_image_path": "data\\fashion-dataset\\images\\12047.jpg",
+      "ref_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "mẫu tương tự màu đen",
+      "gt_product_ids": [
+        "28808",
+        "16789",
+        "10807",
+        "10809",
+        "37133",
+        "15154",
+        "29796"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_056"
+    },
+    {
+      "ref_product_id": "19256",
+      "ref_image_path": "data\\fashion-dataset\\images\\19256.jpg",
+      "ref_attrs": {
+        "articleType": "Watches",
+        "gender": "Men",
+        "baseColour": "Steel"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Watches",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "chuyển sang màu đen",
+      "gt_product_ids": [
+        "21712",
+        "29916",
+        "45235",
+        "30096",
+        "25603",
+        "29417",
+        "30095",
+        "54639",
+        "58454",
+        "10326",
+        "21676",
+        "59243"
+      ],
+      "n_gt": 12,
+      "source": "catalog_attributes",
+      "id": "cir_test_057"
+    },
+    {
+      "ref_product_id": "37142",
+      "ref_image_path": "data\\fashion-dataset\\images\\37142.jpg",
+      "ref_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Lavender"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Green",
+      "target_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Green"
+      },
+      "modifier_vi": "đổi sang màu xanh lá",
+      "gt_product_ids": [
+        "6046",
+        "59298",
+        "9258",
+        "33067",
+        "39769",
+        "9479",
+        "6768",
+        "12008",
+        "37770"
+      ],
+      "n_gt": 9,
+      "source": "catalog_attributes",
+      "id": "cir_test_058"
+    },
+    {
+      "ref_product_id": "32208",
+      "ref_image_path": "data\\fashion-dataset\\images\\32208.jpg",
+      "ref_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Women",
+        "baseColour": "Orange"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Maroon",
+      "target_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Women",
+        "baseColour": "Maroon"
+      },
+      "modifier_vi": "mẫu tương tự màu đỏ đô",
+      "gt_product_ids": [
+        "27270",
+        "30860",
+        "25851",
+        "42538",
+        "23221"
+      ],
+      "n_gt": 5,
+      "source": "catalog_attributes",
+      "id": "cir_test_059"
+    },
+    {
+      "ref_product_id": "39218",
+      "ref_image_path": "data\\fashion-dataset\\images\\39218.jpg",
+      "ref_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "Beige"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Purple",
+      "target_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "Purple"
+      },
+      "modifier_vi": "đổi sang màu tím",
+      "gt_product_ids": [
+        "8439",
+        "21141",
+        "5764",
+        "11442"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_060"
+    },
+    {
+      "ref_product_id": "58296",
+      "ref_image_path": "data\\fashion-dataset\\images\\58296.jpg",
+      "ref_attrs": {
+        "articleType": "Socks",
+        "gender": "Men",
+        "baseColour": "Navy Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "White",
+      "target_attrs": {
+        "articleType": "Socks",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "modifier_vi": "chuyển sang màu trắng",
+      "gt_product_ids": [
+        "43562",
+        "49989",
+        "25434",
+        "35246"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_061"
+    },
+    {
+      "ref_product_id": "4471",
+      "ref_image_path": "data\\fashion-dataset\\images\\4471.jpg",
+      "ref_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Silver"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "mẫu tương tự màu đen",
+      "gt_product_ids": [
+        "18657",
+        "32736",
+        "15729",
+        "3182"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_062"
+    },
+    {
+      "ref_product_id": "13683",
+      "ref_image_path": "data\\fashion-dataset\\images\\13683.jpg",
+      "ref_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Grey",
+      "target_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Grey"
+      },
+      "modifier_vi": "chuyển sang màu xám",
+      "gt_product_ids": [
+        "3227",
+        "22693",
+        "26602"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_063"
+    },
+    {
+      "ref_product_id": "30196",
+      "ref_image_path": "data\\fashion-dataset\\images\\30196.jpg",
+      "ref_attrs": {
+        "articleType": "Backpacks",
+        "gender": "Unisex",
+        "baseColour": "Red"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Backpacks",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang màu đen",
+      "gt_product_ids": [
+        "53368",
+        "15666",
+        "9527",
+        "53365",
+        "29269",
+        "39881"
+      ],
+      "n_gt": 6,
+      "source": "catalog_attributes",
+      "id": "cir_test_064"
+    },
+    {
+      "ref_product_id": "38405",
+      "ref_image_path": "data\\fashion-dataset\\images\\38405.jpg",
+      "ref_attrs": {
+        "articleType": "Belts",
+        "gender": "Women",
+        "baseColour": "White"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Purple",
+      "target_attrs": {
+        "articleType": "Belts",
+        "gender": "Women",
+        "baseColour": "Purple"
+      },
+      "modifier_vi": "mẫu tương tự màu tím",
+      "gt_product_ids": [
+        "20401",
+        "38404",
+        "33727",
+        "38418"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_065"
+    },
+    {
+      "ref_product_id": "20840",
+      "ref_image_path": "data\\fashion-dataset\\images\\20840.jpg",
+      "ref_attrs": {
+        "articleType": "Sandals",
+        "gender": "Men",
+        "baseColour": "Olive"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Red",
+      "target_attrs": {
+        "articleType": "Sandals",
+        "gender": "Men",
+        "baseColour": "Red"
+      },
+      "modifier_vi": "chuyển sang màu đỏ",
+      "gt_product_ids": [
+        "13980",
+        "23297",
+        "24696",
+        "11945",
+        "20951"
+      ],
+      "n_gt": 5,
+      "source": "catalog_attributes",
+      "id": "cir_test_066"
+    },
+    {
+      "ref_product_id": "42732",
+      "ref_image_path": "data\\fashion-dataset\\images\\42732.jpg",
+      "ref_attrs": {
+        "articleType": "Flats",
+        "gender": "Women",
+        "baseColour": "Silver"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Flats",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang màu đen",
+      "gt_product_ids": [
+        "20784",
+        "10280",
+        "46076",
+        "32845"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_067"
+    },
+    {
+      "ref_product_id": "49524",
+      "ref_image_path": "data\\fashion-dataset\\images\\49524.jpg",
+      "ref_attrs": {
+        "articleType": "Clutches",
+        "gender": "Women",
+        "baseColour": "Purple"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Clutches",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang màu đen",
+      "gt_product_ids": [
+        "38435",
+        "49523",
+        "31930",
+        "38427"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_068"
+    },
+    {
+      "ref_product_id": "58159",
+      "ref_image_path": "data\\fashion-dataset\\images\\58159.jpg",
+      "ref_attrs": {
+        "articleType": "Wallets",
+        "gender": "Women",
+        "baseColour": "Pink"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Purple",
+      "target_attrs": {
+        "articleType": "Wallets",
+        "gender": "Women",
+        "baseColour": "Purple"
+      },
+      "modifier_vi": "đổi sang màu tím",
+      "gt_product_ids": [
+        "48138",
+        "18027",
+        "33398"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_069"
+    },
+    {
+      "ref_product_id": "34585",
+      "ref_image_path": "data\\fashion-dataset\\images\\34585.jpg",
+      "ref_attrs": {
+        "articleType": "Dresses",
+        "gender": "Women",
+        "baseColour": "Green"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Dresses",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "chuyển sang màu đen",
+      "gt_product_ids": [
+        "8485",
+        "43514",
+        "57040"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_070"
+    },
+    {
+      "ref_product_id": "52834",
+      "ref_image_path": "data\\fashion-dataset\\images\\52834.jpg",
+      "ref_attrs": {
+        "articleType": "Earrings",
+        "gender": "Women",
+        "baseColour": "Turquoise Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Silver",
+      "target_attrs": {
+        "articleType": "Earrings",
+        "gender": "Women",
+        "baseColour": "Silver"
+      },
+      "modifier_vi": "mẫu tương tự màu bạc",
+      "gt_product_ids": [
+        "58051",
+        "48680",
+        "31703"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_071"
+    },
+    {
+      "ref_product_id": "54186",
+      "ref_image_path": "data\\fashion-dataset\\images\\54186.jpg",
+      "ref_attrs": {
+        "articleType": "Briefs",
+        "gender": "Men",
+        "baseColour": "Olive"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Grey Melange",
+      "target_attrs": {
+        "articleType": "Briefs",
+        "gender": "Men",
+        "baseColour": "Grey Melange"
+      },
+      "modifier_vi": "chuyển sang màu grey melange",
+      "gt_product_ids": [
+        "54478",
+        "50480",
+        "50563"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_072"
+    },
+    {
+      "ref_product_id": "11293",
+      "ref_image_path": "data\\fashion-dataset\\images\\11293.jpg",
+      "ref_attrs": {
+        "articleType": "Jeans",
+        "gender": "Men",
+        "baseColour": "nan"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Jeans",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu tương tự màu xanh dương",
+      "gt_product_ids": [
+        "56795",
+        "9186",
+        "11281",
+        "28804",
+        "28799",
+        "15671",
+        "30100",
+        "28811",
+        "23455"
+      ],
+      "n_gt": 9,
+      "source": "catalog_attributes",
+      "id": "cir_test_073"
+    },
+    {
+      "ref_product_id": "59099",
+      "ref_image_path": "data\\fashion-dataset\\images\\59099.jpg",
+      "ref_attrs": {
+        "articleType": "Briefs",
+        "gender": "Women",
+        "baseColour": "Purple"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Brown",
+      "target_attrs": {
+        "articleType": "Briefs",
+        "gender": "Women",
+        "baseColour": "Brown"
+      },
+      "modifier_vi": "mẫu tương tự màu nâu",
+      "gt_product_ids": [
+        "28781",
+        "59677",
+        "18688"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_074"
+    },
+    {
+      "ref_product_id": "18735",
+      "ref_image_path": "data\\fashion-dataset\\images\\18735.jpg",
+      "ref_attrs": {
+        "articleType": "Dresses",
+        "gender": "Women",
+        "baseColour": "Purple"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Dresses",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang màu đen",
+      "gt_product_ids": [
+        "8485",
+        "43514",
+        "57040"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_075"
+    },
+    {
+      "ref_product_id": "25733",
+      "ref_image_path": "data\\fashion-dataset\\images\\25733.jpg",
+      "ref_attrs": {
+        "articleType": "Belts",
+        "gender": "Men",
+        "baseColour": "Olive"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Belts",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "chuyển sang màu đen",
+      "gt_product_ids": [
+        "19212",
+        "19213",
+        "14828"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_076"
+    },
+    {
+      "ref_product_id": "51014",
+      "ref_image_path": "data\\fashion-dataset\\images\\51014.jpg",
+      "ref_attrs": {
+        "articleType": "Bra",
+        "gender": "Women",
+        "baseColour": "Grey"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Purple",
+      "target_attrs": {
+        "articleType": "Bra",
+        "gender": "Women",
+        "baseColour": "Purple"
+      },
+      "modifier_vi": "chuyển sang màu tím",
+      "gt_product_ids": [
+        "57358",
+        "50970",
+        "56295"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_077"
+    },
+    {
+      "ref_product_id": "8746",
+      "ref_image_path": "data\\fashion-dataset\\images\\8746.jpg",
+      "ref_attrs": {
+        "articleType": "Flip Flops",
+        "gender": "Unisex",
+        "baseColour": "Navy Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Flip Flops",
+        "gender": "Unisex",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu tương tự màu xanh dương",
+      "gt_product_ids": [
+        "40292",
+        "15875",
+        "15877"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_078"
+    },
+    {
+      "ref_product_id": "38431",
+      "ref_image_path": "data\\fashion-dataset\\images\\38431.jpg",
+      "ref_attrs": {
+        "articleType": "Clutches",
+        "gender": "Women",
+        "baseColour": "Red"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Clutches",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang màu đen",
+      "gt_product_ids": [
+        "38435",
+        "49523",
+        "31930",
+        "38427"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_079"
+    },
+    {
+      "ref_product_id": "50898",
+      "ref_image_path": "data\\fashion-dataset\\images\\50898.jpg",
+      "ref_attrs": {
+        "articleType": "Sarees",
+        "gender": "Women",
+        "baseColour": "Beige"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Green",
+      "target_attrs": {
+        "articleType": "Sarees",
+        "gender": "Women",
+        "baseColour": "Green"
+      },
+      "modifier_vi": "đổi sang màu xanh lá",
+      "gt_product_ids": [
+        "45999",
+        "34963",
+        "46004",
+        "59613",
+        "34989",
+        "45989",
+        "34302"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_080"
+    },
+    {
+      "ref_product_id": "15902",
+      "ref_image_path": "data\\fashion-dataset\\images\\15902.jpg",
+      "ref_attrs": {
+        "articleType": "Flip Flops",
+        "gender": "Unisex",
+        "baseColour": "Purple"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Flip Flops",
+        "gender": "Unisex",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "chuyển sang màu xanh dương",
+      "gt_product_ids": [
+        "40292",
+        "15875",
+        "15877"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_081"
+    },
+    {
+      "ref_product_id": "3736",
+      "ref_image_path": "data\\fashion-dataset\\images\\3736.jpg",
+      "ref_attrs": {
+        "articleType": "Caps",
+        "gender": "Unisex",
+        "baseColour": "Orange"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Caps",
+        "gender": "Unisex",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "chuyển sang màu xanh dương",
+      "gt_product_ids": [
+        "25715",
+        "22636",
+        "44622"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_082"
+    },
+    {
+      "ref_product_id": "34982",
+      "ref_image_path": "data\\fashion-dataset\\images\\34982.jpg",
+      "ref_attrs": {
+        "articleType": "Sarees",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Green",
+      "target_attrs": {
+        "articleType": "Sarees",
+        "gender": "Women",
+        "baseColour": "Green"
+      },
+      "modifier_vi": "chuyển sang màu xanh lá",
+      "gt_product_ids": [
+        "45999",
+        "34963",
+        "46004",
+        "59613",
+        "34989",
+        "45989",
+        "34302"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_083"
+    },
+    {
+      "ref_product_id": "52421",
+      "ref_image_path": "data\\fashion-dataset\\images\\52421.jpg",
+      "ref_attrs": {
+        "articleType": "Nightdress",
+        "gender": "Women",
+        "baseColour": "Multi"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Off White",
+      "target_attrs": {
+        "articleType": "Nightdress",
+        "gender": "Women",
+        "baseColour": "Off White"
+      },
+      "modifier_vi": "chuyển sang màu trắng ngà",
+      "gt_product_ids": [
+        "52361",
+        "52403",
+        "52362"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_084"
+    },
+    {
+      "ref_product_id": "58901",
+      "ref_image_path": "data\\fashion-dataset\\images\\58901.jpg",
+      "ref_attrs": {
+        "articleType": "Ties",
+        "gender": "Men",
+        "baseColour": "Green"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Ties",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu tương tự màu xanh dương",
+      "gt_product_ids": [
+        "19223",
+        "11159",
+        "19227"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_085"
+    },
+    {
+      "ref_product_id": "16226",
+      "ref_image_path": "data\\fashion-dataset\\images\\16226.jpg",
+      "ref_attrs": {
+        "articleType": "Capris",
+        "gender": "Women",
+        "baseColour": "Grey"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Capris",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu tương tự màu xanh dương",
+      "gt_product_ids": [
+        "32637",
+        "57218",
+        "10719"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_086"
+    },
+    {
+      "ref_product_id": "5766",
+      "ref_image_path": "data\\fashion-dataset\\images\\5766.jpg",
+      "ref_attrs": {
+        "articleType": "Jeans",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Jeans",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "đổi sang màu xanh dương",
+      "gt_product_ids": [
+        "32560",
+        "12331",
+        "7185"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_087"
+    },
+    {
+      "ref_product_id": "14607",
+      "ref_image_path": "data\\fashion-dataset\\images\\14607.jpg",
+      "ref_attrs": {
+        "articleType": "Socks",
+        "gender": "Men",
+        "baseColour": "Brown"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "White",
+      "target_attrs": {
+        "articleType": "Socks",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "modifier_vi": "mẫu tương tự màu trắng",
+      "gt_product_ids": [
+        "43562",
+        "49989",
+        "25434",
+        "35246"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_088"
+    },
+    {
+      "ref_product_id": "19232",
+      "ref_image_path": "data\\fashion-dataset\\images\\19232.jpg",
+      "ref_attrs": {
+        "articleType": "Ties",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Ties",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "chuyển sang màu xanh dương",
+      "gt_product_ids": [
+        "19223",
+        "11159",
+        "19227"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_089"
+    },
+    {
+      "ref_product_id": "30202",
+      "ref_image_path": "data\\fashion-dataset\\images\\30202.jpg",
+      "ref_attrs": {
+        "articleType": "Backpacks",
+        "gender": "Unisex",
+        "baseColour": "Navy Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Backpacks",
+        "gender": "Unisex",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu tương tự màu xanh dương",
+      "gt_product_ids": [
+        "24832",
+        "19944",
+        "6557",
+        "38758",
+        "3334",
+        "3333",
+        "6553",
+        "19413",
+        "37692"
+      ],
+      "n_gt": 9,
+      "source": "catalog_attributes",
+      "id": "cir_test_090"
+    },
+    {
+      "ref_product_id": "13299",
+      "ref_image_path": "data\\fashion-dataset\\images\\13299.jpg",
+      "ref_attrs": {
+        "articleType": "Shorts",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Shorts",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "mẫu tương tự màu đen",
+      "gt_product_ids": [
+        "28514",
+        "40046",
+        "14932"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_091"
+    },
+    {
+      "ref_product_id": "13299",
+      "ref_image_path": "data\\fashion-dataset\\images\\13299.jpg",
+      "ref_attrs": {
+        "articleType": "Shorts",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Grey",
+      "target_attrs": {
+        "articleType": "Shorts",
+        "gender": "Men",
+        "baseColour": "Grey"
+      },
+      "modifier_vi": "đổi sang màu xám",
+      "gt_product_ids": [
+        "5453",
+        "31458",
+        "52529"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_092"
+    },
+    {
+      "ref_product_id": "30270",
+      "ref_image_path": "data\\fashion-dataset\\images\\30270.jpg",
+      "ref_attrs": {
+        "articleType": "Sunglasses",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Bronze",
+      "target_attrs": {
+        "articleType": "Sunglasses",
+        "gender": "Men",
+        "baseColour": "Bronze"
+      },
+      "modifier_vi": "chuyển sang màu đồng thanh",
+      "gt_product_ids": [
+        "28174",
+        "28352",
+        "39999"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_093"
+    },
+    {
+      "ref_product_id": "40089",
+      "ref_image_path": "data\\fashion-dataset\\images\\40089.jpg",
+      "ref_attrs": {
+        "articleType": "Track Pants",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Grey",
+      "target_attrs": {
+        "articleType": "Track Pants",
+        "gender": "Men",
+        "baseColour": "Grey"
+      },
+      "modifier_vi": "chuyển sang màu xám",
+      "gt_product_ids": [
+        "26317",
+        "26260",
+        "26256"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_094"
+    },
+    {
+      "ref_product_id": "7739",
+      "ref_image_path": "data\\fashion-dataset\\images\\7739.jpg",
+      "ref_attrs": {
+        "articleType": "Caps",
+        "gender": "Unisex",
+        "baseColour": "Grey"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Caps",
+        "gender": "Unisex",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "đổi sang màu xanh dương",
+      "gt_product_ids": [
+        "25715",
+        "22636",
+        "44622"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_095"
+    },
+    {
+      "ref_product_id": "51698",
+      "ref_image_path": "data\\fashion-dataset\\images\\51698.jpg",
+      "ref_attrs": {
+        "articleType": "Sunglasses",
+        "gender": "Unisex",
+        "baseColour": "Grey"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Sunglasses",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "mẫu tương tự màu đen",
+      "gt_product_ids": [
+        "38190",
+        "28278",
+        "58531",
+        "38234",
+        "16096",
+        "8625",
+        "38227"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_096"
+    },
+    {
+      "ref_product_id": "35654",
+      "ref_image_path": "data\\fashion-dataset\\images\\35654.jpg",
+      "ref_attrs": {
+        "articleType": "Formal Shoes",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Brown",
+      "target_attrs": {
+        "articleType": "Formal Shoes",
+        "gender": "Men",
+        "baseColour": "Brown"
+      },
+      "modifier_vi": "chuyển sang màu nâu",
+      "gt_product_ids": [
+        "10294",
+        "21103",
+        "16151",
+        "12477",
+        "50420",
+        "50419",
+        "2638",
+        "45612",
+        "33694",
+        "16175",
+        "11903"
+      ],
+      "n_gt": 11,
+      "source": "catalog_attributes",
+      "id": "cir_test_097"
+    },
+    {
+      "ref_product_id": "3481",
+      "ref_image_path": "data\\fashion-dataset\\images\\3481.jpg",
+      "ref_attrs": {
+        "articleType": "Track Pants",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Grey",
+      "target_attrs": {
+        "articleType": "Track Pants",
+        "gender": "Men",
+        "baseColour": "Grey"
+      },
+      "modifier_vi": "đổi sang màu xám",
+      "gt_product_ids": [
+        "26317",
+        "26260",
+        "26256"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_098"
+    },
+    {
+      "ref_product_id": "52441",
+      "ref_image_path": "data\\fashion-dataset\\images\\52441.jpg",
+      "ref_attrs": {
+        "articleType": "Nightdress",
+        "gender": "Women",
+        "baseColour": "Pink"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Off White",
+      "target_attrs": {
+        "articleType": "Nightdress",
+        "gender": "Women",
+        "baseColour": "Off White"
+      },
+      "modifier_vi": "chuyển sang màu trắng ngà",
+      "gt_product_ids": [
+        "52361",
+        "52403",
+        "52362"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_099"
+    },
+    {
+      "ref_product_id": "15004",
+      "ref_image_path": "data\\fashion-dataset\\images\\15004.jpg",
+      "ref_attrs": {
+        "articleType": "Jackets",
+        "gender": "Men",
+        "baseColour": "Grey"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Red",
+      "target_attrs": {
+        "articleType": "Jackets",
+        "gender": "Men",
+        "baseColour": "Red"
+      },
+      "modifier_vi": "chuyển sang màu đỏ",
+      "gt_product_ids": [
+        "7686",
+        "15626",
+        "7769"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_100"
+    },
+    {
+      "ref_product_id": "19394",
+      "ref_image_path": "data\\fashion-dataset\\images\\19394.jpg",
+      "ref_attrs": {
+        "articleType": "Jackets",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Red",
+      "target_attrs": {
+        "articleType": "Jackets",
+        "gender": "Men",
+        "baseColour": "Red"
+      },
+      "modifier_vi": "đổi sang màu đỏ",
+      "gt_product_ids": [
+        "7686",
+        "15626",
+        "7769"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_101"
+    },
+    {
+      "ref_product_id": "52165",
+      "ref_image_path": "data\\fashion-dataset\\images\\52165.jpg",
+      "ref_attrs": {
+        "articleType": "Pendant",
+        "gender": "Women",
+        "baseColour": "White"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Silver",
+      "target_attrs": {
+        "articleType": "Pendant",
+        "gender": "Women",
+        "baseColour": "Silver"
+      },
+      "modifier_vi": "đổi sang màu bạc",
+      "gt_product_ids": [
+        "48788",
+        "59512",
+        "48785"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_102"
+    },
+    {
+      "ref_product_id": "10294",
+      "ref_image_path": "data\\fashion-dataset\\images\\10294.jpg",
+      "ref_attrs": {
+        "articleType": "Formal Shoes",
+        "gender": "Men",
+        "baseColour": "Brown"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Formal Shoes",
+        "gender": "Men",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "chuyển sang màu đen",
+      "gt_product_ids": [
+        "44736",
+        "35654",
+        "24685"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_103"
+    },
+    {
+      "ref_product_id": "52303",
+      "ref_image_path": "data\\fashion-dataset\\images\\52303.jpg",
+      "ref_attrs": {
+        "articleType": "Pendant",
+        "gender": "Women",
+        "baseColour": "Red"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Silver",
+      "target_attrs": {
+        "articleType": "Pendant",
+        "gender": "Women",
+        "baseColour": "Silver"
+      },
+      "modifier_vi": "mẫu tương tự màu bạc",
+      "gt_product_ids": [
+        "48788",
+        "59512",
+        "48785"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_104"
+    },
+    {
+      "ref_product_id": "43225",
+      "ref_image_path": "data\\fashion-dataset\\images\\43225.jpg",
+      "ref_attrs": {
+        "articleType": "Capris",
+        "gender": "Women",
+        "baseColour": "Beige"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Capris",
+        "gender": "Women",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "đổi sang màu xanh dương",
+      "gt_product_ids": [
+        "32637",
+        "57218",
+        "10719"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_105"
+    },
+    {
+      "ref_product_id": "16631",
+      "ref_image_path": "data\\fashion-dataset\\images\\16631.jpg",
+      "ref_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "Charcoal"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu tương tự màu xanh dương",
+      "gt_product_ids": [
+        "32969",
+        "31036",
+        "19801",
+        "9557",
+        "44338",
+        "7520",
+        "10022",
+        "23057",
+        "7011",
+        "9988",
+        "6926",
+        "38557",
+        "5826",
+        "2207"
+      ],
+      "n_gt": 14,
+      "source": "catalog_attributes",
+      "id": "cir_test_106"
+    },
+    {
+      "ref_product_id": "2936",
+      "ref_image_path": "data\\fashion-dataset\\images\\2936.jpg",
+      "ref_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Women",
+        "baseColour": "Maroon"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Green",
+      "target_attrs": {
+        "articleType": "Tshirts",
+        "gender": "Women",
+        "baseColour": "Green"
+      },
+      "modifier_vi": "chuyển sang màu xanh lá",
+      "gt_product_ids": [
+        "9833",
+        "40120",
+        "2269",
+        "2266",
+        "31789",
+        "31291",
+        "19610"
+      ],
+      "n_gt": 7,
+      "source": "catalog_attributes",
+      "id": "cir_test_107"
+    },
+    {
+      "ref_product_id": "37970",
+      "ref_image_path": "data\\fashion-dataset\\images\\37970.jpg",
+      "ref_attrs": {
+        "articleType": "Heels",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Silver",
+      "target_attrs": {
+        "articleType": "Heels",
+        "gender": "Women",
+        "baseColour": "Silver"
+      },
+      "modifier_vi": "mẫu tương tự màu bạc",
+      "gt_product_ids": [
+        "2900",
+        "41739",
+        "19019"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_108"
+    },
+    {
+      "ref_product_id": "50242",
+      "ref_image_path": "data\\fashion-dataset\\images\\50242.jpg",
+      "ref_attrs": {
+        "articleType": "Handbags",
+        "gender": "Women",
+        "baseColour": "Orange"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Yellow",
+      "target_attrs": {
+        "articleType": "Handbags",
+        "gender": "Women",
+        "baseColour": "Yellow"
+      },
+      "modifier_vi": "chuyển sang màu vàng",
+      "gt_product_ids": [
+        "58182",
+        "51934",
+        "34562"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_109"
+    },
+    {
+      "ref_product_id": "13661",
+      "ref_image_path": "data\\fashion-dataset\\images\\13661.jpg",
+      "ref_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "White"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Blue",
+      "target_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Blue"
+      },
+      "modifier_vi": "mẫu tương tự màu xanh dương",
+      "gt_product_ids": [
+        "51408",
+        "9256",
+        "51431",
+        "13733",
+        "31661",
+        "59305",
+        "37787",
+        "11083",
+        "33059",
+        "12177",
+        "12047",
+        "41392",
+        "17172",
+        "41598",
+        "33064",
+        "7177"
+      ],
+      "n_gt": 16,
+      "source": "catalog_attributes",
+      "id": "cir_test_110"
+    },
+    {
+      "ref_product_id": "18742",
+      "ref_image_path": "data\\fashion-dataset\\images\\18742.jpg",
+      "ref_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "Brown"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Red",
+      "target_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "Red"
+      },
+      "modifier_vi": "mẫu tương tự màu đỏ",
+      "gt_product_ids": [
+        "20127",
+        "57104",
+        "10506"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_111"
+    },
+    {
+      "ref_product_id": "43488",
+      "ref_image_path": "data\\fashion-dataset\\images\\43488.jpg",
+      "ref_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Beige"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Grey",
+      "target_attrs": {
+        "articleType": "Shirts",
+        "gender": "Men",
+        "baseColour": "Grey"
+      },
+      "modifier_vi": "đổi sang màu xám",
+      "gt_product_ids": [
+        "19721",
+        "19696",
+        "33326",
+        "24285"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_112"
+    },
+    {
+      "ref_product_id": "17711",
+      "ref_image_path": "data\\fashion-dataset\\images\\17711.jpg",
+      "ref_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Unisex",
+        "baseColour": "Beige"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Unisex",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang màu đen",
+      "gt_product_ids": [
+        "19903",
+        "7813",
+        "15882"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_113"
+    },
+    {
+      "ref_product_id": "54991",
+      "ref_image_path": "data\\fashion-dataset\\images\\54991.jpg",
+      "ref_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "Peach"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Red",
+      "target_attrs": {
+        "articleType": "Tops",
+        "gender": "Women",
+        "baseColour": "Red"
+      },
+      "modifier_vi": "chuyển sang màu đỏ",
+      "gt_product_ids": [
+        "20127",
+        "57104",
+        "10506"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_114"
+    },
+    {
+      "ref_product_id": "35803",
+      "ref_image_path": "data\\fashion-dataset\\images\\35803.jpg",
+      "ref_attrs": {
+        "articleType": "Heels",
+        "gender": "Women",
+        "baseColour": "Tan"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Black",
+      "target_attrs": {
+        "articleType": "Heels",
+        "gender": "Women",
+        "baseColour": "Black"
+      },
+      "modifier_vi": "đổi sang màu đen",
+      "gt_product_ids": [
+        "59759",
+        "47569",
+        "37970",
+        "32859"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_115"
+    },
+    {
+      "ref_product_id": "39478",
+      "ref_image_path": "data\\fashion-dataset\\images\\39478.jpg",
+      "ref_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Women",
+        "baseColour": "Pink"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Purple",
+      "target_attrs": {
+        "articleType": "Kurtas",
+        "gender": "Women",
+        "baseColour": "Purple"
+      },
+      "modifier_vi": "chuyển sang màu tím",
+      "gt_product_ids": [
+        "12131",
+        "21906",
+        "21918",
+        "12082",
+        "22053",
+        "58689"
+      ],
+      "n_gt": 6,
+      "source": "catalog_attributes",
+      "id": "cir_test_116"
+    },
+    {
+      "ref_product_id": "45268",
+      "ref_image_path": "data\\fashion-dataset\\images\\45268.jpg",
+      "ref_attrs": {
+        "articleType": "Watches",
+        "gender": "Men",
+        "baseColour": "Orange"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Cream",
+      "target_attrs": {
+        "articleType": "Watches",
+        "gender": "Men",
+        "baseColour": "Cream"
+      },
+      "modifier_vi": "đổi sang màu kem",
+      "gt_product_ids": [
+        "40517",
+        "46734",
+        "40515"
+      ],
+      "n_gt": 3,
+      "source": "catalog_attributes",
+      "id": "cir_test_117"
+    },
+    {
+      "ref_product_id": "34846",
+      "ref_image_path": "data\\fashion-dataset\\images\\34846.jpg",
+      "ref_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Navy Blue"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Silver",
+      "target_attrs": {
+        "articleType": "Sports Shoes",
+        "gender": "Men",
+        "baseColour": "Silver"
+      },
+      "modifier_vi": "chuyển sang màu bạc",
+      "gt_product_ids": [
+        "13180",
+        "39013",
+        "4479",
+        "42181",
+        "4471"
+      ],
+      "n_gt": 5,
+      "source": "catalog_attributes",
+      "id": "cir_test_118"
+    },
+    {
+      "ref_product_id": "2832",
+      "ref_image_path": "data\\fashion-dataset\\images\\2832.jpg",
+      "ref_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Men",
+        "baseColour": "Maroon"
+      },
+      "changed_attr": "baseColour",
+      "target_attr_value": "Red",
+      "target_attrs": {
+        "articleType": "Casual Shoes",
+        "gender": "Men",
+        "baseColour": "Red"
+      },
+      "modifier_vi": "đổi sang màu đỏ",
+      "gt_product_ids": [
+        "22253",
+        "6370",
+        "38542",
+        "2501"
+      ],
+      "n_gt": 4,
+      "source": "catalog_attributes",
+      "id": "cir_test_119"
+    }
+  ]
+}

@@ -34,7 +34,7 @@ paths:
  
 # ---------------------------------------------------------------- Quyền ghi (Luật 2, 3)
 safety:
-  allowed_write: ["src/", "app/", "reports/", "eval/", "index/", "data/catalog/", "data/_quarantine/", "config.yaml", "README_run.md"]
+  allowed_write: ["src/", "app/", "reports/", "eval/", "index/", "data/catalog/", "data/_quarantine/", "scripts/", "config.yaml", "README_run.md"]
   read_only: ["notebooks/", "docs/", "data/checkpoints_siglip-vit/"]
   never_overwrite_existing: ["index_v*/", "data/catalog/catalog.parquet"]
   permanent_delete: false                  # chỉ chuyển vào quarantine + ghi log

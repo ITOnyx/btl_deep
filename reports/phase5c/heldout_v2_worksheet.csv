@@ -1,0 +1,243 @@
+slot_kind,spec_cluster_id,articleType,gender,baseColour,n_relevant,is_thin_slot,usage_dist,season_dist,usage_5_70pct,season_5_70pct,has_usage_season_5_70pct
+2_slot (articleType+gender),Belts__Women__,Belts,Women,,15,True,"{""Casual"": 15}","{""Summer"": 8, ""Winter"": 7}",,Summer:8/15(53%); Winter:7/15(47%),True
+1_slot (articleType),Dresses__None__,Dresses,null,,15,True,"{""Casual"": 15}","{""Summer"": 9, ""Fall"": 6}",,Summer:9/15(60%); Fall:6/15(40%),True
+2_slot (articleType+baseColour),Shirts__None__Purple,Shirts,null,Purple,15,True,"{""Formal"": 7, ""Casual"": 8}","{""Fall"": 10, ""Summer"": 4, ""Winter"": 1}",Casual:8/15(53%); Formal:7/15(47%),Fall:10/15(67%); Summer:4/15(27%); Winter:1/15(7%),True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Grey,Tshirts,Men,Grey,15,True,"{""Casual"": 12, ""Sports"": 3}","{""Summer"": 9, ""Fall"": 5, ""Winter"": 1}",Sports:3/15(20%),Summer:9/15(60%); Fall:5/15(33%); Winter:1/15(7%),True
+2_slot (articleType+gender),Belts__Men__,Belts,Men,,14,True,"{""Casual"": 13, ""Formal"": 1}","{""Summer"": 9, ""Winter"": 4, ""Fall"": 1}",Formal:1/14(7%),Summer:9/14(64%); Winter:4/14(29%); Fall:1/14(7%),True
+2_slot (articleType+gender),Formal Shoes__Men__,Formal Shoes,Men,,14,True,"{""Formal"": 13, ""Smart Casual"": 1}","{""Fall"": 5, ""Spring"": 1, ""Summer"": 6, ""Winter"": 2}",Smart Casual:1/14(7%),Summer:6/14(43%); Fall:5/14(36%); Winter:2/14(14%); Spring:1/14(7%),True
+1_slot (articleType),Formal Shoes__None__,Formal Shoes,null,,14,True,"{""Formal"": 13, ""Smart Casual"": 1}","{""Fall"": 5, ""Spring"": 1, ""Summer"": 6, ""Winter"": 2}",Smart Casual:1/14(7%),Summer:6/14(43%); Fall:5/14(36%); Winter:2/14(14%); Spring:1/14(7%),True
+1_slot (articleType),Sarees__None__,Sarees,null,,14,True,"{""Ethnic"": 14}","{""Summer"": 10, ""Fall"": 4}",,Fall:4/14(29%),True
+2_slot (articleType+gender),Sarees__Women__,Sarees,Women,,14,True,"{""Ethnic"": 14}","{""Summer"": 10, ""Fall"": 4}",,Fall:4/14(29%),True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Blue,Tshirts,Men,Blue,14,True,"{""Casual"": 8, ""Sports"": 6}","{""Summer"": 8, ""Fall"": 6}",Casual:8/14(57%); Sports:6/14(43%),Summer:8/14(57%); Fall:6/14(43%),True
+3_slot (articleType+gender+baseColour),Tshirts__Men__White,Tshirts,Men,White,14,True,"{""Casual"": 11, ""Sports"": 3}","{""Summer"": 8, ""Fall"": 6}",Sports:3/14(21%),Summer:8/14(57%); Fall:6/14(43%),True
+2_slot (articleType+baseColour),Tshirts__None__Yellow,Tshirts,null,Yellow,14,True,"{""Casual"": 14}","{""Fall"": 5, ""Summer"": 9}",,Summer:9/14(64%); Fall:5/14(36%),True
+3_slot (articleType+gender+baseColour),Watches__Men__Black,Watches,Men,Black,14,True,"{""Casual"": 13, ""Sports"": 1}","{""Winter"": 14}",Sports:1/14(7%),,True
+2_slot (articleType+baseColour),Watches__None__Silver,Watches,null,Silver,14,True,"{""Casual"": 13, ""Sports"": 1}","{""Winter"": 14}",Sports:1/14(7%),,True
+2_slot (articleType+baseColour),Casual Shoes__None__Black,Casual Shoes,null,Black,13,True,"{""Casual"": 13}","{""Fall"": 9, ""Summer"": 2, ""Spring"": 1, ""Winter"": 1}",,Fall:9/13(69%); Summer:2/13(15%); Spring:1/13(8%); Winter:1/13(8%),True
+2_slot (articleType+gender),Dresses__Women__,Dresses,Women,,13,True,"{""Casual"": 13}","{""Summer"": 7, ""Fall"": 6}",,Summer:7/13(54%); Fall:6/13(46%),True
+2_slot (articleType+baseColour),Jeans__None__Blue,Jeans,null,Blue,13,True,"{""Casual"": 13}","{""Summer"": 8, ""Fall"": 5}",,Summer:8/13(62%); Fall:5/13(38%),True
+3_slot (articleType+gender+baseColour),Shirts__Men__Purple,Shirts,Men,Purple,13,True,"{""Formal"": 6, ""Casual"": 7}","{""Fall"": 10, ""Summer"": 2, ""Winter"": 1}",Casual:7/13(54%); Formal:6/13(46%),Summer:2/13(15%); Winter:1/13(8%),True
+2_slot (articleType+baseColour),Tshirts__None__Navy Blue,Tshirts,null,Navy Blue,13,True,"{""Sports"": 1, ""Casual"": 12}","{""Fall"": 3, ""Summer"": 10}",Sports:1/13(8%),Fall:3/13(23%),True
+2_slot (articleType+gender),Briefs__Women__,Briefs,Women,,12,True,"{""Casual"": 12}","{""Summer"": 7, ""Winter"": 5}",,Summer:7/12(58%); Winter:5/12(42%),True
+2_slot (articleType+baseColour),Casual Shoes__None__Red,Casual Shoes,null,Red,12,True,"{""Casual"": 12}","{""Summer"": 7, ""Fall"": 3, ""Spring"": 1, ""Winter"": 1}",,Summer:7/12(58%); Fall:3/12(25%); Spring:1/12(8%); Winter:1/12(8%),True
+1_slot (articleType),Earrings__None__,Earrings,null,,12,True,"{""Casual"": 7, ""Ethnic"": 5}","{""Fall"": 4, ""Summer"": 6, ""Winter"": 2}",Casual:7/12(58%); Ethnic:5/12(42%),Summer:6/12(50%); Fall:4/12(33%); Winter:2/12(17%),True
+2_slot (articleType+gender),Earrings__Women__,Earrings,Women,,12,True,"{""Casual"": 7, ""Ethnic"": 5}","{""Fall"": 4, ""Summer"": 6, ""Winter"": 2}",Casual:7/12(58%); Ethnic:5/12(42%),Summer:6/12(50%); Fall:4/12(33%); Winter:2/12(17%),True
+1_slot (articleType),Trousers__None__,Trousers,null,,12,True,"{""Casual"": 9, ""Formal"": 3}","{""Summer"": 7, ""Fall"": 5}",Formal:3/12(25%),Summer:7/12(58%); Fall:5/12(42%),True
+2_slot (articleType+gender),Wallets__Men__,Wallets,Men,,12,True,"{""Casual"": 12}","{""Summer"": 6, ""Winter"": 5, ""Fall"": 1}",,Summer:6/12(50%); Winter:5/12(42%); Fall:1/12(8%),True
+3_slot (articleType+gender+baseColour),Watches__Men__White,Watches,Men,White,12,True,"{""Casual"": 11, ""Sports"": 1}","{""Winter"": 12}",Sports:1/12(8%),,True
+3_slot (articleType+gender+baseColour),Formal Shoes__Men__Brown,Formal Shoes,Men,Brown,11,True,"{""Formal"": 10, ""Smart Casual"": 1}","{""Fall"": 5, ""Spring"": 1, ""Summer"": 4, ""Winter"": 1}",Smart Casual:1/11(9%),Fall:5/11(45%); Summer:4/11(36%); Spring:1/11(9%); Winter:1/11(9%),True
+2_slot (articleType+baseColour),Formal Shoes__None__Brown,Formal Shoes,null,Brown,11,True,"{""Formal"": 10, ""Smart Casual"": 1}","{""Fall"": 5, ""Spring"": 1, ""Summer"": 4, ""Winter"": 1}",Smart Casual:1/11(9%),Fall:5/11(45%); Summer:4/11(36%); Spring:1/11(9%); Winter:1/11(9%),True
+2_slot (articleType+gender),Jeans__Men__,Jeans,Men,,11,True,"{""Casual"": 11}","{""Summer"": 8, ""Fall"": 3}",,Fall:3/11(27%),True
+2_slot (articleType+baseColour),Tshirts__None__Purple,Tshirts,null,Purple,11,True,"{""Casual"": 9, ""Sports"": 2}","{""Summer"": 9, ""Fall"": 2}",Sports:2/11(18%),Fall:2/11(18%),True
+2_slot (articleType+baseColour),Wallets__None__Black,Wallets,null,Black,11,True,"{""Casual"": 11}","{""Summer"": 7, ""Winter"": 3, ""Fall"": 1}",,Summer:7/11(64%); Winter:3/11(27%); Fall:1/11(9%),True
+1_slot (articleType),Caps__None__,Caps,null,,10,True,"{""Sports"": 2, ""Casual"": 8}","{""Summer"": 4, ""Fall"": 4, ""Winter"": 1, ""Spring"": 1}",Sports:2/10(20%),Summer:4/10(40%); Fall:4/10(40%); Winter:1/10(10%); Spring:1/10(10%),True
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Red,Casual Shoes,Men,Red,10,True,"{""Casual"": 10}","{""Summer"": 7, ""Fall"": 2, ""Spring"": 1}",,Summer:7/10(70%); Fall:2/10(20%); Spring:1/10(10%),True
+2_slot (articleType+baseColour),Casual Shoes__None__Brown,Casual Shoes,null,Brown,10,True,"{""Casual"": 10}","{""Winter"": 2, ""Summer"": 5, ""Fall"": 2, ""Spring"": 1}",,Summer:5/10(50%); Winter:2/10(20%); Fall:2/10(20%); Spring:1/10(10%),True
+2_slot (articleType+baseColour),Casual Shoes__None__White,Casual Shoes,null,White,10,True,"{""Casual"": 10}","{""Summer"": 5, ""Spring"": 1, ""Fall"": 4}",,Summer:5/10(50%); Fall:4/10(40%); Spring:1/10(10%),True
+1_slot (articleType),Clutches__None__,Clutches,null,,10,True,"{""Casual"": 10}","{""Summer"": 8, ""Fall"": 2}",,Fall:2/10(20%),True
+2_slot (articleType+gender),Clutches__Women__,Clutches,Women,,10,True,"{""Casual"": 10}","{""Summer"": 8, ""Fall"": 2}",,Fall:2/10(20%),True
+2_slot (articleType+baseColour),Shirts__None__Green,Shirts,null,Green,10,True,"{""Casual"": 7, ""Formal"": 3}","{""Summer"": 5, ""Fall"": 5}",Casual:7/10(70%); Formal:3/10(30%),Summer:5/10(50%); Fall:5/10(50%),True
+2_slot (articleType+baseColour),Sports Shoes__None__White,Sports Shoes,null,White,10,True,"{""Sports"": 10}","{""Summer"": 7, ""Fall"": 3}",,Summer:7/10(70%); Fall:3/10(30%),True
+1_slot (articleType),Sweatshirts__None__,Sweatshirts,null,,10,True,"{""Casual"": 9, ""Sports"": 1}","{""Fall"": 9, ""Summer"": 1}",Sports:1/10(10%),Summer:1/10(10%),True
+2_slot (articleType+baseColour),Tops__None__Pink,Tops,null,Pink,10,True,"{""Casual"": 9, ""Ethnic"": 1}","{""Summer"": 9, ""Fall"": 1}",Ethnic:1/10(10%),Fall:1/10(10%),True
+3_slot (articleType+gender+baseColour),Tshirts__Women__Black,Tshirts,Women,Black,10,True,"{""Casual"": 7, ""Sports"": 3}","{""Summer"": 7, ""Fall"": 3}",Casual:7/10(70%); Sports:3/10(30%),Summer:7/10(70%); Fall:3/10(30%),True
+2_slot (articleType+baseColour),Backpacks__None__Blue,Backpacks,null,Blue,9,True,"{""Casual"": 7, ""Sports"": 2}","{""Winter"": 1, ""Fall"": 1, ""Summer"": 6, ""Spring"": 1}",Sports:2/9(22%),Summer:6/9(67%); Winter:1/9(11%); Fall:1/9(11%); Spring:1/9(11%),True
+3_slot (articleType+gender+baseColour),Backpacks__Unisex__Blue,Backpacks,Unisex,Blue,9,True,"{""Casual"": 7, ""Sports"": 2}","{""Winter"": 1, ""Fall"": 1, ""Summer"": 6, ""Spring"": 1}",Sports:2/9(22%),Summer:6/9(67%); Winter:1/9(11%); Fall:1/9(11%); Spring:1/9(11%),True
+2_slot (articleType+gender),Caps__Men__,Caps,Men,,9,True,"{""Sports"": 2, ""Casual"": 7}","{""Summer"": 4, ""Fall"": 4, ""Spring"": 1}",Sports:2/9(22%),Summer:4/9(44%); Fall:4/9(44%); Spring:1/9(11%),True
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Black,Casual Shoes,Men,Black,9,True,"{""Casual"": 9}","{""Fall"": 5, ""Summer"": 2, ""Spring"": 1, ""Winter"": 1}",,Fall:5/9(56%); Summer:2/9(22%); Spring:1/9(11%); Winter:1/9(11%),True
+2_slot (articleType+gender),Flip Flops__Unisex__,Flip Flops,Unisex,,9,True,"{""Casual"": 9}","{""Summer"": 3, ""Fall"": 4, ""Winter"": 1, ""Spring"": 1}",,Fall:4/9(44%); Summer:3/9(33%); Winter:1/9(11%); Spring:1/9(11%),True
+3_slot (articleType+gender+baseColour),Jeans__Men__Blue,Jeans,Men,Blue,9,True,"{""Casual"": 9}","{""Summer"": 7, ""Fall"": 2}",,Fall:2/9(22%),True
+3_slot (articleType+gender+baseColour),Shirts__Men__Green,Shirts,Men,Green,9,True,"{""Casual"": 6, ""Formal"": 3}","{""Summer"": 5, ""Fall"": 4}",Casual:6/9(67%); Formal:3/9(33%),Summer:5/9(56%); Fall:4/9(44%),True
+2_slot (articleType+gender),Shirts__Women__,Shirts,Women,,9,True,"{""Casual"": 8, ""Formal"": 1}","{""Summer"": 4, ""Fall"": 5}",Formal:1/9(11%),Fall:5/9(56%); Summer:4/9(44%),True
+2_slot (articleType+gender),Shorts__Men__,Shorts,Men,,9,True,"{""Casual"": 6, ""Sports"": 3}","{""Fall"": 4, ""Summer"": 4, ""Winter"": 1}",Casual:6/9(67%); Sports:3/9(33%),Fall:4/9(44%); Summer:4/9(44%); Winter:1/9(11%),True
+3_slot (articleType+gender+baseColour),Sports Shoes__Men__White,Sports Shoes,Men,White,9,True,"{""Sports"": 9}","{""Summer"": 7, ""Fall"": 2}",,Fall:2/9(22%),True
+2_slot (articleType+baseColour),Sports Shoes__None__Black,Sports Shoes,null,Black,9,True,"{""Sports"": 9}","{""Summer"": 4, ""Fall"": 5}",,Fall:5/9(56%); Summer:4/9(44%),True
+1_slot (articleType),Sweaters__None__,Sweaters,null,,9,True,"{""Casual"": 8, ""Sports"": 1}","{""Fall"": 9}",Sports:1/9(11%),,True
+2_slot (articleType+baseColour),Tops__None__Black,Tops,null,Black,9,True,"{""Casual"": 8, ""Ethnic"": 1}","{""Fall"": 4, ""Summer"": 5}",Ethnic:1/9(11%),Summer:5/9(56%); Fall:4/9(44%),True
+3_slot (articleType+gender+baseColour),Tops__Women__Black,Tops,Women,Black,9,True,"{""Casual"": 8, ""Ethnic"": 1}","{""Fall"": 4, ""Summer"": 5}",Ethnic:1/9(11%),Summer:5/9(56%); Fall:4/9(44%),True
+3_slot (articleType+gender+baseColour),Tops__Women__Pink,Tops,Women,Pink,9,True,"{""Casual"": 8, ""Ethnic"": 1}","{""Summer"": 8, ""Fall"": 1}",Ethnic:1/9(11%),Fall:1/9(11%),True
+2_slot (articleType+gender),Trousers__Men__,Trousers,Men,,9,True,"{""Casual"": 7, ""Formal"": 2}","{""Summer"": 4, ""Fall"": 5}",Formal:2/9(22%),Fall:5/9(56%); Summer:4/9(44%),True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Green,Tshirts,Men,Green,9,True,"{""Casual"": 9}","{""Summer"": 4, ""Fall"": 5}",,Fall:5/9(56%); Summer:4/9(44%),True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Purple,Tshirts,Men,Purple,9,True,"{""Casual"": 8, ""Sports"": 1}","{""Summer"": 7, ""Fall"": 2}",Sports:1/9(11%),Fall:2/9(22%),True
+2_slot (articleType+baseColour),Tshirts__None__Pink,Tshirts,null,Pink,9,True,"{""Casual"": 8, ""Sports"": 1}","{""Summer"": 3, ""Fall"": 6}",Sports:1/9(11%),Fall:6/9(67%); Summer:3/9(33%),True
+3_slot (articleType+gender+baseColour),Watches__Women__Black,Watches,Women,Black,9,True,"{""Casual"": 8, ""Sports"": 1}","{""Winter"": 9}",Sports:1/9(11%),,True
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__White,Casual Shoes,Men,White,8,True,"{""Casual"": 8}","{""Summer"": 3, ""Spring"": 1, ""Fall"": 4}",,Fall:4/8(50%); Summer:3/8(38%); Spring:1/8(12%),True
+2_slot (articleType+baseColour),Handbags__None__Brown,Handbags,null,Brown,8,True,"{""Casual"": 8}","{""Winter"": 2, ""Summer"": 6}",,Winter:2/8(25%),True
+3_slot (articleType+gender+baseColour),Handbags__Women__Brown,Handbags,Women,Brown,8,True,"{""Casual"": 8}","{""Winter"": 2, ""Summer"": 6}",,Winter:2/8(25%),True
+2_slot (articleType+gender),Innerwear Vests__Men__,Innerwear Vests,Men,,8,True,"{""Casual"": 8}","{""Summer"": 7, ""Winter"": 1}",,Winter:1/8(12%),True
+1_slot (articleType),Innerwear Vests__None__,Innerwear Vests,null,,8,True,"{""Casual"": 8}","{""Summer"": 7, ""Winter"": 1}",,Winter:1/8(12%),True
+1_slot (articleType),Jackets__None__,Jackets,null,,8,True,"{""Sports"": 5, ""Casual"": 3}","{""Fall"": 5, ""Summer"": 2, ""Winter"": 1}",Sports:5/8(62%); Casual:3/8(38%),Fall:5/8(62%); Summer:2/8(25%); Winter:1/8(12%),True
+2_slot (articleType+baseColour),Kurtas__None__Green,Kurtas,null,Green,8,True,"{""Ethnic"": 8}","{""Summer"": 7, ""Fall"": 1}",,Fall:1/8(12%),True
+2_slot (articleType+baseColour),Kurtas__None__White,Kurtas,null,White,8,True,"{""Ethnic"": 8}","{""Fall"": 2, ""Summer"": 6}",,Fall:2/8(25%),True
+1_slot (articleType),Kurtis__None__,Kurtis,null,,8,True,"{""Ethnic"": 8}","{""Summer"": 5, ""Fall"": 3}",,Summer:5/8(62%); Fall:3/8(38%),True
+2_slot (articleType+gender),Kurtis__Women__,Kurtis,Women,,8,True,"{""Ethnic"": 8}","{""Summer"": 5, ""Fall"": 3}",,Summer:5/8(62%); Fall:3/8(38%),True
+2_slot (articleType+baseColour),Shirts__None__Red,Shirts,null,Red,8,True,"{""Formal"": 1, ""Casual"": 7}","{""Fall"": 4, ""Summer"": 3, ""Spring"": 1}",Formal:1/8(12%),Fall:4/8(50%); Summer:3/8(38%); Spring:1/8(12%),True
+3_slot (articleType+gender+baseColour),Sunglasses__Men__Black,Sunglasses,Men,Black,8,True,"{""Casual"": 8}","{""Winter"": 7, ""Summer"": 1}",,Summer:1/8(12%),True
+2_slot (articleType+baseColour),Sunglasses__None__Black,Sunglasses,null,Black,8,True,"{""Casual"": 8}","{""Winter"": 7, ""Summer"": 1}",,Summer:1/8(12%),True
+2_slot (articleType+gender),Sweatshirts__Men__,Sweatshirts,Men,,8,True,"{""Casual"": 7, ""Sports"": 1}","{""Fall"": 8}",Sports:1/8(12%),,True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Navy Blue,Tshirts,Men,Navy Blue,8,True,"{""Sports"": 1, ""Casual"": 7}","{""Fall"": 2, ""Summer"": 6}",Sports:1/8(12%),Fall:2/8(25%),True
+2_slot (articleType+baseColour),Tshirts__None__Orange,Tshirts,null,Orange,8,True,"{""Casual"": 6, ""Sports"": 2}","{""Summer"": 6, ""Fall"": 1, ""Spring"": 1}",Sports:2/8(25%),Fall:1/8(12%); Spring:1/8(12%),True
+1_slot (articleType),Tunics__None__,Tunics,null,,8,True,"{""Ethnic"": 2, ""Casual"": 6}","{""Fall"": 2, ""Summer"": 6}",Ethnic:2/8(25%),Fall:2/8(25%),True
+2_slot (articleType+gender),Caps__Women__,Caps,Women,,7,True,"{""Sports"": 2, ""Casual"": 5}","{""Summer"": 3, ""Fall"": 3, ""Winter"": 1}",Sports:2/7(29%),Summer:3/7(43%); Fall:3/7(43%); Winter:1/7(14%),True
+3_slot (articleType+gender+baseColour),Casual Shoes__Girls__Red,Casual Shoes,Girls,Red,7,True,"{""Casual"": 7}","{""Summer"": 4, ""Fall"": 1, ""Spring"": 1, ""Winter"": 1}",,Summer:4/7(57%); Fall:1/7(14%); Spring:1/7(14%); Winter:1/7(14%),True
+2_slot (articleType+baseColour),Casual Shoes__None__Navy Blue,Casual Shoes,null,Navy Blue,7,True,"{""Casual"": 7}","{""Spring"": 3, ""Fall"": 1, ""Summer"": 2, ""Winter"": 1}",,Spring:3/7(43%); Summer:2/7(29%); Fall:1/7(14%); Winter:1/7(14%),True
+3_slot (articleType+gender+baseColour),Casual Shoes__Women__Brown,Casual Shoes,Women,Brown,7,True,"{""Casual"": 7}","{""Winter"": 2, ""Summer"": 4, ""Spring"": 1}",,Summer:4/7(57%); Winter:2/7(29%); Spring:1/7(14%),True
+3_slot (articleType+gender+baseColour),Casual Shoes__Women__Red,Casual Shoes,Women,Red,7,True,"{""Casual"": 7}","{""Fall"": 2, ""Summer"": 4, ""Spring"": 1}",,Summer:4/7(57%); Fall:2/7(29%); Spring:1/7(14%),True
+2_slot (articleType+baseColour),Heels__None__Blue,Heels,null,Blue,7,True,"{""Casual"": 7}","{""Winter"": 6, ""Summer"": 1}",,Summer:1/7(14%),True
+3_slot (articleType+gender+baseColour),Heels__Women__Blue,Heels,Women,Blue,7,True,"{""Casual"": 7}","{""Winter"": 6, ""Summer"": 1}",,Summer:1/7(14%),True
+2_slot (articleType+gender),Jackets__Men__,Jackets,Men,,7,True,"{""Sports"": 5, ""Casual"": 2}","{""Fall"": 4, ""Summer"": 2, ""Winter"": 1}",Casual:2/7(29%),Fall:4/7(57%); Summer:2/7(29%); Winter:1/7(14%),True
+3_slot (articleType+gender+baseColour),Kurtas__Women__Green,Kurtas,Women,Green,7,True,"{""Ethnic"": 7}","{""Summer"": 6, ""Fall"": 1}",,Fall:1/7(14%),True
+3_slot (articleType+gender+baseColour),Kurtas__Women__White,Kurtas,Women,White,7,True,"{""Ethnic"": 7}","{""Fall"": 2, ""Summer"": 5}",,Fall:2/7(29%),True
+2_slot (articleType+gender),Sandals__Girls__,Sandals,Girls,,7,True,"{""Casual"": 7}","{""Summer"": 5, ""Winter"": 2}",,Winter:2/7(29%),True
+2_slot (articleType+baseColour),Sandals__None__Brown,Sandals,null,Brown,7,True,"{""Casual"": 7}","{""Summer"": 5, ""Winter"": 1, ""Fall"": 1}",,Winter:1/7(14%); Fall:1/7(14%),True
+3_slot (articleType+gender+baseColour),Shirts__Men__Black,Shirts,Men,Black,7,True,"{""Casual"": 6, ""Formal"": 1}","{""Summer"": 3, ""Fall"": 4}",Formal:1/7(14%),Fall:4/7(57%); Summer:3/7(43%),True
+3_slot (articleType+gender+baseColour),Shirts__Men__Red,Shirts,Men,Red,7,True,"{""Formal"": 1, ""Casual"": 6}","{""Fall"": 4, ""Summer"": 2, ""Spring"": 1}",Formal:1/7(14%),Fall:4/7(57%); Summer:2/7(29%); Spring:1/7(14%),True
+2_slot (articleType+baseColour),Shirts__None__Black,Shirts,null,Black,7,True,"{""Casual"": 6, ""Formal"": 1}","{""Summer"": 3, ""Fall"": 4}",Formal:1/7(14%),Fall:4/7(57%); Summer:3/7(43%),True
+2_slot (articleType+gender),Sports Shoes__Boys__,Sports Shoes,Boys,,7,True,"{""Sports"": 7}","{""Summer"": 4, ""Fall"": 2, ""Spring"": 1}",,Summer:4/7(57%); Fall:2/7(29%); Spring:1/7(14%),True
+2_slot (articleType+baseColour),Sports Shoes__None__Purple,Sports Shoes,null,Purple,7,True,"{""Sports"": 7}","{""Summer"": 4, ""Winter"": 1, ""Fall"": 2}",,Summer:4/7(57%); Fall:2/7(29%); Winter:1/7(14%),True
+2_slot (articleType+gender),Ties__Men__,Ties,Men,,7,True,"{""Formal"": 6, ""Casual"": 1}","{""Summer"": 6, ""Fall"": 1}",Casual:1/7(14%),Fall:1/7(14%),True
+1_slot (articleType),Ties__None__,Ties,null,,7,True,"{""Formal"": 6, ""Casual"": 1}","{""Summer"": 6, ""Fall"": 1}",Casual:1/7(14%),Fall:1/7(14%),True
+1_slot (articleType),Track Pants__None__,Track Pants,null,,7,True,"{""Sports"": 5, ""Casual"": 2}","{""Fall"": 3, ""Summer"": 4}",Casual:2/7(29%),Summer:4/7(57%); Fall:3/7(43%),True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Brown,Tshirts,Men,Brown,7,True,"{""Casual"": 7}","{""Fall"": 3, ""Summer"": 4}",,Summer:4/7(57%); Fall:3/7(43%),True
+2_slot (articleType+baseColour),Tshirts__None__Brown,Tshirts,null,Brown,7,True,"{""Casual"": 7}","{""Fall"": 3, ""Summer"": 4}",,Summer:4/7(57%); Fall:3/7(43%),True
+3_slot (articleType+gender+baseColour),Tshirts__Women__Green,Tshirts,Women,Green,7,True,"{""Casual"": 5, ""Sports"": 2}","{""Fall"": 3, ""Summer"": 4}",Sports:2/7(29%),Summer:4/7(57%); Fall:3/7(43%),True
+2_slot (articleType+gender),Tunics__Women__,Tunics,Women,,7,True,"{""Ethnic"": 2, ""Casual"": 5}","{""Fall"": 1, ""Summer"": 6}",Ethnic:2/7(29%),Fall:1/7(14%),True
+3_slot (articleType+gender+baseColour),Watches__Women__White,Watches,Women,White,7,True,"{""Casual"": 6, ""Sports"": 1}","{""Winter"": 7}",Sports:1/7(14%),,True
+2_slot (articleType+baseColour),Backpacks__None__Black,Backpacks,null,Black,6,True,"{""Casual"": 6}","{""Summer"": 3, ""Fall"": 3}",,Summer:3/6(50%); Fall:3/6(50%),True
+3_slot (articleType+gender+baseColour),Backpacks__Unisex__Black,Backpacks,Unisex,Black,6,True,"{""Casual"": 6}","{""Summer"": 3, ""Fall"": 3}",,Summer:3/6(50%); Fall:3/6(50%),True
+2_slot (articleType+gender),Caps__Unisex__,Caps,Unisex,,6,True,"{""Sports"": 2, ""Casual"": 4}","{""Summer"": 3, ""Fall"": 3}",Casual:4/6(67%); Sports:2/6(33%),Summer:3/6(50%); Fall:3/6(50%),True
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Brown,Casual Shoes,Men,Brown,6,True,"{""Casual"": 6}","{""Summer"": 4, ""Fall"": 2}",,Summer:4/6(67%); Fall:2/6(33%),True
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Navy Blue,Casual Shoes,Men,Navy Blue,6,True,"{""Casual"": 6}","{""Spring"": 3, ""Fall"": 1, ""Summer"": 2}",,Spring:3/6(50%); Summer:2/6(33%); Fall:1/6(17%),True
+3_slot (articleType+gender+baseColour),Casual Shoes__Unisex__Red,Casual Shoes,Unisex,Red,6,True,"{""Casual"": 6}","{""Summer"": 4, ""Fall"": 1, ""Spring"": 1}",,Summer:4/6(67%); Fall:1/6(17%); Spring:1/6(17%),True
+3_slot (articleType+gender+baseColour),Casual Shoes__Women__Black,Casual Shoes,Women,Black,6,True,"{""Casual"": 6}","{""Fall"": 5, ""Winter"": 1}",,Winter:1/6(17%),True
+2_slot (articleType+baseColour),Handbags__None__Black,Handbags,null,Black,6,True,"{""Casual"": 6}","{""Summer"": 3, ""Fall"": 1, ""Winter"": 2}",,Summer:3/6(50%); Winter:2/6(33%); Fall:1/6(17%),True
+3_slot (articleType+gender+baseColour),Handbags__Women__Black,Handbags,Women,Black,6,True,"{""Casual"": 6}","{""Summer"": 3, ""Fall"": 1, ""Winter"": 2}",,Summer:3/6(50%); Winter:2/6(33%); Fall:1/6(17%),True
+2_slot (articleType+gender),Jeans__Women__,Jeans,Women,,6,True,"{""Casual"": 6}","{""Summer"": 4, ""Fall"": 2}",,Summer:4/6(67%); Fall:2/6(33%),True
+2_slot (articleType+baseColour),Kurtas__None__Cream,Kurtas,null,Cream,6,True,"{""Ethnic"": 6}","{""Fall"": 3, ""Summer"": 3}",,Fall:3/6(50%); Summer:3/6(50%),True
+3_slot (articleType+gender+baseColour),Kurtas__Women__Cream,Kurtas,Women,Cream,6,True,"{""Ethnic"": 6}","{""Fall"": 3, ""Summer"": 3}",,Fall:3/6(50%); Summer:3/6(50%),True
+1_slot (articleType),Nightdress__None__,Nightdress,null,,6,True,"{""Casual"": 6}","{""Summer"": 1, ""Winter"": 5}",,Summer:1/6(17%),True
+2_slot (articleType+gender),Nightdress__Women__,Nightdress,Women,,6,True,"{""Casual"": 6}","{""Summer"": 1, ""Winter"": 5}",,Summer:1/6(17%),True
+1_slot (articleType),Pendant__None__,Pendant,null,,6,True,"{""Casual"": 6}","{""Summer"": 4, ""Winter"": 1, ""Fall"": 1}",,Summer:4/6(67%); Winter:1/6(17%); Fall:1/6(17%),True
+3_slot (articleType+gender+baseColour),Sandals__Men__Brown,Sandals,Men,Brown,6,True,"{""Casual"": 6}","{""Summer"": 4, ""Winter"": 1, ""Fall"": 1}",,Summer:4/6(67%); Winter:1/6(17%); Fall:1/6(17%),True
+2_slot (articleType+gender),Shorts__Women__,Shorts,Women,,6,True,"{""Sports"": 2, ""Casual"": 4}","{""Summer"": 4, ""Winter"": 1, ""Fall"": 1}",Casual:4/6(67%); Sports:2/6(33%),Summer:4/6(67%); Winter:1/6(17%); Fall:1/6(17%),True
+3_slot (articleType+gender+baseColour),Sports Shoes__Men__Black,Sports Shoes,Men,Black,6,True,"{""Sports"": 6}","{""Summer"": 3, ""Fall"": 3}",,Summer:3/6(50%); Fall:3/6(50%),True
+2_slot (articleType+baseColour),Sports Shoes__None__Silver,Sports Shoes,null,Silver,6,True,"{""Sports"": 6}","{""Fall"": 1, ""Summer"": 4, ""Spring"": 1}",,Summer:4/6(67%); Fall:1/6(17%); Spring:1/6(17%),True
+2_slot (articleType+gender),Sports Shoes__Unisex__,Sports Shoes,Unisex,,6,True,"{""Sports"": 6}","{""Summer"": 4, ""Fall"": 1, ""Spring"": 1}",,Summer:4/6(67%); Fall:1/6(17%); Spring:1/6(17%),True
+3_slot (articleType+gender+baseColour),Sports Shoes__Women__Purple,Sports Shoes,Women,Purple,6,True,"{""Sports"": 6}","{""Summer"": 3, ""Winter"": 1, ""Fall"": 2}",,Summer:3/6(50%); Fall:2/6(33%); Winter:1/6(17%),True
+3_slot (articleType+gender+baseColour),Tshirts__Women__Yellow,Tshirts,Women,Yellow,6,True,"{""Casual"": 6}","{""Fall"": 3, ""Summer"": 3}",,Fall:3/6(50%); Summer:3/6(50%),True
+3_slot (articleType+gender+baseColour),Wallets__Men__Black,Wallets,Men,Black,6,True,"{""Casual"": 6}","{""Summer"": 4, ""Winter"": 2}",,Summer:4/6(67%); Winter:2/6(33%),True
+2_slot (articleType+baseColour),Wallets__None__Brown,Wallets,null,Brown,6,True,"{""Casual"": 6}","{""Winter"": 4, ""Summer"": 1, ""Fall"": 1}",,Winter:4/6(67%); Summer:1/6(17%); Fall:1/6(17%),True
+3_slot (articleType+gender+baseColour),Watches__Men__Silver,Watches,Men,Silver,6,True,"{""Casual"": 5, ""Sports"": 1}","{""Winter"": 6}",Sports:1/6(17%),,True
+3_slot (articleType+gender+baseColour),Belts__Men__Black,Belts,Men,Black,5,True,"{""Casual"": 5}","{""Summer"": 3, ""Winter"": 2}",,Summer:3/5(60%); Winter:2/5(40%),True
+2_slot (articleType+baseColour),Belts__None__Black,Belts,null,Black,5,True,"{""Casual"": 5}","{""Summer"": 3, ""Winter"": 2}",,Summer:3/5(60%); Winter:2/5(40%),True
+2_slot (articleType+baseColour),Belts__None__Blue,Belts,null,Blue,5,True,"{""Casual"": 5}","{""Fall"": 1, ""Winter"": 2, ""Summer"": 2}",,Winter:2/5(40%); Summer:2/5(40%); Fall:1/5(20%),True
+1_slot (articleType),Capris__None__,Capris,null,,5,True,"{""Casual"": 4, ""Sports"": 1}","{""Fall"": 4, ""Summer"": 1}",Sports:1/5(20%),Summer:1/5(20%),True
+2_slot (articleType+gender),Capris__Women__,Capris,Women,,5,True,"{""Casual"": 4, ""Sports"": 1}","{""Fall"": 4, ""Summer"": 1}",Sports:1/5(20%),Summer:1/5(20%),True
+2_slot (articleType+baseColour),Casual Shoes__None__Beige,Casual Shoes,null,Beige,5,True,"{""Casual"": 5}","{""Summer"": 2, ""Fall"": 1, ""Spring"": 2}",,Summer:2/5(40%); Spring:2/5(40%); Fall:1/5(20%),True
+2_slot (articleType+baseColour),Handbags__None__Olive,Handbags,null,Olive,5,True,"{""Casual"": 5}","{""Summer"": 4, ""Fall"": 1}",,Fall:1/5(20%),True
+2_slot (articleType+baseColour),Handbags__None__Purple,Handbags,null,Purple,5,True,"{""Casual"": 5}","{""Summer"": 4, ""Winter"": 1}",,Winter:1/5(20%),True
+3_slot (articleType+gender+baseColour),Handbags__Women__Olive,Handbags,Women,Olive,5,True,"{""Casual"": 5}","{""Summer"": 4, ""Fall"": 1}",,Fall:1/5(20%),True
+3_slot (articleType+gender+baseColour),Handbags__Women__Purple,Handbags,Women,Purple,5,True,"{""Casual"": 5}","{""Summer"": 4, ""Winter"": 1}",,Winter:1/5(20%),True
+2_slot (articleType+baseColour),Heels__None__Red,Heels,null,Red,5,True,"{""Casual"": 5}","{""Summer"": 3, ""Winter"": 2}",,Summer:3/5(60%); Winter:2/5(40%),True
+3_slot (articleType+gender+baseColour),Heels__Women__Red,Heels,Women,Red,5,True,"{""Casual"": 5}","{""Summer"": 3, ""Winter"": 2}",,Summer:3/5(60%); Winter:2/5(40%),True
+2_slot (articleType+baseColour),Kurtas__None__Brown,Kurtas,null,Brown,5,True,"{""Ethnic"": 5}","{""Fall"": 3, ""Summer"": 2}",,Fall:3/5(60%); Summer:2/5(40%),True
+2_slot (articleType+baseColour),Kurtas__None__Maroon,Kurtas,null,Maroon,5,True,"{""Ethnic"": 5}","{""Fall"": 2, ""Summer"": 3}",,Summer:3/5(60%); Fall:2/5(40%),True
+3_slot (articleType+gender+baseColour),Kurtas__Women__Brown,Kurtas,Women,Brown,5,True,"{""Ethnic"": 5}","{""Fall"": 3, ""Summer"": 2}",,Fall:3/5(60%); Summer:2/5(40%),True
+3_slot (articleType+gender+baseColour),Kurtas__Women__Maroon,Kurtas,Women,Maroon,5,True,"{""Ethnic"": 5}","{""Fall"": 2, ""Summer"": 3}",,Summer:3/5(60%); Fall:2/5(40%),True
+2_slot (articleType+gender),Pendant__Women__,Pendant,Women,,5,True,"{""Casual"": 5}","{""Summer"": 3, ""Winter"": 1, ""Fall"": 1}",,Summer:3/5(60%); Winter:1/5(20%); Fall:1/5(20%),True
+3_slot (articleType+gender+baseColour),Sandals__Men__Red,Sandals,Men,Red,5,True,"{""Casual"": 5}","{""Fall"": 4, ""Summer"": 1}",,Summer:1/5(20%),True
+2_slot (articleType+baseColour),Sandals__None__Red,Sandals,null,Red,5,True,"{""Casual"": 5}","{""Fall"": 4, ""Summer"": 1}",,Summer:1/5(20%),True
+3_slot (articleType+gender+baseColour),Shirts__Men__Navy Blue,Shirts,Men,Navy Blue,5,True,"{""Casual"": 4, ""Formal"": 1}","{""Fall"": 4, ""Summer"": 1}",Formal:1/5(20%),Summer:1/5(20%),True
+2_slot (articleType+baseColour),Shirts__None__Navy Blue,Shirts,null,Navy Blue,5,True,"{""Casual"": 4, ""Formal"": 1}","{""Fall"": 4, ""Summer"": 1}",Formal:1/5(20%),Summer:1/5(20%),True
+2_slot (articleType+baseColour),Shorts__None__Black,Shorts,null,Black,5,True,"{""Sports"": 2, ""Casual"": 3}","{""Summer"": 2, ""Winter"": 2, ""Fall"": 1}",Casual:3/5(60%); Sports:2/5(40%),Summer:2/5(40%); Winter:2/5(40%); Fall:1/5(20%),True
+2_slot (articleType+baseColour),Socks__None__Black,Socks,null,Black,5,True,"{""Casual"": 5}","{""Summer"": 4, ""Fall"": 1}",,Fall:1/5(20%),True
+2_slot (articleType+gender),Socks__Women__,Socks,Women,,5,True,"{""Sports"": 1, ""Casual"": 4}","{""Fall"": 2, ""Summer"": 3}",Sports:1/5(20%),Summer:3/5(60%); Fall:2/5(40%),True
+3_slot (articleType+gender+baseColour),Sports Shoes__Men__Silver,Sports Shoes,Men,Silver,5,True,"{""Sports"": 5}","{""Fall"": 1, ""Summer"": 4}",,Fall:1/5(20%),True
+2_slot (articleType+baseColour),Sports Shoes__None__Grey,Sports Shoes,null,Grey,5,True,"{""Sports"": 5}","{""Fall"": 1, ""Summer"": 4}",,Fall:1/5(20%),True
+2_slot (articleType+gender),Track Pants__Men__,Track Pants,Men,,5,True,"{""Sports"": 4, ""Casual"": 1}","{""Fall"": 2, ""Summer"": 3}",Casual:1/5(20%),Summer:3/5(60%); Fall:2/5(40%),True
+2_slot (articleType+gender),Trunk__Men__,Trunk,Men,,5,True,"{""Casual"": 5}","{""Summer"": 4, ""Winter"": 1}",,Winter:1/5(20%),True
+1_slot (articleType),Trunk__None__,Trunk,null,,5,True,"{""Casual"": 5}","{""Summer"": 4, ""Winter"": 1}",,Winter:1/5(20%),True
+3_slot (articleType+gender+baseColour),Tshirts__Boys__Black,Tshirts,Boys,Black,5,True,"{""Casual"": 5}","{""Fall"": 1, ""Summer"": 4}",,Fall:1/5(20%),True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Yellow,Tshirts,Men,Yellow,5,True,"{""Casual"": 5}","{""Summer"": 4, ""Fall"": 1}",,Fall:1/5(20%),True
+3_slot (articleType+gender+baseColour),Tshirts__Women__Blue,Tshirts,Women,Blue,5,True,"{""Casual"": 5}","{""Fall"": 2, ""Summer"": 3}",,Summer:3/5(60%); Fall:2/5(40%),True
+3_slot (articleType+gender+baseColour),Tshirts__Women__White,Tshirts,Women,White,5,True,"{""Casual"": 4, ""Sports"": 1}","{""Summer"": 4, ""Fall"": 1}",Sports:1/5(20%),Fall:1/5(20%),True
+3_slot (articleType+gender+baseColour),Wallets__Women__Black,Wallets,Women,Black,5,True,"{""Casual"": 5}","{""Summer"": 3, ""Winter"": 1, ""Fall"": 1}",,Summer:3/5(60%); Winter:1/5(20%); Fall:1/5(20%),True
+2_slot (articleType+gender),Watches__Boys__,Watches,Boys,,5,True,"{""Casual"": 3, ""Sports"": 2}","{""Winter"": 5}",Casual:3/5(60%); Sports:2/5(40%),,True
+2_slot (articleType+gender),Watches__Girls__,Watches,Girls,,5,True,"{""Casual"": 3, ""Sports"": 2}","{""Winter"": 5}",Casual:3/5(60%); Sports:2/5(40%),,True
+1_slot (articleType),Tshirts__None__,Tshirts,null,,216,False,"{""Casual"": 182, ""Sports"": 34}","{""Summer"": 130, ""Fall"": 83, ""Winter"": 2, ""Spring"": 1}",Sports:34/216(16%),Summer:130/216(60%); Fall:83/216(38%),True
+2_slot (articleType+gender),Tshirts__Men__,Tshirts,Men,,140,False,"{""Casual"": 115, ""Sports"": 25}","{""Summer"": 81, ""Fall"": 56, ""Winter"": 2, ""Spring"": 1}",Sports:25/140(18%),Summer:81/140(58%); Fall:56/140(40%),True
+1_slot (articleType),Shirts__None__,Shirts,null,,101,False,"{""Casual"": 77, ""Formal"": 24}","{""Fall"": 62, ""Summer"": 36, ""Winter"": 2, ""Spring"": 1}",Formal:24/101(24%),Fall:62/101(61%); Summer:36/101(36%),True
+2_slot (articleType+gender),Shirts__Men__,Shirts,Men,,90,False,"{""Casual"": 67, ""Formal"": 23}","{""Fall"": 56, ""Summer"": 31, ""Winter"": 2, ""Spring"": 1}",Formal:23/90(26%),Fall:56/90(62%); Summer:31/90(34%),True
+1_slot (articleType),Casual Shoes__None__,Casual Shoes,null,,87,False,"{""Casual"": 87}","{""Summer"": 41, ""Fall"": 26, ""Winter"": 9, ""Spring"": 11}",,Summer:41/87(47%); Fall:26/87(30%); Spring:11/87(13%); Winter:9/87(10%),True
+2_slot (articleType+gender),Casual Shoes__Men__,Casual Shoes,Men,,67,False,"{""Casual"": 67}","{""Summer"": 35, ""Fall"": 21, ""Winter"": 2, ""Spring"": 9}",,Summer:35/67(52%); Fall:21/67(31%); Spring:9/67(13%),True
+1_slot (articleType),Kurtas__None__,Kurtas,null,,61,False,"{""Ethnic"": 61}","{""Fall"": 23, ""Summer"": 38}",,Summer:38/61(62%); Fall:23/61(38%),True
+1_slot (articleType),Handbags__None__,Handbags,null,,59,False,"{""Casual"": 59}","{""Summer"": 43, ""Winter"": 14, ""Fall"": 2}",,Winter:14/59(24%),True
+2_slot (articleType+gender),Handbags__Women__,Handbags,Women,,59,False,"{""Casual"": 59}","{""Summer"": 43, ""Winter"": 14, ""Fall"": 2}",,Winter:14/59(24%),True
+1_slot (articleType),Sports Shoes__None__,Sports Shoes,null,,59,False,"{""Sports"": 58, ""Casual"": 1}","{""Summer"": 37, ""Fall"": 18, ""Winter"": 1, ""Spring"": 3}",,Summer:37/59(63%); Fall:18/59(31%); Spring:3/59(5%),True
+2_slot (articleType+gender),Kurtas__Women__,Kurtas,Women,,58,False,"{""Ethnic"": 58}","{""Fall"": 23, ""Summer"": 35}",,Summer:35/58(60%); Fall:23/58(40%),True
+1_slot (articleType),Tops__None__,Tops,null,,55,False,"{""Casual"": 51, ""Formal"": 1, ""Sports"": 1, ""Ethnic"": 2}","{""Summer"": 32, ""Fall"": 23}",,Summer:32/55(58%); Fall:23/55(42%),True
+2_slot (articleType+gender),Tops__Women__,Tops,Women,,51,False,"{""Casual"": 47, ""Formal"": 1, ""Sports"": 1, ""Ethnic"": 2}","{""Summer"": 28, ""Fall"": 23}",,Summer:28/51(55%); Fall:23/51(45%),True
+2_slot (articleType+gender),Tshirts__Women__,Tshirts,Women,,50,False,"{""Casual"": 41, ""Sports"": 9}","{""Summer"": 34, ""Fall"": 16}",Sports:9/50(18%),Summer:34/50(68%); Fall:16/50(32%),True
+2_slot (articleType+gender),Watches__Men__,Watches,Men,,47,False,"{""Casual"": 44, ""Sports"": 3}","{""Winter"": 46, ""Summer"": 1}",Sports:3/47(6%),,True
+1_slot (articleType),Heels__None__,Heels,null,,41,False,"{""Casual"": 38, ""Ethnic"": 2, ""Formal"": 1}","{""Summer"": 7, ""Winter"": 32, ""Spring"": 1, ""Fall"": 1}",,Summer:7/41(17%),True
+2_slot (articleType+gender),Heels__Women__,Heels,Women,,41,False,"{""Casual"": 38, ""Ethnic"": 2, ""Formal"": 1}","{""Summer"": 7, ""Winter"": 32, ""Spring"": 1, ""Fall"": 1}",,Summer:7/41(17%),True
+2_slot (articleType+gender),Casual Shoes__Women__,Casual Shoes,Women,,39,False,"{""Casual"": 39}","{""Summer"": 18, ""Fall"": 11, ""Winter"": 5, ""Spring"": 5}",,Summer:18/39(46%); Fall:11/39(28%); Winter:5/39(13%); Spring:5/39(13%),True
+2_slot (articleType+gender),Sports Shoes__Men__,Sports Shoes,Men,,39,False,"{""Sports"": 38, ""Casual"": 1}","{""Fall"": 13, ""Summer"": 24, ""Spring"": 2}",,Summer:24/39(62%); Fall:13/39(33%); Spring:2/39(5%),True
+2_slot (articleType+gender),Watches__Women__,Watches,Women,,36,False,"{""Casual"": 34, ""Sports"": 2}","{""Winter"": 36}",Sports:2/36(6%),,True
+2_slot (articleType+baseColour),Tshirts__None__Black,Tshirts,null,Black,35,False,"{""Sports"": 7, ""Casual"": 28}","{""Fall"": 15, ""Summer"": 20}",Sports:7/35(20%),Summer:20/35(57%); Fall:15/35(43%),True
+1_slot (articleType),Wallets__None__,Wallets,null,,31,False,"{""Casual"": 31}","{""Winter"": 12, ""Summer"": 15, ""Fall"": 4}",,Summer:15/31(48%); Winter:12/31(39%); Fall:4/31(13%),True
+1_slot (articleType),Briefs__None__,Briefs,null,,29,False,"{""Casual"": 29}","{""Summer"": 23, ""Winter"": 6}",,Winter:6/29(21%),True
+1_slot (articleType),Flip Flops__None__,Flip Flops,null,,27,False,"{""Casual"": 26, ""Sports"": 1}","{""Summer"": 13, ""Fall"": 9, ""Winter"": 4, ""Spring"": 1}",,Summer:13/27(48%); Fall:9/27(33%); Winter:4/27(15%),True
+1_slot (articleType),Belts__None__,Belts,null,,26,False,"{""Casual"": 25, ""Formal"": 1}","{""Summer"": 17, ""Winter"": 8, ""Fall"": 1}",,Summer:17/26(65%); Winter:8/26(31%),True
+2_slot (articleType+gender),Casual Shoes__Boys__,Casual Shoes,Boys,,25,False,"{""Casual"": 25}","{""Fall"": 8, ""Summer"": 12, ""Spring"": 3, ""Winter"": 2}",,Summer:12/25(48%); Fall:8/25(32%); Spring:3/25(12%); Winter:2/25(8%),True
+2_slot (articleType+gender),Casual Shoes__Girls__,Casual Shoes,Girls,,25,False,"{""Casual"": 25}","{""Fall"": 7, ""Summer"": 12, ""Winter"": 3, ""Spring"": 3}",,Summer:12/25(48%); Fall:7/25(28%); Winter:3/25(12%); Spring:3/25(12%),True
+2_slot (articleType+gender),Sports Shoes__Women__,Sports Shoes,Women,,25,False,"{""Sports"": 25}","{""Summer"": 17, ""Winter"": 1, ""Fall"": 5, ""Spring"": 2}",,Summer:17/25(68%); Fall:5/25(20%); Spring:2/25(8%),True
+1_slot (articleType),Backpacks__None__,Backpacks,null,,24,False,"{""Casual"": 22, ""Sports"": 2}","{""Summer"": 14, ""Winter"": 4, ""Fall"": 5, ""Spring"": 1}",Sports:2/24(8%),Summer:14/24(58%); Fall:5/24(21%); Winter:4/24(17%),True
+2_slot (articleType+baseColour),Tshirts__None__Red,Tshirts,null,Red,24,False,"{""Sports"": 4, ""Casual"": 20}","{""Summer"": 13, ""Fall"": 11}",Sports:4/24(17%),Summer:13/24(54%); Fall:11/24(46%),True
+2_slot (articleType+gender),Casual Shoes__Unisex__,Casual Shoes,Unisex,,23,False,"{""Casual"": 23}","{""Fall"": 7, ""Summer"": 12, ""Spring"": 3, ""Winter"": 1}",,Summer:12/23(52%); Fall:7/23(30%); Spring:3/23(13%),True
+1_slot (articleType),Sandals__None__,Sandals,null,,23,False,"{""Casual"": 22}","{""Summer"": 11, ""Winter"": 4, ""Fall"": 7, ""Spring"": 1}",,Summer:11/23(48%); Fall:7/23(30%); Winter:4/23(17%),True
+1_slot (articleType),Socks__None__,Socks,null,,23,False,"{""Casual"": 18, ""Sports"": 3, ""Formal"": 2}","{""Summer"": 20, ""Fall"": 3}",Sports:3/23(13%); Formal:2/23(9%),Fall:3/23(13%),True
+2_slot (articleType+baseColour),Tshirts__None__White,Tshirts,null,White,23,False,"{""Casual"": 19, ""Sports"": 4}","{""Fall"": 9, ""Summer"": 14}",Sports:4/23(17%),Summer:14/23(61%); Fall:9/23(39%),True
+2_slot (articleType+gender),Backpacks__Men__,Backpacks,Men,,22,False,"{""Casual"": 20, ""Sports"": 2}","{""Summer"": 14, ""Winter"": 3, ""Fall"": 4, ""Spring"": 1}",Sports:2/22(9%),Summer:14/22(64%); Fall:4/22(18%); Winter:3/22(14%),True
+2_slot (articleType+gender),Backpacks__Women__,Backpacks,Women,,22,False,"{""Casual"": 20, ""Sports"": 2}","{""Summer"": 14, ""Winter"": 2, ""Fall"": 5, ""Spring"": 1}",Sports:2/22(9%),Summer:14/22(64%); Fall:5/22(23%); Winter:2/22(9%),True
+2_slot (articleType+gender),Socks__Men__,Socks,Men,,21,False,"{""Casual"": 17, ""Sports"": 2, ""Formal"": 2}","{""Summer"": 19, ""Fall"": 2}",Sports:2/21(10%); Formal:2/21(10%),Fall:2/21(10%),True
+2_slot (articleType+gender),Backpacks__Unisex__,Backpacks,Unisex,,20,False,"{""Casual"": 18, ""Sports"": 2}","{""Summer"": 14, ""Winter"": 1, ""Fall"": 4, ""Spring"": 1}",Sports:2/20(10%),Summer:14/20(70%); Fall:4/20(20%); Winter:1/20(5%); Spring:1/20(5%),True
+2_slot (articleType+baseColour),Shirts__None__White,Shirts,null,White,20,False,"{""Casual"": 15, ""Formal"": 5}","{""Fall"": 17, ""Winter"": 1, ""Summer"": 2}",Formal:5/20(25%),Summer:2/20(10%); Winter:1/20(5%),True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Black,Tshirts,Men,Black,20,False,"{""Sports"": 4, ""Casual"": 16}","{""Fall"": 11, ""Summer"": 9}",Sports:4/20(20%),Fall:11/20(55%); Summer:9/20(45%),True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Red,Tshirts,Men,Red,20,False,"{""Sports"": 4, ""Casual"": 16}","{""Summer"": 11, ""Fall"": 9}",Sports:4/20(20%),Summer:11/20(55%); Fall:9/20(45%),True
+2_slot (articleType+baseColour),Tshirts__None__Blue,Tshirts,null,Blue,20,False,"{""Casual"": 14, ""Sports"": 6}","{""Fall"": 8, ""Summer"": 12}",Casual:14/20(70%); Sports:6/20(30%),Summer:12/20(60%); Fall:8/20(40%),True
+2_slot (articleType+baseColour),Tshirts__None__Grey,Tshirts,null,Grey,20,False,"{""Casual"": 17, ""Sports"": 3}","{""Summer"": 13, ""Fall"": 6, ""Winter"": 1}",Sports:3/20(15%),Summer:13/20(65%); Fall:6/20(30%); Winter:1/20(5%),True
+2_slot (articleType+gender),Sandals__Men__,Sandals,Men,,19,False,"{""Casual"": 18}","{""Summer"": 8, ""Winter"": 3, ""Fall"": 7, ""Spring"": 1}",,Summer:8/19(42%); Fall:7/19(37%); Winter:3/19(16%); Spring:1/19(5%),True
+2_slot (articleType+baseColour),Shirts__None__Blue,Shirts,null,Blue,19,False,"{""Casual"": 16, ""Formal"": 3}","{""Summer"": 9, ""Fall"": 10}",Formal:3/19(16%),Fall:10/19(53%); Summer:9/19(47%),True
+2_slot (articleType+gender),Sunglasses__Men__,Sunglasses,Men,,19,False,"{""Casual"": 19}","{""Winter"": 18, ""Summer"": 1}",,Summer:1/19(5%),True
+2_slot (articleType+gender),Tshirts__Boys__,Tshirts,Boys,,19,False,"{""Casual"": 19}","{""Fall"": 7, ""Summer"": 12}",,Summer:12/19(63%); Fall:7/19(37%),True
+2_slot (articleType+baseColour),Tshirts__None__Green,Tshirts,null,Green,19,False,"{""Casual"": 17, ""Sports"": 2}","{""Fall"": 10, ""Summer"": 9}",Sports:2/19(11%),Fall:10/19(53%); Summer:9/19(47%),True
+2_slot (articleType+gender),Wallets__Women__,Wallets,Women,,19,False,"{""Casual"": 19}","{""Winter"": 7, ""Summer"": 9, ""Fall"": 3}",,Summer:9/19(47%); Winter:7/19(37%); Fall:3/19(16%),True
+2_slot (articleType+gender),Flip Flops__Men__,Flip Flops,Men,,18,False,"{""Casual"": 17, ""Sports"": 1}","{""Summer"": 10, ""Fall"": 6, ""Winter"": 1, ""Spring"": 1}",Sports:1/18(6%),Summer:10/18(56%); Fall:6/18(33%); Winter:1/18(6%); Spring:1/18(6%),True
+2_slot (articleType+gender),Flip Flops__Women__,Flip Flops,Women,,18,False,"{""Casual"": 18}","{""Summer"": 6, ""Fall"": 7, ""Winter"": 4, ""Spring"": 1}",,Fall:7/18(39%); Summer:6/18(33%); Winter:4/18(22%); Spring:1/18(6%),True
+1_slot (articleType),Jeans__None__,Jeans,null,,18,False,"{""Casual"": 18}","{""Summer"": 12, ""Fall"": 6}",,Summer:12/18(67%); Fall:6/18(33%),True
+2_slot (articleType+baseColour),Watches__None__White,Watches,null,White,18,False,"{""Casual"": 17, ""Sports"": 1}","{""Winter"": 18}",Sports:1/18(6%),,True
+2_slot (articleType+gender),Briefs__Men__,Briefs,Men,,17,False,"{""Casual"": 17}","{""Summer"": 16, ""Winter"": 1}",,Winter:1/17(6%),True
+1_slot (articleType),Flats__None__,Flats,null,,17,False,"{""Casual"": 16, ""Ethnic"": 1}","{""Winter"": 8, ""Summer"": 2, ""Fall"": 7}",Ethnic:1/17(6%),Winter:8/17(47%); Fall:7/17(41%); Summer:2/17(12%),True
+2_slot (articleType+gender),Flats__Women__,Flats,Women,,17,False,"{""Casual"": 16, ""Ethnic"": 1}","{""Winter"": 8, ""Summer"": 2, ""Fall"": 7}",Ethnic:1/17(6%),Winter:8/17(47%); Fall:7/17(41%); Summer:2/17(12%),True
+1_slot (articleType),Bra__None__,Bra,null,,16,False,"{""Casual"": 15, ""Sports"": 1}","{""Winter"": 5, ""Summer"": 11}",Sports:1/16(6%),Summer:11/16(69%); Winter:5/16(31%),True
+2_slot (articleType+gender),Bra__Women__,Bra,Women,,16,False,"{""Casual"": 15, ""Sports"": 1}","{""Winter"": 5, ""Summer"": 11}",Sports:1/16(6%),Summer:11/16(69%); Winter:5/16(31%),True
+3_slot (articleType+gender+baseColour),Shirts__Men__Blue,Shirts,Men,Blue,16,False,"{""Casual"": 13, ""Formal"": 3}","{""Summer"": 8, ""Fall"": 8}",Formal:3/16(19%),Summer:8/16(50%); Fall:8/16(50%),True
+3_slot (articleType+gender+baseColour),Shirts__Men__White,Shirts,Men,White,16,False,"{""Casual"": 11, ""Formal"": 5}","{""Fall"": 14, ""Winter"": 1, ""Summer"": 1}",Casual:11/16(69%); Formal:5/16(31%),Winter:1/16(6%); Summer:1/16(6%),True
+1_slot (articleType),Shorts__None__,Shorts,null,,16,False,"{""Casual"": 11, ""Sports"": 5}","{""Fall"": 5, ""Summer"": 9, ""Winter"": 2}",Casual:11/16(69%); Sports:5/16(31%),Summer:9/16(56%); Fall:5/16(31%); Winter:2/16(12%),True
+2_slot (articleType+gender),Sunglasses__Unisex__,Sunglasses,Unisex,,12,True,"{""Casual"": 12}","{""Winter"": 12}",,,False
+2_slot (articleType+baseColour),Watches__None__Blue,Watches,null,Blue,8,True,"{""Casual"": 8}","{""Winter"": 8}",,,False
+3_slot (articleType+gender+baseColour),Watches__Women__Silver,Watches,Women,Silver,8,True,"{""Casual"": 8}","{""Winter"": 8}",,,False
+2_slot (articleType+baseColour),Sarees__None__Green,Sarees,null,Green,7,True,"{""Ethnic"": 7}","{""Summer"": 7}",,,False
+3_slot (articleType+gender+baseColour),Sarees__Women__Green,Sarees,Women,Green,7,True,"{""Ethnic"": 7}","{""Summer"": 7}",,,False
+3_slot (articleType+gender+baseColour),Sunglasses__Unisex__Black,Sunglasses,Unisex,Black,7,True,"{""Casual"": 7}","{""Winter"": 7}",,,False
+2_slot (articleType+baseColour),Kurtas__None__Purple,Kurtas,null,Purple,6,True,"{""Ethnic"": 6}","{""Fall"": 6}",,,False
+3_slot (articleType+gender+baseColour),Kurtas__Women__Purple,Kurtas,Women,Purple,6,True,"{""Ethnic"": 6}","{""Fall"": 6}",,,False
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Blue,Casual Shoes,Men,Blue,5,True,"{""Casual"": 5}","{""Summer"": 5}",,,False
+2_slot (articleType+baseColour),Casual Shoes__None__Blue,Casual Shoes,null,Blue,5,True,"{""Casual"": 5}","{""Summer"": 5}",,,False
+1_slot (articleType),Night suits__None__,Night suits,null,,5,True,"{""Casual"": 5}","{""Summer"": 5}",,,False
+2_slot (articleType+gender),Sweaters__Women__,Sweaters,Women,,5,True,"{""Casual"": 5}","{""Fall"": 5}",,,False
+1_slot (articleType),Watches__None__,Watches,null,,81,False,"{""Casual"": 78, ""Sports"": 3}","{""Winter"": 80, ""Summer"": 1}",,,False
+1_slot (articleType),Sunglasses__None__,Sunglasses,null,,29,False,"{""Casual"": 29}","{""Winter"": 28, ""Summer"": 1}",,,False
+2_slot (articleType+gender),Sunglasses__Women__,Sunglasses,Women,,22,False,"{""Casual"": 22}","{""Winter"": 22}",,,False
+2_slot (articleType+baseColour),Watches__None__Black,Watches,null,Black,21,False,"{""Casual"": 20, ""Sports"": 1}","{""Winter"": 21}",,,False
