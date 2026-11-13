@@ -174,105 +174,191 @@ def run_val_pilot(
     return summary
 
 
+def _load_pilot_cache(path: pathlib.Path) -> Dict[str, Dict[str, Any]]:
+    if path.exists():
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def _seed_shard_cache(cache_path: pathlib.Path, shard_recs: List[Dict[str, Any]], pilot_cache: Dict[str, Dict[str, Any]]) -> None:
+    if cache_path.exists() or not pilot_cache:
+        return
+    seeded = {}
+    for r in shard_recs:
+        pid = str(r["product_id"])
+        if pid in pilot_cache:
+            seeded[pid] = pilot_cache[pid]
+    if seeded:
+        cache_path.write_text(json.dumps(seeded, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def run_val_full(
     records: List[Dict[str, Any]],
     output_dir: pathlib.Path,
     shard_size: int = 500,
     quantization: str = "8bit",
+    stage: str = "all",
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     error_log_path = PROJECT_ROOT / "reports/caption_errors.csv"
     error_log_path.parent.mkdir(parents=True, exist_ok=True)
 
-    existing_pids = set()
-    for shard_file in output_dir.glob("shard_val_*.parquet"):
-        try:
-            sdf = pd.read_parquet(shard_file, columns=["product_id"])
-            existing_pids.update(sdf["product_id"].astype(str).tolist())
-        except Exception as e:
-            print(f"Warning reading {shard_file}: {e}")
-
-    pending = [r for r in records if str(r["product_id"]) not in existing_pids]
-    print(f"Val total: {len(records)} | Already captioned: {len(existing_pids)} | Pending: {len(pending)}")
-    if not pending:
-        print("All val_gallery items already captioned!")
-        return
-
     pipeline = VLMCaptionPipeline(seed=SEED, quantization=quantization)
-    n_shards = (len(pending) + shard_size - 1) // shard_size
-    existing_shards = sorted(output_dir.glob("shard_val_*.parquet"))
-    next_idx = len(existing_shards)
 
-    for i in range(n_shards):
-        shard_recs = pending[i * shard_size : (i + 1) * shard_size]
-        shard_tag = f"val_{next_idx + i:04d}"
-        shard_path = output_dir / f"shard_{shard_tag}.parquet"
-        core_cache = str(output_dir / f"cache_core_{shard_tag}.json")
-        aux_cache = str(output_dir / f"cache_aux_{shard_tag}.json")
+    # ------------------------------------------------------------------
+    # STAGE 1: Config A (InternVL2-2B only) cho đủ 1.884 ảnh theo shard
+    # ------------------------------------------------------------------
+    if stage in ("core_only", "all"):
+        pilot_core = _load_pilot_cache(PROJECT_ROOT / "eval/cache_internvl2_val_pilot.json")
+        done_core_pids = set()
+        for sf in output_dir.glob("shard_val_core_*.parquet"):
+            try:
+                sdf = pd.read_parquet(sf, columns=["product_id"])
+                done_core_pids.update(sdf["product_id"].astype(str).tolist())
+            except Exception as e:
+                print(f"Warning reading {sf}: {e}")
 
-        core_caps = pipeline.run_core_generation(
-            samples=shard_recs,
-            model_id=CORE_MODEL_ID,
-            revision=CORE_REVISION,
-            cache_path=core_cache,
-        )
-        aux_caps = pipeline.run_aux_generation(
-            samples=shard_recs,
-            model_id=AUX_MODEL_ID,
-            revision=AUX_REVISION,
-            cache_path=aux_cache,
-        )
+        pending_core = [r for r in records if str(r["product_id"]) not in done_core_pids]
+        print(f"[Config A / InternVL2-2B] Total: {len(records)} | Done: {len(done_core_pids)} | Pending: {len(pending_core)}")
 
-        shard_rows = []
-        errors = []
-        for rec in shard_recs:
-            pid = str(rec["product_id"])
-            c_ent = core_caps.get(pid, {})
-            a_ent = aux_caps.get(pid, {})
-            if c_ent.get("error") or a_ent.get("error"):
-                errors.append({
-                    "product_id": pid,
-                    "image_path": rec.get("image_path", ""),
-                    "core_error": c_ent.get("error", ""),
-                    "aux_error": a_ent.get("error", ""),
-                    "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
-                })
+        if pending_core:
+            n_shards = (len(pending_core) + shard_size - 1) // shard_size
+            next_idx = len(sorted(output_dir.glob("shard_val_core_*.parquet")))
+            for i in range(n_shards):
+                shard_recs = pending_core[i * shard_size : (i + 1) * shard_size]
+                shard_tag = f"val_core_{next_idx + i:04d}"
+                shard_path = output_dir / f"shard_{shard_tag}.parquet"
+                core_cache = output_dir / f"cache_core_{shard_tag}.json"
+                _seed_shard_cache(core_cache, shard_recs, pilot_core)
 
-            cap_a = c_ent.get("cleaned_caption", "")
-            cap_c = a_ent.get("cleaned_caption", "")
-            m_res = merge_caption_v1(core_caption=cap_a, metadata=rec, aux_caption=cap_c, max_tokens=128)
+                core_caps = pipeline.run_core_generation(
+                    samples=shard_recs,
+                    model_id=CORE_MODEL_ID,
+                    revision=CORE_REVISION,
+                    cache_path=str(core_cache),
+                )
 
-            row = dict(rec)
-            row["caption_model"] = f"{CORE_MODEL_ID} + {AUX_MODEL_ID}"
-            row["model_revision"] = f"{CORE_REVISION} + {AUX_REVISION}"
-            row["seed"] = SEED
-            row["combination_method"] = "merge_v1"
-            row["gen_params"] = json.dumps(
-                {"max_new_tokens": 48, "do_sample": False, "num_beams": 1, "quantization": quantization}
-            )
-            row["caption_A"] = cap_a
-            row["caption_B"] = m_res["caption"]
-            row["caption_C"] = cap_c
-            row["caption_vi"] = m_res["caption"]
-            row["token_len"] = m_res["token_len"]
-            row["merge_conflicts"] = json.dumps(m_res["conflicts"], ensure_ascii=False)
-            shard_rows.append(row)
+                shard_rows = []
+                errors = []
+                for rec in shard_recs:
+                    pid = str(rec["product_id"])
+                    c_ent = core_caps.get(pid, {})
+                    if c_ent.get("error"):
+                        errors.append({
+                            "product_id": pid,
+                            "image_path": rec.get("image_path", ""),
+                            "core_error": c_ent.get("error", ""),
+                            "aux_error": "",
+                            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                        })
+                    row = dict(rec)
+                    row["caption_model"] = CORE_MODEL_ID
+                    row["model_revision"] = CORE_REVISION
+                    row["seed"] = SEED
+                    row["combination_method"] = "none"
+                    row["gen_params"] = json.dumps(
+                        {"max_new_tokens": 48, "do_sample": False, "num_beams": 1, "quantization": quantization}
+                    )
+                    row["caption_A"] = c_ent.get("cleaned_caption", "")
+                    shard_rows.append(row)
 
-        pd.DataFrame(shard_rows).to_parquet(shard_path, index=False)
-        print(f"Saved {shard_path} ({len(shard_rows)} rows)")
+                pd.DataFrame(shard_rows).to_parquet(shard_path, index=False)
+                print(f"Saved Config A shard: {shard_path} ({len(shard_rows)} rows)")
+                if errors:
+                    df_err = pd.DataFrame(errors)
+                    df_err.to_csv(error_log_path, mode="a" if error_log_path.exists() else "w", header=not error_log_path.exists(), index=False)
+                if core_cache.exists():
+                    core_cache.unlink()
 
-        if errors:
-            df_err = pd.DataFrame(errors)
-            df_err.to_csv(error_log_path, mode="a" if error_log_path.exists() else "w", header=not error_log_path.exists(), index=False)
+    # ------------------------------------------------------------------
+    # STAGE 2: Config B (Vintern-1B-v3_5 + merge_v1) cho đủ 1.884 ảnh
+    # ------------------------------------------------------------------
+    if stage in ("aux_and_merge", "all"):
+        pilot_aux = _load_pilot_cache(PROJECT_ROOT / "eval/cache_vintern_val_pilot.json")
+        core_map: Dict[str, str] = {}
+        for sf in sorted(output_dir.glob("shard_val_core_*.parquet")):
+            cdf = pd.read_parquet(sf, columns=["product_id", "caption_A"])
+            for _, row in cdf.iterrows():
+                core_map[str(row["product_id"])] = str(row["caption_A"] or "")
 
-        for cp in (pathlib.Path(core_cache), pathlib.Path(aux_cache)):
-            if cp.exists():
-                cp.unlink()
+        done_b_pids = set()
+        for sf in output_dir.glob("shard_val_[0-9]*.parquet"):
+            try:
+                sdf = pd.read_parquet(sf, columns=["product_id"])
+                done_b_pids.update(sdf["product_id"].astype(str).tolist())
+            except Exception as e:
+                print(f"Warning reading {sf}: {e}")
+
+        pending_b = [r for r in records if str(r["product_id"]) not in done_b_pids]
+        print(f"[Config B / Vintern + merge_v1] Total: {len(records)} | Done: {len(done_b_pids)} | Pending: {len(pending_b)}")
+
+        if pending_b:
+            n_shards = (len(pending_b) + shard_size - 1) // shard_size
+            next_idx = len(sorted(output_dir.glob("shard_val_[0-9]*.parquet")))
+            for i in range(n_shards):
+                shard_recs = pending_b[i * shard_size : (i + 1) * shard_size]
+                shard_tag = f"val_{next_idx + i:04d}"
+                shard_path = output_dir / f"shard_{shard_tag}.parquet"
+                aux_cache = output_dir / f"cache_aux_{shard_tag}.json"
+                _seed_shard_cache(aux_cache, shard_recs, pilot_aux)
+
+                aux_caps = pipeline.run_aux_generation(
+                    samples=shard_recs,
+                    model_id=AUX_MODEL_ID,
+                    revision=AUX_REVISION,
+                    cache_path=str(aux_cache),
+                )
+
+                shard_rows = []
+                errors = []
+                for rec in shard_recs:
+                    pid = str(rec["product_id"])
+                    a_ent = aux_caps.get(pid, {})
+                    if a_ent.get("error"):
+                        errors.append({
+                            "product_id": pid,
+                            "image_path": rec.get("image_path", ""),
+                            "core_error": "",
+                            "aux_error": a_ent.get("error", ""),
+                            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                        })
+
+                    cap_a = core_map.get(pid, "")
+                    cap_c = a_ent.get("cleaned_caption", "")
+                    m_res = merge_caption_v1(core_caption=cap_a, metadata=rec, aux_caption=cap_c, max_tokens=128)
+
+                    row = dict(rec)
+                    row["caption_model"] = f"{CORE_MODEL_ID} + {AUX_MODEL_ID}"
+                    row["model_revision"] = f"{CORE_REVISION} + {AUX_REVISION}"
+                    row["seed"] = SEED
+                    row["combination_method"] = "merge_v1"
+                    row["gen_params"] = json.dumps(
+                        {"max_new_tokens": 48, "do_sample": False, "num_beams": 1, "quantization": quantization}
+                    )
+                    row["caption_A"] = cap_a
+                    row["caption_B"] = m_res["caption"]
+                    row["caption_C"] = cap_c
+                    row["caption_vi"] = m_res["caption"]
+                    row["token_len"] = m_res["token_len"]
+                    row["merge_conflicts"] = json.dumps(m_res["conflicts"], ensure_ascii=False)
+                    shard_rows.append(row)
+
+                pd.DataFrame(shard_rows).to_parquet(shard_path, index=False)
+                print(f"Saved Config B shard: {shard_path} ({len(shard_rows)} rows)")
+                if errors:
+                    df_err = pd.DataFrame(errors)
+                    df_err.to_csv(error_log_path, mode="a" if error_log_path.exists() else "w", header=not error_log_path.exists(), index=False)
+                if aux_cache.exists():
+                    aux_cache.unlink()
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Caption val_gallery bằng InternVL2-2B + merge_v1.")
     parser.add_argument("--mode", choices=["pilot", "full"], default="pilot")
+    parser.add_argument("--stage", choices=["core_only", "aux_and_merge", "all"], default="all")
     parser.add_argument("--pilot-n", type=int, default=200)
     parser.add_argument("--shard-size", type=int, default=500)
     parser.add_argument("--quantization", default="8bit")
@@ -291,6 +377,7 @@ def main() -> int:
             output_dir=PROJECT_ROOT / "data/catalog/captions",
             shard_size=args.shard_size,
             quantization=args.quantization,
+            stage=args.stage,
         )
         return 0
 
