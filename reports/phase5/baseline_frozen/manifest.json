@@ -1,0 +1,18 @@
+{
+  "commit_hash": "bcc5284a184f08bc1517c90c926b01ac2a63d570",
+  "seed": 42,
+  "files": {
+    "retrieval_eval_results.json": {
+      "sha256": "6da03e22060973bcb4c668117b488d6f3a99bc2ddabcb88465e43b86797f5660",
+      "size_bytes": 48470
+    },
+    "caption_eval_ab.json": {
+      "sha256": "efb470c57540f1342d8e23f53044e050840d5a9f72252646669c39715dcfe26a",
+      "size_bytes": 2027
+    },
+    "latency_sla_results.json": {
+      "sha256": "733a0685a93419fcb41c68a3811cb351af99fb684a5d4132b658fa6c34f89bce",
+      "size_bytes": 6709
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-11-13T02:23:41.612660+00:00",
+    "git_commit": "2e057d6",
+    "seed": 42,
+    "index_dir": "index/test_gallery",
+    "n_items": 1290,
+    "note_law_d5": "SigLIP checkpoint was not trained on InternVL2 captions; paired retrieval scores with new captions cannot be compared directly to historical training-time metrics."
+  },
+  "summaries": {
+    "config_A_internvl2_only": {
+      "n_queries": 1290,
+      "recall@1": 0.0007751937984496124,
+      "recall@5": 0.003875968992248062,
+      "recall@10": 0.010077519379844961,
+      "mAP": 0.0061361104369344315
+    },
+    "config_B_internvl2_plus_aux": {
+      "n_queries": 1290,
+      "recall@1": 0.012403100775193798,
+      "recall@5": 0.050387596899224806,
+      "recall@10": 0.09069767441860466,
+      "mAP": 0.04210010780915602
+    },
+    "config_C_vintern_ref": {
+      "n_queries": 1290,
+      "recall@1": 0.002325581395348837,
+      "recall@5": 0.020155038759689922,
+      "recall@10": 0.03643410852713178,
+      "mAP": 0.016998488781887137
+    }
+  },
+  "bootstrap_95ci_B_vs_A": {
+    "recall@1": {
+      "mean_a": 0.0007751937984496124,
+      "mean_b": 0.012403100775193798,
+      "diff_b_minus_a": 0.011627906976744186,
+      "ci_low": 0.005426356589147287,
+      "ci_high": 0.017829457364341085
+    },
+    "recall@5": {
+      "mean_a": 0.003875968992248062,
+      "mean_b": 0.050387596899224806,
+      "diff_b_minus_a": 0.046511627906976744,
+      "ci_low": 0.03488372093023256,
+      "ci_high": 0.05813953488372093
+    },
+    "recall@10": {
+      "mean_a": 0.010077519379844961,
+      "mean_b": 0.09069767441860466,
+      "diff_b_minus_a": 0.08062015503875969,
+      "ci_low": 0.06589147286821706,
+      "ci_high": 0.09689922480620156
+    },
+    "ap": {
+      "mean_a": 0.0061361104369344315,
+      "mean_b": 0.04210010780915602,
+      "diff_b_minus_a": 0.035963997372221584,
+      "ci_low": 0.029109810833421127,
+      "ci_high": 0.04325108272512841
+    }
+  }
+}

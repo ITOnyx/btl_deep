@@ -202,7 +202,12 @@ eval:
   min_relevant_per_query: 5
   min_group_size_for_queries: 10
   n_text_queries: 400
-  handwritten_queries: "eval/handwritten_queries.json"   # 50-100 câu, có dấu và không dấu
+  # Luật C.5: Bộ truy vấn handwritten_queries.json đã chạy ở Pha 5 và được quan sát kết quả để chẩn đoán.
+  # Do đó, theo đúng quy định C.5, tập này chuyển nhãn chính thức thành DEV SET (chỉ dùng chẩn đoán lỗi, KHÔNG dùng để tune tham số).
+  dev_set_queries: "eval/handwritten_queries.json"
+  handwritten_queries: "eval/handwritten_queries.json"   # Alias DEV SET (phục vụ tương thích ngược)
+  dev_set_reason: "Đã quan sát kết quả tại Pha 5; chuyển nhãn DEV SET theo Luật C.5 để tránh overfitting/leakage."
+  heldout_queries_v2: "eval/heldout_queries_v2.json"     # Tập unseen test mới sẽ xây dựng ở Bước 5
   unseen_queries_run_once: true            # chỉnh parser/lexicon sau khi xem => đổi nhãn DEV SET
   bootstrap: { n_resamples: 1000, ci: 0.95 }
   hubness:
