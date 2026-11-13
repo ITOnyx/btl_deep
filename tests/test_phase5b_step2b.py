@@ -51,4 +51,5 @@ def test_val_queries_integrity_and_clusters():
     assert all(x["n_relevant"] >= 5 and "spec_cluster_id" in x for x in val_a)
     assert all(x["n_relevant"] >= 5 and "spec_cluster_id" in x and "dia_class" in x for x in val_b)
     assert len(val_c["queries"]) >= 100
-    assert "rate_20pct" in val_c["injected_parsed"]
+    assert "20%" in val_c["queries"][0]["parsed_by_rate"]
+    assert "parsed_real_v1" in val_c["queries"][0]

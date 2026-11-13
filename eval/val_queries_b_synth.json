@@ -17,7 +17,8 @@
     },
     "spec_cluster_id": "Wallets__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_001",
@@ -37,7 +38,8 @@
     },
     "spec_cluster_id": "Earrings__Women__Silver",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_002",
@@ -57,7 +59,8 @@
     },
     "spec_cluster_id": "Wallets__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_003",
@@ -75,7 +78,8 @@
     },
     "spec_cluster_id": "Handbags__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_004",
@@ -95,7 +99,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_005",
@@ -115,7 +120,8 @@
     },
     "spec_cluster_id": "Tshirts__None__Navy Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_006",
@@ -135,7 +141,8 @@
     },
     "spec_cluster_id": "Wallets__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_007",
@@ -143,17 +150,19 @@
     "has_diacritics": true,
     "dia_class": "partial",
     "typo_type": null,
-    "n_relevant": 27,
+    "n_relevant": 29,
     "spec": {
       "articleType": [
-        "Backpacks"
+        "Backpacks",
+        "Laptop Bag"
       ],
       "gender": "Unisex",
       "baseColour": []
     },
-    "spec_cluster_id": "Backpacks__Unisex__",
+    "spec_cluster_id": "Backpacks|Laptop Bag__Unisex__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_008",
@@ -161,19 +170,21 @@
     "has_diacritics": true,
     "dia_class": "full",
     "typo_type": null,
-    "n_relevant": 8,
+    "n_relevant": 13,
     "spec": {
       "articleType": [
-        "Flats"
+        "Flats",
+        "Casual Shoes"
       ],
       "gender": "Women",
       "baseColour": [
         "Black"
       ]
     },
-    "spec_cluster_id": "Flats__Women__Black",
+    "spec_cluster_id": "Casual Shoes|Flats__Women__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_009",
@@ -193,7 +204,8 @@
     },
     "spec_cluster_id": "Shirts__None__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_010",
@@ -213,7 +225,8 @@
     },
     "spec_cluster_id": "Formal Shoes__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_011",
@@ -233,7 +246,8 @@
     },
     "spec_cluster_id": "Tops__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_012",
@@ -253,7 +267,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__Green",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_013",
@@ -273,7 +288,8 @@
     },
     "spec_cluster_id": "Tops__None__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_014",
@@ -293,7 +309,8 @@
     },
     "spec_cluster_id": "Sunglasses__Women__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_015",
@@ -313,7 +330,8 @@
     },
     "spec_cluster_id": "Socks__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_016",
@@ -333,7 +351,8 @@
     },
     "spec_cluster_id": "Sports Shoes__Women__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_017",
@@ -341,19 +360,21 @@
     "has_diacritics": false,
     "dia_class": "none",
     "typo_type": null,
-    "n_relevant": 7,
+    "n_relevant": 11,
     "spec": {
       "articleType": [
-        "Casual Shoes"
+        "Casual Shoes",
+        "Sports Shoes"
       ],
       "gender": "Men",
       "baseColour": [
         "Blue"
       ]
     },
-    "spec_cluster_id": "Casual Shoes__Men__Blue",
+    "spec_cluster_id": "Casual Shoes|Sports Shoes__Men__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_018",
@@ -371,7 +392,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_019",
@@ -391,7 +413,8 @@
     },
     "spec_cluster_id": "Watches__None__White",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_020",
@@ -411,7 +434,8 @@
     },
     "spec_cluster_id": "Handbags__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_021",
@@ -431,7 +455,8 @@
     },
     "spec_cluster_id": "Heels__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_022",
@@ -451,7 +476,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_023",
@@ -471,7 +497,8 @@
     },
     "spec_cluster_id": "Backpacks__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_024",
@@ -489,7 +516,8 @@
     },
     "spec_cluster_id": "Tshirts__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_025",
@@ -509,7 +537,8 @@
     },
     "spec_cluster_id": "Briefs__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_026",
@@ -529,7 +558,8 @@
     },
     "spec_cluster_id": "Shirts__Men__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_027",
@@ -549,7 +579,8 @@
     },
     "spec_cluster_id": "Belts__Men__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_028",
@@ -569,7 +600,8 @@
     },
     "spec_cluster_id": "Formal Shoes__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_029",
@@ -587,7 +619,8 @@
     },
     "spec_cluster_id": "Sports Shoes__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_030",
@@ -607,7 +640,8 @@
     },
     "spec_cluster_id": "Wallets__Women__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_031",
@@ -627,7 +661,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Grey",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_032",
@@ -647,7 +682,8 @@
     },
     "spec_cluster_id": "Tshirts__Women__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_033",
@@ -665,7 +701,8 @@
     },
     "spec_cluster_id": "Sunglasses__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_034",
@@ -685,7 +722,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_035",
@@ -705,7 +743,8 @@
     },
     "spec_cluster_id": "Tshirts__Women__Green",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_036",
@@ -723,7 +762,8 @@
     },
     "spec_cluster_id": "Sunglasses__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_037",
@@ -741,7 +781,8 @@
     },
     "spec_cluster_id": "Casual Shoes__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_038",
@@ -761,7 +802,8 @@
     },
     "spec_cluster_id": "Backpacks__None__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_039",
@@ -779,7 +821,8 @@
     },
     "spec_cluster_id": "Trousers__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_040",
@@ -799,7 +842,8 @@
     },
     "spec_cluster_id": "Casual Shoes__None__Grey",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_041",
@@ -819,7 +863,8 @@
     },
     "spec_cluster_id": "Watches__Men__White",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_042",
@@ -839,7 +884,8 @@
     },
     "spec_cluster_id": "Jeans__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_043",
@@ -859,7 +905,8 @@
     },
     "spec_cluster_id": "Backpacks__None__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_044",
@@ -879,7 +926,8 @@
     },
     "spec_cluster_id": "Handbags__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_045",
@@ -897,7 +945,8 @@
     },
     "spec_cluster_id": "Briefs__Men__",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_046",
@@ -915,7 +964,8 @@
     },
     "spec_cluster_id": "Sweaters__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_047",
@@ -935,7 +985,8 @@
     },
     "spec_cluster_id": "Backpacks__Unisex__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_048",
@@ -955,7 +1006,8 @@
     },
     "spec_cluster_id": "Tshirts__None__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_049",
@@ -975,7 +1027,8 @@
     },
     "spec_cluster_id": "Formal Shoes__Men__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_050",
@@ -995,7 +1048,8 @@
     },
     "spec_cluster_id": "Earrings__None__Silver",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_051",
@@ -1013,7 +1067,8 @@
     },
     "spec_cluster_id": "Sandals__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_052",
@@ -1033,7 +1088,8 @@
     },
     "spec_cluster_id": "Tshirts__None__Yellow",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_053",
@@ -1053,7 +1109,8 @@
     },
     "spec_cluster_id": "Shirts__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_054",
@@ -1073,7 +1130,8 @@
     },
     "spec_cluster_id": "Jeans__None__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_055",
@@ -1091,7 +1149,8 @@
     },
     "spec_cluster_id": "Jeans__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_056",
@@ -1111,7 +1170,8 @@
     },
     "spec_cluster_id": "Socks__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_057",
@@ -1131,7 +1191,8 @@
     },
     "spec_cluster_id": "Shirts__None__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_058",
@@ -1151,7 +1212,8 @@
     },
     "spec_cluster_id": "Sunglasses__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_059",
@@ -1169,7 +1231,8 @@
     },
     "spec_cluster_id": "Watches__Women__",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_060",
@@ -1189,7 +1252,8 @@
     },
     "spec_cluster_id": "Casual Shoes__Unisex__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_061",
@@ -1207,7 +1271,8 @@
     },
     "spec_cluster_id": "Shorts__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_062",
@@ -1227,7 +1292,8 @@
     },
     "spec_cluster_id": "Handbags__Women__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_063",
@@ -1247,7 +1313,8 @@
     },
     "spec_cluster_id": "Flip Flops__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_064",
@@ -1267,7 +1334,8 @@
     },
     "spec_cluster_id": "Sunglasses__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_065",
@@ -1287,7 +1355,8 @@
     },
     "spec_cluster_id": "Flip Flops__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_066",
@@ -1305,7 +1374,8 @@
     },
     "spec_cluster_id": "Earrings__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_067",
@@ -1325,7 +1395,8 @@
     },
     "spec_cluster_id": "Wallets__Men__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_068",
@@ -1343,7 +1414,8 @@
     },
     "spec_cluster_id": "Caps__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_069",
@@ -1361,7 +1433,8 @@
     },
     "spec_cluster_id": "Socks__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_070",
@@ -1381,7 +1454,8 @@
     },
     "spec_cluster_id": "Belts__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_071",
@@ -1401,7 +1475,8 @@
     },
     "spec_cluster_id": "Handbags__None__Grey",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_072",
@@ -1421,7 +1496,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__Grey",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_073",
@@ -1439,7 +1515,8 @@
     },
     "spec_cluster_id": "Caps__Unisex__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_074",
@@ -1457,7 +1534,8 @@
     },
     "spec_cluster_id": "Tops__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_075",
@@ -1475,7 +1553,8 @@
     },
     "spec_cluster_id": "Sports Shoes__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_076",
@@ -1495,7 +1574,8 @@
     },
     "spec_cluster_id": "Sports Shoes__None__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_077",
@@ -1515,7 +1595,8 @@
     },
     "spec_cluster_id": "Flip Flops__None__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_078",
@@ -1535,7 +1616,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Navy Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_079",
@@ -1555,7 +1637,8 @@
     },
     "spec_cluster_id": "Handbags__Women__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_080",
@@ -1575,7 +1658,8 @@
     },
     "spec_cluster_id": "Casual Shoes__None__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_081",
@@ -1595,7 +1679,8 @@
     },
     "spec_cluster_id": "Socks__None__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_082",
@@ -1615,7 +1700,8 @@
     },
     "spec_cluster_id": "Sports Shoes__None__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_083",
@@ -1635,7 +1721,8 @@
     },
     "spec_cluster_id": "Tshirts__Women__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_084",
@@ -1653,7 +1740,8 @@
     },
     "spec_cluster_id": "Dresses__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_085",
@@ -1671,7 +1759,8 @@
     },
     "spec_cluster_id": "Watches__Men__",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_086",
@@ -1691,7 +1780,8 @@
     },
     "spec_cluster_id": "Shirts__None__Pink",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_087",
@@ -1711,7 +1801,8 @@
     },
     "spec_cluster_id": "Watches__Women__White",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_088",
@@ -1731,7 +1822,8 @@
     },
     "spec_cluster_id": "Sandals__Men__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_089",
@@ -1751,7 +1843,8 @@
     },
     "spec_cluster_id": "Tshirts__None__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_090",
@@ -1769,7 +1862,8 @@
     },
     "spec_cluster_id": "Sunglasses__Unisex__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_091",
@@ -1789,7 +1883,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_092",
@@ -1809,7 +1904,8 @@
     },
     "spec_cluster_id": "Shirts__None__Purple",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_093",
@@ -1829,7 +1925,8 @@
     },
     "spec_cluster_id": "Casual Shoes__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_094",
@@ -1849,7 +1946,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_095",
@@ -1869,7 +1967,8 @@
     },
     "spec_cluster_id": "Tshirts__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_096",
@@ -1889,7 +1988,8 @@
     },
     "spec_cluster_id": "Sports Shoes__Men__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_097",
@@ -1907,7 +2007,8 @@
     },
     "spec_cluster_id": "Wallets__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_098",
@@ -1927,7 +2028,8 @@
     },
     "spec_cluster_id": "Watches__None__Silver",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_099",
@@ -1935,19 +2037,21 @@
     "has_diacritics": false,
     "dia_class": "none",
     "typo_type": null,
-    "n_relevant": 12,
+    "n_relevant": 14,
     "spec": {
       "articleType": [
-        "Casual Shoes"
+        "Casual Shoes",
+        "Sports Shoes"
       ],
       "gender": null,
       "baseColour": [
         "Brown"
       ]
     },
-    "spec_cluster_id": "Casual Shoes__None__Brown",
+    "spec_cluster_id": "Casual Shoes|Sports Shoes__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_100",
@@ -1955,19 +2059,22 @@
     "has_diacritics": true,
     "dia_class": "full",
     "typo_type": null,
-    "n_relevant": 6,
+    "n_relevant": 11,
     "spec": {
       "articleType": [
-        "Jackets"
+        "Jackets",
+        "Sweaters",
+        "Sweatshirts"
       ],
       "gender": null,
       "baseColour": [
         "Black"
       ]
     },
-    "spec_cluster_id": "Jackets__None__Black",
+    "spec_cluster_id": "Jackets|Sweaters|Sweatshirts__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_101",
@@ -1985,7 +2092,8 @@
     },
     "spec_cluster_id": "Tshirts__Boys__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_102",
@@ -2005,7 +2113,8 @@
     },
     "spec_cluster_id": "Sunglasses__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_103",
@@ -2025,7 +2134,8 @@
     },
     "spec_cluster_id": "Tops__Women__Pink",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_104",
@@ -2045,7 +2155,8 @@
     },
     "spec_cluster_id": "Casual Shoes__None__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_105",
@@ -2065,7 +2176,8 @@
     },
     "spec_cluster_id": "Belts__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_106",
@@ -2085,7 +2197,8 @@
     },
     "spec_cluster_id": "Handbags__None__Green",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_107",
@@ -2103,7 +2216,8 @@
     },
     "spec_cluster_id": "Jeans__Men__",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_108",
@@ -2123,7 +2237,8 @@
     },
     "spec_cluster_id": "Watches__Men__Silver",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_109",
@@ -2143,7 +2258,8 @@
     },
     "spec_cluster_id": "Handbags__Women__Purple",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_110",
@@ -2163,7 +2279,8 @@
     },
     "spec_cluster_id": "Casual Shoes__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_111",
@@ -2181,7 +2298,8 @@
     },
     "spec_cluster_id": "Briefs__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_112",
@@ -2201,7 +2319,8 @@
     },
     "spec_cluster_id": "Casual Shoes__Men__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_113",
@@ -2219,7 +2338,8 @@
     },
     "spec_cluster_id": "Casual Shoes__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_114",
@@ -2239,7 +2359,8 @@
     },
     "spec_cluster_id": "Shirts__None__Navy Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_115",
@@ -2257,7 +2378,8 @@
     },
     "spec_cluster_id": "Handbags__Unisex__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_116",
@@ -2277,7 +2399,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Pink",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_117",
@@ -2295,7 +2418,8 @@
     },
     "spec_cluster_id": "Flats__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_118",
@@ -2315,7 +2439,8 @@
     },
     "spec_cluster_id": "Tshirts__None__Grey",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_119",
@@ -2335,7 +2460,8 @@
     },
     "spec_cluster_id": "Tops__Women__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_120",
@@ -2355,7 +2481,8 @@
     },
     "spec_cluster_id": "Tops__Women__Navy Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_121",
@@ -2363,19 +2490,21 @@
     "has_diacritics": false,
     "dia_class": "none",
     "typo_type": null,
-    "n_relevant": 20,
+    "n_relevant": 64,
     "spec": {
       "articleType": [
-        "Casual Shoes"
+        "Casual Shoes",
+        "Sports Shoes"
       ],
       "gender": null,
       "baseColour": [
         "White"
       ]
     },
-    "spec_cluster_id": "Casual Shoes__None__White",
+    "spec_cluster_id": "Casual Shoes|Sports Shoes__None__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_122",
@@ -2395,7 +2524,8 @@
     },
     "spec_cluster_id": "Tops__Women__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_123",
@@ -2403,17 +2533,19 @@
     "has_diacritics": false,
     "dia_class": "none",
     "typo_type": null,
-    "n_relevant": 6,
+    "n_relevant": 11,
     "spec": {
       "articleType": [
-        "Sweatshirts"
+        "Sweatshirts",
+        "Sweaters"
       ],
       "gender": "Men",
       "baseColour": []
     },
-    "spec_cluster_id": "Sweatshirts__Men__",
+    "spec_cluster_id": "Sweaters|Sweatshirts__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_124",
@@ -2421,17 +2553,19 @@
     "has_diacritics": true,
     "dia_class": "full",
     "typo_type": null,
-    "n_relevant": 15,
+    "n_relevant": 18,
     "spec": {
       "articleType": [
-        "Casual Shoes"
+        "Casual Shoes",
+        "Sports Shoes"
       ],
       "gender": "Unisex",
       "baseColour": []
     },
-    "spec_cluster_id": "Casual Shoes__Unisex__",
+    "spec_cluster_id": "Casual Shoes|Sports Shoes__Unisex__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_125",
@@ -2439,19 +2573,21 @@
     "has_diacritics": true,
     "dia_class": "partial",
     "typo_type": null,
-    "n_relevant": 8,
+    "n_relevant": 50,
     "spec": {
       "articleType": [
-        "Flats"
+        "Flats",
+        "Casual Shoes"
       ],
       "gender": null,
       "baseColour": [
         "Black"
       ]
     },
-    "spec_cluster_id": "Flats__None__Black",
+    "spec_cluster_id": "Casual Shoes|Flats__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_126",
@@ -2471,7 +2607,8 @@
     },
     "spec_cluster_id": "Shirts__None__Grey",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_127",
@@ -2491,7 +2628,8 @@
     },
     "spec_cluster_id": "Sandals__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_128",
@@ -2511,7 +2649,8 @@
     },
     "spec_cluster_id": "Jeans__Men__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_129",
@@ -2531,7 +2670,8 @@
     },
     "spec_cluster_id": "Tops__None__Navy Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_130",
@@ -2551,7 +2691,8 @@
     },
     "spec_cluster_id": "Sports Shoes__None__Grey",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_131",
@@ -2569,7 +2710,8 @@
     },
     "spec_cluster_id": "Belts__Men__",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_132",
@@ -2589,7 +2731,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_133",
@@ -2609,7 +2752,8 @@
     },
     "spec_cluster_id": "Heels__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_134",
@@ -2629,7 +2773,8 @@
     },
     "spec_cluster_id": "Handbags__Women__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_135",
@@ -2649,7 +2794,8 @@
     },
     "spec_cluster_id": "Tops__Women__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_136",
@@ -2657,17 +2803,20 @@
     "has_diacritics": false,
     "dia_class": "none",
     "typo_type": null,
-    "n_relevant": 13,
+    "n_relevant": 24,
     "spec": {
       "articleType": [
-        "Jackets"
+        "Jackets",
+        "Sweaters",
+        "Sweatshirts"
       ],
       "gender": "Men",
       "baseColour": []
     },
-    "spec_cluster_id": "Jackets__Men__",
+    "spec_cluster_id": "Jackets|Sweaters|Sweatshirts__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_137",
@@ -2685,7 +2834,8 @@
     },
     "spec_cluster_id": "Belts__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_138",
@@ -2705,7 +2855,8 @@
     },
     "spec_cluster_id": "Handbags__Women__Green",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_139",
@@ -2723,7 +2874,8 @@
     },
     "spec_cluster_id": "Shirts__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_140",
@@ -2743,7 +2895,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Green",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_141",
@@ -2763,7 +2916,8 @@
     },
     "spec_cluster_id": "Formal Shoes__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_142",
@@ -2781,7 +2935,8 @@
     },
     "spec_cluster_id": "Watches__Unisex__",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_143",
@@ -2801,7 +2956,8 @@
     },
     "spec_cluster_id": "Casual Shoes__Women__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_144",
@@ -2821,7 +2977,8 @@
     },
     "spec_cluster_id": "Watches__Men__Black",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_145",
@@ -2839,7 +2996,8 @@
     },
     "spec_cluster_id": "Formal Shoes__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_146",
@@ -2857,7 +3015,8 @@
     },
     "spec_cluster_id": "Heels__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_147",
@@ -2865,19 +3024,22 @@
     "has_diacritics": true,
     "dia_class": "partial",
     "typo_type": null,
-    "n_relevant": 5,
+    "n_relevant": 8,
     "spec": {
       "articleType": [
-        "Jackets"
+        "Jackets",
+        "Sweaters",
+        "Sweatshirts"
       ],
       "gender": "Men",
       "baseColour": [
         "Black"
       ]
     },
-    "spec_cluster_id": "Jackets__Men__Black",
+    "spec_cluster_id": "Jackets|Sweaters|Sweatshirts__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_148",
@@ -2895,7 +3057,8 @@
     },
     "spec_cluster_id": "Shirts__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_149",
@@ -2915,7 +3078,8 @@
     },
     "spec_cluster_id": "Tshirts__None__Purple",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_150",
@@ -2935,7 +3099,8 @@
     },
     "spec_cluster_id": "Tshirts__None__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_151",
@@ -2953,7 +3118,8 @@
     },
     "spec_cluster_id": "Flip Flops__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_152",
@@ -2973,7 +3139,8 @@
     },
     "spec_cluster_id": "Tops__None__Pink",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_153",
@@ -2993,7 +3160,8 @@
     },
     "spec_cluster_id": "Socks__Men__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_154",
@@ -3013,7 +3181,8 @@
     },
     "spec_cluster_id": "Shirts__None__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_155",
@@ -3031,7 +3200,8 @@
     },
     "spec_cluster_id": "Flip Flops__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_156",
@@ -3051,7 +3221,8 @@
     },
     "spec_cluster_id": "Tshirts__None__Green",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_157",
@@ -3071,7 +3242,8 @@
     },
     "spec_cluster_id": "Sports Shoes__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_158",
@@ -3091,7 +3263,8 @@
     },
     "spec_cluster_id": "Backpacks__Unisex__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_159",
@@ -3111,7 +3284,8 @@
     },
     "spec_cluster_id": "Watches__Women__Silver",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_160",
@@ -3131,7 +3305,8 @@
     },
     "spec_cluster_id": "Sandals__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_161",
@@ -3149,7 +3324,8 @@
     },
     "spec_cluster_id": "Wallets__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_162",
@@ -3169,7 +3345,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__Purple",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_163",
@@ -3187,7 +3364,8 @@
     },
     "spec_cluster_id": "Ties__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_164",
@@ -3207,13 +3385,14 @@
     },
     "spec_cluster_id": "Tshirts__None__Pink",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent"
+    "source": "template + bảng đồng nghĩa của agent",
+    "is_typo": false
   },
   {
     "id": "val_b_synth_165",
     "query": "tư vấn giup hoa tai của nữ ánh bạc đẹp xịn",
     "has_diacritics": true,
-    "dia_class": "full",
+    "dia_class": "partial",
     "typo_type": "wrong_tone",
     "n_relevant": 12,
     "spec": {
@@ -3227,7 +3406,8 @@
     },
     "spec_cluster_id": "Earrings__Women__Silver",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_166",
@@ -3247,7 +3427,8 @@
     },
     "spec_cluster_id": "Wallets__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_167",
@@ -3265,7 +3446,8 @@
     },
     "spec_cluster_id": "Handbags__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_168",
@@ -3285,7 +3467,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_169",
@@ -3305,7 +3488,8 @@
     },
     "spec_cluster_id": "Tshirts__None__Navy Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_170",
@@ -3325,7 +3509,8 @@
     },
     "spec_cluster_id": "Wallets__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_171",
@@ -3333,17 +3518,19 @@
     "has_diacritics": true,
     "dia_class": "partial",
     "typo_type": "drop_char",
-    "n_relevant": 27,
+    "n_relevant": 29,
     "spec": {
       "articleType": [
-        "Backpacks"
+        "Backpacks",
+        "Laptop Bag"
       ],
       "gender": "Unisex",
       "baseColour": []
     },
-    "spec_cluster_id": "Backpacks__Unisex__",
+    "spec_cluster_id": "Backpacks|Laptop Bag__Unisex__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_172",
@@ -3351,19 +3538,21 @@
     "has_diacritics": true,
     "dia_class": "full",
     "typo_type": "insert_char",
-    "n_relevant": 8,
+    "n_relevant": 13,
     "spec": {
       "articleType": [
-        "Flats"
+        "Flats",
+        "Casual Shoes"
       ],
       "gender": "Women",
       "baseColour": [
         "Black"
       ]
     },
-    "spec_cluster_id": "Flats__Women__Black",
+    "spec_cluster_id": "Casual Shoes|Flats__Women__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_173",
@@ -3383,7 +3572,8 @@
     },
     "spec_cluster_id": "Shirts__None__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_174",
@@ -3403,7 +3593,8 @@
     },
     "spec_cluster_id": "Formal Shoes__Men__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_175",
@@ -3423,7 +3614,8 @@
     },
     "spec_cluster_id": "Tops__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_176",
@@ -3443,7 +3635,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__Green",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_177",
@@ -3463,7 +3656,8 @@
     },
     "spec_cluster_id": "Tops__None__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_178",
@@ -3483,7 +3677,8 @@
     },
     "spec_cluster_id": "Sunglasses__Women__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_179",
@@ -3503,7 +3698,8 @@
     },
     "spec_cluster_id": "Socks__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_180",
@@ -3523,7 +3719,8 @@
     },
     "spec_cluster_id": "Sports Shoes__Women__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_181",
@@ -3543,7 +3740,8 @@
     },
     "spec_cluster_id": "Casual Shoes__Men__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_182",
@@ -3561,7 +3759,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_183",
@@ -3581,7 +3780,8 @@
     },
     "spec_cluster_id": "Watches__None__White",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_184",
@@ -3601,7 +3801,8 @@
     },
     "spec_cluster_id": "Handbags__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_185",
@@ -3621,7 +3822,8 @@
     },
     "spec_cluster_id": "Heels__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_186",
@@ -3641,7 +3843,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_187",
@@ -3661,7 +3864,8 @@
     },
     "spec_cluster_id": "Backpacks__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_188",
@@ -3679,7 +3883,8 @@
     },
     "spec_cluster_id": "Tshirts__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_189",
@@ -3699,7 +3904,8 @@
     },
     "spec_cluster_id": "Briefs__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_190",
@@ -3719,7 +3925,8 @@
     },
     "spec_cluster_id": "Shirts__Men__White",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_191",
@@ -3739,7 +3946,8 @@
     },
     "spec_cluster_id": "Belts__Men__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_192",
@@ -3759,7 +3967,8 @@
     },
     "spec_cluster_id": "Formal Shoes__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_193",
@@ -3777,7 +3986,8 @@
     },
     "spec_cluster_id": "Sports Shoes__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_194",
@@ -3797,7 +4007,8 @@
     },
     "spec_cluster_id": "Wallets__Women__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_195",
@@ -3817,7 +4028,8 @@
     },
     "spec_cluster_id": "Shirts__Men__Grey",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_196",
@@ -3837,7 +4049,8 @@
     },
     "spec_cluster_id": "Tshirts__Women__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_197",
@@ -3855,7 +4068,8 @@
     },
     "spec_cluster_id": "Sunglasses__Women__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_198",
@@ -3875,7 +4089,8 @@
     },
     "spec_cluster_id": "Tshirts__Men__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_199",
@@ -3895,7 +4110,8 @@
     },
     "spec_cluster_id": "Tshirts__Women__Green",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_200",
@@ -3913,7 +4129,8 @@
     },
     "spec_cluster_id": "Sunglasses__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_201",
@@ -3931,7 +4148,8 @@
     },
     "spec_cluster_id": "Casual Shoes__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_202",
@@ -3951,7 +4169,8 @@
     },
     "spec_cluster_id": "Backpacks__None__Blue",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_203",
@@ -3969,7 +4188,8 @@
     },
     "spec_cluster_id": "Trousers__Men__",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_204",
@@ -3989,7 +4209,8 @@
     },
     "spec_cluster_id": "Casual Shoes__None__Grey",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_205",
@@ -4009,7 +4230,8 @@
     },
     "spec_cluster_id": "Watches__Men__White",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_206",
@@ -4029,7 +4251,8 @@
     },
     "spec_cluster_id": "Jeans__None__Black",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_207",
@@ -4049,7 +4272,8 @@
     },
     "spec_cluster_id": "Backpacks__None__Red",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_208",
@@ -4069,7 +4293,8 @@
     },
     "spec_cluster_id": "Handbags__None__Brown",
     "overlaps_dev13_vocab": false,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
   },
   {
     "id": "val_b_synth_209",
@@ -4087,6 +4312,723 @@
     },
     "spec_cluster_id": "Briefs__Men__",
     "overlaps_dev13_vocab": true,
-    "source": "template + bảng đồng nghĩa của agent + real_typo"
+    "source": "template + bảng đồng nghĩa của agent + real_typo",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_210",
+    "query": "tim mua ao coc tay nux giới đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "telex_raw",
+    "n_relevant": 50,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Tshirts__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_024",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_211",
+    "query": "cần1 tìm sơ mi công sở của nam lông chuột đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "vni_raw",
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_031",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_212",
+    "query": "tưvấn giúp ba lô đi học xanh da trời đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "sticky_keys",
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Backpacks__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_038",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_213",
+    "query": "shop ơi có ảo phông vàng đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Yellow"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Yellow",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_052",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_214",
+    "query": "shop ơi có ddoongf hồ thời trang chị em",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "telex_raw",
+    "n_relevant": 54,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Watches__Women__",
+    "overlaps_dev13_vocab": true,
+    "source": "typo_from_val_b_synth_059",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_215",
+    "query": "hoa tai nu4 giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "vni_raw",
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Earrings__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_066",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_216",
+    "query": "cho minh hoi non luoi trai nam nữ đều mang được giátốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "sticky_keys",
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Caps"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Caps__Unisex__",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_073",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_217",
+    "query": "đồng hồ kim cho nữ trẳng giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Watches__Women__White",
+    "overlaps_dev13_vocab": true,
+    "source": "typo_from_val_b_synth_087",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_218",
+    "query": "tìm mua aso sơ mi nam xanh biển giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "telex_raw",
+    "n_relevant": 33,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_094",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_219",
+    "query": "ao1 thun cotton bé trai đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "vni_raw",
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Boys",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Tshirts__Boys__",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_101",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_220",
+    "query": "tim mua dong ho deotay cua nam mau bac mau moi nhat",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "sticky_keys",
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "spec_cluster_id": "Watches__Men__Silver",
+    "overlaps_dev13_vocab": true,
+    "source": "typo_from_val_b_synth_108",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_221",
+    "query": "tu van giup tủi đeo vai unisex",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Handbags__Unisex__",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_115",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_222",
+    "query": "giayf vải chị em trắng tinh đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "telex_raw",
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__Women__White",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_143",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_223",
+    "query": "giay tap gym nam d9en",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "vni_raw",
+    "n_relevant": 23,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Sports Shoes__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_157",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_224",
+    "query": "ao phongco tron hồng phấn đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "sticky_keys",
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Pink"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Pink",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_164",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_225",
+    "query": "tủi công sở màu đen",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Handbags__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_020",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_226",
+    "query": "cần tìm dây lưng da của nam màu naau đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "telex_raw",
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Belts__Men__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_027",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_227",
+    "query": "tim mua ao coc tay tra8ng1 tinh mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "vni_raw",
+    "n_relevant": 47,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__White",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_048",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_228",
+    "query": "cho minh hoi quanbò chị em đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "sticky_keys",
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Jeans__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_055",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_229",
+    "query": "tim mua tui cong so chị em màu nẩu đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Handbags__Women__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_062",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_230",
+    "query": "tìm mua aso phông nữ màu trắng",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "telex_raw",
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Women__White",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_083",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_231",
+    "query": "tu van giup ao thun cotton mau2 xám đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "vni_raw",
+    "n_relevant": 41,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_118",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_232",
+    "query": "tim muagiay mọi đen đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "sticky_keys",
+    "n_relevant": 50,
+    "spec": {
+      "articleType": [
+        "Flats",
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes|Flats__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_125",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_233",
+    "query": "cần tìm áo phông cổ tròn cho nam màu trẳng giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 29,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Men__White",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_132",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_234",
+    "query": "giayf gót nhọn nữ giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "telex_raw",
+    "n_relevant": 63,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Heels__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_146",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_235",
+    "query": "tìm mua vớ cổ ngắn cho nam tra8ng1 tinh giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "vni_raw",
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Socks__Men__White",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_153",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_236",
+    "query": "dép quai hậu nâu bò đichơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "sticky_keys",
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Sandals__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_160",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_237",
+    "query": "shop oi có bóp da đen đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Wallets__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_002",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_238",
+    "query": "cần tìm giayf tập gym nữ màu trắng đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "telex_raw",
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Sports Shoes__Women__White",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_016",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_239",
+    "query": "cho mình hỏi bóp da của nữ na6u đất đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "vni_raw",
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Wallets__Women__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_030",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_240",
+    "query": "giày vải của nam đichơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "sticky_keys",
+    "n_relevant": 107,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Casual Shoes__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_037",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_241",
+    "query": "cho mình hỏi dẹp quai hậu của nam mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 32,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sandals__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_051",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_242",
+    "query": "cho mình hỏi dép lào màu dden đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "telex_raw",
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Flip Flops__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_065",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_243",
+    "query": "tui1 công sở chị em xanh da trời",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "vni_raw",
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Handbags__Women__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_079",
+    "is_typo": true
+  },
+  {
+    "id": "val_b_synth_244",
+    "query": "cho minhhoi so mi cong so mau hong mau moi nhat",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "sticky_keys",
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Pink"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__Pink",
+    "overlaps_dev13_vocab": false,
+    "source": "typo_from_val_b_synth_086",
+    "is_typo": true
   }
 ]

@@ -1,12 +1,15 @@
 """
 Module tiêm lỗi parse có seed (Seed=42) độc lập với lexicon cho Tập C (Parse-error probe).
-Dùng để đo đường cong tác hại theo mức lỗi (0%, 10%, 20%, 30%) trên val_gallery.
+Phiên bản 2c.3:
+- Lỗi LỒNG NHAU (nested): mỗi truy vấn có u ~ U(0, 1) (seed 42), bị lỗi ở mức r nếu u < r;
+  loại lỗi được chọn một lần cho mỗi truy vấn, nhất quán giữa các mức.
+- Chỉ tiêm lỗi có hiệu lực: không drop slot đã rỗng; không flip gender null/Unisex vô nghĩa.
 """
 from __future__ import annotations
 
 import copy
 import random
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 
 # Các cặp articleType dễ nhầm lẫn theo 2b.4
@@ -30,6 +33,121 @@ ALL_COLOURS = [
     "Black", "White", "Blue", "Navy Blue", "Grey", "Red", "Green", "Brown", "Pink", "Silver", "Beige", "Yellow", "Purple"
 ]
 
+VALID_FLIP_GENDERS = {"Men": "Women", "Women": "Men", "Boys": "Girls", "Girls": "Boys"}
+
+
+def _build_effective_error_for_item(
+    clean_item: Dict[str, Any],
+    rng: random.Random,
+) -> Tuple[Dict[str, Any], Optional[str]]:
+    """
+    Chọn ngẫu nhiên MỘT lỗi có hiệu lực (thực sự làm thay đổi parsed) cho clean_item.
+    Trả về (mutated_item, error_type). Nếu không có slot nào hợp lệ, trả về (deepcopy, None).
+    """
+    mutated = copy.deepcopy(clean_item)
+    base_weights = {
+        "wrong_article": 30,
+        "flip_gender": 10,
+        "drop_slot": 20,
+        "wrong_colour": 10,
+    }
+
+    eligible_types: List[str] = []
+    eligible_weights: List[int] = []
+
+    if mutated.get("articleType"):
+        eligible_types.append("wrong_article")
+        eligible_weights.append(base_weights["wrong_article"])
+
+    if mutated.get("gender") in VALID_FLIP_GENDERS:
+        eligible_types.append("flip_gender")
+        eligible_weights.append(base_weights["flip_gender"])
+
+    present_slots = [k for k in ("articleType", "gender", "baseColour") if mutated.get(k)]
+    if present_slots:
+        eligible_types.append("drop_slot")
+        eligible_weights.append(base_weights["drop_slot"])
+
+    if mutated.get("baseColour"):
+        eligible_types.append("wrong_colour")
+        eligible_weights.append(base_weights["wrong_colour"])
+
+    if not eligible_types:
+        return mutated, None
+
+    etype = rng.choices(eligible_types, weights=eligible_weights, k=1)[0]
+
+    if etype == "wrong_article":
+        orig_set = set(mutated["articleType"])
+        orig_first = mutated["articleType"][0]
+        cands = [c for c in CONFUSABLE_ARTICLE_TYPES.get(orig_first, []) if c not in orig_set]
+        if not cands:
+            cands = [k for k in CONFUSABLE_ARTICLE_TYPES.keys() if k not in orig_set]
+        mutated["articleType"] = [rng.choice(cands)]
+    elif etype == "flip_gender":
+        mutated["gender"] = VALID_FLIP_GENDERS[mutated["gender"]]
+    elif etype == "drop_slot":
+        drop_k = rng.choice(present_slots)
+        mutated[drop_k] = None if drop_k == "gender" else []
+    elif etype == "wrong_colour":
+        orig_cols = set(mutated["baseColour"])
+        cands_c = [c for c in ALL_COLOURS if c not in orig_cols]
+        mutated["baseColour"] = [rng.choice(cands_c)]
+
+    return mutated, etype
+
+
+def inject_nested_parse_errors(
+    clean_parsed_list: List[Dict[str, Any]],
+    error_rates: Sequence[float] = (0.0, 0.1, 0.2, 0.3),
+    seed: int = 42,
+) -> Dict[str, Any]:
+    """
+    Sinh các mức tiêm lỗi LỒNG NHAU với cùng seed:
+    - Mỗi truy vấn i có u_i ~ U(0, 1) và 1 lỗi cố định (mutated_i, etype_i).
+    - Ở mức r, truy vấn i nhận mutated_i nếu u_i < r (và etype_i is not None).
+    """
+    rng = random.Random(seed)
+    per_query_plan: List[Tuple[float, Dict[str, Any], Optional[str]]] = []
+    for p in clean_parsed_list:
+        u = rng.random()
+        mutated, etype = _build_effective_error_for_item(p, rng)
+        per_query_plan.append((u, mutated, etype))
+
+    levels: Dict[float, Dict[str, Any]] = {}
+    n_total = len(clean_parsed_list)
+    for r in error_rates:
+        items_out: List[Dict[str, Any]] = []
+        n_effective = 0
+        error_flags: List[bool] = []
+        error_types: List[Optional[str]] = []
+        for idx, p in enumerate(clean_parsed_list):
+            u, mutated, etype = per_query_plan[idx]
+            if r > 0.0 and u < r and etype is not None:
+                items_out.append(copy.deepcopy(mutated))
+                n_effective += 1
+                error_flags.append(True)
+                error_types.append(etype)
+            else:
+                items_out.append(copy.deepcopy(p))
+                error_flags.append(False)
+                error_types.append(None)
+
+        levels[float(r)] = {
+            "parsed": items_out,
+            "n_effective_errors": n_effective,
+            "actual_error_rate": float(n_effective / n_total) if n_total else 0.0,
+            "error_flags": error_flags,
+            "error_types": error_types,
+        }
+
+    return {
+        "seed": seed,
+        "u_values": [x[0] for x in per_query_plan],
+        "planned_error_types": [x[2] for x in per_query_plan],
+        "levels": levels,
+    }
+
 
 def inject_parse_errors(
     clean_parsed_list: List[Dict[str, Any]],
@@ -37,63 +155,7 @@ def inject_parse_errors(
     seed: int = 42,
 ) -> List[Dict[str, Any]]:
     """
-    Tiêm lỗi parse vào danh sách kết quả parse chuẩn (clean_parsed_list) với tỉ lệ error_rate (vd 0.0, 0.1, 0.2, 0.3).
-    Phân bố loại lỗi trong phần bị tiêm (tỉ lệ 30 : 10 : 20 : 10, chuẩn hóa tổng = 70):
-      - articleType sai sang lớp dễ nhầm: 30/70 (~42.9%)
-      - gender đảo (Men <-> Women): 10/70 (~14.3%)
-      - slot bị bỏ (xóa 1 slot bất kỳ có mặt): 20/70 (~28.6%)
-      - baseColour sai sang màu khác: 10/70 (~14.3%)
+    Wrapper tương thích ngược trả về danh sách parsed ở mức error_rate theo cơ chế lồng nhau.
     """
-    if error_rate <= 0.0:
-        return [copy.deepcopy(p) for p in clean_parsed_list]
-
-    rng = random.Random(seed + int(round(error_rate * 1000)))
-    out: List[Dict[str, Any]] = []
-
-    # Trọng số loại lỗi theo 2b.4: 30, 10, 20, 10
-    error_types = ["wrong_article", "flip_gender", "drop_slot", "wrong_colour"]
-    weights = [30, 10, 20, 10]
-
-    for p in clean_parsed_list:
-        item = copy.deepcopy(p)
-        if rng.random() < error_rate:
-            etype = rng.choices(error_types, weights=weights, k=1)[0]
-            if etype == "wrong_article" and item.get("articleType"):
-                orig = item["articleType"][0]
-                cands = CONFUSABLE_ARTICLE_TYPES.get(orig)
-                if cands:
-                    item["articleType"] = [rng.choice(cands)]
-                else:
-                    # Fallback sang loại phổ biến khác
-                    fallback = [k for k in CONFUSABLE_ARTICLE_TYPES.keys() if k != orig]
-                    item["articleType"] = [rng.choice(fallback)]
-            elif etype == "flip_gender" and item.get("gender"):
-                g = item["gender"]
-                if g == "Men":
-                    item["gender"] = "Women"
-                elif g == "Women":
-                    item["gender"] = "Men"
-                elif g == "Boys":
-                    item["gender"] = "Girls"
-                elif g == "Girls":
-                    item["gender"] = "Boys"
-                else:
-                    item["gender"] = rng.choice(["Men", "Women"])
-            elif etype == "drop_slot":
-                present = [k for k in ["articleType", "gender", "baseColour"] if item.get(k)]
-                if present:
-                    drop_k = rng.choice(present)
-                    item[drop_k] = None if drop_k == "gender" else []
-            elif etype == "wrong_colour" and item.get("baseColour"):
-                orig_c = item["baseColour"][0]
-                cands_c = [c for c in ALL_COLOURS if c != orig_c]
-                item["baseColour"] = [rng.choice(cands_c)]
-            else:
-                # Nếu slot mục tiêu rỗng, rơi về drop_slot
-                present = [k for k in ["articleType", "gender", "baseColour"] if item.get(k)]
-                if present:
-                    drop_k = rng.choice(present)
-                    item[drop_k] = None if drop_k == "gender" else []
-        out.append(item)
-
-    return out
+    res = inject_nested_parse_errors(clean_parsed_list, error_rates=(error_rate,), seed=seed)
+    return res["levels"][float(error_rate)]["parsed"]

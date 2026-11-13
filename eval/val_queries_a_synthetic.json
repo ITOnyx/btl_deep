@@ -2381,7 +2381,7 @@
   },
   {
     "id": "val_a_142",
-    "query": "áo dài truyền thống sari mau xanh la cho nu",
+    "query": "sari an do mau xanh la cho nu",
     "has_diacritics": false,
     "n_relevant": 5,
     "spec": {
@@ -2709,7 +2709,7 @@
   },
   {
     "id": "val_a_162",
-    "query": "áo dài truyền thống sari cho nữ",
+    "query": "sari Ấn Độ cho nữ",
     "has_diacritics": true,
     "n_relevant": 19,
     "spec": {
@@ -3490,7 +3490,7 @@
   },
   {
     "id": "val_a_209",
-    "query": "áo dài truyền thống sari cho nu",
+    "query": "sari an do cho nu",
     "has_diacritics": false,
     "n_relevant": 19,
     "spec": {
@@ -3816,7 +3816,7 @@
   },
   {
     "id": "val_a_229",
-    "query": "áo dài truyền thống sari nu mau xanh la",
+    "query": "sari an do nu mau xanh la",
     "has_diacritics": false,
     "n_relevant": 5,
     "spec": {
