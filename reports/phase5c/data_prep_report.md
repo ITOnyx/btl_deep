@@ -47,10 +47,10 @@
 - Script đã tạo:
   - [`scripts/caption_val_gallery.py`](file:///d:/Kì%207/Hoc_sau_ver4/scripts/caption_val_gallery.py): hỗ trợ `--mode pilot` (200 ảnh val, in 20 caption, kiểm tra 3 điều kiện dừng: `>128 token > 0%`, `chữ Hán > 0%`, `khớp metadata < 100%`) và `--mode full` (1.884 ảnh val theo shard 500 + resume + log lỗi `reports/caption_errors.csv`).
   - [`scripts/build_val_text_index_v5.py`](file:///d:/Kì%207/Hoc_sau_ver4/scripts/build_val_text_index_v5.py): dựng `index/val_gallery_text_v5/` tách riêng `internvl2_only_embeddings.npy`, `internvl2_plus_aux_embeddings.npy`, `metadata_aux_embeddings.npy`, kèm `manifest.json` + SHA-256 + ghi chú Luật D.5.
-- **Trạng thái thực thi & thời gian ước lượng trên RTX 2050 4GB:**
-  - Tiến trình pilot 200 ảnh val (`scripts/caption_val_gallery.py --mode pilot --pilot-n 200`) **đang chạy nền** (đã nạp `OpenGVLab/InternVL2-2B` 8-bit thành công, Peak VRAM `2.80 GB`).
-  - Theo tốc độ thực đo từ Pha 2 (`eval/pilot_200_summary.json`: `14.32 s/ảnh` cho InternVL2-2B + `18.48 s/ảnh` cho Vintern-1B-v3_5 ≈ `32.8 s/ảnh`), 200 ảnh pilot mất **~1,8 giờ** và toàn bộ 1.884 ảnh val mất **~17,2 giờ**.
-  - Sau khi pilot 200 ảnh xong và người dùng duyệt 20 caption mẫu, sẽ chạy `--mode full` (có shard + resume) rồi chạy `scripts/build_val_text_index_v5.py` để hoàn tất `index/val_gallery_text_v5/`.
+- **Kết quả Pilot 200 ảnh `val_gallery` (`eval/val_pilot_200_summary.json`, `seed=42`):**
+  - **Config A (`InternVL2-2B` 8-bit):** `>128 token = 0.0%`, `chữ Hán = 0.0%`, `tiếng Anh = 0.0%`, `khớp metadata = 0.0%` (lặp lại tiền tố prompt tiếng Việt, giống hệt hiện tượng đã ghi nhận ở Pha 2). Tốc độ thực đo: `8.58 s/ảnh`, Peak VRAM `2.80 GB`.
+  - **Config B (`merge_v1` = InternVL2-2B + Vintern-1B-v3_5 + Metadata Anchor):** `>128 token = 0.0%`, `chữ Hán = 0.0%`, `tiếng Anh = 1.5%`, **`khớp metadata = 100.0%`** (`stop_gate_config_B_triggered = false`). Peak VRAM Vintern `1.03 GB`.
+  - **Thời gian ước lượng toàn bộ 1.884 ảnh val:** ~`18.1 s/ảnh` ≈ **~9,5 giờ** cho `--mode full`. Đã dừng sau pilot 200 ảnh để người dùng đọc 20 caption mẫu và duyệt trước khi chạy `--mode full` + `build_val_text_index_v5.py`.
 
 ---
 
