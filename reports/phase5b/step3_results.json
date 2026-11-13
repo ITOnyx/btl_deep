@@ -1,0 +1,2434 @@
+{
+  "seed": 42,
+  "parser_v2_version": "v2.1",
+  "parser_v2_sha256": "1262383c151ba020dfcfcadc6292a974bc8eb1b2ec0de3fb1698b3430cb4cc5a",
+  "folds_sha256": "dfd301722ec86734fd0f0bdb38bcb3784d7db22334a6535c51630fb825f91e25",
+  "selection_rule_sha256": "fa4e0df3469b0f83a458c38a466efaec3ed3b4d951ee52b80c36dc4c783de07e",
+  "mean_cosine_std_val_a": 0.1622,
+  "reference_model_only": {
+    "A": {
+      "n_queries": 240,
+      "recall@1": 0.3625,
+      "recall@5": 0.55,
+      "recall@10": 0.6041666666666666,
+      "mAP": 0.30583646001248826,
+      "true_recall@10": 0.23226864487038987,
+      "n_queries_total": 240,
+      "n_queries_valid": 240
+    },
+    "B_clean": {
+      "n_queries": 165,
+      "recall@1": 0.10909090909090909,
+      "recall@5": 0.23636363636363636,
+      "recall@10": 0.24848484848484848,
+      "mAP": 0.10709414753432236,
+      "true_recall@10": 0.06041414057450209,
+      "n_queries_total": 165,
+      "n_queries_valid": 165
+    },
+    "B_typo": {
+      "n_queries": 80,
+      "recall@1": 0.0875,
+      "recall@5": 0.1625,
+      "recall@10": 0.175,
+      "mAP": 0.09550553412495699,
+      "true_recall@10": 0.03890513522674732,
+      "n_queries_total": 80,
+      "n_queries_valid": 80
+    },
+    "C_20": {
+      "n_queries": 160,
+      "recall@1": 0.25625,
+      "recall@5": 0.4375,
+      "recall@10": 0.45625,
+      "mAP": 0.22289329985439638,
+      "true_recall@10": 0.15404387731543273,
+      "n_queries_total": 160,
+      "n_queries_valid": 160
+    },
+    "map_c_20_cluster": 0.2034
+  },
+  "reference_baseline_pha5_no_zscore": {
+    "A_map_cluster": 0.5896,
+    "A_summary": {
+      "n_queries": 240,
+      "recall@1": 0.6833333333333333,
+      "recall@5": 0.8083333333333333,
+      "recall@10": 0.8166666666666667,
+      "mAP": 0.5762420079168699,
+      "true_recall@10": 0.44480985834322084,
+      "n_queries_total": 240,
+      "n_queries_valid": 240
+    },
+    "B_clean_map_cluster": 0.3171,
+    "B_clean_summary": {
+      "n_queries": 165,
+      "recall@1": 0.34545454545454546,
+      "recall@5": 0.5515151515151515,
+      "recall@10": 0.6363636363636364,
+      "mAP": 0.3170767797186503,
+      "true_recall@10": 0.22515643726258447,
+      "n_queries_total": 165,
+      "n_queries_valid": 165
+    }
+  },
+  "grid_results": [
+    {
+      "config_id": "cfg_01",
+      "cfg": {
+        "config_id": "cfg_01",
+        "role": "baseline_v1",
+        "parser": "parser_v1",
+        "gamma": 0.3,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.2286,
+      "fold_scores": [
+        0.2596,
+        0.2192,
+        0.2223,
+        0.2053,
+        0.2369
+      ],
+      "map_a_cluster": 0.366,
+      "map_b_clean_cluster": 0.1372,
+      "map_b_typo_cluster": 0.1145,
+      "map_c_20_cluster": 0.2454,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.4583333333333333,
+        "recall@5": 0.5958333333333333,
+        "recall@10": 0.675,
+        "mAP": 0.35352713298767413,
+        "true_recall@10": 0.2762768293718789,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.17575757575757575,
+        "recall@5": 0.2545454545454545,
+        "recall@10": 0.3090909090909091,
+        "mAP": 0.13724911963921985,
+        "true_recall@10": 0.07960092170408538,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.125,
+        "recall@5": 0.175,
+        "recall@10": 0.2125,
+        "mAP": 0.11270997678472874,
+        "true_recall@10": 0.0486778255682553,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.36875,
+        "recall@5": 0.45625,
+        "recall@10": 0.50625,
+        "mAP": 0.26522926818525094,
+        "true_recall@10": 0.1821164289168334,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.4742,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.042,
+      "delta_c20_vs_base": 0.0,
+      "delta_r10_ab_vs_cfg01": 0.0,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 22.881,
+        "p95_ms": 35.911,
+        "p99_ms": 55.393,
+        "mean_ms": 24.701,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 68,
+          "graphics_clock_mhz": 210,
+          "mem_clock_mhz": 405
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_02",
+      "cfg": {
+        "config_id": "cfg_02",
+        "role": "mandatory_ablation_v2",
+        "parser": "parser_v2",
+        "gamma": 0.3,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.2297,
+      "fold_scores": [
+        0.2608,
+        0.2182,
+        0.2235,
+        0.2065,
+        0.2396
+      ],
+      "map_a_cluster": 0.3677,
+      "map_b_clean_cluster": 0.1378,
+      "map_b_typo_cluster": 0.1149,
+      "map_c_20_cluster": 0.2454,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.4666666666666667,
+        "recall@5": 0.6041666666666666,
+        "recall@10": 0.675,
+        "mAP": 0.35573202173761226,
+        "true_recall@10": 0.2784717698480694,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.17575757575757575,
+        "recall@5": 0.2545454545454545,
+        "recall@10": 0.30303030303030304,
+        "mAP": 0.137840585124808,
+        "true_recall@10": 0.08052010294567677,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.1375,
+        "recall@5": 0.1875,
+        "recall@10": 0.2375,
+        "mAP": 0.11386053760011725,
+        "true_recall@10": 0.051895763217611246,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.36875,
+        "recall@5": 0.45625,
+        "recall@10": 0.50625,
+        "mAP": 0.26522926818525094,
+        "true_recall@10": 0.1821164289168334,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.4763,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.042,
+      "delta_c20_vs_base": 0.0,
+      "delta_r10_ab_vs_cfg01": 0.0021,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 24.585,
+        "p95_ms": 41.497,
+        "p99_ms": 62.016,
+        "mean_ms": 26.713,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 81,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 86,
+          "graphics_clock_mhz": 1725,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_03",
+      "cfg": {
+        "config_id": "cfg_03",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 0.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.2552,
+      "fold_scores": [
+        0.2896,
+        0.2409,
+        0.2417,
+        0.2333,
+        0.2705
+      ],
+      "map_a_cluster": 0.4009,
+      "map_b_clean_cluster": 0.1582,
+      "map_b_typo_cluster": 0.1271,
+      "map_c_20_cluster": 0.2703,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.5166666666666667,
+        "recall@5": 0.6458333333333334,
+        "recall@10": 0.7041666666666667,
+        "mAP": 0.3887731043143896,
+        "true_recall@10": 0.3061937675577189,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.2,
+        "recall@5": 0.2727272727272727,
+        "recall@10": 0.37575757575757573,
+        "mAP": 0.15820084979991966,
+        "true_recall@10": 0.09585501601703401,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.15,
+        "recall@5": 0.2,
+        "recall@10": 0.275,
+        "mAP": 0.12733360844421507,
+        "true_recall@10": 0.059688664717857186,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.40625,
+        "recall@5": 0.48125,
+        "recall@10": 0.55,
+        "mAP": 0.29088999418561834,
+        "true_recall@10": 0.2019693338992084,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.5216,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.0669,
+      "delta_c20_vs_base": 0.0249,
+      "delta_r10_ab_vs_cfg01": 0.0474,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 27.819,
+        "p95_ms": 38.379,
+        "p99_ms": 60.067,
+        "mean_ms": 29.442,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1620,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_04",
+      "cfg": {
+        "config_id": "cfg_04",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 0.8,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.296,
+      "fold_scores": [
+        0.3278,
+        0.2792,
+        0.2776,
+        0.2811,
+        0.3145
+      ],
+      "map_a_cluster": 0.4523,
+      "map_b_clean_cluster": 0.1919,
+      "map_b_typo_cluster": 0.148,
+      "map_c_20_cluster": 0.3086,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.5791666666666667,
+        "recall@5": 0.7,
+        "recall@10": 0.7291666666666666,
+        "mAP": 0.4408124013383588,
+        "true_recall@10": 0.3446086590055715,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.21818181818181817,
+        "recall@5": 0.38181818181818183,
+        "recall@10": 0.4484848484848485,
+        "mAP": 0.19194656701708093,
+        "true_recall@10": 0.12356262916371595,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.1625,
+        "recall@5": 0.25,
+        "recall@10": 0.3125,
+        "mAP": 0.14916314225494895,
+        "true_recall@10": 0.0740353164080583,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.43125,
+        "recall@5": 0.55,
+        "recall@10": 0.56875,
+        "mAP": 0.33069842947395617,
+        "true_recall@10": 0.23763261137951713,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.5649,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.1052,
+      "delta_c20_vs_base": 0.0632,
+      "delta_r10_ab_vs_cfg01": 0.0907,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 30.32,
+        "p95_ms": 45.155,
+        "p99_ms": 60.118,
+        "mean_ms": 31.485,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 83,
+          "graphics_clock_mhz": 1620,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_05",
+      "cfg": {
+        "config_id": "cfg_05",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.0,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.3229,
+      "fold_scores": [
+        0.3568,
+        0.3028,
+        0.3031,
+        0.3098,
+        0.342
+      ],
+      "map_a_cluster": 0.4816,
+      "map_b_clean_cluster": 0.2172,
+      "map_b_typo_cluster": 0.164,
+      "map_c_20_cluster": 0.3325,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.6083333333333333,
+        "recall@5": 0.7125,
+        "recall@10": 0.75,
+        "mAP": 0.47054456508489495,
+        "true_recall@10": 0.3682412990141914,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.2727272727272727,
+        "recall@5": 0.4121212121212121,
+        "recall@10": 0.5151515151515151,
+        "mAP": 0.21716504630619382,
+        "true_recall@10": 0.14307193269831503,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.175,
+        "recall@5": 0.2875,
+        "recall@10": 0.35,
+        "mAP": 0.1649066912490455,
+        "true_recall@10": 0.09050760508429434,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.4625,
+        "recall@5": 0.5625,
+        "recall@10": 0.625,
+        "mAP": 0.35486648834738777,
+        "true_recall@10": 0.2596213797992066,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.6041,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.1291,
+      "delta_c20_vs_base": 0.0871,
+      "delta_r10_ab_vs_cfg01": 0.1299,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 29.096,
+        "p95_ms": 38.239,
+        "p99_ms": 57.215,
+        "mean_ms": 29.764,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 83,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_06",
+      "cfg": {
+        "config_id": "cfg_06",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.3926,
+      "fold_scores": [
+        0.4221,
+        0.3617,
+        0.3786,
+        0.3918,
+        0.4089
+      ],
+      "map_a_cluster": 0.5502,
+      "map_b_clean_cluster": 0.2876,
+      "map_b_typo_cluster": 0.2045,
+      "map_c_20_cluster": 0.3945,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.6625,
+        "recall@5": 0.7708333333333334,
+        "recall@10": 0.8041666666666667,
+        "mAP": 0.5397886298653878,
+        "true_recall@10": 0.4211666306651603,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.38181818181818183,
+        "recall@5": 0.509090909090909,
+        "recall@10": 0.5818181818181818,
+        "mAP": 0.2875592125801135,
+        "true_recall@10": 0.19758570584375698,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.2125,
+        "recall@5": 0.3625,
+        "recall@10": 0.45,
+        "mAP": 0.20483302801708492,
+        "true_recall@10": 0.12392208192669943,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.51875,
+        "recall@5": 0.61875,
+        "recall@10": 0.675,
+        "mAP": 0.4179657130542044,
+        "true_recall@10": 0.3100227982190858,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.6701,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.1911,
+      "delta_c20_vs_base": 0.1491,
+      "delta_r10_ab_vs_cfg01": 0.1959,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 29.316,
+        "p95_ms": 43.738,
+        "p99_ms": 62.071,
+        "mean_ms": 30.934,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1335,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_07",
+      "cfg": {
+        "config_id": "cfg_07",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 0.5,
+        "slot_weights": {
+          "articleType": 0.6,
+          "gender": 0.2,
+          "baseColour": 0.2
+        },
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.2567,
+      "fold_scores": [
+        0.2846,
+        0.2366,
+        0.2537,
+        0.2356,
+        0.2732
+      ],
+      "map_a_cluster": 0.4025,
+      "map_b_clean_cluster": 0.1597,
+      "map_b_typo_cluster": 0.1293,
+      "map_c_20_cluster": 0.271,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.5041666666666667,
+        "recall@5": 0.6583333333333333,
+        "recall@10": 0.7125,
+        "mAP": 0.38766378954397707,
+        "true_recall@10": 0.3005334612199872,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.1696969696969697,
+        "recall@5": 0.30303030303030304,
+        "recall@10": 0.38181818181818183,
+        "mAP": 0.15969034231754684,
+        "true_recall@10": 0.09747187431951644,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.1625,
+        "recall@5": 0.2125,
+        "recall@10": 0.275,
+        "mAP": 0.13032776224849013,
+        "true_recall@10": 0.06177199805119051,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.3875,
+        "recall@5": 0.51875,
+        "recall@10": 0.55,
+        "mAP": 0.29112107226682954,
+        "true_recall@10": 0.20008710239502286,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.5278,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.0676,
+      "delta_c20_vs_base": 0.0256,
+      "delta_r10_ab_vs_cfg01": 0.0536,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 31.004,
+        "p95_ms": 39.292,
+        "p99_ms": 54.07,
+        "mean_ms": 31.534,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 83,
+          "graphics_clock_mhz": 1335,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1597,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_08",
+      "cfg": {
+        "config_id": "cfg_08",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 0.8,
+        "slot_weights": {
+          "articleType": 0.6,
+          "gender": 0.2,
+          "baseColour": 0.2
+        },
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.2984,
+      "fold_scores": [
+        0.3244,
+        0.2711,
+        0.2952,
+        0.2848,
+        0.3163
+      ],
+      "map_a_cluster": 0.4498,
+      "map_b_clean_cluster": 0.1975,
+      "map_b_typo_cluster": 0.1491,
+      "map_c_20_cluster": 0.3071,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.5833333333333334,
+        "recall@5": 0.7,
+        "recall@10": 0.7416666666666667,
+        "mAP": 0.4332104735354883,
+        "true_recall@10": 0.335215902419896,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.26666666666666666,
+        "recall@5": 0.4,
+        "recall@10": 0.4727272727272727,
+        "mAP": 0.1974696846681764,
+        "true_recall@10": 0.12513815445733592,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.1625,
+        "recall@5": 0.2375,
+        "recall@10": 0.3,
+        "mAP": 0.15155952420954566,
+        "true_recall@10": 0.07784936443225947,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.45,
+        "recall@5": 0.54375,
+        "recall@10": 0.5875,
+        "mAP": 0.32807663723055003,
+        "true_recall@10": 0.23387985080342277,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.5773,
+      "catastrophic_drop_b": 0.0041,
+      "delta_c20_vs_mo": 0.1037,
+      "delta_c20_vs_base": 0.0617,
+      "delta_r10_ab_vs_cfg01": 0.1031,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 31.298,
+        "p95_ms": 48.431,
+        "p99_ms": 63.298,
+        "mean_ms": 32.636,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1417,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_09",
+      "cfg": {
+        "config_id": "cfg_09",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.0,
+        "slot_weights": {
+          "articleType": 0.6,
+          "gender": 0.2,
+          "baseColour": 0.2
+        },
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.3275,
+      "fold_scores": [
+        0.3523,
+        0.2937,
+        0.3246,
+        0.3183,
+        0.3485
+      ],
+      "map_a_cluster": 0.4794,
+      "map_b_clean_cluster": 0.2262,
+      "map_b_typo_cluster": 0.1638,
+      "map_c_20_cluster": 0.33,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.5958333333333333,
+        "recall@5": 0.725,
+        "recall@10": 0.7875,
+        "mAP": 0.46099200551691905,
+        "true_recall@10": 0.35856135920535565,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.30303030303030304,
+        "recall@5": 0.45454545454545453,
+        "recall@10": 0.5151515151515151,
+        "mAP": 0.22615288004079695,
+        "true_recall@10": 0.14489895887387852,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.175,
+        "recall@5": 0.2875,
+        "recall@10": 0.3625,
+        "mAP": 0.16641591964233537,
+        "true_recall@10": 0.089754102603445,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.45625,
+        "recall@5": 0.575,
+        "recall@10": 0.625,
+        "mAP": 0.3516851725521165,
+        "true_recall@10": 0.25231588662432697,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.6247,
+      "catastrophic_drop_b": 0.0041,
+      "delta_c20_vs_mo": 0.1266,
+      "delta_c20_vs_base": 0.0846,
+      "delta_r10_ab_vs_cfg01": 0.1505,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 27.979,
+        "p95_ms": 41.472,
+        "p99_ms": 60.519,
+        "mean_ms": 30.029,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 83,
+          "graphics_clock_mhz": 1417,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1552,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_10",
+      "cfg": {
+        "config_id": "cfg_10",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.5,
+        "slot_weights": {
+          "articleType": 0.6,
+          "gender": 0.2,
+          "baseColour": 0.2
+        },
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.4054,
+      "fold_scores": [
+        0.4306,
+        0.3614,
+        0.4014,
+        0.409,
+        0.4248
+      ],
+      "map_a_cluster": 0.5593,
+      "map_b_clean_cluster": 0.3026,
+      "map_b_typo_cluster": 0.2047,
+      "map_c_20_cluster": 0.3958,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.6625,
+        "recall@5": 0.7833333333333333,
+        "recall@10": 0.825,
+        "mAP": 0.5372822044670682,
+        "true_recall@10": 0.4195639825693237,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.40606060606060607,
+        "recall@5": 0.5454545454545454,
+        "recall@10": 0.6303030303030303,
+        "mAP": 0.3025816151436676,
+        "true_recall@10": 0.19939078905112162,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.2,
+        "recall@5": 0.4375,
+        "recall@10": 0.55,
+        "mAP": 0.20767292695850603,
+        "true_recall@10": 0.12749132467958418,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.525,
+        "recall@5": 0.64375,
+        "recall@10": 0.725,
+        "mAP": 0.4168893992816073,
+        "true_recall@10": 0.30643864930227144,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.7134,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.1924,
+      "delta_c20_vs_base": 0.1504,
+      "delta_r10_ab_vs_cfg01": 0.2392,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 31.755,
+        "p95_ms": 46.461,
+        "p99_ms": 63.717,
+        "mean_ms": 32.854,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1665,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_11",
+      "cfg": {
+        "config_id": "cfg_11",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 0.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": true
+      },
+      "cv_score_mean": 0.366,
+      "fold_scores": [
+        0.3679,
+        0.341,
+        0.3532,
+        0.385,
+        0.3829
+      ],
+      "map_a_cluster": 0.6147,
+      "map_b_clean_cluster": 0.2,
+      "map_b_typo_cluster": 0.1708,
+      "map_c_20_cluster": 0.3633,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.7958333333333333,
+        "recall@5": 0.9083333333333333,
+        "recall@10": 0.9458333333333333,
+        "mAP": 0.606615734776671,
+        "true_recall@10": 0.474264505245892,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.2727272727272727,
+        "recall@5": 0.32727272727272727,
+        "recall@10": 0.43636363636363634,
+        "mAP": 0.20003851239833534,
+        "true_recall@10": 0.12623675763741662,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.1875,
+        "recall@5": 0.25,
+        "recall@10": 0.325,
+        "mAP": 0.1660490657787756,
+        "true_recall@10": 0.0885187388288171,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.50625,
+        "recall@5": 0.60625,
+        "recall@10": 0.6875,
+        "mAP": 0.39088442418149005,
+        "true_recall@10": 0.28402027766667254,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.6701,
+      "catastrophic_drop_b": 0.0082,
+      "delta_c20_vs_mo": 0.1599,
+      "delta_c20_vs_base": 0.1179,
+      "delta_r10_ab_vs_cfg01": 0.1959,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 30.988,
+        "p95_ms": 42.393,
+        "p99_ms": 60.292,
+        "mean_ms": 31.713,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1717,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1627,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_12",
+      "cfg": {
+        "config_id": "cfg_12",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.0,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": true
+      },
+      "cv_score_mean": 0.4378,
+      "fold_scores": [
+        0.4359,
+        0.416,
+        0.4135,
+        0.4609,
+        0.4625
+      ],
+      "map_a_cluster": 0.6962,
+      "map_b_clean_cluster": 0.2654,
+      "map_b_typo_cluster": 0.2099,
+      "map_c_20_cluster": 0.4317,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.85,
+        "recall@5": 0.9416666666666667,
+        "recall@10": 0.9583333333333334,
+        "mAP": 0.6913120992968751,
+        "true_recall@10": 0.533369119752128,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.3393939393939394,
+        "recall@5": 0.46060606060606063,
+        "recall@10": 0.5636363636363636,
+        "mAP": 0.26538067670497334,
+        "true_recall@10": 0.18211508268704382,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.2125,
+        "recall@5": 0.375,
+        "recall@10": 0.4375,
+        "mAP": 0.20565222003230402,
+        "true_recall@10": 0.11941306144933908,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.5625,
+        "recall@5": 0.70625,
+        "recall@10": 0.7625,
+        "mAP": 0.4587964436568009,
+        "true_recall@10": 0.34315568281524383,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.7381,
+      "catastrophic_drop_b": 0.0082,
+      "delta_c20_vs_mo": 0.2283,
+      "delta_c20_vs_base": 0.1863,
+      "delta_r10_ab_vs_cfg01": 0.2639,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 33.039,
+        "p95_ms": 48.79,
+        "p99_ms": 71.992,
+        "mean_ms": 33.741,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1650,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_13",
+      "cfg": {
+        "config_id": "cfg_13",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": true
+      },
+      "cv_score_mean": 0.5053,
+      "fold_scores": [
+        0.4998,
+        0.4796,
+        0.4815,
+        0.5335,
+        0.5323
+      ],
+      "map_a_cluster": 0.7546,
+      "map_b_clean_cluster": 0.3391,
+      "map_b_typo_cluster": 0.2522,
+      "map_c_20_cluster": 0.4966,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.9125,
+        "recall@5": 0.9625,
+        "recall@10": 0.9791666666666666,
+        "mAP": 0.7536143395827127,
+        "true_recall@10": 0.5833767671107394,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.43636363636363634,
+        "recall@5": 0.5575757575757576,
+        "recall@10": 0.6303030303030303,
+        "mAP": 0.33911315760708793,
+        "true_recall@10": 0.2332541565519642,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.25,
+        "recall@5": 0.4875,
+        "recall@10": 0.5375,
+        "mAP": 0.24721598146009133,
+        "true_recall@10": 0.15550942358990855,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.65625,
+        "recall@5": 0.76875,
+        "recall@10": 0.7875,
+        "mAP": 0.5235219066940962,
+        "true_recall@10": 0.39127707342302276,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.7876,
+      "catastrophic_drop_b": 0.0041,
+      "delta_c20_vs_mo": 0.2932,
+      "delta_c20_vs_base": 0.2512,
+      "delta_r10_ab_vs_cfg01": 0.3134,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 32.088,
+        "p95_ms": 53.974,
+        "p99_ms": 71.582,
+        "mean_ms": 34.121,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 85,
+          "graphics_clock_mhz": 1702,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_14",
+      "cfg": {
+        "config_id": "cfg_14",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 0.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": true,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.3431,
+      "fold_scores": [
+        0.3534,
+        0.3067,
+        0.3396,
+        0.3758,
+        0.3402
+      ],
+      "map_a_cluster": 0.5841,
+      "map_b_clean_cluster": 0.1824,
+      "map_b_typo_cluster": 0.1436,
+      "map_c_20_cluster": 0.341,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.7791666666666667,
+        "recall@5": 0.8958333333333334,
+        "recall@10": 0.9416666666666667,
+        "mAP": 0.5761213214835617,
+        "true_recall@10": 0.45819765028113474,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.24242424242424243,
+        "recall@5": 0.3090909090909091,
+        "recall@10": 0.4121212121212121,
+        "mAP": 0.18238351301409086,
+        "true_recall@10": 0.11342018956793695,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.1625,
+        "recall@5": 0.2125,
+        "recall@10": 0.3,
+        "mAP": 0.14197690508453936,
+        "true_recall@10": 0.06863661599138986,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.5,
+        "recall@5": 0.5875,
+        "recall@10": 0.65625,
+        "mAP": 0.3701440484945552,
+        "true_recall@10": 0.275085621314253,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.6557,
+      "catastrophic_drop_b": 0.0041,
+      "delta_c20_vs_mo": 0.1376,
+      "delta_c20_vs_base": 0.0956,
+      "delta_r10_ab_vs_cfg01": 0.1815,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 65.305,
+        "p95_ms": 100.557,
+        "p99_ms": 129.132,
+        "mean_ms": 68.884,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1650,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1612,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": false,
+      "pass_all": false
+    },
+    {
+      "config_id": "cfg_15",
+      "cfg": {
+        "config_id": "cfg_15",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.0,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": true,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.4226,
+      "fold_scores": [
+        0.4335,
+        0.3845,
+        0.4054,
+        0.4655,
+        0.4239
+      ],
+      "map_a_cluster": 0.6862,
+      "map_b_clean_cluster": 0.2467,
+      "map_b_typo_cluster": 0.1835,
+      "map_c_20_cluster": 0.4141,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.8625,
+        "recall@5": 0.9458333333333333,
+        "recall@10": 0.9625,
+        "mAP": 0.683653102534892,
+        "true_recall@10": 0.5330278709942412,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.32727272727272727,
+        "recall@5": 0.4303030303030303,
+        "recall@10": 0.5333333333333333,
+        "mAP": 0.24668800156748688,
+        "true_recall@10": 0.16326696487189957,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.2,
+        "recall@5": 0.325,
+        "recall@10": 0.375,
+        "mAP": 0.1822242977037932,
+        "true_recall@10": 0.09699673852836965,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.5625,
+        "recall@5": 0.675,
+        "recall@10": 0.73125,
+        "mAP": 0.44837492547025076,
+        "true_recall@10": 0.3327654813682989,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.7196,
+      "catastrophic_drop_b": 0.0041,
+      "delta_c20_vs_mo": 0.2107,
+      "delta_c20_vs_base": 0.1687,
+      "delta_r10_ab_vs_cfg01": 0.2454,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 66.853,
+        "p95_ms": 94.357,
+        "p99_ms": 125.179,
+        "mean_ms": 68.954,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1425,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": false,
+      "pass_all": false
+    },
+    {
+      "config_id": "cfg_16",
+      "cfg": {
+        "config_id": "cfg_16",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": false,
+        "dual_encode": true,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.4949,
+      "fold_scores": [
+        0.5039,
+        0.4549,
+        0.4786,
+        0.5397,
+        0.4975
+      ],
+      "map_a_cluster": 0.7587,
+      "map_b_clean_cluster": 0.319,
+      "map_b_typo_cluster": 0.2256,
+      "map_c_20_cluster": 0.4831,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.9208333333333333,
+        "recall@5": 0.9625,
+        "recall@10": 0.9708333333333333,
+        "mAP": 0.7595903436778395,
+        "true_recall@10": 0.5934499801649833,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.40606060606060607,
+        "recall@5": 0.5333333333333333,
+        "recall@10": 0.6363636363636364,
+        "mAP": 0.319002564841342,
+        "true_recall@10": 0.2196955404973354,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.225,
+        "recall@5": 0.4125,
+        "recall@10": 0.5125,
+        "mAP": 0.22357703192281653,
+        "true_recall@10": 0.1370056119775443,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.63125,
+        "recall@5": 0.74375,
+        "recall@10": 0.775,
+        "mAP": 0.5172827493938207,
+        "true_recall@10": 0.3871643705192015,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.7814,
+      "catastrophic_drop_b": 0.0041,
+      "delta_c20_vs_mo": 0.2797,
+      "delta_c20_vs_base": 0.2377,
+      "delta_r10_ab_vs_cfg01": 0.3072,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 65.808,
+        "p95_ms": 109.002,
+        "p99_ms": 149.59,
+        "mean_ms": 69.778,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1732,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1620,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": false,
+      "pass_all": false
+    },
+    {
+      "config_id": "cfg_17",
+      "cfg": {
+        "config_id": "cfg_17",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 0.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": true,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.3997,
+      "fold_scores": [
+        0.4256,
+        0.3858,
+        0.3963,
+        0.3901,
+        0.4009
+      ],
+      "map_a_cluster": 0.5968,
+      "map_b_clean_cluster": 0.2683,
+      "map_b_typo_cluster": 0.2093,
+      "map_c_20_cluster": 0.4026,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.6916666666666667,
+        "recall@5": 0.8208333333333333,
+        "recall@10": 0.8375,
+        "mAP": 0.5800469547584456,
+        "true_recall@10": 0.4546791945210928,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.32727272727272727,
+        "recall@5": 0.503030303030303,
+        "recall@10": 0.6121212121212121,
+        "mAP": 0.2683282671145219,
+        "true_recall@10": 0.18461340594228362,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.225,
+        "recall@5": 0.4,
+        "recall@10": 0.4875,
+        "mAP": 0.2042116082737254,
+        "true_recall@10": 0.11856657118241373,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.5125,
+        "recall@5": 0.64375,
+        "recall@10": 0.70625,
+        "mAP": 0.4264447951917851,
+        "true_recall@10": 0.314544169365542,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.7031,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.1992,
+      "delta_c20_vs_base": 0.1572,
+      "delta_r10_ab_vs_cfg01": 0.2289,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 31.676,
+        "p95_ms": 50.826,
+        "p99_ms": 68.048,
+        "mean_ms": 33.891,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1725,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 86,
+          "graphics_clock_mhz": 1687,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_18",
+      "cfg": {
+        "config_id": "cfg_18",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.0,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": true,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.4701,
+      "fold_scores": [
+        0.4843,
+        0.4561,
+        0.4675,
+        0.4712,
+        0.4713
+      ],
+      "map_a_cluster": 0.6605,
+      "map_b_clean_cluster": 0.3431,
+      "map_b_typo_cluster": 0.2649,
+      "map_c_20_cluster": 0.4724,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.7541666666666667,
+        "recall@5": 0.8416666666666667,
+        "recall@10": 0.8708333333333333,
+        "mAP": 0.6457804330298645,
+        "true_recall@10": 0.4984358367626208,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.42424242424242425,
+        "recall@5": 0.6181818181818182,
+        "recall@10": 0.6787878787878788,
+        "mAP": 0.343096704863139,
+        "true_recall@10": 0.23895003421913405,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.2875,
+        "recall@5": 0.525,
+        "recall@10": 0.6125,
+        "mAP": 0.2577866765841273,
+        "true_recall@10": 0.16551208316290955,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.6125,
+        "recall@5": 0.71875,
+        "recall@10": 0.76875,
+        "mAP": 0.4950594124551172,
+        "true_recall@10": 0.36114194293447277,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.7629,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.269,
+      "delta_c20_vs_base": 0.227,
+      "delta_r10_ab_vs_cfg01": 0.2887,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 33.606,
+        "p95_ms": 57.279,
+        "p99_ms": 76.836,
+        "mean_ms": 36.259,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 85,
+          "graphics_clock_mhz": 1725,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 85,
+          "graphics_clock_mhz": 1582,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": false,
+      "pass_all": false
+    },
+    {
+      "config_id": "cfg_19",
+      "cfg": {
+        "config_id": "cfg_19",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": false,
+        "bm25": true,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.5391,
+      "fold_scores": [
+        0.5477,
+        0.5209,
+        0.5378,
+        0.5526,
+        0.5365
+      ],
+      "map_a_cluster": 0.7162,
+      "map_b_clean_cluster": 0.4209,
+      "map_b_typo_cluster": 0.3213,
+      "map_c_20_cluster": 0.5362,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.8083333333333333,
+        "recall@5": 0.8791666666666667,
+        "recall@10": 0.9041666666666667,
+        "mAP": 0.7023830094298764,
+        "true_recall@10": 0.5382436325030203,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.503030303030303,
+        "recall@5": 0.6848484848484848,
+        "recall@10": 0.7515151515151515,
+        "mAP": 0.4209306765575762,
+        "true_recall@10": 0.29751769989020954,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.3125,
+        "recall@5": 0.5875,
+        "recall@10": 0.65,
+        "mAP": 0.31154477947701065,
+        "true_recall@10": 0.2056858608066559,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.65,
+        "recall@5": 0.76875,
+        "recall@10": 0.85,
+        "mAP": 0.5581764550071557,
+        "true_recall@10": 0.41679993810835736,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.8103,
+      "catastrophic_drop_b": 0.0,
+      "delta_c20_vs_mo": 0.3328,
+      "delta_c20_vs_base": 0.2908,
+      "delta_r10_ab_vs_cfg01": 0.3361,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 33.708,
+        "p95_ms": 55.725,
+        "p99_ms": 74.013,
+        "mean_ms": 35.949,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 86,
+          "graphics_clock_mhz": 1702,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 85,
+          "graphics_clock_mhz": 1477,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_20",
+      "cfg": {
+        "config_id": "cfg_20",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 0.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": true,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.1896,
+      "fold_scores": [
+        0.1878,
+        0.1666,
+        0.1819,
+        0.1857,
+        0.2261
+      ],
+      "map_a_cluster": 0.2742,
+      "map_b_clean_cluster": 0.1331,
+      "map_b_typo_cluster": 0.1159,
+      "map_c_20_cluster": 0.2071,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.4166666666666667,
+        "recall@5": 0.5708333333333333,
+        "recall@10": 0.5958333333333333,
+        "mAP": 0.2620251474273572,
+        "true_recall@10": 0.19821047926487628,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.15151515151515152,
+        "recall@5": 0.296969696969697,
+        "recall@10": 0.36363636363636365,
+        "mAP": 0.13309687736264392,
+        "true_recall@10": 0.0786105293205696,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.1125,
+        "recall@5": 0.2,
+        "recall@10": 0.25,
+        "mAP": 0.11535667898793908,
+        "true_recall@10": 0.05258553871334415,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.35,
+        "recall@5": 0.45,
+        "recall@10": 0.5,
+        "mAP": 0.21989607187484736,
+        "true_recall@10": 0.14953690534139724,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.4598,
+      "catastrophic_drop_b": 0.0327,
+      "delta_c20_vs_mo": 0.0037,
+      "delta_c20_vs_base": -0.0383,
+      "delta_r10_ab_vs_cfg01": -0.0144,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": false,
+      "pass_5v": true,
+      "pass_pre_latency": false,
+      "pass_5iv": null,
+      "pass_all": false
+    },
+    {
+      "config_id": "cfg_21",
+      "cfg": {
+        "config_id": "cfg_21",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.0,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": true,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.2495,
+      "fold_scores": [
+        0.2521,
+        0.229,
+        0.228,
+        0.2442,
+        0.2944
+      ],
+      "map_a_cluster": 0.3412,
+      "map_b_clean_cluster": 0.1882,
+      "map_b_typo_cluster": 0.1452,
+      "map_c_20_cluster": 0.2651,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.49583333333333335,
+        "recall@5": 0.6166666666666667,
+        "recall@10": 0.6666666666666666,
+        "mAP": 0.33104687414969514,
+        "true_recall@10": 0.24739519946812505,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.20606060606060606,
+        "recall@5": 0.3939393939393939,
+        "recall@10": 0.4909090909090909,
+        "mAP": 0.18816375941255858,
+        "true_recall@10": 0.12648250974239195,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.1375,
+        "recall@5": 0.2625,
+        "recall@10": 0.3125,
+        "mAP": 0.1450788331955329,
+        "true_recall@10": 0.06980176783001173,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.3875,
+        "recall@5": 0.525,
+        "recall@10": 0.5875,
+        "mAP": 0.27878473918344165,
+        "true_recall@10": 0.19531890258334048,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.5485,
+      "catastrophic_drop_b": 0.0122,
+      "delta_c20_vs_mo": 0.0617,
+      "delta_c20_vs_base": 0.0197,
+      "delta_r10_ab_vs_cfg01": 0.0743,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 34.542,
+        "p95_ms": 49.806,
+        "p99_ms": 67.598,
+        "mean_ms": 35.344,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 85,
+          "graphics_clock_mhz": 1657,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1477,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    },
+    {
+      "config_id": "cfg_22",
+      "cfg": {
+        "config_id": "cfg_22",
+        "role": "grid",
+        "parser": "parser_v2",
+        "gamma": 1.5,
+        "slot_weights": "uniform",
+        "zscore_cosine": true,
+        "mean_centering": true,
+        "bm25": false,
+        "dual_encode": false,
+        "query_rewrite": false
+      },
+      "cv_score_mean": 0.3148,
+      "fold_scores": [
+        0.3242,
+        0.2918,
+        0.2929,
+        0.3038,
+        0.3613
+      ],
+      "map_a_cluster": 0.4077,
+      "map_b_clean_cluster": 0.2526,
+      "map_b_typo_cluster": 0.1792,
+      "map_c_20_cluster": 0.3304,
+      "sum_a": {
+        "n_queries": 240,
+        "recall@1": 0.575,
+        "recall@5": 0.6708333333333333,
+        "recall@10": 0.7291666666666666,
+        "mAP": 0.4005862871023686,
+        "true_recall@10": 0.2967148236164615,
+        "n_queries_total": 240,
+        "n_queries_valid": 240
+      },
+      "sum_bc": {
+        "n_queries": 165,
+        "recall@1": 0.28484848484848485,
+        "recall@5": 0.4909090909090909,
+        "recall@10": 0.5636363636363636,
+        "mAP": 0.2525528214150661,
+        "true_recall@10": 0.16351868739032804,
+        "n_queries_total": 165,
+        "n_queries_valid": 165
+      },
+      "sum_bt": {
+        "n_queries": 80,
+        "recall@1": 0.1625,
+        "recall@5": 0.3375,
+        "recall@10": 0.4125,
+        "mAP": 0.17799410321424305,
+        "true_recall@10": 0.09277585984396645,
+        "n_queries_total": 80,
+        "n_queries_valid": 80
+      },
+      "sum_c20": {
+        "n_queries": 160,
+        "recall@1": 0.46875,
+        "recall@5": 0.5875,
+        "recall@10": 0.625,
+        "mAP": 0.3467165054142253,
+        "true_recall@10": 0.23804012346437725,
+        "n_queries_total": 160,
+        "n_queries_valid": 160
+      },
+      "mean_r10_ab": 0.6206,
+      "catastrophic_drop_b": 0.0082,
+      "delta_c20_vs_mo": 0.127,
+      "delta_c20_vs_base": 0.085,
+      "delta_r10_ab_vs_cfg01": 0.1464,
+      "pass_5i": true,
+      "pass_5ii": true,
+      "pass_5iii": true,
+      "pass_5v": true,
+      "pass_pre_latency": true,
+      "latency": {
+        "n_runs": 5,
+        "queries_per_run": 200,
+        "p50_ms": 34.048,
+        "p95_ms": 48.726,
+        "p99_ms": 68.878,
+        "mean_ms": 35.06,
+        "gpu_before": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1725,
+          "mem_clock_mhz": 6000
+        },
+        "gpu_after": {
+          "gpu": "NVIDIA GeForce RTX 2050",
+          "temp_c": 84,
+          "graphics_clock_mhz": 1620,
+          "mem_clock_mhz": 6000
+        }
+      },
+      "pass_5iv": true,
+      "pass_all": true
+    }
+  ],
+  "selection": {
+    "best_raw_by_score": "cfg_19",
+    "winner_after_tie_break": "cfg_13",
+    "safe_config": "cfg_01",
+    "mandatory_ablation": "cfg_02",
+    "tie_checks": [
+      {
+        "vs_simpler": "cfg_01",
+        "diff_ci": {
+          "mean": 0.31029284357724374,
+          "ci_low": 0.28314235965997775,
+          "ci_high": 0.33829952344450753
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_02",
+        "diff_ci": {
+          "mean": 0.3092447404827233,
+          "ci_low": 0.28215829658513336,
+          "ci_high": 0.3367880793769842
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_03",
+        "diff_ci": {
+          "mean": 0.28375395990575736,
+          "ci_low": 0.2578368052104778,
+          "ci_high": 0.31034737611580915
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_04",
+        "diff_ci": {
+          "mean": 0.24294431214847018,
+          "ci_low": 0.21899111615073605,
+          "ci_high": 0.26695229222271166
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_05",
+        "diff_ci": {
+          "mean": 0.21609284909880444,
+          "ci_low": 0.19317970787786404,
+          "ci_high": 0.23908174578684216
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_06",
+        "diff_ci": {
+          "mean": 0.14644188833916028,
+          "ci_low": 0.12736533787712961,
+          "ci_high": 0.1659479542159078
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_07",
+        "diff_ci": {
+          "mean": 0.28224487633368384,
+          "ci_low": 0.25594824625752893,
+          "ci_high": 0.30854793554076937
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_08",
+        "diff_ci": {
+          "mean": 0.24066040109820888,
+          "ci_low": 0.21799713062693424,
+          "ci_high": 0.2643829510003001
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_09",
+        "diff_ci": {
+          "mean": 0.21158446733456396,
+          "ci_low": 0.1895197419303377,
+          "ci_high": 0.2335963701301505
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_10",
+        "diff_ci": {
+          "mean": 0.1337609263969986,
+          "ci_low": 0.11464961142509425,
+          "ci_high": 0.1522474153154791
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_11",
+        "diff_ci": {
+          "mean": 0.17313514195480512,
+          "ci_low": 0.13765828152399023,
+          "ci_high": 0.2047146164841484
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_12",
+        "diff_ci": {
+          "mean": 0.10132286331130286,
+          "ci_low": 0.06660383067482696,
+          "ci_high": 0.1320960886513488
+        },
+        "within_95_ci": false
+      },
+      {
+        "vs_simpler": "cfg_13",
+        "diff_ci": {
+          "mean": 0.03373378350009905,
+          "ci_low": -0.0002601675206048675,
+          "ci_high": 0.0638411129917876
+        },
+        "within_95_ci": true
+      }
+    ]
+  },
+  "pre_b_human_results_sha256": "19948b5abf11ffb711704d23d62a76e7214292d9ea41a30f12f4a4bfe8456939",
+  "b_human_gate": {
+    "n_queries": 65,
+    "n_clusters": 61,
+    "model_only_map_cluster": 0.268,
+    "baseline_v3_map_cluster": 0.3249,
+    "baseline_pha5_no_zscore_map_cluster": 0.5335,
+    "baseline_pha5_no_zscore_summary": {
+      "n_queries": 65,
+      "recall@1": 0.5846153846153846,
+      "recall@5": 0.7230769230769231,
+      "recall@10": 0.8153846153846154,
+      "mAP": 0.5278253266722939,
+      "true_recall@10": 0.38002821030301465,
+      "n_queries_total": 65,
+      "n_queries_valid": 65
+    },
+    "winner_map_cluster": 0.6285,
+    "winner_summary": {
+      "n_queries": 65,
+      "recall@1": 0.7538461538461538,
+      "recall@5": 0.8307692307692308,
+      "recall@10": 0.8615384615384616,
+      "mAP": 0.6314372751423781,
+      "true_recall@10": 0.443092740770114,
+      "n_queries_total": 65,
+      "n_queries_valid": 65
+    },
+    "delta_map_vs_baseline_ci95": {
+      "mean": 0.3036,
+      "ci_low": 0.239,
+      "ci_high": 0.3744
+    },
+    "catastrophic_drop_rate": 0.0308,
+    "gate_pass": true,
+    "split_with_colour_31": {
+      "winner_map_cluster": 0.6843,
+      "baseline_v3_map_cluster": 0.3789
+    },
+    "split_no_colour_34": {
+      "winner_map_cluster": 0.581,
+      "baseline_v3_map_cluster": 0.279
+    },
+    "rare_labels": {
+      "Olive (val_b_human_079)": {
+        "winner_ap": 0.3166,
+        "baseline_ap": 0.4427
+      },
+      "Steel (val_b_human_088)": {
+        "winner_ap": 0.8379,
+        "baseline_ap": 0.186
+      },
+      "Navy Blue (val_b_human_091)": {
+        "winner_ap": 0.8392,
+        "baseline_ap": 0.6653
+      }
+    }
+  }
+}
