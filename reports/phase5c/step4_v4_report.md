@@ -6,7 +6,7 @@
 - **`selection_rule_v4.json` SHA-256:** `bbf28f465c544b0babfdcedb315c8caee5b2a669b79e852957a7ecc4f2822fc6`
 - **`folds.json` SHA-256:** `dfd301722ec86734fd0f0bdb38bcb3784d7db22334a6535c51630fb825f91e25`
 - **Gallery:** `index/val_gallery/` (1.884 sản phẩm, **KHÔNG** đụng `index/test_gallery/`).
-- **Luật 5 (minh bạch dữ liệu `val_gallery`):** Trong `data/catalog/captions/`, chỉ `test_gallery` có caption `InternVL2-2B`; `val_gallery` hiện có `caption_model=None`. Do đó `index/val_gallery_text_v4/` dùng `title_vi` (cho `cfg_v4_11/12/18`) và `metadata_aux` (`title_vi + articleType + gender + baseColour`, cho `cfg_v4_13`). Kết quả I5 trên `val_gallery` phản ánh text-fusion từ tiêu đề/metadata, chưa có đóng góp từ caption `InternVL2-2B`.
+- **Luật 5 — Giới hạn I5 trên `val_gallery`:** Trong `data/catalog/captions/`, chỉ `test_gallery` có caption `InternVL2-2B`; `val_gallery` hiện có `caption_model=None`. Do đó `index/val_gallery_text_v4/` chỉ dùng `title_vi` (`cfg_v4_11/12/18`) và `metadata_aux` (`title_vi + articleType + gender + baseColour`, `cfg_v4_13` — chứa trực tiếp thuộc tính GT). Kết quả I5 trên `val_gallery` chỉ phản ánh text-fusion từ tiêu đề/metadata, **không** phản ánh đóng góp của `InternVL2-2B`.
 - **Cảnh báo B-human:** Số liệu `B_human_ref` (65 câu, 61 cụm) chỉ mang tính **THAM KHẢO (REFERENCE ONLY)** vì tập này đã được quan sát ở v3 và chưa có tập `B-human-v4` mới.
 
 ## 2. Kết quả lưới 18 cấu hình (5-fold Cluster CV trên `Val A` + `B-synth clean`)
@@ -44,9 +44,18 @@
 |---|---|---:|---|---|---:|---|---|
 | Model thuần | `model_only` | 0.9083 | 0.4970 [0.4424, 0.5439] | Chưa đạt | 0.2970 | 0.1177 [0.0853, 0.1556] | Chưa đạt |
 | Hệ thống soft (v3 baseline) | `cfg_v4_01` | 0.9792 | 0.7157 [0.6669, 0.7638] | Chưa đạt | 0.5818 | 0.2473 [0.2007, 0.2984] | Chưa đạt |
-| Hệ thống soft (v4 winner) | `cfg_v4_05` | 0.9833 | 0.8650 [0.8245, 0.9040] | Đạt chắc chắn | 0.6000 | 0.3061 [0.2525, 0.3643] | Chưa đạt |
-| Hệ thống gated | `cfg_v4_05` | 0.9833 | 0.8650 [0.8245, 0.9040] | Đạt chắc chắn | 0.6000 | 0.3061 [0.2525, 0.3643] | Chưa đạt |
+| Hệ thống soft / gated (v4 winner, không dùng conf_gating) | `cfg_v4_05` | 0.9833 | 0.8650 [0.8245, 0.9040] | THAM KHẢO, ước lượng lạc quan (ảnh val đã được checkpoint thấy, parser gần 100% trên A, GT trùng thuộc tính hệ thống dùng) | 0.6000 | 0.3061 [0.2525, 0.3643] | Chưa đạt |
 | Safe config (5i+5ii) | `cfg_v4_01` | 0.9792 | 0.7157 [0.6669, 0.7638] | Chưa đạt | 0.5818 | 0.2473 [0.2007, 0.2984] | Chưa đạt |
+
+> **Lưu ý:** Không được dùng kết luận trên `Val A` làm bằng chứng đạt chỉ tiêu `0.85` / `0.75`. Chỉ số chính thức chỉ xét trên `test_gallery`.
+
+## 4b. Cấu hình tương đương & Số cấu hình hiệu dụng
+- **Số cấu hình hiệu dụng khác nhau thật sự:** **16** cấu hình trên `(Val A, B-clean)` (và **18** trên cả 4 tập `A, B-clean, B-typo, C-20%`).
+
+| Cặp đối chiếu | Val A mAP | B-clean mAP | B-typo mAP | Giải thích vì sao trùng
+|---|---:|---:|---:|---|
+| `cfg_v4_01` (`zscore`, γ=1.5) vs `cfg_v4_03` (`sigma_scaled`, γ=1.5) | 0.715725 vs 0.715725 | 0.247326 vs 0.247326 | 0.172845 vs 0.172843 | `(cos - μ)/σ + γ·mf` là phép biến đổi tuyến tính đơn điệu của `cos + γ·σ·mf` khi không có thành phần điểm thứ ba (`extra_score_matrix`/`bm25`). Sai khác ở chữ số thứ 6 trên `B-typo` chỉ do làm tròn tie-breaking dấu phẩy động. |
+| `cfg_v4_01` (`fuzzy_typo=false`) vs `cfg_v4_08` (`fuzzy_typo=true`) | 0.715725 vs 0.715725 | 0.247326 vs 0.247326 | 0.172845 vs 0.187025 | Trên `A` và `B-clean` không có lỗi chính tả độ dài ≥ 4 ký tự làm thay đổi kết quả parse, nên `fuzzy_typo` chỉ tác động trên `B-typo` (+0.0142 mAP). |
 
 ## 5. Hubness (Mục C.8 trên Val A)
 - **`model_only` trước mean-centering:** max_appearances=14, coverage_ratio=0.4045, skewness=2.1166, n_hubs(>5)=152
@@ -57,10 +66,9 @@
 - **`cfg_v4_01` (v3 baseline):** p50=28.475 ms, p95=45.711 ms, p99=63.952 ms | GPU before: {'gpu': 'NVIDIA GeForce RTX 2050', 'temp_c': 82, 'graphics_clock_mhz': 367, 'mem_clock_mhz': 5500} | GPU after: {'gpu': 'NVIDIA GeForce RTX 2050', 'temp_c': 85, 'graphics_clock_mhz': 1687, 'mem_clock_mhz': 6000}
 - **Winner (`cfg_v4_05`):** p50=35.129 ms, p95=51.431 ms, p99=66.914 ms (chênh lệch p95 so với `cfg_v4_01`: +5.720 ms) | GPU before: {'gpu': 'NVIDIA GeForce RTX 2050', 'temp_c': 83, 'graphics_clock_mhz': 495, 'mem_clock_mhz': 5500} | GPU after: {'gpu': 'NVIDIA GeForce RTX 2050', 'temp_c': 84, 'graphics_clock_mhz': 1635, 'mem_clock_mhz': 6000}
 
-## 7. Kiểm tra thuộc tính phi vòng tròn (I8 trên Val A: `masterCategory` & `subCategory` Acc@10)
-- **`model_only`:** masterCategory=0.0000, subCategory=0.0000 (n=0)
-- **`cfg_v4_01`:** masterCategory=0.0000, subCategory=0.0000
-- **Winner (`cfg_v4_05`):** masterCategory=0.0000, subCategory=0.0000
+## 7. Kiểm tra thuộc tính phi vòng tròn (I8)
+- **Trạng thái:** **KHÔNG THỰC HIỆN (`n_evaluated=0`)**.
+- **Lý do:** Đã đề xuất kiểm tra trên các thuộc tính ngoài 3-slot (`usage`/`season` hoặc `masterCategory`/`subCategory`), nhưng `usage`/`season` chưa có trong `catalog_rebuild.parquet` và chưa nối ánh xạ GT cho phép đo này ở Bước 4.
 
 ## 8. Giới hạn trung thực (Luật 1 & C.10)
 - Checkpoint `best_model.pt` giữ nguyên không fine-tune (Luật 1). Toàn bộ cải thiện nằm ở tầng suy luận.

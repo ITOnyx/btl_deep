@@ -1,0 +1,493 @@
+{
+  "seed": 42,
+  "n_rounds": 5,
+  "n_queries_per_round": 200,
+  "summary": {
+    "cfg_v4_01": {
+      "p50_ms": 23.872,
+      "p95_ms": 48.61,
+      "p99_ms": 79.77,
+      "mean_ms": 27.961,
+      "round_p95_ms": [
+        53.074,
+        41.514,
+        53.056,
+        48.15,
+        56.952
+      ],
+      "round_p95_median_ms": 53.056,
+      "round_p95_iqr_ms": 4.924,
+      "round_p95_q1_q3": [
+        48.15,
+        53.074
+      ],
+      "avg_text_forwards_per_query": 1.0,
+      "encode_text_p50_ms": 21.866,
+      "encode_text_p95_ms": 45.101,
+      "delta_p50_vs_cfg01_ms": 0.0,
+      "delta_p95_vs_cfg01_ms": 0.0,
+      "delta_encode_p50_vs_cfg01_ms": 0.0,
+      "delta_encode_p95_vs_cfg01_ms": 0.0
+    },
+    "cfg_v4_05": {
+      "p50_ms": 23.903,
+      "p95_ms": 48.444,
+      "p99_ms": 76.46,
+      "mean_ms": 27.816,
+      "round_p95_ms": [
+        51.044,
+        47.8,
+        48.482,
+        34.829,
+        51.102
+      ],
+      "round_p95_median_ms": 48.482,
+      "round_p95_iqr_ms": 3.244,
+      "round_p95_q1_q3": [
+        47.8,
+        51.044
+      ],
+      "avg_text_forwards_per_query": 1.0,
+      "encode_text_p50_ms": 21.949,
+      "encode_text_p95_ms": 44.969,
+      "delta_p50_vs_cfg01_ms": 0.03,
+      "delta_p95_vs_cfg01_ms": -0.166,
+      "delta_encode_p50_vs_cfg01_ms": 0.083,
+      "delta_encode_p95_vs_cfg01_ms": -0.133
+    },
+    "cfg_v4_14": {
+      "p50_ms": 37.454,
+      "p95_ms": 55.328,
+      "p99_ms": 82.322,
+      "mean_ms": 39.43,
+      "round_p95_ms": [
+        55.673,
+        49.674,
+        50.847,
+        55.019,
+        56.771
+      ],
+      "round_p95_median_ms": 55.019,
+      "round_p95_iqr_ms": 4.826,
+      "round_p95_q1_q3": [
+        50.847,
+        55.673
+      ],
+      "avg_text_forwards_per_query": 1.88,
+      "encode_text_p50_ms": 35.344,
+      "encode_text_p95_ms": 50.286,
+      "delta_p50_vs_cfg01_ms": 13.581,
+      "delta_p95_vs_cfg01_ms": 6.718,
+      "delta_encode_p50_vs_cfg01_ms": 13.478,
+      "delta_encode_p95_vs_cfg01_ms": 5.185
+    },
+    "cfg_v4_15": {
+      "p50_ms": 45.686,
+      "p95_ms": 56.611,
+      "p99_ms": 80.245,
+      "mean_ms": 44.994,
+      "round_p95_ms": [
+        53.503,
+        52.14,
+        60.249,
+        56.069,
+        57.966
+      ],
+      "round_p95_median_ms": 56.069,
+      "round_p95_iqr_ms": 4.463,
+      "round_p95_q1_q3": [
+        53.503,
+        57.966
+      ],
+      "avg_text_forwards_per_query": 2.405,
+      "encode_text_p50_ms": 43.395,
+      "encode_text_p95_ms": 53.282,
+      "delta_p50_vs_cfg01_ms": 21.813,
+      "delta_p95_vs_cfg01_ms": 8.001,
+      "delta_encode_p50_vs_cfg01_ms": 21.528,
+      "delta_encode_p95_vs_cfg01_ms": 8.181
+    }
+  },
+  "round_telemetry": [
+    {
+      "round": 1,
+      "config_id": "cfg_v4_01",
+      "p95_ms": 53.074,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 69,
+        "graphics_clock_mhz": 600,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.6
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 78,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 1,
+      "config_id": "cfg_v4_05",
+      "p95_ms": 51.044,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 68,
+        "graphics_clock_mhz": 600,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.6
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 77,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 1,
+      "config_id": "cfg_v4_14",
+      "p95_ms": 55.673,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 67,
+        "graphics_clock_mhz": 615,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 77,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 1,
+      "config_id": "cfg_v4_15",
+      "p95_ms": 53.503,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 67,
+        "graphics_clock_mhz": 615,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 78,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 2,
+      "config_id": "cfg_v4_01",
+      "p95_ms": 41.514,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 67,
+        "graphics_clock_mhz": 600,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 76,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 2,
+      "config_id": "cfg_v4_05",
+      "p95_ms": 47.8,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 622,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.4
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 75,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 2,
+      "config_id": "cfg_v4_14",
+      "p95_ms": 49.674,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 65,
+        "graphics_clock_mhz": 465,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.4
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 76,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 2,
+      "config_id": "cfg_v4_15",
+      "p95_ms": 52.14,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 472,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.6
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 77,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 3,
+      "config_id": "cfg_v4_01",
+      "p95_ms": 53.056,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 607,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 75,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 3,
+      "config_id": "cfg_v4_05",
+      "p95_ms": 48.482,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 442,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 75,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 3,
+      "config_id": "cfg_v4_14",
+      "p95_ms": 50.847,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 65,
+        "graphics_clock_mhz": 435,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 77,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 3,
+      "config_id": "cfg_v4_15",
+      "p95_ms": 60.249,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 570,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 77,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 4,
+      "config_id": "cfg_v4_01",
+      "p95_ms": 48.15,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 562,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 75,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 4,
+      "config_id": "cfg_v4_05",
+      "p95_ms": 34.829,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 540,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.4
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 76,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 4,
+      "config_id": "cfg_v4_14",
+      "p95_ms": 55.019,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 65,
+        "graphics_clock_mhz": 367,
+        "mem_clock_mhz": 405,
+        "cooled_below_target": false,
+        "wait_s": 31.3
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 77,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 4,
+      "config_id": "cfg_v4_15",
+      "p95_ms": 56.069,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 405,
+        "mem_clock_mhz": 405,
+        "cooled_below_target": false,
+        "wait_s": 31.4
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 76,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 5,
+      "config_id": "cfg_v4_01",
+      "p95_ms": 56.952,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 427,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.4
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 76,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 5,
+      "config_id": "cfg_v4_05",
+      "p95_ms": 51.102,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 65,
+        "graphics_clock_mhz": 487,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 76,
+        "graphics_clock_mhz": 1747,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 5,
+      "config_id": "cfg_v4_14",
+      "p95_ms": 56.771,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 65,
+        "graphics_clock_mhz": 487,
+        "mem_clock_mhz": 810,
+        "cooled_below_target": false,
+        "wait_s": 31.6
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 77,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    },
+    {
+      "round": 5,
+      "config_id": "cfg_v4_15",
+      "p95_ms": 57.966,
+      "before": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 66,
+        "graphics_clock_mhz": 405,
+        "mem_clock_mhz": 405,
+        "cooled_below_target": false,
+        "wait_s": 31.5
+      },
+      "after": {
+        "gpu": "NVIDIA GeForce RTX 2050",
+        "temp_c": 77,
+        "graphics_clock_mhz": 1740,
+        "mem_clock_mhz": 6000
+      }
+    }
+  ]
+}
