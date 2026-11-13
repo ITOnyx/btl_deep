@@ -1,0 +1,832 @@
+[
+  {
+    "id": "val_c_000",
+    "query": "tu van giup giay da bong nu mac hang ngay",
+    "has_diacritics": false,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_001",
+    "query": "ao coc tay mau toi den tre trung",
+    "has_diacritics": false,
+    "n_relevant": 39,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_002",
+    "query": "shop oi co dep lao nu dep xin",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_003",
+    "query": "tu van giup ao dieu xanh navy di lam",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_004",
+    "query": "dây lưng da nâu trẻ trung",
+    "has_diacritics": true,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_005",
+    "query": "cần tìm giày gót nhọn màu nâu lịch sự",
+    "has_diacritics": true,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_006",
+    "query": "shop ơi có giày tập gym mau trang đi làm",
+    "has_diacritics": true,
+    "n_relevant": 44,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_007",
+    "query": "shop ơi có giày đi chơi màu trắng mặc hàng ngày",
+    "has_diacritics": true,
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_008",
+    "query": "tư vấn giúp túi công sở cho bạn nữ xanh lục giá tốt",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_009",
+    "query": "muon kiem quan lung cho nam",
+    "has_diacritics": false,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Shorts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_010",
+    "query": "muon kiem giay tap gym phai manh den tre trung",
+    "has_diacritics": false,
+    "n_relevant": 23,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_011",
+    "query": "tư vấn giúp áo điệu trắng tinh",
+    "has_diacritics": true,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_012",
+    "query": "áo cộc tay mau do trẻ trung",
+    "has_diacritics": true,
+    "n_relevant": 25,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_013",
+    "query": "shop ơi có áo cộc tay màu tím đi chơi",
+    "has_diacritics": true,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_014",
+    "query": "can tim ao dieu nu xanh than dep xin",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_015",
+    "query": "tìm mua giày đi tiệc den đi chơi",
+    "has_diacritics": true,
+    "n_relevant": 17,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_016",
+    "query": "dep lao nam lịch sự",
+    "has_diacritics": true,
+    "n_relevant": 22,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_017",
+    "query": "giay da di lam màu nâu đẹp xịn",
+    "has_diacritics": true,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_018",
+    "query": "tim mua ao sweater ni cho ban nam gia tot",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Sweatshirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [
+      "Sweaters"
+    ],
+    "probe_reason": "wrong_articleType"
+  },
+  {
+    "id": "val_c_019",
+    "query": "tư vấn giúp hoa tai bạc phái đẹp bac mẫu mới nhất",
+    "has_diacritics": true,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_020",
+    "query": "cho minh hoi dep quai ngang nau gia tot",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_021",
+    "query": "tim mua day lung da chi em",
+    "has_diacritics": false,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_022",
+    "query": "tìm mua khuyen tai cho bạn nữ mặc hàng ngày",
+    "has_diacritics": true,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_023",
+    "query": "tu van giup giay di choi xam ghi",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_024",
+    "query": "tìm mua túi công sở nữ giới màu xanh dương",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_025",
+    "query": "túi công sở cho nữ đi làm",
+    "has_diacritics": true,
+    "n_relevant": 86,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_026",
+    "query": "tư vấn giúp nịt quần cho bạn nam màu nâu đi chơi",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_027",
+    "query": "tu van giup giay di choi mau toi den",
+    "has_diacritics": false,
+    "n_relevant": 42,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_028",
+    "query": "tư vấn giúp giay di choi unisex trang đi chơi",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_029",
+    "query": "giày tập gym đen tuyền giá tốt",
+    "has_diacritics": true,
+    "n_relevant": 27,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_030",
+    "query": "cho mình hỏi áo điệu nữ mau trang",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_031",
+    "query": "tui cong so xanh",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_032",
+    "query": "shop oi co giay bet the thao cho nam trang dep xin",
+    "has_diacritics": false,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [
+      "Flats"
+    ],
+    "probe_reason": "wrong_articleType"
+  },
+  {
+    "id": "val_c_033",
+    "query": "cho minh hoi giay chu re nam",
+    "has_diacritics": false,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_034",
+    "query": "giay di choi unisex di lam",
+    "has_diacritics": false,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_035",
+    "query": "hoa tai mau bac",
+    "has_diacritics": false,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_036",
+    "query": "cho minh hoi giay tap gym mau xam",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_037",
+    "query": "áo cộc tay nam xanh biển lịch sự",
+    "has_diacritics": true,
+    "n_relevant": 45,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_038",
+    "query": "áo cộc tay xanh than đẹp xịn",
+    "has_diacritics": true,
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_039",
+    "query": "tu van giup ao coc tay cho ban nam mau xanh la dep xin",
+    "has_diacritics": false,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_040",
+    "query": "cho mình hỏi giay di choi nam xanh than mặc hàng ngày",
+    "has_diacritics": true,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_041",
+    "query": "tu van giup ao canh xanh mau moi nhat",
+    "has_diacritics": false,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_042",
+    "query": "tim mua dep lao mau do",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_043",
+    "query": "cho minh hoi giay the duc nu gioi mau trang gia tot",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_044",
+    "query": "ao coc tay long chuot di lam",
+    "has_diacritics": false,
+    "n_relevant": 41,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_045",
+    "query": "tu van giup ao coc tay phai manh xanh than mac hang ngay",
+    "has_diacritics": false,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  },
+  {
+    "id": "val_c_046",
+    "query": "can tim giay moi nu chi em den tuyen di choi",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Flats"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "agent_natural_noisy_draft",
+    "parser_baseline_articleType": [],
+    "probe_reason": "missing_articleType"
+  }
+]

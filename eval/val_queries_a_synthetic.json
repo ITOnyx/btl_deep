@@ -1,0 +1,3522 @@
+[
+  {
+    "id": "val_a_000",
+    "query": "vi tien cho nam",
+    "has_diacritics": false,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_001",
+    "query": "giay thuong mau xanh duong cho nam",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_002",
+    "query": "bong tai nu mau vang kim",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Gold"
+      ]
+    }
+  },
+  {
+    "id": "val_a_003",
+    "query": "quần jean nam màu xanh dương",
+    "has_diacritics": true,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_004",
+    "query": "mat day chuyen mau bac cho nu",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Pendant"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_005",
+    "query": "quần thể thao dài màu xám cho nam",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Track Pants"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    }
+  },
+  {
+    "id": "val_a_006",
+    "query": "giày thường màu đen cho nam",
+    "has_diacritics": true,
+    "n_relevant": 39,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_007",
+    "query": "ao thun mau tim cho nam",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Purple"
+      ]
+    }
+  },
+  {
+    "id": "val_a_008",
+    "query": "quan jean nam mau xanh duong",
+    "has_diacritics": false,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_009",
+    "query": "ao kieu nu mau xanh navy",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_010",
+    "query": "áo thun màu xanh dương cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_011",
+    "query": "giay the thao mau trang cho nam",
+    "has_diacritics": false,
+    "n_relevant": 38,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_012",
+    "query": "quan jean cho nam",
+    "has_diacritics": false,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_013",
+    "query": "giày thường cho nam",
+    "has_diacritics": true,
+    "n_relevant": 107,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_014",
+    "query": "áo thun nữ màu xanh dương",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_015",
+    "query": "kính râm màu đen cho nam",
+    "has_diacritics": true,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_016",
+    "query": "ao kurta mau den cho nu",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_017",
+    "query": "bông tai cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_018",
+    "query": "giày thường màu trắng cho nam",
+    "has_diacritics": true,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_019",
+    "query": "ao so mi nam mau hong",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_020",
+    "query": "giay the thao cho nu",
+    "has_diacritics": false,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_021",
+    "query": "giay thuong nam nu mau trang",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_022",
+    "query": "áo thun màu xanh dương cho nam",
+    "has_diacritics": true,
+    "n_relevant": 45,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_023",
+    "query": "bông tai nữ màu bạc",
+    "has_diacritics": true,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_024",
+    "query": "tui xach mau den cho nu",
+    "has_diacritics": false,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_025",
+    "query": "giay cao got mau den cho nu",
+    "has_diacritics": false,
+    "n_relevant": 17,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_026",
+    "query": "ao so mi mau hong cho nam",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_027",
+    "query": "giay thuong nam mau xanh navy",
+    "has_diacritics": false,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_028",
+    "query": "ao so mi mau xanh navy cho nam",
+    "has_diacritics": false,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_029",
+    "query": "giày thường màu xám cho nam",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    }
+  },
+  {
+    "id": "val_a_030",
+    "query": "áo sơ mi nam màu tím",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Purple"
+      ]
+    }
+  },
+  {
+    "id": "val_a_031",
+    "query": "giày cao gót nữ màu vàng kim",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Gold"
+      ]
+    }
+  },
+  {
+    "id": "val_a_032",
+    "query": "ao thun nam mau vang",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Yellow"
+      ]
+    }
+  },
+  {
+    "id": "val_a_033",
+    "query": "đồng hồ màu bạc cho nam",
+    "has_diacritics": true,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_034",
+    "query": "ao so mi nam mau do",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_035",
+    "query": "áo kurta màu trắng cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_036",
+    "query": "ao thun nu mau xanh duong",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_037",
+    "query": "bong tai cho nu",
+    "has_diacritics": false,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_038",
+    "query": "ao thun mau do cho nam",
+    "has_diacritics": false,
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_039",
+    "query": "ao so mi cho nu",
+    "has_diacritics": false,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_040",
+    "query": "ao kurta nu mau xanh duong",
+    "has_diacritics": false,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_041",
+    "query": "ao thun mau xanh duong cho nu",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_042",
+    "query": "balo màu đen cho nam nữ",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_043",
+    "query": "bông tai nữ màu vàng kim",
+    "has_diacritics": true,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Gold"
+      ]
+    }
+  },
+  {
+    "id": "val_a_044",
+    "query": "giày thể thao cho nam",
+    "has_diacritics": true,
+    "n_relevant": 77,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_045",
+    "query": "ao nguc nu mau trang",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Bra"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_046",
+    "query": "giay thuong mau trang cho nu",
+    "has_diacritics": false,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_047",
+    "query": "ao kieu nu mau xanh duong",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_048",
+    "query": "thắt lưng màu đen cho nam",
+    "has_diacritics": true,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_049",
+    "query": "ao thun nam mau do",
+    "has_diacritics": false,
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_050",
+    "query": "ao so mi mau trang cho nam",
+    "has_diacritics": false,
+    "n_relevant": 23,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_051",
+    "query": "quan the thao dai nam mau xam",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Track Pants"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    }
+  },
+  {
+    "id": "val_a_052",
+    "query": "ao thun nam mau xanh la",
+    "has_diacritics": false,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_053",
+    "query": "giày thể thao màu đen cho nam",
+    "has_diacritics": true,
+    "n_relevant": 23,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_054",
+    "query": "ao thun nu mau trang",
+    "has_diacritics": false,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_055",
+    "query": "áo khoác nam màu đen",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Jackets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_056",
+    "query": "dep xo ngon nam mau den",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_057",
+    "query": "túi xách nữ màu xanh lá",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_058",
+    "query": "áo thun màu hồng cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_059",
+    "query": "kính râm màu nâu cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_060",
+    "query": "tui xach nu mau xanh duong",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_061",
+    "query": "áo thun nam màu xám",
+    "has_diacritics": true,
+    "n_relevant": 39,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    }
+  },
+  {
+    "id": "val_a_062",
+    "query": "túi xách nữ màu tím",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Purple"
+      ]
+    }
+  },
+  {
+    "id": "val_a_063",
+    "query": "giày thường cho nam nữ",
+    "has_diacritics": true,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_064",
+    "query": "giay tay cong so nam mau den",
+    "has_diacritics": false,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_065",
+    "query": "áo kurta nữ màu nâu",
+    "has_diacritics": true,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_066",
+    "query": "ao thun cho be trai",
+    "has_diacritics": false,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Boys",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_067",
+    "query": "ao so mi mau xam cho nam",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    }
+  },
+  {
+    "id": "val_a_068",
+    "query": "áo thun nam màu xanh navy",
+    "has_diacritics": true,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_069",
+    "query": "giay xang dan nam mau nau",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_070",
+    "query": "áo kiểu nữ màu đen",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_071",
+    "query": "tui xach mau nau cho nu",
+    "has_diacritics": false,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_072",
+    "query": "giày thường nam màu xanh dương",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_073",
+    "query": "tất nam màu trắng",
+    "has_diacritics": true,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_074",
+    "query": "giày thể thao màu trắng cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_075",
+    "query": "ao kurta mau trang cho nu",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_076",
+    "query": "áo sơ mi màu trắng cho nam",
+    "has_diacritics": true,
+    "n_relevant": 23,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_077",
+    "query": "áo sơ mi nam màu đỏ",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_078",
+    "query": "đồng hồ màu trắng cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_079",
+    "query": "áo sơ mi nam màu hồng",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_080",
+    "query": "kinh ram nam mau den",
+    "has_diacritics": false,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_081",
+    "query": "áo thun nữ màu trắng",
+    "has_diacritics": true,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_082",
+    "query": "áo thun màu trắng cho nam",
+    "has_diacritics": true,
+    "n_relevant": 29,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_083",
+    "query": "áo thun nam màu vàng",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Yellow"
+      ]
+    }
+  },
+  {
+    "id": "val_a_084",
+    "query": "giày xăng đan màu nâu cho nam",
+    "has_diacritics": true,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_085",
+    "query": "đồng hồ màu trắng cho nam",
+    "has_diacritics": true,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_086",
+    "query": "áo sơ mi nam màu xanh lá",
+    "has_diacritics": true,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_087",
+    "query": "áo kiểu nữ màu hồng",
+    "has_diacritics": true,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_088",
+    "query": "ao thun mau vang cho nam",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Yellow"
+      ]
+    }
+  },
+  {
+    "id": "val_a_089",
+    "query": "tui xach nu mau den",
+    "has_diacritics": false,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_090",
+    "query": "ví tiền cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 26,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_091",
+    "query": "vi tien nam mau nau",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_092",
+    "query": "balo màu đỏ cho nam nữ",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_093",
+    "query": "balo mau den cho nam nu",
+    "has_diacritics": false,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_094",
+    "query": "giày búp bê màu đen cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Flats"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_095",
+    "query": "dong ho mau den cho nam",
+    "has_diacritics": false,
+    "n_relevant": 26,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_096",
+    "query": "túi xách nữ màu nâu",
+    "has_diacritics": true,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_097",
+    "query": "ao so mi mau tim cho nam",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Purple"
+      ]
+    }
+  },
+  {
+    "id": "val_a_098",
+    "query": "mat day chuyen nu mau bac",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Pendant"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_099",
+    "query": "ao so mi mau do cho nam",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_100",
+    "query": "quần thể thao dài nam màu đen",
+    "has_diacritics": true,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Track Pants"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_101",
+    "query": "mặt dây chuyền màu bạc cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Pendant"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_102",
+    "query": "giày tây công sở nam màu đen",
+    "has_diacritics": true,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_103",
+    "query": "dong ho mau bac cho nu",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_104",
+    "query": "thắt lưng nam màu nâu",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_105",
+    "query": "giày thể thao màu trắng cho nam",
+    "has_diacritics": true,
+    "n_relevant": 38,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_106",
+    "query": "dong ho nam mau trang",
+    "has_diacritics": false,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_107",
+    "query": "giay the thao nu mau trang",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_108",
+    "query": "ao nguc nu mau den",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Bra"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_109",
+    "query": "áo thun nữ màu hồng",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_110",
+    "query": "giay thuong nam mau nau",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_111",
+    "query": "đồng hồ nam màu trắng",
+    "has_diacritics": true,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_112",
+    "query": "túi xách màu xanh dương cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_113",
+    "query": "dong ho cho nam",
+    "has_diacritics": false,
+    "n_relevant": 71,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_114",
+    "query": "áo thun màu xám cho nam",
+    "has_diacritics": true,
+    "n_relevant": 39,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    }
+  },
+  {
+    "id": "val_a_115",
+    "query": "giay thuong nam mau trang",
+    "has_diacritics": false,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_116",
+    "query": "quần lót nam cho nam",
+    "has_diacritics": true,
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Briefs"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_117",
+    "query": "giày thường màu xanh dương cho nam",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_118",
+    "query": "ao kieu cho nu",
+    "has_diacritics": false,
+    "n_relevant": 76,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_119",
+    "query": "ao thun nam mau xanh navy",
+    "has_diacritics": false,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_120",
+    "query": "quần jean màu xanh dương cho nam",
+    "has_diacritics": true,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_121",
+    "query": "túi xách màu nâu cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_122",
+    "query": "ao thun mau xam cho nam",
+    "has_diacritics": false,
+    "n_relevant": 39,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    }
+  },
+  {
+    "id": "val_a_123",
+    "query": "giay cao got mau vang kim cho nu",
+    "has_diacritics": false,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Gold"
+      ]
+    }
+  },
+  {
+    "id": "val_a_124",
+    "query": "ao so mi nam mau trang",
+    "has_diacritics": false,
+    "n_relevant": 23,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_125",
+    "query": "ao so mi nam mau den",
+    "has_diacritics": false,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_126",
+    "query": "ao kieu mau trang cho nu",
+    "has_diacritics": false,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_127",
+    "query": "ao kieu nu mau trang",
+    "has_diacritics": false,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_128",
+    "query": "balo nam nữ màu đen",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_129",
+    "query": "giày thường màu trắng cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_130",
+    "query": "giày thể thao cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_131",
+    "query": "giay xang dan cho nam",
+    "has_diacritics": false,
+    "n_relevant": 32,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_132",
+    "query": "ao so mi mau xanh la cho nam",
+    "has_diacritics": false,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_133",
+    "query": "ao nguc mau den cho nu",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Bra"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_134",
+    "query": "ao so mi nam mau xanh la",
+    "has_diacritics": false,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_135",
+    "query": "ao thun cho nam",
+    "has_diacritics": false,
+    "n_relevant": 244,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_136",
+    "query": "áo thun nữ màu xanh lá",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_137",
+    "query": "bông tai màu vàng kim cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Gold"
+      ]
+    }
+  },
+  {
+    "id": "val_a_138",
+    "query": "ví tiền nữ màu nâu",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_139",
+    "query": "ao kieu mau hong cho nu",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_140",
+    "query": "đồng hồ màu đen cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_141",
+    "query": "giày tây công sở nam màu nâu",
+    "has_diacritics": true,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_142",
+    "query": "sarees mau xanh la cho nu",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Sarees"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_143",
+    "query": "đồng hồ nữ màu steel",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Steel"
+      ]
+    }
+  },
+  {
+    "id": "val_a_144",
+    "query": "tui xach cho nu",
+    "has_diacritics": false,
+    "n_relevant": 86,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_145",
+    "query": "quan the thao dai cho nam",
+    "has_diacritics": false,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Track Pants"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_146",
+    "query": "đồng hồ nữ màu đen",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_147",
+    "query": "vi cam tay cho nu",
+    "has_diacritics": false,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Clutches"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_148",
+    "query": "dong ho nam mau bac",
+    "has_diacritics": false,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_149",
+    "query": "ao kurta nu mau tim",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Purple"
+      ]
+    }
+  },
+  {
+    "id": "val_a_150",
+    "query": "giay xang dan nam mau den",
+    "has_diacritics": false,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_151",
+    "query": "ao so mi mau xanh duong cho nam",
+    "has_diacritics": false,
+    "n_relevant": 33,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_152",
+    "query": "giày cao gót màu vàng kim cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Gold"
+      ]
+    }
+  },
+  {
+    "id": "val_a_153",
+    "query": "ví tiền màu đen cho nam",
+    "has_diacritics": true,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_154",
+    "query": "tất nam màu đen",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_155",
+    "query": "giay thuong nam mau xanh duong",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_156",
+    "query": "ao so mi nam mau xanh navy",
+    "has_diacritics": false,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_157",
+    "query": "áo kiểu cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 76,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_158",
+    "query": "ao khoac cho nam",
+    "has_diacritics": false,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Jackets"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_159",
+    "query": "tui xach mau xanh la cho nu",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_160",
+    "query": "ao so mi mau den cho nam",
+    "has_diacritics": false,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_161",
+    "query": "áo ngực cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Bra"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_162",
+    "query": "sarees cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Sarees"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_163",
+    "query": "ao thun mau trang cho nam",
+    "has_diacritics": false,
+    "n_relevant": 29,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_164",
+    "query": "balo mau do cho nam nu",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_165",
+    "query": "bong tai mau bac cho nu",
+    "has_diacritics": false,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_166",
+    "query": "giày thường nam màu xanh navy",
+    "has_diacritics": true,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_167",
+    "query": "ao thun nam mau trang",
+    "has_diacritics": false,
+    "n_relevant": 29,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_168",
+    "query": "áo ngực màu đen cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Bra"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_169",
+    "query": "quan the thao dai mau den cho nam",
+    "has_diacritics": false,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Track Pants"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_170",
+    "query": "quan short cho nam",
+    "has_diacritics": false,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Shorts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_171",
+    "query": "áo kurta cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 92,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_172",
+    "query": "that lung nam mau den",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_173",
+    "query": "dong ho mau steel cho nu",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Steel"
+      ]
+    }
+  },
+  {
+    "id": "val_a_174",
+    "query": "áo thun màu trắng cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_175",
+    "query": "vi tien cho nu",
+    "has_diacritics": false,
+    "n_relevant": 26,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_176",
+    "query": "dong ho nu mau bac",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_177",
+    "query": "áo sơ mi màu đen cho nam",
+    "has_diacritics": true,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_178",
+    "query": "ao so mi nam mau nau",
+    "has_diacritics": false,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_179",
+    "query": "đồng hồ nữ màu trắng",
+    "has_diacritics": true,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_180",
+    "query": "thắt lưng nam màu đen",
+    "has_diacritics": true,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_181",
+    "query": "that lung cho nam",
+    "has_diacritics": false,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_182",
+    "query": "áo kurta màu xanh lá cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_183",
+    "query": "áo kurta màu tím cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Purple"
+      ]
+    }
+  },
+  {
+    "id": "val_a_184",
+    "query": "that lung mau nau cho nam",
+    "has_diacritics": false,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_185",
+    "query": "thắt lưng màu nâu cho nam",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_186",
+    "query": "ca vat cho nam",
+    "has_diacritics": false,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Ties"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_187",
+    "query": "túi xách màu xanh lá cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_188",
+    "query": "dép xỏ ngón cho nam",
+    "has_diacritics": true,
+    "n_relevant": 22,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_189",
+    "query": "đồng hồ màu steel cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Steel"
+      ]
+    }
+  },
+  {
+    "id": "val_a_190",
+    "query": "ao thun mau hong cho nu",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_191",
+    "query": "ao thun nu mau xanh la",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_192",
+    "query": "giày thường nữ màu trắng",
+    "has_diacritics": true,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_193",
+    "query": "áo kurta nữ màu xanh lá",
+    "has_diacritics": true,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_194",
+    "query": "giay xang dan mau nau cho nam",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_195",
+    "query": "giay thuong mau xanh navy cho nam",
+    "has_diacritics": false,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_196",
+    "query": "áo kurta nữ màu xanh dương",
+    "has_diacritics": true,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_197",
+    "query": "giày thể thao nam màu trắng",
+    "has_diacritics": true,
+    "n_relevant": 38,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_198",
+    "query": "ao thun nu mau hong",
+    "has_diacritics": false,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_199",
+    "query": "giay bup be mau den cho nu",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Flats"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_200",
+    "query": "đầm váy cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Dresses"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_201",
+    "query": "giay thuong mau trang cho nam nu",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_202",
+    "query": "ao thun mau do cho be trai",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Boys",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_203",
+    "query": "áo sơ mi màu xanh dương cho nam",
+    "has_diacritics": true,
+    "n_relevant": 33,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_204",
+    "query": "áo sơ mi cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_205",
+    "query": "áo sơ mi nam màu nâu",
+    "has_diacritics": true,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_206",
+    "query": "balo nam nu mau do",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_207",
+    "query": "kính râm nữ màu nâu",
+    "has_diacritics": true,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_208",
+    "query": "ao kurta nu mau den",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_209",
+    "query": "sarees cho nu",
+    "has_diacritics": false,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Sarees"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_210",
+    "query": "ao thun be trai mau do",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Boys",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_211",
+    "query": "áo kurta màu xanh dương cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_212",
+    "query": "túi xách màu tím cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Purple"
+      ]
+    }
+  },
+  {
+    "id": "val_a_213",
+    "query": "áo kiểu nữ màu xanh navy",
+    "has_diacritics": true,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_214",
+    "query": "balo cho nam nữ",
+    "has_diacritics": true,
+    "n_relevant": 27,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_215",
+    "query": "đồng hồ màu đen cho nam",
+    "has_diacritics": true,
+    "n_relevant": 26,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_216",
+    "query": "giay xang dan mau den cho nam",
+    "has_diacritics": false,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_217",
+    "query": "áo kiểu nữ màu xanh dương",
+    "has_diacritics": true,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_218",
+    "query": "giay thuong cho nu",
+    "has_diacritics": false,
+    "n_relevant": 30,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_219",
+    "query": "quan jean mau xanh duong cho nam",
+    "has_diacritics": false,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    }
+  },
+  {
+    "id": "val_a_220",
+    "query": "ao khoac nam mau den",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Jackets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    }
+  },
+  {
+    "id": "val_a_221",
+    "query": "dong ho mau bac cho nam",
+    "has_diacritics": false,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_222",
+    "query": "bông tai màu bạc cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_223",
+    "query": "quần thể thao dài cho nam",
+    "has_diacritics": true,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Track Pants"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_224",
+    "query": "giày tây công sở màu nâu cho nam",
+    "has_diacritics": true,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_225",
+    "query": "ao so mi cho nam",
+    "has_diacritics": false,
+    "n_relevant": 132,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_226",
+    "query": "thắt lưng cho nam",
+    "has_diacritics": true,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_227",
+    "query": "ví tiền màu nâu cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    }
+  },
+  {
+    "id": "val_a_228",
+    "query": "đồng hồ cho nữ",
+    "has_diacritics": true,
+    "n_relevant": 54,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_229",
+    "query": "sarees nu mau xanh la",
+    "has_diacritics": false,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Sarees"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_230",
+    "query": "đồng hồ nữ màu bạc",
+    "has_diacritics": true,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  },
+  {
+    "id": "val_a_231",
+    "query": "giày thường màu trắng cho nam nữ",
+    "has_diacritics": true,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_232",
+    "query": "giay thuong mau trang cho nam",
+    "has_diacritics": false,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_233",
+    "query": "ao thun mau xanh la cho nu",
+    "has_diacritics": false,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    }
+  },
+  {
+    "id": "val_a_234",
+    "query": "giay thuong nu mau trang",
+    "has_diacritics": false,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_235",
+    "query": "dong ho mau trang cho nam",
+    "has_diacritics": false,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    }
+  },
+  {
+    "id": "val_a_236",
+    "query": "áo thun màu đỏ cho nam",
+    "has_diacritics": true,
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    }
+  },
+  {
+    "id": "val_a_237",
+    "query": "that lung cho nu",
+    "has_diacritics": false,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    }
+  },
+  {
+    "id": "val_a_238",
+    "query": "ao kieu nu mau hong",
+    "has_diacritics": false,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Pink"
+      ]
+    }
+  },
+  {
+    "id": "val_a_239",
+    "query": "đồng hồ nam màu bạc",
+    "has_diacritics": true,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Silver"
+      ]
+    }
+  }
+]
