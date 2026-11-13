@@ -1,17 +1,14 @@
 """
-Module: src.serve.parser_v2
-Bộ phân tích truy vấn tiếng Việt phiên bản 2 (Bước 3b, Pha 5b).
+Module: src.serve.parser_v2 (PARSER_VERSION = "v2.1")
+Bộ phân tích truy vấn tiếng Việt phiên bản 2.1 (Bước 3b, Pha 5b — sửa sau audit P1/P2).
 Tách biệt hoàn toàn khỏi src/serve/parser_v1.py (parser_v1 giữ nguyên đóng băng).
 
-Cải tiến cốt lõi (từ bảng homograph 2c.1c + catalog_rebuild.parquet, KHÔNG lấy từ DEV/val/B-human):
-1. Khớp ưu tiên DẠNG CÓ DẤU khi truy vấn có dấu; chỉ rơi về dạng bỏ dấu cho các span
-   mà mọi token thực sự không mang dấu (không bao giờ biến 'tìm' -> 'tím', 'đồ' -> 'đỏ', 'bé' -> 'be').
-2. Bảo vệ cụm cố định bằng longest-match-first trước khi trích màu/giới tính
-   ('tìm mua', 'cần tìm', 'đồ ngủ', 'đựng đồ', 'bộ đồ', 'cầm tay', 'búp bê', 'bé trai', 'bé gái',
-    'thời trang', 'trang phục', 'trái tim', 'đeo hông', 'đậm màu', 'xanh đậm', 'hàng năm', ...).
-3. Từ khóa màu đơn âm thuộc bảng homograph 2c.1c ở dạng bỏ dấu KHÔNG tự kích hoạt:
-   chỉ nhận khi có tín hiệu ngữ cảnh (đứng sau 'màu'/'mau' hoặc đứng sau cụm articleType/gender).
-4. Mọi nhãn và từ khóa mở rộng đều truy nguyên trực tiếp về catalog_rebuild.parquet.
+Lưu ý minh bạch (Prompt 8C):
+- parser_v2.1 được chỉnh sau khi audit trên Tập A (do đó Tập A không còn "chưa thấy").
+- Chỉ thực hiện 2 chỉnh sửa cấu trúc & gỡ rò rỉ theo Prompt 8A/8B:
+  (A) Ưu tiên cụm Unisex bao trùm ("nam nữ", "nữ nam", "nam và nữ", "nữ và nam", ...)
+      trước khi khớp Men/Women ngắn hơn.
+  (B) Gỡ 18 mục từ commit ec87034 không truy được nguồn trực tiếp trước B-human.
 """
 from __future__ import annotations
 
@@ -20,6 +17,8 @@ import unicodedata
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 from src.serve.parser_v1 import compute_soft_attribute_match, remove_diacritics
+
+PARSER_VERSION = "v2.1"
 
 
 def _has_diacritics(text: str) -> bool:
@@ -53,7 +52,7 @@ PROTECTED_NON_COLOUR_PHRASES: List[str] = [
     "xanh đậm", "xanh dam",
     "hàng năm", "hang nam",
     "đi đến", "di den",
-    "da thật", "da that", "da bò", "da bo", "dây da", "day da",
+    "da thật", "da bò", "da bo", "dây da", "day da",
     "đính đá", "dinh da", "đá bóng", "da bong",
 ]
 
@@ -69,44 +68,44 @@ ARTICLE_TYPE_LEXICON_V2: Dict[str, List[str]] = {
     "Tops": ["áo kiểu", "áo croptop", "crop top", "áo trễ vai", "áo cánh", "áo điệu"],
     "Jackets": ["áo khoác", "áo gió", "áo da", "áo vest", "jacket"],
     "Blazers": ["áo blazer", "blazer", "blazers"],
-    "Rain Jacket": ["áo khoác đi mưa", "áo mưa", "rain jacket"],
+    "Rain Jacket": ["rain jacket"],
     "Sweatshirts": ["áo nỉ", "áo hoodie", "hoodie", "sweatshirt"],
     "Sweaters": ["áo len", "sweater"],
     "Waistcoat": ["áo gile", "gile"],
     "Kurtas": ["áo kurta", "kurta"],
     "Kurtis": ["áo kurti", "kurti"],
-    "Kurta Sets": ["bộ kurta", "kurta set", "kurta sets"],
+    "Kurta Sets": ["kurta set", "kurta sets"],
     "Tunics": ["áo tunic", "tunic", "tunics"],
-    "Sarees": ["sari", "saree", "sarees", "váy quấn sari"],
+    "Sarees": ["sari", "saree", "sarees"],
     "Dupatta": ["khăn dupatta", "dupatta"],
     "Jeans": ["quần jean", "quần bò", "quần jeans", "jeans"],
     "Trousers": ["quần tây", "quần âu", "quần dài", "quần vải", "quần kaki", "trousers"],
     "Shorts": ["quần short", "quần đùi", "quần sooc", "shorts"],
-    "Capris": ["quần lửng capri", "quần capri", "capri", "capris"],
+    "Capris": ["capri", "capris"],
     "Track Pants": ["quần thể thao", "quần jogger", "track pants", "quần nỉ"],
     "Leggings": ["quần legging", "legging", "leggings"],
-    "Tights": ["quần tất", "tights"],
+    "Tights": ["tights"],
     "Dresses": ["đầm", "váy liền", "váy đầm", "váy dự tiệc", "váy", "dress"],
     "Skirts": ["chân váy", "váy ngắn", "váy xòe", "skirt"],
     "Jumpsuit": ["áo liền quần", "jumpsuit"],
-    "Nightdress": ["váy ngủ", "đầm ngủ", "nightdress"],
+    "Nightdress": ["váy ngủ", "nightdress"],
     "Night suits": ["bộ đồ ngủ", "đồ ngủ", "night suits"],
     "Sports Shoes": ["giày thể thao", "giày chạy bộ", "giày đá bóng", "giày tập gym", "sports shoes"],
     "Casual Shoes": ["giày thường", "giày lười", "giày vải", "giày sneaker", "sneaker", "sneakers", "giày bata", "casual shoes"],
     "Formal Shoes": ["giày tây", "giày da công sở", "giày công sở", "formal shoes"],
     "Sandals": ["giày xăng đan", "xăng đan", "sandal", "sandals", "dép quai hậu"],
-    "Sports Sandals": ["sandal thể thao", "dép sandal thể thao", "sports sandals"],
+    "Sports Sandals": ["sports sandals"],
     "Flip Flops": ["dép xỏ ngón", "dép tông", "dép kẹp", "dép lê", "flip flops"],
     "Heels": ["giày cao gót", "cao gót", "guốc cao gót", "heels"],
     "Flats": ["giày búp bê", "giày bệt", "giày đế bằng", "flats"],
     "Booties": ["giày bốt", "bốt cổ thấp", "booties"],
     "Watches": ["đồng hồ đeo tay", "đồng hồ", "watch", "watches"],
     "Handbags": ["túi xách tay", "túi xách", "túi đeo vai", "túi công sở", "túi nữ", "handbag"],
-    "Messenger Bag": ["túi đeo chéo", "túi đưa thư", "messenger bag"],
+    "Messenger Bag": ["túi đeo chéo", "messenger bag"],
     "Duffel Bag": ["túi trống", "duffel bag"],
     "Waist Pouch": ["túi bao tử", "túi đeo hông", "waist pouch"],
     "Backpacks": ["ba lô", "balo", "cặp sách", "backpack"],
-    "Rucksacks": ["balo du lịch", "balo leo núi", "rucksack"],
+    "Rucksacks": ["balo du lịch", "rucksack"],
     "Laptop Bag": ["túi đựng laptop", "cặp laptop", "túi laptop", "balo laptop"],
     "Wallets": ["ví da", "ví cầm tay", "ví tiền", "bóp tiền", "bóp da", "bóp", "ví", "wallet"],
     "Clutches": ["ví dự tiệc", "clutch", "clutches"],
@@ -120,7 +119,7 @@ ARTICLE_TYPE_LEXICON_V2: Dict[str, List[str]] = {
     "Bra": ["áo ngực", "áo lót", "bra"],
     "Briefs": ["quần lót nam", "quần sịp", "briefs"],
     "Boxers": ["quần lót boxer", "quần boxer", "boxer"],
-    "Trunk": ["quần lót trunk", "quần trunk", "trunk"],
+    "Trunk": ["quần lót trunk", "trunk"],
     "Innerwear Vests": ["áo ba lỗ", "áo may ô"],
     "Earrings": ["bông tai", "hoa tai", "khuyên tai", "earrings"],
     "Bracelet": ["lắc tay", "vòng tay", "bracelet"],
@@ -132,7 +131,7 @@ ARTICLE_TYPE_LEXICON_V2: Dict[str, List[str]] = {
 GENDER_LEXICON_V2: Dict[str, List[str]] = {
     "Boys": ["bé trai", "trẻ em nam", "nhóc nam"],
     "Girls": ["bé gái", "trẻ em nữ", "nhóc nữ"],
-    "Unisex": ["unisex", "nam nữ", "cả nam và nữ"],
+    "Unisex": ["unisex", "nam nữ", "nữ nam", "nam và nữ", "nữ và nam", "cả nam và nữ"],
     "Men": ["nam giới", "của nam", "cho nam", "đàn ông", "phái mạnh", "con trai", "nam"],
     "Women": ["nữ giới", "của nữ", "cho nữ", "phụ nữ", "con gái", "phái đẹp", "chị em", "nữ"],
 }
@@ -142,15 +141,15 @@ COLOUR_LEXICON_V2: Dict[str, List[str]] = {
     "Off White": ["trắng ngà", "trắng sữa", "màu kem", "kem"],
     "Coffee Brown": ["nâu cà phê", "nâu đậm"],
     "Teal": ["xanh cổ vịt", "xanh ngọc"],
-    "Turquoise Blue": ["xanh ngọc lam", "turquoise"],
-    "Olive": ["xanh ô liu", "xanh oliu", "olive"],
+    "Turquoise Blue": ["turquoise"],
+    "Olive": ["xanh ô liu", "olive"],
     "Steel": ["màu thép", "thép không gỉ", "steel"],
     "Charcoal": ["than chì", "xám đậm", "xám lông chuột", "lông chuột"],
     "Grey Melange": ["xám tiêu", "grey melange"],
     "Maroon": ["đỏ đô", "đỏ thẫm", "đỏ rượu", "đỏ mận", "maroon"],
-    "Burgundy": ["đỏ burgundy", "burgundy"],
+    "Burgundy": ["burgundy"],
     "Gold": ["vàng kim", "vàng đồng", "vàng hồng", "gold"],
-    "Lavender": ["tím oải hương", "lavender"],
+    "Lavender": ["lavender"],
     "White": ["trắng tinh", "trắng", "white"],
     "Black": ["đen tuyền", "đen", "black"],
     "Blue": ["xanh dương", "xanh biển", "xanh da trời", "xanh lam", "xanh đậm", "blue"],
@@ -204,6 +203,10 @@ class VietnameseQueryParserV2:
     def __init__(self) -> None:
         self.article_acc, self.article_unacc = _compile_dual_patterns(ARTICLE_TYPE_LEXICON_V2)
         self.gender_acc, self.gender_unacc = _compile_dual_patterns(GENDER_LEXICON_V2)
+        self.gender_unisex_acc = [p for p in self.gender_acc if p[1] == "Unisex"]
+        self.gender_other_acc = [p for p in self.gender_acc if p[1] != "Unisex"]
+        self.gender_unisex_unacc = [p for p in self.gender_unacc if p[1] == "Unisex"]
+        self.gender_other_unacc = [p for p in self.gender_unacc if p[1] != "Unisex"]
         self.colour_acc, self.colour_unacc = _compile_dual_patterns(COLOUR_LEXICON_V2)
 
         # Biên dịch cụm cố định bảo vệ (longest-match-first)
@@ -265,7 +268,7 @@ class VietnameseQueryParserV2:
                     last_noun_end = max(last_noun_end, m.end())
                 prot_art_mask = pat.sub(lambda m: " " * (m.end() - m.start()), prot_art_mask)
 
-        # 2. Trích gender (ưu tiên có dấu nếu query có dấu)
+        # 2. Trích gender (ưu tiên cụm Unisex bao trùm trước khi khớp Men/Women ngắn hơn)
         found_gender: Optional[str] = None
         gender_spans: List[Tuple[int, int]] = []
         if has_dia:
@@ -274,7 +277,8 @@ class VietnameseQueryParserV2:
             for pat in self.protected_acc:
                 if "hang nam" in pat.pattern or "hàng năm" in pat.pattern:
                     g_search = pat.sub(lambda m: " " * (m.end() - m.start()), g_search)
-            for pat, label, _, _ in self.gender_acc:
+            g_norm = _strip_diacritics_keep_len(g_search)
+            for pat, label, _, _ in self.gender_unisex_acc:
                 m = pat.search(g_search)
                 if m:
                     found_gender = label
@@ -282,8 +286,23 @@ class VietnameseQueryParserV2:
                     last_noun_end = max(last_noun_end, m.end())
                     break
             if found_gender is None:
-                g_norm = _strip_diacritics_keep_len(g_search)
-                for pat, label, _, _ in self.gender_unacc:
+                for pat, label, _, _ in self.gender_unisex_unacc:
+                    m = pat.search(g_norm)
+                    if m and self._span_all_unaccented(g_search, m.start(), m.end()):
+                        found_gender = label
+                        gender_spans.append((m.start(), m.end()))
+                        last_noun_end = max(last_noun_end, m.end())
+                        break
+            if found_gender is None:
+                for pat, label, _, _ in self.gender_other_acc:
+                    m = pat.search(g_search)
+                    if m:
+                        found_gender = label
+                        gender_spans.append((m.start(), m.end()))
+                        last_noun_end = max(last_noun_end, m.end())
+                        break
+            if found_gender is None:
+                for pat, label, _, _ in self.gender_other_unacc:
                     m = pat.search(g_norm)
                     if m and self._span_all_unaccented(g_search, m.start(), m.end()):
                         found_gender = label
@@ -295,13 +314,21 @@ class VietnameseQueryParserV2:
             for pat in self.protected_unacc:
                 if "hang nam" in pat.pattern:
                     g_norm = pat.sub(lambda m: " " * (m.end() - m.start()), g_norm)
-            for pat, label, _, _ in self.gender_unacc:
+            for pat, label, _, _ in self.gender_unisex_unacc:
                 m = pat.search(g_norm)
                 if m:
                     found_gender = label
                     gender_spans.append((m.start(), m.end()))
                     last_noun_end = max(last_noun_end, m.end())
                     break
+            if found_gender is None:
+                for pat, label, _, _ in self.gender_other_unacc:
+                    m = pat.search(g_norm)
+                    if m:
+                        found_gender = label
+                        gender_spans.append((m.start(), m.end()))
+                        last_noun_end = max(last_noun_end, m.end())
+                        break
 
         # 3. Trích baseColour (mask cụm bảo vệ + span gender trước!)
         found_colours: List[str] = []

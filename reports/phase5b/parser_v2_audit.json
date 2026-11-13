@@ -36,22 +36,20 @@
       "baseColour": 200
     },
     "slot_fp_counts": {
-      "gender": 8,
       "articleType": 1
     },
     "slot_fp_rate_over_queries": {
       "articleType": 0.0042,
-      "gender": 0.0333,
+      "gender": 0.0,
       "baseColour": 0.0
     },
     "slot_fp_rate_over_preds": {
       "articleType": 0.0042,
-      "gender": 0.0333,
+      "gender": 0.0,
       "baseColour": 0.0
     },
     "slot_fp_empty_spec": {},
     "slot_fp_mismatch_spec": {
-      "gender": 8,
       "articleType": 1
     },
     "tim_mua_purple_count": 0,
@@ -123,22 +121,22 @@
     },
     "slot_fp_counts": {
       "baseColour": 1,
-      "articleType": 1
+      "articleType": 2
     },
     "slot_fp_rate_over_queries": {
-      "articleType": 0.0154,
+      "articleType": 0.0308,
       "gender": 0.0,
       "baseColour": 0.0154
     },
     "slot_fp_rate_over_preds": {
-      "articleType": 0.0161,
+      "articleType": 0.0323,
       "gender": 0.0,
       "baseColour": 0.0333
     },
     "slot_fp_empty_spec": {},
     "slot_fp_mismatch_spec": {
       "baseColour": 1,
-      "articleType": 1
+      "articleType": 2
     },
     "tim_mua_purple_count": 0,
     "tim_mua_purple_ids": []

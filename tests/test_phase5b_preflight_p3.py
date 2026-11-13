@@ -179,4 +179,19 @@ def test_p3_provenance_file_exists_and_complete():
     assert prov_path.exists()
     with prov_path.open(encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
-    assert len(rows) == 398
+    assert len(rows) == 383
+    assert all(r["sources"] != "UNTRACED" for r in rows)
+
+
+def test_p3_unisex_priority_structural():
+    p2 = VietnameseQueryParserV2()
+    for q in [
+        "sản phẩm cho nam nữ",
+        "phụ kiện dành cho nam và nữ",
+        "thời trang nu nam",
+        "do dung nam nu",
+        "mẫu nữ và nam",
+    ]:
+        assert p2.parse(q)["gender"] == "Unisex", f"Expected Unisex for {q!r}"
+    assert p2.parse("sản phẩm cho nam")["gender"] == "Men"
+    assert p2.parse("sản phẩm cho nữ")["gender"] == "Women"
