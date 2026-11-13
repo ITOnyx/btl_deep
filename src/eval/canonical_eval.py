@@ -109,6 +109,39 @@ def compute_weighted_attribute_match(
     return float(matched_w / total_w)
 
 
+def apply_conservative_tie_break(
+    scored_items: List[Tuple[float, int]],
+    is_relevant_fn,
+    epsilon: float = 1e-5,
+) -> List[int]:
+    """
+    Áp dụng tie_rule='conservative' (config.yaml) với ngưỡng epsilon=1e-5:
+    Sắp xếp theo điểm giảm dần; trong cùng nhóm các phần tử có hiệu điểm <= epsilon
+    so với phần tử đầu nhóm, xếp ảnh KHÔNG liên quan (rel=0) lên trước ảnh liên quan (rel=1).
+    """
+    if not scored_items:
+        return []
+    # Sort giảm dần theo score, ổn định
+    ordered = sorted(scored_items, key=lambda x: x[0], reverse=True)
+    result_indices: List[int] = []
+    n = len(ordered)
+    i = 0
+    while i < n:
+        anchor_score = ordered[i][0]
+        j = i + 1
+        while j < n and (anchor_score - ordered[j][0]) <= epsilon:
+            j += 1
+        if j - i == 1:
+            result_indices.append(ordered[i][1])
+        else:
+            # Trong nhóm tie [i, j): rel=0 xếp trước rel=1
+            group = ordered[i:j]
+            group_sorted = sorted(group, key=lambda x: (1 if is_relevant_fn(x[1]) else 0, -x[0]))
+            result_indices.extend(x[1] for x in group_sorted)
+        i = j
+    return result_indices
+
+
 def evaluate_t2i_canonical(
     engine,
     queries: List[Dict[str, Any]],
@@ -122,6 +155,10 @@ def evaluate_t2i_canonical(
     slot_weights: Optional[Dict[str, float]] = None,
     hard_tier: bool = False,
     use_exact_when_full: bool = True,
+    force_exact: bool = True,
+    tie_rule: str = "conservative",
+    tie_epsilon: float = 1e-5,
+    zscore_cosine: bool = False,
     compute_breakdowns: bool = False,
     policies: Sequence[str] = ("hybrid",),
     min_relevant_per_query: int = 1,
@@ -141,11 +178,11 @@ def evaluate_t2i_canonical(
     eff_pool = min(candidate_pool, n_gallery)
 
     ranked_indices_list: List[List[int]] = []
+    scored_items_per_query: List[List[Tuple[float, int]]] = []
 
-    # Nếu duyệt toàn gallery và exact, tính ma trận cosine một lần
+    use_exact = force_exact or (use_exact_when_full and eff_pool >= n_gallery)
     full_cos_matrix = None
-    if use_exact_when_full and eff_pool >= n_gallery:
-        # Áp dụng mean-centering nếu engine bật
+    if use_exact:
         q_mat = engine._apply_mean_centering(query_vecs)
         full_cos_matrix = q_mat @ engine.embeddings.T  # (n_queries, n_gallery)
 
@@ -153,62 +190,62 @@ def evaluate_t2i_canonical(
         q_vec = engine._apply_mean_centering(query_vecs[i : i + 1])
 
         if full_cos_matrix is not None:
-            cos_row = full_cos_matrix[i]
+            cos_row = full_cos_matrix[i].astype(np.float64)
+            if zscore_cosine:
+                mu = float(np.mean(cos_row))
+                sd = float(np.std(cos_row))
+                cos_row = (cos_row - mu) / max(sd, 1e-8)
+
+            if eff_pool < n_gallery:
+                pool_idxs = np.argsort(-cos_row, kind="mergesort")[:eff_pool]
+            else:
+                pool_idxs = np.arange(n_gallery)
+
             if mode == "model_only":
-                order = np.argsort(-cos_row, kind="mergesort")[:eval_top_k]
-                ranked_indices_list.append([int(x) for x in order])
+                scored = [(float(cos_row[int(idx)]), int(idx)) for idx in pool_idxs]
             else:
                 parsed = parsed_queries[i]
                 scored = []
-                for idx in range(n_gallery):
+                for idx_np in pool_idxs:
+                    idx = int(idx_np)
                     base_s = float(cos_row[idx])
                     meta = id_map[idx]
                     mf = compute_weighted_attribute_match(
                         parsed, meta, weights=slot_weights, gender_policy="hybrid", strict_categories=strict_cats
                     )
                     if hard_tier:
-                        scored.append((mf, base_s, idx))
+                        scored.append((mf * 100.0 + base_s, idx))
                     else:
                         scored.append((base_s + gamma * mf, idx))
-                if hard_tier:
-                    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
-                    ranked_indices_list.append([x[2] for x in scored[:eval_top_k]])
-                else:
-                    scored.sort(key=lambda x: x[0], reverse=True)
-                    ranked_indices_list.append([x[1] for x in scored[:eval_top_k]])
+
+            scored.sort(key=lambda x: x[0], reverse=True)
+            scored_items_per_query.append(scored)
+            ranked_indices_list.append([x[1] for x in scored[:eval_top_k]])
         else:
-            if mode == "model_only" and slot_weights is None and not hard_tier:
-                results = engine.search_by_vector(
-                    query_vec=q_vec,
-                    top_k=eval_top_k,
-                    parsed_query=parsed_queries[i],
-                    mode="model_only",
-                    candidate_pool=eff_pool,
-                )
-                ranked_indices_list.append([r["index_pos"] for r in results])
-            else:
-                fetch_k = max(eval_top_k, eff_pool)
-                scores, indices = engine.hnsw.search(q_vec, top_k=fetch_k)
-                parsed = parsed_queries[i]
-                scored = []
-                for idx, base_s in zip(indices[0], scores[0]):
-                    if idx < 0:
-                        continue
-                    idx_int = int(idx)
+            # Đường HNSW (chỉ dùng khi force_exact=False để tái hiện baseline Pha 5)
+            fetch_k = eval_top_k if mode == "model_only" else max(eval_top_k, eff_pool)
+            scores, indices = engine.hnsw.search(q_vec, top_k=min(fetch_k, n_gallery))
+            parsed = parsed_queries[i]
+            scored = []
+            for idx, base_s in zip(indices[0], scores[0]):
+                if idx < 0:
+                    continue
+                idx_int = int(idx)
+                s_val = float(base_s)
+                if mode == "model_only":
+                    scored.append((s_val, idx_int))
+                else:
                     meta = id_map[idx_int]
                     mf = compute_weighted_attribute_match(
                         parsed, meta, weights=slot_weights, gender_policy="hybrid", strict_categories=strict_cats
                     )
                     if hard_tier:
-                        scored.append((mf, float(base_s), idx_int))
+                        scored.append((mf * 100.0 + s_val, idx_int))
                     else:
-                        scored.append((float(base_s) + gamma * mf, idx_int))
-                if hard_tier:
-                    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
-                    ranked_indices_list.append([x[2] for x in scored[:eval_top_k]])
-                else:
-                    scored.sort(key=lambda x: x[0], reverse=True)
-                    ranked_indices_list.append([x[1] for x in scored[:eval_top_k]])
+                        scored.append((s_val + gamma * mf, idx_int))
+            scored.sort(key=lambda x: x[0], reverse=True)
+            scored_items_per_query.append(scored)
+            ranked_indices_list.append([x[1] for x in scored[:eval_top_k]])
 
     hubness = compute_hubness_stats(
         [idxs[:10] for idxs in ranked_indices_list],
@@ -225,14 +262,21 @@ def evaluate_t2i_canonical(
 
         for i, q in enumerate(queries):
             spec = q["spec"]
-            total_rel = sum(1 for meta in id_map if is_item_relevant(spec, meta, pol, strict_cats))
+            rel_flags = [is_item_relevant(spec, meta, pol, strict_cats) for meta in id_map]
+            total_rel = sum(1 for x in rel_flags if x)
             tot_rels.append(total_rel)
             valid_mask.append(total_rel >= min_relevant_per_query)
 
-            rels = [
-                1 if is_item_relevant(spec, id_map[idx], pol, strict_cats) else 0
-                for idx in ranked_indices_list[i]
-            ]
+            if tie_rule == "conservative":
+                tied_indices = apply_conservative_tie_break(
+                    scored_items_per_query[i],
+                    is_relevant_fn=lambda idx: rel_flags[idx],
+                    epsilon=tie_epsilon,
+                )[:eval_top_k]
+            else:
+                tied_indices = ranked_indices_list[i]
+
+            rels = [1 if rel_flags[idx] else 0 for idx in tied_indices]
             ranked_rels.append(rels)
             per_q_r1.append(compute_recall_at_k(rels, 1))
             per_q_r5.append(compute_recall_at_k(rels, 5))

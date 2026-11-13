@@ -1,0 +1,9629 @@
+{
+  "metadata": {
+    "description": "Tập C mới (Parse-error injection độc lập lexicon, seed=42) để đo đường cong tác hại theo mức lỗi 0%, 10%, 20%, 30%.",
+    "n_queries": 160,
+    "seed": 42,
+    "error_rates": [
+      0.0,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "injection_distribution": {
+      "wrong_articleType_confusable": "30/70 (~42.9%)",
+      "flip_gender": "10/70 (~14.3%)",
+      "drop_slot": "20/70 (~28.6%)",
+      "wrong_baseColour": "10/70 (~14.3%)"
+    }
+  },
+  "queries": [
+    {
+      "id": "val_c_000",
+      "orig_id": "val_a_008",
+      "query": "quan jean nam mau xanh duong",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Jeans__Men__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_001",
+      "orig_id": "val_a_176",
+      "query": "dong ho nu mau bac",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      "spec_cluster_id": "Watches__Women__Silver",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      }
+    },
+    {
+      "id": "val_c_002",
+      "orig_id": "val_a_094",
+      "query": "giày búp bê màu đen cho nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Flats__Women__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_003",
+      "orig_id": "val_a_055",
+      "query": "áo khoác nam màu đen",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Jackets__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_004",
+      "orig_id": "val_a_113",
+      "query": "dong ho cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 71,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Watches__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_005",
+      "orig_id": "val_a_235",
+      "query": "dong ho mau trang cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 19,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Watches__Men__White",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_006",
+      "orig_id": "val_a_060",
+      "query": "tui xach nu mau xanh duong",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Handbags__Women__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_007",
+      "orig_id": "val_a_218",
+      "query": "giay thuong cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 30,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Casual Shoes__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_008",
+      "orig_id": "val_a_092",
+      "query": "balo màu đỏ cho nam nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      "spec_cluster_id": "Backpacks__Unisex__Red",
+      "clean_parsed": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      }
+    },
+    {
+      "id": "val_c_009",
+      "orig_id": "val_a_025",
+      "query": "giay cao got mau den cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 17,
+      "spec": {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Heels__Women__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_010",
+      "orig_id": "val_a_175",
+      "query": "vi tien cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 26,
+      "spec": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Wallets__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_011",
+      "orig_id": "val_a_237",
+      "query": "that lung cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 13,
+      "spec": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Belts__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_012",
+      "orig_id": "val_a_139",
+      "query": "ao kieu mau hong cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      "spec_cluster_id": "Tops__Women__Pink",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      }
+    },
+    {
+      "id": "val_c_013",
+      "orig_id": "val_a_165",
+      "query": "bong tai mau bac cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      "spec_cluster_id": "Earrings__Women__Silver",
+      "clean_parsed": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      }
+    },
+    {
+      "id": "val_c_014",
+      "orig_id": "val_a_091",
+      "query": "vi tien nam mau nau",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 7,
+      "spec": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Wallets__Men__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_015",
+      "orig_id": "val_a_015",
+      "query": "kính râm màu đen cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Sunglasses__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_016",
+      "orig_id": "val_a_101",
+      "query": "mặt dây chuyền màu bạc cho nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      "spec_cluster_id": "Pendant__Women__Silver",
+      "clean_parsed": {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      }
+    },
+    {
+      "id": "val_c_017",
+      "orig_id": "val_a_070",
+      "query": "áo kiểu nữ màu đen",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Tops__Women__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_018",
+      "orig_id": "val_a_048",
+      "query": "thắt lưng màu đen cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Belts__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_019",
+      "orig_id": "val_a_031",
+      "query": "giày cao gót nữ màu vàng kim",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 10,
+      "spec": {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      "spec_cluster_id": "Heels__Women__Gold",
+      "clean_parsed": {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      }
+    },
+    {
+      "id": "val_c_020",
+      "orig_id": "val_a_217",
+      "query": "áo kiểu nữ màu xanh dương",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Tops__Women__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_021",
+      "orig_id": "val_a_210",
+      "query": "ao thun be trai mau do",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Boys",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Boys__Red",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Boys",
+        "baseColour": [
+          "Red"
+        ]
+      }
+    },
+    {
+      "id": "val_c_022",
+      "orig_id": "val_a_116",
+      "query": "quần lót nam cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 20,
+      "spec": {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Briefs__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_023",
+      "orig_id": "val_a_023",
+      "query": "bông tai nữ màu bạc",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      "spec_cluster_id": "Earrings__Women__Silver",
+      "clean_parsed": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      }
+    },
+    {
+      "id": "val_c_024",
+      "orig_id": "val_a_169",
+      "query": "quan the thao dai mau den cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 9,
+      "spec": {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Track Pants__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_025",
+      "orig_id": "val_a_054",
+      "query": "ao thun nu mau trang",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Women__White",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_026",
+      "orig_id": "val_a_164",
+      "query": "balo mau do cho nam nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      "spec_cluster_id": "Backpacks__Unisex__Red",
+      "clean_parsed": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      }
+    },
+    {
+      "id": "val_c_027",
+      "orig_id": "val_a_163",
+      "query": "ao thun mau trang cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 29,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Men__White",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_028",
+      "orig_id": "val_a_152",
+      "query": "giày cao gót màu vàng kim cho nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 10,
+      "spec": {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      "spec_cluster_id": "Heels__Women__Gold",
+      "clean_parsed": {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      }
+    },
+    {
+      "id": "val_c_029",
+      "orig_id": "val_a_005",
+      "query": "quần thể thao dài màu xám cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      "spec_cluster_id": "Track Pants__Men__Grey",
+      "clean_parsed": {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      }
+    },
+    {
+      "id": "val_c_030",
+      "orig_id": "val_a_012",
+      "query": "quan jean cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Jeans__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_031",
+      "orig_id": "val_a_201",
+      "query": "giay thuong mau trang cho nam nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__Unisex__White",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_032",
+      "orig_id": "val_a_085",
+      "query": "đồng hồ màu trắng cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 19,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Watches__Men__White",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_033",
+      "orig_id": "val_a_062",
+      "query": "túi xách nữ màu tím",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      "spec_cluster_id": "Handbags__Women__Purple",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      }
+    },
+    {
+      "id": "val_c_034",
+      "orig_id": "val_a_032",
+      "query": "ao thun nam mau vang",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 7,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Men__Yellow",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Yellow"
+        ]
+      }
+    },
+    {
+      "id": "val_c_035",
+      "orig_id": "val_a_208",
+      "query": "ao kurta nu mau den",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Kurtas__Women__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_036",
+      "orig_id": "val_a_144",
+      "query": "tui xach cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 86,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Handbags__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_037",
+      "orig_id": "val_a_052",
+      "query": "ao thun nam mau xanh la",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 19,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Men__Green",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      }
+    },
+    {
+      "id": "val_c_038",
+      "orig_id": "val_a_017",
+      "query": "bông tai cho nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 24,
+      "spec": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Earrings__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_039",
+      "orig_id": "val_a_195",
+      "query": "giay thuong mau xanh navy cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 9,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__Men__Navy Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_040",
+      "orig_id": "val_a_141",
+      "query": "giày tây công sở nam màu nâu",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 9,
+      "spec": {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Formal Shoes__Men__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_041",
+      "orig_id": "val_a_053",
+      "query": "giày thể thao màu đen cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 23,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Sports Shoes__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_042",
+      "orig_id": "val_a_150",
+      "query": "giay xang dan nam mau den",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Sandals__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_043",
+      "orig_id": "val_a_236",
+      "query": "áo thun màu đỏ cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 20,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Men__Red",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Red"
+        ]
+      }
+    },
+    {
+      "id": "val_c_044",
+      "orig_id": "val_a_059",
+      "query": "kính râm màu nâu cho nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Sunglasses__Women__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_045",
+      "orig_id": "val_a_084",
+      "query": "giày xăng đan màu nâu cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Sandals__Men__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_046",
+      "orig_id": "val_a_037",
+      "query": "bong tai cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 24,
+      "spec": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Earrings__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_047",
+      "orig_id": "val_a_211",
+      "query": "áo kurta màu xanh dương cho nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Kurtas__Women__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_048",
+      "orig_id": "val_a_000",
+      "query": "vi tien cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 21,
+      "spec": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Wallets__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_049",
+      "orig_id": "val_a_222",
+      "query": "bông tai màu bạc cho nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      "spec_cluster_id": "Earrings__Women__Silver",
+      "clean_parsed": {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      }
+    },
+    {
+      "id": "val_c_050",
+      "orig_id": "val_a_193",
+      "query": "áo kurta nữ màu xanh lá",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 16,
+      "spec": {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      "spec_cluster_id": "Kurtas__Women__Green",
+      "clean_parsed": {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      }
+    },
+    {
+      "id": "val_c_051",
+      "orig_id": "val_a_033",
+      "query": "đồng hồ màu bạc cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 9,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      "spec_cluster_id": "Watches__Men__Silver",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Silver"
+        ]
+      }
+    },
+    {
+      "id": "val_c_052",
+      "orig_id": "val_a_138",
+      "query": "ví tiền nữ màu nâu",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Wallets__Women__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_053",
+      "orig_id": "val_a_064",
+      "query": "giay tay cong so nam mau den",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Formal Shoes__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_054",
+      "orig_id": "val_a_044",
+      "query": "giày thể thao cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 77,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Sports Shoes__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_055",
+      "orig_id": "val_a_028",
+      "query": "ao so mi mau xanh navy cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 9,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      "spec_cluster_id": "Shirts__Men__Navy Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_056",
+      "orig_id": "val_a_215",
+      "query": "đồng hồ màu đen cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 26,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Watches__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_057",
+      "orig_id": "val_a_006",
+      "query": "giày thường màu đen cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 39,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_058",
+      "orig_id": "val_a_188",
+      "query": "dép xỏ ngón cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 22,
+      "spec": {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Flip Flops__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_059",
+      "orig_id": "val_a_003",
+      "query": "quần jean nam màu xanh dương",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Jeans__Men__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_060",
+      "orig_id": "val_a_225",
+      "query": "ao so mi cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 132,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Shirts__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_061",
+      "orig_id": "val_a_233",
+      "query": "ao thun mau xanh la cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Women__Green",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      }
+    },
+    {
+      "id": "val_c_062",
+      "orig_id": "val_a_197",
+      "query": "giày thể thao nam màu trắng",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 38,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Sports Shoes__Men__White",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_063",
+      "orig_id": "val_a_082",
+      "query": "áo thun màu trắng cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 29,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Men__White",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_064",
+      "orig_id": "val_a_004",
+      "query": "mat day chuyen mau bac cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      "spec_cluster_id": "Pendant__Women__Silver",
+      "clean_parsed": {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      }
+    },
+    {
+      "id": "val_c_065",
+      "orig_id": "val_a_185",
+      "query": "thắt lưng màu nâu cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 10,
+      "spec": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Belts__Men__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_066",
+      "orig_id": "val_a_067",
+      "query": "ao so mi mau xam cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      "spec_cluster_id": "Shirts__Men__Grey",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      }
+    },
+    {
+      "id": "val_c_067",
+      "orig_id": "val_a_013",
+      "query": "giày thường cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 107,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Casual Shoes__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_068",
+      "orig_id": "val_a_205",
+      "query": "áo sơ mi nam màu nâu",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Shirts__Men__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_069",
+      "orig_id": "val_a_107",
+      "query": "giay the thao nu mau trang",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Sports Shoes__Women__White",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_070",
+      "orig_id": "val_a_134",
+      "query": "ao so mi nam mau xanh la",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      "spec_cluster_id": "Shirts__Men__Green",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      }
+    },
+    {
+      "id": "val_c_071",
+      "orig_id": "val_a_029",
+      "query": "giày thường màu xám cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__Men__Grey",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      }
+    },
+    {
+      "id": "val_c_072",
+      "orig_id": "val_a_016",
+      "query": "ao kurta mau den cho nu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Kurtas__Women__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_073",
+      "orig_id": "val_a_121",
+      "query": "túi xách màu nâu cho nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 15,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Handbags__Women__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_074",
+      "orig_id": "val_a_114",
+      "query": "áo thun màu xám cho nam",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 39,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Men__Grey",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      }
+    },
+    {
+      "id": "val_c_075",
+      "orig_id": "val_a_231",
+      "query": "giày thường màu trắng cho nam nữ",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__Unisex__White",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_076",
+      "orig_id": "val_a_131",
+      "query": "giay xang dan cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 32,
+      "spec": {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Sandals__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_077",
+      "orig_id": "val_a_151",
+      "query": "ao so mi mau xanh duong cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 33,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Shirts__Men__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_078",
+      "orig_id": "val_a_027",
+      "query": "giay thuong nam mau xanh navy",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 9,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__Men__Navy Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_079",
+      "orig_id": "val_a_115",
+      "query": "giay thuong nam mau trang",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 15,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__Men__White",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_080",
+      "orig_id": "val_b_synth_128",
+      "query": "quần bò ống đứng của nam xanh biển giá tốt",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Jeans__Men__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_081",
+      "orig_id": "val_b_synth_056",
+      "query": "vớ chân của nam đen tuyền đẹp xịn",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 10,
+      "spec": {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Socks__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_082",
+      "orig_id": "val_b_synth_157",
+      "query": "giay tap gym nam đen",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 23,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Sports Shoes__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_083",
+      "orig_id": "val_b_synth_011",
+      "query": "tu van giup ao dieu den tuyen",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Tops__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_084",
+      "orig_id": "val_b_synth_133",
+      "query": "cần tìm guốc cao gót đen giá tốt",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 17,
+      "spec": {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Heels__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_085",
+      "orig_id": "val_b_synth_077",
+      "query": "can tim dep di bien do tuoi",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Red"
+        ]
+      },
+      "spec_cluster_id": "Flip Flops__None__Red",
+      "clean_parsed": {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Red"
+        ]
+      }
+    },
+    {
+      "id": "val_c_086",
+      "orig_id": "val_b_synth_117",
+      "query": "cho mình hỏi giày bệt cho nữ đẹp xịn",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 21,
+      "spec": {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Flats__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_087",
+      "orig_id": "val_b_synth_007",
+      "query": "cho mình hỏi ba lô laptop unisex mẫu mới nhất",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 27,
+      "spec": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Backpacks__Unisex__",
+      "clean_parsed": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_088",
+      "orig_id": "val_b_synth_015",
+      "query": "vớ cổ ngắn đen tuyền đẹp xịn",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 10,
+      "spec": {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Socks__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_089",
+      "orig_id": "val_b_synth_122",
+      "query": "ao dieu cho nu màu xanh dương đẹp xịn",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Tops__Women__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_090",
+      "orig_id": "val_b_synth_102",
+      "query": "tư vấn giúp kính mát đen đi chơi",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Sunglasses__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_091",
+      "orig_id": "val_b_synth_109",
+      "query": "tìm mua túi công sở nữ tím đi làm",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      "spec_cluster_id": "Handbags__Women__Purple",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      }
+    },
+    {
+      "id": "val_c_092",
+      "orig_id": "val_b_synth_027",
+      "query": "cần tìm dây lưng da của nam màu nâu đi làm",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 10,
+      "spec": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Belts__Men__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_093",
+      "orig_id": "val_b_synth_125",
+      "query": "tim mua giay mọi đen đi chơi",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Flats__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_094",
+      "orig_id": "val_b_synth_113",
+      "query": "shop oi co giay vải chị em giá tốt",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 30,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Casual Shoes__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_095",
+      "orig_id": "val_b_synth_018",
+      "query": "áo phông cổ tròn nam giới",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 244,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Tshirts__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_096",
+      "orig_id": "val_b_synth_020",
+      "query": "túi công sở màu đen",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 19,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Handbags__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_097",
+      "orig_id": "val_b_synth_082",
+      "query": "tu van giup giay the duc trang tinh dep xin",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 44,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Sports Shoes__None__White",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_098",
+      "orig_id": "val_b_synth_037",
+      "query": "giày vải của nam đi chơi",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 107,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Casual Shoes__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_099",
+      "orig_id": "val_b_synth_016",
+      "query": "cần tìm giày tập gym nữ màu trắng đi làm",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Sports Shoes__Women__White",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_100",
+      "orig_id": "val_b_synth_032",
+      "query": "can tim ao phong cho nu xanh da troi di lam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 7,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Women__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_101",
+      "orig_id": "val_b_synth_070",
+      "query": "day lung da nau dat di lam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Belts__None__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_102",
+      "orig_id": "val_b_synth_140",
+      "query": "so mi cong so cua nam xanh lục đi làm",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      "spec_cluster_id": "Shirts__Men__Green",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      }
+    },
+    {
+      "id": "val_c_103",
+      "orig_id": "val_b_synth_083",
+      "query": "tìm mua áo phông nữ màu trắng",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Women__White",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_104",
+      "orig_id": "val_b_synth_097",
+      "query": "shop oi co bop da cho nu gia tot",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 26,
+      "spec": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Wallets__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_105",
+      "orig_id": "val_b_synth_135",
+      "query": "tim mua ao kieu cua nu trang tinh gia tot",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 10,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Tops__Women__White",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_106",
+      "orig_id": "val_b_synth_075",
+      "query": "giay the duc nam mac hang ngay",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 77,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Sports Shoes__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_107",
+      "orig_id": "val_b_synth_116",
+      "query": "ao so mi cho nam mau hong di lam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      "spec_cluster_id": "Shirts__Men__Pink",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Pink"
+        ]
+      }
+    },
+    {
+      "id": "val_c_108",
+      "orig_id": "val_b_synth_129",
+      "query": "shop oi co ao điệu xanh navy giá tốt",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      "spec_cluster_id": "Tops__None__Navy Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Navy Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_109",
+      "orig_id": "val_b_synth_110",
+      "query": "giay di choi den tuyen mac hang ngay",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 42,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_110",
+      "orig_id": "val_b_synth_025",
+      "query": "can tim quan sip mau den",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Briefs__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_111",
+      "orig_id": "val_b_synth_029",
+      "query": "shop ơi có giày chạy bộ nữ giới",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 21,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Sports Shoes__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_112",
+      "orig_id": "val_b_synth_055",
+      "query": "cho minh hoi quan bò chị em đi làm",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Jeans__Women__",
+      "clean_parsed": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_113",
+      "orig_id": "val_b_synth_139",
+      "query": "tìm mua sơ mi dài tay nam giá tốt",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 132,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Shirts__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_114",
+      "orig_id": "val_b_synth_115",
+      "query": "tu van giup túi đeo vai unisex",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Handbags__Unisex__",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_115",
+      "orig_id": "val_b_synth_058",
+      "query": "mat kinh di nang nam den",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Sunglasses__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_116",
+      "orig_id": "val_b_synth_105",
+      "query": "can tim nit quan đen tuyền mặc hàng ngày",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 15,
+      "spec": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Belts__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_117",
+      "orig_id": "val_b_synth_086",
+      "query": "cho minh hoi so mi cong so mau hong mau moi nhat",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 7,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      "spec_cluster_id": "Shirts__None__Pink",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      }
+    },
+    {
+      "id": "val_c_118",
+      "orig_id": "val_b_synth_164",
+      "query": "ao phong co tron hồng phấn đi chơi",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__None__Pink",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      }
+    },
+    {
+      "id": "val_c_119",
+      "orig_id": "val_b_synth_136",
+      "query": "can tim ao am cho nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 13,
+      "spec": {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Jackets__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_120",
+      "orig_id": "val_b_synth_051",
+      "query": "cho mình hỏi dép quai hậu của nam mặc hàng ngày",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 32,
+      "spec": {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Sandals__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_121",
+      "orig_id": "val_b_synth_053",
+      "query": "tìm mua sơ mi dài tay nâu đất đi làm",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Shirts__None__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_122",
+      "orig_id": "val_b_synth_093",
+      "query": "tư vấn giúp giày vải của nam màu đen đẹp xịn",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 39,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_123",
+      "orig_id": "val_b_synth_012",
+      "query": "can tim ao thun lanh nam mau xanh la mau moi nhat",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 19,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Men__Green",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      }
+    },
+    {
+      "id": "val_c_124",
+      "orig_id": "val_b_synth_040",
+      "query": "giày đi chơi xám ghi mẫu mới nhất",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__None__Grey",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      }
+    },
+    {
+      "id": "val_c_125",
+      "orig_id": "val_b_synth_054",
+      "query": "tìm mua quần bò xanh biển đẹp xịn",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 15,
+      "spec": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Jeans__None__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_126",
+      "orig_id": "val_b_synth_120",
+      "query": "áo kiểu chị em xanh tím than đi chơi",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      "spec_cluster_id": "Tops__Women__Navy Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_127",
+      "orig_id": "val_b_synth_085",
+      "query": "tư vấn giúp đồng hồ thời trang cho nam",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 71,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Watches__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_128",
+      "orig_id": "val_b_synth_144",
+      "query": "tim mua dong ho deo tay nam màu đen mẫu mới nhất",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 26,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Watches__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_129",
+      "orig_id": "val_b_synth_047",
+      "query": "shop oi co ba lo di hoc unisex den",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 10,
+      "spec": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Backpacks__Unisex__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_130",
+      "orig_id": "val_b_synth_019",
+      "query": "cho minh hoi dong ho đeo tay màu trắng giá tốt",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 37,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Watches__None__White",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_131",
+      "orig_id": "val_b_synth_087",
+      "query": "đồng hồ kim cho nữ trắng giá tốt",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 21,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Watches__Women__White",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_132",
+      "orig_id": "val_b_synth_060",
+      "query": "tu van giup giay di choi nam nu deu mang duoc mau trang di choi",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__Unisex__White",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_133",
+      "orig_id": "val_b_synth_008",
+      "query": "giày mọi chị em đen tuyền giá tốt",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Flats__Women__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_134",
+      "orig_id": "val_b_synth_161",
+      "query": "tim mua vi gập nam giới",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 21,
+      "spec": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Wallets__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_135",
+      "orig_id": "val_b_synth_106",
+      "query": "shop ơi có túi công sở xanh lục mặc hàng ngày",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      "spec_cluster_id": "Handbags__None__Green",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      }
+    },
+    {
+      "id": "val_c_136",
+      "orig_id": "val_b_synth_010",
+      "query": "giay da cong so nam den",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 14,
+      "spec": {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Formal Shoes__Men__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_137",
+      "orig_id": "val_b_synth_131",
+      "query": "dây nịt cho nam",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 24,
+      "spec": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Belts__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_138",
+      "orig_id": "val_b_synth_132",
+      "query": "cần tìm áo phông cổ tròn cho nam màu trắng giá tốt",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 29,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Men__White",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_139",
+      "orig_id": "val_b_synth_121",
+      "query": "giay the thao nhe trang mau moi nhat",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 20,
+      "spec": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      "spec_cluster_id": "Casual Shoes__None__White",
+      "clean_parsed": {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      }
+    },
+    {
+      "id": "val_c_140",
+      "orig_id": "val_b_synth_095",
+      "query": "tìm mua áo cộc tay màu đen đi làm",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 39,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_141",
+      "orig_id": "val_b_synth_094",
+      "query": "tìm mua áo sơ mi nam xanh biển giá tốt",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 33,
+      "spec": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Shirts__Men__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_142",
+      "orig_id": "val_b_synth_130",
+      "query": "tìm mua giày chạy bộ xám ghi mặc hàng ngày",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      "spec_cluster_id": "Sports Shoes__None__Grey",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      }
+    },
+    {
+      "id": "val_c_143",
+      "orig_id": "val_b_synth_145",
+      "query": "cho minh hoi giay chu rể của nam đi làm",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 24,
+      "spec": {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Formal Shoes__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_144",
+      "orig_id": "val_b_synth_071",
+      "query": "cho minh hoi tui deo vai xam ghi",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      "spec_cluster_id": "Handbags__None__Grey",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      }
+    },
+    {
+      "id": "val_c_145",
+      "orig_id": "val_b_synth_162",
+      "query": "áo phông cho nam tím đi làm",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__Men__Purple",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Purple"
+        ]
+      }
+    },
+    {
+      "id": "val_c_146",
+      "orig_id": "val_b_synth_138",
+      "query": "can tim tui xach tay chi em xanh reu",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      "spec_cluster_id": "Handbags__Women__Green",
+      "clean_parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      }
+    },
+    {
+      "id": "val_c_147",
+      "orig_id": "val_b_synth_100",
+      "query": "shop ơi có áo ấm đen tuyền đi làm",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Jackets__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_148",
+      "orig_id": "val_b_synth_142",
+      "query": "tim mua dong ho thoi trang unisex mau moi nhat",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 7,
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Watches__Unisex__",
+      "clean_parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_149",
+      "orig_id": "val_b_synth_042",
+      "query": "cần tìm quần bò ống đứng màu đen",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 5,
+      "spec": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Jeans__None__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_150",
+      "orig_id": "val_b_synth_158",
+      "query": "tìm mua ba lô đi học nam nữ đều mang được đỏ đẹp xịn",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      "spec_cluster_id": "Backpacks__Unisex__Red",
+      "clean_parsed": {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      }
+    },
+    {
+      "id": "val_c_151",
+      "orig_id": "val_b_synth_156",
+      "query": "cho minh hoi ao coc tay mau xanh la gia tot",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 27,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__None__Green",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      }
+    },
+    {
+      "id": "val_c_152",
+      "orig_id": "val_b_synth_052",
+      "query": "shop ơi có áo phông vàng đi làm",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 10,
+      "spec": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      "spec_cluster_id": "Tshirts__None__Yellow",
+      "clean_parsed": {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Yellow"
+        ]
+      }
+    },
+    {
+      "id": "val_c_153",
+      "orig_id": "val_b_synth_045",
+      "query": "tu van giup quan lot cho nam di lam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 20,
+      "spec": {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Briefs__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_154",
+      "orig_id": "val_b_synth_103",
+      "query": "tu van giup ao dieu nu hong phan",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 11,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      "spec_cluster_id": "Tops__Women__Pink",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      }
+    },
+    {
+      "id": "val_c_155",
+      "orig_id": "val_b_synth_119",
+      "query": "cần tìm áo cánh của nữ đen đi làm",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 8,
+      "spec": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "spec_cluster_id": "Tops__Women__Black",
+      "clean_parsed": {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      }
+    },
+    {
+      "id": "val_c_156",
+      "orig_id": "val_b_synth_006",
+      "query": "bop tien nau dat di choi",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 12,
+      "spec": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      "spec_cluster_id": "Wallets__None__Brown",
+      "clean_parsed": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      }
+    },
+    {
+      "id": "val_c_157",
+      "orig_id": "val_b_synth_036",
+      "query": "kinh ram nam",
+      "has_diacritics": false,
+      "dia_class": "none",
+      "n_relevant": 21,
+      "spec": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Sunglasses__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    },
+    {
+      "id": "val_c_158",
+      "orig_id": "val_b_synth_076",
+      "query": "cho minh hoi giay the dục xanh biển đi chơi",
+      "has_diacritics": true,
+      "dia_class": "partial",
+      "n_relevant": 6,
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "spec_cluster_id": "Sports Shoes__None__Blue",
+      "clean_parsed": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      }
+    },
+    {
+      "id": "val_c_159",
+      "orig_id": "val_b_synth_039",
+      "query": "quần công sở nam giới mẫu mới nhất",
+      "has_diacritics": true,
+      "dia_class": "full",
+      "n_relevant": 17,
+      "spec": {
+        "articleType": [
+          "Trousers"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "spec_cluster_id": "Trousers__Men__",
+      "clean_parsed": {
+        "articleType": [
+          "Trousers"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    }
+  ],
+  "injected_parsed": {
+    "rate_0pct": [
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Boys",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Trousers"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    ],
+    "rate_10pct": [
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Blazers"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Girls",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Trousers"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    ],
+    "rate_20pct": [
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Clutches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Blazers"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Boys",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Sweatshirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Clutches"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Clutches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Blazers"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Trousers"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    ],
+    "rate_30pct": [
+      {
+        "articleType": [],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Boys",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Gold"
+        ]
+      },
+      {
+        "articleType": [
+          "Track Pants"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": "Men",
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Earrings"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sweaters"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Clutches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Pendant"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Silver"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Kurtas"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Clutches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Sandals"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Blazers"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Flip Flops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Red"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sweaters"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Socks"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Heels"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": null,
+        "baseColour": []
+      },
+      {
+        "articleType": [],
+        "gender": "Men",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Sunglasses"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Navy Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Blazers"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Flats"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "White"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Casual Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Grey"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Purple"
+        ]
+      },
+      {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Jackets"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Backpacks"
+        ],
+        "gender": "Unisex",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Green"
+        ]
+      },
+      {
+        "articleType": [
+          "Tshirts"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Yellow"
+        ]
+      },
+      {
+        "articleType": [
+          "Briefs"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Tops"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Pink"
+        ]
+      },
+      {
+        "articleType": [
+          "Shirts"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      {
+        "articleType": [],
+        "gender": null,
+        "baseColour": [
+          "Brown"
+        ]
+      },
+      {
+        "articleType": [
+          "Sweaters"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": null,
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      {
+        "articleType": [
+          "Formal Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      }
+    ]
+  }
+}

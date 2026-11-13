@@ -1,0 +1,30 @@
+{
+  "version": "v2",
+  "seed": 42,
+  "objective": "Score = 0.5 * mAP(B-human) + 0.3 * mAP_cluster(B-synth) + 0.2 * mAP_cluster(A)",
+  "objective_weights": {
+    "B_human": 0.5,
+    "B_synth_cluster": 0.3,
+    "A_cluster": 0.2
+  },
+  "constraints": {
+    "harm_curve_C_20pct": {
+      "max_drop_vs_model_only": 0.03,
+      "max_drop_vs_baseline_gamma03": 0.05,
+      "description": "Trên Tập C tiêm lỗi 20%: mAP không thấp hơn model_only quá 0.03 (tuyệt đối) và không thấp hơn baseline gamma=0.3 quá 0.05."
+    },
+    "catastrophic_drop_rate": {
+      "max_rate": 0.05,
+      "definition": "Tỉ lệ truy vấn có ảnh đúng trong top-10 ở baseline (pool toàn gallery, gamma=0.3) nhưng KHÔNG có ở cấu hình mới <= 5% trên cả B-human và B-synth."
+    }
+  },
+  "grid_and_cv": {
+    "max_grid_size": 24,
+    "cv_method": "5-fold Cross-Validation theo spec_cluster_id trên A + B-synth, xác nhận trên B-human + bootstrap 95% CI (1000 lần, resample theo cụm)."
+  },
+  "tie_break_simplicity": "Nếu chênh lệch Score nằm trong 95% paired bootstrap CI (chứa 0): chọn cấu hình đơn giản/nhanh hơn (gamma nhỏ, không mean-centering, không BM25).",
+  "parallel_reporting": [
+    "best_by_score",
+    "safest_gamma_min_satisfying_constraints"
+  ]
+}

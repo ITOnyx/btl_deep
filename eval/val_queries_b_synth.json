@@ -1,0 +1,4092 @@
+[
+  {
+    "id": "val_b_synth_000",
+    "query": "tìm mua bóp tiền nam giới màu đen giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Wallets__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_001",
+    "query": "tư vấn giúp hoa tai của nữ ánh bạc đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "spec_cluster_id": "Earrings__Women__Silver",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_002",
+    "query": "shop ơi có bóp da đen đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Wallets__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_003",
+    "query": "can tim tui cong so cua nu gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 86,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Handbags__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_004",
+    "query": "sơ mi công sở cho nam đỏ tươi đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_005",
+    "query": "tim mua ao phong xanh than",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Navy Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_006",
+    "query": "bop tien nau dat di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Wallets__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_007",
+    "query": "cho mình hỏi ba lô laptop unisex mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 27,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Backpacks__Unisex__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_008",
+    "query": "giày mọi chị em đen tuyền giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Flats"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Flats__Women__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_009",
+    "query": "so mi cong so mau do dep xin",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_010",
+    "query": "giay da cong so nam den",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Formal Shoes__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_011",
+    "query": "tu van giup ao dieu den tuyen",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Tops__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_012",
+    "query": "can tim ao thun lanh nam mau xanh la mau moi nhat",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Men__Green",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_013",
+    "query": "can tim ao kieu mau xanh duong",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Tops__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_014",
+    "query": "tu van giup mat kinh di nang cho nu mau nau di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Sunglasses__Women__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_015",
+    "query": "vớ cổ ngắn đen tuyền đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Socks__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_016",
+    "query": "cần tìm giày tập gym nữ màu trắng đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Sports Shoes__Women__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_017",
+    "query": "tim mua giay sneaker thuong cua nam xanh bien gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_018",
+    "query": "áo phông cổ tròn nam giới",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 244,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Tshirts__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_019",
+    "query": "cho minh hoi dong ho đeo tay màu trắng giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 37,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Watches__None__White",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_020",
+    "query": "túi công sở màu đen",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Handbags__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_021",
+    "query": "guoc cao got nâu bò đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Heels__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_022",
+    "query": "sơ mi công sở cho nam nâu bò đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_023",
+    "query": "ba lo di hoc den tuyen mac hang ngay",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Backpacks__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_024",
+    "query": "tim mua ao coc tay nữ giới đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 50,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Tshirts__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_025",
+    "query": "can tim quan sip mau den",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Briefs"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Briefs__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_026",
+    "query": "shop ơi có sơ mi công sở của nam màu trắng",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 23,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_027",
+    "query": "cần tìm dây lưng da của nam màu nâu đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Belts__Men__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_028",
+    "query": "giày chú rể đen đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Formal Shoes__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_029",
+    "query": "shop ơi có giày chạy bộ nữ giới",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sports Shoes__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_030",
+    "query": "cho mình hỏi bóp da của nữ nâu đất đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Wallets__Women__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_031",
+    "query": "cần tìm sơ mi công sở của nam lông chuột đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_032",
+    "query": "can tim ao phong cho nu xanh da troi di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Women__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_033",
+    "query": "tim mua kinh mat nu gioi di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 18,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sunglasses__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_034",
+    "query": "ao coc tay nam xanh da troi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 45,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Men__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_035",
+    "query": "tư vấn giúp áo thun lạnh chị em màu xanh lá mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Women__Green",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_036",
+    "query": "kinh ram nam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sunglasses__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_037",
+    "query": "giày vải của nam đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 107,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Casual Shoes__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_038",
+    "query": "tư vấn giúp ba lô đi học xanh da trời đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Backpacks__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_039",
+    "query": "quần công sở nam giới mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 17,
+    "spec": {
+      "articleType": [
+        "Trousers"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Trousers__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_040",
+    "query": "giày đi chơi xám ghi mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__None__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_041",
+    "query": "tu van giup dong ho kim nam trang di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Watches__Men__White",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_042",
+    "query": "cần tìm quần bò ống đứng màu đen",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Jeans__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_043",
+    "query": "tu van giup cap sach mau do gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Backpacks__None__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_044",
+    "query": "tui xach tay mau nau di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Handbags__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_045",
+    "query": "tu van giup quan lot cho nam di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Briefs"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Briefs__Men__",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_046",
+    "query": "áo len mùa đông của nam",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Sweaters"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sweaters__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_047",
+    "query": "shop oi co ba lo di hoc unisex den",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Backpacks__Unisex__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_048",
+    "query": "tim mua ao coc tay trắng tinh mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 47,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_049",
+    "query": "cho minh hoi giay chu re cho nam nau dat di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Formal Shoes__Men__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_050",
+    "query": "hoa tai bac bac sang di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "spec_cluster_id": "Earrings__None__Silver",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_051",
+    "query": "cho mình hỏi dép quai hậu của nam mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 32,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sandals__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_052",
+    "query": "shop ơi có áo phông vàng đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Yellow"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Yellow",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_053",
+    "query": "tìm mua sơ mi dài tay nâu đất đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_054",
+    "query": "tìm mua quần bò xanh biển đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Jeans__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_055",
+    "query": "cho minh hoi quan bò chị em đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Jeans__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_056",
+    "query": "vớ chân của nam đen tuyền đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Socks__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_057",
+    "query": "cần tìm sơ mi dài tay xanh biển giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 35,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_058",
+    "query": "mat kinh di nang nam den",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Sunglasses__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_059",
+    "query": "shop ơi có đồng hồ thời trang chị em",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 54,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Watches__Women__",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_060",
+    "query": "tu van giup giay di choi nam nu deu mang duoc mau trang di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__Unisex__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_061",
+    "query": "can tim quan đùi nam giới",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Shorts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Shorts__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_062",
+    "query": "tim mua tui cong so chị em màu nâu đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Handbags__Women__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_063",
+    "query": "tìm mua dép kẹp nam giới đen",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Flip Flops__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_064",
+    "query": "kính râm nâu đất mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Sunglasses__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_065",
+    "query": "cho mình hỏi dép lào màu đen đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Flip Flops__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_066",
+    "query": "hoa tai nữ giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Earrings__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_067",
+    "query": "tư vấn giúp ví gập nam nâu bò đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Wallets__Men__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_068",
+    "query": "mu che nang nam giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Caps"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Caps__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_069",
+    "query": "tư vấn giúp vớ chân của nam giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 27,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Socks__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_070",
+    "query": "day lung da nau dat di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Belts__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_071",
+    "query": "cho minh hoi tui deo vai xam ghi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Handbags__None__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_072",
+    "query": "ao thun lanh nam long chuot di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 39,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Men__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_073",
+    "query": "cho minh hoi non luoi trai nam nữ đều mang được giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Caps"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Caps__Unisex__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_074",
+    "query": "cần tìm áo kiểu nữ",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 76,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Tops__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_075",
+    "query": "giay the duc nam mac hang ngay",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 77,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sports Shoes__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_076",
+    "query": "cho minh hoi giay the dục xanh biển đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Sports Shoes__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_077",
+    "query": "can tim dep di bien do tuoi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Flip Flops__None__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_078",
+    "query": "áo sơ mi đi làm nam giới xanh navy",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Navy Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_079",
+    "query": "túi công sở chị em xanh da trời",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Handbags__Women__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_080",
+    "query": "giay di choi xanh bien",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_081",
+    "query": "can tim vo co ngan mau trang mac hang ngay",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Socks__None__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_082",
+    "query": "tu van giup giay the duc trang tinh dep xin",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 44,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Sports Shoes__None__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_083",
+    "query": "tìm mua áo phông nữ màu trắng",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Women__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_084",
+    "query": "tìm mua đầm công sở nữ giới",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Dresses"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Dresses__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_085",
+    "query": "tư vấn giúp đồng hồ thời trang cho nam",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 71,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Watches__Men__",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_086",
+    "query": "cho minh hoi so mi cong so mau hong mau moi nhat",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Pink"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__Pink",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_087",
+    "query": "đồng hồ kim cho nữ trắng giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Watches__Women__White",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_088",
+    "query": "cho mình hỏi xăng đan nam giới nâu bò",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Sandals__Men__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_089",
+    "query": "áo thun lạnh xanh biển",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 55,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_090",
+    "query": "can tim mat kinh di nang nam nu deu mang duoc di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sunglasses__Unisex__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_091",
+    "query": "tư vấn giúp áo thun lạnh cho nam đen đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 33,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_092",
+    "query": "shop ơi có áo sơ mi màu tím đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__Purple",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_093",
+    "query": "tư vấn giúp giày vải của nam màu đen đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 39,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_094",
+    "query": "tìm mua áo sơ mi nam xanh biển giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 33,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_095",
+    "query": "tìm mua áo cộc tay màu đen đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 39,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_096",
+    "query": "tu van giup giay the duc nam trang tinh di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 38,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Sports Shoes__Men__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_097",
+    "query": "shop oi co bop da cho nu gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 26,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Wallets__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_098",
+    "query": "cho minh hoi dong ho kim anh bac dep xin",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "spec_cluster_id": "Watches__None__Silver",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_099",
+    "query": "giay sneaker thuong nau dat gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_100",
+    "query": "shop ơi có áo ấm đen tuyền đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Jackets"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Jackets__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_101",
+    "query": "áo thun cotton bé trai đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Boys",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Tshirts__Boys__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_102",
+    "query": "tư vấn giúp kính mát đen đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Sunglasses__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_103",
+    "query": "tu van giup ao dieu nu hong phan",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Pink"
+      ]
+    },
+    "spec_cluster_id": "Tops__Women__Pink",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_104",
+    "query": "tim mua giay di choi do tuoi di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__None__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_105",
+    "query": "can tim nit quan đen tuyền mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Belts__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_106",
+    "query": "shop ơi có túi công sở xanh lục mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "spec_cluster_id": "Handbags__None__Green",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_107",
+    "query": "shop oi co quan jean dai cua nam di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Jeans__Men__",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_108",
+    "query": "tim mua dong ho deo tay cua nam mau bac mau moi nhat",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "spec_cluster_id": "Watches__Men__Silver",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_109",
+    "query": "tìm mua túi công sở nữ tím đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "spec_cluster_id": "Handbags__Women__Purple",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_110",
+    "query": "giay di choi den tuyen mac hang ngay",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 42,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_111",
+    "query": "quan sip chi em di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Briefs"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Briefs__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_112",
+    "query": "giay vai cua nam trang gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__Men__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_113",
+    "query": "shop oi co giay vải chị em giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 30,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Casual Shoes__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_114",
+    "query": "sơ mi dài tay xanh than đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__Navy Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_115",
+    "query": "tu van giup túi đeo vai unisex",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Handbags__Unisex__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_116",
+    "query": "ao so mi cho nam mau hong di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Pink"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Pink",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_117",
+    "query": "cho mình hỏi giày bệt cho nữ đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Flats"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Flats__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_118",
+    "query": "tu van giup ao thun cotton màu xám đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 41,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_119",
+    "query": "cần tìm áo cánh của nữ đen đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Tops__Women__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_120",
+    "query": "áo kiểu chị em xanh tím than đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "spec_cluster_id": "Tops__Women__Navy Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_121",
+    "query": "giay the thao nhe trang mau moi nhat",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__None__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_122",
+    "query": "ao dieu cho nu màu xanh dương đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Tops__Women__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_123",
+    "query": "ao sweater ni cua nam di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Sweatshirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sweatshirts__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_124",
+    "query": "giày thể thao nhẹ nam nữ đều mang được đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Casual Shoes__Unisex__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_125",
+    "query": "tim mua giay mọi đen đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Flats"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Flats__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_126",
+    "query": "sơ mi công sở lông chuột đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_127",
+    "query": "dép quai hậu màu đen đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Sandals__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_128",
+    "query": "quần bò ống đứng của nam xanh biển giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Jeans__Men__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_129",
+    "query": "shop oi co ao điệu xanh navy giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "spec_cluster_id": "Tops__None__Navy Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_130",
+    "query": "tìm mua giày chạy bộ xám ghi mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Sports Shoes__None__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_131",
+    "query": "dây nịt cho nam",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Belts__Men__",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_132",
+    "query": "cần tìm áo phông cổ tròn cho nam màu trắng giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 29,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Men__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_133",
+    "query": "cần tìm guốc cao gót đen giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 17,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Heels__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_134",
+    "query": "shop ơi có túi đeo vai của nữ đen tuyền mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Handbags__Women__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_135",
+    "query": "tim mua ao kieu cua nu trang tinh gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Tops__Women__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_136",
+    "query": "can tim ao am cho nam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Jackets"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Jackets__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_137",
+    "query": "tư vấn giúp dây lưng da cho nữ đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Belts__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_138",
+    "query": "can tim tui xach tay chi em xanh reu",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "spec_cluster_id": "Handbags__Women__Green",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_139",
+    "query": "tìm mua sơ mi dài tay nam giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 132,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Shirts__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_140",
+    "query": "so mi cong so cua nam xanh lục đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Green",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_141",
+    "query": "giày chú rể nâu đất",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Formal Shoes__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_142",
+    "query": "tim mua dong ho thoi trang unisex mau moi nhat",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Watches__Unisex__",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_143",
+    "query": "giày vải chị em trắng tinh đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__Women__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_144",
+    "query": "tim mua dong ho deo tay nam màu đen mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 26,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Watches__Men__Black",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_145",
+    "query": "cho minh hoi giay chu rể của nam đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 24,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Formal Shoes__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_146",
+    "query": "giày gót nhọn nữ giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 63,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Heels__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_147",
+    "query": "cho mình hỏi áo ấm nam giới đen mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Jackets"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Jackets__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_148",
+    "query": "shop ơi có sơ mi dài tay nữ đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Shirts__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_149",
+    "query": "tư vấn giúp áo phông cổ tròn tím giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Purple",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_150",
+    "query": "can tim ao coc tay do mac hang ngay",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 25,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_151",
+    "query": "shop ơi có dép lào nam đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 22,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Flip Flops__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_152",
+    "query": "cần tìm áo kiểu hồng đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Pink"
+      ]
+    },
+    "spec_cluster_id": "Tops__None__Pink",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_153",
+    "query": "tìm mua vớ cổ ngắn cho nam trắng tinh giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Socks__Men__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_154",
+    "query": "tim mua ao so mi di làm trắng tinh mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 26,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_155",
+    "query": "cho mình hỏi dép xỏ ngón nữ giới mặc hàng ngày",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Flip Flops"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Flip Flops__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_156",
+    "query": "cho minh hoi ao coc tay mau xanh la gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 27,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Green",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_157",
+    "query": "giay tap gym nam đen",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 23,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Sports Shoes__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_158",
+    "query": "tìm mua ba lô đi học nam nữ đều mang được đỏ đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Backpacks__Unisex__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_159",
+    "query": "shop ơi có đồng hồ kim chị em bạc sáng giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "spec_cluster_id": "Watches__Women__Silver",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_160",
+    "query": "dép quai hậu nâu bò đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Sandals__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_161",
+    "query": "tim mua vi gập nam giới",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Wallets__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_162",
+    "query": "áo phông cho nam tím đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Men__Purple",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_163",
+    "query": "tu van giup ca vat cong so cua nam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "n_relevant": 16,
+    "spec": {
+      "articleType": [
+        "Ties"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Ties__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_164",
+    "query": "ao phong co tron hồng phấn đi chơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Pink"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Pink",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent"
+  },
+  {
+    "id": "val_b_synth_165",
+    "query": "tư vấn giup hoa tai của nữ ánh bạc đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "wrong_tone",
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "spec_cluster_id": "Earrings__Women__Silver",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_166",
+    "query": "shop ơi có bóp da đen dep xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Wallets__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_167",
+    "query": "can tim tui cong so cua nu gai tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 86,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Handbags__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_168",
+    "query": "sơ mi công sở cho nam đỏ tươi đi cơi",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "drop_char",
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_169",
+    "query": "tim mua ao phong xannh than",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "insert_char",
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__None__Navy Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_170",
+    "query": "bop tien nua dat di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 12,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Wallets__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_171",
+    "query": "cho mình hỏi ba lô laptop uisex mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "drop_char",
+    "n_relevant": 27,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Unisex",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Backpacks__Unisex__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_172",
+    "query": "giày mọi chị em đenn tuyền giá tốt",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "insert_char",
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Flats"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Flats__Women__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_173",
+    "query": "so mi cong so mau do dep xinn",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "insert_char",
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Shirts__None__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_174",
+    "query": "giay da cong so nma den",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Formal Shoes__Men__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_175",
+    "query": "tu van giup ao dieu edn tuyen",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Tops__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_176",
+    "query": "can tim ao thun lanh nam mau xanhh la mau moi nhat",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "insert_char",
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Men__Green",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_177",
+    "query": "can tim ao kiieu mau xanh duong",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "insert_char",
+    "n_relevant": 13,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Tops__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_178",
+    "query": "tu van giup mat kinh di nang cho nu maau nau di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "insert_char",
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Sunglasses__Women__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_179",
+    "query": "vớ cổ ngắn đen tuyền đẹp xnị",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "swap_chars",
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Socks__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_180",
+    "query": "cần tìm giày tập gym nữ mau trắng đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Sports Shoes__Women__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_181",
+    "query": "tim mua giay sneakr thuong cua nam xanh bien gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "drop_char",
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_182",
+    "query": "ao phông cổ tròn nam giới",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 244,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Tshirts__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_183",
+    "query": "choo minh hoi dong ho đeo tay màu trắng giá tốt",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "insert_char",
+    "n_relevant": 37,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Watches__None__White",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_184",
+    "query": "túúi công sở màu đen",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "insert_char",
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Handbags__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_185",
+    "query": "guooc cao got nâu bò đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "insert_char",
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Heels__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_186",
+    "query": "sơ mi cong sở cho nam nâu bò đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_187",
+    "query": "ba lo di hoc dne tuyen mac hang ngay",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Backpacks__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_188",
+    "query": "tim mua ao coc tay nữ giiới đi làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "insert_char",
+    "n_relevant": 50,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Tshirts__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_189",
+    "query": "can tim qaun sip mau den",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 6,
+    "spec": {
+      "articleType": [
+        "Briefs"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Briefs__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_190",
+    "query": "shop ơi có sơ mi công sở của nam màu trrắng",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "insert_char",
+    "n_relevant": 23,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__White",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_191",
+    "query": "cần tìm dây lưng da của nam màu ânu đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "swap_chars",
+    "n_relevant": 10,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Belts__Men__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_192",
+    "query": "giày chú rể đen di làm",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 14,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Formal Shoes__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_193",
+    "query": "shop ơi có giày cạhy bộ nữ giới",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "swap_chars",
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sports Shoes__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_194",
+    "query": "chho mình hỏi bóp da của nữ nâu đất đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "insert_char",
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Wallets__Women__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_195",
+    "query": "cần tìm sơ mi công sở của nam lông chuột đi làmm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "insert_char",
+    "n_relevant": 11,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Shirts__Men__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_196",
+    "query": "can tim ao phong cho nu xahn da troi di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 7,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Women__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_197",
+    "query": "tim mua kihn mat nu gioi di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 18,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sunglasses__Women__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_198",
+    "query": "ao coc aty nam xanh da troi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 45,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Men__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_199",
+    "query": "tư vấn giúp áo thun lạnh chị em màu xanh lá mặc hàng ngàyy",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "insert_char",
+    "n_relevant": 8,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Green"
+      ]
+    },
+    "spec_cluster_id": "Tshirts__Women__Green",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_200",
+    "query": "kihn ram nam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 21,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Sunglasses__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_201",
+    "query": "giày vải của namm đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "insert_char",
+    "n_relevant": 107,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Casual Shoes__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_202",
+    "query": "tu vấn giúp ba lô đi học xanh da trời đẹp xịn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": "wrong_tone",
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "spec_cluster_id": "Backpacks__None__Blue",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_203",
+    "query": "quầần công sở nam giới mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "insert_char",
+    "n_relevant": 17,
+    "spec": {
+      "articleType": [
+        "Trousers"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Trousers__Men__",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_204",
+    "query": "igày đi chơi xám ghi mẫu mới nhất",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "swap_chars",
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "spec_cluster_id": "Casual Shoes__None__Grey",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_205",
+    "query": "tu van giup dong ho kim nma trang di choi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 19,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "spec_cluster_id": "Watches__Men__White",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_206",
+    "query": "cần tìm quần bò ốngg đứng màu đen",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": "insert_char",
+    "n_relevant": 5,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "spec_cluster_id": "Jeans__None__Black",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_207",
+    "query": "tu van giup cap sach mua do gia tot",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 9,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "spec_cluster_id": "Backpacks__None__Red",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_208",
+    "query": "tui xach tay mau nau di cohi",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 15,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "spec_cluster_id": "Handbags__None__Brown",
+    "overlaps_dev13_vocab": false,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  },
+  {
+    "id": "val_b_synth_209",
+    "query": "tu van giup quan lot coh nam di lam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": "swap_chars",
+    "n_relevant": 20,
+    "spec": {
+      "articleType": [
+        "Briefs"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "spec_cluster_id": "Briefs__Men__",
+    "overlaps_dev13_vocab": true,
+    "source": "template + bảng đồng nghĩa của agent + real_typo"
+  }
+]

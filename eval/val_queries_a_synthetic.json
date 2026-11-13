@@ -10,7 +10,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Wallets__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_001",
@@ -25,7 +27,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_002",
@@ -40,7 +44,9 @@
       "baseColour": [
         "Gold"
       ]
-    }
+    },
+    "spec_cluster_id": "Earrings__Women__Gold",
+    "dia_class": "none"
   },
   {
     "id": "val_a_003",
@@ -55,7 +61,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Jeans__Men__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_004",
@@ -70,7 +78,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Pendant__Women__Silver",
+    "dia_class": "none"
   },
   {
     "id": "val_a_005",
@@ -85,7 +95,9 @@
       "baseColour": [
         "Grey"
       ]
-    }
+    },
+    "spec_cluster_id": "Track Pants__Men__Grey",
+    "dia_class": "full"
   },
   {
     "id": "val_a_006",
@@ -100,7 +112,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_007",
@@ -115,7 +129,9 @@
       "baseColour": [
         "Purple"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Purple",
+    "dia_class": "none"
   },
   {
     "id": "val_a_008",
@@ -130,7 +146,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Jeans__Men__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_009",
@@ -145,7 +163,9 @@
       "baseColour": [
         "Navy Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__Navy Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_010",
@@ -160,7 +180,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_011",
@@ -175,7 +197,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Sports Shoes__Men__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_012",
@@ -188,7 +212,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Jeans__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_013",
@@ -201,7 +227,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_014",
@@ -216,7 +244,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_015",
@@ -231,7 +261,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Sunglasses__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_016",
@@ -246,7 +278,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_017",
@@ -259,7 +293,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Earrings__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_018",
@@ -274,7 +310,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_019",
@@ -289,7 +327,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Pink",
+    "dia_class": "none"
   },
   {
     "id": "val_a_020",
@@ -302,7 +342,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Sports Shoes__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_021",
@@ -317,7 +359,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Unisex__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_022",
@@ -332,7 +376,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_023",
@@ -347,7 +393,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Earrings__Women__Silver",
+    "dia_class": "full"
   },
   {
     "id": "val_a_024",
@@ -362,7 +410,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_025",
@@ -377,7 +427,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Heels__Women__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_026",
@@ -392,7 +444,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Pink",
+    "dia_class": "none"
   },
   {
     "id": "val_a_027",
@@ -407,7 +461,9 @@
       "baseColour": [
         "Navy Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Navy Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_028",
@@ -422,7 +478,9 @@
       "baseColour": [
         "Navy Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Navy Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_029",
@@ -437,7 +495,9 @@
       "baseColour": [
         "Grey"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Grey",
+    "dia_class": "full"
   },
   {
     "id": "val_a_030",
@@ -452,7 +512,9 @@
       "baseColour": [
         "Purple"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Purple",
+    "dia_class": "full"
   },
   {
     "id": "val_a_031",
@@ -467,7 +529,9 @@
       "baseColour": [
         "Gold"
       ]
-    }
+    },
+    "spec_cluster_id": "Heels__Women__Gold",
+    "dia_class": "full"
   },
   {
     "id": "val_a_032",
@@ -482,7 +546,9 @@
       "baseColour": [
         "Yellow"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Yellow",
+    "dia_class": "none"
   },
   {
     "id": "val_a_033",
@@ -497,7 +563,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__Silver",
+    "dia_class": "full"
   },
   {
     "id": "val_a_034",
@@ -512,7 +580,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Red",
+    "dia_class": "none"
   },
   {
     "id": "val_a_035",
@@ -527,7 +597,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_036",
@@ -542,7 +614,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_037",
@@ -555,7 +629,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Earrings__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_038",
@@ -570,7 +646,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Red",
+    "dia_class": "none"
   },
   {
     "id": "val_a_039",
@@ -583,7 +661,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Shirts__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_040",
@@ -598,7 +678,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_041",
@@ -613,7 +695,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_042",
@@ -628,7 +712,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Backpacks__Unisex__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_043",
@@ -643,7 +729,9 @@
       "baseColour": [
         "Gold"
       ]
-    }
+    },
+    "spec_cluster_id": "Earrings__Women__Gold",
+    "dia_class": "full"
   },
   {
     "id": "val_a_044",
@@ -656,7 +744,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Sports Shoes__Men__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_045",
@@ -671,7 +761,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Bra__Women__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_046",
@@ -686,7 +778,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Women__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_047",
@@ -701,7 +795,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_048",
@@ -716,7 +812,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Belts__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_049",
@@ -731,7 +829,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Red",
+    "dia_class": "none"
   },
   {
     "id": "val_a_050",
@@ -746,7 +846,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_051",
@@ -761,7 +863,9 @@
       "baseColour": [
         "Grey"
       ]
-    }
+    },
+    "spec_cluster_id": "Track Pants__Men__Grey",
+    "dia_class": "none"
   },
   {
     "id": "val_a_052",
@@ -776,7 +880,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Green",
+    "dia_class": "none"
   },
   {
     "id": "val_a_053",
@@ -791,7 +897,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Sports Shoes__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_054",
@@ -806,7 +914,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_055",
@@ -821,7 +931,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Jackets__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_056",
@@ -836,7 +948,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Flip Flops__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_057",
@@ -851,7 +965,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Green",
+    "dia_class": "full"
   },
   {
     "id": "val_a_058",
@@ -866,7 +982,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Pink",
+    "dia_class": "full"
   },
   {
     "id": "val_a_059",
@@ -881,7 +999,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Sunglasses__Women__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_060",
@@ -896,7 +1016,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_061",
@@ -911,7 +1033,9 @@
       "baseColour": [
         "Grey"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Grey",
+    "dia_class": "full"
   },
   {
     "id": "val_a_062",
@@ -926,7 +1050,9 @@
       "baseColour": [
         "Purple"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Purple",
+    "dia_class": "full"
   },
   {
     "id": "val_a_063",
@@ -939,7 +1065,9 @@
       ],
       "gender": "Unisex",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Unisex__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_064",
@@ -954,7 +1082,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Formal Shoes__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_065",
@@ -969,7 +1099,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_066",
@@ -982,7 +1114,9 @@
       ],
       "gender": "Boys",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Tshirts__Boys__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_067",
@@ -997,7 +1131,9 @@
       "baseColour": [
         "Grey"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Grey",
+    "dia_class": "none"
   },
   {
     "id": "val_a_068",
@@ -1012,7 +1148,9 @@
       "baseColour": [
         "Navy Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Navy Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_069",
@@ -1027,7 +1165,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Sandals__Men__Brown",
+    "dia_class": "none"
   },
   {
     "id": "val_a_070",
@@ -1042,7 +1182,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_071",
@@ -1057,7 +1199,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Brown",
+    "dia_class": "none"
   },
   {
     "id": "val_a_072",
@@ -1072,7 +1216,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_073",
@@ -1087,7 +1233,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Socks__Men__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_074",
@@ -1102,7 +1250,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Sports Shoes__Women__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_075",
@@ -1117,7 +1267,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_076",
@@ -1132,7 +1284,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_077",
@@ -1147,7 +1301,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Red",
+    "dia_class": "full"
   },
   {
     "id": "val_a_078",
@@ -1162,7 +1318,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_079",
@@ -1177,7 +1335,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Pink",
+    "dia_class": "full"
   },
   {
     "id": "val_a_080",
@@ -1192,7 +1352,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Sunglasses__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_081",
@@ -1207,7 +1369,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_082",
@@ -1222,7 +1386,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_083",
@@ -1237,7 +1403,9 @@
       "baseColour": [
         "Yellow"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Yellow",
+    "dia_class": "full"
   },
   {
     "id": "val_a_084",
@@ -1252,7 +1420,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Sandals__Men__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_085",
@@ -1267,7 +1437,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_086",
@@ -1282,7 +1454,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Green",
+    "dia_class": "full"
   },
   {
     "id": "val_a_087",
@@ -1297,7 +1471,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__Pink",
+    "dia_class": "full"
   },
   {
     "id": "val_a_088",
@@ -1312,7 +1488,9 @@
       "baseColour": [
         "Yellow"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Yellow",
+    "dia_class": "none"
   },
   {
     "id": "val_a_089",
@@ -1327,7 +1505,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_090",
@@ -1340,7 +1520,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Wallets__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_091",
@@ -1355,7 +1537,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Wallets__Men__Brown",
+    "dia_class": "none"
   },
   {
     "id": "val_a_092",
@@ -1370,7 +1554,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Backpacks__Unisex__Red",
+    "dia_class": "full"
   },
   {
     "id": "val_a_093",
@@ -1385,7 +1571,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Backpacks__Unisex__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_094",
@@ -1400,7 +1588,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Flats__Women__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_095",
@@ -1415,7 +1605,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_096",
@@ -1430,7 +1622,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_097",
@@ -1445,7 +1639,9 @@
       "baseColour": [
         "Purple"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Purple",
+    "dia_class": "none"
   },
   {
     "id": "val_a_098",
@@ -1460,7 +1656,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Pendant__Women__Silver",
+    "dia_class": "none"
   },
   {
     "id": "val_a_099",
@@ -1475,7 +1673,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Red",
+    "dia_class": "none"
   },
   {
     "id": "val_a_100",
@@ -1490,7 +1690,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Track Pants__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_101",
@@ -1505,7 +1707,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Pendant__Women__Silver",
+    "dia_class": "full"
   },
   {
     "id": "val_a_102",
@@ -1520,7 +1724,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Formal Shoes__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_103",
@@ -1535,7 +1741,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__Silver",
+    "dia_class": "none"
   },
   {
     "id": "val_a_104",
@@ -1550,7 +1758,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Belts__Men__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_105",
@@ -1565,7 +1775,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Sports Shoes__Men__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_106",
@@ -1580,7 +1792,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_107",
@@ -1595,7 +1809,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Sports Shoes__Women__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_108",
@@ -1610,7 +1826,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Bra__Women__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_109",
@@ -1625,7 +1843,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Pink",
+    "dia_class": "full"
   },
   {
     "id": "val_a_110",
@@ -1640,7 +1860,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Brown",
+    "dia_class": "none"
   },
   {
     "id": "val_a_111",
@@ -1655,7 +1877,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_112",
@@ -1670,7 +1894,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_113",
@@ -1683,7 +1909,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Watches__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_114",
@@ -1698,7 +1926,9 @@
       "baseColour": [
         "Grey"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Grey",
+    "dia_class": "full"
   },
   {
     "id": "val_a_115",
@@ -1713,7 +1943,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_116",
@@ -1726,7 +1958,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Briefs__Men__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_117",
@@ -1741,7 +1975,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_118",
@@ -1754,7 +1990,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Tops__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_119",
@@ -1769,7 +2007,9 @@
       "baseColour": [
         "Navy Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Navy Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_120",
@@ -1784,7 +2024,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Jeans__Men__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_121",
@@ -1799,7 +2041,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_122",
@@ -1814,7 +2058,9 @@
       "baseColour": [
         "Grey"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Grey",
+    "dia_class": "none"
   },
   {
     "id": "val_a_123",
@@ -1829,7 +2075,9 @@
       "baseColour": [
         "Gold"
       ]
-    }
+    },
+    "spec_cluster_id": "Heels__Women__Gold",
+    "dia_class": "none"
   },
   {
     "id": "val_a_124",
@@ -1844,7 +2092,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_125",
@@ -1859,7 +2109,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_126",
@@ -1874,7 +2126,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_127",
@@ -1889,7 +2143,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_128",
@@ -1904,7 +2160,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Backpacks__Unisex__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_129",
@@ -1919,7 +2177,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Women__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_130",
@@ -1932,7 +2192,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Sports Shoes__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_131",
@@ -1945,7 +2207,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Sandals__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_132",
@@ -1960,7 +2224,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Green",
+    "dia_class": "none"
   },
   {
     "id": "val_a_133",
@@ -1975,7 +2241,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Bra__Women__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_134",
@@ -1990,7 +2258,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Green",
+    "dia_class": "none"
   },
   {
     "id": "val_a_135",
@@ -2003,7 +2273,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_136",
@@ -2018,7 +2290,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Green",
+    "dia_class": "full"
   },
   {
     "id": "val_a_137",
@@ -2033,7 +2307,9 @@
       "baseColour": [
         "Gold"
       ]
-    }
+    },
+    "spec_cluster_id": "Earrings__Women__Gold",
+    "dia_class": "full"
   },
   {
     "id": "val_a_138",
@@ -2048,7 +2324,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Wallets__Women__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_139",
@@ -2063,7 +2341,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__Pink",
+    "dia_class": "none"
   },
   {
     "id": "val_a_140",
@@ -2078,7 +2358,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_141",
@@ -2093,11 +2375,13 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Formal Shoes__Men__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_142",
-    "query": "sarees mau xanh la cho nu",
+    "query": "áo dài truyền thống sari mau xanh la cho nu",
     "has_diacritics": false,
     "n_relevant": 5,
     "spec": {
@@ -2108,11 +2392,13 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Sarees__Women__Green",
+    "dia_class": "none"
   },
   {
     "id": "val_a_143",
-    "query": "đồng hồ nữ màu steel",
+    "query": "đồng hồ nữ màu thép kim loại",
     "has_diacritics": true,
     "n_relevant": 7,
     "spec": {
@@ -2123,7 +2409,9 @@
       "baseColour": [
         "Steel"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__Steel",
+    "dia_class": "full"
   },
   {
     "id": "val_a_144",
@@ -2136,7 +2424,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_145",
@@ -2149,7 +2439,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Track Pants__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_146",
@@ -2164,7 +2456,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_147",
@@ -2177,7 +2471,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Clutches__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_148",
@@ -2192,7 +2488,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__Silver",
+    "dia_class": "none"
   },
   {
     "id": "val_a_149",
@@ -2207,7 +2505,9 @@
       "baseColour": [
         "Purple"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Purple",
+    "dia_class": "none"
   },
   {
     "id": "val_a_150",
@@ -2222,7 +2522,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Sandals__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_151",
@@ -2237,7 +2539,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_152",
@@ -2252,7 +2556,9 @@
       "baseColour": [
         "Gold"
       ]
-    }
+    },
+    "spec_cluster_id": "Heels__Women__Gold",
+    "dia_class": "full"
   },
   {
     "id": "val_a_153",
@@ -2267,7 +2573,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Wallets__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_154",
@@ -2282,7 +2590,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Socks__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_155",
@@ -2297,7 +2607,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_156",
@@ -2312,7 +2624,9 @@
       "baseColour": [
         "Navy Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Navy Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_157",
@@ -2325,7 +2639,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Tops__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_158",
@@ -2338,7 +2654,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Jackets__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_159",
@@ -2353,7 +2671,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Green",
+    "dia_class": "none"
   },
   {
     "id": "val_a_160",
@@ -2368,7 +2688,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_161",
@@ -2381,11 +2703,13 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Bra__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_162",
-    "query": "sarees cho nữ",
+    "query": "áo dài truyền thống sari cho nữ",
     "has_diacritics": true,
     "n_relevant": 19,
     "spec": {
@@ -2394,7 +2718,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Sarees__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_163",
@@ -2409,7 +2735,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_164",
@@ -2424,7 +2752,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Backpacks__Unisex__Red",
+    "dia_class": "none"
   },
   {
     "id": "val_a_165",
@@ -2439,7 +2769,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Earrings__Women__Silver",
+    "dia_class": "none"
   },
   {
     "id": "val_a_166",
@@ -2454,7 +2786,9 @@
       "baseColour": [
         "Navy Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Navy Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_167",
@@ -2469,7 +2803,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_168",
@@ -2484,7 +2820,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Bra__Women__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_169",
@@ -2499,7 +2837,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Track Pants__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_170",
@@ -2512,7 +2852,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Shorts__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_171",
@@ -2525,7 +2867,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_172",
@@ -2540,11 +2884,13 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Belts__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_173",
-    "query": "dong ho mau steel cho nu",
+    "query": "dong ho mau thep kim loai cho nu",
     "has_diacritics": false,
     "n_relevant": 7,
     "spec": {
@@ -2555,7 +2901,9 @@
       "baseColour": [
         "Steel"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__Steel",
+    "dia_class": "none"
   },
   {
     "id": "val_a_174",
@@ -2570,7 +2918,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_175",
@@ -2583,7 +2933,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Wallets__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_176",
@@ -2598,7 +2950,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__Silver",
+    "dia_class": "none"
   },
   {
     "id": "val_a_177",
@@ -2613,7 +2967,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_178",
@@ -2628,7 +2984,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Brown",
+    "dia_class": "none"
   },
   {
     "id": "val_a_179",
@@ -2643,7 +3001,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_180",
@@ -2658,7 +3018,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Belts__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_181",
@@ -2671,7 +3033,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Belts__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_182",
@@ -2686,7 +3050,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Green",
+    "dia_class": "full"
   },
   {
     "id": "val_a_183",
@@ -2701,7 +3067,9 @@
       "baseColour": [
         "Purple"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Purple",
+    "dia_class": "full"
   },
   {
     "id": "val_a_184",
@@ -2716,7 +3084,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Belts__Men__Brown",
+    "dia_class": "none"
   },
   {
     "id": "val_a_185",
@@ -2731,7 +3101,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Belts__Men__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_186",
@@ -2744,7 +3116,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Ties__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_187",
@@ -2759,7 +3133,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Green",
+    "dia_class": "full"
   },
   {
     "id": "val_a_188",
@@ -2772,11 +3148,13 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Flip Flops__Men__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_189",
-    "query": "đồng hồ màu steel cho nữ",
+    "query": "đồng hồ màu thép kim loại cho nữ",
     "has_diacritics": true,
     "n_relevant": 7,
     "spec": {
@@ -2787,7 +3165,9 @@
       "baseColour": [
         "Steel"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__Steel",
+    "dia_class": "full"
   },
   {
     "id": "val_a_190",
@@ -2802,7 +3182,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Pink",
+    "dia_class": "none"
   },
   {
     "id": "val_a_191",
@@ -2817,7 +3199,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Green",
+    "dia_class": "none"
   },
   {
     "id": "val_a_192",
@@ -2832,7 +3216,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Women__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_193",
@@ -2847,7 +3233,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Green",
+    "dia_class": "full"
   },
   {
     "id": "val_a_194",
@@ -2862,7 +3250,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Sandals__Men__Brown",
+    "dia_class": "none"
   },
   {
     "id": "val_a_195",
@@ -2877,7 +3267,9 @@
       "baseColour": [
         "Navy Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__Navy Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_196",
@@ -2892,7 +3284,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_197",
@@ -2907,7 +3301,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Sports Shoes__Men__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_198",
@@ -2922,7 +3318,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Pink",
+    "dia_class": "none"
   },
   {
     "id": "val_a_199",
@@ -2937,7 +3335,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Flats__Women__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_200",
@@ -2950,7 +3350,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Dresses__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_201",
@@ -2965,7 +3367,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Unisex__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_202",
@@ -2980,7 +3384,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Boys__Red",
+    "dia_class": "none"
   },
   {
     "id": "val_a_203",
@@ -2995,7 +3401,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_204",
@@ -3008,7 +3416,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Shirts__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_205",
@@ -3023,7 +3433,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_206",
@@ -3038,7 +3450,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Backpacks__Unisex__Red",
+    "dia_class": "none"
   },
   {
     "id": "val_a_207",
@@ -3053,7 +3467,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Sunglasses__Women__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_208",
@@ -3068,11 +3484,13 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_209",
-    "query": "sarees cho nu",
+    "query": "áo dài truyền thống sari cho nu",
     "has_diacritics": false,
     "n_relevant": 19,
     "spec": {
@@ -3081,7 +3499,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Sarees__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_210",
@@ -3096,7 +3516,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Boys__Red",
+    "dia_class": "none"
   },
   {
     "id": "val_a_211",
@@ -3111,7 +3533,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Kurtas__Women__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_212",
@@ -3126,7 +3550,9 @@
       "baseColour": [
         "Purple"
       ]
-    }
+    },
+    "spec_cluster_id": "Handbags__Women__Purple",
+    "dia_class": "full"
   },
   {
     "id": "val_a_213",
@@ -3141,7 +3567,9 @@
       "baseColour": [
         "Navy Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__Navy Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_214",
@@ -3154,7 +3582,9 @@
       ],
       "gender": "Unisex",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Backpacks__Unisex__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_215",
@@ -3169,7 +3599,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__Black",
+    "dia_class": "full"
   },
   {
     "id": "val_a_216",
@@ -3184,7 +3616,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Sandals__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_217",
@@ -3199,7 +3633,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__Blue",
+    "dia_class": "full"
   },
   {
     "id": "val_a_218",
@@ -3212,7 +3648,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_219",
@@ -3227,7 +3665,9 @@
       "baseColour": [
         "Blue"
       ]
-    }
+    },
+    "spec_cluster_id": "Jeans__Men__Blue",
+    "dia_class": "none"
   },
   {
     "id": "val_a_220",
@@ -3242,7 +3682,9 @@
       "baseColour": [
         "Black"
       ]
-    }
+    },
+    "spec_cluster_id": "Jackets__Men__Black",
+    "dia_class": "none"
   },
   {
     "id": "val_a_221",
@@ -3257,7 +3699,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__Silver",
+    "dia_class": "none"
   },
   {
     "id": "val_a_222",
@@ -3272,7 +3716,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Earrings__Women__Silver",
+    "dia_class": "full"
   },
   {
     "id": "val_a_223",
@@ -3285,7 +3731,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Track Pants__Men__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_224",
@@ -3300,7 +3748,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Formal Shoes__Men__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_225",
@@ -3313,7 +3763,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Shirts__Men__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_226",
@@ -3326,7 +3778,9 @@
       ],
       "gender": "Men",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Belts__Men__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_227",
@@ -3341,7 +3795,9 @@
       "baseColour": [
         "Brown"
       ]
-    }
+    },
+    "spec_cluster_id": "Wallets__Women__Brown",
+    "dia_class": "full"
   },
   {
     "id": "val_a_228",
@@ -3354,11 +3810,13 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Watches__Women__",
+    "dia_class": "full"
   },
   {
     "id": "val_a_229",
-    "query": "sarees nu mau xanh la",
+    "query": "áo dài truyền thống sari nu mau xanh la",
     "has_diacritics": false,
     "n_relevant": 5,
     "spec": {
@@ -3369,7 +3827,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Sarees__Women__Green",
+    "dia_class": "none"
   },
   {
     "id": "val_a_230",
@@ -3384,7 +3844,9 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Women__Silver",
+    "dia_class": "full"
   },
   {
     "id": "val_a_231",
@@ -3399,7 +3861,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Unisex__White",
+    "dia_class": "full"
   },
   {
     "id": "val_a_232",
@@ -3414,7 +3878,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Men__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_233",
@@ -3429,7 +3895,9 @@
       "baseColour": [
         "Green"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Women__Green",
+    "dia_class": "none"
   },
   {
     "id": "val_a_234",
@@ -3444,7 +3912,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Casual Shoes__Women__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_235",
@@ -3459,7 +3929,9 @@
       "baseColour": [
         "White"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__White",
+    "dia_class": "none"
   },
   {
     "id": "val_a_236",
@@ -3474,7 +3946,9 @@
       "baseColour": [
         "Red"
       ]
-    }
+    },
+    "spec_cluster_id": "Tshirts__Men__Red",
+    "dia_class": "full"
   },
   {
     "id": "val_a_237",
@@ -3487,7 +3961,9 @@
       ],
       "gender": "Women",
       "baseColour": []
-    }
+    },
+    "spec_cluster_id": "Belts__Women__",
+    "dia_class": "none"
   },
   {
     "id": "val_a_238",
@@ -3502,7 +3978,9 @@
       "baseColour": [
         "Pink"
       ]
-    }
+    },
+    "spec_cluster_id": "Tops__Women__Pink",
+    "dia_class": "none"
   },
   {
     "id": "val_a_239",
@@ -3517,6 +3995,8 @@
       "baseColour": [
         "Silver"
       ]
-    }
+    },
+    "spec_cluster_id": "Watches__Men__Silver",
+    "dia_class": "full"
   }
 ]
