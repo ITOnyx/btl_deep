@@ -1,0 +1,730 @@
+{
+  "1b_2_symmetry": {
+    "model_cut100": {
+      "n_queries": 86,
+      "recall@1": 0.3023255813953488,
+      "recall@5": 0.5697674418604651,
+      "recall@10": 0.7093023255813954,
+      "mAP": 0.3282176915065413
+    },
+    "model_full1290": {
+      "n_queries": 86,
+      "recall@1": 0.3023255813953488,
+      "recall@5": 0.5697674418604651,
+      "recall@10": 0.7093023255813954,
+      "mAP": 0.33894609347397625
+    },
+    "system_pool100_cut100": {
+      "n_queries": 86,
+      "recall@1": 0.6046511627906976,
+      "recall@5": 0.8255813953488372,
+      "recall@10": 0.8488372093023255,
+      "mAP": 0.5536594781213402
+    },
+    "system_pool1290_cut100": {
+      "n_queries": 86,
+      "recall@1": 0.6046511627906976,
+      "recall@5": 0.8488372093023255,
+      "recall@10": 0.872093023255814,
+      "mAP": 0.5851583703613955
+    },
+    "system_pool1290_full1290": {
+      "n_queries": 86,
+      "recall@1": 0.6046511627906976,
+      "recall@5": 0.8488372093023255,
+      "recall@10": 0.872093023255814,
+      "mAP": 0.594154478898779
+    }
+  },
+  "1b_3_oracle": {
+    "oracle_cut100": {
+      "n_queries": 86,
+      "recall@1": 0.7325581395348837,
+      "recall@5": 0.8953488372093024,
+      "recall@10": 0.9069767441860465,
+      "mAP": 0.6560997876040736
+    },
+    "oracle_full1290": {
+      "n_queries": 86,
+      "recall@1": 0.7325581395348837,
+      "recall@5": 0.8953488372093024,
+      "recall@10": 0.9069767441860465,
+      "mAP": 0.6644920198087644
+    },
+    "by_diacritics": {
+      "oracle": {
+        "Có dấu": {
+          "n_queries": 65,
+          "recall@1": 0.8461538461538461,
+          "recall@5": 0.9538461538461539,
+          "recall@10": 0.9538461538461539,
+          "mAP": 0.7589003903380005
+        },
+        "Không dấu": {
+          "n_queries": 21,
+          "recall@1": 0.38095238095238093,
+          "recall@5": 0.7142857142857143,
+          "recall@10": 0.7619047619047619,
+          "mAP": 0.3379074458085852
+        }
+      },
+      "system_pool1290": {
+        "Có dấu": {
+          "n_queries": 65,
+          "recall@1": 0.7076923076923077,
+          "recall@5": 0.8923076923076924,
+          "recall@10": 0.9076923076923077,
+          "mAP": 0.67816709815796
+        },
+        "Không dấu": {
+          "n_queries": 21,
+          "recall@1": 0.2857142857142857,
+          "recall@5": 0.7142857142857143,
+          "recall@10": 0.7619047619047619,
+          "mAP": 0.29727421289583844
+        }
+      }
+    },
+    "by_thin_slot": {
+      "oracle": {
+        "Giày dép": {
+          "n_queries": 17,
+          "recall@1": 0.7647058823529411,
+          "recall@5": 0.8823529411764706,
+          "recall@10": 0.9411764705882353,
+          "mAP": 0.6879551888211847
+        },
+        "Phụ kiện": {
+          "n_queries": 10,
+          "recall@1": 0.6,
+          "recall@5": 0.9,
+          "recall@10": 0.9,
+          "mAP": 0.6771932087520323
+        },
+        "Quần & Váy": {
+          "n_queries": 16,
+          "recall@1": 0.625,
+          "recall@5": 0.8125,
+          "recall@10": 0.8125,
+          "mAP": 0.6521990032834741
+        },
+        "Túi & Balo": {
+          "n_queries": 14,
+          "recall@1": 0.7857142857142857,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mAP": 0.6773639060936778
+        },
+        "Áo": {
+          "n_queries": 19,
+          "recall@1": 0.8421052631578947,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mAP": 0.6512500739960009
+        },
+        "Đồng hồ": {
+          "n_queries": 10,
+          "recall@1": 0.7,
+          "recall@5": 0.7,
+          "recall@10": 0.7,
+          "mAP": 0.566538129269877
+        }
+      },
+      "system_pool1290": {
+        "Giày dép": {
+          "n_queries": 17,
+          "recall@1": 0.6470588235294118,
+          "recall@5": 0.8823529411764706,
+          "recall@10": 0.9411764705882353,
+          "mAP": 0.6424114077918553
+        },
+        "Phụ kiện": {
+          "n_queries": 10,
+          "recall@1": 0.7,
+          "recall@5": 0.8,
+          "recall@10": 0.9,
+          "mAP": 0.6716129517789696
+        },
+        "Quần & Váy": {
+          "n_queries": 16,
+          "recall@1": 0.4375,
+          "recall@5": 0.8125,
+          "recall@10": 0.8125,
+          "mAP": 0.5725396413934667
+        },
+        "Túi & Balo": {
+          "n_queries": 14,
+          "recall@1": 0.6428571428571429,
+          "recall@5": 0.8571428571428571,
+          "recall@10": 0.8571428571428571,
+          "mAP": 0.5827364480596041
+        },
+        "Áo": {
+          "n_queries": 19,
+          "recall@1": 0.7368421052631579,
+          "recall@5": 1.0,
+          "recall@10": 1.0,
+          "mAP": 0.5906067733296315
+        },
+        "Đồng hồ": {
+          "n_queries": 10,
+          "recall@1": 0.4,
+          "recall@5": 0.6,
+          "recall@10": 0.6,
+          "mAP": 0.41460231724358465
+        }
+      }
+    }
+  },
+  "1b_4_failed_13": [
+    {
+      "idx": 26,
+      "query": "quan jean nam xanh",
+      "has_diacritics": false,
+      "n_rel": 9,
+      "parsed": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ],
+        "normalized_query": "quan jean nam xanh"
+      },
+      "spec": {
+        "articleType": [
+          "Jeans"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Blue"
+        ]
+      },
+      "rank_base_100": ">100",
+      "rank_model_full": 394,
+      "rank_sys_full": 51,
+      "rel_cos": 0.12137560546398163,
+      "rel_bonus": 0.3,
+      "rel_final": 0.4213756054639816,
+      "rel_meta": "Jeans | Men | Blue",
+      "wrong_cos": 0.42563238739967346,
+      "wrong_bonus": 0.19999999999999998,
+      "wrong_final": 0.6256323873996734,
+      "wrong_meta": "Backpacks | Unisex | Blue"
+    },
+    {
+      "idx": 29,
+      "query": "quan tay nam cong so mau den",
+      "has_diacritics": false,
+      "n_rel": 1,
+      "parsed": {
+        "articleType": [
+          "Trousers"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ],
+        "normalized_query": "quan tay nam cong so mau den"
+      },
+      "spec": {
+        "articleType": [
+          "Trousers"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "rank_base_100": ">100",
+      "rank_model_full": 162,
+      "rank_sys_full": 3,
+      "rel_cos": 0.3356541693210602,
+      "rel_bonus": 0.3,
+      "rel_final": 0.6356541693210602,
+      "rel_meta": "Trousers | Men | Black",
+      "wrong_cos": 0.4865760803222656,
+      "wrong_bonus": 0.19999999999999998,
+      "wrong_final": 0.6865760803222656,
+      "wrong_meta": "Casual Shoes | Unisex | Black"
+    },
+    {
+      "idx": 41,
+      "query": "quần lót boxer nam co giãn tốt",
+      "has_diacritics": true,
+      "n_rel": 7,
+      "parsed": {
+        "articleType": [],
+        "gender": "Men",
+        "baseColour": [],
+        "normalized_query": "quan lot boxer nam co gian tot"
+      },
+      "spec": {
+        "articleType": [
+          "Boxers",
+          "Trunk"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "rank_base_100": 14,
+      "rank_model_full": 14,
+      "rank_sys_full": 14,
+      "rel_cos": 0.5952708125114441,
+      "rel_bonus": 0.3,
+      "rel_final": 0.8952708125114441,
+      "rel_meta": "Trunk | Men | Black",
+      "wrong_cos": 0.702201247215271,
+      "wrong_bonus": 0.3,
+      "wrong_final": 1.002201247215271,
+      "wrong_meta": "Briefs | Men | Olive"
+    },
+    {
+      "idx": 44,
+      "query": "áo liền quần jumpsuit nữ thanh lịch",
+      "has_diacritics": true,
+      "n_rel": 1,
+      "parsed": {
+        "articleType": [],
+        "gender": "Women",
+        "baseColour": [],
+        "normalized_query": "ao lien quan jumpsuit nu thanh lich"
+      },
+      "spec": {
+        "articleType": [
+          "Jumpsuit"
+        ],
+        "gender": "Women",
+        "baseColour": []
+      },
+      "rank_base_100": ">100",
+      "rank_model_full": 360,
+      "rank_sys_full": 265,
+      "rel_cos": 0.18592308461666107,
+      "rel_bonus": 0.3,
+      "rel_final": 0.48592308461666106,
+      "rel_meta": "Jumpsuit | Women | Blue",
+      "wrong_cos": 0.740774393081665,
+      "wrong_bonus": 0.3,
+      "wrong_final": 1.040774393081665,
+      "wrong_meta": "Tops | Women | Pink"
+    },
+    {
+      "idx": 63,
+      "query": "giày đá bóng sân cỏ nhân tạo nam",
+      "has_diacritics": true,
+      "n_rel": 39,
+      "parsed": {
+        "articleType": [],
+        "gender": "Men",
+        "baseColour": [],
+        "normalized_query": "giay da bong san co nhan tao nam"
+      },
+      "spec": {
+        "articleType": [
+          "Sports Shoes"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "rank_base_100": 48,
+      "rank_model_full": 62,
+      "rank_sys_full": 48,
+      "rel_cos": 0.483652263879776,
+      "rel_bonus": 0.3,
+      "rel_final": 0.783652263879776,
+      "rel_meta": "Sports Shoes | Men | White",
+      "wrong_cos": 0.6880009174346924,
+      "wrong_bonus": 0.3,
+      "wrong_final": 0.9880009174346924,
+      "wrong_meta": "Formal Shoes | Men | Brown"
+    },
+    {
+      "idx": 72,
+      "query": "vi da nam mau den",
+      "has_diacritics": false,
+      "n_rel": 6,
+      "parsed": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ],
+        "normalized_query": "vi da nam mau den"
+      },
+      "spec": {
+        "articleType": [
+          "Wallets"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "rank_base_100": ">100",
+      "rank_model_full": 139,
+      "rank_sys_full": 5,
+      "rel_cos": 0.30159875750541687,
+      "rel_bonus": 0.3,
+      "rel_final": 0.6015987575054169,
+      "rel_meta": "Wallets | Men | Black",
+      "wrong_cos": 0.45208895206451416,
+      "wrong_bonus": 0.19999999999999998,
+      "wrong_final": 0.6520889520645141,
+      "wrong_meta": "Rain Jacket | Men | Black"
+    },
+    {
+      "idx": 76,
+      "query": "túi đeo chéo nam đựng ipad thể thao",
+      "has_diacritics": true,
+      "n_rel": 1,
+      "parsed": {
+        "articleType": [
+          "Handbags"
+        ],
+        "gender": "Men",
+        "baseColour": [],
+        "normalized_query": "tui deo cheo nam dung ipad the thao"
+      },
+      "spec": {
+        "articleType": [
+          "Messenger Bag"
+        ],
+        "gender": "Men",
+        "baseColour": []
+      },
+      "rank_base_100": 40,
+      "rank_model_full": 44,
+      "rank_sys_full": 40,
+      "rel_cos": 0.5506742596626282,
+      "rel_bonus": 0.15,
+      "rel_final": 0.7006742596626282,
+      "rel_meta": "Messenger Bag | Unisex | Grey",
+      "wrong_cos": 0.584802508354187,
+      "wrong_bonus": 0.3,
+      "wrong_final": 0.8848025083541871,
+      "wrong_meta": "Handbags | Unisex | Khaki"
+    },
+    {
+      "idx": 77,
+      "query": "túi trống thể thao tập gym đựng đồ",
+      "has_diacritics": true,
+      "n_rel": 3,
+      "parsed": {
+        "articleType": [],
+        "gender": null,
+        "baseColour": [
+          "Red"
+        ],
+        "normalized_query": "tui trong the thao tap gym dung do"
+      },
+      "spec": {
+        "articleType": [
+          "Duffel Bag"
+        ],
+        "gender": "Unisex",
+        "baseColour": []
+      },
+      "rank_base_100": 12,
+      "rank_model_full": 5,
+      "rank_sys_full": 18,
+      "rel_cos": 0.694063663482666,
+      "rel_bonus": 0.0,
+      "rel_final": 0.694063663482666,
+      "rel_meta": "Duffel Bag | Unisex | Khaki",
+      "wrong_cos": 0.6136215925216675,
+      "wrong_bonus": 0.3,
+      "wrong_final": 0.9136215925216675,
+      "wrong_meta": "Socks | Unisex | Red"
+    },
+    {
+      "idx": 81,
+      "query": "dong ho nam day da mau den",
+      "has_diacritics": false,
+      "n_rel": 14,
+      "parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ],
+        "normalized_query": "dong ho nam day da mau den"
+      },
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "rank_base_100": ">100",
+      "rank_model_full": 616,
+      "rank_sys_full": 210,
+      "rel_cos": 0.12705716490745544,
+      "rel_bonus": 0.3,
+      "rel_final": 0.42705716490745543,
+      "rel_meta": "Watches | Unisex | Black",
+      "wrong_cos": 0.7125245332717896,
+      "wrong_bonus": 0.09999999999999999,
+      "wrong_final": 0.8125245332717895,
+      "wrong_meta": "Casual Shoes | Men | Beige"
+    },
+    {
+      "idx": 83,
+      "query": "dong ho nam day kim loai",
+      "has_diacritics": false,
+      "n_rel": 8,
+      "parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [],
+        "normalized_query": "dong ho nam day kim loai"
+      },
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Silver",
+          "Steel"
+        ]
+      },
+      "rank_base_100": ">100",
+      "rank_model_full": 409,
+      "rank_sys_full": 139,
+      "rel_cos": 0.2566581964492798,
+      "rel_bonus": 0.3,
+      "rel_final": 0.5566581964492798,
+      "rel_meta": "Watches | Men | Silver",
+      "wrong_cos": 0.6725314259529114,
+      "wrong_bonus": 0.15,
+      "wrong_final": 0.8225314259529114,
+      "wrong_meta": "Sandals | Men | Tan"
+    },
+    {
+      "idx": 85,
+      "query": "dong ho nu mau trang thanh lich",
+      "has_diacritics": false,
+      "n_rel": 7,
+      "parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ],
+        "normalized_query": "dong ho nu mau trang thanh lich"
+      },
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Women",
+        "baseColour": [
+          "White"
+        ]
+      },
+      "rank_base_100": ">100",
+      "rank_model_full": 328,
+      "rank_sys_full": 52,
+      "rel_cos": 0.33258384466171265,
+      "rel_bonus": 0.3,
+      "rel_final": 0.6325838446617127,
+      "rel_meta": "Watches | Unisex | White",
+      "wrong_cos": 0.6650486588478088,
+      "wrong_bonus": 0.19999999999999998,
+      "wrong_final": 0.8650486588478088,
+      "wrong_meta": "Heels | Women | White"
+    },
+    {
+      "idx": 88,
+      "query": "đồng hồ nam mặt vuông dây cao su",
+      "has_diacritics": true,
+      "n_rel": 14,
+      "parsed": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [],
+        "normalized_query": "dong ho nam mat vuong day cao su"
+      },
+      "spec": {
+        "articleType": [
+          "Watches"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Black"
+        ]
+      },
+      "rank_base_100": 16,
+      "rank_model_full": 16,
+      "rank_sys_full": 16,
+      "rel_cos": 0.5847076177597046,
+      "rel_bonus": 0.3,
+      "rel_final": 0.8847076177597046,
+      "rel_meta": "Watches | Men | Black",
+      "wrong_cos": 0.6788398027420044,
+      "wrong_bonus": 0.3,
+      "wrong_final": 0.9788398027420044,
+      "wrong_meta": "Watches | Men | Cream"
+    },
+    {
+      "idx": 94,
+      "query": "day nit nam da bo",
+      "has_diacritics": false,
+      "n_rel": 5,
+      "parsed": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [],
+        "normalized_query": "day nit nam da bo"
+      },
+      "spec": {
+        "articleType": [
+          "Belts"
+        ],
+        "gender": "Men",
+        "baseColour": [
+          "Brown",
+          "Black"
+        ]
+      },
+      "rank_base_100": ">100",
+      "rank_model_full": 184,
+      "rank_sys_full": 16,
+      "rel_cos": 0.31674477458000183,
+      "rel_bonus": 0.3,
+      "rel_final": 0.6167447745800019,
+      "rel_meta": "Belts | Unisex | Black",
+      "wrong_cos": 0.5626664757728577,
+      "wrong_bonus": 0.15,
+      "wrong_final": 0.7126664757728577,
+      "wrong_meta": "Jackets | Men | Olive"
+    }
+  ],
+  "1b_5_sweep": [
+    {
+      "parser": "Parser hiện tại",
+      "method": "gamma=0.3",
+      "cut100": {
+        "n_queries": 86,
+        "recall@1": 0.6046511627906976,
+        "recall@5": 0.8488372093023255,
+        "recall@10": 0.872093023255814,
+        "mAP": 0.5851583703613955
+      },
+      "full1290": {
+        "n_queries": 86,
+        "recall@1": 0.6046511627906976,
+        "recall@5": 0.8488372093023255,
+        "recall@10": 0.872093023255814,
+        "mAP": 0.594154478898779
+      }
+    },
+    {
+      "parser": "Parser hiện tại",
+      "method": "gamma=0.5",
+      "cut100": {
+        "n_queries": 86,
+        "recall@1": 0.7209302325581395,
+        "recall@5": 0.8837209302325582,
+        "recall@10": 0.8953488372093024,
+        "mAP": 0.688056957899205
+      },
+      "full1290": {
+        "n_queries": 86,
+        "recall@1": 0.7209302325581395,
+        "recall@5": 0.8837209302325582,
+        "recall@10": 0.8953488372093024,
+        "mAP": 0.6957503976498537
+      }
+    },
+    {
+      "parser": "Parser hiện tại",
+      "method": "gamma=1.0",
+      "cut100": {
+        "n_queries": 86,
+        "recall@1": 0.7790697674418605,
+        "recall@5": 0.9069767441860465,
+        "recall@10": 0.9186046511627907,
+        "mAP": 0.7727400152024647
+      },
+      "full1290": {
+        "n_queries": 86,
+        "recall@1": 0.7790697674418605,
+        "recall@5": 0.9069767441860465,
+        "recall@10": 0.9186046511627907,
+        "mAP": 0.7780790821407074
+      }
+    },
+    {
+      "parser": "Parser hiện tại",
+      "method": "gamma=2.0",
+      "cut100": {
+        "n_queries": 86,
+        "recall@1": 0.8023255813953488,
+        "recall@5": 0.9186046511627907,
+        "recall@10": 0.9186046511627907,
+        "mAP": 0.8216055796945462
+      },
+      "full1290": {
+        "n_queries": 86,
+        "recall@1": 0.8023255813953488,
+        "recall@5": 0.9186046511627907,
+        "recall@10": 0.9186046511627907,
+        "mAP": 0.8267562621302024
+      }
+    },
+    {
+      "parser": "Parser hiện tại",
+      "method": "hard-tier",
+      "cut100": {
+        "n_queries": 86,
+        "recall@1": 0.8023255813953488,
+        "recall@5": 0.9186046511627907,
+        "recall@10": 0.9186046511627907,
+        "mAP": 0.8245994602937542
+      },
+      "full1290": {
+        "n_queries": 86,
+        "recall@1": 0.8023255813953488,
+        "recall@5": 0.9186046511627907,
+        "recall@10": 0.9186046511627907,
+        "mAP": 0.8297501427294102
+      }
+    },
+    {
+      "parser": "Oracle Parser",
+      "method": "hard-tier",
+      "cut100": {
+        "n_queries": 86,
+        "recall@1": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mAP": 0.9962287869264613
+      },
+      "full1290": {
+        "n_queries": 86,
+        "recall@1": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "mAP": 1.0
+      }
+    }
+  ]
+}
