@@ -164,6 +164,12 @@ def evaluate_t2i_canonical(
     compute_breakdowns: bool = False,
     policies: Sequence[str] = ("hybrid",),
     min_relevant_per_query: int = 1,
+    bonus_mode: str = "zscore",
+    slot_confidences: Optional[List[Dict[str, str]]] = None,
+    extra_score_matrix: Optional[np.ndarray] = None,
+    extra_score_weight: float = 0.0,
+    rocchio_k: int = 0,
+    rocchio_beta: float = 0.0,
 ) -> Dict[str, Any]:
     """
     Hàm đánh giá Canonical duy nhất cho Text-to-Image Retrieval.
@@ -192,11 +198,22 @@ def evaluate_t2i_canonical(
         q_vec = engine._apply_mean_centering(query_vecs[i : i + 1])
 
         if full_cos_matrix is not None:
-            cos_row = full_cos_matrix[i].astype(np.float64)
-            if zscore_cosine:
-                mu = float(np.mean(cos_row))
-                sd = float(np.std(cos_row))
-                cos_row = (cos_row - mu) / max(sd, 1e-8)
+            raw_cos_row = full_cos_matrix[i].astype(np.float64)
+            if rocchio_k > 0 and rocchio_beta > 0.0:
+                top_k_idx = np.argsort(-raw_cos_row, kind="mergesort")[:rocchio_k]
+                prf_vec = np.mean(engine.embeddings[top_k_idx].astype(np.float64), axis=0)
+                q_new = q_mat[i].astype(np.float64) + float(rocchio_beta) * prf_vec
+                q_norm = float(np.linalg.norm(q_new))
+                if q_norm > 1e-8:
+                    q_new = q_new / q_norm
+                raw_cos_row = (q_new @ engine.embeddings.T).astype(np.float64)
+
+            mu = float(np.mean(raw_cos_row))
+            sd = float(np.std(raw_cos_row))
+            if zscore_cosine and bonus_mode == "zscore":
+                cos_row = (raw_cos_row - mu) / max(sd, 1e-8)
+            else:
+                cos_row = raw_cos_row
 
             if eff_pool < n_gallery:
                 pool_idxs = np.argsort(-cos_row, kind="mergesort")[:eff_pool]
@@ -207,20 +224,39 @@ def evaluate_t2i_canonical(
                 scored = [(float(cos_row[int(idx)]), int(idx)) for idx in pool_idxs]
             else:
                 parsed = parsed_queries[i]
+                eff_weights = slot_weights
+                if slot_confidences is not None:
+                    conf_map = slot_confidences[i]
+                    base_w = slot_weights if slot_weights is not None else {
+                        "articleType": 1.0,
+                        "gender": 1.0,
+                        "baseColour": 1.0,
+                    }
+                    eff_weights = {
+                        k: float(v) * (0.2 if conf_map.get(k) == "low" else 1.0)
+                        for k, v in base_w.items()
+                    }
                 scored = []
                 for idx_np in pool_idxs:
                     idx = int(idx_np)
                     base_s = float(cos_row[idx])
                     meta = id_map[idx]
                     mf = compute_weighted_attribute_match(
-                        parsed, meta, weights=slot_weights, gender_policy="hybrid", strict_categories=strict_cats
+                        parsed, meta, weights=eff_weights, gender_policy="hybrid", strict_categories=strict_cats
                     )
                     if hard_tier:
                         s_val = mf * 100.0 + base_s
+                    elif bonus_mode == "sigma_scaled":
+                        s_val = base_s + gamma * max(sd, 1e-8) * mf
+                    elif bonus_mode == "tier_soft":
+                        tier_b = 0.5 if mf >= 0.999 else 0.0
+                        s_val = base_s + gamma * (mf + tier_b)
                     else:
                         s_val = base_s + gamma * mf
                     if bm25_scores is not None:
                         s_val += bm25_weight * float(bm25_scores[i, idx])
+                    if extra_score_matrix is not None and extra_score_weight != 0.0:
+                        s_val += float(extra_score_weight) * float(extra_score_matrix[i, idx])
                     scored.append((s_val, idx))
 
             scored.sort(key=lambda x: x[0], reverse=True)

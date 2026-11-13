@@ -92,6 +92,66 @@ def dual_encode_texts(engine, queries: List[str]) -> np.ndarray:
     return (blended / np.maximum(norms, 1e-12)).astype(np.float32)
 
 
+def _encode_batch_fast(engine, texts: List[str]) -> np.ndarray:
+    """Batch encode texts bằng preprocessor + model của engine (fallback sang từng câu nếu mock)."""
+    if hasattr(engine, "preprocessor") and hasattr(engine, "model"):
+        import torch
+
+        inputs = engine.preprocessor.preprocess_texts(texts, device=engine.device)
+        with torch.no_grad():
+            embs = engine.model.encode_text(
+                input_ids=inputs["input_ids"],
+                attention_mask=inputs.get("attention_mask"),
+            )
+            vecs = embs.float().cpu().numpy()
+        return engine._apply_mean_centering(vecs)
+    return np.vstack([engine.encode_text_query(t) for t in texts])
+
+
+def build_catalog_template(parsed: Dict[str, Any]) -> str:
+    """Sinh mẫu chuẩn hóa tiếng Việt thuần từ nhãn catalog đã parse (I3)."""
+    parts: List[str] = []
+    arts = parsed.get("articleType") or []
+    if arts and arts[0] in ARTICLE_TYPE_LEXICON_V2:
+        parts.append(ARTICLE_TYPE_LEXICON_V2[arts[0]][0])
+    gen = parsed.get("gender")
+    if gen and gen in GENDER_LEXICON_V2:
+        # Ưu tiên từ ngắn chuẩn ('nam', 'nữ', 'bé trai', ...)
+        g_kws = GENDER_LEXICON_V2[gen]
+        parts.append(g_kws[-1] if gen in ("Men", "Women") else g_kws[0])
+    cols = parsed.get("baseColour") or []
+    if cols and cols[0] in COLOUR_LEXICON_V2:
+        parts.append("màu " + COLOUR_LEXICON_V2[cols[0]][0])
+    return " ".join(parts).strip()
+
+
+def multi_template_encode_texts(
+    engine,
+    queries: List[str],
+    parsed_list: List[Dict[str, Any]],
+    n_templates: int = 2,
+) -> np.ndarray:
+    """
+    I3: Mở rộng truy vấn phía text (đa mẫu) dùng batch forward:
+    - n_templates=2: trung bình [câu khôi phục dấu, mẫu chuẩn hóa catalog (nếu có)].
+    - n_templates>=3: trung bình [câu gốc, câu khôi phục dấu, mẫu chuẩn hóa catalog].
+    """
+    all_vecs: List[np.ndarray] = []
+    for q, pr in zip(queries, parsed_list):
+        rw = restore_diacritics_for_query(q)
+        tpl = build_catalog_template(pr)
+        cands = [rw]
+        if n_templates >= 3 and q != rw:
+            cands.append(q)
+        if tpl and tpl != rw:
+            cands.append(tpl)
+        vecs = _encode_batch_fast(engine, cands)
+        avg = np.mean(vecs, axis=0, keepdims=True)
+        norm = np.linalg.norm(avg, axis=1, keepdims=True)
+        all_vecs.append((avg / np.maximum(norm, 1e-12)).astype(np.float32))
+    return np.vstack(all_vecs)
+
+
 class BM25GalleryScorer:
     """BM25 gọn nhẹ trên metadata/caption của gallery để phục vụ cfg_17..cfg_19."""
 
