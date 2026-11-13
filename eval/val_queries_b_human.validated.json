@@ -1,0 +1,1169 @@
+[
+  {
+    "id": "val_b_human_000",
+    "query": "Mình muốn tìm mua áo thun nam màu đen",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Tshirts__Men__Black",
+    "n_relevant": 33
+  },
+  {
+    "id": "val_b_human_001",
+    "query": "tìm mua áo thun nam màu tím",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Tshirts__Men__Purple",
+    "n_relevant": 11
+  },
+  {
+    "id": "val_b_human_002",
+    "query": "áo sơ mi nam tay dài màu trắng đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "White"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Shirts__Men__White",
+    "n_relevant": 23
+  },
+  {
+    "id": "val_b_human_003",
+    "query": "Cần tìm mua áo sơ mi nam",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Shirts__Men__",
+    "n_relevant": 132
+  },
+  {
+    "id": "val_b_human_004",
+    "query": "quần jean nam màu xanh đậm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Jeans__Men__Blue",
+    "n_relevant": 14
+  },
+  {
+    "id": "val_b_human_005",
+    "query": "quần jean nữ ống rộng",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Jeans__Women__",
+    "n_relevant": 5
+  },
+  {
+    "id": "val_b_human_011",
+    "query": "túi xách cầm tay nữ màu đen",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Handbags__Women__Black",
+    "n_relevant": 19
+  },
+  {
+    "id": "val_b_human_013",
+    "query": "balo màu đen đựng laptop",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Backpacks__None__Black",
+    "n_relevant": 11
+  },
+  {
+    "id": "val_b_human_016",
+    "query": "giày sneaker nam màu xám",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Casual Shoes__Men__Grey",
+    "n_relevant": 5
+  },
+  {
+    "id": "val_b_human_022",
+    "query": "đồng hồ nữ mặt tròn màu bạc",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Watches__Women__Silver",
+    "n_relevant": 6
+  },
+  {
+    "id": "val_b_human_023",
+    "query": "kính mát nam màu đen",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Sunglasses__Men__Black",
+    "n_relevant": 12
+  },
+  {
+    "id": "val_b_human_024",
+    "query": "kính râm nữ gọng tròn",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Sunglasses__Women__",
+    "n_relevant": 18
+  },
+  {
+    "id": "val_b_human_050",
+    "query": "áo sơ mi màu xanh dương",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Shirts__None__Blue",
+    "n_relevant": 35
+  },
+  {
+    "id": "val_b_human_051",
+    "query": "giày màu trắng đi hằng ngày",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "White"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Casual Shoes__None__White",
+    "n_relevant": 20
+  },
+  {
+    "id": "val_b_human_056",
+    "query": "minh muon tim mua ao thun nam mau den",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Tshirts__Men__Black",
+    "n_relevant": 33
+  },
+  {
+    "id": "val_b_human_057",
+    "query": "tim mua ao thun nam mau tim",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Tshirts__Men__Purple",
+    "n_relevant": 11
+  },
+  {
+    "id": "val_b_human_058",
+    "query": "can tim mua ao so mi nam",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Shirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Shirts__Men__",
+    "n_relevant": 132
+  },
+  {
+    "id": "val_b_human_064",
+    "query": "dong ho nu mat tron mau bac",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Silver"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Watches__Women__Silver",
+    "n_relevant": 6
+  },
+  {
+    "id": "val_b_human_073",
+    "query": "Cho mình hỏi giày cao gót nữ màu nâu đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Heels__Women__Brown",
+    "n_relevant": 14
+  },
+  {
+    "id": "val_b_human_074",
+    "query": "balo nam màu đen đi học đi làm",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Backpacks__Men__Black",
+    "n_relevant": 11
+  },
+  {
+    "id": "val_b_human_075",
+    "query": "ba lo nam mau do noi bat",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Backpacks__Men__Red",
+    "n_relevant": 9
+  },
+  {
+    "id": "val_b_human_076",
+    "query": "balo nu màu xanh dương nho gọn",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Backpacks"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Backpacks__Women__Blue",
+    "n_relevant": 5
+  },
+  {
+    "id": "val_b_human_077",
+    "query": "túi xách nữ màu xám thanh lịch",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Handbags"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Grey"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Handbags__Women__Grey",
+    "n_relevant": 6
+  },
+  {
+    "id": "val_b_human_078",
+    "query": "kính mát nữ màu đen gọng to",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Sunglasses__Women__Black",
+    "n_relevant": 6
+  },
+  {
+    "id": "val_b_human_079",
+    "query": "giày sneaker nam màu xanh rêu",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Olive"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Casual Shoes__Men__Olive",
+    "n_relevant": 5
+  },
+  {
+    "id": "val_b_human_080",
+    "query": "giay sneaker nam mau do",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Men",
+      "baseColour": [
+        "Red"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Casual Shoes__Men__Red",
+    "n_relevant": 5
+  },
+  {
+    "id": "val_b_human_081",
+    "query": "giày vải nữ màu xanh dương",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Blue"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Casual Shoes__Women__Blue",
+    "n_relevant": 5
+  },
+  {
+    "id": "val_b_human_084",
+    "query": "kurta nữ màu tím mặc dịp lễ",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Kurtas"
+      ],
+      "gender": "Women",
+      "baseColour": [
+        "Purple"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Kurtas__Women__Purple",
+    "n_relevant": 7
+  },
+  {
+    "id": "val_b_human_087",
+    "query": "dong ho mau den mat vuong",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Watches__None__Black",
+    "n_relevant": 34
+  },
+  {
+    "id": "val_b_human_088",
+    "query": "đồng hồ màu thép",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Steel"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Watches__None__Steel",
+    "n_relevant": 11
+  },
+  {
+    "id": "val_b_human_089",
+    "query": "giay the thao mau den",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Sports Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Black"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Sports Shoes__None__Black",
+    "n_relevant": 27
+  },
+  {
+    "id": "val_b_human_090",
+    "query": "giày thường ngày màu nâu",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Brown"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Casual Shoes__None__Brown",
+    "n_relevant": 12
+  },
+  {
+    "id": "val_b_human_091",
+    "query": "giày thường ngày màu xanh navy",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Navy Blue"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Casual Shoes__None__Navy Blue",
+    "n_relevant": 9
+  },
+  {
+    "id": "val_b_human_096",
+    "query": "giày cao gót màu gold",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Heels"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Gold"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Heels__None__Gold",
+    "n_relevant": 10
+  },
+  {
+    "id": "val_b_human_099",
+    "query": "bông tai màu gold",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": null,
+      "baseColour": [
+        "Gold"
+      ]
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Earrings__None__Gold",
+    "n_relevant": 6
+  },
+  {
+    "id": "val_b_human_101",
+    "query": "giay sneaker cho be trai",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Boys",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Casual Shoes__Boys__",
+    "n_relevant": 17
+  },
+  {
+    "id": "val_b_human_102",
+    "query": "giày sneaker cho bé gái",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Casual Shoes"
+      ],
+      "gender": "Girls",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Casual Shoes__Girls__",
+    "n_relevant": 16
+  },
+  {
+    "id": "val_b_human_103",
+    "query": "áo ba lỗ nam mặc trong",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Innerwear Vests"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Innerwear Vests__Men__",
+    "n_relevant": 16
+  },
+  {
+    "id": "val_b_human_104",
+    "query": "ao kurti nu",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Kurtis"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Kurtis__Women__",
+    "n_relevant": 11
+  },
+  {
+    "id": "val_b_human_105",
+    "query": "nón lưỡi trai cho nữ",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Caps"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Caps__Women__",
+    "n_relevant": 12
+  },
+  {
+    "id": "val_b_human_106",
+    "query": "váy ngu nữ",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Nightdress"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Nightdress__Women__",
+    "n_relevant": 10
+  },
+  {
+    "id": "val_b_human_107",
+    "query": "áo tunic nữ dáng dài",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Tunics"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Tunics__Women__",
+    "n_relevant": 9
+  },
+  {
+    "id": "val_b_human_108",
+    "query": "khan dupatta cho nu",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Dupatta"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Dupatta__Women__",
+    "n_relevant": 8
+  },
+  {
+    "id": "val_b_human_109",
+    "query": "dây chuyền nữ",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Necklace and Chains"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Necklace and Chains__Women__",
+    "n_relevant": 10
+  },
+  {
+    "id": "val_b_human_110",
+    "query": "kính mát cho bé gái",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Sunglasses"
+      ],
+      "gender": "Girls",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Sunglasses__Girls__",
+    "n_relevant": 9
+  },
+  {
+    "id": "val_b_human_111",
+    "query": "quần lót trunk nam",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Trunk"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Trunk__Men__",
+    "n_relevant": 5
+  },
+  {
+    "id": "val_b_human_112",
+    "query": "quan capri nu",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Capris"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Capris__Women__",
+    "n_relevant": 5
+  },
+  {
+    "id": "val_b_human_113",
+    "query": "áo nỉ nam",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Sweatshirts"
+      ],
+      "gender": "Men",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Sweatshirts__Men__",
+    "n_relevant": 6
+  },
+  {
+    "id": "val_b_human_114",
+    "query": "bộ kurta nữ gồm cả quần",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Kurta Sets"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Kurta Sets__Women__",
+    "n_relevant": 6
+  },
+  {
+    "id": "val_b_human_115",
+    "query": "ao thun tron mac o nha",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Tshirts"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Tshirts__None__",
+    "n_relevant": 314
+  },
+  {
+    "id": "val_b_human_116",
+    "query": "đồng hồ đeo tay đi làm hằng ngày",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Watches"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Watches__None__",
+    "n_relevant": 118
+  },
+  {
+    "id": "val_b_human_117",
+    "query": "vi dung the gon nhe",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Wallets"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Wallets__None__",
+    "n_relevant": 45
+  },
+  {
+    "id": "val_b_human_118",
+    "query": "dây nit bản to khóa kim",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Belts"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Belts__None__",
+    "n_relevant": 37
+  },
+  {
+    "id": "val_b_human_119",
+    "query": "quần sịp cotton thoáng khí",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Briefs"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Briefs__None__",
+    "n_relevant": 31
+  },
+  {
+    "id": "val_b_human_120",
+    "query": "bông tai tròn nhỏ xinh",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Earrings"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Earrings__None__",
+    "n_relevant": 24
+  },
+  {
+    "id": "val_b_human_121",
+    "query": "giày tây công sở",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Formal Shoes"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Formal Shoes__None__",
+    "n_relevant": 24
+  },
+  {
+    "id": "val_b_human_122",
+    "query": "quan bo ong dung",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Jeans"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Jeans__None__",
+    "n_relevant": 21
+  },
+  {
+    "id": "val_b_human_123",
+    "query": "vòng tay nữ đeo hằng ngày",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Bracelet"
+      ],
+      "gender": "Women",
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Bracelet__Women__",
+    "n_relevant": 5
+  },
+  {
+    "id": "val_b_human_124",
+    "query": "clutch cam tay di tiec",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Clutches"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Clutches__None__",
+    "n_relevant": 13
+  },
+  {
+    "id": "val_b_human_125",
+    "query": "túi trống du lịch ngắn ngày",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Duffel Bag"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Duffel Bag__None__",
+    "n_relevant": 9
+  },
+  {
+    "id": "val_b_human_126",
+    "query": "áo len mặc mùa đông",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Sweaters"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Sweaters__None__",
+    "n_relevant": 9
+  },
+  {
+    "id": "val_b_human_127",
+    "query": "áo kiểu mặc đi chơi",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Tops"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Tops__None__",
+    "n_relevant": 84
+  },
+  {
+    "id": "val_b_human_128",
+    "query": "dép sandal quai hậu",
+    "has_diacritics": true,
+    "dia_class": "full",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Sandals"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Sandals__None__",
+    "n_relevant": 34
+  },
+  {
+    "id": "val_b_human_129",
+    "query": "tat co ngan cotton",
+    "has_diacritics": false,
+    "dia_class": "none",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Socks"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Socks__None__",
+    "n_relevant": 29
+  },
+  {
+    "id": "val_b_human_130",
+    "query": "cà vat bản nho",
+    "has_diacritics": true,
+    "dia_class": "partial",
+    "typo_type": null,
+    "spec": {
+      "articleType": [
+        "Ties"
+      ],
+      "gender": null,
+      "baseColour": []
+    },
+    "source": "ai_written",
+    "spec_cluster_id": "Ties__None__",
+    "n_relevant": 16
+  }
+]
