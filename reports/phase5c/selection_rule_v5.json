@@ -1,0 +1,90 @@
+{
+  "version": "v5",
+  "status": "LOCKED_BEFORE_EXPERIMENTS",
+  "seed": 42,
+  "predecessor_tag": "phase5c-v4",
+  "evaluation_protocol": {
+    "search_mode": "exact",
+    "candidate_pool": "full_gallery",
+    "tie_rule": "conservative",
+    "tie_epsilon": 1e-5,
+    "cluster_map_definition": "mean AP within each spec_cluster_id, then unweighted mean across clusters"
+  },
+  "selection_cv": {
+    "method": "5-fold_cluster_cv",
+    "cluster_key": "spec_cluster_id",
+    "folds_file": "reports/phase5b/folds.json",
+    "folds_sha256": "dfd301722ec86734fd0f0bdb38bcb3784d7db22334a6535c51630fb825f91e25",
+    "datasets": ["A", "B-synth (clean only; typo reported separately)"],
+    "b_human_in_objective": false,
+    "objective_formula": "0.4 * mAP_A_cluster + 0.6 * mAP_B_synth_clean_cluster"
+  },
+  "confirmation_gate": {
+    "preferred_gate": "B-human-v4 (eval/val_queries_b_human_v4.json, locked by SHA-256)",
+    "fallback_reference": "B-human validated (65 queries, 61 clusters — marked as REFERENCE ONLY if B-human-v4 missing)",
+    "max_map_drop_vs_baseline_ci_low": 0.02,
+    "max_catastrophic_drop_rate": 0.05,
+    "bootstrap_resamples": 1000,
+    "bootstrap_unit": "spec_cluster_id"
+  },
+  "i3_cache_policy": {
+    "cache_dir": "index/template_cache_v5",
+    "missing_key_behavior": "fallback_to_1_forward_without_error",
+    "log_fallback_rate": true,
+    "equivalence_test_n": 200,
+    "equivalence_min_cosine": 0.999
+  },
+  "i5_text_gallery_policy": {
+    "index_dir": "index/val_gallery_text_v5",
+    "require_real_val_captions": true,
+    "forbid_title_vi": true,
+    "separate_law5_configs": ["internvl2_only", "internvl2_plus_aux"]
+  },
+  "constraints": {
+    "c_nested_20pct_min_map_vs_model_only": -0.03,
+    "c_nested_20pct_min_map_vs_cfg01_baseline": -0.05,
+    "b_synth_max_catastrophic_drop_rate": 0.05,
+    "ab_synth_max_r10_drop_vs_cfg01": 0.01,
+    "t2i_p95_max_latency_increase_ms_vs_cfg_v4_01": 20.0,
+    "t2i_p95_max_latency_ms": 200.0,
+    "parser_fp_rate_must_not_exceed_v1": true
+  },
+  "latency_protocol": {
+    "policy": "C.9",
+    "cold_gpu": true,
+    "interleaved": true,
+    "report_p95_median_iqr": true,
+    "n_runs": 5,
+    "n_queries": 200,
+    "warmup_queries": 20
+  },
+  "simplicity_order_from_simplest_to_complex": [
+    "text_gallery=none < text_gallery=internvl2_only < text_gallery=internvl2_plus_aux",
+    "i3_mode=none < i3_mode=cached < i3_mode=direct",
+    "fuzzy_typo=false < fuzzy_typo=true",
+    "conf_gating=false < conf_gating=true",
+    "bonus_mode=zscore < bonus_mode=tier_soft",
+    "smaller_gamma < larger_gamma"
+  ],
+  "tie_breaking_rule": "Among configs with competes_for_winner=true and passing constraints 5(i)-(v), if Score difference falls within 95% paired cluster bootstrap CI (1000 resamples), choose the simpler config according to simplicity_order.",
+  "parallel_reporting": [
+    "model_only",
+    "system_soft (tier_soft / best_by_score)",
+    "system_gated (conf_gating)",
+    "safe_config (satisfies constraints 5(i) & 5(ii) with lowest complexity/gamma)"
+  ],
+  "config_grid": [
+    {"config_id": "cfg_v5_01", "competes_for_winner": true, "role": "v4_winner_baseline", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 1.5, "query_rewrite": true, "i3_mode": "none", "conf_gating": false, "fuzzy_typo": false, "text_gallery": "none", "text_alpha": 1.0},
+    {"config_id": "cfg_v5_02", "competes_for_winner": false, "role": "i3_direct_equivalence_latency_only", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "i3_mode": "direct", "conf_gating": false, "fuzzy_typo": false, "text_gallery": "none", "text_alpha": 1.0},
+    {"config_id": "cfg_v5_03", "competes_for_winner": false, "role": "i3_cached_equivalence_latency_only", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "i3_mode": "cached", "conf_gating": false, "fuzzy_typo": false, "text_gallery": "none", "text_alpha": 1.0},
+    {"config_id": "cfg_v5_04", "competes_for_winner": true, "role": "tier_soft_plus_i3_cached", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 1.5, "query_rewrite": true, "i3_mode": "cached", "conf_gating": false, "fuzzy_typo": false, "text_gallery": "none", "text_alpha": 1.0},
+    {"config_id": "cfg_v5_05", "competes_for_winner": true, "role": "ablation_I2_on_04", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 1.5, "query_rewrite": true, "i3_mode": "cached", "conf_gating": true, "fuzzy_typo": false, "text_gallery": "none", "text_alpha": 1.0},
+    {"config_id": "cfg_v5_06", "competes_for_winner": true, "role": "ablation_I7_on_04", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 1.5, "query_rewrite": true, "i3_mode": "cached", "conf_gating": false, "fuzzy_typo": true, "text_gallery": "none", "text_alpha": 1.0},
+    {"config_id": "cfg_v5_07", "competes_for_winner": true, "role": "combo_I2_I7_on_04", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 1.5, "query_rewrite": true, "i3_mode": "cached", "conf_gating": true, "fuzzy_typo": true, "text_gallery": "none", "text_alpha": 1.0},
+    {"config_id": "cfg_v5_08a", "competes_for_winner": true, "role": "ablation_I5_internvl2_only_on_04", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 1.5, "query_rewrite": true, "i3_mode": "cached", "conf_gating": false, "fuzzy_typo": false, "text_gallery": "internvl2_only", "text_alpha": 0.85},
+    {"config_id": "cfg_v5_08b", "competes_for_winner": true, "role": "ablation_I5_internvl2_plus_aux_on_04", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 1.5, "query_rewrite": true, "i3_mode": "cached", "conf_gating": false, "fuzzy_typo": false, "text_gallery": "internvl2_plus_aux", "text_alpha": 0.85},
+    {"config_id": "cfg_v5_09", "competes_for_winner": true, "role": "gamma_sweep_tier_soft_1.0", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 1.0, "query_rewrite": true, "i3_mode": "cached", "conf_gating": false, "fuzzy_typo": false, "text_gallery": "none", "text_alpha": 1.0},
+    {"config_id": "cfg_v5_10", "competes_for_winner": true, "role": "gamma_sweep_tier_soft_2.0", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 2.0, "query_rewrite": true, "i3_mode": "cached", "conf_gating": false, "fuzzy_typo": false, "text_gallery": "none", "text_alpha": 1.0},
+    {"config_id": "cfg_v5_11", "competes_for_winner": true, "role": "gamma_sweep_tier_soft_3.0", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 3.0, "query_rewrite": true, "i3_mode": "cached", "conf_gating": false, "fuzzy_typo": false, "text_gallery": "none", "text_alpha": 1.0}
+  ]
+}
