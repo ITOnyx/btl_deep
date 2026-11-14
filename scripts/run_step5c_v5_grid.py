@@ -197,11 +197,22 @@ def main() -> int:
     val_c_20 = val_c_obj["queries"]
     parsed_c_20 = [q["parsed_by_rate"]["20%"] for q in val_c_20]
 
+    b_human_v4_val_path = PROJECT_ROOT / "eval/val_queries_b_human_v4.validated.json"
     b_human_v4_path = PROJECT_ROOT / "eval/val_queries_b_human_v4.json"
-    if b_human_v4_path.exists():
+    if b_human_v4_val_path.exists():
+        bh_raw = json.loads(b_human_v4_val_path.read_text(encoding="utf-8"))
+        b_human_queries = bh_raw["queries"] if isinstance(bh_raw, dict) else bh_raw
+        has_ai = any(q.get("source") == "ai_written" for q in b_human_queries)
+        b_human_label = (
+            "B-human-v4 (kiểm chứng ngoài mẫu, chưa độc lập tuyệt đối)"
+            if has_ai
+            else "B-human-v4 (độc lập, locked)"
+        )
+        b_human_is_ref_only = False
+    elif b_human_v4_path.exists():
         bh_raw = json.loads(b_human_v4_path.read_text(encoding="utf-8"))
         b_human_queries = bh_raw["queries"] if isinstance(bh_raw, dict) else bh_raw
-        b_human_label = "B-human-v4 (locked)"
+        b_human_label = "B-human-v4 (kiểm chứng ngoài mẫu, chưa độc lập tuyệt đối)"
         b_human_is_ref_only = False
     else:
         bh_raw = json.loads((PROJECT_ROOT / "eval/val_queries_b_human.validated.json").read_text(encoding="utf-8"))
@@ -365,10 +376,125 @@ def main() -> int:
         eng, parser, tpl_cache, grid, queries_200, embs_a, embs_b, n_runs=5, n_warmup=20
     )
 
-    # Select winner among competes_for_winner=True
-    competitors = [cid for cid, v in results_by_cfg.items() if v["config"].get("competes_for_winner", True)]
+    # Parser FP check (5(v)): compare parser_v2_conf (std vs fuzzy) against parser_v1 on DEV+A+B_clean+B_human
+    from src.serve.parser_v1 import VietnameseQueryParserV1
+    p_v1 = VietnameseQueryParserV1()
+    fp_check_queries = val_a + val_b_clean + b_human_queries
+    fp_std, fp_fuz = 0, 0
+    for q in fp_check_queries:
+        spec = q.get("spec") or {}
+        gt_arts = set(spec.get("articleType") or [])
+        gt_gd = spec.get("gender")
+        gt_cols = set(spec.get("baseColour") or [])
+        qt = restore_diacritics_for_query(q["query"])
+        pr_std = parser.parse_with_confidence(qt, fuzzy_typo=False)
+        pr_fuz = parser.parse_with_confidence(qt, fuzzy_typo=True)
+        for pr, is_fuz in ((pr_std, False), (pr_fuz, True)):
+            has_fp = False
+            if pr["articleType"] and gt_arts and not (set(pr["articleType"]) & gt_arts):
+                has_fp = True
+            if pr["gender"] and gt_gd and pr["gender"] != gt_gd:
+                has_fp = True
+            if pr["baseColour"] and gt_cols and not (set(pr["baseColour"]) & gt_cols):
+                has_fp = True
+            if has_fp:
+                if is_fuz:
+                    fp_fuz += 1
+                else:
+                    fp_std += 1
+    fp_rate_std = round(fp_std / len(fp_check_queries), 4)
+    fp_rate_fuz = round(fp_fuz / len(fp_check_queries), 4)
+
+    # Evaluate constraints 5(i)-(v) per config
+    base_01 = results_by_cfg["cfg_v5_01"]
+    base_p95 = lat_results["cfg_v5_01"]["p95_median_ms"]
+    for cid, v in results_by_cfg.items():
+        cfg = v["config"]
+        p95_med = lat_results[cid]["p95_median_ms"]
+        fp_rate = fp_rate_fuz if cfg.get("fuzzy_typo") else fp_rate_std
+        c_5i = (v["C20_mAP"] - model_c20["overall"]["mAP"]) >= -0.03 and (v["C20_mAP"] - base_01["C20_mAP"]) >= -0.05
+        c_5ii = v["cat_drop_Bc"] <= 0.05
+        c_5iii = (v["A_R10"] - base_01["A_R10"]) >= -0.01 and (v["Bc_R10"] - base_01["Bc_R10"]) >= -0.01
+        c_5iv = (p95_med < 200.0) and ((p95_med - base_p95) <= 20.0)
+        c_5v = fp_rate <= fp_rate_std
+        v["parser_fp_rate"] = fp_rate
+        v["latency_p95_median_ms"] = p95_med
+        v["latency_p95_iqr_ms"] = lat_results[cid]["p95_iqr_ms"]
+        v["constraints"] = {
+            "5i_c20": c_5i,
+            "5ii_cat_drop": c_5ii,
+            "5iii_r10": c_5iii,
+            "5iv_latency": c_5iv,
+            "5v_parser_fp": c_5v,
+            "all_passed": c_5i and c_5ii and c_5iii and c_5iv and c_5v,
+        }
+
+    # Select winner among competes_for_winner=True & all_passed (with 1000x paired cluster bootstrap tie-break)
+    competitors = [
+        cid for cid, v in results_by_cfg.items()
+        if v["config"].get("competes_for_winner", True) and v["constraints"]["all_passed"]
+    ]
+    if not competitors:
+        competitors = [cid for cid, v in results_by_cfg.items() if v["config"].get("competes_for_winner", True)]
     competitors.sort(key=lambda cid: (-results_by_cfg[cid]["cv_score"], simplicity_rank_key_v5(results_by_cfg[cid]["config"])))
-    winner_cid = competitors[0]
+
+    top_cid = competitors[0]
+    def _combined_cluster_aps(cid: str) -> Tuple[List[float], List[str]]:
+        pa = results_by_cfg[cid]["per_query_A"]
+        pb = results_by_cfg[cid]["per_query_Bc"]
+        aps = [0.4 * r["ap"] for r in pa] + [0.6 * r["ap"] for r in pb]
+        cids = [str(q.get("spec_cluster_id", q.get("id"))) for q in val_a] + [str(q.get("spec_cluster_id", q.get("id"))) for q in val_b_clean]
+        return aps, cids
+
+    top_aps, top_cids = _combined_cluster_aps(top_cid)
+    tied_candidates = [top_cid]
+    for cid in competitors[1:]:
+        cand_aps, _ = _combined_cluster_aps(cid)
+        diff_res = paired_cluster_bootstrap_diff(top_aps, cand_aps, top_cids, n_resamples=1000, seed=SEED)
+        if diff_res["ci_low"] <= 0.0 <= diff_res["ci_high"]:
+            tied_candidates.append(cid)
+
+    tied_candidates.sort(key=lambda cid: simplicity_rank_key_v5(results_by_cfg[cid]["config"]))
+    winner_cid = tied_candidates[0]
+
+    safe_candidates = [
+        cid for cid, v in results_by_cfg.items()
+        if v["config"].get("competes_for_winner", True) and v["constraints"]["5i_c20"] and v["constraints"]["5ii_cat_drop"]
+    ]
+    safe_candidates.sort(key=lambda cid: simplicity_rank_key_v5(results_by_cfg[cid]["config"]))
+    safe_cid = safe_candidates[0] if safe_candidates else winner_cid
+
+    # B-human-v4 gate analysis (after selection, NEVER re-select)
+    bh_cids = [str(q.get("spec_cluster_id", q.get("id"))) for q in b_human_queries]
+    bh_aps_base = [r["ap"] for r in results_by_cfg["cfg_v5_01"]["per_query_Bh"]]
+    bh_aps_model = [r["ap"] for r in model_bh["per_query"]]
+
+    def _bh_gate_detail(cid: str) -> Dict[str, Any]:
+        aps = [r["ap"] for r in results_by_cfg[cid]["per_query_Bh"]]
+        diff_vs_base = paired_cluster_bootstrap_diff(aps, bh_aps_base, bh_cids, n_resamples=1000, seed=SEED)
+        cat_drop_bh = float(np.mean([(a - m) < -0.10 for a, m in zip(aps, bh_aps_model)]))
+        with_col = [a for q, a in zip(b_human_queries, aps) if (q.get("spec") or {}).get("baseColour")]
+        no_col = [a for q, a in zip(b_human_queries, aps) if not (q.get("spec") or {}).get("baseColour")]
+        by_dia: Dict[str, List[float]] = defaultdict(list)
+        for q, a in zip(b_human_queries, aps):
+            by_dia[str(q.get("dia_class") or "unknown")].append(a)
+        return {
+            "mAP": round(float(np.mean(aps)), 4),
+            "delta_mAP_vs_cfg_v5_01": round(diff_vs_base["mean_diff"], 4),
+            "delta_CI95": [round(diff_vs_base["ci_low"], 4), round(diff_vs_base["ci_high"], 4)],
+            "catastrophic_drop_rate": round(cat_drop_bh, 4),
+            "mAP_with_colour": round(float(np.mean(with_col)), 4) if with_col else None,
+            "n_with_colour": len(with_col),
+            "mAP_without_colour": round(float(np.mean(no_col)), 4) if no_col else None,
+            "n_without_colour": len(no_col),
+            "mAP_by_dia_class": {k: {"n": len(v), "mAP": round(float(np.mean(v)), 4)} for k, v in sorted(by_dia.items())},
+        }
+
+    bh_gate = {
+        "winner": _bh_gate_detail(winner_cid),
+        "safe": _bh_gate_detail(safe_cid),
+        "baseline_cfg_v5_01": _bh_gate_detail("cfg_v5_01"),
+    }
 
     # Check identical metrics across configs
     metric_sigs = defaultdict(list)
@@ -382,6 +508,13 @@ def main() -> int:
     oracle_bc = _eval_cfg(w_cfg, "B_clean", oracle_spec=True)
     oracle_bh = _eval_cfg(w_cfg, "B_human", oracle_spec=True)
 
+    # Hubness before (model_only) and after (winner) on B_clean & B_human (C.8)
+    hub_model_bc = compute_hubness_stats(model_bc["ranked_indices"], len(eng.id_map), top_k=10)
+    hub_model_bh = compute_hubness_stats(model_bh["ranked_indices"], len(eng.id_map), top_k=10)
+    hub_win_bh = compute_hubness_stats(
+        _eval_cfg(w_cfg, "B_human")["ranked_indices"], len(eng.id_map), top_k=10
+    )
+
     # Cosine std stats (bonus size vs cosine std)
     cos_stds_a = [float(np.std(cache["A"]["vecs_rw"][i] @ eng.embeddings.T)) for i in range(len(val_a))]
 
@@ -392,18 +525,32 @@ def main() -> int:
         "b_human_label": b_human_label,
         "b_human_is_ref_only": b_human_is_ref_only,
         "fallback_stats": fallback_stats,
+        "top_by_cv_score": top_cid,
+        "tied_within_95ci": tied_candidates,
         "winner_config_id": winner_cid,
+        "safe_config_id": safe_cid,
+        "b_human_gate": bh_gate,
         "identical_metric_groups": identical_groups,
         "cosine_std_mean_A": round(float(np.mean(cos_stds_a)), 4),
         "oracle_parser_winner": {
             "Bc_mAP_cluster": oracle_bc["macro_cluster_mAP"],
             "B_human_mAP": oracle_bh["overall"]["mAP"],
         },
+        "hubness_c8": {
+            "B_clean_model_only": hub_model_bc,
+            "B_clean_winner": results_by_cfg[winner_cid]["hubness_Bc"],
+            "B_human_model_only": hub_model_bh,
+            "B_human_winner": hub_win_bh,
+        },
         "model_only": {
             "A_mAP_cluster": model_a["macro_cluster_mAP"],
+            "A_R10": model_a["overall"]["Recall@10"],
             "Bc_mAP_cluster": model_bc["macro_cluster_mAP"],
+            "Bc_R10": model_bc["overall"]["Recall@10"],
             "C20_mAP": model_c20["overall"]["mAP"],
             "B_human_mAP": model_bh["overall"]["mAP"],
+            "B_human_R1": model_bh["overall"]["Recall@1"],
+            "B_human_R10": model_bh["overall"]["Recall@10"],
         },
         "latency_c9": lat_results,
         "configs": {
@@ -414,7 +561,54 @@ def main() -> int:
 
     out_json = PROJECT_ROOT / "reports/phase5c/step5c_results.json"
     out_json.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Winner: {winner_cid} | CV Score: {results_by_cfg[winner_cid]['cv_score']}")
+
+    # Format reports/phase5c/step5c_selection_report.md
+    md_lines = [
+        "# Báo cáo Chọn Cấu hình v5 — Pha 5c (`step5c_selection_report`)",
+        "",
+        f"- **Rule SHA-256:** `{rule_sha}` | **Folds SHA-256:** `{FOLDS_SHA256}` | **Seed:** `{SEED}`",
+        f"- **Cổng B-human-v4:** `{b_human_label}` ({len(b_human_queries)} câu)",
+        f"- **Tốt nhất (`winner_config_id`):** **`{winner_cid}`** (CV Score `{results_by_cfg[winner_cid]['cv_score']}`, tie-break bootstrap 1.000 lần trong nhóm: `{tied_candidates}`)",
+        f"- **An toàn (`safe_config_id`):** **`{safe_cid}`** (đạt `5(i)` & `5(ii)` đơn giản nhất)",
+        "",
+        "## 1. Bảng So sánh Model thuần vs Hệ thống Soft vs Hệ thống Gated (12 Cấu hình v5)",
+        "",
+        "| Nhóm / Config | Tranh hạng | CV Score | A mAP(cl) | Bc mAP(cl) | Bt mAP(cl) | C20 mAP | Tụt thảm họa | Parser FP | p95 C.9 (med ± IQR ms) | 5(i)-(v) |",
+        "|---|:---:|---:|---:|---:|---:|---:|---:|---:|---:|:---:|",
+        f"| `model_only` | — | — | {model_a['macro_cluster_mAP']:.4f} | {model_bc['macro_cluster_mAP']:.4f} | — | {model_c20['overall']['mAP']:.4f} | 0.0000 | — | — | — |",
+    ]
+    for cfg in grid:
+        cid = cfg["config_id"]
+        v = results_by_cfg[cid]
+        grp = "system_gated" if cfg.get("conf_gating") else ("eq_ref" if not cfg.get("competes_for_winner", True) else "system_soft")
+        comp = "✅" if cfg.get("competes_for_winner", True) else "❌"
+        ok = "✅" if v["constraints"]["all_passed"] else "❌"
+        md_lines.append(
+            f"| `{cid}` ({grp}) | {comp} | {v['cv_score']:.4f} | {v['A_mAP_cluster']:.4f} | {v['Bc_mAP_cluster']:.4f} | "
+            f"{v['Bt_mAP_cluster']:.4f} | {v['C20_mAP']:.4f} | {v['cat_drop_Bc']:.4f} | {v['parser_fp_rate']:.4f} | "
+            f"{v['latency_p95_median_ms']:.2f} ± {v['latency_p95_iqr_ms']:.2f} | {ok} |"
+        )
+
+    w_bh = bh_gate["winner"]
+    md_lines.extend([
+        "",
+        f"## 2. Cổng Xác nhận `{b_human_label}` (chạy 1 lần sau khi chọn, KHÔNG chọn lại)",
+        f"- **`{winner_cid}` (Tốt nhất):** `mAP={w_bh['mAP']}`, `ΔmAP vs cfg_v5_01 = {w_bh['delta_mAP_vs_cfg_v5_01']:+.4f}` "
+        f"(95% CI: `[{w_bh['delta_CI95'][0]:+.4f}, {w_bh['delta_CI95'][1]:+.4f}]`), tụt thảm họa `{w_bh['catastrophic_drop_rate']}`.",
+        f"- **Tách có màu / không màu:** Có màu (`n={w_bh['n_with_colour']}`) `mAP={w_bh['mAP_with_colour']}` | Không màu (`n={w_bh['n_without_colour']}`) `mAP={w_bh['mAP_without_colour']}`.",
+        f"- **Tách theo `dia_class`:** `{w_bh['mAP_by_dia_class']}`.",
+        "",
+        "## 3. Phân tích Chẩn đoán (Oracle Parser, Hubness C.8, Bonus vs Cosine Std, Fallback & Trùng lặp)",
+        f"- **Oracle Parser (`{winner_cid}`):** `B-clean mAP(cl)={oracle_bc['macro_cluster_mAP']:.4f}` (vs parser `{results_by_cfg[winner_cid]['Bc_mAP_cluster']:.4f}`), "
+        f"`B-human-v4 mAP={oracle_bh['overall']['mAP']:.4f}` (vs parser `{w_bh['mAP']:.4f}`).",
+        f"- **Hubness C.8 (`B-clean`):** Model thuần `{hub_model_bc}` → Winner `{results_by_cfg[winner_cid]['hubness_Bc']}`.",
+        f"- **Cosine std trung bình trên Val A:** `{summary['cosine_std_mean_A']}` (so sánh với biên độ bonus `tier_soft` / `gamma`).",
+        f"- **I3 Cache Fallback:** `{fallback_stats}`.",
+        f"- **Các cấu hình trùng số liệu:** `{identical_groups}`.",
+    ])
+
+    (PROJECT_ROOT / "reports/phase5c/step5c_selection_report.md").write_text("\n".join(md_lines), encoding="utf-8")
+    print(f"Winner: {winner_cid} | Safe: {safe_cid} | CV Score: {results_by_cfg[winner_cid]['cv_score']}")
     return 0
 
 
