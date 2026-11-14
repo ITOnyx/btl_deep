@@ -1,0 +1,260 @@
+{
+  "status": "HALTED_PREFLIGHT",
+  "halt_reasons": [
+    "Step 0.2: Chưa có index/test_gallery_text_v5/manifest.json (index nhúng caption Config A / Config B / metadata-only cho 1,290 mục test_gallery).",
+    "Step 0.4: Thiếu tệp eval/test_queries_heldout_v2.json -> cấm chạy Phần B (đánh giá chất lượng trên test_gallery).",
+    "Phần A Pre-check: Phát hiện tiến trình đồ họa nền trên GPU (...4__8wekyb3d8bbwe\\EdgeGameAssist.exe (PID 3588), ...er\\ldmutiplayer\\dnmultiplayerex.exe (PID 16284), GPU-Util=84.0%) -> DỪNG, báo người dùng, không tự kill."
+  ],
+  "timestamp_utc": "2026-11-14T13:22:52.555355+00:00",
+  "git_commit": "b4d5300b46aca72529254842067eab9c1d34d48c",
+  "seed": 42,
+  "step_0": {
+    "0_1_hashes": {
+      "best_model_pt": {
+        "path": "data/checkpoints_siglip-vit/best_model.pt",
+        "expected_sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "actual_sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matched": true
+      },
+      "selection_rule_v5": {
+        "path": "reports/phase5c/selection_rule_v5.json",
+        "expected_sha256": "e3d75ec5df7ab6de4cb9ad07e21b9c1a58c5c029c3a9b7749f28518c6c4f0c8c",
+        "actual_sha256": "e3d75ec5df7ab6de4cb9ad07e21b9c1a58c5c029c3a9b7749f28518c6c4f0c8c",
+        "matched": true
+      },
+      "selection_rule_cir_v1": {
+        "path": "reports/phase5c/selection_rule_cir_v1.json",
+        "expected_sha256": "4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067",
+        "actual_sha256": "4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067",
+        "matched": true
+      },
+      "cir_eval_test": {
+        "path": "eval/cir_eval_test.json",
+        "expected_sha256": "d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b",
+        "actual_sha256": "d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b",
+        "matched": true
+      },
+      "test_split": {
+        "path": "eval/test_split.json",
+        "expected_sha256": "d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681",
+        "actual_sha256": "d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681",
+        "matched": true
+      },
+      "catalog_rebuild": {
+        "path": "data/catalog/catalog_rebuild.parquet",
+        "expected_sha256": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+        "actual_sha256": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+        "matched": true
+      },
+      "test_queries_heldout_v2": {
+        "path": "eval/test_queries_heldout_v2.json",
+        "exists": false,
+        "actual_sha256": null,
+        "worksheet_csv_path": "reports/phase5c/heldout_v2_worksheet.csv",
+        "worksheet_csv_sha256": "f1da994630e522f52b22685cac8a17435635e076543de98e78096db65ec945ce"
+      },
+      "locked_final_definitions_py": {
+        "path": "src/eval/locked_final_definitions.py",
+        "actual_sha256": "d8d7ef1926a2b6f1db348a13d0c87af7bfb48a2ca06530a1c141c8e14da2aca7"
+      }
+    },
+    "0_1_core_hashes_matched": true,
+    "0_2_index_guards": {
+      "test_gallery_image_index": {
+        "manifest_path": "index/test_gallery/manifest.json",
+        "manifest_sha256": "57348838c4aa920e853ba004b60f5f4a1b6fdebbc1d59043cd122691867f92aa",
+        "checkpoint_hash_matched": true,
+        "catalog_hash_matched": true,
+        "n_vectors": 1290,
+        "embeddings_shape": [
+          1290,
+          1152
+        ],
+        "passed": true
+      },
+      "val_gallery_caption_index_v5": {
+        "manifest_path": "index/val_gallery_text_v5/manifest.json",
+        "exists": true,
+        "manifest_sha256": "6d44fe7dc702257d294e375f409858b1ed53b1814d0363ea21c0b2cbce258c15"
+      },
+      "test_gallery_caption_index_v5": {
+        "manifest_path": "index/test_gallery_text_v5/manifest.json",
+        "exists": false,
+        "manifest_sha256": null,
+        "raw_caption_shards_available": [
+          "data/catalog/captions/shard_test_0000.parquet",
+          "data/catalog/captions/shard_test_0001.parquet",
+          "data/catalog/captions/shard_test_0002.parquet"
+        ],
+        "raw_caption_coverage_on_test_gallery": "1290/1290 (caption_A and caption_B present in shard_test_0000..0002.parquet)",
+        "note": "Chưa có thư mục index/test_gallery_text_v5/ kèm manifest.json cho 1,290 mục test_gallery (dữ liệu nguồn shard_test_0000..0002.parquet đã có đủ 1,290/1,290 dòng caption_A và caption_B; cần người dùng cho phép dựng index/test_gallery_text_v5/ trước khi chạy B1(iii) cfg_v5_08b và B1(iv))."
+      }
+    },
+    "0_3_parity_check_test_gallery_200": {
+      "gallery": "index/test_gallery",
+      "n_samples": 200,
+      "seed": 42,
+      "device": "cuda",
+      "min_cosine": 0.999978,
+      "mean_cosine": 1.0,
+      "median_cosine": 1.0,
+      "threshold": 0.999,
+      "passed": true
+    },
+    "0_3_phase3_reference_min_cosine": 0.999660074710846,
+    "0_4_heldout_v2_check": {
+      "exists": false,
+      "passed": false,
+      "reason": "Thiếu tệp eval/test_queries_heldout_v2.json trên đĩa (hiện chỉ có phiếu lấy mẫu reports/phase5c/heldout_v2_worksheet.csv). Theo mục 0.4: KHÔNG chạy bất kỳ đánh giá chất lượng nào trên test_gallery; chỉ kiểm tra/chạy Phần A rồi báo và DỪNG."
+    },
+    "0_5_approvals": {
+      "t2i_official_winner": "cfg_v5_09",
+      "t2i_safe_config": "cfg_v5_01",
+      "t2i_predeclared_reference_configs": [
+        "cfg_v5_06",
+        "cfg_v5_08b"
+      ],
+      "t2i_approval_source": "reports/phase5c/step5c_selection_report.md",
+      "cir_provisional_winner": "cir_v1_05",
+      "cir_baseline_model_only": "cir_v1_01",
+      "cir_approval_status": "provisional_pending_part_a_clean_gpu_latency",
+      "cir_approval_source": "reports/phase5c/step5c_cir_report.md"
+    },
+    "0_6_locked_definitions": {
+      "spec_version": "prompt14_step0_6_v1",
+      "seed": 42,
+      "n_bootstrap": 1000,
+      "bootstrap_unit": "query (paired when comparing two configurations)",
+      "test_gallery_size": 1290,
+      "metrics": {
+        "recall_at_k_hit_rate": "1.0 if sum(rels[:k]) >= 1 else 0.0 (standard hit-rate@k)",
+        "true_recall_at_10": "sum(rels[:10]) / max(1, total_relevant_in_gallery) (supplementary)",
+        "mAP": "Average Precision over full ranked list of all 1,290 items in test_gallery, divided by total_relevant_in_gallery",
+        "secondary_gt_non_circular": "Within the subset S_primary of gallery items matching the query's primary catalog attributes (articleType, gender under hybrid policy, baseColour), preserve the system's ranking order and compute within-group AP (secondary_within_group_mAP) and within-group Hit@5 (secondary_within_group_R@5) against items in S_primary matching the query's non-indexed usage/season attribute."
+      },
+      "conclusion_rules": {
+        "latency_p95_lt_200ms": {
+          "Đạt chắc chắn": "max(run_p95_ms) < 200.0",
+          "Đạt theo trung vị nhưng có run vượt": "median(run_p95_ms) < 200.0 <= max(run_p95_ms)",
+          "Chưa đạt": "median(run_p95_ms) >= 200.0"
+        },
+        "quality_threshold": {
+          "Đạt chắc chắn": "ci_low >= threshold",
+          "Đạt điểm số nhưng CI chứa ngưỡng": "ci_low < threshold <= point_estimate (or point_estimate >= threshold >= ci_low)",
+          "Chưa đạt điểm số, CI chứa ngưỡng": "point_estimate < threshold <= ci_high",
+          "Chưa đạt": "ci_high < threshold"
+        }
+      }
+    }
+  },
+  "part_a_latency": {
+    "status": "BLOCKED_BY_BACKGROUND_GPU_PROCESSES",
+    "gpu_precheck": {
+      "telemetry": {
+        "timestamp": "2026/11/14 20:22:52.418",
+        "gpu_name": "NVIDIA GeForce RTX 2050",
+        "temperature_c": 70.0,
+        "utilization_pct": 84.0,
+        "power_draw_w": 17.43,
+        "clock_graphics_mhz": 1747.0,
+        "clock_mem_mhz": 6000.0,
+        "memory_used_mb": 2385.0,
+        "memory_total_mb": 4096.0
+      },
+      "processes": [
+        {
+          "pid": "1596",
+          "type": "C+G",
+          "process_name": "...rograms\\antigravity\\Antigravity.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "2912",
+          "type": "C+G",
+          "process_name": "...rograms\\antigravity\\Antigravity.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "3588",
+          "type": "C+G",
+          "process_name": "...4__8wekyb3d8bbwe\\EdgeGameAssist.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "4724",
+          "type": "C+G",
+          "process_name": "C:\\Windows\\System32\\ShellHost.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "12004",
+          "type": "C+G",
+          "process_name": "...cw5n1h2txyewy\\CrossDeviceResume.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "12964",
+          "type": "C+G",
+          "process_name": "...nt.CBS_cw5n1h2txyewy\\SearchHost.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "12976",
+          "type": "C+G",
+          "process_name": "...2txyewy\\StartMenuExperienceHost.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "13176",
+          "type": "C+G",
+          "process_name": "..._x64__cw5n1h2txyewy\\WidgetBoard.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "13356",
+          "type": "C+G",
+          "process_name": "...on\\157.0.4341.46\\msedgewebview2.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "16284",
+          "type": "C+G",
+          "process_name": "...er\\ldmutiplayer\\dnmultiplayerex.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "16984",
+          "type": "C",
+          "process_name": "...rograms\\Python\\Python312\\python.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "17140",
+          "type": "C+G",
+          "process_name": "...CBS_cw5n1h2txyewy\\TextInputHost.exe",
+          "gpu_memory": "N/A"
+        }
+      ],
+      "blocking_graphics_processes": [
+        {
+          "pid": "3588",
+          "type": "C+G",
+          "process_name": "...4__8wekyb3d8bbwe\\EdgeGameAssist.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "16284",
+          "type": "C+G",
+          "process_name": "...er\\ldmutiplayer\\dnmultiplayerex.exe",
+          "gpu_memory": "N/A"
+        }
+      ],
+      "has_blocking_graphics_processes": true
+    },
+    "policy_note": "Theo mệnh lệnh Phần A: 'Trước/sau: ghi tiến trình GPU (nvidia-smi). Còn tiến trình đồ họa nền thì DỪNG, báo người dùng, không tự kill.' Phát hiện tiến trình đồ họa nền đang chạy trên GPU nên DỪNG ngay, không tự kill và không đo độ trễ trên GPU đang bị chiếm tải."
+  },
+  "part_b_quality_test_gallery": {
+    "status": "NOT_RUN_PER_STEP_0_4",
+    "test_gallery_touched_for_quality_eval": false
+  }
+}
