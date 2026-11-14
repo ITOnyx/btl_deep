@@ -51,6 +51,10 @@
   - **Config A (`InternVL2-2B` 8-bit):** `>128 token = 0.0%`, `chữ Hán = 0.0%`, `tiếng Anh = 0.0%`, `khớp metadata = 0.0%` (lặp lại tiền tố prompt tiếng Việt, giống hệt hiện tượng đã ghi nhận ở Pha 2). Tốc độ thực đo: `8.58 s/ảnh`, Peak VRAM `2.80 GB`.
   - **Config B (`merge_v1` = InternVL2-2B + Vintern-1B-v3_5 + Metadata Anchor):** `>128 token = 0.0%`, `chữ Hán = 0.0%`, `tiếng Anh = 1.5%`, **`khớp metadata = 100.0%`** (`stop_gate_config_B_triggered = false`). Peak VRAM Vintern `1.03 GB`.
   - **Thời gian ước lượng toàn bộ 1.884 ảnh val:** ~`18.1 s/ảnh` ≈ **~9,5 giờ** cho `--mode full`. Đã dừng sau pilot 200 ảnh để người dùng đọc 20 caption mẫu và duyệt trước khi chạy `--mode full` + `build_val_text_index_v5.py`.
+- **Kết quả chạy toàn bộ 1.884 ảnh `val_gallery` & dựng `index/val_gallery_text_v5/` (Đã hoàn tất 100%):**
+  - **Config A (`InternVL2-2B` 8-bit):** `1.884 / 1.884` ảnh (`shard_val_core_0000..0003.parquet`).
+  - **Config B (`merge_v1`: InternVL2-2B + Vintern-1B-v3_5 + Metadata):** `1.884 / 1.884` ảnh (`shard_val_0000..0003.parquet`), `token_len max = 128` (`0` ảnh > 128 token), `0` lỗi (`reports/caption_errors.csv` không phát sinh).
+  - **`index/val_gallery_text_v5/`:** Dựng thành công trong `104.50 s`, `n_vectors = 1.884`, `embedding_dim = 1152`, `seed = 42`, tách riêng `internvl2_only_embeddings.npy` (SHA-256 `a1dd96ab...`), `internvl2_plus_aux_embeddings.npy` (SHA-256 `ea0df85b...`), `metadata_aux_embeddings.npy` (SHA-256 `faf6880e...`), kèm `manifest.json` (Hash Guard + ghi chú Luật D.5).
 
 ---
 
