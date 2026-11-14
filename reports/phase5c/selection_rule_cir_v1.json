@@ -1,0 +1,56 @@
+{
+  "version": "cir_v1",
+  "status": "LOCKED_BEFORE_EXPERIMENTS",
+  "seed": 42,
+  "invariant_note": "UpgradedAttentionCIRCombiner was trained with English modifiers (AGENTS.md F.2). Law 1 forbids retraining/modifying best_model.pt; all improvements are strictly at the inference layer.",
+  "tuning_dataset": {
+    "path": "eval/cir_eval_val.json",
+    "sha256": "c735c7742c5277cffc4113c68dd8ee59fd3475c742284c8fe9e098af0819062a",
+    "n_pairs": 120,
+    "n_colour_change": 80,
+    "n_gender_change": 40,
+    "diacritic_split_rule": "Deterministic 50/50 split on locked cir_eval_val.json: even index (idx % 2 == 0, n=60) uses original modifier_vi (dia_class='full'); odd index (idx % 2 == 1, n=60) uses strip_diacritics(modifier_vi) (dia_class='none'). Also report full 120-pair all_full and all_none diagnostics.",
+    "cluster_key_for_bootstrap": "target_attrs triplet (articleType__gender__baseColour)",
+    "bootstrap_resamples": 1000
+  },
+  "test_dataset_policy": {
+    "path": "eval/cir_eval_test.json",
+    "forbidden_in_prompt_13": true,
+    "note": "NEVER run eval/cir_eval_test.json or index/test_gallery/ in Prompt 13."
+  },
+  "candidates_description": {
+    "C1": "Translate Vietnamese modifier -> English modifier using fashion-domain attribute table generated from data/catalog/catalog_rebuild.parquet (baseColour, gender, articleType + modifier connectors); unknown tokens kept as-is.",
+    "C2": "Text-only fusion: score = beta * cos(combiner, img) + (1 - beta) * cos(text_query_attr, img), with pre-defined small grid beta in {0.85, 0.70}.",
+    "C3": "Attribute bonus (tier_soft, gamma=1.0) from parser_v2.1 on the modifier part only (colour/gender change), without gating uncertain slots.",
+    "C4": "(Optional) Light PRF Rocchio (k=3, rocchio_beta=0.15) on combiner vector; only kept if Delta mAP 95% cluster bootstrap CI excludes 0 and latency constraint 5(iv) passes."
+  },
+  "latency_protocol": {
+    "policy": "C.9",
+    "streams": ["cir_catalog", "cir_upload"],
+    "cold_gpu": true,
+    "interleaved": true,
+    "n_runs": 5,
+    "n_queries": 200,
+    "warmup_queries": 20,
+    "p95_sla_ms": 200.0,
+    "warn_if_upload_p99_exceeds_ms": 200.0
+  },
+  "selection_and_tie_breaking_rule": "Select config maximizing mAP on CIR-eval val (120 pairs, 50/50 full/none split) subject to p95 < 200 ms on both CIR catalog and CIR upload. C4 (PRF Rocchio) is only kept if its Delta mAP vs the corresponding non-C4 config has a 95% paired cluster bootstrap CI (1000 resamples) strictly above 0. Among configs whose mAP difference vs the top config has a 95% paired cluster bootstrap CI containing 0, choose the simpler config by simplicity_order.",
+  "simplicity_order_from_simplest_to_complex": [
+    "c4_rocchio=false < c4_rocchio=true",
+    "fewer_active_modules(C1, C2, C3)",
+    "beta=1.0 < beta=0.85 < beta=0.70",
+    "c1_vi_to_en=false < c1_vi_to_en=true",
+    "c3_mod_bonus=false < c3_mod_bonus=true"
+  ],
+  "config_grid": [
+    {"config_id": "cir_v1_01", "role": "baseline_combiner_vi", "c1_vi_to_en": false, "beta": 1.0, "c3_mod_bonus": false, "gamma": 0.0, "c4_rocchio": false, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cir_v1_02", "role": "c1_vi_to_en_only", "c1_vi_to_en": true, "beta": 1.0, "c3_mod_bonus": false, "gamma": 0.0, "c4_rocchio": false, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cir_v1_03", "role": "c2_text_fusion_b085", "c1_vi_to_en": false, "beta": 0.85, "c3_mod_bonus": false, "gamma": 0.0, "c4_rocchio": false, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cir_v1_04", "role": "c2_text_fusion_b070", "c1_vi_to_en": false, "beta": 0.70, "c3_mod_bonus": false, "gamma": 0.0, "c4_rocchio": false, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cir_v1_05", "role": "c3_mod_bonus_only", "c1_vi_to_en": false, "beta": 1.0, "c3_mod_bonus": true, "gamma": 1.0, "c4_rocchio": false, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cir_v1_06", "role": "c1_plus_c3", "c1_vi_to_en": true, "beta": 1.0, "c3_mod_bonus": true, "gamma": 1.0, "c4_rocchio": false, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cir_v1_07", "role": "c1_c2_b085_c3", "c1_vi_to_en": true, "beta": 0.85, "c3_mod_bonus": true, "gamma": 1.0, "c4_rocchio": false, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cir_v1_08", "role": "c1_c2_b085_c3_c4_rocchio", "c1_vi_to_en": true, "beta": 0.85, "c3_mod_bonus": true, "gamma": 1.0, "c4_rocchio": true, "rocchio_k": 3, "rocchio_beta": 0.15}
+  ]
+}
