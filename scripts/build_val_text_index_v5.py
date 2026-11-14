@@ -50,10 +50,10 @@ def main() -> int:
     captions_dir = PROJECT_ROOT / "data/catalog/captions"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    shard_files = sorted(captions_dir.glob("shard_val_*.parquet"))
+    shard_files = sorted(captions_dir.glob("shard_val_[0-9]*.parquet"))
     if not shard_files:
         raise FileNotFoundError(
-            "Không tìm thấy shard_val_*.parquet trong data/catalog/captions/. "
+            "Không tìm thấy shard_val_[0-9]*.parquet trong data/catalog/captions/. "
             "Hãy chạy scripts/caption_val_gallery.py --mode full trước."
         )
 
