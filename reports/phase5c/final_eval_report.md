@@ -1,134 +1,191 @@
-# BÁO CÁO ĐÁNH GIÁ CHÍNH THỨC TRÊN `index/test_gallery/` & ĐỘ TRỄ 4 LUỒNG (PROMPT 14 / 14b / 14c)
+# BÁO CÁO ĐÁNH GIÁ CHÍNH THỨC TRÊN `index/test_gallery/` & KIỂM TOÁN CAPTION TEST (PROMPT 14d)
 
-- **Trạng thái hiện tại:** `HALTED_PROMPT14C_STEP2_GPU_PROCESSES_STILL_ACTIVE`
-- **Bản lưu các lần dừng trước (giữ nguyên không xóa):**
-  - `HALTED_PREFLIGHT` (Prompt 14): `reports/phase5c/final_eval_report_halted_preflight.md` & `reports/phase5c/final_eval_results_halted_preflight.json`
-  - `HALTED_PROMPT14B_STEP1_AND_STEP2` (Prompt 14b): `reports/phase5c/final_eval_report_halted_prompt14b.md` & `reports/phase5c/final_eval_results_halted_prompt14b.json`
+- **Trạng thái hiện tại:** `HALTED_PROMPT14D_STEP2_GPU_PROCESSES_STILL_ACTIVE`
 - **Branch:** `phase7a`
-- **Commit khởi điểm Prompt 14c:** `1d30dd62111d49ad78e8e4cf3f44705abbf61462`
+- **Commit khởi điểm:** `f22b57033e083bbf900ca05c7464187a17436993`
 - **Seed cố định:** `42`
+- **Thời điểm tạo báo cáo:** `2026-11-14 22:12:18 +07:00`
+- **Các bản lưu dừng trước (giữ nguyên không xóa):**
+  - Prompt 14 (`HALTED_PREFLIGHT`): `reports/phase5c/final_eval_report_halted_preflight.md` & `reports/phase5c/final_eval_results_halted_preflight.json`
+  - Prompt 14b (`HALTED_PROMPT14B_STEP1_AND_STEP2`): `reports/phase5c/final_eval_report_halted_prompt14b.md` & `reports/phase5c/final_eval_results_halted_prompt14b.json`
+  - Prompt 14c (`HALTED_PROMPT14C_STEP2_GPU_PROCESSES_STILL_ACTIVE`): `reports/phase5c/final_eval_report_halted_prompt14c.md` & `reports/phase5c/final_eval_results_halted_prompt14c.json`
 
 ---
 
-## 1. Kết quả Bước 0 — Kiểm tra điều kiện & Khóa định nghĩa (`PASS` phần hạ tầng, thiếu `heldout_v2`)
+## 1. Kết quả Bước 1a — Kiểm Hash & Hash Guard Luật 6 (`PASS`, không dựng lại)
 
-### 1.1 Đối chiếu SHA-256 các tệp khóa (Mục 0.1 & Ràng buộc bất biến)
+### 1.1 Đối chiếu SHA-256 các tệp khóa đầu vào
 
-| Tệp khóa | SHA-256 thực tế | Khớp kỳ vọng |
-|---|---|---|
-| `data/checkpoints_siglip-vit/best_model.pt` | `e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d` | **PASS** |
-| `reports/phase5c/selection_rule_v5.json` | `e3d75ec5df7ab6de4cb9ad07e21b9c1a58c5c029c3a9b7749f28518c6c4f0c8c` | **PASS** |
-| `reports/phase5c/selection_rule_cir_v1.json` | `4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067` | **PASS** |
-| `eval/cir_eval_test.json` (chỉ kiểm hash, không mở) | `d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b` | **PASS** |
-| `eval/test_split.json` (`1,290` mục test) | `d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681` | **PASS** |
-| `data/catalog/catalog_rebuild.parquet` | `aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab` | **PASS** |
-| `src/eval/locked_final_definitions.py` | `d8d7ef1926a2b6f1db348a13d0c87af7bfb48a2ca06530a1c141c8e14da2aca7` | **PASS** |
-| `scripts/build_val_text_index_v5.py` (không sửa) | `da87e18c0027c769a072d99d59fe47e7c5e2fc9a71f1a4116c9280d232d2e867` | **PASS** |
-| `eval/test_queries_heldout_v2.json` | *(Chưa có tệp — chỉ chạy Bước 1, Bước 2, Phần A rồi dừng)* | **MISSING** |
+| Khóa định danh | Đường dẫn tệp | SHA-256 thực tế | Khớp kỳ vọng |
+|---|---|---|---|
+| `best_model_pt` | `data/checkpoints_siglip-vit/best_model.pt` | `e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d` | **PASS** |
+| `selection_rule_v5` | `reports/phase5c/selection_rule_v5.json` | `e3d75ec5df7ab6de4cb9ad07e21b9c1a58c5c029c3a9b7749f28518c6c4f0c8c` | **PASS** |
+| `selection_rule_cir_v1` | `reports/phase5c/selection_rule_cir_v1.json` | `4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067` | **PASS** |
+| `cir_eval_test` | `eval/cir_eval_test.json` | `d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b` | **PASS** |
+| `test_split` | `eval/test_split.json` | `d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681` | **PASS** |
+| `catalog_rebuild` | `data/catalog/catalog_rebuild.parquet` | `aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab` | **PASS** |
+| `locked_final_definitions_py` | `src/eval/locked_final_definitions.py` | `d8d7ef1926a2b6f1db348a13d0c87af7bfb48a2ca06530a1c141c8e14da2aca7` | **PASS** |
+| `build_val_text_index_v5_py` | `scripts/build_val_text_index_v5.py` | `da87e18c0027c769a072d99d59fe47e7c5e2fc9a71f1a4116c9280d232d2e867` | **PASS** |
+| `test_queries_heldout_v2` | `eval/test_queries_heldout_v2.json` | *(Chưa có tệp)* | **MISSING** |
 
-### 1.2 Kiểm định tiền xử lý Luật 4 trên `index/test_gallery/` (Mục 0.3)
-- Tái mã hóa ngẫu nhiên `200` ảnh (`seed = 42`) từ `index/test_gallery/` qua `SigLIPPreprocessor`:
-  - `min_cosine = 0.999978 >= 0.999` (**PASS**, khớp đối chứng Pha 3 `0.999660`).
+### 1.2 Kiểm tra `index/test_gallery_text_v5/` (Đã dựng ở Prompt 14c — chỉ đọc & kiểm Hash Guard)
 
----
+- Đường dẫn manifest: `index/test_gallery_text_v5/manifest.json`
+- Manifest SHA-256: `286fe59ed6c2348dd9815263085269fd688993c83e1ede91d9152344184a2477` (khớp tiền tố `286fe59e`: `True`)
+- Dựng lại hoặc chỉnh sửa trong Prompt 14d: `False`
+- Hash Guard `checkpoint_hash` khớp `config.yaml` & `index/test_gallery/manifest.json`: `True`
+- Hash Guard `catalog_hash` khớp `index/test_gallery/manifest.json`: `True`
+- Số vector: `1290` (kỳ vọng: `1290`, khớp: `True`)
+- Số ID trùng: `0` | Thứ tự `id_order` khớp `id_map.json`: `True` (`id_order_sha256`: `6ca5bbf0b268103da2b901538effc004057faa817e7473d96dd49395418ee282`)
 
-## 2. Kết quả Bước 1 (Prompt 14c — Phương án 1B): Dựng `index/test_gallery_text_v5/` (`HOÀN TẤT — PASS`)
-
-Theo quyết định của người dùng ở Prompt 14c (Phương án 1B):
-- Giữ nguyên không sửa `scripts/build_val_text_index_v5.py` (`SHA-256: da87e18c0027c769a072d99d59fe47e7c5e2fc9a71f1a4116c9280d232d2e867`).
-- Tạo script mới `scripts/build_test_text_index_v5.py` (có `argparse`) import trực tiếp `_encode_batch_fast`, `_sha256_file`, `_get_git_commit` từ `scripts.build_val_text_index_v5` và sử dụng cùng `SiglipProcessor(max_length=128, padding="max_length")` + tokenizer của `ECommerceSearchEngine`.
-
-### 2.1 Kiểm chứng bắt buộc trên `val`: `index/_verify_val_text_v5/` so với `index/val_gallery_text_v5/`
-- Quá trình kiểm chứng ban đầu phát hiện nếu dùng glob `shard_val_*.parquet` sẽ quét nhầm thêm `shard_val_core_0000..0003.parquet` (các shard chỉ có `caption_A`, làm `caption_B` bị ghi đè). Sau khi dùng đúng glob `shard_val_[0-9]*.parquet` như dòng 53 của `scripts/build_val_text_index_v5.py`, kết quả đối chiếu từng hàng (`1,884` hàng) giữa `index/_verify_val_text_v5/` và `index/val_gallery_text_v5/` khớp tuyệt đối tới từng byte:
-
-| Tệp `.npy` (`1,884 × 1,152`, `float32`) | `min_cosine` | `mean_cosine` | `max_abs_diff` | Số hàng `cos < 0.9999` | SHA-256 (`ref` == `cand`) | Kết luận |
-|---|---:|---:|---:|---:|---|---|
-| `internvl2_only_embeddings.npy` | **0.99999988** | **1.00000000** | `0.0` | `0` | `a1dd96ab2efa293e0748f02934148a547522e94c8124714e1b6f631a1e89c5a2` | **PASS (`≥ 0.9999`, exact byte match)** |
-| `internvl2_plus_aux_embeddings.npy` | **0.99999976** | **1.00000000** | `0.0` | `0` | `ea0df85b52dc69d655b1230c55642bfa475f462c5fff1f56c44b1e1481a50f63` | **PASS (`≥ 0.9999`, exact byte match)** |
-| `metadata_aux_embeddings.npy` | **0.99999982** | **1.00000000** | `0.0` | `0` | `faf6880e9d3bb7b01544c91b6888e8afc07ea770f964659bcc99c632ffe7b04b` | **PASS (`≥ 0.9999`, exact byte match)** |
-
-### 2.2 Kết quả dựng `index/test_gallery_text_v5/`, Hash Guard (Luật 6) & Sanity Check
-- Nguồn dữ liệu: `data/catalog/captions/shard_test_0000..0002.parquet` (`1,500` dòng tổng, khớp `1,290 / 1,290` mục của `index/test_gallery/id_map.json`):
-  - `shard_test_0000.parquet`: `9cf154b9c1f8f33adadb209fb234ac731a03b685c7988a42c8ffda295581d690`
-  - `shard_test_0001.parquet`: `32db89eebeb87982714add0af4be9126644a77e3f4502698da5044e03c10c03c`
-  - `shard_test_0002.parquet`: `e888366e043a5ba13d751669ddcdd032925eeb29073d7a0e08d92c8b4d9af7c2`
-- `index/test_gallery_text_v5/manifest.json` (`SHA-256: 286fe59ed6c2348dd9815263085269fd688993c83e1ede91d9152344184a2477`):
-  - `checkpoint_hash`: `e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d` (**PASS Hash Guard**)
-  - `catalog_hash`: `aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab` (**PASS Hash Guard**)
-  - `n_vectors`: `1290`, `0` ID trùng, thứ tự `id_order` khớp 100% với `index/test_gallery/id_map.json` (`id_order_sha256: 6ca5bbf0b268103da2b901538effc004057faa817e7473d96dd49395418ee282`).
-  - Provenance (Luật 5 & D.1): `caption_model = "OpenGVLab/InternVL2-2B + 5CD-AI/Vintern-1B-v3_5"`, `model_revision = "e4f6747bd20f139e637642c6a058c6bd00b36919 + b98f263eab246eb5269ade64edbdca8a887dc44d"`, `combination_method = "merge_v1"`, `generation_params = {"max_new_tokens": 96, "do_sample": false, "num_beams": 1, "quantization": "8bit"}`, `seed = 42`.
-
-| Tệp `.npy` trong `index/test_gallery_text_v5/` | Shape & Dtype | Số phần tử NaN/Inf | Chuẩn L2 (`min / mean / max`) | SHA-256 |
-|---|---|---:|---|---|
-| `internvl2_only_embeddings.npy` | `(1290, 1152)`, `float32` | `0` | `0.999605 / 1.000035 / 1.000364` | `7d4344b33194cc01b8a211b978e82357ef7b04ec65f3a435895e8b4efb58aaf3` |
-| `internvl2_plus_aux_embeddings.npy` | `(1290, 1152)`, `float32` | `0` | `0.999523 / 1.000003 / 1.000471` | `53c75ab8a110a0053fc5e1d74d8a0407c14aebe2f9744d4f65f104fb1084d450` |
-| `metadata_aux_embeddings.npy` | `(1290, 1152)`, `float32` | `0` | `0.999522 / 1.000008 / 1.000470` | `0339efc1e3799fe2d449b92c412f7a06742190b44f9d716bbf9b2f30c5eb101c` |
-
-### 2.3 So sánh phân phối `token_length` và tỉ lệ bị cắt ở `max_length = 128` giữa `val` (`max_new_tokens=48`) và `test` (`max_new_tokens=96`)
-
-Đo trực tiếp bằng tokenizer SigLIP (`truncation=False`) trên toàn bộ `1,884` mục `val_gallery` và `1,290` mục `test_gallery`:
-
-| Trường văn bản | Split (`gen_params`) | `N` | `min` | `p25` | `median` | `mean` | `p95` | `p99` | `max` | Số mục `> 128` (bị cắt bởi `SiglipProcessor`) | Số mục `= 128` (chạm trần ngân sách `merge_v1`) |
-|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| **`caption_A`** (`internvl2_only`) | `val` (`max_new_tokens=48`) | `1,884` | `49` | `68.0` | `68.0` | `67.91` | `68.0` | `68.0` | `68` | **`0` (`0.00%`)** | `0` (`0.00%`) |
-| **`caption_A`** (`internvl2_only`) | `test` (`max_new_tokens=96`) | `1,290` | `4` | `6.0` | `68.0` | `49.31` | `68.0` | `123.11` | `131` | **`2` (`0.155%`)** | `1` (`0.078%`) |
-| **`caption_B`** (`internvl2_plus_aux` = `merge_v1`) | `val` (`max_new_tokens=48`) | `1,884` | `97` | `127.0` | `128.0` | `127.39` | `128.0` | `128.0` | `128` | **`0` (`0.00%`)** | `1,055` (`56.00%`) |
-| **`caption_B`** (`internvl2_plus_aux` = `merge_v1`) | `test` (`max_new_tokens=96`) | `1,290` | `111` | `127.0` | `128.0` | `127.37` | `128.0` | `128.0` | `128` | **`0` (`0.00%`)** | `688` (`53.33%`) |
-| **`metadata_aux`** (`title + 3 slot`) | `val` (`id_map.json` có `*_vi`) | `1,884` | `9` | `19.0` | `22.0` | `22.36` | `30.0` | `33.0` | `36` | **`0` (`0.00%`)** | `0` (`0.00%`) |
-| **`metadata_aux`** (`title + 3 slot`) | `test` (`id_map.json` chỉ có tiếng Anh) | `1,290` | `5` | `5.0` | `7.0` | `7.45` | `13.0` | `13.0` | `15` | **`0` (`0.00%`)** | `0` (`0.00%`) |
-
-**Nhận xét kỹ thuật trung thực (Luật 5 & Luật 7):**
-1. **`caption_B` (`internvl2_plus_aux_embeddings.npy`, dùng cho cấu hình tham khảo `cfg_v5_08b`):** Cả `val` (`mean = 127.39`, `median = 128.0`) và `test` (`mean = 127.37`, `median = 128.0`) đều có **0 mục vượt quá 128 token (`0.00%` bị cắt mất hậu tố bởi `SiglipProcessor`)** vì hàm hợp nhất `merge_v1` đã chủ động giới hạn độ dài chuỗi hợp nhất ở đúng `<= 128` token theo Luật D.3 (đặt thuộc tính phân biệt `loại + giới + màu` ở đầu câu).
-2. **`caption_A` (`internvl2_only_embeddings.npy`):**
-   - Trên `test` (`max_new_tokens=96`), chỉ có `2 / 1,290` mục (`0.155%`) vượt quá `128` token (`max = 131` token).
-   - Tuy nhiên, trên `shard_test_0000..0002.parquet` (sinh ngày 12–13/11/2026 ở Pha 2 trước khi sửa bộ tách câu cho `shard_val`), có `393 / 1,290` mục (`30.47%`) bị bộ tách câu cắt ngắn `caption_A` ở dấu chấm sau số thứ tự (ví dụ `"1. Thô"`, dài `4–6` token, làm `p25 = 6.0` và `mean = 49.31` dù `median = 68.0`). Ở `caption_B` (`merge_v1`), phần mô tả Vintern + prefix thuộc tính bù đắp nên 100% mục `test` vẫn có độ dài `111–128` token.
-3. **`metadata_aux` (`metadata_aux_embeddings.npy`):**
-   - Trong `index/val_gallery/id_map.json`, mỗi mục lưu sẵn `articleType_vi`, `gender_vi`, `baseColour_vi` (tiếng Việt có dấu, khi qua SentencePiece của SigLIP tách thành trung vị `22` subword token).
-   - Trong `index/test_gallery/id_map.json` (tệp khóa từ Pha 4 theo Luật 3), mỗi mục chỉ lưu `articleType`, `gender`, `baseColour` bằng tiếng Anh (`"Shirts Shirts Men Navy Blue"`), nên hàm tạo `texts_meta` của `build_val_text_index_v5.py` rơi về nhánh fallback tiếng Anh (`m.get("articleType_vi") or m.get("articleType")`), có trung vị `7.0` token (`0%` bị cắt).
+| Khóa tệp `.npy` | Tên tệp | Shape | Dtype | Số NaN/Inf | L2 norm (`min / mean / max`) | SHA-256 thực tế | Khớp manifest |
+|---|---|---|---|---:|---|---|---|
+| `internvl2_only_embeddings` | `internvl2_only_embeddings.npy` | `(1290, 1152)` | `float32` | `0` | `0.999605 / 1.000035 / 1.000364` | `7d4344b33194cc01b8a211b978e82357ef7b04ec65f3a435895e8b4efb58aaf3` | `True` |
+| `internvl2_plus_aux_embeddings` | `internvl2_plus_aux_embeddings.npy` | `(1290, 1152)` | `float32` | `0` | `0.999523 / 1.000003 / 1.000471` | `53c75ab8a110a0053fc5e1d74d8a0407c14aebe2f9744d4f65f104fb1084d450` | `True` |
+| `metadata_aux_embeddings` | `metadata_aux_embeddings.npy` | `(1290, 1152)` | `float32` | `0` | `0.999522 / 1.000008 / 1.000470` | `0339efc1e3799fe2d449b92c412f7a06742190b44f9d716bbf9b2f30c5eb101c` | `True` |
 
 ---
 
-## 3. Kết quả Bước 2 (Prompt 14c): Kiểm tra lại môi trường GPU (`HALT — CÒN TIẾN TRÌNH GIẢ LẬP/GAME TRÊN GPU`)
+## 2. Kết quả Bước 1b — Kiểm toán Caption Test (Chỉ đọc, không dùng nhãn/truy vấn test, không chạy model)
 
-Thực hiện đúng Bước 2 của Prompt 14c lúc `2026-11-14 21:27:45` (khi agent **chưa nạp model**, PID của tiến trình Python kiểm tra là `PID 988`):
+### 2.1 Mục 1 — Chuỗi sinh thô (`raw_caption`) của `shard_test_0000..0002` còn được lưu không?
+- Có cột `raw_caption` trong `shard_test_0000..0002.parquet`: `False`
+- Số tệp `cache_core_test_*.json` / `cache_aux_test_*.json` còn trên đĩa: `0`
+- Số mục có `raw_caption` còn lưu trong `1,500` dòng `shard_test_0000..0002`: `0`
+- Số mục có `raw_caption` còn lưu trong `1,290` mục `index/test_gallery`: `0`
+- Số mục giao giữa `eval/cache_internvl2_pilot.json` (`200` ảnh pilot Pha 2) với `shard_test` (`1,500` mục) / `test_gallery` (`1,290` mục): `0` / `0`
+- **Nguyên nhân kỹ thuật:** Trong `src/caption/batch_runner.py`, dòng 135–136 và 165–170 chỉ ghi `cleaned_caption` vào cột `caption_A` và `caption_C` (cùng bản hợp nhất `merge_v1` vào `caption_B` / `caption_vi`), sau đó tại dòng 190–193 gọi `shard_cache_core_path.unlink()` và `shard_cache_aux_path.unlink()` xóa tệp cache JSON tạm ngay khi hoàn tất mỗi shard.
 
-### 3.1 Bảng tiến trình GPU từ `nvidia-smi` lúc `21:27:45`
+### 2.2 Mục 2 — So sánh mã làm sạch tiền tố / sinh caption giữa `shard_test` (12–13/11/2026) và `shard_val` (13–14/11/2026)
+- Tệp chứa hàm làm sạch tiền tố `clean_introductory_phrases()` và hợp nhất `merge_caption_v1()`: `src/caption/merger.py`
+- Commit cuối cùng của `src/caption/merger.py`: `dfc150ad90edc9d426892a4cbf32eb0221b24955` (`2026-11-12 09:21:45 +0700`)
+- `src/caption/merger.py` có thay đổi giữa `shard_test` và `shard_val` không: `False`
+- Tệp sinh caption thay đổi giữa `shard_test_0000` và `shard_test_0001..0002` / `shard_val`: `src/caption/generator.py`
+  - Trước `shard_test_0001`: `98aed711125e57d75c5cedb796ca9e4b4d0adcb1 (2026-11-12 09:34:50 +0700, max_new_tokens=96, max_num=2, use_thumbnail=True)`
+  - Từ `shard_test_0001` và toàn bộ `shard_val`: `2e057d6bf870b4281fe556e03f2e0c2bf9d5a076 (2026-11-12 17:43:50 +0700, max_new_tokens=48, max_num=1, use_thumbnail=False)`
+- Số mục `val_gallery` (`1,884` mục) có `caption_A` là chuỗi echo đề bài dài đúng `68` token (`"Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng"`): `1859`
+- Số mục `test_gallery` (`1,290` mục) có `caption_A` là chuỗi echo đề bài dài đúng `68` token: `841`
 
-| GPU | PID | Loại | Tên tiến trình (`nvidia-smi` / `Win32_Process`) | Thời điểm khởi tạo (`CreationDate`) | Phân loại theo Bước 2 |
-|---:|---:|---|---|---|---|
-| 0 | `1596` | `C+G` | `...\Programs\antigravity\Antigravity.exe` | Tiến trình IDE | Cho phép |
-| 0 | `2912` | `C+G` | `...\Programs\antigravity\Antigravity.exe` | Tiến trình IDE | Cho phép |
-| 0 | **`3588`** | **`C+G`** | **`C:\Program Files\WindowsApps\Microsoft.Edge.GameAssist_...\EdgeGameAssist.exe`** | **`11/14/2026 6:37:24 PM` (`ParentPID: 1540`)** | **CẤM (Tiến trình Game Assist)** |
-| 0 | `4724` | `C+G` | `C:\Windows\System32\ShellHost.exe` | Tiến trình hệ thống Windows | Cho phép |
-| 0 | `12004` | `C+G` | `...\CrossDeviceResume.exe` | Tiến trình hệ thống Windows | Cho phép |
-| 0 | `12964` | `C+G` | `...\SearchHost.exe` | Tiến trình hệ thống Windows | Cho phép |
-| 0 | `12976` | `C+G` | `...\StartMenuExperienceHost.exe` | Tiến trình hệ thống Windows | Cho phép |
-| 0 | `13176` | `C+G` | `...\WidgetBoard.exe` | Tiến trình hệ thống Windows | Cho phép |
-| 0 | `13356` | `C+G` | `...\msedgewebview2.exe` | WebView2 nền | Nên tắt cùng `EdgeGameAssist` |
-| 0 | **`16284`** | **`C+G`** | **`D:\LDPlayer\ldmutiplayer\dnmultiplayerex.exe`** | **`11/14/2026 3:22:21 PM` (`ParentPID: 4840`)** | **CẤM (Trình giả lập LDMultiPlayer)** |
-| 0 | `17140` | `C+G` | `...\TextInputHost.exe` | Tiến trình hệ thống Windows | Cho phép |
-| 0 | `21960` | `C+G` | `...\PhoneExperienceHost.exe` | Tiến trình hệ thống Windows | Cho phép |
+| Tên shard | Thời điểm ghi (`mtime`) | Tổng dòng | Số dòng thuộc `test_gallery` | Số mục `test_gallery` có `caption_A <= 6` token | Số mục `test_gallery` có `caption_A` bắt đầu bằng `1.` | Số mục `test_gallery` có `caption_A == 68` token | Số mục `test_gallery` có `caption_B` chứa `1. Th` |
+|---|---|---:|---:|---:|---:|---:|---:|
+| `shard_test_0000.parquet` | `2026-11-12 18:57:06` | `500` | `442` | `411` | `413` | `0` | `0` |
+| `shard_test_0001.parquet` | `2026-11-12 23:31:43` | `500` | `419` | `0` | `0` | `418` | `0` |
+| `shard_test_0002.parquet` | `2026-11-13 01:52:11` | `500` | `429` | `0` | `0` | `425` | `0` |
 
-### 3.2 Mẫu đo `GPU-Util` nghỉ 30 giây (`21:27:45` – `21:28:18`, 30 mẫu cách nhau 1 giây, agent không nạp model)
-- **GPU-Util (%):** `median = 31.0%`, `mean = 31.97%`, `min = 12.0%`, `max = 59.0%`.
-- **Nhiệt độ & Trạng thái GPU:** `Temp = 71.0–72.0°C` (`median = 71.0°C`), P-state `P5`, công suất `3.67–4.32 W / 35 W`, VRAM sử dụng `332 MiB / 4096 MiB`.
-- Chi tiết toàn bộ 30 mẫu được lưu tại `reports/phase5c/step2_gpu_env_check_prompt14c.json`.
+- **Giải thích nguyên nhân gốc rễ (đính chính nhận định ở báo cáo 14c):** Hàm clean_introductory_phrases() và merge_caption_v1() trong src/caption/merger.py KHÔNG thay đổi giữa shard_test và shard_val (cùng khóa từ commit dfc150a lúc 09:21:45 ngày 12/11/2026). Sự khác biệt nằm ở commit 2e057d6 (17:43:50 ngày 12/11/2026) trong src/caption/generator.py khi giảm max_new_tokens từ 96 xuống 48 (và max_num từ 2 xuống 1): (1) Ở shard_test_0000 (chạy Stage 1 trước 17:43:50 với max_new_tokens=96), InternVL2-2B lặp lại (echo) đề bài tới cụm 'YÊU CẦU BẮT BUỘC:\n\n1. Thô' (có dấu hai chấm ':'), nên regex số 3 r'^(mô tả ngắn gọn...|yêu cầu bắt buộc)[\s\S]*?:\s*' trong clean_introductory_phrases() cắt toàn bộ phần trước dấu ':', để lại '1. Thô' (393/1,290 mục <= 6 token; 413/1,290 mục bắt đầu bằng '1.'). (2) Ở shard_test_0001, shard_test_0002 và toàn bộ shard_val_0000..0003 (chạy với max_new_tokens=48), chuỗi echo đề bài dừng ở 'Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng' (68 token SigLIP, chưa tới dấu ':'), nên regex số 3 không khớp và giữ nguyên 68 token echo đề bài (841/1,290 mục test và 1,859/1,884 mục val). (3) Với caption_B (merge_v1), cả ở val lẫn test, phần thân lấy từ caption_C (Vintern-1B-v3_5) đứng trước và giới hạn ở <= 128 token nên 0/1,290 mục test chứa '1. Th' trong caption_B.
 
-### 3.3 Nguyên nhân vì sao `dnmultiplayerex.exe` và `EdgeGameAssist.exe` vẫn còn sau khi đóng cửa sổ & Cách tắt dứt điểm
-1. **`dnmultiplayerex.exe` (`PID 16284`, `D:\LDPlayer\ldmutiplayer\dnmultiplayerex.exe`):** Khởi tạo từ `15:22:21` chiều nay. Khi bấm nút `[X]` trên cửa sổ LDMultiPlayer, ứng dụng mặc định thu nhỏ xuống **khay hệ thống (System Tray)** ở góc phải dưới thanh Taskbar (hoặc chạy với quyền Administrator) nên tiến trình `PID 16284` không thoát.
-2. **`EdgeGameAssist.exe` (`PID 3588`):** Là dịch vụ overlay Game Bar của Microsoft Edge (`ParentPID: 1540` — `svchost.exe`), tự giữ tiến trình nền ngay cả khi đã đóng cửa sổ.
-3. **Tuân thủ nghiêm ngặt quy tắc Bước 2 của Prompt 14c:**
-   > *"Nếu còn `dnmultiplayerex.exe`, `EdgeGameAssist.exe`, `RobloxPlayerBeta.exe` hoặc tiến trình game/giả lập/đồ họa nặng khác: DỪNG, báo, KHÔNG tự kill."*
-   Do đó, agent **dừng ngay trước Phần A** và không tự gọi `taskkill`.
+### 2.3 Mục 3 — Kết quả đếm khôi phục trên các mục bị cắt cụt (không ghi đè shard, không ghi index)
+- Tổng số mục trong `test_gallery` (`1,290` mục) có `caption_A` bị cắt ở đầu mục `"1."`: `413` mục (toàn bộ nằm ở `shard_test_0000.parquet`), gồm: `"1. Thô"` (`405` mục), `"1. **Th"` (`6` mục), `"1. Thông"` (`2` mục); tổng số mục `<= 6` token SigLIP theo `AutoTokenizer` là `411` mục.
+- Số mục khôi phục được từ dữ liệu lưu trên đĩa mà không chạy lại model: `0`
+- Số mục thay đổi khi áp lại `clean_introductory_phrases()` hiện tại lên `caption_A` đã lưu: `0`
+- Độ dài token SigLIP của `caption_A` sau khi áp lại (`min / median / mean`): `4 / 68.0 / 49.31`
+- Đối chứng tham khảo trên `eval/cache_internvl2_pilot.json` (`200` ảnh pilot Pha 2 có lưu `raw_caption` khi `max_new_tokens=96`): có `185` mục mà sau khi qua `clean_introductory_phrases()` trở thành `"1. Thô"`; toàn bộ `raw_caption` gốc của các mục đó đều là chuỗi echo đề bài dài `120` token SigLIP (`"Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng tiếng Việt (khoảng 25-45 từ). YÊU CẦU BẮT BUỘC:\n\n1. Thô"`).
 
-**Hướng dẫn tắt dứt điểm 2 tiến trình này (người dùng chỉ cần chạy 1 lệnh trong PowerShell quyền Administrator):**
+### 2.4 Mục 4 — Danh sách `cfg_v5_*` dùng / không dùng index caption (`text_gallery != none`)
+- Tổng số cấu hình trong `selection_rule_v5.json`: `12`
+- Xác nhận `cfg_v5_09` (Official Winner) phụ thuộc `index/test_gallery_text_v5/`: `False`
+- Xác nhận `cfg_v5_01` (Safe Config) phụ thuộc `index/test_gallery_text_v5/`: `False`
+- Xác nhận `cfg_v5_06` (Reference Config) phụ thuộc `index/test_gallery_text_v5/`: `False`
+- Xác nhận `model_only` phụ thuộc `index/test_gallery_text_v5/`: `False`
+
+| `config_id` | Vai trò (`role`) | `gamma` | `i3_mode` | `conf_gating` | `fuzzy_typo` | `text_gallery` | `text_alpha` | Phụ thuộc `test_gallery_text_v5` | Tệp `.npy` sử dụng |
+|---|---|---:|---|---|---|---|---:|---|---|
+| `cfg_v5_01` | `v4_winner_baseline` | `1.5` | `none` | `False` | `False` | `none` | `1.0` | `False` | `none` |
+| `cfg_v5_02` | `i3_direct_equivalence_latency_only` | `1.5` | `direct` | `False` | `False` | `none` | `1.0` | `False` | `none` |
+| `cfg_v5_03` | `i3_cached_equivalence_latency_only` | `1.5` | `cached` | `False` | `False` | `none` | `1.0` | `False` | `none` |
+| `cfg_v5_04` | `tier_soft_plus_i3_cached` | `1.5` | `cached` | `False` | `False` | `none` | `1.0` | `False` | `none` |
+| `cfg_v5_05` | `ablation_I2_on_04` | `1.5` | `cached` | `True` | `False` | `none` | `1.0` | `False` | `none` |
+| `cfg_v5_06` | `ablation_I7_on_04` | `1.5` | `cached` | `False` | `True` | `none` | `1.0` | `False` | `none` |
+| `cfg_v5_07` | `combo_I2_I7_on_04` | `1.5` | `cached` | `True` | `True` | `none` | `1.0` | `False` | `none` |
+| `cfg_v5_08a` | `ablation_I5_internvl2_only_on_04` | `1.5` | `cached` | `False` | `False` | `internvl2_only` | `0.85` | `True` | `internvl2_only_embeddings.npy (caption_A)` |
+| `cfg_v5_08b` | `ablation_I5_internvl2_plus_aux_on_04` | `1.5` | `cached` | `False` | `False` | `internvl2_plus_aux` | `0.85` | `True` | `internvl2_plus_aux_embeddings.npy (caption_B = merge_v1)` |
+| `cfg_v5_09` | `gamma_sweep_tier_soft_1.0` | `1.0` | `cached` | `False` | `False` | `none` | `1.0` | `False` | `none` |
+| `cfg_v5_10` | `gamma_sweep_tier_soft_2.0` | `2.0` | `cached` | `False` | `False` | `none` | `1.0` | `False` | `none` |
+| `cfg_v5_11` | `gamma_sweep_tier_soft_3.0` | `3.0` | `cached` | `False` | `False` | `none` | `1.0` | `False` | `none` |
+
+### 2.5 Mục 5 — Tác động của việc `id_map.json` của `test` thiếu `*_vi` lên `metadata_aux` & Nguồn tên tiếng Việt khác
+- Số cấu hình trong `v5` hoặc `cir_v1` sử dụng `metadata_aux_embeddings.npy`: `0`
+- Tác động thực tế: Không ảnh hưởng (0 cấu hình trong selection_rule_v5.json và selection_rule_cir_v1.json sử dụng metadata_aux_embeddings.npy; selection_rule_v5.json dòng 40 khóa forbid_title_vi=true).
+
+| Cột tiếng Việt | Số mục có giá trị trong `index/test_gallery/id_map.json` (`/ 1290`) | Số mục có giá trị trong `data/catalog/catalog_rebuild.parquet` (`/ 1290`) | Số mục có giá trị trong `shard_test_0000..0002.parquet` (`/ 1290`) |
+|---|---:|---:|---:|
+| `title_vi` | `0` | `1290` | `1290` |
+| `articleType_vi` | `0` | `1290` | `1290` |
+| `gender_vi` | `0` | `1290` | `1290` |
+| `baseColour_vi` | `0` | `1290` | `1290` |
+
+### 2.6 Mục 6 — Những điều "không xác minh được" (Luật 7)
+1. Không xác minh được nội dung từng ký tự của raw_caption (trước bước clean_introductory_phrases) trên 1,500 mục của shard_test_0000..0002.parquet (1,290 mục test_gallery), vì src/caption/batch_runner.py không lưu cột raw_caption vào tệp .parquet và đã xóa (unlink) tệp cache_core_test_0000..0002.json ngay sau khi hoàn tất mỗi shard vào ngày 12–13/11/2026.
+2. Không xác minh được nếu chạy lại InternVL2-2B với prompt khác hoặc giải pháp chống lặp đề bài trên 1,290 ảnh test_gallery thì caption_A (internvl2_only) sẽ thay đổi điểm số của cfg_v5_08a bao nhiêu nếu không thực sự chạy lại model VLM.
+
+---
+
+## 3. Kết quả Bước 2 — Kiểm tra GPU & Mẫu nghỉ 30 giây (`HALT — CÒN TIẾN TRÌNH CẤM TRÊN GPU`)
+
+- Thời điểm kiểm tra: `2026-11-14 22:06:14`
+- PID tiến trình Python của agent (chỉ thu thập `nvidia-smi`, không nạp model): `15912`
+- Số tiến trình thuộc danh sách cấm đang giữ context trên GPU 0: `2`
+
+### 3.1 Danh sách toàn bộ tiến trình trên GPU 0 từ `nvidia-smi`
+
+| PID | Loại | Tên tiến trình | Đường dẫn (`Win32_Process` / `nvidia-smi`) | `ParentPID` | Bộ nhớ GPU | Phân loại theo Bước 2 |
+|---:|---|---|---|---:|---|---|
+| `1560` | `C+G` | `ShellHost.exe` | `C:\Windows\System32\ShellHost.exe` | `10500` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+| `1596` | `C+G` | `Antigravity.exe` | `C:\Users\nguye\AppData\Local\Programs\antigravity\Antigravity.exe` | `12056` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+| `2912` | `C+G` | `Antigravity.exe` | `C:\Users\nguye\AppData\Local\Programs\antigravity\Antigravity.exe` | `12056` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+| `3588` | `C+G` | `EdgeGameAssist.exe` | `C:\Program Files\WindowsApps\Microsoft.Edge.GameAssist_1.0.4019.0_x64__8wekyb3d8bbwe\EdgeGameAssist.exe` | `1540` | `N/A` | `FORBIDDEN_GAME_OR_EMULATOR` |
+| `12004` | `C+G` | `CrossDeviceResume.exe` | `C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe` | `10500` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+| `12964` | `C+G` | `SearchHost.exe` | `C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe` | `1540` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+| `12976` | `C+G` | `StartMenuExperienceHost.exe` | `C:\WINDOWS\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe` | `1540` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+| `13176` | `C+G` | `WidgetBoard.exe` | `C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_526.21100.40.0_x64__cw5n1h2txyewy\WidgetBoard.exe` | `1540` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+| `13356` | `C+G` | `msedgewebview2.exe` | `C:\Program Files (x86)\Microsoft\EdgeWebView\Application\157.0.4341.46\msedgewebview2.exe` | `13784` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+| `16284` | `C+G` | `dnmultiplayerex.exe` | `D:\LDPlayer\ldmutiplayer\dnmultiplayerex.exe` | `4840` | `N/A` | `FORBIDDEN_GAME_OR_EMULATOR` |
+| `17140` | `C+G` | `TextInputHost.exe` | `C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe` | `1540` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+| `22288` | `C+G` | `PhoneExperienceHost.exe` | `...ekyb3d8bbwe\PhoneExperienceHost.exe` | `N/A` | `N/A` | `ALLOWED_WINDOWS_OR_IDE` |
+
+### 3.2 Thống kê 30 mẫu `GPU-Util` và cảm biến GPU khi nghỉ (`1 giây × 30 giây`, agent không chạy gì)
+
+- Số mẫu: `30` (khoảng cách `1.0` giây)
+- Phân bố P-state trong 30 mẫu: `{"P5": 26, "P8": 4}`
+
+| Chỉ số cảm biến (`nvidia-smi`) | `median` | `mean` | `min` | `max` |
+|---|---:|---:|---:|---:|
+| `gpu_util_pct` (%) | `29.5` | `26.23` | `0.0` | `60.0` |
+| `mem_util_pct` (%) | `2.0` | `1.73` | `0.0` | `4.0` |
+| `temp_c` (°C) | `59.0` | `58.97` | `58.0` | `59.0` |
+| `power_w` (W) | `4.11` | `4.06` | `3.47` | `4.4` |
+| `gr_clock_mhz` (MHz) | `487.0` | `508.03` | `345.0` | `615.0` |
+| `mem_clock_mhz` (MHz) | `810.0` | `756.0` | `405.0` | `810.0` |
+
+### 3.3 Lý do dừng tại Bước 2 & Hướng dẫn tắt chỉ các tiến trình thuộc danh sách cấm
+- Theo đúng quy tắc Bước 2 của Prompt 14d:
+  > *"Còn `dnmultiplayerex.exe`, `EdgeGameAssist.exe`, `RobloxPlayerBeta.exe` hoặc tiến trình game/giả lập/đồ họa nặng khác: DỪNG, báo, KHÔNG tự kill. Khi hướng dẫn tắt, chỉ nêu các tiến trình thuộc danh sách cấm; không đề xuất kill `msedgewebview2.exe` hay tiến trình hệ thống/IDE."*
+- Hiện tại trên GPU 0 vẫn còn đúng 2 tiến trình thuộc danh sách cấm:
+  - `EdgeGameAssist.exe` (PID `3588`, đường dẫn `C:\Program Files\WindowsApps\Microsoft.Edge.GameAssist_1.0.4019.0_x64__8wekyb3d8bbwe\EdgeGameAssist.exe`)
+  - `dnmultiplayerex.exe` (PID `16284`, đường dẫn `D:\LDPlayer\ldmutiplayer\dnmultiplayerex.exe`)
+- Để tắt dứt điểm **chỉ 2 tiến trình thuộc danh sách cấm này** (không chạm vào các tiến trình hệ thống Windows hay IDE), vui lòng mở PowerShell (Run as Administrator) và chạy:
 ```powershell
-Stop-Process -Id 16284, 3588, 13356 -Force
+Stop-Process -Id 3588, 16284 -Force
 ```
-*(Hoặc mở **Task Manager** $\to$ tab **Details (Chi tiết)** $\to$ tìm `dnmultiplayerex.exe` (`PID 16284`) và `EdgeGameAssist.exe` (`PID 3588`) $\to$ chuột phải chọn **End process tree / Kết thúc cây tiến trình**, sau đó kiểm tra lại bằng `nvidia-smi` để chắc chắn hai PID này đã biến mất).*
+sau đó kiểm tra lại bằng `nvidia-smi` để xác nhận hai PID trên không còn trong bảng `Processes`.
 
 ---
 
-## 4. Kiểm thử tự động (`pytest`)
-- Chạy `pytest tests/test_build_test_text_index_v5.py -q`: **`3 passed`**.
-- Toàn bộ bộ kiểm thử hiện tại sẽ được chạy và ghi nhận trước khi commit.
+## 4. Trạng thái Phần A (Đo độ trễ) & Chốt CIR
+- **Phần A (Độ trễ 4 luồng):** `NOT_RUN_HALTED_AT_STEP_2_FORBIDDEN_GPU_PROCESSES` — Chưa chạy do Bước 2 dừng bởi tiến trình cấm trên GPU.
+- **Chốt CIR (`selection_rule_cir_v1.json`):** `PENDING_PART_A_CLEAN_GPU_LATENCY` — Giữ nguyên trạng thái tạm thời (`cir_v1_05` chờ số đo độ trễ GPU sạch của Phần A).
+- **Phần B & C (Chất lượng trên `test_gallery`):** `NOT_RUN_MISSING_HELDOUT_V2_AND_HALTED_AT_STEP_2` — Không chạy (chưa có `eval/test_queries_heldout_v2.json`, không mở `eval/cir_eval_test.json`).
+
+---
+
+## 5. Kết quả đối chiếu tự động `.md` ↔ `.json` (Quy tắc số liệu mới Prompt 14d)
+- Phương thức: Toàn bộ bảng và con số trong `reports/phase5c/final_eval_report.md` được sinh tự động bằng hàm `render_markdown_from_json()` trong `scripts/run_prompt14d_audit_and_report.py` trực tiếp từ `reports/phase5c/final_eval_results.json`.
+- Tổng số điểm dữ liệu (số học & mã băm SHA-256) được kiểm tra đối chiếu tự động: `56`
+- Số điểm khớp tuyệt đối `.md == .json`: `56`
+- Số điểm lệch: `0`
+- Kết luận đối chiếu: **`PASS_EXACT_MATCH`**
+
+---
+
+## 6. Kiểm thử tự động (`pytest`) & Tệp thay đổi
+- Kết quả chạy `pytest`: `70 passed, 2 warnings in 89.38s` (`passed = 70`, `failed = 0`).
