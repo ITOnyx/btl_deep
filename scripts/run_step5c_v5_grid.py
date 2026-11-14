@@ -31,6 +31,7 @@ from scripts.run_step3_grid import (
     cluster_map_from_per_query,
     gpu_telemetry,
     paired_cluster_bootstrap_diff,
+    paired_score_bootstrap_ci,
 )
 from src.eval.canonical_eval import evaluate_t2i_canonical
 from src.eval.metrics import compute_hubness_stats
@@ -87,10 +88,28 @@ def measure_c9_interleaved_latency(
     embs_b: np.ndarray,
     n_runs: int = 5,
     n_warmup: int = 20,
-    cooldown_sec: float = 3.0,
+    cooldown_sec: float = 1.0,
 ) -> Dict[str, Dict[str, Any]]:
     """Protocol C.9: GPU nguội, xen kẽ giữa các cấu hình, báo trung vị + IQR của p95."""
     gal_vecs = engine.embeddings
+
+    def _profile_key(cfg: Dict[str, Any]) -> Tuple[Any, ...]:
+        return (
+            cfg.get("i3_mode", "none"),
+            bool(cfg.get("fuzzy_typo", False)),
+            cfg.get("text_gallery", "none"),
+        )
+
+    rep_configs: List[Dict[str, Any]] = []
+    seen_profiles: Dict[Tuple[Any, ...], str] = {}
+    cid_to_rep: Dict[str, str] = {}
+    for cfg in configs:
+        pk = _profile_key(cfg)
+        cid = cfg["config_id"]
+        if pk not in seen_profiles:
+            seen_profiles[pk] = cid
+            rep_configs.append(cfg)
+        cid_to_rep[cid] = seen_profiles[pk]
 
     def _run_one(cfg: Dict[str, Any], q: str) -> None:
         qt = restore_diacritics_for_query(q)
@@ -114,35 +133,42 @@ def measure_c9_interleaved_latency(
             sims = t_alpha * sims + (1.0 - t_alpha) * (embs_b @ qv[0]).astype(np.float64)
         _ = np.argsort(-sims, kind="mergesort")[:10]
 
-    per_cfg_p95_runs: Dict[str, List[float]] = {c["config_id"]: [] for c in configs}
-    per_cfg_all_ms: Dict[str, List[float]] = {c["config_id"]: [] for c in configs}
-    tele_log: Dict[str, List[Dict[str, Any]]] = {c["config_id"]: [] for c in configs}
+    per_cfg_p95_runs: Dict[str, List[float]] = {c["config_id"]: [] for c in rep_configs}
+    per_cfg_all_ms: Dict[str, List[float]] = {c["config_id"]: [] for c in rep_configs}
+    tele_log: Dict[str, List[Dict[str, Any]]] = {c["config_id"]: [] for c in rep_configs}
 
     for r_idx in range(n_runs):
-        order = list(configs) if r_idx % 2 == 0 else list(reversed(configs))
-        for cfg in order:
-            cid = cfg["config_id"]
-            time.sleep(cooldown_sec)
-            tele_before = gpu_telemetry()
-            for q in queries_200[:n_warmup]:
+        print(f"[C.9 Latency] Run {r_idx + 1}/{n_runs} (per-query interleaved across {len(rep_configs)} profiles)...", flush=True)
+        time.sleep(cooldown_sec)
+        tele_before = gpu_telemetry()
+        for q in queries_200[:n_warmup]:
+            for cfg in rep_configs:
                 _run_one(cfg, q)
-            run_ms: List[float] = []
-            for q in queries_200:
+        run_ms_by_cid: Dict[str, List[float]] = {c["config_id"]: [] for c in rep_configs}
+        for q_idx, q in enumerate(queries_200):
+            order = list(rep_configs) if (r_idx + q_idx) % 2 == 0 else list(reversed(rep_configs))
+            for cfg in order:
+                cid = cfg["config_id"]
                 t0 = time.perf_counter()
                 _run_one(cfg, q)
-                run_ms.append((time.perf_counter() - t0) * 1000.0)
-            tele_after = gpu_telemetry()
-            per_cfg_p95_runs[cid].append(float(np.percentile(run_ms, 95)))
-            per_cfg_all_ms[cid].extend(run_ms)
+                run_ms_by_cid[cid].append((time.perf_counter() - t0) * 1000.0)
+        tele_after = gpu_telemetry()
+        for cfg in rep_configs:
+            cid = cfg["config_id"]
+            rms = run_ms_by_cid[cid]
+            per_cfg_p95_runs[cid].append(float(np.percentile(rms, 95)))
+            per_cfg_all_ms[cid].extend(rms)
             tele_log[cid].append({"before": tele_before, "after": tele_after})
 
     out: Dict[str, Dict[str, Any]] = {}
     for cfg in configs:
         cid = cfg["config_id"]
-        p95s = per_cfg_p95_runs[cid]
-        arr = np.array(per_cfg_all_ms[cid], dtype=np.float64)
+        rcid = cid_to_rep[cid]
+        p95s = per_cfg_p95_runs[rcid]
+        arr = np.array(per_cfg_all_ms[rcid], dtype=np.float64)
         q25, q75 = np.percentile(p95s, [25, 75])
         out[cid] = {
+            "profile_rep_config_id": rcid,
             "n_runs": n_runs,
             "n_queries_per_run": len(queries_200),
             "p95_runs_ms": [round(x, 3) for x in p95s],
@@ -150,7 +176,7 @@ def measure_c9_interleaved_latency(
             "p95_iqr_ms": round(float(q75 - q25), 3),
             "p50_ms": round(float(np.percentile(arr, 50)), 3),
             "p99_ms": round(float(np.percentile(arr, 99)), 3),
-            "telemetry": tele_log[cid],
+            "telemetry": tele_log[rcid],
         }
     return out
 
@@ -234,6 +260,7 @@ def main() -> int:
     cache: Dict[str, Dict[str, Any]] = {}
     fallback_stats: Dict[str, Any] = {}
     for dname, ds in datasets.items():
+        print(f"[Pre-encode] Dataset {dname} ({len(ds)} queries)...", flush=True)
         raw_texts = [q["query"] for q in ds]
         rw_texts = [restore_diacritics_for_query(t) for t in raw_texts]
         vecs_rw = np.vstack([eng.encode_text_query(t) for t in rw_texts])
@@ -323,35 +350,55 @@ def main() -> int:
             extra_score_weight=extra_w,
         )
 
+    def _unpack_eval(ds: List[Dict[str, Any]], res: Dict[str, Any]) -> Dict[str, Any]:
+        hyb = res["policies"]["hybrid"]
+        pqv = hyb["per_query_valid"]
+        if ds and "spec_cluster_id" in ds[0]:
+            macro_c, cl_map = cluster_map_from_per_query(ds, res)
+        else:
+            macro_c, cl_map = hyb["summary"]["mAP"], {}
+        ap_by_idx = dict(zip(pqv["indices"], pqv["ap"]))
+        return {
+            "summary": hyb["summary"],
+            "macro_cluster_mAP": macro_c,
+            "cluster_map": cl_map,
+            "valid_indices": pqv["indices"],
+            "ap_list": pqv["ap"],
+            "ap_by_idx": ap_by_idx,
+            "ranked_indices": res["ranked_indices"],
+        }
+
     # Model-only baseline
-    model_a = _eval_cfg(grid[0], "A", mode="model_only")
-    model_bc = _eval_cfg(grid[0], "B_clean", mode="model_only")
-    model_c20 = _eval_cfg(grid[0], "C_20", mode="model_only")
-    model_bh = _eval_cfg(grid[0], "B_human", mode="model_only")
+    model_a = _unpack_eval(val_a, _eval_cfg(grid[0], "A", mode="model_only"))
+    model_bc = _unpack_eval(val_b_clean, _eval_cfg(grid[0], "B_clean", mode="model_only"))
+    model_c20 = _unpack_eval(val_c_20, _eval_cfg(grid[0], "C_20", mode="model_only"))
+    model_bh = _unpack_eval(b_human_queries, _eval_cfg(grid[0], "B_human", mode="model_only"))
 
     results_by_cfg: Dict[str, Any] = {}
     for cfg in grid:
         cid = cfg["config_id"]
-        res_a = _eval_cfg(cfg, "A")
-        res_bc = _eval_cfg(cfg, "B_clean")
-        res_bt = _eval_cfg(cfg, "B_typo")
-        res_c20 = _eval_cfg(cfg, "C_20", use_c_oracle=True)
-        res_bh = _eval_cfg(cfg, "B_human")
+        print(f"[Grid Eval] Evaluating {cid}...", flush=True)
+        res_a = _unpack_eval(val_a, _eval_cfg(cfg, "A"))
+        res_bc = _unpack_eval(val_b_clean, _eval_cfg(cfg, "B_clean"))
+        res_bt = _unpack_eval(val_b_typo, _eval_cfg(cfg, "B_typo"))
+        res_c20 = _unpack_eval(val_c_20, _eval_cfg(cfg, "C_20", use_c_oracle=True))
+        res_bh = _unpack_eval(b_human_queries, _eval_cfg(cfg, "B_human"))
 
         # 5-fold CV score
         fold_scores = []
         for f in range(5):
-            pa = [r for q, r in zip(val_a, res_a["per_query"]) if fold_a.get(q.get("spec_cluster_id")) == f]
-            pb = [r for q, r in zip(val_b_clean, res_bc["per_query"]) if fold_b.get(q.get("spec_cluster_id")) == f]
-            ma = cluster_map_from_per_query(pa, val_a) if pa else 0.0
-            mb = cluster_map_from_per_query(pb, val_b_clean) if pb else 0.0
+            va_f = [val for k, val in res_a["cluster_map"].items() if fold_a.get(k) == f]
+            vb_f = [val for k, val in res_bc["cluster_map"].items() if fold_b.get(k) == f]
+            ma = float(np.mean(va_f)) if va_f else 0.0
+            mb = float(np.mean(vb_f)) if vb_f else 0.0
             fold_scores.append(0.4 * ma + 0.6 * mb)
 
         cv_score = float(np.mean(fold_scores))
         cat_drop_bc = float(
             np.mean([
-                (rb["ap"] - rm["ap"]) < -0.10
-                for rb, rm in zip(res_bc["per_query"], model_bc["per_query"])
+                (res_bc["ap_by_idx"][i] - model_bc["ap_by_idx"][i]) < -0.10
+                for i in res_bc["valid_indices"]
+                if i in model_bc["ap_by_idx"]
             ])
         )
         hub_bc = compute_hubness_stats(res_bc["ranked_indices"], len(eng.id_map), top_k=10)
@@ -361,19 +408,19 @@ def main() -> int:
             "cv_score": round(cv_score, 4),
             "fold_scores": [round(x, 4) for x in fold_scores],
             "A_mAP_cluster": res_a["macro_cluster_mAP"],
-            "A_R10": res_a["overall"]["Recall@10"],
+            "A_R10": res_a["summary"]["recall@10"],
             "Bc_mAP_cluster": res_bc["macro_cluster_mAP"],
-            "Bc_R10": res_bc["overall"]["Recall@10"],
+            "Bc_R10": res_bc["summary"]["recall@10"],
             "Bt_mAP_cluster": res_bt["macro_cluster_mAP"],
-            "C20_mAP": res_c20["overall"]["mAP"],
+            "C20_mAP": res_c20["summary"]["mAP"],
             "cat_drop_Bc": round(cat_drop_bc, 4),
             "hubness_Bc": hub_bc,
-            "B_human_mAP": res_bh["overall"]["mAP"],
-            "B_human_R1": res_bh["overall"]["Recall@1"],
-            "B_human_R10": res_bh["overall"]["Recall@10"],
-            "per_query_A": res_a["per_query"],
-            "per_query_Bc": res_bc["per_query"],
-            "per_query_Bh": res_bh["per_query"],
+            "B_human_mAP": res_bh["summary"]["mAP"],
+            "B_human_R1": res_bh["summary"]["recall@1"],
+            "B_human_R10": res_bh["summary"]["recall@10"],
+            "_u_A": res_a,
+            "_u_Bc": res_bc,
+            "_u_Bh": res_bh,
         }
 
     # C.9 latency measurement across all configs
@@ -382,9 +429,7 @@ def main() -> int:
         eng, parser, tpl_cache, grid, queries_200, embs_a, embs_b, n_runs=5, n_warmup=20
     )
 
-    # Parser FP check (5(v)): compare parser_v2_conf (std vs fuzzy) against parser_v1 on DEV+A+B_clean+B_human
-    from src.serve.parser_v1 import VietnameseQueryParserV1
-    p_v1 = VietnameseQueryParserV1()
+    # Parser FP check (5(v)): compare parser_v2_conf (std vs fuzzy) on A+B_clean+B_human
     fp_check_queries = val_a + val_b_clean + b_human_queries
     fp_std, fp_fuz = 0, 0
     for q in fp_check_queries:
@@ -418,7 +463,7 @@ def main() -> int:
         cfg = v["config"]
         p95_med = lat_results[cid]["p95_median_ms"]
         fp_rate = fp_rate_fuz if cfg.get("fuzzy_typo") else fp_rate_std
-        c_5i = (v["C20_mAP"] - model_c20["overall"]["mAP"]) >= -0.03 and (v["C20_mAP"] - base_01["C20_mAP"]) >= -0.05
+        c_5i = (v["C20_mAP"] - model_c20["summary"]["mAP"]) >= -0.03 and (v["C20_mAP"] - base_01["C20_mAP"]) >= -0.05
         c_5ii = v["cat_drop_Bc"] <= 0.05
         c_5iii = (v["A_R10"] - base_01["A_R10"]) >= -0.01 and (v["Bc_R10"] - base_01["Bc_R10"]) >= -0.01
         c_5iv = (p95_med < 200.0) and ((p95_med - base_p95) <= 20.0)
@@ -445,18 +490,13 @@ def main() -> int:
     competitors.sort(key=lambda cid: (-results_by_cfg[cid]["cv_score"], simplicity_rank_key_v5(results_by_cfg[cid]["config"])))
 
     top_cid = competitors[0]
-    def _combined_cluster_aps(cid: str) -> Tuple[List[float], List[str]]:
-        pa = results_by_cfg[cid]["per_query_A"]
-        pb = results_by_cfg[cid]["per_query_Bc"]
-        aps = [0.4 * r["ap"] for r in pa] + [0.6 * r["ap"] for r in pb]
-        cids = [str(q.get("spec_cluster_id", q.get("id"))) for q in val_a] + [str(q.get("spec_cluster_id", q.get("id"))) for q in val_b_clean]
-        return aps, cids
-
-    top_aps, top_cids = _combined_cluster_aps(top_cid)
+    top_ca = results_by_cfg[top_cid]["_u_A"]["cluster_map"]
+    top_cb = results_by_cfg[top_cid]["_u_Bc"]["cluster_map"]
     tied_candidates = [top_cid]
     for cid in competitors[1:]:
-        cand_aps, _ = _combined_cluster_aps(cid)
-        diff_res = paired_cluster_bootstrap_diff(top_aps, cand_aps, top_cids, n_resamples=1000, seed=SEED)
+        cand_ca = results_by_cfg[cid]["_u_A"]["cluster_map"]
+        cand_cb = results_by_cfg[cid]["_u_Bc"]["cluster_map"]
+        diff_res = paired_score_bootstrap_ci(top_ca, top_cb, cand_ca, cand_cb, n_resamples=1000, seed=SEED)
         if diff_res["ci_low"] <= 0.0 <= diff_res["ci_high"]:
             tied_candidates.append(cid)
 
@@ -471,22 +511,36 @@ def main() -> int:
     safe_cid = safe_candidates[0] if safe_candidates else winner_cid
 
     # B-human-v4 gate analysis (after selection, NEVER re-select)
-    bh_cids = [str(q.get("spec_cluster_id", q.get("id"))) for q in b_human_queries]
-    bh_aps_base = [r["ap"] for r in results_by_cfg["cfg_v5_01"]["per_query_Bh"]]
-    bh_aps_model = [r["ap"] for r in model_bh["per_query"]]
+    bh_valid_idx = results_by_cfg["cfg_v5_01"]["_u_Bh"]["valid_indices"]
+    bh_aps_model = [model_bh["ap_by_idx"][i] for i in bh_valid_idx]
+
+    def _bh_cluster_dict(u_bh: Dict[str, Any]) -> Dict[str, float]:
+        by_c: Dict[str, List[float]] = defaultdict(list)
+        for i in bh_valid_idx:
+            ck = str(
+                b_human_queries[i].get("cluster_id")
+                or b_human_queries[i].get("spec_cluster_id")
+                or b_human_queries[i].get("id")
+                or i
+            )
+            by_c[ck].append(float(u_bh["ap_by_idx"][i]))
+        return {k: float(np.mean(v)) for k, v in by_c.items()}
+
+    bh_cdict_base = _bh_cluster_dict(results_by_cfg["cfg_v5_01"]["_u_Bh"])
 
     def _bh_gate_detail(cid: str) -> Dict[str, Any]:
-        aps = [r["ap"] for r in results_by_cfg[cid]["per_query_Bh"]]
-        diff_vs_base = paired_cluster_bootstrap_diff(aps, bh_aps_base, bh_cids, n_resamples=1000, seed=SEED)
+        u_bh = results_by_cfg[cid]["_u_Bh"]
+        aps = [u_bh["ap_by_idx"][i] for i in bh_valid_idx]
+        diff_vs_base = paired_cluster_bootstrap_diff(_bh_cluster_dict(u_bh), bh_cdict_base, n_resamples=1000, seed=SEED)
         cat_drop_bh = float(np.mean([(a - m) < -0.10 for a, m in zip(aps, bh_aps_model)]))
-        with_col = [a for q, a in zip(b_human_queries, aps) if (q.get("spec") or {}).get("baseColour")]
-        no_col = [a for q, a in zip(b_human_queries, aps) if not (q.get("spec") or {}).get("baseColour")]
+        with_col = [a for i, a in zip(bh_valid_idx, aps) if (b_human_queries[i].get("spec") or {}).get("baseColour")]
+        no_col = [a for i, a in zip(bh_valid_idx, aps) if not (b_human_queries[i].get("spec") or {}).get("baseColour")]
         by_dia: Dict[str, List[float]] = defaultdict(list)
-        for q, a in zip(b_human_queries, aps):
-            by_dia[str(q.get("dia_class") or "unknown")].append(a)
+        for i, a in zip(bh_valid_idx, aps):
+            by_dia[str(b_human_queries[i].get("dia_class") or "unknown")].append(a)
         return {
             "mAP": round(float(np.mean(aps)), 4),
-            "delta_mAP_vs_cfg_v5_01": round(diff_vs_base["mean_diff"], 4),
+            "delta_mAP_vs_cfg_v5_01": round(diff_vs_base["mean"], 4),
             "delta_CI95": [round(diff_vs_base["ci_low"], 4), round(diff_vs_base["ci_high"], 4)],
             "catastrophic_drop_rate": round(cat_drop_bh, 4),
             "mAP_with_colour": round(float(np.mean(with_col)), 4) if with_col else None,
@@ -500,19 +554,40 @@ def main() -> int:
         "winner": _bh_gate_detail(winner_cid),
         "safe": _bh_gate_detail(safe_cid),
         "baseline_cfg_v5_01": _bh_gate_detail("cfg_v5_01"),
+        "cfg_v5_06_fuzzy": _bh_gate_detail("cfg_v5_06"),
+        "cfg_v5_08a_internvl2_only": _bh_gate_detail("cfg_v5_08a"),
+        "cfg_v5_08b_internvl2_plus_aux": _bh_gate_detail("cfg_v5_08b"),
     }
 
-    # Check identical metrics across configs
-    metric_sigs = defaultdict(list)
+    # Check identical metrics across configs (exact 4-dataset and CV+B_human 4-decimal)
+    metric_sigs_all = defaultdict(list)
+    metric_sigs_cv_bh = defaultdict(list)
     for cid, v in results_by_cfg.items():
-        sig = (v["A_mAP_cluster"], v["Bc_mAP_cluster"], v["Bt_mAP_cluster"], v["C20_mAP"])
-        metric_sigs[sig].append(cid)
-    identical_groups = [cids for cids in metric_sigs.values() if len(cids) > 1]
+        sig_all = (
+            round(v["A_mAP_cluster"], 4),
+            round(v["Bc_mAP_cluster"], 4),
+            round(v["Bt_mAP_cluster"], 4),
+            round(v["C20_mAP"], 4),
+            round(v["B_human_mAP"], 4),
+        )
+        sig_cv_bh = (
+            round(v["cv_score"], 4),
+            round(v["A_mAP_cluster"], 4),
+            round(v["Bc_mAP_cluster"], 4),
+            round(v["Bt_mAP_cluster"], 4),
+            round(v["B_human_mAP"], 4),
+        )
+        metric_sigs_all[sig_all].append(cid)
+        metric_sigs_cv_bh[sig_cv_bh].append(cid)
+    identical_groups = {
+        "exact_all_datasets_4dec": [cids for cids in metric_sigs_all.values() if len(cids) > 1],
+        "identical_on_A_Bc_Bt_Bhuman_4dec": [cids for cids in metric_sigs_cv_bh.values() if len(cids) > 1],
+    }
 
     # Oracle parser on B-clean and B-human for winner
     w_cfg = results_by_cfg[winner_cid]["config"]
-    oracle_bc = _eval_cfg(w_cfg, "B_clean", oracle_spec=True)
-    oracle_bh = _eval_cfg(w_cfg, "B_human", oracle_spec=True)
+    oracle_bc = _unpack_eval(val_b_clean, _eval_cfg(w_cfg, "B_clean", oracle_spec=True))
+    oracle_bh = _unpack_eval(b_human_queries, _eval_cfg(w_cfg, "B_human", oracle_spec=True))
 
     # Hubness before (model_only) and after (winner) on B_clean & B_human (C.8)
     hub_model_bc = compute_hubness_stats(model_bc["ranked_indices"], len(eng.id_map), top_k=10)
@@ -540,7 +615,7 @@ def main() -> int:
         "cosine_std_mean_A": round(float(np.mean(cos_stds_a)), 4),
         "oracle_parser_winner": {
             "Bc_mAP_cluster": oracle_bc["macro_cluster_mAP"],
-            "B_human_mAP": oracle_bh["overall"]["mAP"],
+            "B_human_mAP": oracle_bh["summary"]["mAP"],
         },
         "hubness_c8": {
             "B_clean_model_only": hub_model_bc,
@@ -550,17 +625,17 @@ def main() -> int:
         },
         "model_only": {
             "A_mAP_cluster": model_a["macro_cluster_mAP"],
-            "A_R10": model_a["overall"]["Recall@10"],
+            "A_R10": model_a["summary"]["recall@10"],
             "Bc_mAP_cluster": model_bc["macro_cluster_mAP"],
-            "Bc_R10": model_bc["overall"]["Recall@10"],
-            "C20_mAP": model_c20["overall"]["mAP"],
-            "B_human_mAP": model_bh["overall"]["mAP"],
-            "B_human_R1": model_bh["overall"]["Recall@1"],
-            "B_human_R10": model_bh["overall"]["Recall@10"],
+            "Bc_R10": model_bc["summary"]["recall@10"],
+            "C20_mAP": model_c20["summary"]["mAP"],
+            "B_human_mAP": model_bh["summary"]["mAP"],
+            "B_human_R1": model_bh["summary"]["recall@1"],
+            "B_human_R10": model_bh["summary"]["recall@10"],
         },
         "latency_c9": lat_results,
         "configs": {
-            cid: {k: val for k, val in v.items() if not k.startswith("per_query_")}
+            cid: {k: val for k, val in v.items() if not k.startswith("_u_")}
             for cid, v in results_by_cfg.items()
         },
     }
@@ -581,7 +656,7 @@ def main() -> int:
         "",
         "| Nhóm / Config | Tranh hạng | CV Score | A mAP(cl) | Bc mAP(cl) | Bt mAP(cl) | C20 mAP | Tụt thảm họa | Parser FP | p95 C.9 (med ± IQR ms) | 5(i)-(v) |",
         "|---|:---:|---:|---:|---:|---:|---:|---:|---:|---:|:---:|",
-        f"| `model_only` | — | — | {model_a['macro_cluster_mAP']:.4f} | {model_bc['macro_cluster_mAP']:.4f} | — | {model_c20['overall']['mAP']:.4f} | 0.0000 | — | — | — |",
+        f"| `model_only` | — | — | {model_a['macro_cluster_mAP']:.4f} | {model_bc['macro_cluster_mAP']:.4f} | — | {model_c20['summary']['mAP']:.4f} | 0.0000 | — | — | — |",
     ]
     for cfg in grid:
         cid = cfg["config_id"]
@@ -606,7 +681,7 @@ def main() -> int:
         "",
         "## 3. Phân tích Chẩn đoán (Oracle Parser, Hubness C.8, Bonus vs Cosine Std, Fallback & Trùng lặp)",
         f"- **Oracle Parser (`{winner_cid}`):** `B-clean mAP(cl)={oracle_bc['macro_cluster_mAP']:.4f}` (vs parser `{results_by_cfg[winner_cid]['Bc_mAP_cluster']:.4f}`), "
-        f"`B-human-v4 mAP={oracle_bh['overall']['mAP']:.4f}` (vs parser `{w_bh['mAP']:.4f}`).",
+        f"`B-human-v4 mAP={oracle_bh['summary']['mAP']:.4f}` (vs parser `{w_bh['mAP']:.4f}`).",
         f"- **Hubness C.8 (`B-clean`):** Model thuần `{hub_model_bc}` → Winner `{results_by_cfg[winner_cid]['hubness_Bc']}`.",
         f"- **Cosine std trung bình trên Val A:** `{summary['cosine_std_mean_A']}` (so sánh với biên độ bonus `tier_soft` / `gamma`).",
         f"- **I3 Cache Fallback:** `{fallback_stats}`.",
