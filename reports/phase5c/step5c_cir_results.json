@@ -1,0 +1,1049 @@
+{
+  "rule_sha256": "4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067",
+  "val_cir_sha256": "c735c7742c5277cffc4113c68dd8ee59fd3475c742284c8fe9e098af0819062a",
+  "seed": 42,
+  "c4_rocchio_check": {
+    "delta_mAP_08_vs_07": 0.1056,
+    "ci95": [
+      0.0683,
+      0.1462
+    ],
+    "ci_excludes_zero": true
+  },
+  "top_by_mAP": "cir_v1_05",
+  "tied_within_95ci": [
+    "cir_v1_05",
+    "cir_v1_06",
+    "cir_v1_08"
+  ],
+  "winner_config_id": "cir_v1_05",
+  "winner_config": {
+    "config_id": "cir_v1_05",
+    "role": "c3_mod_bonus_only",
+    "c1_vi_to_en": false,
+    "beta": 1.0,
+    "c3_mod_bonus": true,
+    "gamma": 1.0,
+    "c4_rocchio": false,
+    "rocchio_k": 0,
+    "rocchio_beta": 0.0
+  },
+  "sample_c1_translations": [
+    {
+      "raw_full": "mẫu dành cho nữ",
+      "en_from_full": "style for women",
+      "raw_none": "mau danh cho nu",
+      "en_from_none": "color danh cho women"
+    },
+    {
+      "raw_full": "phiên bản dành cho nam",
+      "en_from_full": "version for men",
+      "raw_none": "phien ban danh cho nam",
+      "en_from_none": "phien ban danh cho men"
+    },
+    {
+      "raw_full": "phiên bản dành cho nữ",
+      "en_from_full": "version for women",
+      "raw_none": "phien ban danh cho nu",
+      "en_from_none": "phien ban danh cho women"
+    },
+    {
+      "raw_full": "đổi sang cho nam nữ",
+      "en_from_full": "change for unisex",
+      "raw_none": "doi sang cho nam nu",
+      "en_from_none": "doi sang cho unisex"
+    },
+    {
+      "raw_full": "mẫu dành cho nam nữ",
+      "en_from_full": "style for unisex",
+      "raw_none": "mau danh cho nam nu",
+      "en_from_none": "color danh cho unisex"
+    },
+    {
+      "raw_full": "đổi sang cho nữ",
+      "en_from_full": "change for women",
+      "raw_none": "doi sang cho nu",
+      "en_from_none": "doi sang cho women"
+    }
+  ],
+  "latency_c9": {
+    "cir_catalog": {
+      "cir_v1_01": {
+        "n_runs": 5,
+        "n_queries_per_run": 200,
+        "p95_runs_ms": [
+          146.537,
+          123.932,
+          109.427,
+          121.419,
+          114.591
+        ],
+        "p95_median_ms": 121.419,
+        "p95_iqr_ms": 9.341,
+        "p50_ms": 72.856,
+        "p99_ms": 215.7,
+        "sla_p95_under_200ms": true,
+        "warn_upload_p99_over_200ms": false,
+        "telemetry": [
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1447,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1560,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1485,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1500,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1500,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1425,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 85,
+              "graphics_clock_mhz": 1500,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1492,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1492,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1365,
+              "mem_clock_mhz": 6000
+            }
+          }
+        ]
+      },
+      "cir_v1_05": {
+        "n_runs": 5,
+        "n_queries_per_run": 200,
+        "p95_runs_ms": [
+          147.402,
+          135.536,
+          116.148,
+          131.23,
+          150.625
+        ],
+        "p95_median_ms": 135.536,
+        "p95_iqr_ms": 16.171,
+        "p50_ms": 77.555,
+        "p99_ms": 215.141,
+        "sla_p95_under_200ms": true,
+        "warn_upload_p99_over_200ms": false,
+        "telemetry": [
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1447,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1560,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1485,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1500,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1500,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1425,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 85,
+              "graphics_clock_mhz": 1500,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1492,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1492,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1365,
+              "mem_clock_mhz": 6000
+            }
+          }
+        ]
+      }
+    },
+    "cir_upload": {
+      "cir_v1_01": {
+        "n_runs": 5,
+        "n_queries_per_run": 200,
+        "p95_runs_ms": [
+          444.697,
+          429.334,
+          415.287,
+          406.561,
+          398.516
+        ],
+        "p95_median_ms": 415.287,
+        "p95_iqr_ms": 22.772,
+        "p50_ms": 267.188,
+        "p99_ms": 505.958,
+        "sla_p95_under_200ms": false,
+        "warn_upload_p99_over_200ms": true,
+        "telemetry": [
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1567,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1252,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1320,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1560,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1605,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1537,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1522,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1447,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1425,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1432,
+              "mem_clock_mhz": 6000
+            }
+          }
+        ]
+      },
+      "cir_v1_05": {
+        "n_runs": 5,
+        "n_queries_per_run": 200,
+        "p95_runs_ms": [
+          430.286,
+          446.274,
+          455.787,
+          452.103,
+          403.584
+        ],
+        "p95_median_ms": 446.274,
+        "p95_iqr_ms": 21.817,
+        "p50_ms": 270.383,
+        "p99_ms": 535.762,
+        "sla_p95_under_200ms": false,
+        "warn_upload_p99_over_200ms": true,
+        "telemetry": [
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1567,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1252,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1320,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1560,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1605,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1537,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1522,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1447,
+              "mem_clock_mhz": 6000
+            }
+          },
+          {
+            "before": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1425,
+              "mem_clock_mhz": 6000
+            },
+            "after": {
+              "gpu": "NVIDIA GeForce RTX 2050",
+              "temp_c": 86,
+              "graphics_clock_mhz": 1432,
+              "mem_clock_mhz": 6000
+            }
+          }
+        ]
+      }
+    }
+  },
+  "configs": {
+    "cir_v1_01": {
+      "config": {
+        "config_id": "cir_v1_01",
+        "role": "baseline_combiner_vi",
+        "c1_vi_to_en": false,
+        "beta": 1.0,
+        "c3_mod_bonus": false,
+        "gamma": 0.0,
+        "c4_rocchio": false,
+        "rocchio_k": 0,
+        "rocchio_beta": 0.0
+      },
+      "primary_120": {
+        "overall": {
+          "n": 120,
+          "recall@1": 0.075,
+          "recall@5": 0.1917,
+          "recall@10": 0.3083,
+          "mAP": 0.091
+        },
+        "cluster_mAP_ci95": [
+          0.0667,
+          0.1222
+        ],
+        "by_modifier_type": {
+          "baseColour": {
+            "n": 80,
+            "recall@1": 0.0875,
+            "recall@5": 0.175,
+            "recall@10": 0.2875,
+            "mAP": 0.0902
+          },
+          "gender": {
+            "n": 40,
+            "recall@1": 0.05,
+            "recall@5": 0.225,
+            "recall@10": 0.35,
+            "mAP": 0.0927
+          }
+        },
+        "by_dia_class": {
+          "full": {
+            "n": 60,
+            "recall@1": 0.05,
+            "recall@5": 0.15,
+            "recall@10": 0.2333,
+            "mAP": 0.0803
+          },
+          "none": {
+            "n": 60,
+            "recall@1": 0.1,
+            "recall@5": 0.2333,
+            "recall@10": 0.3833,
+            "mAP": 0.1017
+          }
+        },
+        "delta_mAP_vs_cir_v1_01": 0.0,
+        "delta_CI95_vs_cir_v1_01": [
+          0.0,
+          0.0
+        ]
+      },
+      "diagnostic_all_full_120": {
+        "n": 120,
+        "recall@1": 0.0583,
+        "recall@5": 0.2,
+        "recall@10": 0.3083,
+        "mAP": 0.0989
+      },
+      "diagnostic_all_none_120": {
+        "n": 120,
+        "recall@1": 0.0583,
+        "recall@5": 0.2167,
+        "recall@10": 0.3667,
+        "mAP": 0.0961
+      }
+    },
+    "cir_v1_02": {
+      "config": {
+        "config_id": "cir_v1_02",
+        "role": "c1_vi_to_en_only",
+        "c1_vi_to_en": true,
+        "beta": 1.0,
+        "c3_mod_bonus": false,
+        "gamma": 0.0,
+        "c4_rocchio": false,
+        "rocchio_k": 0,
+        "rocchio_beta": 0.0
+      },
+      "primary_120": {
+        "overall": {
+          "n": 120,
+          "recall@1": 0.0333,
+          "recall@5": 0.0917,
+          "recall@10": 0.2167,
+          "mAP": 0.0582
+        },
+        "cluster_mAP_ci95": [
+          0.0426,
+          0.0773
+        ],
+        "by_modifier_type": {
+          "baseColour": {
+            "n": 80,
+            "recall@1": 0.0375,
+            "recall@5": 0.0875,
+            "recall@10": 0.2125,
+            "mAP": 0.057
+          },
+          "gender": {
+            "n": 40,
+            "recall@1": 0.025,
+            "recall@5": 0.1,
+            "recall@10": 0.225,
+            "mAP": 0.0608
+          }
+        },
+        "by_dia_class": {
+          "full": {
+            "n": 60,
+            "recall@1": 0.0,
+            "recall@5": 0.0667,
+            "recall@10": 0.1667,
+            "mAP": 0.0433
+          },
+          "none": {
+            "n": 60,
+            "recall@1": 0.0667,
+            "recall@5": 0.1167,
+            "recall@10": 0.2667,
+            "mAP": 0.0731
+          }
+        },
+        "delta_mAP_vs_cir_v1_01": -0.0335,
+        "delta_CI95_vs_cir_v1_01": [
+          -0.0541,
+          -0.0169
+        ]
+      },
+      "diagnostic_all_full_120": {
+        "n": 120,
+        "recall@1": 0.0167,
+        "recall@5": 0.1083,
+        "recall@10": 0.2083,
+        "mAP": 0.0548
+      },
+      "diagnostic_all_none_120": {
+        "n": 120,
+        "recall@1": 0.0333,
+        "recall@5": 0.0667,
+        "recall@10": 0.175,
+        "mAP": 0.0541
+      }
+    },
+    "cir_v1_03": {
+      "config": {
+        "config_id": "cir_v1_03",
+        "role": "c2_text_fusion_b085",
+        "c1_vi_to_en": false,
+        "beta": 0.85,
+        "c3_mod_bonus": false,
+        "gamma": 0.0,
+        "c4_rocchio": false,
+        "rocchio_k": 0,
+        "rocchio_beta": 0.0
+      },
+      "primary_120": {
+        "overall": {
+          "n": 120,
+          "recall@1": 0.0417,
+          "recall@5": 0.1417,
+          "recall@10": 0.1833,
+          "mAP": 0.0654
+        },
+        "cluster_mAP_ci95": [
+          0.0405,
+          0.091
+        ],
+        "by_modifier_type": {
+          "baseColour": {
+            "n": 80,
+            "recall@1": 0.05,
+            "recall@5": 0.1125,
+            "recall@10": 0.1375,
+            "mAP": 0.0619
+          },
+          "gender": {
+            "n": 40,
+            "recall@1": 0.025,
+            "recall@5": 0.2,
+            "recall@10": 0.275,
+            "mAP": 0.0723
+          }
+        },
+        "by_dia_class": {
+          "full": {
+            "n": 60,
+            "recall@1": 0.0167,
+            "recall@5": 0.1333,
+            "recall@10": 0.1833,
+            "mAP": 0.0583
+          },
+          "none": {
+            "n": 60,
+            "recall@1": 0.0667,
+            "recall@5": 0.15,
+            "recall@10": 0.1833,
+            "mAP": 0.0724
+          }
+        },
+        "delta_mAP_vs_cir_v1_01": -0.0277,
+        "delta_CI95_vs_cir_v1_01": [
+          -0.0462,
+          -0.0123
+        ]
+      },
+      "diagnostic_all_full_120": {
+        "n": 120,
+        "recall@1": 0.0333,
+        "recall@5": 0.1667,
+        "recall@10": 0.2,
+        "mAP": 0.0673
+      },
+      "diagnostic_all_none_120": {
+        "n": 120,
+        "recall@1": 0.0417,
+        "recall@5": 0.1417,
+        "recall@10": 0.1833,
+        "mAP": 0.0642
+      }
+    },
+    "cir_v1_04": {
+      "config": {
+        "config_id": "cir_v1_04",
+        "role": "c2_text_fusion_b070",
+        "c1_vi_to_en": false,
+        "beta": 0.7,
+        "c3_mod_bonus": false,
+        "gamma": 0.0,
+        "c4_rocchio": false,
+        "rocchio_k": 0,
+        "rocchio_beta": 0.0
+      },
+      "primary_120": {
+        "overall": {
+          "n": 120,
+          "recall@1": 0.0,
+          "recall@5": 0.0417,
+          "recall@10": 0.0833,
+          "mAP": 0.0253
+        },
+        "cluster_mAP_ci95": [
+          0.0174,
+          0.0321
+        ],
+        "by_modifier_type": {
+          "baseColour": {
+            "n": 80,
+            "recall@1": 0.0,
+            "recall@5": 0.0375,
+            "recall@10": 0.05,
+            "mAP": 0.0218
+          },
+          "gender": {
+            "n": 40,
+            "recall@1": 0.0,
+            "recall@5": 0.05,
+            "recall@10": 0.15,
+            "mAP": 0.0324
+          }
+        },
+        "by_dia_class": {
+          "full": {
+            "n": 60,
+            "recall@1": 0.0,
+            "recall@5": 0.05,
+            "recall@10": 0.1,
+            "mAP": 0.0254
+          },
+          "none": {
+            "n": 60,
+            "recall@1": 0.0,
+            "recall@5": 0.0333,
+            "recall@10": 0.0667,
+            "mAP": 0.0253
+          }
+        },
+        "delta_mAP_vs_cir_v1_01": -0.0679,
+        "delta_CI95_vs_cir_v1_01": [
+          -0.096,
+          -0.0454
+        ]
+      },
+      "diagnostic_all_full_120": {
+        "n": 120,
+        "recall@1": 0.0,
+        "recall@5": 0.05,
+        "recall@10": 0.0833,
+        "mAP": 0.0268
+      },
+      "diagnostic_all_none_120": {
+        "n": 120,
+        "recall@1": 0.0,
+        "recall@5": 0.025,
+        "recall@10": 0.0667,
+        "mAP": 0.0246
+      }
+    },
+    "cir_v1_05": {
+      "config": {
+        "config_id": "cir_v1_05",
+        "role": "c3_mod_bonus_only",
+        "c1_vi_to_en": false,
+        "beta": 1.0,
+        "c3_mod_bonus": true,
+        "gamma": 1.0,
+        "c4_rocchio": false,
+        "rocchio_k": 0,
+        "rocchio_beta": 0.0
+      },
+      "primary_120": {
+        "overall": {
+          "n": 120,
+          "recall@1": 0.2583,
+          "recall@5": 0.4833,
+          "recall@10": 0.625,
+          "mAP": 0.2902
+        },
+        "cluster_mAP_ci95": [
+          0.2441,
+          0.3663
+        ],
+        "by_modifier_type": {
+          "baseColour": {
+            "n": 80,
+            "recall@1": 0.325,
+            "recall@5": 0.5625,
+            "recall@10": 0.7125,
+            "mAP": 0.3634
+          },
+          "gender": {
+            "n": 40,
+            "recall@1": 0.125,
+            "recall@5": 0.325,
+            "recall@10": 0.45,
+            "mAP": 0.1437
+          }
+        },
+        "by_dia_class": {
+          "full": {
+            "n": 60,
+            "recall@1": 0.2,
+            "recall@5": 0.5,
+            "recall@10": 0.6167,
+            "mAP": 0.2747
+          },
+          "none": {
+            "n": 60,
+            "recall@1": 0.3167,
+            "recall@5": 0.4667,
+            "recall@10": 0.6333,
+            "mAP": 0.3057
+          }
+        },
+        "delta_mAP_vs_cir_v1_01": 0.2114,
+        "delta_CI95_vs_cir_v1_01": [
+          0.1615,
+          0.2684
+        ]
+      },
+      "diagnostic_all_full_120": {
+        "n": 120,
+        "recall@1": 0.2333,
+        "recall@5": 0.4917,
+        "recall@10": 0.6083,
+        "mAP": 0.3019
+      },
+      "diagnostic_all_none_120": {
+        "n": 120,
+        "recall@1": 0.2667,
+        "recall@5": 0.4917,
+        "recall@10": 0.6167,
+        "mAP": 0.3003
+      }
+    },
+    "cir_v1_06": {
+      "config": {
+        "config_id": "cir_v1_06",
+        "role": "c1_plus_c3",
+        "c1_vi_to_en": true,
+        "beta": 1.0,
+        "c3_mod_bonus": true,
+        "gamma": 1.0,
+        "c4_rocchio": false,
+        "rocchio_k": 0,
+        "rocchio_beta": 0.0
+      },
+      "primary_120": {
+        "overall": {
+          "n": 120,
+          "recall@1": 0.225,
+          "recall@5": 0.4833,
+          "recall@10": 0.575,
+          "mAP": 0.2788
+        },
+        "cluster_mAP_ci95": [
+          0.2392,
+          0.3702
+        ],
+        "by_modifier_type": {
+          "baseColour": {
+            "n": 80,
+            "recall@1": 0.3,
+            "recall@5": 0.5625,
+            "recall@10": 0.6625,
+            "mAP": 0.3462
+          },
+          "gender": {
+            "n": 40,
+            "recall@1": 0.075,
+            "recall@5": 0.325,
+            "recall@10": 0.4,
+            "mAP": 0.144
+          }
+        },
+        "by_dia_class": {
+          "full": {
+            "n": 60,
+            "recall@1": 0.2,
+            "recall@5": 0.5,
+            "recall@10": 0.5667,
+            "mAP": 0.2675
+          },
+          "none": {
+            "n": 60,
+            "recall@1": 0.25,
+            "recall@5": 0.4667,
+            "recall@10": 0.5833,
+            "mAP": 0.2901
+          }
+        },
+        "delta_mAP_vs_cir_v1_01": 0.2095,
+        "delta_CI95_vs_cir_v1_01": [
+          0.1517,
+          0.2713
+        ]
+      },
+      "diagnostic_all_full_120": {
+        "n": 120,
+        "recall@1": 0.2167,
+        "recall@5": 0.4667,
+        "recall@10": 0.5667,
+        "mAP": 0.271
+      },
+      "diagnostic_all_none_120": {
+        "n": 120,
+        "recall@1": 0.1917,
+        "recall@5": 0.4667,
+        "recall@10": 0.5833,
+        "mAP": 0.2657
+      }
+    },
+    "cir_v1_07": {
+      "config": {
+        "config_id": "cir_v1_07",
+        "role": "c1_c2_b085_c3",
+        "c1_vi_to_en": true,
+        "beta": 0.85,
+        "c3_mod_bonus": true,
+        "gamma": 1.0,
+        "c4_rocchio": false,
+        "rocchio_k": 0,
+        "rocchio_beta": 0.0
+      },
+      "primary_120": {
+        "overall": {
+          "n": 120,
+          "recall@1": 0.1167,
+          "recall@5": 0.3,
+          "recall@10": 0.4,
+          "mAP": 0.1768
+        },
+        "cluster_mAP_ci95": [
+          0.1372,
+          0.2348
+        ],
+        "by_modifier_type": {
+          "baseColour": {
+            "n": 80,
+            "recall@1": 0.15,
+            "recall@5": 0.3375,
+            "recall@10": 0.45,
+            "mAP": 0.2216
+          },
+          "gender": {
+            "n": 40,
+            "recall@1": 0.05,
+            "recall@5": 0.225,
+            "recall@10": 0.3,
+            "mAP": 0.0873
+          }
+        },
+        "by_dia_class": {
+          "full": {
+            "n": 60,
+            "recall@1": 0.1167,
+            "recall@5": 0.3333,
+            "recall@10": 0.3833,
+            "mAP": 0.1836
+          },
+          "none": {
+            "n": 60,
+            "recall@1": 0.1167,
+            "recall@5": 0.2667,
+            "recall@10": 0.4167,
+            "mAP": 0.1701
+          }
+        },
+        "delta_mAP_vs_cir_v1_01": 0.0896,
+        "delta_CI95_vs_cir_v1_01": [
+          0.0503,
+          0.1344
+        ]
+      },
+      "diagnostic_all_full_120": {
+        "n": 120,
+        "recall@1": 0.1167,
+        "recall@5": 0.2833,
+        "recall@10": 0.3833,
+        "mAP": 0.1766
+      },
+      "diagnostic_all_none_120": {
+        "n": 120,
+        "recall@1": 0.1083,
+        "recall@5": 0.275,
+        "recall@10": 0.3917,
+        "mAP": 0.1716
+      }
+    },
+    "cir_v1_08": {
+      "config": {
+        "config_id": "cir_v1_08",
+        "role": "c1_c2_b085_c3_c4_rocchio",
+        "c1_vi_to_en": true,
+        "beta": 0.85,
+        "c3_mod_bonus": true,
+        "gamma": 1.0,
+        "c4_rocchio": true,
+        "rocchio_k": 3,
+        "rocchio_beta": 0.15
+      },
+      "primary_120": {
+        "overall": {
+          "n": 120,
+          "recall@1": 0.225,
+          "recall@5": 0.3917,
+          "recall@10": 0.475,
+          "mAP": 0.2664
+        },
+        "cluster_mAP_ci95": [
+          0.2224,
+          0.3604
+        ],
+        "by_modifier_type": {
+          "baseColour": {
+            "n": 80,
+            "recall@1": 0.2875,
+            "recall@5": 0.45,
+            "recall@10": 0.5125,
+            "mAP": 0.3367
+          },
+          "gender": {
+            "n": 40,
+            "recall@1": 0.1,
+            "recall@5": 0.275,
+            "recall@10": 0.4,
+            "mAP": 0.126
+          }
+        },
+        "by_dia_class": {
+          "full": {
+            "n": 60,
+            "recall@1": 0.2333,
+            "recall@5": 0.4167,
+            "recall@10": 0.5,
+            "mAP": 0.2732
+          },
+          "none": {
+            "n": 60,
+            "recall@1": 0.2167,
+            "recall@5": 0.3667,
+            "recall@10": 0.45,
+            "mAP": 0.2597
+          }
+        },
+        "delta_mAP_vs_cir_v1_01": 0.1953,
+        "delta_CI95_vs_cir_v1_01": [
+          0.1358,
+          0.2612
+        ]
+      },
+      "diagnostic_all_full_120": {
+        "n": 120,
+        "recall@1": 0.225,
+        "recall@5": 0.425,
+        "recall@10": 0.5083,
+        "mAP": 0.2707
+      },
+      "diagnostic_all_none_120": {
+        "n": 120,
+        "recall@1": 0.1833,
+        "recall@5": 0.3583,
+        "recall@10": 0.4333,
+        "mAP": 0.2463
+      }
+    }
+  }
+}

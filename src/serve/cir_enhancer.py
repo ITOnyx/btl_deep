@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 import torch
 
-from src.eval.metrics import compute_weighted_attribute_match
+from src.eval.canonical_eval import compute_weighted_attribute_match
 from src.serve.query_rewriter import restore_diacritics_for_query
 from src.serve.template_cache import TemplateCacheV5
 
