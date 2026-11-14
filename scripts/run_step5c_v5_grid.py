@@ -293,28 +293,34 @@ def main() -> int:
             parsed = c["parsed_fuz"] if fuzzy else c["parsed_std"]
             confs = (c["confs_fuz"] if fuzzy else c["confs_std"]) if cfg.get("conf_gating") else None
 
+        bmode = cfg.get("bonus_mode", "zscore")
+        zscore_cos = (bmode == "zscore")
         tg = cfg.get("text_gallery", "none")
         t_alpha = float(cfg.get("text_alpha", 1.0))
-        extra_text_mat = None
+        extra_mat = None
+        extra_w = 0.0
         if tg == "internvl2_only":
-            extra_text_mat = c["z_a_cached"] if i3_mode == "cached" else c["z_a_rw"]
+            extra_mat = c["z_a_cached"] if i3_mode == "cached" else c["z_a_rw"]
+            extra_w = (1.0 - t_alpha) / t_alpha
         elif tg == "internvl2_plus_aux":
-            extra_text_mat = c["z_b_cached"] if i3_mode == "cached" else c["z_b_rw"]
+            extra_mat = c["z_b_cached"] if i3_mode == "cached" else c["z_b_rw"]
+            extra_w = (1.0 - t_alpha) / t_alpha
 
         return evaluate_t2i_canonical(
+            engine=eng,
             queries=ds,
-            query_vectors=q_vecs,
-            gallery_embeddings=eng.embeddings,
-            id_map=eng.id_map,
-            gender_policy=gpol,
-            mode=mode,
             parsed_queries=parsed,
+            query_vecs=q_vecs,
+            mode=mode,
             gamma=float(cfg.get("gamma", 1.5)),
-            zscore_cosine=True,
-            bonus_mode=cfg.get("bonus_mode", "zscore"),
+            gender_policy_cfg=gpol,
+            force_exact=True,
+            tie_rule="conservative",
+            zscore_cosine=zscore_cos,
+            bonus_mode=bmode,
             slot_confidences=confs,
-            extra_text_cos_matrix=extra_text_mat,
-            text_alpha=t_alpha,
+            extra_score_matrix=extra_mat,
+            extra_score_weight=extra_w,
         )
 
     # Model-only baseline
