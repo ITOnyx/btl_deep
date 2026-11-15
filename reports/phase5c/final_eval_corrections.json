@@ -1,11 +1,12 @@
 {
   "status": "FINAL_EVAL_CORRECTIONS_V1",
-  "version": "v2_prompt14i",
-  "created_at_utc": "2026-11-15T05:04:09Z",
+  "version": "v3_prompt14j",
+  "created_at_utc": "2026-11-15T06:00:15Z",
   "frozen_results_sha256": "8a89359af8e0cbe4a8eb2373ce9a3d8991657a554e99c5bfd5efad850ca96a01",
-  "supplements_sha256": "4e087e4bf41a59e8b9cd082cd7a3f08cb3cd4332e8b34a56dd75a84ab11f96bc",
+  "supplements_sha256": "55d477938add99587de00c0849c0c13d003db06ea1b7654a2dff8cc6575fe443",
   "cir_paired_baseline_results_sha256": "97acec74be56b6e7eb607aac0fc53f2a53d4674b299186b64bd7bb927e73462b",
-  "erratum_notice": "Tệp này lưu trữ toàn bộ các hiệu chỉnh phân loại cơ học, sửa lỗi trình bày, đính chính kết luận CIR so với baseline chỉ-ảnh-tham-chiếu, và cập nhật phân loại độ trễ theo đúng yêu cầu của Prompt 14g, 14h và 14i. Các số liệu điểm số chính trong final_eval_results.json vẫn là KẾT QUẢ ĐÓNG BĂNG bất biến.",
+  "cir_standard_convention_results_sha256": "41b4a6d01eaa5bd63f8d4212afd0c0bb7edaed4db87da1e2003ce2a5770342bc",
+  "erratum_notice": "Tệp này lưu trữ toàn bộ các hiệu chỉnh phân loại cơ học, sửa lỗi trình bày, đính chính kết luận CIR so với baseline chỉ-ảnh-tham-chiếu theo 2 quy ước, loại bỏ toàn bộ tính từ chủ quan, và phân loại độ trễ theo đúng yêu cầu của Prompt 14g, 14h, 14i và 14j. Các số liệu điểm số chính trong final_eval_results.json vẫn là KẾT QUẢ ĐÓNG BĂNG bất biến.",
   "erratum_cir_baseline_observation": {
     "rejected_statement": "Khi chỉ dùng ảnh tham chiếu (không qua modifier), điểm số đạt R@10 = 0.5833, mAP = 0.1544. Cả cir_v1_01 và cir_v1_05 đều vượt baseline này trên Recall@10, khẳng định modifier văn bản có đóng góp điều hướng không gian đặc trưng.",
     "reason_for_rejection": "Câu nhận xét trên SAI về mặt sự thật số liệu: baseline chỉ-ảnh-tham-chiếu đạt Recall@10 = 0.5833 và mAP = 0.1544. Trong khi đó, cir_v1_01 chỉ đạt Recall@10 = 0.2667 và mAP = 0.0971 (thấp hơn baseline rõ rệt). cir_v1_05 đạt Recall@10 = 0.6000 (khoảng tin cậy chồng lấn với baseline).",
@@ -51,7 +52,7 @@
       "pooled_p99_cir_upload_disk_ms": 240.433
     }
   },
-  "cir_paired_baseline_results": {
+  "cir_official_protocol_results": {
     "overall": {
       "n_pairs": 120,
       "cir_v1_01_vs_baseline": {
@@ -359,6 +360,644 @@
       }
     }
   },
+  "cir_standard_convention_results": {
+    "status": "CIR_STANDARD_CONVENTION_EVALUATION_COMPLETED",
+    "description": "CIR metrics under standard convention: reference image excluded from candidate pool (N=1,289)",
+    "protocol": "standard_convention_ref_excluded",
+    "n_gallery_after_filter": 1289,
+    "seed": 42,
+    "n_bootstrap": 1000,
+    "summary_by_subset": {
+      "overall": {
+        "cir_i2i_baseline": {
+          "n_queries": 120,
+          "small_n_warning": null,
+          "recall@1": {
+            "mean": 0.10833333333333334,
+            "ci_low": 0.058333333333333334,
+            "ci_high": 0.1668749999999998,
+            "n": 120
+          },
+          "recall@5": {
+            "mean": 0.38333333333333336,
+            "ci_low": 0.2914583333333334,
+            "ci_high": 0.4666666666666667,
+            "n": 120
+          },
+          "recall@10": {
+            "mean": 0.6,
+            "ci_low": 0.5083333333333333,
+            "ci_high": 0.6916666666666667,
+            "n": 120
+          },
+          "true_recall@10": {
+            "mean": 0.28835407647907646,
+            "ci_low": 0.23120844606782104,
+            "ci_high": 0.34491725288600283,
+            "n": 120
+          },
+          "mAP": {
+            "mean": 0.18770993107754708,
+            "ci_low": 0.15658441078672755,
+            "ci_high": 0.22412331785723888,
+            "n": 120
+          }
+        },
+        "cir_v1_01": {
+          "n_queries": 120,
+          "small_n_warning": null,
+          "recall@1": {
+            "mean": 0.08333333333333333,
+            "ci_low": 0.03333333333333333,
+            "ci_high": 0.13333333333333333,
+            "n": 120
+          },
+          "recall@5": {
+            "mean": 0.21666666666666667,
+            "ci_low": 0.14166666666666666,
+            "ci_high": 0.2916666666666667,
+            "n": 120
+          },
+          "recall@10": {
+            "mean": 0.2916666666666667,
+            "ci_low": 0.21666666666666667,
+            "ci_high": 0.375,
+            "n": 120
+          },
+          "true_recall@10": {
+            "mean": 0.12213489057239056,
+            "ci_low": 0.08455535639129388,
+            "ci_high": 0.16570486111111107,
+            "n": 120
+          },
+          "mAP": {
+            "mean": 0.10323198508915774,
+            "ci_low": 0.07445965893897978,
+            "ci_high": 0.13389563453329958,
+            "n": 120
+          }
+        },
+        "cir_v1_05": {
+          "n_queries": 120,
+          "small_n_warning": null,
+          "recall@1": {
+            "mean": 0.3,
+            "ci_low": 0.21666666666666667,
+            "ci_high": 0.38333333333333336,
+            "n": 120
+          },
+          "recall@5": {
+            "mean": 0.5166666666666667,
+            "ci_low": 0.425,
+            "ci_high": 0.6083333333333333,
+            "n": 120
+          },
+          "recall@10": {
+            "mean": 0.6,
+            "ci_low": 0.5083333333333333,
+            "ci_high": 0.6916666666666667,
+            "n": 120
+          },
+          "true_recall@10": {
+            "mean": 0.3856973003848004,
+            "ci_low": 0.31560211865680615,
+            "ci_high": 0.4595758139430014,
+            "n": 120
+          },
+          "mAP": {
+            "mean": 0.32606845429925946,
+            "ci_low": 0.26962049081679346,
+            "ci_high": 0.38475061133537336,
+            "n": 120
+          }
+        }
+      },
+      "baseColour": {
+        "cir_i2i_baseline": {
+          "n_queries": 80,
+          "small_n_warning": null,
+          "recall@1": {
+            "mean": 0.1125,
+            "ci_low": 0.05,
+            "ci_high": 0.1875,
+            "n": 80
+          },
+          "recall@5": {
+            "mean": 0.425,
+            "ci_low": 0.3125,
+            "ci_high": 0.5375,
+            "n": 80
+          },
+          "recall@10": {
+            "mean": 0.675,
+            "ci_low": 0.575,
+            "ci_high": 0.775,
+            "n": 80
+          },
+          "true_recall@10": {
+            "mean": 0.34845824314574314,
+            "ci_low": 0.2731483924062049,
+            "ci_high": 0.4225682269119769,
+            "n": 80
+          },
+          "mAP": {
+            "mean": 0.2115437770169298,
+            "ci_low": 0.17036655402177603,
+            "ci_high": 0.25719397536435884,
+            "n": 80
+          }
+        },
+        "cir_v1_01": {
+          "n_queries": 80,
+          "small_n_warning": null,
+          "recall@1": {
+            "mean": 0.0875,
+            "ci_low": 0.025,
+            "ci_high": 0.1625,
+            "n": 80
+          },
+          "recall@5": {
+            "mean": 0.225,
+            "ci_low": 0.1375,
+            "ci_high": 0.325,
+            "n": 80
+          },
+          "recall@10": {
+            "mean": 0.325,
+            "ci_low": 0.2375,
+            "ci_high": 0.4375,
+            "n": 80
+          },
+          "true_recall@10": {
+            "mean": 0.13158031204906204,
+            "ci_low": 0.08661793718434344,
+            "ci_high": 0.18475322420634918,
+            "n": 80
+          },
+          "mAP": {
+            "mean": 0.10651508562604031,
+            "ci_low": 0.07052552908900862,
+            "ci_high": 0.14841979709936037,
+            "n": 80
+          }
+        },
+        "cir_v1_05": {
+          "n_queries": 80,
+          "small_n_warning": null,
+          "recall@1": {
+            "mean": 0.4,
+            "ci_low": 0.3,
+            "ci_high": 0.5125,
+            "n": 80
+          },
+          "recall@5": {
+            "mean": 0.65,
+            "ci_low": 0.55,
+            "ci_high": 0.7625,
+            "n": 80
+          },
+          "recall@10": {
+            "mean": 0.7125,
+            "ci_low": 0.6125,
+            "ci_high": 0.8125,
+            "n": 80
+          },
+          "true_recall@10": {
+            "mean": 0.4944636093073592,
+            "ci_low": 0.40373241341991345,
+            "ci_high": 0.5776266402867966,
+            "n": 80
+          },
+          "mAP": {
+            "mean": 0.4217296263813122,
+            "ci_low": 0.3476604409951621,
+            "ci_high": 0.4967678652809096,
+            "n": 80
+          }
+        }
+      },
+      "gender": {
+        "cir_i2i_baseline": {
+          "n_queries": 40,
+          "small_n_warning": null,
+          "recall@1": {
+            "mean": 0.1,
+            "ci_low": 0.025,
+            "ci_high": 0.2,
+            "n": 40
+          },
+          "recall@5": {
+            "mean": 0.3,
+            "ci_low": 0.175,
+            "ci_high": 0.45,
+            "n": 40
+          },
+          "recall@10": {
+            "mean": 0.45,
+            "ci_low": 0.3,
+            "ci_high": 0.6,
+            "n": 40
+          },
+          "true_recall@10": {
+            "mean": 0.16814574314574315,
+            "ci_low": 0.10503499278499276,
+            "ci_high": 0.2370327380952381,
+            "n": 40
+          },
+          "mAP": {
+            "mean": 0.14004223919878164,
+            "ci_low": 0.09994978587076785,
+            "ci_high": 0.1861638225139665,
+            "n": 40
+          }
+        },
+        "cir_v1_01": {
+          "n_queries": 40,
+          "small_n_warning": null,
+          "recall@1": {
+            "mean": 0.075,
+            "ci_low": 0.0,
+            "ci_high": 0.175,
+            "n": 40
+          },
+          "recall@5": {
+            "mean": 0.2,
+            "ci_low": 0.09937500000000005,
+            "ci_high": 0.32562499999999944,
+            "n": 40
+          },
+          "recall@10": {
+            "mean": 0.225,
+            "ci_low": 0.1,
+            "ci_high": 0.375,
+            "n": 40
+          },
+          "true_recall@10": {
+            "mean": 0.10324404761904762,
+            "ci_low": 0.041563740079365086,
+            "ci_high": 0.18200570436507932,
+            "n": 40
+          },
+          "mAP": {
+            "mean": 0.09666578401539261,
+            "ci_low": 0.058989825199350074,
+            "ci_high": 0.14325033422986458,
+            "n": 40
+          }
+        },
+        "cir_v1_05": {
+          "n_queries": 40,
+          "small_n_warning": null,
+          "recall@1": {
+            "mean": 0.1,
+            "ci_low": 0.025,
+            "ci_high": 0.2,
+            "n": 40
+          },
+          "recall@5": {
+            "mean": 0.25,
+            "ci_low": 0.125,
+            "ci_high": 0.4,
+            "n": 40
+          },
+          "recall@10": {
+            "mean": 0.375,
+            "ci_low": 0.25,
+            "ci_high": 0.525,
+            "n": 40
+          },
+          "true_recall@10": {
+            "mean": 0.16816468253968253,
+            "ci_low": 0.0962110615079365,
+            "ci_high": 0.24696552579365078,
+            "n": 40
+          },
+          "mAP": {
+            "mean": 0.13474611013515417,
+            "ci_low": 0.08661062556010513,
+            "ci_high": 0.1861412880111252,
+            "n": 40
+          }
+        }
+      }
+    },
+    "paired_differences_by_subset": {
+      "overall": {
+        "cir_v1_01_vs_baseline": {
+          "n_pairs": 120,
+          "small_n_warning": null,
+          "comparison": "cir_v1_01 vs cir_i2i_baseline",
+          "recall@1": {
+            "mean_diff": -0.025,
+            "ci_low": -0.1,
+            "ci_high": 0.041666666666666664,
+            "n": 120,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "recall@5": {
+            "mean_diff": -0.16666666666666666,
+            "ci_low": -0.26666666666666666,
+            "ci_high": -0.058333333333333334,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+          },
+          "recall@10": {
+            "mean_diff": -0.30833333333333335,
+            "ci_low": -0.4083333333333333,
+            "ci_high": -0.20833333333333334,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+          },
+          "mAP": {
+            "mean_diff": -0.08447794598838936,
+            "ci_low": -0.11883523315473268,
+            "ci_high": -0.052606850702070496,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+          }
+        },
+        "cir_v1_05_vs_baseline": {
+          "n_pairs": 120,
+          "small_n_warning": null,
+          "comparison": "cir_v1_05 vs cir_i2i_baseline",
+          "recall@1": {
+            "mean_diff": 0.19166666666666668,
+            "ci_low": 0.1,
+            "ci_high": 0.27520833333333317,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+          },
+          "recall@5": {
+            "mean_diff": 0.13333333333333333,
+            "ci_low": 0.016666666666666666,
+            "ci_high": 0.25,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+          },
+          "recall@10": {
+            "mean_diff": 0.0,
+            "ci_low": -0.10833333333333334,
+            "ci_high": 0.1,
+            "n": 120,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "mAP": {
+            "mean_diff": 0.13835852322171235,
+            "ci_low": 0.08463771928636703,
+            "ci_high": 0.19019618345920353,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+          }
+        },
+        "cir_v1_05_vs_cir_v1_01": {
+          "n_pairs": 120,
+          "small_n_warning": null,
+          "comparison": "cir_v1_05 vs cir_v1_01",
+          "recall@1": {
+            "mean_diff": 0.21666666666666667,
+            "ci_low": 0.14166666666666666,
+            "ci_high": 0.2916666666666667,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          },
+          "recall@5": {
+            "mean_diff": 0.3,
+            "ci_low": 0.21666666666666667,
+            "ci_high": 0.375,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          },
+          "recall@10": {
+            "mean_diff": 0.30833333333333335,
+            "ci_low": 0.225,
+            "ci_high": 0.38333333333333336,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          },
+          "mAP": {
+            "mean_diff": 0.22283646921010175,
+            "ci_low": 0.17824989391449858,
+            "ci_high": 0.2679944683986056,
+            "n": 120,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          }
+        }
+      },
+      "baseColour": {
+        "cir_v1_01_vs_baseline": {
+          "n_pairs": 80,
+          "small_n_warning": null,
+          "comparison": "cir_v1_01 vs cir_i2i_baseline",
+          "recall@1": {
+            "mean_diff": -0.025,
+            "ci_low": -0.1125,
+            "ci_high": 0.0625,
+            "n": 80,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "recall@5": {
+            "mean_diff": -0.2,
+            "ci_low": -0.325,
+            "ci_high": -0.075,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+          },
+          "recall@10": {
+            "mean_diff": -0.35,
+            "ci_low": -0.475,
+            "ci_high": -0.225,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+          },
+          "mAP": {
+            "mean_diff": -0.10502869139088951,
+            "ci_low": -0.1546439826884501,
+            "ci_high": -0.05721676272594866,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+          }
+        },
+        "cir_v1_05_vs_baseline": {
+          "n_pairs": 80,
+          "small_n_warning": null,
+          "comparison": "cir_v1_05 vs cir_i2i_baseline",
+          "recall@1": {
+            "mean_diff": 0.2875,
+            "ci_low": 0.175,
+            "ci_high": 0.4,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+          },
+          "recall@5": {
+            "mean_diff": 0.225,
+            "ci_low": 0.0875,
+            "ci_high": 0.3625,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+          },
+          "recall@10": {
+            "mean_diff": 0.0375,
+            "ci_low": -0.0875,
+            "ci_high": 0.15,
+            "n": 80,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "mAP": {
+            "mean_diff": 0.21018584936438228,
+            "ci_low": 0.14260461317892933,
+            "ci_high": 0.27327008744825226,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+          }
+        },
+        "cir_v1_05_vs_cir_v1_01": {
+          "n_pairs": 80,
+          "small_n_warning": null,
+          "comparison": "cir_v1_05 vs cir_v1_01",
+          "recall@1": {
+            "mean_diff": 0.3125,
+            "ci_low": 0.2125,
+            "ci_high": 0.4125,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          },
+          "recall@5": {
+            "mean_diff": 0.425,
+            "ci_low": 0.325,
+            "ci_high": 0.5375,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          },
+          "recall@10": {
+            "mean_diff": 0.3875,
+            "ci_low": 0.2875,
+            "ci_high": 0.5,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          },
+          "mAP": {
+            "mean_diff": 0.3152145407552718,
+            "ci_low": 0.2563025390588653,
+            "ci_high": 0.37410588828658725,
+            "n": 80,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          }
+        }
+      },
+      "gender": {
+        "cir_v1_01_vs_baseline": {
+          "n_pairs": 40,
+          "small_n_warning": null,
+          "comparison": "cir_v1_01 vs cir_i2i_baseline",
+          "recall@1": {
+            "mean_diff": -0.025,
+            "ci_low": -0.12562499999999996,
+            "ci_high": 0.07562499999999943,
+            "n": 40,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "recall@5": {
+            "mean_diff": -0.1,
+            "ci_low": -0.25,
+            "ci_high": 0.05,
+            "n": 40,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "recall@10": {
+            "mean_diff": -0.225,
+            "ci_low": -0.4,
+            "ci_high": -0.05,
+            "n": 40,
+            "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+          },
+          "mAP": {
+            "mean_diff": -0.04337645518338904,
+            "ci_low": -0.07731028923067788,
+            "ci_high": -0.005161169965492047,
+            "n": 40,
+            "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+          }
+        },
+        "cir_v1_05_vs_baseline": {
+          "n_pairs": 40,
+          "small_n_warning": null,
+          "comparison": "cir_v1_05 vs cir_i2i_baseline",
+          "recall@1": {
+            "mean_diff": 0.0,
+            "ci_low": -0.125,
+            "ci_high": 0.125,
+            "n": 40,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "recall@5": {
+            "mean_diff": -0.05,
+            "ci_low": -0.225,
+            "ci_high": 0.125,
+            "n": 40,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "recall@10": {
+            "mean_diff": -0.075,
+            "ci_low": -0.275,
+            "ci_high": 0.1,
+            "n": 40,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "mAP": {
+            "mean_diff": -0.005296129063627489,
+            "ci_low": -0.0508347360432927,
+            "ci_high": 0.042026434191101844,
+            "n": 40,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          }
+        },
+        "cir_v1_05_vs_cir_v1_01": {
+          "n_pairs": 40,
+          "small_n_warning": null,
+          "comparison": "cir_v1_05 vs cir_v1_01",
+          "recall@1": {
+            "mean_diff": 0.025,
+            "ci_low": 0.0,
+            "ci_high": 0.075,
+            "n": 40,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "recall@5": {
+            "mean_diff": 0.05,
+            "ci_low": 0.0,
+            "ci_high": 0.125,
+            "n": 40,
+            "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+          },
+          "recall@10": {
+            "mean_diff": 0.15,
+            "ci_low": 0.05,
+            "ci_high": 0.275,
+            "n": 40,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          },
+          "mAP": {
+            "mean_diff": 0.03808032611976156,
+            "ci_low": 0.015029944812741685,
+            "ci_high": 0.06878002053325354,
+            "n": 40,
+            "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+          }
+        }
+      }
+    }
+  },
+  "subjective_adjectives_audit": {
+    "status": "PASSED_ZERO_SUBJECTIVE_WORDS",
+    "count_total": 0,
+    "checked_words": [
+      "khổng lồ",
+      "vượt bậc",
+      "vượt trội",
+      "xuất sắc",
+      "hoàn hảo"
+    ]
+  },
   "paired_difference_labels": {
     "cfg_v5_01_vs_model_only__map": "Khác biệt có ý nghĩa (cfg_v5_01 hơn model_only)",
     "cfg_v5_01_vs_model_only__r10": "Khác biệt có ý nghĩa (cfg_v5_01 hơn model_only)",
@@ -373,10 +1012,14 @@
     "cfg_v5_06_vs_cfg_v5_01__r10": "Chưa kết luận được (CI chứa hoặc chạm 0)",
     "cir_v1_05_vs_cir_v1_01__map": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)",
     "cir_v1_05_vs_cir_v1_01__r10": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)",
-    "cir_v1_01_vs_baseline__map": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)",
-    "cir_v1_01_vs_baseline__r10": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)",
-    "cir_v1_05_vs_baseline__map": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)",
-    "cir_v1_05_vs_baseline__r10": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+    "cir_official_v1_01_vs_baseline__map": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)",
+    "cir_official_v1_01_vs_baseline__r10": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)",
+    "cir_official_v1_05_vs_baseline__map": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)",
+    "cir_official_v1_05_vs_baseline__r10": "Chưa kết luận được (CI chứa hoặc chạm 0)",
+    "cir_standard_v1_01_vs_baseline__map": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)",
+    "cir_standard_v1_01_vs_baseline__r10": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)",
+    "cir_standard_v1_05_vs_baseline__map": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)",
+    "cir_standard_v1_05_vs_baseline__r10": "Chưa kết luận được (CI chứa hoặc chạm 0)"
   },
   "slice_counts_corrected": {
     "thin_slots_n": 136,

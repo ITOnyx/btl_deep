@@ -178,6 +178,32 @@ def main() -> int:
             check_presence(b_data["recall@10"]["label"], f"CIR paired {sub_k} {comp_k} label R@10")
             check_presence(b_data["mAP"]["label"], f"CIR paired {sub_k} {comp_k} label mAP")
 
+    # 13b. Standard Convention CIR Checks (Prompt 14j Step 1)
+    cir_std_path = PROJECT_ROOT / "reports/phase5c/cir_standard_convention_results.json"
+    if cir_std_path.exists():
+        cir_std = json.loads(cir_std_path.read_text(encoding="utf-8"))
+        b_std_ov = cir_std["summary_by_subset"]["overall"]["cir_i2i_baseline"]
+        check_presence(f"{b_std_ov['recall@1']['mean']:.4f}", "CIR std baseline R@1")
+        check_presence(f"{b_std_ov['recall@10']['mean']:.4f}", "CIR std baseline R@10")
+        check_presence(f"{b_std_ov['mAP']['mean']:.4f}", "CIR std baseline mAP")
+
+        check_presence("Quy ước chuẩn (N=1,289)", "CIR standard convention table header/mention")
+
+        for comp_k in ["cir_v1_01_vs_baseline", "cir_v1_05_vs_baseline", "cir_v1_05_vs_cir_v1_01"]:
+            std_ov_pair = cir_std["paired_differences_by_subset"]["overall"][comp_k]
+            check_presence(f"{std_ov_pair['recall@10']['mean_diff']:+.4f}", f"CIR std overall {comp_k} ΔR@10")
+            check_presence(f"{std_ov_pair['mAP']['mean_diff']:+.4f}", f"CIR std overall {comp_k} ΔmAP")
+            check_presence(std_ov_pair["recall@10"]["label"], f"CIR std overall {comp_k} label R@10")
+            check_presence(std_ov_pair["mAP"]["label"], f"CIR std overall {comp_k} label mAP")
+
+        for sub_k in ["baseColour", "gender"]:
+            for comp_k in ["cir_v1_01_vs_baseline", "cir_v1_05_vs_baseline", "cir_v1_05_vs_cir_v1_01"]:
+                std_sub_pair = cir_std["paired_differences_by_subset"][sub_k][comp_k]
+                check_presence(f"{std_sub_pair['recall@10']['mean_diff']:+.4f}", f"CIR std {sub_k} {comp_k} ΔR@10")
+                check_presence(f"{std_sub_pair['mAP']['mean_diff']:+.4f}", f"CIR std {sub_k} {comp_k} ΔmAP")
+                check_presence(std_sub_pair["recall@10"]["label"], f"CIR std {sub_k} {comp_k} label R@10")
+                check_presence(std_sub_pair["mAP"]["label"], f"CIR std {sub_k} {comp_k} label mAP")
+
     # 14. Erratum Notice
     check_presence("Cả cir_v1_01 và cir_v1_05 đều vượt baseline này trên Recall@10", "Erratum mention of false claim")
     check_presence("0.2333", "Erratum mention of chat draft R@10")
