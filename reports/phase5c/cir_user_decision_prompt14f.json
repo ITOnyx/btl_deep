@@ -1,0 +1,13 @@
+{
+  "decision_id": "CIR_USER_DECISION_PROMPT14F_OPTION_1",
+  "decision_content": "CIR: PHƯƠNG ÁN 1. Hệ thống = cir_v1_05, Model thuần = cir_v1_01, cả hai đều chạy ở Phần B2. Quyết định này độc lập với độ trễ vì chi phí vision tower dùng chung cho cả lưới; luật chọn cir_v1_05 dựa trên chất lượng val. Độ trễ cir_upload được ghi trung thực, không hạ chuẩn.",
+  "system_cir_config": "cir_v1_05",
+  "model_only_cir_config": "cir_v1_01",
+  "run_in_part_b2": true,
+  "timestamp_iso": "2026-11-14T23:15:31.800699+00:00",
+  "git_commit": "785f4519ca690fb4e6a263bca8cff7301267a7e0",
+  "selection_rule_cir_v1_sha256": "4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067",
+  "confirmation": "tạo trước khi mở eval/cir_eval_test.json; chưa có kết quả test CIR",
+  "independence_of_latency": true,
+  "notes": "Lựa chọn cir_v1_05 dựa trên chất lượng val (mAP 0.2902 vs 0.0910 của cir_v1_01). Chi phí vision tower dùng chung cho cả lưới. Độ trễ cir_upload được ghi trung thực, không hạ chuẩn."
+}

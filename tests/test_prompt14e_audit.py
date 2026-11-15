@@ -12,11 +12,19 @@ import pytest
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
+def get_14e_paths():
+    p_json = PROJECT_ROOT / "reports/phase5c/final_eval_results_prompt14e.json"
+    p_md = PROJECT_ROOT / "reports/phase5c/final_eval_report_prompt14e.md"
+    if not p_json.exists():
+        p_json = PROJECT_ROOT / "reports/phase5c/final_eval_results.json"
+        p_md = PROJECT_ROOT / "reports/phase5c/final_eval_report.md"
+    return p_json, p_md
+
+
 def test_prompt14e_results_json_and_md_exist_and_hashes_match() -> None:
-    json_path = PROJECT_ROOT / "reports/phase5c/final_eval_results.json"
-    md_path = PROJECT_ROOT / "reports/phase5c/final_eval_report.md"
-    assert json_path.exists(), "Missing reports/phase5c/final_eval_results.json"
-    assert md_path.exists(), "Missing reports/phase5c/final_eval_report.md"
+    json_path, md_path = get_14e_paths()
+    assert json_path.exists(), "Missing 14e results json"
+    assert md_path.exists(), "Missing 14e report md"
 
     data = json.loads(json_path.read_text(encoding="utf-8"))
     assert data["status"] == "PART_A_DONE_AWAITING_HELDOUT_V2"
@@ -28,8 +36,7 @@ def test_prompt14e_results_json_and_md_exist_and_hashes_match() -> None:
 
 
 def test_prompt14e_md_vs_json_verification_perfect_match() -> None:
-    json_path = PROJECT_ROOT / "reports/phase5c/final_eval_results.json"
-    md_path = PROJECT_ROOT / "reports/phase5c/final_eval_report.md"
+    json_path, md_path = get_14e_paths()
     data = json.loads(json_path.read_text(encoding="utf-8"))
     md_text = md_path.read_text(encoding="utf-8")
 
@@ -46,7 +53,7 @@ def test_prompt14e_md_vs_json_verification_perfect_match() -> None:
 
 
 def test_prompt14e_step1c_caption_recount_and_manual_samples() -> None:
-    json_path = PROJECT_ROOT / "reports/phase5c/final_eval_results.json"
+    json_path, _ = get_14e_paths()
     data = json.loads(json_path.read_text(encoding="utf-8"))
     s1c = data["step_1c_caption_limitation"]
 
@@ -66,7 +73,7 @@ def test_prompt14e_step1c_caption_recount_and_manual_samples() -> None:
 
 
 def test_prompt14e_step2_gpu_and_way2_authorization_logged() -> None:
-    json_path = PROJECT_ROOT / "reports/phase5c/final_eval_results.json"
+    json_path, _ = get_14e_paths()
     data = json.loads(json_path.read_text(encoding="utf-8"))
     s2 = data["step_2_gpu"]
 
@@ -83,7 +90,7 @@ def test_prompt14e_step2_gpu_and_way2_authorization_logged() -> None:
 
 
 def test_prompt14e_part_a_latency_results_and_post_part_a_cir_decision() -> None:
-    json_path = PROJECT_ROOT / "reports/phase5c/final_eval_results.json"
+    json_path, _ = get_14e_paths()
     data = json.loads(json_path.read_text(encoding="utf-8"))
     pa = data["part_a_latency"]
 
