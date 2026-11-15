@@ -1,0 +1,1602 @@
+{
+  "10313": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 8.538,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "11179": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.892,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "11608": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.339,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "11765": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.556,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "11920": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 15.709,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "12166": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.694,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "12839": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 8.716,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "12910": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.549,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "13107": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 8.381,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "13680": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.545,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "14081": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.821,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "14166": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 8.063,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "14373": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.478,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "14604": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.413,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "14625": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.349,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "14686": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.472,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "14753": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.319,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "14892": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.818,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "15337": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.264,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "15622": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.925,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "15802": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.392,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "15959": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.716,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16112": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.148,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16169": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.127,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16465": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.32,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "16504": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.165,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17008": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 8.046,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17387": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.115,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17402": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.973,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17408": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.131,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17662": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.592,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17774": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.973,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17786": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.295,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "17811": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.139,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "18266": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.055,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "18376": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.961,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "18517": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.381,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "18820": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.275,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19441": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.359,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19502": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.248,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "19804": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.329,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "20464": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.121,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "20627": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.057,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "21508": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.181,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "21727": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.482,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "22224": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.102,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "22674": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.118,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "22844": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.366,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "23148": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.471,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "23278": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.379,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "24302": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.166,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "24608": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.606,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "24789": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.134,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "25048": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.869,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "25206": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.851,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "25459": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.21,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "25927": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.946,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26073": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.41,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26438": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.241,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26484": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.586,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "2654": {
+    "raw_caption": "Mô tả ngắn gọn gọn, súc tích sản phẩm thời trang trong hình",
+    "cleaned_caption": "Mô tả ngắn gọn gọn, súc tích sản phẩm thời trang trong hình",
+    "latency_sec": 6.927,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26627": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.04,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26724": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.843,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "26893": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.08,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "27821": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.933,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "28281": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.021,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "28895": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.32,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "28964": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.225,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "29300": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.101,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "29572": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.19,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "29840": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.043,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30075": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.776,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30300": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.385,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30557": {
+    "raw_caption": "Các mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình b�",
+    "cleaned_caption": "Các mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình b�",
+    "latency_sec": 7.06,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30752": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.203,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30810": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.771,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "30863": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.797,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "31356": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.468,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "31423": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.18,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "31578": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.534,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "31955": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 9.603,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "32144": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.18,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "32427": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.865,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "32508": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.282,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "32836": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.306,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "32848": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.957,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "32981": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 8.081,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "3308": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.268,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "33092": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.256,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "33316": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.7,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "33417": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.042,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "33541": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.331,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "33952": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.868,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34385": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.648,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34797": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.124,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34837": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.438,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34908": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.399,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34952": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.102,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "34977": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 8.043,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "35633": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.574,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "35691": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.275,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "36621": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.396,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "36744": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.284,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "3696": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.023,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37160": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.977,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37299": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.03,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37315": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.268,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "37927": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.915,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "39202": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.303,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "39480": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 11.795,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "39592": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 17.385,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "39724": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 17.162,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "40000": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 17.49,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "40526": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 16.923,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "40606": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 16.818,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "4131": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 16.76,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "42046": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 11.004,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "42230": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.839,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "42271": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 16.183,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "42273": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 16.956,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "42632": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 17.099,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "43184": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 14.293,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "43207": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.395,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "43484": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.192,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "43492": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.285,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "43494": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 14.153,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "43701": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.514,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "4397": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.314,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "44601": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 12.869,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "45045": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.493,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "45324": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.825,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "45872": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.101,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "4590": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 12.953,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "46044": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 12.818,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "46156": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.188,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "46306": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.699,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "46589": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.228,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "47125": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.521,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "47156": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 12.979,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "47185": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.295,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "4732": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.795,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "47524": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.415,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "47978": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.211,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "4841": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.239,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "48679": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.415,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "48726": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 13.777,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "48825": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 12.931,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "49059": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 11.154,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "49791": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.326,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "49893": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.29,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "49916": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.496,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "49972": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.547,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "50298": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.896,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "50444": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.612,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "5055": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.497,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "50989": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.453,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "5115": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.354,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51158": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.03,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51377": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.54,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51653": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.628,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51826": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.522,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "51890": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.481,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "52380": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.679,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "52896": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.761,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "53462": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.654,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "53779": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.515,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "54168": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.727,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "54412": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.02,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "54558": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.656,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "5480": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.885,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "57247": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.559,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "57427": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.636,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58259": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.744,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58313": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.746,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58456": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.582,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "58588": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.674,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "5985": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.683,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "6157": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.596,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "6552": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.623,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "6738": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.55,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "6785": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.739,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7028": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.868,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7056": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.48,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7099": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.863,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7131": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.664,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7366": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.256,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7373": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.02,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7494": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 8.174,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7525": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.161,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7569": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.532,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7701": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.167,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "7829": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.058,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "8313": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.999,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "8467": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.715,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "8490": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.844,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "8752": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 7.101,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "9029": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.946,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "9385": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.713,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "9709": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.972,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  },
+  "9821": {
+    "raw_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "cleaned_caption": "Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng",
+    "latency_sec": 6.844,
+    "model_id": "OpenGVLab/InternVL2-2B",
+    "revision": "e4f6747bd20f139e637642c6a058c6bd00b36919",
+    "seed": 42
+  }
+}

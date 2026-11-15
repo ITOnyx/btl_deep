@@ -40,6 +40,12 @@ index_v2/*
 !index_v2/manifest.json
 index_v3_*/*
 !index_v3_*/manifest.json
+
+# Scratch & drafts
+*.draft.json
+*.draft.py
+*.scratch.*
+
 # Temporary / OS
 .DS_Store
 Thumbs.db
