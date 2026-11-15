@@ -1,0 +1,60 @@
+{
+  "status": "FINAL_EVAL_CORRECTIONS_V1",
+  "created_at_utc": "2026-11-15T04:35:37Z",
+  "frozen_results_sha256": "8a89359af8e0cbe4a8eb2373ce9a3d8991657a554e99c5bfd5efad850ca96a01",
+  "supplements_sha256": "01768f836f245c7693381226bfb4fc061e94d42f61582eff6018cad667337f71",
+  "erratum_notice": "Tệp này lưu trữ các hiệu chỉnh phân loại cơ học, sửa lỗi trình bày và cập nhật nhãn lát cắt theo đúng yêu cầu của Prompt 14g và Prompt 14h. Các số liệu điểm số chính trong final_eval_results.json vẫn là KẾT QUẢ ĐÓNG BĂNG bất biến.",
+  "latency_corrections": {
+    "primary_ram_preloaded": {
+      "status": "PASS_FULL",
+      "label_vi": "Đạt SLA toàn bộ 4 luồng",
+      "passed_count": 4,
+      "total_streams": 4,
+      "by_stream": {
+        "stream1_text_to_image": "Đạt chắc chắn",
+        "stream2_image_to_image": "Đạt chắc chắn",
+        "stream3_cir_catalog": "Đạt chắc chắn",
+        "stream4_cir_upload": "Đạt chắc chắn"
+      },
+      "warn_p99_cir_upload_over_200ms": true,
+      "pooled_p99_cir_upload_ram_ms": 201.238
+    },
+    "secondary_disk_jpeg_decode": {
+      "status": "PASS_CONDITIONAL",
+      "label_vi": "Không đạt PASS_FULL 4/4 (cir_v1_01 Chưa đạt; cir_v1_05 Đạt có điều kiện)",
+      "passed_count": 3,
+      "total_streams": 4,
+      "by_stream": {
+        "stream1_text_to_image": "Đạt chắc chắn (pure text, không tải ảnh)",
+        "stream2_image_to_image": "Đạt chắc chắn",
+        "stream3_cir_catalog": "Đạt chắc chắn (catalog image)",
+        "stream4_cir_upload__cir_v1_01": "Chưa đạt",
+        "stream4_cir_upload__cir_v1_05": "Đạt theo trung vị nhưng có run vượt"
+      },
+      "erratum_secondary_disk": "Nhãn latency_conclusion_secondary_disk trong final_eval_results.json (PASS_FULL 4/4) là SAI về mặt logic và được thay thế chính thức bằng bản ghi này. Trên biến thể đọc đĩa thực tế: cir_v1_01 Chưa đạt (median p95 = 201.507 ms >= 200 ms); cir_v1_05 Đạt theo trung vị nhưng có run vượt (median p95 = 196.724 ms, max = 205.509 ms).",
+      "warn_p99_cir_upload_over_200ms": true,
+      "pooled_p99_cir_upload_disk_ms": 240.433
+    }
+  },
+  "paired_difference_labels": {
+    "cfg_v5_01_vs_model_only__map": "Khác biệt có ý nghĩa (cfg_v5_01 hơn model_only)",
+    "cfg_v5_01_vs_model_only__r10": "Khác biệt có ý nghĩa (cfg_v5_01 hơn model_only)",
+    "cfg_v5_09_vs_model_only__map": "Khác biệt có ý nghĩa (cfg_v5_09 hơn model_only)",
+    "cfg_v5_09_vs_model_only__r10": "Khác biệt có ý nghĩa (cfg_v5_09 hơn model_only)",
+    "cfg_v5_09_vs_cfg_v5_01__map": "Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_09)",
+    "cfg_v5_09_vs_cfg_v5_01__r10": "Chưa kết luận được (CI chứa hoặc chạm 0)",
+    "cfg_v5_08b_vs_model_only__map": "Khác biệt có ý nghĩa (cfg_v5_08b hơn model_only)",
+    "cfg_v5_08b_vs_cfg_v5_01__map": "Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_08b)",
+    "cfg_v5_08b_vs_cfg_v5_01__r10": "Chưa kết luận được (CI chứa hoặc chạm 0)",
+    "cfg_v5_06_vs_cfg_v5_01__map": "Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_06)",
+    "cfg_v5_06_vs_cfg_v5_01__r10": "Chưa kết luận được (CI chứa hoặc chạm 0)",
+    "cir_v1_05_vs_cir_v1_01__map": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)",
+    "cir_v1_05_vs_cir_v1_01__r10": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+  },
+  "slice_counts_corrected": {
+    "thin_slots_n": 136,
+    "non_thin_slots_n": 15,
+    "non_thin_slots_warning": "Cảnh báo n nhỏ: n=15, [1,1] suy biến, không đại diện"
+  },
+  "secondary_gt_description_corrected": "within_group_mAP 0.5095 vs 0.5177 (chênh lệch +0.0082, 95% CI chồng lấn hoàn toàn). Thứ tự phụ hoàn toàn do cosine SigLIP quyết định."
+}

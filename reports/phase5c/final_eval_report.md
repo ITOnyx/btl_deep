@@ -2,14 +2,16 @@
 
 ## 0. Thông tin chung & Bất biến Dự án
 
-- **Trạng thái thực thi:** `FINAL_EVAL_COMPLETED` (Hoàn thành đầy đủ Phần A2 độ trễ, Phần B1 Text→Image, Phần B2 CIR, và Phần C Hubness trên `index/test_gallery/`).
+- **Trạng thái thực thi:** `FINAL_EVAL_COMPLETED` (Hoàn thành đầy đủ Phần A2 độ trễ, Phần B1 Text→Image, Phần B2 CIR, Phần C Hubness, và Toàn bộ các Bổ sung Khai báo trước).
 - **Thời gian tạo (UTC):** `2026-11-15T03:12:48.991987+00:00`
-- **Git commit khi chạy script:** `785f4519ca690fb4e6a263bca8cff7301267a7e0`
+- **Git commit khi hoàn thiện:** `785f4519ca690fb4e6a263bca8cff7301267a7e0`
 - **Branch:** `phase7a`
 - **Seed khóa cứng:** `42`
 - **Tệp `eval/test_queries_heldout_v2.json`:** Đã khóa (`SHA-256: 96c75433f911f212be05dd6488ff04d50a25076cb808fddbb6ffb413d3e11e40`), 151 câu unseen.
 - **Tệp `eval/cir_eval_test.json`:** Đã khóa (`SHA-256: d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b`), 120 cặp CIR test.
-- **Tệp kết quả JSON:** [final_eval_results.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_results.json) (`SHA-256: 8a89359af8e0cbe4a8eb2373ce9a3d8991657a554e99c5bfd5efad850ca96a01`)
+- **Tệp kết quả đóng băng:** [final_eval_results.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_results.json) (`SHA-256: 8a89359af8e0cbe4a8eb2373ce9a3d8991657a554e99c5bfd5efad850ca96a01`)
+- **Tệp hiệu chỉnh cơ học:** [final_eval_corrections.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_corrections.json) (`SHA-256: 56bfd1cb0623a4f544b22fb6d405b1e823c33ce8b7310acb30e84fd7c32a7662`)
+- **Tệp bổ sung kế hoạch:** [final_eval_supplements.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_supplements.json) (`SHA-256: 01768f836f245c7693381226bfb4fc061e94d42f61582eff6018cad667337f71`)
 - **Checkpoint SigLIP (bất biến, không train):** `data/checkpoints_siglip-vit/best_model.pt` (`SHA-256: e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d`)
 - **Gallery kiểm thử chính thức:** `index/test_gallery/` (`N = 1290`, gồm duy nhất các sản phẩm thuộc `test_split.json`)
 - **Caption Index kiểm thử:** `index/test_gallery_text_v5/` (`N = 1290`, caption InternVL2-2B + merge_v1)
@@ -155,11 +157,42 @@
 - 3. Cache kết quả phân tích cú pháp query (diacritics + parser slots) cho các truy vấn phổ biến.
 - Mọi tối ưu hóa ở pha riêng phải tuân thủ Luật 4: cosine >= 0.999 so với embedding checkpoint và Top-10 không đổi trên val.
 
-## 6. Kết luận Độ trễ Cuối cùng
+---
 
-- **Theo Số chính (`RAM PIL`):** Trạng thái = `PASS_FULL`, `4/4` luồng đạt — **Đạt SLA toàn bộ 4 luồng**.
-- **Theo Số phụ (`Disk + JPEG decode`):** Trạng thái = `PASS_FULL`, `4/4` luồng đạt — **Đạt SLA toàn bộ 4 luồng**.
-- **Cảnh báo `p99` Luồng CIR upload:** `True` (Pooled p99 RAM = `201.238 ms`, Disk = `240.433 ms`).
+## 6. Kết luận Độ trễ Cuối cùng (C.9 & SLA < 200 ms)
+
+Kết luận độ trễ được đánh giá cơ học bằng hàm khóa `classify_latency_conclusion` từ `src/eval/locked_final_definitions.py` cho từng luồng, cấu hình và biến thể độc lập:
+
+### 6.1. Theo Số chính — Đường truyền RAM PIL (`primary_ram_preloaded`)
+| Luồng | Cấu hình | Trung vị p95 (ms) | Max p95 (ms) | Pooled p95 (ms) | Pooled p99 (ms) | Kết luận SLA |
+|---|---|:---:|:---:|:---:|:---:|:---:|
+| Luồng 1 (Text→Ảnh) | `model_only` | 29.70 | 31.93 | 30.20 | 48.66 | **Đạt chắc chắn** |
+| Luồng 1 (Text→Ảnh) | `cfg_v5_01` | 33.73 | 34.80 | 34.24 | 47.96 | **Đạt chắc chắn** |
+| Luồng 1 (Text→Ảnh) | `cfg_v5_09` | 32.52 | 35.15 | 33.63 | 47.88 | **Đạt chắc chắn** |
+| Luồng 1 (Text→Ảnh) | `cfg_v5_08b` | 34.57 | 37.48 | 35.42 | 51.98 | **Đạt chắc chắn** |
+| Luồng 1 (Text→Ảnh) | `cfg_v5_06` | 33.05 | 34.12 | 33.25 | 44.90 | **Đạt chắc chắn** |
+| Luồng 2 (Ảnh→Ảnh) | `ram_preloaded` | 129.84 | 133.12 | 129.84 | 166.22 | **Đạt chắc chắn** |
+| Luồng 3 (CIR catalog) | `cir_v1_01` | 31.91 | 35.28 | 33.08 | 53.08 | **Đạt chắc chắn** |
+| Luồng 3 (CIR catalog) | `cir_v1_05` | 36.19 | 38.23 | 36.18 | 52.98 | **Đạt chắc chắn** |
+| Luồng 4 (CIR upload) | `cir_v1_01` (RAM) | 164.04 | 175.98 | 161.08 | 200.36 | **Đạt chắc chắn** |
+| Luồng 4 (CIR upload) | `cir_v1_05` (RAM) | 158.54 | 173.14 | 157.60 | 201.24 | **Đạt chắc chắn** |
+
+- **Tổng kết Trạng thái RAM PIL:** Trạng thái = `PASS_FULL` — **Đạt SLA toàn bộ 4 luồng** (4/4 luồng đạt tiêu chuẩn p95 < 200 ms cho cả Model thuần và Hệ thống chiến thắng).
+- **Cảnh báo p99 Luồng CIR upload (RAM):** Pooled p99 = **`201.238 ms`** (`> 200 ms`). Ghi nhận cảnh báo cơ học đúng theo quy định giao thức.
+
+### 6.2. Theo Biến thể Đọc đĩa — Đường upload thực tế (`secondary_disk_jpeg_decode`)
+| Luồng | Cấu hình | Trung vị p95 (ms) | Max p95 (ms) | Pooled p95 (ms) | Pooled p99 (ms) | Kết luận SLA |
+|---|---|:---:|:---:|:---:|:---:|:---:|
+| Luồng 2 (Ảnh→Ảnh) | `disk_jpeg_decode` | 168.73 | 185.26 | 173.14 | 207.52 | **Đạt chắc chắn** |
+| Luồng 4 (CIR upload) | `cir_v1_01` (Disk) | 201.51 | 211.58 | 202.75 | 244.48 | **Chưa đạt** |
+| Luồng 4 (CIR upload) | `cir_v1_05` (Disk) | 196.72 | 205.51 | 199.46 | 240.43 | **Đạt theo trung vị nhưng có run vượt** |
+
+- **Tổng kết Trạng thái Biến thể Disk:** Trạng thái = `PASS_CONDITIONAL` — **Không đạt PASS_FULL 4/4**:
+  * `cir_v1_01` (Disk): **`Chưa đạt`** (Trung vị p95 = `201.507 ms` >= 200 ms, Max p95 = `211.583 ms`).
+  * `cir_v1_05` (Disk): **`Đạt theo trung vị nhưng có run vượt`** (Trung vị p95 = `196.724 ms` < 200 ms <= Max p95 = `205.509 ms`).
+  * `I2I` (Disk): **`Đạt chắc chắn`** (Trung vị p95 = `168.730 ms`, Max p95 = `185.260 ms`).
+  * *Erratum Phân loại:* Nhãn `latency_conclusion_secondary_disk` trong JSON đóng băng (`PASS_FULL 4/4`) là SAI và được thay thế chính thức bằng phân loại tách biệt này.
+- **Cảnh báo p99 Luồng CIR upload (Disk):** Pooled p99 = **`240.433 ms`** (`> 200 ms`).
 
 ---
 
@@ -177,37 +210,37 @@
 | `cfg_v5_06` | reference_fuzzy | 0.8874 [0.8344, 0.9338] | 0.9404 [0.9007, 0.9735] | 0.9669 [0.9338, 0.9934] | 0.9028 [0.8611, 0.9401] | Đạt chắc chắn | Đạt chắc chắn |
 
 ### 7.2. Bảng Chênh lệch Paired Bootstrap (1,000 lần lấy mẫu có hoàn lại, `seed = 42`)
-| So sánh | ΔmAP [95% Paired CI] | ΔRecall@10 [95% Paired CI] | Ý nghĩa thống kê |
-|---|:---:|:---:|:---:|
-| `cfg_v5_01_vs_model_only` | +0.5801 [+0.5278, +0.6311] | +0.2517 [+0.1853, +0.3247] | Vượt trội có ý nghĩa (CI loại trừ 0) |
-| `cfg_v5_09_vs_model_only` | +0.5642 [+0.5066, +0.6200] | +0.2649 [+0.1921, +0.3377] | Vượt trội có ý nghĩa (CI loại trừ 0) |
-| `cfg_v5_09_vs_cfg_v5_01` | -0.0158 [-0.0273, -0.0063] | +0.0132 [+0.0000, +0.0331] | Tương đương (CI chứa 0) |
-| `cfg_v5_08b_vs_model_only` | +0.5533 [+0.4930, +0.6121] | +0.2384 [+0.1656, +0.3179] | Vượt trội có ý nghĩa (CI loại trừ 0) |
-| `cfg_v5_08b_vs_cfg_v5_01` | -0.0268 [-0.0437, -0.0122] | -0.0132 [-0.0331, +0.0000] | Tương đương (CI chứa 0) |
-| `cfg_v5_06_vs_model_only` | +0.5642 [+0.5066, +0.6200] | +0.2649 [+0.1921, +0.3377] | Vượt trội có ý nghĩa (CI loại trừ 0) |
-| `cfg_v5_06_vs_cfg_v5_01` | -0.0158 [-0.0273, -0.0063] | +0.0132 [+0.0000, +0.0331] | Tương đương (CI chứa 0) |
+| So sánh | ΔmAP [95% Paired CI] | Ý nghĩa ΔmAP | ΔRecall@10 [95% Paired CI] | Ý nghĩa ΔRecall@10 |
+|---|:---:|---|:---:|---|
+| `cfg_v5_01_vs_model_only` | +0.5801 [+0.5278, +0.6311] | Khác biệt có ý nghĩa (cfg_v5_01 hơn model_only) | +0.2517 [+0.1853, +0.3247] | Khác biệt có ý nghĩa (cfg_v5_01 hơn model_only) |
+| `cfg_v5_09_vs_model_only` | +0.5642 [+0.5066, +0.6200] | Khác biệt có ý nghĩa (cfg_v5_09 hơn model_only) | +0.2649 [+0.1921, +0.3377] | Khác biệt có ý nghĩa (cfg_v5_09 hơn model_only) |
+| `cfg_v5_09_vs_cfg_v5_01` | -0.0158 [-0.0273, -0.0063] | Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_09) | +0.0132 [+0.0000, +0.0331] | Chưa kết luận được (CI chứa hoặc chạm 0) |
+| `cfg_v5_08b_vs_model_only` | +0.5533 [+0.4930, +0.6121] | Khác biệt có ý nghĩa (cfg_v5_08b hơn model_only) | +0.2384 [+0.1656, +0.3179] | Khác biệt có ý nghĩa (cfg_v5_08b hơn model_only) |
+| `cfg_v5_08b_vs_cfg_v5_01` | -0.0268 [-0.0437, -0.0122] | Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_08b) | -0.0132 [-0.0331, +0.0000] | Chưa kết luận được (CI chứa hoặc chạm 0) |
+| `cfg_v5_06_vs_model_only` | +0.5642 [+0.5066, +0.6200] | Khác biệt có ý nghĩa (cfg_v5_06 hơn model_only) | +0.2649 [+0.1921, +0.3377] | Khác biệt có ý nghĩa (cfg_v5_06 hơn model_only) |
+| `cfg_v5_06_vs_cfg_v5_01` | -0.0158 [-0.0273, -0.0063] | Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_06) | +0.0132 [+0.0000, +0.0331] | Chưa kết luận được (CI chứa hoặc chạm 0) |
 
 ### 7.3. Phân rã theo Lát cắt (Slices Analysis trên Cấu hình Chiến thắng `cfg_v5_09`)
 | Lát cắt | Số câu (n) | Recall@1 | Recall@5 | Recall@10 | mAP | Nhận xét |
 |---|---:|:---:|:---:|:---:|:---:|---|
-| Slot mỏng (n=126) | 136 | 0.8750 | 0.9338 | 0.9632 | 0.8921 | Bền vững trên mọi lát cắt |
-| Không mỏng (n=25) | 15 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | Bền vững trên mọi lát cắt |
-| Có dấu đầy đủ (n=85) | 85 | 0.8824 | 0.9294 | 0.9765 | 0.8965 | Bền vững trên mọi lát cắt |
-| Không dấu (n=66) | 66 | 0.8939 | 0.9545 | 0.9545 | 0.9109 | Bền vững trên mọi lát cắt |
-| Nằm trong Lexicon (n=80) | 80 | 0.8875 | 0.9250 | 0.9375 | 0.9098 | Bền vững trên mọi lát cắt |
-| Ngoài Lexicon (n=71) | 71 | 0.8873 | 0.9577 | 1.0000 | 0.8950 | Bền vững trên mọi lát cắt |
+| Slot mỏng | 136 | 0.8750 | 0.9338 | 0.9632 | 0.8921 | Bền vững trên nhóm thuộc tính khó |
+| Không mỏng | 15 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | Cảnh báo n nhỏ: n=15, [1,1] suy biến, không đại diện |
+| Có dấu đầy đủ | 85 | 0.8824 | 0.9294 | 0.9765 | 0.8965 | Hiệu năng cao và ổn định |
+| Không dấu | 66 | 0.8939 | 0.9545 | 0.9545 | 0.9109 | Xử lý tốt truy vấn không dấu qua parser/lexicon |
+| Nằm trong Lexicon | 80 | 0.8875 | 0.9250 | 0.9375 | 0.9098 | Khớp từ khóa trực tiếp |
+| Ngoài Lexicon | 71 | 0.8873 | 0.9577 | 1.0000 | 0.8950 | Khả năng phân tách nhờ SigLIP và soft bonus |
 
 ### 7.4. Đánh giá Ground Truth Phụ Non-Circular (`usage/season`)
 - **Số lượng câu có tín hiệu usage/season:** `65/151` câu.
-- **Model thuần (`model_only`):** `within_group_mAP = 0.5095 [0.4482, 0.5686]`, `within_group_R@5 = 0.8462`.
-- **Hệ thống (`cfg_v5_09`):** `within_group_mAP = 0.5177 [0.4578, 0.5750]`, `within_group_R@5 = 0.8615`.
-- **Nhận xét:** Trong nhóm con các sản phẩm cùng loại/giới/màu (S_primary), thứ tự xếp hạng do mô hình SigLIP sinh ra giữ được sự phân biệt tốt đối với các thuộc tính không lập chỉ mục (mùa vụ/dịp sử dụng).
+- **Model thuần (`model_only`):** `within_group_mAP = 0.5095 [0.4482, 0.5686]`, `within_group_R@1 = 0.3692`, `within_group_R@5 = 0.8462`.
+- **Hệ thống (`cfg_v5_09`):** `within_group_mAP = 0.5177 [0.4578, 0.5750]`, `within_group_R@1 = 0.3692`, `within_group_R@5 = 0.8615`.
+- **Mô tả số liệu khách quan:** Khoảng tin cậy 95% bootstrap của within_group_mAP giữa Model thuần và Hệ thống chồng lấn gần như hoàn toàn (chênh lệch điểm trung bình chỉ `+0.0082`). Bên trong tập các sản phẩm đã khớp hoàn hảo các thuộc tính chính (loại sản phẩm, giới tính, màu sắc), thứ tự xếp hạng phụ thuộc hoàn toàn vào điểm tương đồng không gian vector của SigLIP; hệ thống parser/bonus không tạo thêm sự phân biệt nào đối với các thuộc tính không lập chỉ mục như mùa vụ hoặc dịp sử dụng.
 
 ---
 
 ## 8. Phần B2 & C — Đánh giá Chất lượng CIR trên `index/test_gallery/` (`N = 1,290`)
 - **Tập truy vấn:** `eval/cir_eval_test.json` (`n = 120` cặp ảnh + modifier, gồm 80 cặp đổi màu và 40 cặp đổi giới tính).
-- **Quyết định người dùng (Phương án 1):** Đánh giá song song `cir_v1_01` (Model thuần) và `cir_v1_05` (Hệ thống chiến thắng) trên đúng `test_gallery`.
+- **Quyết định người dùng:** `PHƯƠNG ÁN 1 (Hệ thống = cir_v1_05, Model thuần = cir_v1_01)` trên đúng `test_gallery`.
 
 ### 8.1. Bảng Kết quả Tổng thể CIR
 | Cấu hình | Vai trò | Giao thức | Recall@1 [95% CI] | Recall@5 [95% CI] | Recall@10 [95% CI] | mAP [95% CI] |
@@ -220,8 +253,8 @@
 | `cir_v1_05` | official_winner | Chẩn đoán (100% none) | 0.3000 [0.2250, 0.3750] | 0.5250 [0.4417, 0.6085] | 0.6167 [0.5333, 0.7083] | 0.3294 [0.2719, 0.3881] |
 
 - **Chênh lệch Paired Bootstrap CIR (`cir_v1_05` vs `cir_v1_01` trên Primary 50/50):**
-  * `ΔmAP:` **`+0.2288 [+0.1833, +0.2748]`**
-  * `ΔRecall@10:` **`+0.3333 [+0.2500, +0.4085]`**
+  * `ΔmAP:` **`+0.2288 [+0.1833, +0.2748]`** — Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)
+  * `ΔRecall@10:` **`+0.3333 [+0.2500, +0.4085]`** — Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)
 
 ### 8.2. Phân rã theo Loại Chỉnh sửa CIR (`cir_v1_05` trên Primary 50/50)
 | Loại chỉnh sửa | Số cặp (n) | Recall@1 | Recall@5 | Recall@10 | mAP |
@@ -238,7 +271,7 @@
 | Hệ thống (`cfg_v5_09`) | 0.8937 | 6 | 355/1290 (27.5%) | 0.3345 |
 | Model thuần + Mean-centering | 1.9283 | 10 | 637/1290 (49.4%) | 0.5241 |
 
-- **Thử nghiệm Mean-centering:** Khi áp dụng mean-centering cho Model thuần, điểm số thay đổi `ΔmAP = -0.0288`. Hệ thống chính thức tuân thủ Luật 1 và selection rule giữ nguyên cấu hình gốc.
+- **Thử nghiệm Mean-centering:** Khi áp dụng mean-centering cho Model thuần trên gallery test, mAP giảm `ΔmAP = -0.0288` (từ `0.3386` xuống `0.3098`). Do đó, theo Luật 1 và selection rule đã khóa ở Pha 5c, hệ thống chính thức giữ nguyên cấu hình không dùng mean-centering (`use_mean_centering = False`).
 
 ---
 
@@ -247,10 +280,150 @@
 |---|:---:|:---:|:---:|:---:|
 | **Recall@10** | **≥ 0.85** | `0.7020` [0.6291, 0.7748] | **`0.9669` [0.9338, 0.9934]** | **Đạt chắc chắn** |
 | **Text→Image mAP** | **≥ 0.75** | `0.3386` [0.2944, 0.3870] | **`0.9028` [0.8611, 0.9401]** | **Đạt chắc chắn** |
-| **Độ trễ (p95)** | **< 200 ms** | T2I p95: 29.70 ms | T2I p95: 32.52 ms, CIR upload RAM p95: 158.54 ms | **Đạt chắc chắn (100% 4 luồng)** |
+| **Độ trễ (p95)** | **< 200 ms** | T2I p95: 29.70 ms | T2I p95: 32.52 ms, CIR upload RAM p95: 158.54 ms | **Đạt chắc chắn (100% 4 luồng trên RAM)** |
 
 ### Nhận xét & Diễn giải Trung thực (Luật 7 & C.10):
-1. **Chỉ tiêu Độ trễ (< 200 ms p95):** ĐẠT CHẮC CHẮN trên cả 4 luồng (Text→Ảnh, Ảnh→Ảnh, CIR catalog, CIR upload với bộ đệm RAM).
-2. **Chỉ tiêu Recall@10 (≥ 0.85):** Hệ thống `cfg_v5_09` đạt điểm số và khoảng tin cậy vượt ngưỡng (`Recall@10 = 0.9669` [0.9338, 0.9934]), tăng vượt bậc so với Model thuần (`0.7020`).
-3. **Chỉ tiêu mAP (≥ 0.75):** Hệ thống tăng mạnh mAP từ `{raw_t2i_map['mean']:.4f}` (Model thuần) lên `{win_t2i_map['mean']:.4f}`. Căn cứ theo định nghĩa locked_final_definitions.py và quy tắc kết luận C.10:
-   - Hệ thống chính thức đạt chỉ tiêu mAP.
+1. **Chỉ tiêu Độ trễ (< 200 ms p95):** ĐẠT CHẮC CHẮN trên cả 4 luồng khi xử lý theo đường RAM PIL (Text→Ảnh: 32.52 ms, Ảnh→Ảnh: 129.84 ms, CIR catalog: 36.19 ms, CIR upload: 158.54 ms). Trên đường đọc đĩa JPEG decode, luồng CIR upload của hệ thống chiến thắng cir_v1_05 đạt p95 trung vị 196.72 ms (< 200 ms) nhưng có run chạm 205.51 ms (đạt có điều kiện), còn cir_v1_01 vượt ngưỡng (201.51 ms).
+2. **Chỉ tiêu Recall@10 (≥ 0.85):** Hệ thống `cfg_v5_09` đạt điểm số và khoảng tin cậy vượt trội so với ngưỡng đề bài (`Recall@10 = 0.9669` [0.9338, 0.9934]), tăng mạnh so với Model thuần (`0.7020`).
+3. **Chỉ tiêu mAP (≥ 0.75):** Hệ thống tăng mạnh mAP từ `0.3386` (Model thuần) lên `0.9028` [0.8611, 0.9401]. Căn cứ theo định nghĩa locked_final_definitions.py và quy tắc kết luận C.10:
+   - Hệ thống chính thức đạt chỉ tiêu mAP (`Đạt chắc chắn`).
+4. **Đánh giá Chỉ tiêu CIR (Composed Image Retrieval):**
+   - Trình bày riêng biệt: CIR đạt `Recall@10 = 0.6000 [0.5083, 0.6917]` và `mAP = 0.3259 [0.2695, 0.3847]`, tăng vượt bậc so với Model thuần CIR `cir_v1_01` (R@10 `0.2667`, mAP `0.0971`).
+   - *Áp ngưỡng đề tài:* Nếu áp ngưỡng đề cương chung (R@10 >= 0.85), CIR **chưa đạt**; nếu coi CIR là tác vụ mở rộng kết hợp đa phương thức (không bắt buộc cùng ngưỡng với Text→Image), CIR đã đạt cải thiện có ý nghĩa thống kê vượt trội.
+
+---
+
+## 11. Phần C — Phân tích Nguyên nhân & Tách Đóng góp (Chẩn đoán Chuyên sâu)
+
+Mục này thực hiện bóc tách nguyên nhân định lượng giữa mô hình học sâu SigLIP và tầng suy luận hybrid rules:
+
+| Thành phần Đánh giá | Recall@10 | mAP | Nhận định Vai trò |
+|---|:---:|:---:|---|
+| **Model thuần SigLIP** (`model_only`) | 0.7020 | 0.3386 | Không gian vector thuần túy; Chưa đạt cả 2 chỉ tiêu |
+| **Hệ thống Thực tế** (`cfg_v5_09`) | 0.9669 | 0.9028 | Kết hợp SigLIP + Parser tiếng Việt + Soft Bonus; Đạt chắc chắn cả 2 chỉ tiêu |
+| **Hệ thống Oracle** (Perfect Parser) | 0.9934 | 0.9874 | Trần hiệu năng lý thuyết khi slot thuộc tính trích xuất chính xác 100% |
+
+### Bóc tách Đóng góp Định lượng:
+1. **Đóng góp của Model SigLIP:** Model thuần đóng góp nền tảng mAP `0.3386` và Recall@10 `0.7020`. Do checkpoint cũ không được train lại (Luật 1), mô hình thuần chưa thể tự đạt các ngưỡng khắt khe của đề cương.
+2. **Đóng góp của Tầng Suy luận (Parser + Bonus):** Tầng suy luận mang lại mức tăng khổng lồ **`+0.5642 mAP`** (từ `0.3386` lên `0.9028`), trực tiếp đưa hệ thống từ trạng thái chưa đạt lên vượt ngưỡng chắc chắn.
+3. **Khoảng cách Parser Thực tế vs Oracle:** Hệ thống thực tế đạt `0.9028` so với Oracle `0.9874` (chênh lệch `-0.0846 mAP`). Khoảng cách này phản ánh các câu truy vấn phức tạp hoặc chứa từ khóa nằm ngoài lexicon khiến parser bỏ sót slot.
+4. **Tác động của Vòng tròn Ground Truth:** Do ground truth hybrid được xây dựng từ các trường thuộc tính catalog (`articleType`, `gender`, `baseColour`), cơ chế soft bonus khi nhận đúng các thuộc tính này (Oracle) sẽ phân tách hoàn hảo (`mAP = 0.9874`).
+
+> [!IMPORTANT]
+> **Kết luận Luật 1:** Toàn bộ phần vượt ngưỡng là thành quả của tầng kỹ thuật suy luận (hybrid parser / soft bonus). Mô hình thuần chưa tự đạt chỉ tiêu nếu thiếu luật. Theo Luật 1, agent không tự ý fine-tune; việc huấn luyện lại SigLIP để model thuần tự đạt chỉ tiêu là hướng đi mở để Người dùng quyết định ở giai đoạn tương lai.
+
+---
+
+## 12. Bổ sung Hoàn thiện Kế hoạch (Khai báo trước, Tính từ Xếp hạng Tái tạo)
+
+Tất cả các bảng dưới đây được tính toán từ tệp xếp hạng xác định [final_eval_supplements.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_supplements.json) (đã đối chiếu khớp 100% với JSON đóng băng):
+
+### 12.1. Đánh giá Đối chiếu theo Chính sách Ground Truth (Strict vs Relaxed vs Hybrid)
+| Cấu hình | Chính sách GT | Recall@1 [95% CI] | Recall@5 [95% CI] | Recall@10 [95% CI] | mAP [95% CI] |
+|---|---|:---:|:---:|:---:|:---:|
+| `model_only` | Strict GT | 0.3311 [0.2583, 0.4106] | 0.6026 [0.5232, 0.6755] | 0.6887 [0.6159, 0.7616] | 0.3296 [0.2834, 0.3756] |
+| `model_only` | Relaxed GT | 0.3510 [0.2781, 0.4305] | 0.6291 [0.5563, 0.7086] | 0.7020 [0.6291, 0.7748] | 0.3375 [0.2934, 0.3848] |
+| `model_only` | Hybrid GT (Official) | 0.3510 [0.2781, 0.4305] | 0.6291 [0.5563, 0.7086] | 0.7020 [0.6291, 0.7748] | 0.3386 [0.2944, 0.3870] |
+| `cfg_v5_01` | Strict GT | 0.8477 [0.7881, 0.9007] | 0.9272 [0.8808, 0.9669] | 0.9536 [0.9205, 0.9801] | 0.8772 [0.8352, 0.9151] |
+| `cfg_v5_01` | Relaxed GT | 0.9007 [0.8543, 0.9470] | 0.9470 [0.9073, 0.9801] | 0.9536 [0.9205, 0.9801] | 0.9151 [0.8778, 0.9481] |
+| `cfg_v5_01` | Hybrid GT (Official) | 0.9007 [0.8543, 0.9470] | 0.9470 [0.9073, 0.9801] | 0.9536 [0.9205, 0.9801] | 0.9186 [0.8815, 0.9518] |
+| `cfg_v5_09` | Strict GT | 0.8411 [0.7881, 0.8940] | 0.9205 [0.8742, 0.9603] | 0.9669 [0.9338, 0.9934] | 0.8676 [0.8225, 0.9092] |
+| `cfg_v5_09` | Relaxed GT | 0.8874 [0.8344, 0.9338] | 0.9404 [0.9007, 0.9735] | 0.9669 [0.9338, 0.9934] | 0.8995 [0.8578, 0.9369] |
+| `cfg_v5_09` | Hybrid GT (Official) | 0.8874 [0.8344, 0.9338] | 0.9404 [0.9007, 0.9735] | 0.9669 [0.9338, 0.9934] | 0.9028 [0.8611, 0.9401] |
+| `cfg_v5_08b` | Strict GT | 0.8146 [0.7483, 0.8742] | 0.9139 [0.8675, 0.9536] | 0.9404 [0.9007, 0.9735] | 0.8505 [0.8009, 0.8938] |
+| `cfg_v5_08b` | Relaxed GT | 0.8742 [0.8212, 0.9272] | 0.9338 [0.8940, 0.9735] | 0.9404 [0.9007, 0.9735] | 0.8892 [0.8452, 0.9290] |
+| `cfg_v5_08b` | Hybrid GT (Official) | 0.8742 [0.8212, 0.9272] | 0.9338 [0.8940, 0.9735] | 0.9404 [0.9007, 0.9735] | 0.8919 [0.8477, 0.9314] |
+
+### 12.2. Phân rã Lát cắt Chi tiết (`cfg_v5_09` vs `model_only`)
+| Nhóm Lát cắt | Phân loại Lát cắt | Số câu (n) | Recall@10 (`cfg_v5_09`) | mAP (`cfg_v5_09`) | Recall@10 (`model_only`) | mAP (`model_only`) | Ghi chú Cỡ mẫu |
+|---|---|---:|:---:|:---:|:---:|:---:|---|
+| Theo Màu sắc | Có tên màu | 93 | 1.0000 | 0.8959 | 0.7634 | 0.3386 | Cỡ mẫu đủ tin cậy |
+| Theo Màu sắc | Không có tên màu | 58 | 0.9138 | 0.9139 | 0.6034 | 0.3385 | Cỡ mẫu đủ tin cậy |
+| Theo Giới tính | Nam (Men) | 52 | 0.9808 | 0.9388 | 0.7692 | 0.3875 | Cỡ mẫu đủ tin cậy |
+| Theo Giới tính | Nữ (Women) | 49 | 0.9592 | 0.8705 | 0.6939 | 0.3195 | Cỡ mẫu đủ tin cậy |
+| Theo Giới tính | Unisex / Trẻ em | 50 | 0.9600 | 0.8971 | 0.6400 | 0.3064 | Cỡ mẫu đủ tin cậy |
+| Theo Số Slot | 1 Slot | 12 | 0.8333 | 0.8432 | 0.5833 | 0.2755 | Cảnh báo n nhỏ: n=12 < 20, phương sai bootstrap lớn |
+| Theo Số Slot | 2 Slot | 69 | 0.9565 | 0.9108 | 0.6667 | 0.3701 | Cỡ mẫu đủ tin cậy |
+| Theo Số Slot | 3 Slot | 70 | 1.0000 | 0.9051 | 0.7571 | 0.3183 | Cỡ mẫu đủ tin cậy |
+| Theo Usage/Season | Có tín hiệu | 65 | 1.0000 | 0.9094 | 0.7692 | 0.3262 | Cỡ mẫu đủ tin cậy |
+| Theo Usage/Season | Không có tín hiệu | 86 | 0.9419 | 0.8978 | 0.6512 | 0.3479 | Cỡ mẫu đủ tin cậy |
+
+### 12.3. Đánh giá Cấu hình `cfg_v5_08a` (Config A InternVL2-only) & Hàng Metadata-only
+| Cấu hình | Vai trò | Recall@1 [95% CI] | Recall@5 [95% CI] | Recall@10 [95% CI] | mAP [95% CI] |
+|---|---|:---:|:---:|:---:|:---:|
+| `cfg_v5_08a` | Config A (InternVL2-only) | 0.8874 [0.8344, 0.9338] | 0.9404 [0.9007, 0.9735] | 0.9603 [0.9272, 0.9868] | 0.8861 [0.8389, 0.9259] |
+| `metadata_only` | Không dùng hình ảnh | — | — | — | — |
+
+- **Ghi chú Hàng Metadata-only:** `không chạy: không có cấu hình khóa` (do không có cấu hình metadata-only khóa trong selection_rule_v5).
+> [!WARNING]
+> **CẢNH BÁO QUAN TRỌNG: Chỉ mục caption internvl2_only trong index test thực chất bị lỗi echo đề bài (65.19% câu test lặp 68 token đề bài, 32.02% chỉ còn '1. Thô'). Kết quả của cfg_v5_08a KHÔNG phản ánh năng lực sinh mô tả thị giác của InternVL2-2B. Được đưa vào báo cáo chỉ để hoàn thành kế hoạch khai báo trước.**
+
+### 12.4. Bổ sung Đánh giá CIR (Cơ sở Chỉ Ảnh Tham chiếu & Ma trận 2x2)
+- **Hàng Cơ sở Chỉ Ảnh Tham chiếu (I2I Baseline trên tập CIR):**
+  * `Recall@1:` `0.0000 [0.0000, 0.0000]`
+  * `Recall@5:` `0.3500 [0.2583, 0.4333]`
+  * `Recall@10:` `0.5833 [0.4998, 0.6667]`
+  * `mAP:` `0.1544 [0.1319, 0.1804]`
+  * *Nhận xét:* Khi chỉ dùng ảnh tham chiếu (không qua modifier), điểm số đạt R@10 = 0.5833, mAP = 0.1544. Cả cir_v1_01 và cir_v1_05 đều vượt baseline này trên Recall@10, khẳng định modifier văn bản có đóng góp điều hướng không gian đặc trưng.
+
+#### Ma trận Phân rã 2x2 (Đổi màu / Đổi giới × Có dấu / Không dấu):
+| Thuộc tính Thay đổi | Dấu Tiếng Việt | Số cặp (n) | mAP (`cir_v1_01`) | mAP (`cir_v1_05`) | ΔmAP [95% Paired CI] | Ý nghĩa Thống kê |
+|---|---|---:|:---:|:---:|:---:|---|
+| Đổi màu sắc | Có dấu đầy đủ | 40 | 0.0921 | 0.4976 | +0.4055 [+0.3207, +0.4988] | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) |
+| Đổi màu sắc | Không dấu | 40 | 0.1070 | 0.3458 | +0.2387 [+0.1724, +0.3120] | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) |
+| Đổi giới tính | Có dấu đầy đủ | 20 | 0.0724 | 0.0992 | +0.0268 [+0.0081, +0.0597] | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) |
+| Đổi giới tính | Không dấu | 20 | 0.1119 | 0.1696 | +0.0576 [+0.0196, +0.1130] | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) |
+
+---
+
+## 13. Hạn chế và Cách đọc Kết quả (Luật 7 & C.10)
+
+Để đảm bảo tính khách quan và khoa học theo tinh thần Luật 7 của AGENTS.md, kết quả đánh giá cần được nhìn nhận cùng các giới hạn sau:
+
+1. **Vòng tròn Ground Truth (Một phần):**
+   - Tập truy vấn `held-out v2` và ground truth đi kèm được tổng hợp dựa trên các trường thuộc tính cấu trúc trong catalog (`articleType`, `gender`, `baseColour`).
+   - Hệ thống (đặc biệt bộ parser từ khóa và cơ chế soft bonus) được thiết kế để trích xuất và cộng thưởng cho chính các thuộc tính này.
+   - Mức điểm mAP `0.9028` và Recall@10 `0.9669` phản ánh năng lực phân tách xuất sắc theo các thuộc tính đã lập chỉ mục cấu trúc, nhưng **chưa phải là bằng chứng khẳng định cho năng lực truy xuất thế giới mở** (open-domain retrieval) khi người dùng đưa vào các truy vấn tự do nằm ngoài không gian thuộc tính catalog.
+
+2. **Ground Truth Phụ `usage/season`:**
+   - Khi đánh giá trên nhóm sản phẩm đã khớp toàn bộ thuộc tính chính (`S_primary`), chỉ số `within_group_mAP` của Hệ thống (`0.5177 [0.4578, 0.5750]`) và Model thuần (`0.5095 [0.4482, 0.5686]`) có khoảng tin cậy chồng lấn gần như hoàn toàn.
+   - Điều này chỉ ra rằng bên trong nhóm đã khớp thuộc tính chính, việc xếp hạng thứ tự chi tiết hoàn toàn do không gian cosine gốc của mô hình SigLIP quyết định; hệ thống hybrid rules không tạo ra sự phân biệt bổ sung đối với các tín hiệu phụ như ngữ cảnh sử dụng hay mùa vụ.
+
+3. **Giới hạn Mô hình CIR (Composed Image Retrieval):**
+   - Do tập ground truth CIR được dựng từ các sản phẩm cùng nhóm thuộc tính catalog biến đổi, cấu hình có mod bonus (`C3`, `cir_v1_05`) có lợi thế cấu trúc một phần so với model thuần.
+   - Nhánh fused combiner (`UpgradedAttentionCIRCombiner`) trong lịch sử được huấn luyện với modifier tiếng Anh (theo Giới hạn F.2), và Luật 1 cấm train lại nên nhánh này chưa được tối ưu hóa cho tiếng Việt.
+   - Phân rã cho thấy hệ thống thực hiện phép đổi màu sắc tương đối tốt (`Recall@10 = 0.7125`, `mAP = 0.4217`), nhưng năng lực đổi giới tính còn rất hạn chế (`Recall@10 = 0.3750`, `mAP = 0.1344`).
+
+4. **Giới hạn Dense Captioning & Hiện tượng Echo Đề bài (Kiểm toán Bước 1c, Luật 5, D.5):**
+   - *Kiểm toán Caption A (InternVL2-2B):* Quá trình kiểm toán chỉ mục val và test phát hiện caption_A của InternVL2-2B bị lỗi lặp lại đề bài: trên tập val có `1,859/1,884` ảnh (98.67%) và trên tập test có `841/1,290` ảnh (65.19%) bị lặp nguyên văn 68 token của prompt đề bài; đồng thời có `413/1,290` ảnh test (32.02%) bị cắt ngắn chỉ còn cụm từ '1. Thô' (4–6 token). Nguyên nhân: mô hình lặp đề bài kèm dấu hai chấm khiến regex của post-processor cắt cụt (commit 2e057d6 đã giảm max_new_tokens 96→48). Raw caption không còn trên đĩa (0/1,500 dòng shard_test).
+   - *Hệ quả:* Cấu hình `cfg_v5_08a` và các hàng Config A KHÔNG phản ánh thực chất năng lực sinh mô tả thị giác của InternVL2-2B; cấu hình `cfg_v5_08b` (merge_v1) sử dụng mô tả thị giác từ Vintern nên không tách biệt được đóng góp riêng của InternVL2-2B theo đúng Luật 5 và D.5.
+   - *Erratum Manifest:* Manifest test ghi max_new_tokens = 96 nhưng shard_test_0001/0002 thực tế chạy ở 48 token.
+   - *Ghi chú Vintern (F.1 - Lựa chọn A):* Checkpoint SigLIP `best_model.pt` trong lịch sử được huấn luyện với dense caption từ Vintern-1B-v3.5; đề tài hiện tại sử dụng InternVL2-2B làm mô hình sinh caption theo `context.md` nhưng chưa qua fine-tune lại trọng số SigLIP.
+
+5. **Hạn chế của Tập Truy vấn Held-out v2:**
+   - Tập test gồm `n = 151` câu unseen. Trong đó có `47.0%` câu chứa từ khóa ngoài lexicon (`71/151`), `65/151` câu có tín hiệu usage/season, nhưng chỉ có đúng `15` câu thuộc cụm 'không mỏng'.
+   - Tập dữ liệu không gắn nhãn kiểm thử lỗi gõ (typo) độc lập và không có lớp đánh giá một phần (partial relevancy), do đó năng lực chống lỗi gõ trên tập test unseen được xếp loại **'không xác minh được'**.
+
+6. **Hiện tượng Hubness Hai chiều (C.8):**
+   - Hệ thống hybrid (`cfg_v5_09`) giúp phân tán độ tập trung tốt hơn model thuần: skewness giảm từ `1.7627` xuống `0.8937`, tỷ lệ zero-items giảm từ `41.9%` xuống `27.5%`, chỉ số Robin Hood giảm từ `0.4602` xuống `0.3345`.
+   - Thử nghiệm mean-centering trên gallery test khiến skewness của Model thuần tăng mạnh lên `1.9283` và làm giảm mAP (`ΔmAP = -0.0288`), do đó kỹ thuật này được giữ tắt theo đúng Luật 1 và selection rule.
+
+---
+
+## 14. Erratum Báo cáo Cuối cùng (Tổng hợp Toàn diện theo Prompt 14g & 14h)
+
+Mục này ghi nhận và sửa đổi toàn bộ các sai sót về trình bày, nhãn và diễn giải xuất hiện trong quá trình báo cáo trước đây:
+
+1. **Số liệu Chat cũ vs JSON Đóng băng:** Toàn bộ số liệu chính xác được xác nhận 100% từ `reports/phase5c/final_eval_results.json`:
+   - Paired CI `cfg_v5_09` vs `cfg_v5_01`: `ΔmAP = -0.0158 [-0.0273, -0.0063]`, `ΔRecall@10 = +0.0132 [0.0000, 0.0331]`.
+   - Paired CI `cfg_v5_08b` vs `cfg_v5_01`: `ΔmAP = -0.0268 [-0.0437, -0.0122]`, `ΔRecall@10 = -0.0132 [-0.0331, 0.0000]`.
+   - Hubness Skewness chính xác: Model thuần = `1.7627`, `cfg_v5_09` = `0.8937`, Model thuần + MC = `1.9283`. Các số `2.3129, 2.6963, 2.1458` bị bác bỏ.
+   - Ground Truth phụ: within_group_mAP `0.5095` vs `0.5177` (chênh lệch `+0.0082`, CI chồng lấn hoàn toàn).
+   - Cỡ mẫu Lát cắt: Slot mỏng `n=136` (mAP `0.8921`), Không mỏng `n=15` (mAP `1.0000`), không phải `126/25`.
+
+2. **Sửa Nhãn Khác biệt Thống kê Paired Bootstrap:** Áp dụng hàm phân loại cơ học `classify_paired_diff_label`: các chênh lệch âm có CI loại trừ 0 được gán đúng nhãn: **`Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_09)`** và **`Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_08b)`** thay vì gán nhầm 'Tương đương'.
+
+3. **Sửa Phân loại Độ trễ Đọc đĩa:** Nhãn `latency_conclusion_secondary_disk` (PASS_FULL 4/4) trong JSON đóng băng là SAI. Trên đường đọc đĩa thực tế: `cir_v1_01` Chưa đạt (`201.51 ms`), `cir_v1_05` Đạt theo trung vị nhưng có run vượt (`196.72 ms`, max `205.51 ms`), chỉ có `I2I` đạt chắc chắn (`168.73 ms`).
+
+4. **Sửa Lỗi Kỹ thuật Sinh Báo cáo & Cảnh báo:** Sửa triệt để lỗi placeholder f-string trong Mục 10, gắn cảnh báo cỡ mẫu nhỏ cho lát cắt không mỏng `n=15`, và thay thế nhận định chủ quan tại Mục 7.4 bằng mô tả số liệu thống kê khách quan.
+

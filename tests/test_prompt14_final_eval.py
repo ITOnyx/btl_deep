@@ -89,3 +89,44 @@ def test_hubness_and_goal_assessment(final_results: dict) -> None:
     assert goals["target_recall_at_10"]["system_winner_conclusion"] == "Đạt chắc chắn"
     assert goals["target_text_to_image_map"]["system_winner_conclusion"] == "Đạt chắc chắn"
     assert "PASS_FULL" in goals["target_latency_p95_under_200ms"]["status"]
+
+
+def test_prompt14h_replayed_rankings_and_manifest() -> None:
+    manifest_p = PROJECT_ROOT / "reports/phase5c/rankings/manifest.json"
+    assert manifest_p.exists(), "Missing reports/phase5c/rankings/manifest.json"
+    manifest = json.loads(manifest_p.read_text(encoding="utf-8"))
+    assert manifest["status"] == "deterministic_replay_matched_frozen_json"
+    assert manifest["mismatches_count"] == 0
+    assert manifest["tolerance"] == 1e-9
+
+
+def test_prompt14h_corrections_file() -> None:
+    corr_p = PROJECT_ROOT / "reports/phase5c/final_eval_corrections.json"
+    assert corr_p.exists(), "Missing reports/phase5c/final_eval_corrections.json"
+    corr = json.loads(corr_p.read_text(encoding="utf-8"))
+    assert corr["status"] == "FINAL_EVAL_CORRECTIONS_V1"
+    assert corr["latency_corrections"]["primary_ram_preloaded"]["status"] == "PASS_FULL"
+    assert corr["latency_corrections"]["secondary_disk_jpeg_decode"]["status"] == "PASS_CONDITIONAL"
+    assert "Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_09)" in corr["paired_difference_labels"]["cfg_v5_09_vs_cfg_v5_01__map"]
+
+
+def test_prompt14h_supplements_file() -> None:
+    supp_p = PROJECT_ROOT / "reports/phase5c/final_eval_supplements.json"
+    assert supp_p.exists(), "Missing reports/phase5c/final_eval_supplements.json"
+    supp = json.loads(supp_p.read_text(encoding="utf-8"))
+    assert supp["status"] == "SUPPLEMENTS_COMPLETED"
+    assert supp["seed"] == 42
+
+    # Step 3a: 3 GT policies
+    gt3a = supp["step_3a_gt_policies"]
+    assert "cfg_v5_09" in gt3a
+    assert "strict" in gt3a["cfg_v5_09"]
+    assert "relaxed" in gt3a["cfg_v5_09"]
+    assert "hybrid" in gt3a["cfg_v5_09"]
+    assert gt3a["cfg_v5_09"]["hybrid"]["mAP"]["mean"] > 0.90
+
+    # Step 4: Oracle parser diagnosis
+    s4 = supp["step_4_cause_analysis_oracle"]
+    assert s4["system_oracle_perfect_parser"]["mAP"] > 0.98
+    assert s4["system_oracle_perfect_parser"]["recall@10"] > 0.99
+
