@@ -10,8 +10,9 @@
 - **Tệp `eval/test_queries_heldout_v2.json`:** Đã khóa (`SHA-256: 96c75433f911f212be05dd6488ff04d50a25076cb808fddbb6ffb413d3e11e40`), 151 câu unseen.
 - **Tệp `eval/cir_eval_test.json`:** Đã khóa (`SHA-256: d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b`), 120 cặp CIR test.
 - **Tệp kết quả đóng băng:** [final_eval_results.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_results.json) (`SHA-256: 8a89359af8e0cbe4a8eb2373ce9a3d8991657a554e99c5bfd5efad850ca96a01`)
-- **Tệp hiệu chỉnh cơ học:** [final_eval_corrections.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_corrections.json) (`SHA-256: 56bfd1cb0623a4f544b22fb6d405b1e823c33ce8b7310acb30e84fd7c32a7662`)
-- **Tệp bổ sung kế hoạch:** [final_eval_supplements.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_supplements.json) (`SHA-256: 01768f836f245c7693381226bfb4fc061e94d42f61582eff6018cad667337f71`)
+- **Tệp hiệu chỉnh cơ học:** [final_eval_corrections.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_corrections.json) (`SHA-256: 90a33f024a4233d2da19ad90756ab87517d5901c4ed49cbab21bf98324af13db`)
+- **Tệp bổ sung kế hoạch:** [final_eval_supplements.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_supplements.json) (`SHA-256: 4e087e4bf41a59e8b9cd082cd7a3f08cb3cd4332e8b34a56dd75a84ab11f96bc`)
+- **Tệp so sánh CIR baseline:** [cir_paired_baseline_results.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/cir_paired_baseline_results.json) (`SHA-256: 97acec74be56b6e7eb607aac0fc53f2a53d4674b299186b64bd7bb927e73462b`)
 - **Checkpoint SigLIP (bất biến, không train):** `data/checkpoints_siglip-vit/best_model.pt` (`SHA-256: e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d`)
 - **Gallery kiểm thử chính thức:** `index/test_gallery/` (`N = 1290`, gồm duy nhất các sản phẩm thuộc `test_split.json`)
 - **Caption Index kiểm thử:** `index/test_gallery_text_v5/` (`N = 1290`, caption InternVL2-2B + merge_v1)
@@ -183,11 +184,13 @@ Kết luận độ trễ được đánh giá cơ học bằng hàm khóa `class
 ### 6.2. Theo Biến thể Đọc đĩa — Đường upload thực tế (`secondary_disk_jpeg_decode`)
 | Luồng | Cấu hình | Trung vị p95 (ms) | Max p95 (ms) | Pooled p95 (ms) | Pooled p99 (ms) | Kết luận SLA |
 |---|---|:---:|:---:|:---:|:---:|:---:|
+| Luồng 1 (Text→Ảnh) | Pure text | — | — | — | — | **Không áp dụng** (truy vấn text thuần, không tải ảnh) |
 | Luồng 2 (Ảnh→Ảnh) | `disk_jpeg_decode` | 168.73 | 185.26 | 173.14 | 207.52 | **Đạt chắc chắn** |
+| Luồng 3 (CIR catalog) | Catalog image | — | — | — | — | **Không áp dụng** (ảnh catalog có sẵn trong index, không tải ảnh) |
 | Luồng 4 (CIR upload) | `cir_v1_01` (Disk) | 201.51 | 211.58 | 202.75 | 244.48 | **Chưa đạt** |
 | Luồng 4 (CIR upload) | `cir_v1_05` (Disk) | 196.72 | 205.51 | 199.46 | 240.43 | **Đạt theo trung vị nhưng có run vượt** |
 
-- **Tổng kết Trạng thái Biến thể Disk:** Trạng thái = `PASS_CONDITIONAL` — **Không đạt PASS_FULL 4/4**:
+- **Tổng kết Trạng thái Biến thể Disk:** Trạng thái = `PASS_CONDITIONAL` — **Chỉ áp dụng cho Luồng 2 và Luồng 4** (Luồng 1 và Luồng 3 là `Không áp dụng` do không có thao tác tải ảnh từ người dùng):
   * `cir_v1_01` (Disk): **`Chưa đạt`** (Trung vị p95 = `201.507 ms` >= 200 ms, Max p95 = `211.583 ms`).
   * `cir_v1_05` (Disk): **`Đạt theo trung vị nhưng có run vượt`** (Trung vị p95 = `196.724 ms` < 200 ms <= Max p95 = `205.509 ms`).
   * `I2I` (Disk): **`Đạt chắc chắn`** (Trung vị p95 = `168.730 ms`, Max p95 = `185.260 ms`).
@@ -262,6 +265,16 @@ Kết luận độ trễ được đánh giá cơ học bằng hàm khóa `class
 | Đổi màu (`baseColour`) | 80 | 0.4000 | 0.6500 | 0.7125 | 0.4217 |
 | Đổi giới tính (`gender`) | 40 | 0.1000 | 0.2500 | 0.3750 | 0.1344 |
 
+### 8.3. Đánh giá Trung thực về Năng lực CIR (Prompt 14i)
+- **So sánh với Baseline Chỉ-ảnh-tham-chiếu:**
+  * Model thuần CIR (`cir_v1_01`) kết hợp modifier bằng bộ combiner gốc bị suy giảm hiệu năng rõ rệt so với việc chỉ dùng ảnh tham chiếu đơn thuần (Recall@10: `0.2667` vs `0.5833`, Δ = `-0.3167 [-0.4167, -0.2165]` — **Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)**; mAP: `0.0971` vs `0.1544`, Δ = `-0.0573 [-0.0853, -0.0313]` — **Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)**).
+  * Hệ thống CIR (`cir_v1_05`) đạt mAP vượt trội có ý nghĩa thống kê so với baseline (mAP: `0.3259` vs `0.1544`, Δ = `+0.1715 [+0.1213, +0.2250]` — **Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)**) nhờ cơ chế C3 attribute bonus định hướng đúng nhóm thuộc tính mục tiêu. Tuy nhiên, trên Recall@10, chênh lệch giữa hệ thống và baseline là **Chưa kết luận được (CI chứa hoặc chạm 0)** (Recall@10: `0.6000` vs `0.5833`, Δ = `+0.0167 [-0.0833, +0.1167]`, khoảng tin cậy chứa 0).
+  * Một phần mức tăng mAP mang tính chất cấu trúc (attribute bonus cộng điểm cho sản phẩm trùng thuộc tính catalog mục tiêu), chưa phải bằng chứng cho thấy mô hình học sâu thực sự hiểu ngữ nghĩa không gian đa phương thức.
+  * Tác vụ đổi giới tính (`gender`, n=40) đặc biệt yếu: `cir_v1_05` không tạo được sự khác biệt có ý nghĩa thống kê so với baseline cả trên Recall@10 (Δ = `-0.0750 [-0.2750, +0.1000]`) lẫn mAP (Δ = `+0.0155 [-0.0291, +0.0637]`).
+- **Kết luận Ngưỡng Đề tài cho CIR:**
+  * Nếu áp dụng ngưỡng của đề tài chung (Recall@10 ≥ 0.85): Hệ thống CIR `cir_v1_05` đạt `0.6000 [0.5083, 0.6917]` (cận trên 0.6917 < 0.85) → **Chưa đạt**.
+  * Nếu không áp dụng: CIR được ghi nhận là luồng thử nghiệm mở rộng đa phương thức, chưa có chỉ tiêu chính thức trong đề cương giáo viên.
+
 ---
 
 ## 9. Phần C — Phân tích Hubness trên `test_gallery` (AGENTS.md C.8)
@@ -283,13 +296,13 @@ Kết luận độ trễ được đánh giá cơ học bằng hàm khóa `class
 | **Độ trễ (p95)** | **< 200 ms** | T2I p95: 29.70 ms | T2I p95: 32.52 ms, CIR upload RAM p95: 158.54 ms | **Đạt chắc chắn (100% 4 luồng trên RAM)** |
 
 ### Nhận xét & Diễn giải Trung thực (Luật 7 & C.10):
-1. **Chỉ tiêu Độ trễ (< 200 ms p95):** ĐẠT CHẮC CHẮN trên cả 4 luồng khi xử lý theo đường RAM PIL (Text→Ảnh: 32.52 ms, Ảnh→Ảnh: 129.84 ms, CIR catalog: 36.19 ms, CIR upload: 158.54 ms). Trên đường đọc đĩa JPEG decode, luồng CIR upload của hệ thống chiến thắng cir_v1_05 đạt p95 trung vị 196.72 ms (< 200 ms) nhưng có run chạm 205.51 ms (đạt có điều kiện), còn cir_v1_01 vượt ngưỡng (201.51 ms).
+1. **Chỉ tiêu Độ trễ (< 200 ms p95):** ĐẠT CHẮC CHẮN trên cả 4 luồng khi xử lý theo đường RAM PIL (Text→Ảnh: 32.52 ms, Ảnh→Ảnh: 129.84 ms, CIR catalog: 36.19 ms, CIR upload: 158.54 ms). Trên đường đọc đĩa JPEG decode (chỉ áp dụng cho Luồng 2 và Luồng 4), luồng CIR upload của hệ thống chiến thắng cir_v1_05 đạt p95 trung vị 196.72 ms (< 200 ms) nhưng có run chạm 205.51 ms (đạt có điều kiện), còn cir_v1_01 vượt ngưỡng (201.51 ms). Luồng 1 và Luồng 3 không có bước tải ảnh từ đĩa của người dùng (Không áp dụng).
 2. **Chỉ tiêu Recall@10 (≥ 0.85):** Hệ thống `cfg_v5_09` đạt điểm số và khoảng tin cậy vượt trội so với ngưỡng đề bài (`Recall@10 = 0.9669` [0.9338, 0.9934]), tăng mạnh so với Model thuần (`0.7020`).
 3. **Chỉ tiêu mAP (≥ 0.75):** Hệ thống tăng mạnh mAP từ `0.3386` (Model thuần) lên `0.9028` [0.8611, 0.9401]. Căn cứ theo định nghĩa locked_final_definitions.py và quy tắc kết luận C.10:
    - Hệ thống chính thức đạt chỉ tiêu mAP (`Đạt chắc chắn`).
 4. **Đánh giá Chỉ tiêu CIR (Composed Image Retrieval):**
    - Trình bày riêng biệt: CIR đạt `Recall@10 = 0.6000 [0.5083, 0.6917]` và `mAP = 0.3259 [0.2695, 0.3847]`, tăng vượt bậc so với Model thuần CIR `cir_v1_01` (R@10 `0.2667`, mAP `0.0971`).
-   - *Áp ngưỡng đề tài:* Nếu áp ngưỡng đề cương chung (R@10 >= 0.85), CIR **chưa đạt**; nếu coi CIR là tác vụ mở rộng kết hợp đa phương thức (không bắt buộc cùng ngưỡng với Text→Image), CIR đã đạt cải thiện có ý nghĩa thống kê vượt trội.
+   - *Áp ngưỡng đề tài:* Nếu áp ngưỡng đề cương chung (R@10 >= 0.85), CIR **chưa đạt** (cận trên 0.6917 < 0.85); nếu coi CIR là tác vụ mở rộng kết hợp đa phương thức (không bắt buộc cùng ngưỡng với Text→Image), CIR đã đạt cải thiện có ý nghĩa thống kê so với model thuần.
 
 ---
 
@@ -306,7 +319,7 @@ Mục này thực hiện bóc tách nguyên nhân định lượng giữa mô h�
 ### Bóc tách Đóng góp Định lượng:
 1. **Đóng góp của Model SigLIP:** Model thuần đóng góp nền tảng mAP `0.3386` và Recall@10 `0.7020`. Do checkpoint cũ không được train lại (Luật 1), mô hình thuần chưa thể tự đạt các ngưỡng khắt khe của đề cương.
 2. **Đóng góp của Tầng Suy luận (Parser + Bonus):** Tầng suy luận mang lại mức tăng khổng lồ **`+0.5642 mAP`** (từ `0.3386` lên `0.9028`), trực tiếp đưa hệ thống từ trạng thái chưa đạt lên vượt ngưỡng chắc chắn.
-3. **Khoảng cách Parser Thực tế vs Oracle:** Hệ thống thực tế đạt `0.9028` so với Oracle `0.9874` (chênh lệch `-0.0846 mAP`). Khoảng cách này phản ánh các câu truy vấn phức tạp hoặc chứa từ khóa nằm ngoài lexicon khiến parser bỏ sót slot.
+3. **Khoảng cách Parser Thực tế vs Oracle:** Hệ thống thực tế đạt `0.9028` so với Oracle `0.9874` (chênh lệch `-0.0846 mAP`). Do chưa có số liệu phân rã kiểm thử từng câu lỗi cụ thể để chứng minh giả thuyết về câu phức tạp hay từ ngoài lexicon, kết luận khoa học chính thức: **nguyên nhân chi tiết của khoảng cách: không xác minh được**.
 4. **Tác động của Vòng tròn Ground Truth:** Do ground truth hybrid được xây dựng từ các trường thuộc tính catalog (`articleType`, `gender`, `baseColour`), cơ chế soft bonus khi nhận đúng các thuộc tính này (Oracle) sẽ phân tách hoàn hảo (`mAP = 0.9874`).
 
 > [!IMPORTANT]
@@ -358,13 +371,29 @@ Tất cả các bảng dưới đây được tính toán từ tệp xếp hạn
 > [!WARNING]
 > **CẢNH BÁO QUAN TRỌNG: Chỉ mục caption internvl2_only trong index test thực chất bị lỗi echo đề bài (65.19% câu test lặp 68 token đề bài, 32.02% chỉ còn '1. Thô'). Kết quả của cfg_v5_08a KHÔNG phản ánh năng lực sinh mô tả thị giác của InternVL2-2B. Được đưa vào báo cáo chỉ để hoàn thành kế hoạch khai báo trước.**
 
-### 12.4. Bổ sung Đánh giá CIR (Cơ sở Chỉ Ảnh Tham chiếu & Ma trận 2x2)
+### 12.4. Bổ sung Đánh giá CIR (Cơ sở Chỉ Ảnh Tham chiếu & So sánh Paired Bootstrap)
 - **Hàng Cơ sở Chỉ Ảnh Tham chiếu (I2I Baseline trên tập CIR):**
   * `Recall@1:` `0.0000 [0.0000, 0.0000]`
   * `Recall@5:` `0.3500 [0.2583, 0.4333]`
   * `Recall@10:` `0.5833 [0.4998, 0.6667]`
   * `mAP:` `0.1544 [0.1319, 0.1804]`
-  * *Nhận xét:* Khi chỉ dùng ảnh tham chiếu (không qua modifier), điểm số đạt R@10 = 0.5833, mAP = 0.1544. Cả cir_v1_01 và cir_v1_05 đều vượt baseline này trên Recall@10, khẳng định modifier văn bản có đóng góp điều hướng không gian đặc trưng.
+
+- **Xác nhận Không gian Xếp hạng Mã nguồn (Prompt 14i Bước 1c):**
+  * Cả hai luồng CIR (`cir_v1_01`, `cir_v1_05`) và baseline chỉ-ảnh-tham-chiếu (`cir_i2i_baseline`) đều chấm điểm và xếp hạng trên toàn bộ $N=1,290$ sản phẩm của `test_gallery`, hoàn toàn không loại trừ ảnh tham chiếu `ref_gal_idx`.
+  * Trong 100% các cặp CIR test ($120/120$ cặp), ảnh tham chiếu `ref_product_id` **không bao giờ** nằm trong tập nhãn đúng (`gt_product_ids`), do mục tiêu CIR là tìm sản phẩm có thuộc tính đã biến đổi. Vì vậy, trong baseline, ảnh tham chiếu đứng ở rank 1 (cosine 1.0) và đóng vai trò là mẫu âm (false positive), khiến Recall@1 = 0.0000; các sản phẩm tương tự cùng danh mục xuất hiện ở top 5/10 đóng góp vào R@5 (0.3500) và R@10 (0.5833). Không gian đánh giá là hoàn toàn đồng nhất.
+
+#### Bảng So sánh Paired Bootstrap CIR vs Baseline và Phân rã Lát cắt:
+| Tập phân rã | Cặp so sánh | Số cặp (n) | ΔRecall@1 [95% CI] | ΔRecall@5 [95% CI] | ΔRecall@10 [95% CI] | ΔmAP [95% CI] | Kết luận Thống kê R@10 | Kết luận Thống kê mAP |
+|---|---|---:|:---:|:---:|:---:|:---:|---|---|
+| Tổng thể | `cir_v1_01 vs Baseline` | 120 | +0.0667 [+0.0250, +0.1167] | -0.1417 [-0.2335, -0.0333] | -0.3167 [-0.4167, -0.2165] | -0.0573 [-0.0853, -0.0313] | Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01) | Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01) |
+| Tổng thể | `cir_v1_05 vs Baseline` | 120 | +0.3000 [+0.2167, +0.3833] | +0.1667 [+0.0581, +0.2833] | +0.0167 [-0.0833, +0.1167] | +0.1715 [+0.1213, +0.2250] | Chưa kết luận được (CI chứa hoặc chạm 0) | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline) |
+| Tổng thể | `cir_v1_05 vs cir_v1_01` | 120 | +0.2333 [+0.1583, +0.3083] | +0.3083 [+0.2250, +0.3833] | +0.3333 [+0.2500, +0.4085] | +0.2288 [+0.1833, +0.2748] | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) |
+| Đổi màu sắc | `cir_v1_01 vs Baseline` | 80 | +0.0750 [+0.0250, +0.1500] | -0.1875 [-0.3125, -0.0625] | -0.3625 [-0.4875, -0.2375] | -0.0726 [-0.1106, -0.0337] | Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01) | Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01) |
+| Đổi màu sắc | `cir_v1_05 vs Baseline` | 80 | +0.4000 [+0.3000, +0.5125] | +0.2500 [+0.1125, +0.3875] | +0.0625 [-0.0500, +0.1628] | +0.2495 [+0.1846, +0.3135] | Chưa kết luận được (CI chứa hoặc chạm 0) | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline) |
+| Đổi màu sắc | `cir_v1_05 vs cir_v1_01` | 80 | +0.3250 [+0.2250, +0.4250] | +0.4375 [+0.3375, +0.5500] | +0.4250 [+0.3250, +0.5250] | +0.3221 [+0.2619, +0.3809] | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) |
+| Đổi giới tính | `cir_v1_01 vs Baseline` | 40 | +0.0500 [+0.0000, +0.1250] | -0.0500 [-0.2000, +0.1000] | -0.2250 [-0.4000, -0.0500] | -0.0267 [-0.0579, +0.0074] | Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01) | Chưa kết luận được (CI chứa hoặc chạm 0) |
+| Đổi giới tính | `cir_v1_05 vs Baseline` | 40 | +0.1000 [+0.0250, +0.2000] | +0.0000 [-0.1500, +0.1750] | -0.0750 [-0.2750, +0.1000] | +0.0155 [-0.0291, +0.0637] | Chưa kết luận được (CI chứa hoặc chạm 0) | Chưa kết luận được (CI chứa hoặc chạm 0) |
+| Đổi giới tính | `cir_v1_05 vs cir_v1_01` | 40 | +0.0500 [+0.0000, +0.1250] | +0.0500 [+0.0000, +0.1250] | +0.1500 [+0.0500, +0.2750] | +0.0422 [+0.0179, +0.0735] | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) | Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01) |
 
 #### Ma trận Phân rã 2x2 (Đổi màu / Đổi giới × Có dấu / Không dấu):
 | Thuộc tính Thay đổi | Dấu Tiếng Việt | Số cặp (n) | mAP (`cir_v1_01`) | mAP (`cir_v1_05`) | ΔmAP [95% Paired CI] | Ý nghĩa Thống kê |
@@ -393,6 +422,7 @@ Tất cả các bảng dưới đây được tính toán từ tệp xếp hạn
    - Do tập ground truth CIR được dựng từ các sản phẩm cùng nhóm thuộc tính catalog biến đổi, cấu hình có mod bonus (`C3`, `cir_v1_05`) có lợi thế cấu trúc một phần so với model thuần.
    - Nhánh fused combiner (`UpgradedAttentionCIRCombiner`) trong lịch sử được huấn luyện với modifier tiếng Anh (theo Giới hạn F.2), và Luật 1 cấm train lại nên nhánh này chưa được tối ưu hóa cho tiếng Việt.
    - Phân rã cho thấy hệ thống thực hiện phép đổi màu sắc tương đối tốt (`Recall@10 = 0.7125`, `mAP = 0.4217`), nhưng năng lực đổi giới tính còn rất hạn chế (`Recall@10 = 0.3750`, `mAP = 0.1344`).
+   - So sánh với baseline chỉ-ảnh-tham-chiếu cho thấy model thuần kết hợp modifier kém hơn cả khi không dùng modifier (thua baseline trên Recall@10 và mAP); hệ thống chỉ vượt baseline trên mAP nhờ attribute bonus mà chưa tạo được khác biệt có ý nghĩa thống kê trên Recall@10.
 
 4. **Giới hạn Dense Captioning & Hiện tượng Echo Đề bài (Kiểm toán Bước 1c, Luật 5, D.5):**
    - *Kiểm toán Caption A (InternVL2-2B):* Quá trình kiểm toán chỉ mục val và test phát hiện caption_A của InternVL2-2B bị lỗi lặp lại đề bài: trên tập val có `1,859/1,884` ảnh (98.67%) và trên tập test có `841/1,290` ảnh (65.19%) bị lặp nguyên văn 68 token của prompt đề bài; đồng thời có `413/1,290` ảnh test (32.02%) bị cắt ngắn chỉ còn cụm từ '1. Thô' (4–6 token). Nguyên nhân: mô hình lặp đề bài kèm dấu hai chấm khiến regex của post-processor cắt cụt (commit 2e057d6 đã giảm max_new_tokens 96→48). Raw caption không còn trên đĩa (0/1,500 dòng shard_test).
@@ -410,9 +440,9 @@ Tất cả các bảng dưới đây được tính toán từ tệp xếp hạn
 
 ---
 
-## 14. Erratum Báo cáo Cuối cùng (Tổng hợp Toàn diện theo Prompt 14g & 14h)
+## 14. Erratum Báo cáo Cuối cùng (Tổng hợp Toàn diện theo Prompt 14g, 14h & 14i)
 
-Mục này ghi nhận và sửa đổi toàn bộ các sai sót về trình bày, nhãn và diễn giải xuất hiện trong quá trình báo cáo trước đây:
+Mục này ghi nhận và sửa đổi toàn bộ các sai sót về trình bày, nhãn và diễn giải xuất hiện trong quá trình báo cáo:
 
 1. **Số liệu Chat cũ vs JSON Đóng băng:** Toàn bộ số liệu chính xác được xác nhận 100% từ `reports/phase5c/final_eval_results.json`:
    - Paired CI `cfg_v5_09` vs `cfg_v5_01`: `ΔmAP = -0.0158 [-0.0273, -0.0063]`, `ΔRecall@10 = +0.0132 [0.0000, 0.0331]`.
@@ -423,7 +453,14 @@ Mục này ghi nhận và sửa đổi toàn bộ các sai sót về trình bày
 
 2. **Sửa Nhãn Khác biệt Thống kê Paired Bootstrap:** Áp dụng hàm phân loại cơ học `classify_paired_diff_label`: các chênh lệch âm có CI loại trừ 0 được gán đúng nhãn: **`Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_09)`** và **`Khác biệt có ý nghĩa (cfg_v5_01 hơn cfg_v5_08b)`** thay vì gán nhầm 'Tương đương'.
 
-3. **Sửa Phân loại Độ trễ Đọc đĩa:** Nhãn `latency_conclusion_secondary_disk` (PASS_FULL 4/4) trong JSON đóng băng là SAI. Trên đường đọc đĩa thực tế: `cir_v1_01` Chưa đạt (`201.51 ms`), `cir_v1_05` Đạt theo trung vị nhưng có run vượt (`196.72 ms`, max `205.51 ms`), chỉ có `I2I` đạt chắc chắn (`168.73 ms`).
+3. **Sửa Phân loại Độ trễ Đọc đĩa:** Nhãn `latency_conclusion_secondary_disk` (PASS_FULL 4/4) trong JSON đóng băng là SAI. Trên đường đọc đĩa thực tế: `cir_v1_01` Chưa đạt (`201.51 ms`), `cir_v1_05` Đạt theo trung vị nhưng có run vượt (`196.72 ms`, max `205.51 ms`), chỉ có `I2I` đạt chắc chắn (`168.73 ms`). Luồng 1 (Text→Ảnh) và Luồng 3 (CIR catalog) không có bước tải ảnh từ đĩa của người dùng nên được ghi nhận chuẩn xác là **`Không áp dụng`**.
 
 4. **Sửa Lỗi Kỹ thuật Sinh Báo cáo & Cảnh báo:** Sửa triệt để lỗi placeholder f-string trong Mục 10, gắn cảnh báo cỡ mẫu nhỏ cho lát cắt không mỏng `n=15`, và thay thế nhận định chủ quan tại Mục 7.4 bằng mô tả số liệu thống kê khách quan.
+
+5. **Đính chính Kết luận CIR so với Baseline Chỉ-Ảnh-Tham-Chiếu (Prompt 14i):**
+   - Bác bỏ hoàn toàn câu nhận xét cũ tại Mục 12.4: *'Cả cir_v1_01 và cir_v1_05 đều vượt baseline này trên Recall@10'*. Thay thế bằng kết luận cơ học từ CI:
+     * Model thuần `cir_v1_01` KÉM baseline có ý nghĩa trên Recall@10 (Δ = `-0.3167 [-0.4167, -0.2165]`) và trên mAP (Δ = `-0.0573 [-0.0853, -0.0313]`).
+     * Hệ thống `cir_v1_05` HƠN baseline có ý nghĩa trên mAP (Δ = `+0.1715 [+0.1213, +0.2250]`), nhưng trên Recall@10 là **Chưa kết luận được** (Δ = `+0.0167 [-0.0833, +0.1167]`, CI chứa 0).
+   - Bác bỏ các số baseline nháp trong chat Prompt 14h (`R@10 0.2333, mAP 0.0827`), xác nhận số đúng từ xếp hạng xác định: R@10 = `0.5833 [0.4998, 0.6667]`, mAP = `0.1544 [0.1319, 0.1804]`.
+   - Xác nhận nguyên nhân chi tiết của khoảng cách giữa Parser thực tế và Oracle parser (-0.0846 mAP): **không xác minh được** (chỉ ghi nhận giả thuyết về từ ngoài lexicon).
 

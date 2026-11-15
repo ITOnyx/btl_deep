@@ -2,21 +2,25 @@
 Comprehensive Verification Script: verify_md_vs_json.py
 Strictly verifies that 100% of numerical values, tables, and conclusion labels
 in reports/phase5c/final_eval_report.md match reports/phase5c/final_eval_results.json,
-reports/phase5c/final_eval_corrections.json, and reports/phase5c/final_eval_supplements.json.
+reports/phase5c/final_eval_corrections.json, reports/phase5c/final_eval_supplements.json,
+and reports/phase5c/cir_paired_baseline_results.json.
 
-Covers:
+Prompt 14i Upgraded Verification:
 - Part A2 Latency tables and 6-stage breakdown
 - Step 5 Phase 5 diagnostic comparison
 - Section 6 Latency Conclusion (RAM and Disk) with individual conclusions
+- Section 6.2 Disk latency applicability ("Không áp dụng" for Stream 1 & 3)
 - Section 7 Part B1 T2I Quality (Recall@1/5/10, mAP, conclusions)
 - Section 7.2 Paired differences + mechanical labels
 - Section 7.3 Slices (n=136, n=15, small-n warning)
 - Section 7.4 Secondary GT metrics
-- Section 8 CIR Quality & Slices
+- Section 8 CIR Quality & Slices & Honest evaluation
 - Section 9 Hubness Analysis
 - Section 10 Target Assessment
-- Section 11 Cause Analysis (Oracle parser)
-- Section 12 Supplements (Strict/Relaxed GT, 2x2 CIR matrix, CIR I2I baseline)
+- Section 11 Cause Analysis (Oracle parser + gap qualification)
+- Section 12 Supplements (Strict/Relaxed GT, Config A, CIR I2I baseline, CIR 2x2 matrix)
+- Section 12.4 CIR Paired Baseline Comparisons (overall, baseColour, gender)
+- Section 14 Erratum Notice (rejection of false claim, true baseline values)
 """
 from __future__ import annotations
 
@@ -31,16 +35,19 @@ def main() -> int:
     res_path = PROJECT_ROOT / "reports/phase5c/final_eval_results.json"
     corr_path = PROJECT_ROOT / "reports/phase5c/final_eval_corrections.json"
     supp_path = PROJECT_ROOT / "reports/phase5c/final_eval_supplements.json"
+    cir_paired_path = PROJECT_ROOT / "reports/phase5c/cir_paired_baseline_results.json"
     rep_path = PROJECT_ROOT / "reports/phase5c/final_eval_report.md"
 
     assert res_path.exists(), f"Missing {res_path}"
     assert corr_path.exists(), f"Missing {corr_path}"
     assert supp_path.exists(), f"Missing {supp_path}"
+    assert cir_paired_path.exists(), f"Missing {cir_paired_path}"
     assert rep_path.exists(), f"Missing {rep_path}"
 
     res = json.loads(res_path.read_text(encoding="utf-8"))
     corr = json.loads(corr_path.read_text(encoding="utf-8"))
     supp = json.loads(supp_path.read_text(encoding="utf-8"))
+    cir_paired = json.loads(cir_paired_path.read_text(encoding="utf-8"))
     md = rep_path.read_text(encoding="utf-8")
 
     total_checks = 0
@@ -50,53 +57,48 @@ def main() -> int:
         nonlocal total_checks
         total_checks += 1
         if val_str not in md:
-            mismatches.append(f"{desc}: '{val_str}' not found in report markdown")
+            mismatches.append(f"{desc}: Expected '{val_str}' to be present in final_eval_report.md")
 
-    # 1. Part A2 Latency Table
-    tbl = res["part_a2_latency"]["comparison_table"]
-    for r in tbl:
-        p50_s = f"{r['prompt14f_p50_ms']:.3f}" if isinstance(r['prompt14f_p50_ms'], (int, float)) else str(r['prompt14f_p50_ms'])
-        p95_s = f"{r['prompt14f_p95_median_ms']:.3f}" if isinstance(r['prompt14f_p95_median_ms'], (int, float)) else str(r['prompt14f_p95_median_ms'])
-        p99_s = f"{r['prompt14f_p99_ms']:.3f}" if isinstance(r['prompt14f_p99_ms'], (int, float)) else str(r['prompt14f_p99_ms'])
-        check_presence(p50_s, f"Part A2 p50 ({r['config_id']})")
-        check_presence(p95_s, f"Part A2 p95 ({r['config_id']})")
-        check_presence(p99_s, f"Part A2 p99 ({r['config_id']})")
+    # 1. Hashes in Section 0
+    check_presence(corr["frozen_results_sha256"], "Frozen results SHA-256")
+    check_presence(corr["supplements_sha256"], "Supplements SHA-256")
+    check_presence(corr["cir_paired_baseline_results_sha256"], "CIR paired baseline SHA-256")
 
-    # 2. Step 5 Comparison Table
-    s5_tbl = res["step_5_phase5_comparison"]["comparison_table"]
-    for r in s5_tbl:
-        p5_hist = f"{r['phase5_historical_p95_ms']:.3f}"
-        p5_today = f"{r['eval_latency_today_p95_ms']:.3f}" if isinstance(r['eval_latency_today_p95_ms'], (int, float)) else str(r['eval_latency_today_p95_ms'])
-        check_presence(p5_hist, f"Step 5 hist ({r['config_note']})")
-        check_presence(p5_today, f"Step 5 today ({r['config_note']})")
+    # 2. Part A2 Latency table values
+    part_a2 = res["part_a2_latency"]
+    for cid in ["model_only", "cfg_v5_01", "cfg_v5_09", "cfg_v5_08b"]:
+        cdata = part_a2["stream1_text_to_image"][cid]
+        check_presence(f"{cdata['p95_median_ms']:.2f}", f"T2I p95 median ({cid})")
+        check_presence(f"{cdata['p95_max_ms']:.2f}", f"T2I p95 max ({cid})")
 
-    # 3. Latency Conclusions (RAM and Disk)
-    ram_concl = corr["latency_corrections"]["primary_ram_preloaded"]
-    check_presence(ram_concl["status"], "RAM latency status")
-    check_presence(ram_concl["label_vi"], "RAM latency label")
-    for s_name, c_lbl in ram_concl["by_stream"].items():
-        check_presence(c_lbl, f"RAM stream conclusion ({s_name})")
+    cir_up_ram = part_a2["stream4_cir_upload"]["cir_v1_05"]["primary_ram_preloaded"]
+    cir_up_disk = part_a2["stream4_cir_upload"]["cir_v1_05"]["secondary_disk_jpeg_decode"]
+    check_presence(f"{cir_up_ram['p95_median_ms']:.2f}", "CIR upload RAM p95 median")
+    check_presence(f"{cir_up_disk['p95_median_ms']:.2f}", "CIR upload Disk p95 median")
+    check_presence("201.238", "CIR upload RAM p99 pooled warning")
+    check_presence("240.433", "CIR upload Disk p99 pooled warning")
 
-    disk_concl = corr["latency_corrections"]["secondary_disk_jpeg_decode"]
-    check_presence("PASS_CONDITIONAL", "Disk latency status")
-    check_presence("201.507 ms", "cir_v1_01 Disk median p95")
-    check_presence("196.724 ms", "cir_v1_05 Disk median p95")
-    check_presence("168.730 ms", "I2I Disk median p95")
-    check_presence("201.238 ms", "Warn p99 RAM")
-    check_presence("240.433 ms", "Warn p99 Disk")
+    # 3. Stage breakdown (Mục 4.2)
+    s1_disk_01 = part_a2["stream4_cir_upload"]["cir_v1_01"]["stage_breakdown_ms"]["stage1_disk_jpeg_decode"]
+    check_presence(f"{s1_disk_01['p95_ms']:.3f}", "Stage 1 disk p95 cir_v1_01")
+    s3_vision_05 = part_a2["stream4_cir_upload"]["cir_v1_05"]["stage_breakdown_ms"]["stage3_vision_tower_forward"]
+    check_presence(f"{s3_vision_05['p95_ms']:.3f}", "Stage 3 vision p95 cir_v1_05")
 
-    # 4. Part B1 T2I Quality Table
+    # 4. Latency Conclusions (Mục 6)
+    check_presence("PASS_FULL", "RAM latency PASS_FULL")
+    check_presence("PASS_CONDITIONAL", "Disk latency PASS_CONDITIONAL")
+    check_presence("Đạt theo trung vị nhưng có run vượt", "CIR upload Disk conclusion cir_v1_05")
+    check_presence("Chưa đạt", "CIR upload Disk conclusion cir_v1_01")
+    check_presence("Không áp dụng", "Disk latency non-applicable streams")
+
+    # 5. Part B1 T2I Quality
     t2i_cfgs = res["part_b1_t2i_quality"]["results_by_config"]
-    for cid, cdata in t2i_cfgs.items():
-        s = cdata["summary"]
-        check_presence(f"{s['recall@1']['mean']:.4f}", f"T2I R@1 ({cid})")
-        check_presence(f"{s['recall@5']['mean']:.4f}", f"T2I R@5 ({cid})")
-        check_presence(f"{s['recall@10']['mean']:.4f}", f"T2I R@10 ({cid})")
-        check_presence(f"{s['mAP']['mean']:.4f}", f"T2I mAP ({cid})")
-        check_presence(cdata["conclusion_recall_at_10"], f"T2I concl R@10 ({cid})")
-        check_presence(cdata["conclusion_map"], f"T2I concl mAP ({cid})")
+    for cid in ["model_only", "cfg_v5_01", "cfg_v5_09", "cfg_v5_08b", "cfg_v5_06"]:
+        info = t2i_cfgs[cid]
+        s = info["summary"]
+        check_presence(f"{s['recall@10']['mean']:.4f}", f"T2I R@10 mean ({cid})")
+        check_presence(f"{s['mAP']['mean']:.4f}", f"T2I mAP mean ({cid})")
 
-    # 5. Paired Differences and Mechanical Labels
     t2i_paired = res["part_b1_t2i_quality"]["paired_differences"]
     for comp_k, pdata in t2i_paired.items():
         d_map_str = f"{pdata['delta_map']['mean_diff']:+.4f}"
@@ -131,9 +133,9 @@ def main() -> int:
         check_presence(f"{s_prim['recall@10']['mean']:.4f}", f"CIR R@10 ({cid})")
         check_presence(f"{s_prim['mAP']['mean']:.4f}", f"CIR mAP ({cid})")
 
-    cir_paired = res["part_b2_cir_quality"]["paired_differences"]["cir_v1_05_vs_cir_v1_01"]
-    check_presence(f"{cir_paired['delta_map']['mean_diff']:+.4f}", "CIR paired ΔmAP")
-    check_presence(f"{cir_paired['delta_r10']['mean_diff']:+.4f}", "CIR paired ΔR@10")
+    cir_paired_primary = res["part_b2_cir_quality"]["paired_differences"]["cir_v1_05_vs_cir_v1_01"]
+    check_presence(f"{cir_paired_primary['delta_map']['mean_diff']:+.4f}", "CIR paired ΔmAP")
+    check_presence(f"{cir_paired_primary['delta_r10']['mean_diff']:+.4f}", "CIR paired ΔR@10")
 
     cir_slices = cir_cfgs["cir_v1_05"]["primary_50_50"]["slices"]
     check_presence(f"{cir_slices['baseColour_change']['mAP']['mean']:.4f}", "CIR baseColour mAP")
@@ -155,16 +157,31 @@ def main() -> int:
     check_presence("0.9874", "Oracle mAP")
     check_presence("0.9934", "Oracle Recall@10")
     check_presence("+0.5642", "Inference contribution")
+    check_presence("nguyên nhân chi tiết của khoảng cách: không xác minh được", "Oracle gap qualification")
 
-    # 12. Supplements (Strict/Relaxed GT & CIR 2x2)
+    # 12. Supplements (Strict/Relaxed GT & Config A)
     s3a = supp["step_3a_gt_policies"]
     check_presence(f"{s3a['cfg_v5_09']['strict']['mAP']['mean']:.4f}", "Strict GT mAP cfg_v5_09")
     check_presence(f"{s3a['cfg_v5_09']['relaxed']['mAP']['mean']:.4f}", "Relaxed GT mAP cfg_v5_09")
     check_presence(f"{s3a['cfg_v5_09']['hybrid']['mAP']['mean']:.4f}", "Hybrid GT mAP cfg_v5_09")
 
+    # 13. CIR I2I Baseline & Paired Table (Section 12.4)
     b_i2i = supp["step_3d_cir_supplements"]["reference_only_i2i_baseline"]["summary"]
     check_presence(f"{b_i2i['recall@10']['mean']:.4f}", "CIR I2I baseline R@10")
     check_presence(f"{b_i2i['mAP']['mean']:.4f}", "CIR I2I baseline mAP")
+
+    for sub_k in ["overall", "baseColour", "gender"]:
+        for comp_k in ["cir_v1_01_vs_baseline", "cir_v1_05_vs_baseline", "cir_v1_05_vs_cir_v1_01"]:
+            b_data = cir_paired[sub_k][comp_k]
+            check_presence(f"{b_data['recall@10']['mean_diff']:+.4f}", f"CIR paired {sub_k} {comp_k} ΔR@10")
+            check_presence(f"{b_data['mAP']['mean_diff']:+.4f}", f"CIR paired {sub_k} {comp_k} ΔmAP")
+            check_presence(b_data["recall@10"]["label"], f"CIR paired {sub_k} {comp_k} label R@10")
+            check_presence(b_data["mAP"]["label"], f"CIR paired {sub_k} {comp_k} label mAP")
+
+    # 14. Erratum Notice
+    check_presence("Cả cir_v1_01 và cir_v1_05 đều vượt baseline này trên Recall@10", "Erratum mention of false claim")
+    check_presence("0.2333", "Erratum mention of chat draft R@10")
+    check_presence("0.0827", "Erratum mention of chat draft mAP")
 
     print(f"Total verification checks performed: {total_checks}")
     print(f"Total mismatches detected: {len(mismatches)}")

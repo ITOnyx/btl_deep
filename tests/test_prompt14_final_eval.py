@@ -130,3 +130,28 @@ def test_prompt14h_supplements_file() -> None:
     assert s4["system_oracle_perfect_parser"]["mAP"] > 0.98
     assert s4["system_oracle_perfect_parser"]["recall@10"] > 0.99
 
+
+def test_prompt14i_cir_paired_baseline() -> None:
+    cir_p = PROJECT_ROOT / "reports/phase5c/cir_paired_baseline_results.json"
+    assert cir_p.exists(), "Missing cir_paired_baseline_results.json"
+    data = json.loads(cir_p.read_text(encoding="utf-8"))
+    assert "overall" in data
+    assert "baseColour" in data
+    assert "gender" in data
+
+    ov_01 = data["overall"]["cir_v1_01_vs_baseline"]
+    ov_05 = data["overall"]["cir_v1_05_vs_baseline"]
+
+    # cir_v1_01 significantly worse than baseline on R@10
+    assert "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)" in ov_01["recall@10"]["label"]
+    assert ov_01["recall@10"]["mean_diff"] < -0.20
+
+    # cir_v1_05 inconclusive on R@10 (CI contains 0)
+    assert "Chưa kết luận được" in ov_05["recall@10"]["label"]
+    assert ov_05["recall@10"]["ci_low"] < 0.0 < ov_05["recall@10"]["ci_high"]
+
+    # cir_v1_05 significantly better on mAP
+    assert "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)" in ov_05["mAP"]["label"]
+    assert ov_05["mAP"]["mean_diff"] > 0.15
+
+

@@ -1334,7 +1334,7 @@
           "n": 120
         }
       },
-      "observation": "Khi chỉ dùng ảnh tham chiếu (không qua modifier), điểm số đạt R@10 = 0.5833, mAP = 0.1544. Cả cir_v1_01 và cir_v1_05 đều vượt baseline này trên Recall@10, khẳng định modifier văn bản có đóng góp điều hướng không gian đặc trưng."
+      "observation": "CÂU OBSERVATION NÀY ĐÃ BỊ THAY THẾ CHÍNH THỨC (Prompt 14i): Xem bản sửa cơ học từ CI trong final_eval_corrections.json và Mục 12.4 của final_eval_report.md."
     },
     "matrix_2x2_breakdown": {
       "baseColour__full": {
