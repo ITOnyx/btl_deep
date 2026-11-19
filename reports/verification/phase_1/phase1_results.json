@@ -1,0 +1,277 @@
+{
+  "phase": 1,
+  "timestamp_utc": "2026-11-19T14:27:27.044042+00:00",
+  "project_root": "D:\\Kì 7\\Hoc_sau_ver4",
+  "seed": 42,
+  "1_git": {
+    "head": "0c8e49e2afe14328bcd272fa2a50e184389702ea",
+    "expected_head": "0c8e49e2afe14328bcd272fa2a50e184389702ea",
+    "head_match": true,
+    "branch": "add/test-crawl-img",
+    "wip_count": 48,
+    "wip_files": [
+      "M .streamlit/config.toml",
+      " M app/components/product_card.py",
+      " M app/components/sidebar.py",
+      " M app/main.py",
+      " M app/tabs/cir_catalog.py",
+      " M app/tabs/cir_upload.py",
+      " M app/tabs/image_to_image.py",
+      " M app/tabs/text_to_image.py",
+      " M config.yaml",
+      " M reports/phase5c/final_eval_corrections.json",
+      " M reports/phase5c/final_eval_corrections.sha256",
+      " M reports/phase5c/final_eval_report.md",
+      " M reports/phase5c/final_eval_report.sha256",
+      " M reports/phase5c/final_summary_for_chat.md",
+      " M reports/phase5c/final_summary_for_chat.sha256",
+      " M reports/quarantine_log.csv",
+      " M scripts/build_prompt14j_final_package.py",
+      " M scripts/scan_comparative_words.py",
+      "?? README_run.md",
+      "?? app/engine_service.py",
+      "?? app/i18n_vi.py",
+      "?? data/",
+      "?? reports/data_report.md",
+      "?? reports/external_test/",
+      "?? reports/phase5c/final_eval_corrections_prompt14j.json",
+      "?? reports/phase5c/final_eval_corrections_prompt14j.sha256",
+      "?? reports/phase5c/final_eval_report_prompt14j.md",
+      "?? reports/phase5c/final_eval_report_prompt14j.sha256",
+      "?? reports/phase5c/final_summary_for_chat_prompt14j.md",
+      "?? reports/phase5c/final_summary_for_chat_prompt14j.sha256",
+      "?? reports/phase6/",
+      "?? reports/phase7/",
+      "?? reports/verification/",
+      "?? results/",
+      "?? scripts/ablation_k_pool.py",
+      "?? scripts/crawl_external_test/",
+      "?? scripts/debug_cir_colors.py",
+      "?? scripts/eval_domain_consistency.py",
+      "?? scripts/generate_phase6_report.py",
+      "?? scripts/grid_search_dev.py",
+      "?? scripts/run_heldout_eval.py",
+      "?? scripts/run_phase6_smoke_test.py",
+      "?? scripts/step1_verify_legacy.py",
+      "?? scripts/step4a_audit_taxonomy.py",
+      "?? scripts/step4bc_audit_and_noisy_queries.py",
+      "?? src/serve/taxonomy.json",
+      "?? src/serve/taxonomy.py",
+      "?? tests/test_phase6_app.py"
+    ]
+  },
+  "2_checkpoint": {
+    "path": "D:\\Kì 7\\Hoc_sau_ver4\\data\\checkpoints_siglip-vit\\best_model.pt",
+    "exists": true,
+    "size_bytes": 3549699293,
+    "expected_sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+    "actual_sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+    "match": true
+  },
+  "3_eval_hashes": {
+    "eval/test_split.json": {
+      "exists": true,
+      "actual_sha256": "d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681",
+      "recorded_sha256_file": "eval/test_split.sha256",
+      "recorded_sha256": "d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681",
+      "prefix_match": true,
+      "full_match_with_repo_sha256": true
+    },
+    "eval/test_queries_heldout_v2.json": {
+      "exists": true,
+      "actual_sha256": "96c75433f911f212be05dd6488ff04d50a25076cb808fddbb6ffb413d3e11e40",
+      "recorded_sha256_file": "eval/test_queries_heldout_v2.json.sha256",
+      "recorded_sha256": "96c75433f911f212be05dd6488ff04d50a25076cb808fddbb6ffb413d3e11e40",
+      "prefix_match": true,
+      "full_match_with_repo_sha256": true
+    },
+    "eval/cir_eval_test.json": {
+      "exists": true,
+      "actual_sha256": "d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b",
+      "recorded_sha256_file": "eval/cir_eval_test.sha256",
+      "recorded_sha256": "d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b",
+      "prefix_match": true,
+      "full_match_with_repo_sha256": true
+    }
+  },
+  "4_manifests_and_hash_guard": {
+    "manifests": {
+      "index/_verify_val_text_v5/manifest.json": {
+        "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matches_expected_ckpt": true,
+        "keys": [
+          "caption_model",
+          "catalog_hash",
+          "checkpoint_hash",
+          "combination_method",
+          "commit_hash",
+          "created_at",
+          "embedding_dim",
+          "files",
+          "gallery_type",
+          "generation_params",
+          "id_order",
+          "id_order_sha256",
+          "internvl2_captions_present",
+          "law_d5_note",
+          "model_revision",
+          "n_vectors",
+          "preprocessing",
+          "seed",
+          "shard_hashes"
+        ]
+      },
+      "index/reference_gallery/manifest.json": {
+        "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matches_expected_ckpt": true,
+        "keys": [
+          "catalog_hash",
+          "checkpoint_hash",
+          "commit_hash",
+          "created_at",
+          "embedding_dim",
+          "files",
+          "gallery_type",
+          "hnsw_params",
+          "n_vectors",
+          "seed"
+        ]
+      },
+      "index/template_cache_v5/manifest.json": {
+        "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matches_expected_ckpt": true,
+        "keys": [
+          "cache_hash",
+          "cache_type",
+          "catalog_hash",
+          "checkpoint_hash",
+          "commit_hash",
+          "created_at",
+          "embedding_dim",
+          "n_templates",
+          "seed",
+          "source"
+        ]
+      },
+      "index/test_gallery/manifest.json": {
+        "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matches_expected_ckpt": true,
+        "keys": [
+          "catalog_hash",
+          "checkpoint_hash",
+          "commit_hash",
+          "created_at",
+          "embedding_dim",
+          "files",
+          "gallery_type",
+          "hnsw_params",
+          "n_vectors",
+          "seed"
+        ]
+      },
+      "index/test_gallery_text_v5/manifest.json": {
+        "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matches_expected_ckpt": true,
+        "keys": [
+          "caption_model",
+          "catalog_hash",
+          "checkpoint_hash",
+          "combination_method",
+          "commit_hash",
+          "created_at",
+          "embedding_dim",
+          "files",
+          "gallery_type",
+          "generation_params",
+          "id_order",
+          "id_order_sha256",
+          "internvl2_captions_present",
+          "law_d5_note",
+          "model_revision",
+          "n_vectors",
+          "preprocessing",
+          "seed",
+          "shard_hashes"
+        ]
+      },
+      "index/val_gallery/manifest.json": {
+        "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matches_expected_ckpt": true,
+        "keys": [
+          "catalog_hash",
+          "checkpoint_hash",
+          "commit_hash",
+          "created_at",
+          "embedding_dim",
+          "files",
+          "gallery_type",
+          "hnsw_params",
+          "n_vectors",
+          "note",
+          "seed"
+        ]
+      },
+      "index/val_gallery_text_v4/manifest.json": {
+        "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matches_expected_ckpt": true,
+        "keys": [
+          "catalog_hash",
+          "checkpoint_hash",
+          "commit_hash",
+          "created_at",
+          "embedding_dim",
+          "files",
+          "gallery_type",
+          "internvl2_captions_present",
+          "n_vectors",
+          "note",
+          "seed",
+          "sources"
+        ]
+      },
+      "index/val_gallery_text_v5/manifest.json": {
+        "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matches_expected_ckpt": true,
+        "keys": [
+          "catalog_hash",
+          "checkpoint_hash",
+          "commit_hash",
+          "created_at",
+          "embedding_dim",
+          "files",
+          "gallery_type",
+          "internvl2_captions_present",
+          "law_d5_note",
+          "n_vectors",
+          "seed"
+        ]
+      }
+    },
+    "all_manifests_match_ckpt": true,
+    "hash_guard_rejection_test": {
+      "rejected": true,
+      "exception_type": "ValueError",
+      "exception_message": "HASH GUARD LỆCH (Luật 6): manifest=0000000000000000000000000000000000000000000000000000000000000000 != config=e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d"
+    }
+  },
+  "5_environment": {
+    "python_version": "3.12.0",
+    "python_executable": "C:\\Users\\nguye\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "os": "Windows-11-10.0.26300-SP0",
+    "torch": "2.6.0+cu124",
+    "faiss": "1.15.1",
+    "bitsandbytes": "0.50.2",
+    "transformers": "4.46.3",
+    "numpy": "2.5.3",
+    "pandas": "3.0.0",
+    "streamlit": "1.65.0",
+    "pytest": "9.2.0",
+    "gpu_torch": {
+      "cuda_available": true,
+      "device_count": 1,
+      "device_name": "NVIDIA GeForce RTX 2050",
+      "total_vram_mb": 4095.6
+    },
+    "nvidia_smi": "name, memory.total [MiB], driver_version, temperature.gpu, utilization.gpu [%]\nNVIDIA GeForce RTX 2050, 4096 MiB, 560.76, 57, 30 %"
+  }
+}
