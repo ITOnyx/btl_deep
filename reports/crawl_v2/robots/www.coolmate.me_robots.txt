@@ -1,0 +1,24 @@
+# Fetched from: https://www.coolmate.me/robots.txt
+# Timestamp (UTC): 2026-11-20T01:13:31+00:00
+# HTTP Status: 200
+# User-Agent: AcademicResearchBot/2.0 (Hoc_sau_ver4 Vietnamese Fashion Visual Search; non-commercial academic evaluation; contact: nguyen-student@university.edu.vn)
+
+User-agent: *
+Disallow: /account
+Disallow: /cart
+Disallow: /profile
+Disallow: /spotlight
+
+User-agent: meta-webindexer
+Disallow: /*?*price_range=
+Disallow: /*?*size=
+Disallow: /*?*chat-lieu=
+
+Allow: /
+Disallow: /blog/wp-admin/
+Allow: /blog/wp-admin/admin-ajax.php
+Sitemap: https://www.coolmate.me/sitemap/sitemap_index.xml
+Sitemap: https://www.coolmate.me/blog/sitemap_index.xml
+Sitemap: https://www.coolmate.me/sitemap/product0.xml
+Sitemap: https://www.coolmate.me/sitemap/collection0.xml
+Sitemap: https://www.coolmate.me/sitemap/information.xml

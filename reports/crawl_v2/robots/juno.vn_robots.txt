@@ -1,0 +1,18 @@
+# Fetched from: https://juno.vn/robots.txt
+# Timestamp (UTC): 2026-11-20T01:13:30+00:00
+# HTTP Status: 200
+# User-Agent: AcademicResearchBot/2.0 (Hoc_sau_ver4 Vietnamese Fashion Visual Search; non-commercial academic evaluation; contact: nguyen-student@university.edu.vn)
+
+User-Agent: *
+Disallow: /my-orders
+Disallow: /otp?phone=*
+Disallow: /account
+Disallow: /profile
+Disallow: /checkout?orderId=*
+Disallow: /order-result/*
+Disallow: /wp-content/*
+
+User-Agent: AdsBot-Google
+Allow: /
+
+Sitemap: https://juno.vn//sitemap
