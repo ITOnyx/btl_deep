@@ -89,25 +89,45 @@ def min_hamming_and_nearest(
 def load_catalog_hashes() -> Tuple[Set[str], np.ndarray, List[str]]:
     """
     Đọc SHA-1 và pHash 64-bit của toàn bộ catalog hiện có (data/fashion-dataset: train, val, test)
-    từ data/catalog/catalog_rebuild.parquet (chế độ chỉ đọc - Luật L1/L3).
+    từ reports/phase1/phase1a/quality_metrics.parquet và cache seen_hashes_cache.npz (chế độ chỉ đọc - Luật L1/L3).
     """
-    cat_path = Path("data/catalog/catalog_rebuild.parquet")
-    if not cat_path.exists():
-        cat_path = Path("data/catalog/catalog.parquet")
-    if not cat_path.exists():
-        return set(), np.array([], dtype=np.uint64), []
-
-    df = pd.read_parquet(cat_path, columns=["product_id", "sha1", "phash"])
-    cat_sha1s: Set[str] = set(df["sha1"].dropna().astype(str).str.strip().tolist())
+    cat_sha1s: Set[str] = set()
     cat_phashes: List[int] = []
     cat_ids: List[str] = []
-    for pid, ph in zip(df["product_id"], df["phash"]):
-        u = hex_phash_to_uint64(str(ph) if pd.notna(ph) else "")
-        if u is not None:
-            cat_phashes.append(u)
-            cat_ids.append(str(pid))
 
-    return cat_sha1s, np.array(cat_phashes, dtype=np.uint64), cat_ids
+    # 1. Đọc pHash 44,419 ảnh catalog từ reports/phase1/phase1a/quality_metrics.parquet
+    qm_path = Path("reports/phase1/phase1a/quality_metrics.parquet")
+    if qm_path.exists():
+        df_qm = pd.read_parquet(qm_path, columns=["id", "phash"])
+        for pid, ph in zip(df_qm["id"], df_qm["phash"]):
+            u = hex_phash_to_uint64(str(ph) if pd.notna(ph) else "")
+            if u is not None:
+                cat_phashes.append(u)
+                cat_ids.append(str(pid))
+
+    # 2. Bổ sung từ seen_hashes_cache.npz nếu có
+    npz_path = Path("reports/external_test/seen_hashes_cache.npz")
+    if npz_path.exists():
+        npz = np.load(npz_path, allow_pickle=True)
+        if "phashes" in npz:
+            extra_ph = npz["phashes"].astype(np.uint64).tolist()
+            cat_phashes.extend(extra_ph)
+            cat_ids.extend([f"seen_{i}" for i in range(len(extra_ph))])
+
+    # 3. Đọc SHA-1 nếu có trong catalog_rebuild hoặc tính từ ảnh catalog
+    cat_path = Path("data/catalog/catalog_rebuild.parquet")
+    if cat_path.exists():
+        df_cat = pd.read_parquet(cat_path, columns=["sha1"])
+        vals = [s.strip() for s in df_cat["sha1"].dropna().astype(str) if s.strip()]
+        cat_sha1s.update(vals)
+
+    # Loại bỏ trùng lặp trong pHash catalog
+    if cat_phashes:
+        u_arr, u_idx = np.unique(np.array(cat_phashes, dtype=np.uint64), return_index=True)
+        u_ids = [cat_ids[i] for i in u_idx]
+        return cat_sha1s, u_arr, u_ids
+
+    return cat_sha1s, np.array([], dtype=np.uint64), []
 
 
 def run_phase4_cleaning(config_path: str = "config.yaml") -> Dict[str, Any]:
