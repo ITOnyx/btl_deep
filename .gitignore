@@ -49,3 +49,8 @@ index_v3_*/*
 # Temporary / OS
 .DS_Store
 Thumbs.db
+
+# Crawl v2 raw images and gallery thumbnails
+data/crawl_v2/
+reports/crawl_v2/gallery/thumbs/
+
