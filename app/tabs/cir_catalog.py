@@ -78,8 +78,9 @@ def render_tab_cir_catalog(service: Any, config: Dict[str, Any]) -> None:
     # Reference Image Preview
     active_pid = pid_val.strip()
     if active_pid:
-        sample_img_path = Path("data/fashion-dataset/images") / f"{active_pid}.jpg"
-        if sample_img_path.exists():
+        # Chỉ xem trước ID có trong gallery đang nạp (không ghép đường dẫn từ chuỗi người dùng nhập)
+        sample_img_path = service.item_image_path(active_pid)
+        if sample_img_path is not None and sample_img_path.exists():
             st.caption(f"Ảnh tham chiếu ID {active_pid}")
             st.image(str(sample_img_path), width=120)
 

@@ -100,7 +100,6 @@ def validate_and_load_image(file_data: Union[bytes, io.BytesIO], filename: str =
 # Hiệu chỉnh: ảnh upload đúng file catalog cho cosine ~1.0; hai sản phẩm KHÁC nhau đạt >= 0.995 ở 0.47% sản phẩm
 # của reference_gallery (đa số là ảnh trùng thật, cos >= 0.999), còn ở mức 0.99 là 1.73% -> chọn 0.995.
 NEAR_DUPLICATE_COSINE = 0.995
-_NEAR_DUP_SLACK = 3  # lấy dư vài kết quả để vẫn đủ top_k sau khi loại ảnh trùng
 
 # Ảnh upload có cosine top-1 tới gallery thấp hơn ngưỡng này -> coi là không nhận diện được lĩnh vực (ràng buộc mềm + cảnh báo).
 # Ngưỡng phụ thuộc mật độ gallery (gallery càng dày, ảnh lạ càng dễ có láng giềng gần):
@@ -161,6 +160,10 @@ class AppSearchService:
 
         self.item_id_to_idx = {str(item["item_id"]): i for i, item in enumerate(self.id_map)}
         self.embeddings = np.load(self.index_dir / "image_embeddings.npy").astype(np.float32)
+        # Chuẩn hoá sẵn một lần lúc khởi tạo (exact search + lọc ảnh trùng khi upload dùng chung),
+        # để không tính trong thời gian của truy vấn đầu tiên.
+        self._emb_normed = None
+        self._normed_embeddings()
 
         # Load FAISS HNSW Index
         self.hnsw = FaissHNSWIndex.load(self.index_dir / "faiss_hnsw.bin", ef_search=self.ef_search)
@@ -291,12 +294,32 @@ class AppSearchService:
 
         return results[:top_k]
 
-    def _exact_search(self, query_vec: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
-        """Cosine chính xác tới toàn bộ gallery, sắp giảm dần (cùng định dạng [1, N] với hnsw.search)."""
+    def item_image_path(self, item_id: str) -> Optional[Path]:
+        """Đường dẫn ảnh của sản phẩm trong gallery đang nạp (None nếu ID không có trong gallery)."""
+        idx = self.item_id_to_idx.get(str(item_id).strip())
+        if idx is None:
+            return None
+        raw_path = self.id_map[idx].get("path", "")
+        return (self.project_root / raw_path) if raw_path else None
+
+    def sample_image_path(self, item_id: str) -> Path:
+        """Ảnh mẫu cho tab upload: ưu tiên ảnh trong gallery, nếu không có thì lấy từ fashion-dataset."""
+        p = self.item_image_path(item_id)
+        if p is not None and p.exists():
+            return p
+        return self.project_root / "data" / "fashion-dataset" / "images" / f"{item_id}.jpg"
+
+    def _normed_embeddings(self) -> np.ndarray:
+        """Ma trận embedding đã chuẩn hoá L2 (tính một lần rồi cache)."""
         emb_n = getattr(self, "_emb_normed", None)
         if emb_n is None:
             emb_n = self.embeddings / np.maximum(np.linalg.norm(self.embeddings, axis=1, keepdims=True), 1e-12)
             self._emb_normed = emb_n
+        return emb_n
+
+    def _exact_search(self, query_vec: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+        """Cosine chính xác tới toàn bộ gallery, sắp giảm dần (cùng định dạng [1, N] với hnsw.search)."""
+        emb_n = self._normed_embeddings()
         qv = np.asarray(query_vec, dtype=np.float32).reshape(-1)
         qv = qv / max(float(np.linalg.norm(qv)), 1e-12)
         sims = emb_n @ qv
@@ -764,6 +787,16 @@ class AppSearchService:
         else:
             parsed = self.parser.parse(modifier_text) if config_id != "cir_v1_01" else {}
 
+        # Đếm trước các sản phẩm gallery gần như trùng ảnh upload để lấy dư đúng số đó,
+        # đảm bảo vẫn đủ top_k kết quả sau khi loại.
+        near_dup_pos: set = set()
+        if exclude_near_duplicates:
+            img_vec = ref_img_emb.float().cpu().numpy().reshape(-1)
+            img_vec = img_vec / max(float(np.linalg.norm(img_vec)), 1e-12)
+            sims_all = self._normed_embeddings() @ img_vec
+            near_dup_pos = set(np.flatnonzero(sims_all >= NEAR_DUPLICATE_COSINE).tolist())
+        fetch_k = top_k + len(near_dup_pos)
+
         if config_id in ("cir_v1_06", "cir_v1_07"):
             inf_d, inf_g, inf_t, inf_gen, is_confident = self._predict_image_taxonomy(ref_img_emb)
 
@@ -794,7 +827,7 @@ class AppSearchService:
 
             results = self._execute_ranking_3tier(
                 query_vec=q_vec,
-                top_k=top_k + (_NEAR_DUP_SLACK if exclude_near_duplicates else 0),
+                top_k=fetch_k,
                 target_domain=target_d,
                 target_group=target_g,
                 target_type=target_t,
@@ -809,19 +842,13 @@ class AppSearchService:
         else:
             results = self._execute_ranking(
                 query_vec=q_vec,
-                top_k=top_k + (_NEAR_DUP_SLACK if exclude_near_duplicates else 0),
+                top_k=fetch_k,
                 parsed_query=parsed,
                 config_id=config_id
             )
 
-        if exclude_near_duplicates and results:
-            img_vec = ref_img_emb.float().cpu().numpy().reshape(-1)
-            img_vec = img_vec / max(float(np.linalg.norm(img_vec)), 1e-12)
-            pos = np.asarray([r["index_pos"] for r in results], dtype=np.int64)
-            emb = np.asarray(self.embeddings[pos], dtype=np.float32)
-            emb = emb / np.maximum(np.linalg.norm(emb, axis=1, keepdims=True), 1e-12)
-            sims = emb @ img_vec
-            results = [r for r, sim in zip(results, sims) if sim < NEAR_DUPLICATE_COSINE]
+        if near_dup_pos:
+            results = [r for r in results if int(r["index_pos"]) not in near_dup_pos]
         results = results[:top_k]
         for r_i, r in enumerate(results, start=1):
             r["rank"] = r_i

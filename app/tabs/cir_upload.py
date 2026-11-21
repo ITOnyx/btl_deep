@@ -36,9 +36,11 @@ def render_tab_cir_upload(service: Any, config: Dict[str, Any]) -> None:
         if use_sample:
             sample_ids = ["15970", "1855", "7990", "6908"]
             chosen_pid = st.selectbox("Chọn ảnh mẫu", sample_ids, index=0, key="cir_upl_sample_select")
-            sample_path = Path("data/fashion-dataset/images") / f"{chosen_pid}.jpg"
+            sample_path = service.sample_image_path(chosen_pid)
             if sample_path.exists():
                 img_to_search = Image.open(sample_path).convert("RGB")
+            else:
+                st.warning(f"Không tìm thấy ảnh mẫu: {sample_path}")
         elif uploaded_file is not None:
             try:
                 # In-memory validation (never written to disk)

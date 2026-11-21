@@ -23,6 +23,7 @@
   * `cir_v1_05 vs Baseline:` HƠN baseline có ý nghĩa thống kê trên mAP (Δ = `+0.1715` chính thức, `+0.1384` chuẩn) nhờ C3 bonus; nhưng trên Recall@10 là **Chưa kết luận được** (Δ = `+0.0167` chính thức, `+0.0000` chuẩn, CI chứa 0).
   * `Phân rã đổi màu vs đổi giới:` Cải thiện mAP chỉ có ý nghĩa ở đổi màu sắc (ΔmAP = `+0.2495` chính thức, `+0.2102` chuẩn). Đổi giới tính (n=40) **không chứng minh được cải thiện** so với baseline (ΔmAP = `+0.0155 [-0.0291, +0.0637]` chính thức, `-0.0053 [-0.0508, +0.0420]` chuẩn, CI chứa 0).
   * `cir_v1_05 vs cir_v1_01:` Hệ thống hơn model thuần (ΔmAP = `+0.2288`, ΔR@10 = `+0.3333` chính thức; `+0.2228` và `+0.3083` chuẩn).
+- **Kết luận về Ngưỡng CIR (chờ quyết định áp dụng hay không áp dụng ngưỡng đề tài Recall@10 ≥ 0.85):** Nếu áp dụng ngưỡng Recall@10 ≥ 0.85, hệ thống CIR `cir_v1_05` đạt `Recall@10 = 0.6000 [0.5083, 0.6917]` (**cận trên 0.6917 < 0.85, Chưa đạt**); nếu không áp dụng và coi CIR là chức năng thử nghiệm/thăm dò, so với baseline chỉ-ảnh-tham-chiếu thì cải thiện mAP có ý nghĩa thống kê (ΔmAP = `+0.1715 [+0.1213, +0.2250]`).
 
 #### 3. Bóc tách Nguyên nhân Định lượng (Phần C Chẩn đoán)
 - **Model thuần SigLIP:** Đóng góp mAP `0.3386` và Recall@10 `0.7020` (chưa đạt ngưỡng đề bài).
@@ -35,12 +36,13 @@
 3. **Hiện tượng Echo Caption Đề bài (InternVL2-2B):** Kiểm toán phát hiện `841/1,290` ảnh test (65.19%) bị lặp 68 token đề bài và `413/1,290` ảnh (32.02%) bị cắt cụt còn '1. Thô'. Cấu hình `cfg_v5_08a` và `cfg_v5_08b` không phản ánh thực chất năng lực sinh mô tả độc lập của InternVL2-2B.
 4. **Tập Kiểm thử Held-out v2:** Quy mô $n=151$ câu unseen, trong đó chỉ có đúng 15 câu thuộc cụm 'không mỏng' (phương sai bootstrap lớn), 47.0% câu chứa từ khóa ngoài lexicon (71/151 câu), và không có nhãn kiểm thử lỗi gõ (typo) độc lập hay đánh giá một phần.
 5. **Độ trễ Đường Đọc Đĩa Thực tế:** Số chính đo trên RAM PIL đạt < 200 ms (T2I 32.52 ms, CIR 158.54 ms). Trên đường đọc đĩa JPEG decode thực tế (chỉ áp dụng cho Luồng 2 và 4): `cir_v1_01` Chưa đạt (p95 = `201.51 ms`), `cir_v1_05` Đạt theo trung vị nhưng có run vượt (`196.72 ms`, max `205.51 ms`), và pooled p99 của CIR upload đều vượt 200 ms (`201.24 ms` RAM, `240.43 ms` Disk).
-6. **Đánh đổi Giữa các Cấu hình Đã Chốt:** Cấu hình `cfg_v5_01` đạt mAP cao hơn cấu hình chiến thắng `cfg_v5_09` có ý nghĩa thống kê (ΔmAP = `-0.0158 [-0.0273, -0.0063]`), tuy nhiên `cfg_v5_09` đã được chốt từ Pha 5b do ưu tiên tiêu chí slot mỏng bền vững.
+6. **Đánh đổi Giữa các Cấu hình Đã Chốt:** Cấu hình `cfg_v5_01` đạt mAP cao hơn cấu hình chiến thắng `cfg_v5_09` có ý nghĩa thống kê (ΔmAP = `-0.0158 [-0.0273, -0.0063]`); cấu hình `cfg_v5_09` được chốt ở Pha 5c do thắng theo CV Score 0.7031 và tie-break bootstrap trong nhóm: ['cfg_v5_09', 'cfg_v5_04', 'cfg_v5_10', 'cfg_v5_11', 'cfg_v5_06', 'cfg_v5_08b'], còn `cfg_v5_01` là cấu hình an toàn (căn cứ [step5c_selection_report.md](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/step5c_selection_report.md)).
 7. **Quy ước Ảnh Tham chiếu trong CIR:** Cả ở giao thức chính thức ($N=1,290$) và quy ước chuẩn loại ảnh tham chiếu ($N=1,289$), hệ thống `cir_v1_05` không khác biệt có ý nghĩa thống kê so với baseline chỉ-ảnh-tham-chiếu trên Recall@10 (ΔR@10 = `+0.0167` và `+0.0000`, CI chứa 0); trên mAP hệ thống hơn baseline nhưng cải thiện chỉ tập trung ở đổi màu (ΔmAP = `+0.2102` chuẩn), còn đổi giới tính ($n=40$) không chứng minh được sự cải thiện (ΔmAP = `-0.0053 [-0.0508, +0.0420]`).
 
 #### 5. Tổng kết Trạng thái Tệp & Kiểm thử
-- [final_eval_report.md](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_report.md) (`SHA-256: dff16f0432875b24e5bd6e562430a476bdeb111c6c78e8d96266b67efb5bbb5d`)
-- [final_eval_corrections.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_corrections.json) (`SHA-256: aa54f61b1d2eb1556f615ef623282f28698a556769f612684e7b584947be8d1c`)
+- [final_eval_report.md](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_report.md) (`SHA-256: ea8a571a520d5728b89e7bf7f05912e8a730fe06f6366b5250e393a8dfc9e4ad`)
+- [final_eval_corrections.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_corrections.json) (`SHA-256: ad86f675207ca7030c0c713eb54cd60d33136f322f1224282bc1956363df65a0`)
 - [final_eval_supplements.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_supplements.json) (`SHA-256: 55d477938add99587de00c0849c0c13d003db06ea1b7654a2dff8cc6575fe443`)
 - [cir_standard_convention_results.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/cir_standard_convention_results.json) (`SHA-256: 41b4a6d01eaa5bd63f8d4212afd0c0bb7edaed4db87da1e2003ce2a5770342bc`)
-- [final_eval_report_prompt14i.md](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_report_prompt14i.md) (Bản lưu Prompt 14i)
+- [final_eval_report_prompt14j.md](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_report_prompt14j.md) (Bản lưu Prompt 14j)
+- [final_summary_for_chat_prompt14j.md](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_summary_for_chat_prompt14j.md) (Bản lưu Prompt 14j)

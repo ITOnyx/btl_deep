@@ -10,7 +10,7 @@
 - **Tệp `eval/test_queries_heldout_v2.json`:** Đã khóa (`SHA-256: 96c75433f911f212be05dd6488ff04d50a25076cb808fddbb6ffb413d3e11e40`), 151 câu unseen.
 - **Tệp `eval/cir_eval_test.json`:** Đã khóa (`SHA-256: d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b`), 120 cặp CIR test.
 - **Tệp kết quả đóng băng:** [final_eval_results.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_results.json) (`SHA-256: 8a89359af8e0cbe4a8eb2373ce9a3d8991657a554e99c5bfd5efad850ca96a01`)
-- **Tệp hiệu chỉnh cơ học:** [final_eval_corrections.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_corrections.json) (`SHA-256: aa54f61b1d2eb1556f615ef623282f28698a556769f612684e7b584947be8d1c`)
+- **Tệp hiệu chỉnh cơ học:** [final_eval_corrections.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_corrections.json) (`SHA-256: ad86f675207ca7030c0c713eb54cd60d33136f322f1224282bc1956363df65a0`)
 - **Tệp bổ sung kế hoạch:** [final_eval_supplements.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/final_eval_supplements.json) (`SHA-256: 55d477938add99587de00c0849c0c13d003db06ea1b7654a2dff8cc6575fe443`)
 - **Tệp so sánh CIR baseline chính thức:** [cir_paired_baseline_results.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/cir_paired_baseline_results.json) (`SHA-256: 97acec74be56b6e7eb607aac0fc53f2a53d4674b299186b64bd7bb927e73462b`)
 - **Tệp CIR quy ước chuẩn:** [cir_standard_convention_results.json](file:///d:/Kì%207/Hoc_sau_ver4/reports/phase5c/cir_standard_convention_results.json) (`SHA-256: 41b4a6d01eaa5bd63f8d4212afd0c0bb7edaed4db87da1e2003ce2a5770342bc`)
@@ -487,4 +487,8 @@ Mục này ghi nhận và sửa đổi toàn bộ các sai sót về trình bày
 6. **Loại bỏ Tính từ Chủ quan & Bổ sung Quy ước Chuẩn CIR (Prompt 14j):**
    - Thay thế toàn bộ 7 vị trí chứa các tính từ so sánh cảm tính bằng số liệu chênh lệch hoặc nhãn cơ học từ bootstrap CI.
    - Đánh giá bổ sung quy ước chuẩn (loại bỏ ảnh tham chiếu khỏi danh sách ứng viên, N=1,289): xác nhận Recall@10 của hệ thống cir_v1_05 và baseline chỉ-ảnh-tham-chiếu là tương đương (cùng đạt 0.6000, ΔR@10 = +0.0000 [-0.1083, +0.1000], Chưa kết luận được); mAP của cir_v1_05 đạt 0.3261 so với baseline 0.1877 (ΔmAP = +0.1384 [+0.0846, +0.1902]), nhưng mức tăng này tập trung hoàn toàn ở đổi màu (ΔmAP = +0.2102), còn đổi giới tính không chứng minh được cải thiện (ΔmAP = -0.0053 [-0.0508, +0.0420], CI chứa 0).
+
+7. **Đính chính Căn cứ Chọn Cấu hình Chiến thắng & Kết luận Ngưỡng CIR (Prompt 15 Bước 0):**
+   - Bác bỏ câu diễn đạt cũ trong bản tóm tắt chat: *'cfg_v5_09 đã được chốt từ Pha 5b do ưu tiên tiêu chí slot mỏng bền vững'* do không có căn cứ. Đính chính chuẩn xác từ `reports/phase5c/step5c_selection_report.md`: Cấu hình `cfg_v5_09` được chốt tại Pha 5c do thắng theo CV Score 0.7031 và tie-break bootstrap trong nhóm: `['cfg_v5_09', 'cfg_v5_04', 'cfg_v5_10', 'cfg_v5_11', 'cfg_v5_06', 'cfg_v5_08b']`; `cfg_v5_01` là cấu hình an toàn.
+   - Bổ sung kết luận tường minh về ngưỡng CIR (trạng thái: chức năng thử nghiệm, chờ quyết định chính thức về việc áp dụng ngưỡng đề tài): Nếu áp dụng ngưỡng Recall@10 ≥ 0.85, hệ thống CIR `cir_v1_05` đạt `Recall@10 = 0.6000 [0.5083, 0.6917]` (**cận trên 0.6917 < 0.85, Chưa đạt**); nếu không áp dụng và coi CIR là chức năng thử nghiệm/thăm dò, so với baseline chỉ-ảnh-tham-chiếu thì cải thiện mAP có ý nghĩa thống kê (ΔmAP = `+0.1715 [+0.1213, +0.2250]`).
 
