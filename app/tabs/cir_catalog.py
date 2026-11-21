@@ -11,6 +11,14 @@ import streamlit as st
 from app.components.product_card import render_result_grid
 
 
+def _apply_chip(pid: str, mod: str) -> None:
+    """on_click của chip gợi ý: đặt giá trị cho 2 ô nhập (có key) TRƯỚC khi chúng được vẽ lại,
+    để ô nhập luôn khớp với truy vấn vừa chạy và lần bấm "Tìm kiếm" sau đó dùng đúng giá trị."""
+    st.session_state["cir_cat_pid_input"] = pid
+    st.session_state["cir_cat_mod_input"] = mod
+    st.session_state["cir_cat_pending_chip"] = (pid, mod)
+
+
 def render_tab_cir_catalog(service: Any, config: Dict[str, Any]) -> None:
     st.caption("Tính năng thử nghiệm")
     st.caption("Tìm kiếm sản phẩm từ mã sản phẩm tham chiếu và yêu cầu chỉnh sửa.")
@@ -20,6 +28,10 @@ def render_tab_cir_catalog(service: Any, config: Dict[str, Any]) -> None:
         st.session_state["cir_cat_pid"] = "15970"
     if "cir_cat_mod" not in st.session_state:
         st.session_state["cir_cat_mod"] = "nhưng màu đỏ"
+    if "cir_cat_pid_input" not in st.session_state:
+        st.session_state["cir_cat_pid_input"] = st.session_state["cir_cat_pid"]
+    if "cir_cat_mod_input" not in st.session_state:
+        st.session_state["cir_cat_mod_input"] = st.session_state["cir_cat_mod"]
     if "cir_cat_results" not in st.session_state:
         st.session_state["cir_cat_results"] = None
     if "cir_cat_elapsed_s" not in st.session_state:
@@ -32,13 +44,13 @@ def render_tab_cir_catalog(service: Any, config: Dict[str, Any]) -> None:
         ("15970", "Áo sơ mi 15970 (nhưng màu đỏ)", "15970", "nhưng màu đỏ"),
         ("1855", "Áo thun 1855 (nhưng màu hồng)", "1855", "nhưng cho nữ màu hồng"),
         ("7990", "Áo thun 7990 (nhưng màu xanh lá)", "7990", "nhưng màu xanh lá"),
-        ("25947", "Đầm 25947 (nhưng màu đỏ đô)", "25947", "nhưng kiểu màu đỏ đô"),
+        ("8485", "Đầm 8485 (nhưng màu hồng)", "8485", "nhưng màu hồng"),
     ]
-    sample_selected = None
     for idx, (_, label, s_pid, s_mod) in enumerate(sample_refs):
         with sample_cols[idx]:
-            if st.button(label, key=f"cir_cat_chip_{idx}", use_container_width=True):
-                sample_selected = (s_pid, s_mod)
+            st.button(label, key=f"cir_cat_chip_{idx}", use_container_width=True,
+                      on_click=_apply_chip, args=(s_pid, s_mod))
+    sample_selected = st.session_state.pop("cir_cat_pending_chip", None)
 
     if sample_selected:
         st.session_state["cir_cat_pid"] = sample_selected[0]
@@ -50,14 +62,12 @@ def render_tab_cir_catalog(service: Any, config: Dict[str, Any]) -> None:
         with col_pid:
             pid_val = st.text_input(
                 "Mã sản phẩm",
-                value=st.session_state["cir_cat_pid"],
                 placeholder="Ví dụ: 15970",
                 key="cir_cat_pid_input",
             )
         with col_mod:
             mod_val = st.text_input(
                 "Yêu cầu chỉnh sửa",
-                value=st.session_state["cir_cat_mod"],
                 placeholder="Ví dụ: nhưng màu đỏ, cho nữ...",
                 key="cir_cat_mod_input",
             )

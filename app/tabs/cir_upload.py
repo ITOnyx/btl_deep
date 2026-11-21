@@ -1,43 +1,92 @@
 """
-Tab 4: CIR from Uploaded Image.
-Composes a user-uploaded image with a text modifier.
+Tab 4: CIR from Uploaded Image (Composed Image Retrieval).
+Fuses a user-uploaded image vector with a natural language modifier.
 """
 from __future__ import annotations
 
-import time
+from pathlib import Path
 from typing import Any, Dict
-
 from PIL import Image
 import streamlit as st
-from app.components.product_card import render_product_grid
+
+from app.components.product_card import render_result_grid
+from app.engine_service import validate_and_load_image, ImageValidationError
 
 
-def render_tab_cir_upload(engine: Any, config: Dict[str, Any]) -> None:
-    st.subheader("📤 Tra cứu Kết hợp (CIR) từ Ảnh Tải lên")
-    st.markdown("Tải lên ảnh bất kỳ bên ngoài và nhập yêu cầu thay đổi thuộc tính (màu sắc, giới tính, kiểu dáng).")
+def render_tab_cir_upload(service: Any, config: Dict[str, Any]) -> None:
+    st.caption("Tính năng thử nghiệm")
+    st.caption("Tìm kiếm sản phẩm bằng cách tải ảnh lên và nhập yêu cầu chỉnh sửa.")
 
-    uploaded_file = st.file_uploader(
-        "Tải ảnh sản phẩm gốc:", type=["jpg", "jpeg", "png"], key="uploader_cir_upload"
-    )
+    # Initialize session state keys for persistence
+    if "cir_upl_results" not in st.session_state:
+        st.session_state["cir_upl_results"] = None
+    if "cir_upl_elapsed_s" not in st.session_state:
+        st.session_state["cir_upl_elapsed_s"] = 0.0
 
-    modifier_text = st.text_input(
-        "Nhập yêu cầu biến đổi (Modifier):",
-        placeholder="nhưng màu xanh dương đậm, kiểu thể thao...",
-        key="mod_cir_upload",
-    )
+    col_input, col_preview = st.columns([3, 2])
+    img_to_search: Image.Image | None = None
 
-    if uploaded_file is not None and modifier_text.strip():
-        col_img, col_act = st.columns([1, 3])
-        with col_img:
-            img = Image.open(uploaded_file).convert("RGB")
-            st.image(img, caption="Ảnh gốc tham chiếu", use_container_width=True)
-        with col_act:
-            if st.button("Tìm kiếm biến thể sản phẩm", key="btn_cir_upload"):
-                with st.spinner("Đang xử lý ảnh tải lên và kết hợp vector..."):
-                    t0 = time.perf_counter()
-                    # Pipeline call will be integrated here in Phase 6 demo
-                    elapsed_ms = (time.perf_counter() - t0) * 1000.0
+    with col_input:
+        uploaded_file = st.file_uploader(
+            "Tải ảnh sản phẩm (JPG, PNG, WebP — tối đa 10 MB)",
+            type=["jpg", "jpeg", "png", "webp"],
+            key="cir_upload_file_uploader",
+        )
+        use_sample = st.checkbox("Dùng ảnh mẫu từ gallery", value=False, key="cir_upl_use_sample")
+        if use_sample:
+            sample_ids = ["15970", "1855", "7990", "6908"]
+            chosen_pid = st.selectbox("Chọn ảnh mẫu", sample_ids, index=0, key="cir_upl_sample_select")
+            sample_path = Path("data/fashion-dataset/images") / f"{chosen_pid}.jpg"
+            if sample_path.exists():
+                img_to_search = Image.open(sample_path).convert("RGB")
+        elif uploaded_file is not None:
+            try:
+                # In-memory validation (never written to disk)
+                img_to_search = validate_and_load_image(
+                    file_data=uploaded_file.getvalue(),
+                    filename=uploaded_file.name,
+                )
+            except ImageValidationError as ve:
+                st.error(str(ve))
+                img_to_search = None
 
-                    if config.get("show_latency"):
-                        st.success(f"Thời gian phản hồi: **{elapsed_ms:.2f} ms** (SLA < 200 ms)")
-                    # render_product_grid(results, num_cols=5)
+        mod_text = st.text_input(
+            "Yêu cầu chỉnh sửa",
+            value="nhưng màu vàng",
+            key="cir_upl_mod_input",
+            placeholder="Ví dụ: nhưng màu vàng, kiểu thể thao, cho nữ...",
+        )
+
+        btn_search = st.button("Tìm kiếm", type="primary", key="btn_cir_upl_submit", use_container_width=True)
+
+    with col_preview:
+        if img_to_search is not None:
+            st.image(img_to_search, caption=f"Ảnh tham chiếu ({img_to_search.size[0]}x{img_to_search.size[1]} px)", width=160)
+
+    if btn_search and img_to_search is not None and mod_text.strip():
+        with st.spinner("Đang tìm kiếm..."):
+            try:
+                results, _, elapsed_ms = service.search_cir_upload(
+                    uploaded_image=img_to_search,
+                    modifier_text=mod_text.strip(),
+                    config_id=config["cir_config_id"],
+                    top_k=config["top_k"],
+                )
+                st.session_state["cir_upl_results"] = results
+                st.session_state["cir_upl_elapsed_s"] = elapsed_ms / 1000.0
+            except Exception as e:
+                st.error(f"Lỗi tìm kiếm: {e}")
+                st.session_state["cir_upl_results"] = None
+
+    saved_results = st.session_state.get("cir_upl_results")
+    if saved_results is not None:
+        elapsed_s = st.session_state.get("cir_upl_elapsed_s", 0.0)
+        st.caption(f"Tìm thấy {len(saved_results)} kết quả trong {elapsed_s:.2f} giây")
+        if saved_results and saved_results[0].get("unrecognized_domain"):
+            st.warning(
+                "Không nhận diện được loại sản phẩm trong ảnh (có thể không phải ảnh thời trang). "
+                "Kết quả chỉ dựa trên độ tương đồng, không lọc theo lĩnh vực."
+            )
+        if len(saved_results) < config.get("top_k", 10):
+            st.caption(f"Chỉ có {len(saved_results)} sản phẩm cùng lĩnh vực phù hợp.")
+        render_result_grid(saved_results, num_cols=5)

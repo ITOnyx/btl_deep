@@ -157,8 +157,9 @@ def inject_custom_css() -> None:
         font-size: 11px;
     }
 
-    /* Chips button styling — applies to all small secondary buttons */
-    .stButton > button[kind="secondary"] {
+    /* Chips button styling — secondary buttons via Streamlit data-testid */
+    [data-testid="stBaseButton-secondary"],
+    [data-testid="baseButton-secondary"] {
         height: 32px !important;
         min-height: 32px !important;
         font-size: 12px !important;
@@ -168,7 +169,8 @@ def inject_custom_css() -> None:
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         color: #C9D1D9 !important;
     }
-    .stButton > button[kind="secondary"]:hover {
+    [data-testid="stBaseButton-secondary"]:hover,
+    [data-testid="baseButton-secondary"]:hover {
         border-color: #4C8BF5 !important;
         color: #FFFFFF !important;
     }
@@ -219,6 +221,19 @@ def main() -> None:
 
     # Render sidebar with controls and metadata
     config = render_sidebar(service_meta)
+
+    # Drop saved results when the settings that produced them change, so stale
+    # results (and the "Chỉ có N sản phẩm..." caption) never outlive their config.
+    settings_sig = (
+        config["gallery_name"],
+        config["t2i_config_id"],
+        config["cir_config_id"],
+        config["top_k"],
+    )
+    if st.session_state.get("results_settings_sig") != settings_sig:
+        for key in ("t2i_results", "i2i_results", "cir_cat_results", "cir_upl_results"):
+            st.session_state[key] = None
+        st.session_state["results_settings_sig"] = settings_sig
 
     # Handle gallery change
     if config["gallery_name"] != active_gallery:

@@ -153,6 +153,19 @@ class UpgradedAttentionCIRCombiner(nn.Module):
         return F.normalize(out, p=2, dim=-1)
 
 
+def _pooled(outputs, tower: str) -> torch.Tensor:
+    """Lấy pooled embedding từ output của SigLIP (ModelOutput hoặc tuple khi return_dict=False)."""
+    if isinstance(outputs, tuple):
+        feats = outputs[1] if len(outputs) > 1 else None
+    else:
+        feats = getattr(outputs, "pooler_output", None)
+    if feats is None:
+        raise RuntimeError(
+            f"SigLIP {tower} tower không trả về pooler_output; kiểm tra config (vision_use_head / return_dict)."
+        )
+    return feats
+
+
 class HighlyEffectiveSigLIP(nn.Module):
     """
     Kiến trúc mô hình hoàn chỉnh phục vụ suy luận SigLIP E-commerce.
@@ -182,7 +195,7 @@ class HighlyEffectiveSigLIP(nn.Module):
     def encode_image(self, pixel_values: torch.Tensor) -> torch.Tensor:
         """Trích xuất embedding ảnh, chuẩn hóa L2."""
         vision_outputs = self.siglip.vision_model(pixel_values=pixel_values)
-        img_feats = vision_outputs[1] if len(vision_outputs) > 1 else vision_outputs.pooler_output
+        img_feats = _pooled(vision_outputs, "vision")
         return F.normalize(img_feats, p=2, dim=-1)
 
     def encode_text(
@@ -192,7 +205,7 @@ class HighlyEffectiveSigLIP(nn.Module):
     ) -> torch.Tensor:
         """Trích xuất embedding văn bản, chuẩn hóa L2."""
         text_outputs = self.siglip.text_model(input_ids=input_ids, attention_mask=attention_mask)
-        txt_feats = text_outputs[1] if len(text_outputs) > 1 else text_outputs.pooler_output
+        txt_feats = _pooled(text_outputs, "text")
         return F.normalize(txt_feats, p=2, dim=-1)
 
     def compose_query(

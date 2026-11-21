@@ -96,6 +96,20 @@ def validate_and_load_image(file_data: Union[bytes, io.BytesIO], filename: str =
         raise ImageValidationError(f"Không thể giải mã hình ảnh. Tệp có thể bị lỗi hoặc hỏng định dạng ({e}).")
 
 
+# Ảnh upload trùng (gần như) một sản phẩm gallery: cosine ảnh-ảnh >= ngưỡng này thì loại khỏi kết quả CIR Upload.
+# Hiệu chỉnh: ảnh upload đúng file catalog cho cosine ~1.0; hai sản phẩm KHÁC nhau đạt >= 0.995 ở 0.47% sản phẩm
+# của reference_gallery (đa số là ảnh trùng thật, cos >= 0.999), còn ở mức 0.99 là 1.73% -> chọn 0.995.
+NEAR_DUPLICATE_COSINE = 0.995
+_NEAR_DUP_SLACK = 3  # lấy dư vài kết quả để vẫn đủ top_k sau khi loại ảnh trùng
+
+# Ảnh upload có cosine top-1 tới gallery thấp hơn ngưỡng này -> coi là không nhận diện được lĩnh vực (ràng buộc mềm + cảnh báo).
+# Ngưỡng phụ thuộc mật độ gallery (gallery càng dày, ảnh lạ càng dễ có láng giềng gần):
+# - test_gallery (1,290): 0.50 -> 7/31 ảnh không phải thời trang lọt qua, 9/300 ảnh thời trang thật bị chuyển sang ràng buộc mềm.
+# - reference_gallery (38,646): 0.70 -> 6/32 ảnh lạ lọt qua, 0/300 ảnh thật bị chặn (0.50 để lọt 18/32).
+FASHION_MIN_TOP1_COSINE_BY_GALLERY = {"reference_gallery": 0.70}
+FASHION_MIN_TOP1_COSINE = 0.50  # mặc định cho gallery khác (vd. test_gallery)
+
+
 class AppSearchService:
     """
     Unified search service for Streamlit application.
@@ -139,6 +153,7 @@ class AppSearchService:
                 f"- Checkpoint trong config.yaml: {expected_hash}\n"
                 f"- Manifest trong {self.index_dir.name}: {actual_manifest_hash}"
             )
+        self.hash_guard_ok = True
 
         # 3. Load id_map and gallery embeddings
         with open(self.index_dir / "id_map.json", "r", encoding="utf-8") as f:
@@ -162,7 +177,7 @@ class AppSearchService:
 
         # 5. Vietnamese Parser
         self.parser = VietnameseQueryParser()
-        self.parser_v3 = VietnameseQueryParserV3()  # dùng cho cfg_v5_11 (DEV SET)
+        self.parser_v3 = VietnameseQueryParserV3()  # dùng cho cfg_v5_11 và cir_v1_07 (DEV SET)
 
         # 6. Validate domain_ranking configuration weights
         dr_cfg = self.cfg.get("domain_ranking", {})
@@ -194,6 +209,7 @@ class AppSearchService:
             "checkpoint_hash": self.cfg["checkpoint"]["checkpoint_hash"],
             "index_name": self.index_dir.name,
             "total_items": len(self.id_map),
+            "hash_guard_ok": getattr(self, "hash_guard_ok", False),
             "ef_search": self.ef_search,
             "seed": self.cfg.get("seed", 42),
             "is_reference_gallery": "reference" in self.index_dir.name,
@@ -275,6 +291,18 @@ class AppSearchService:
 
         return results[:top_k]
 
+    def _exact_search(self, query_vec: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
+        """Cosine chính xác tới toàn bộ gallery, sắp giảm dần (cùng định dạng [1, N] với hnsw.search)."""
+        emb_n = getattr(self, "_emb_normed", None)
+        if emb_n is None:
+            emb_n = self.embeddings / np.maximum(np.linalg.norm(self.embeddings, axis=1, keepdims=True), 1e-12)
+            self._emb_normed = emb_n
+        qv = np.asarray(query_vec, dtype=np.float32).reshape(-1)
+        qv = qv / max(float(np.linalg.norm(qv)), 1e-12)
+        sims = emb_n @ qv
+        order = np.argsort(-sims)
+        return sims[order][None, :].astype(np.float32), order[None, :].astype(np.int64)
+
     def _execute_ranking_3tier(
         self,
         query_vec: np.ndarray,
@@ -287,6 +315,7 @@ class AppSearchService:
         domain_hard_filter: bool = True,
         unrecognized_domain_warning: bool = False,
         gender_scale: float = 1.0,
+        inject_attr_match: bool = False,
         inject_type: bool = False,
     ) -> List[Dict[str, Any]]:
         """
@@ -313,7 +342,12 @@ class AppSearchService:
         results = []
         for fetch_k in k_steps:
             fetch_k = min(total_items, max(top_k, fetch_k))
-            scores, indices = self.hnsw.search(query_vec, top_k=fetch_k)
+            if fetch_k >= total_items:
+                # Bước cuối: HNSW với k = toàn bộ gallery chỉ trả được phần đồ thị duyệt tới (vd. 916/38,646, còn lại -1),
+                # nên lĩnh vực mục tiêu nằm xa vector truy vấn có thể bị bỏ sót hoàn toàn -> tính cosine chính xác.
+                scores, indices = self._exact_search(query_vec)
+            else:
+                scores, indices = self.hnsw.search(query_vec, top_k=fetch_k)
             cand_scores = scores[0]
             cand_indices = indices[0]
 
@@ -333,10 +367,25 @@ class AppSearchService:
                     emb = np.asarray(self.embeddings, dtype=np.float32)[tid]
                     en = emb / np.maximum(np.linalg.norm(emb, axis=1, keepdims=True), 1e-12)
                     cs = en @ qv
-                    top = np.argsort(-cs)[:30]
+                    top = list(np.argsort(-cs)[:30])
+                    if inject_attr_match and (target_gender or target_color):
+                        # CIR: ứng viên cùng loại khớp giới tính/màu mục tiêu có thể nằm xa vector tham chiếu
+                        # (vd. áo thun nam xám -> "cho nữ màu hồng") -> bổ sung top-30 cùng loại khớp từng tổ hợp thuộc tính.
+                        gens = np.asarray([self.id_map[int(i)].get("gender") for i in tid])
+                        cols = np.asarray([self.id_map[int(i)].get("baseColour") for i in tid])
+                        g_ok = np.isin(gens, [target_gender, "Unisex"]) if target_gender else np.ones(len(tid), bool)
+                        c_ok = (cols == target_color) if target_color else np.ones(len(tid), bool)
+                        for mask in (g_ok, g_ok & c_ok):
+                            sub = np.flatnonzero(mask)
+                            top.extend(sub[np.argsort(-cs[sub])[:30]].tolist())
                     have = set(int(x) for x in cand_indices if x >= 0)
-                    add_i = [int(tid[j]) for j in top if int(tid[j]) not in have]
-                    add_s = [float(cs[j]) for j in top if int(tid[j]) not in have]
+                    add_i, add_s = [], []
+                    for j in top:
+                        ii = int(tid[j])
+                        if ii not in have:
+                            have.add(ii)
+                            add_i.append(ii)
+                            add_s.append(float(cs[j]))
                     cand_indices = np.concatenate([np.asarray(cand_indices), np.asarray(add_i, dtype=np.int64)])
                     cand_scores = np.concatenate([np.asarray(cand_scores, dtype=np.float32), np.asarray(add_s, dtype=np.float32)])
 
@@ -535,10 +584,13 @@ class AppSearchService:
         product_id: str,
         modifier_text: str,
         config_id: str = "cir_v1_05",
-        top_k: int = 10
+        top_k: int = 10,
+        exclude_reference: bool = True,
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], float]:
         """
         Stream 3: CIR Catalog.
+        exclude_reference: loại chính sản phẩm tham chiếu khỏi kết quả (mặc định). Truyền False để tái lập
+        số liệu eval cũ của cir_v1_05/cir_v1_06 (trước đây sản phẩm gốc có thể nằm trong top-k).
         Takes a catalog product_id, uses pre-indexed vector, fuses with modifier_text.
         Supports cir_v1_06 (3-tier taxonomy preservation) and legacy cir_v1_05 / cir_v1_01.
         Returns: (results, parsed_attributes, elapsed_ms)
@@ -602,7 +654,7 @@ class AppSearchService:
 
             results = self._execute_ranking_3tier(
                 query_vec=q_vec,
-                top_k=top_k + (1 if config_id == "cir_v1_07" else 0),
+                top_k=top_k + (1 if (exclude_reference or config_id == "cir_v1_07") else 0),
                 target_domain=target_d,
                 target_group=target_g,
                 target_type=target_t,
@@ -612,18 +664,21 @@ class AppSearchService:
                 unrecognized_domain_warning=False,
                 # cir_v1_07: khi modifier nêu giới tính tường minh, giới tính phải thắng màu gốc được giữ lại
                 gender_scale=(5.0 if (config_id == "cir_v1_07" and parsed.get("gender")) else 1.0),
+                inject_type=(config_id == "cir_v1_07"),
+                inject_attr_match=(config_id == "cir_v1_07"),
             )
-            if config_id == "cir_v1_07":
-                results = [r for r in results if str(r.get("item_id", "")) != pid_clean][:top_k]
-                for r_i, r in enumerate(results, start=1):
-                    r["rank"] = r_i
         else:
             results = self._execute_ranking(
                 query_vec=q_vec,
-                top_k=top_k,
+                top_k=top_k + (1 if exclude_reference else 0),
                 parsed_query=parsed,
                 config_id=config_id
             )
+
+        if exclude_reference or config_id == "cir_v1_07":
+            results = [r for r in results if str(r.get("item_id", "")) != pid_clean][:top_k]
+            for r_i, r in enumerate(results, start=1):
+                r["rank"] = r_i
 
         if torch.cuda.is_available() and "cuda" in self.device:
             torch.cuda.synchronize()
@@ -644,7 +699,8 @@ class AppSearchService:
         cand_scores = scores[0]
         cand_indices = indices[0]
 
-        if len(cand_scores) == 0 or cand_scores[0] < 0.35:
+        min_top1 = FASHION_MIN_TOP1_COSINE_BY_GALLERY.get(self.index_dir.name, FASHION_MIN_TOP1_COSINE)
+        if len(cand_scores) == 0 or cand_scores[0] < min_top1:
             return (None, None, None, None, False)
 
         tax_votes = []
@@ -671,10 +727,13 @@ class AppSearchService:
         uploaded_image: Image.Image,
         modifier_text: str,
         config_id: str = "cir_v1_05",
-        top_k: int = 10
+        top_k: int = 10,
+        exclude_near_duplicates: bool = True,
     ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], float]:
         """
         Stream 4: CIR Upload.
+        exclude_near_duplicates: loại các sản phẩm gallery gần như trùng ảnh upload
+        (cosine ảnh >= NEAR_DUPLICATE_COSINE), vd. khi người dùng tải lên chính ảnh có trong catalog.
         Takes an in-memory PIL image, encodes via SigLIP vision, fuses with modifier_text.
         Supports cir_v1_06 (3-tier taxonomy preservation) and legacy cir_v1_05 / cir_v1_01.
         Returns: (results, parsed_attributes, elapsed_ms)
@@ -735,7 +794,7 @@ class AppSearchService:
 
             results = self._execute_ranking_3tier(
                 query_vec=q_vec,
-                top_k=top_k,
+                top_k=top_k + (_NEAR_DUP_SLACK if exclude_near_duplicates else 0),
                 target_domain=target_d,
                 target_group=target_g,
                 target_type=target_t,
@@ -744,14 +803,28 @@ class AppSearchService:
                 domain_hard_filter=hard_filter,
                 unrecognized_domain_warning=unrec_warn,
                 gender_scale=(5.0 if (config_id == "cir_v1_07" and parsed.get("gender")) else 1.0),
+                inject_type=(config_id == "cir_v1_07"),
+                inject_attr_match=(config_id == "cir_v1_07"),
             )
         else:
             results = self._execute_ranking(
                 query_vec=q_vec,
-                top_k=top_k,
+                top_k=top_k + (_NEAR_DUP_SLACK if exclude_near_duplicates else 0),
                 parsed_query=parsed,
                 config_id=config_id
             )
+
+        if exclude_near_duplicates and results:
+            img_vec = ref_img_emb.float().cpu().numpy().reshape(-1)
+            img_vec = img_vec / max(float(np.linalg.norm(img_vec)), 1e-12)
+            pos = np.asarray([r["index_pos"] for r in results], dtype=np.int64)
+            emb = np.asarray(self.embeddings[pos], dtype=np.float32)
+            emb = emb / np.maximum(np.linalg.norm(emb, axis=1, keepdims=True), 1e-12)
+            sims = emb @ img_vec
+            results = [r for r, sim in zip(results, sims) if sim < NEAR_DUPLICATE_COSINE]
+        results = results[:top_k]
+        for r_i, r in enumerate(results, start=1):
+            r["rank"] = r_i
 
         if torch.cuda.is_available() and "cuda" in self.device:
             torch.cuda.synchronize()

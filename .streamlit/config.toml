@@ -4,8 +4,16 @@ showErrorDetails = false
 
 [theme]
 base = "dark"
-primaryColor = "#3B82F6"
-backgroundColor = "#0F172A"
-secondaryBackgroundColor = "#1E293B"
-textColor = "#F8FAFC"
+primaryColor = "#4C8BF5"
+backgroundColor = "#0F1117"
+secondaryBackgroundColor = "#181B22"
+textColor = "#E6E8EB"
 font = "sans serif"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+address = "127.0.0.1"
+port = 8501

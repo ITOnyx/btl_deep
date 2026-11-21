@@ -378,3 +378,14 @@ class VietnameseQueryParserV2:
             "baseColour": found_colours,
             "normalized_query": q_norm,
         }
+
+
+_default_parser_v2: "VietnameseQueryParserV2 | None" = None
+
+
+def parse_query_v2(query: str) -> Dict[str, Any]:
+    """Module-level convenience wrapper around VietnameseQueryParserV2.parse()."""
+    global _default_parser_v2
+    if _default_parser_v2 is None:
+        _default_parser_v2 = VietnameseQueryParserV2()
+    return _default_parser_v2.parse(query)

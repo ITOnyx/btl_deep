@@ -12,7 +12,7 @@ def test_app_imports() -> None:
     assert hasattr(sidebar, "render_sidebar")
 
     pcard = importlib.import_module("app.components.product_card")
-    assert hasattr(pcard, "render_product_grid")
+    assert hasattr(pcard, "render_result_grid")
 
     t1 = importlib.import_module("app.tabs.text_to_image")
     assert hasattr(t1, "render_tab_text_to_image")
