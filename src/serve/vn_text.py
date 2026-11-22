@@ -27,6 +27,9 @@ HOMOGRAPH_DENY: Dict[str, Set[str]] = {
     "dù": {"dư", "dự", "dụ", "dữ", "đủ", "đú", "đù"},
     "giày": {"giấy", "giây"},
     "dép": {"đẹp"},
+    "váy": {"vậy", "vây", "vẫy", "vấy", "vầy", "vạy"},   # 'giống vậy' không phải 'giống váy'
+    "túi": {"tụi"},                                       # 'tụi mình'
+    "quần": {"quân", "quấn", "quận", "quẩn"},             # 'khăn quấn', 'quân đội'
     # màu (dùng khi xác định vị trí màu trong câu)
     "đen": {"đến", "đền", "đèn"},
     "đỏ": {"đồ", "đó", "đọ", "độ", "đổ", "đô"},
@@ -34,6 +37,8 @@ HOMOGRAPH_DENY: Dict[str, Set[str]] = {
     "hồng": {"hông"},
     "nâu": {"nấu"},
 }
+# Các dạng màu có trong HOMOGRAPH_DENY: không được nới theo ngữ cảnh (xem span_compatible).
+COLOUR_HOMOGRAPH_FORMS: Set[str] = {"đen", "đỏ", "tím", "hồng", "nâu"}
 # Đối xứng: nếu 'đậm' không phải 'đầm' thì 'đầm' cũng không phải 'đậm' (dùng cho cụm bảo vệ
 # như 'xanh đậm', 'bộ đồ', 'tìm mua' — 'đồ' != 'đỏ', 'tìm' != 'tím').
 for _kw, _others in list(HOMOGRAPH_DENY.items()):
@@ -66,6 +71,21 @@ def token_compatible(user_tok: str, kw_tok: str) -> bool:
     return user_tok not in HOMOGRAPH_DENY.get(kw_tok, ())
 
 
-def span_compatible(user_span: str, kw_accented: str) -> bool:
+def span_compatible(user_span: str, kw_accented: str, allow_context: bool = False) -> bool:
+    """allow_context=True (chỉ dùng cho từ khóa LOẠI SẢN PHẨM): trong cụm từ khóa nhiều chữ, cho phép
+    đúng một từ thuộc danh sách đồng dạng nếu các chữ còn lại khớp — ngữ cảnh của cụm đủ rõ
+    ('vì da' -> 'ví da', 'đẹp tông' -> 'dép tông'). Cụm bảo vệ và màu luôn so chặt.
+    Người gọi phải ưu tiên khớp chặt trước, chỉ dùng khớp nới khi không có từ khóa nào khớp chặt
+    (tránh 'áo ... vì da' bị đọc thành 'ví da')."""
     u, k = user_span.split(), kw_accented.split()
-    return len(u) == len(k) and all(token_compatible(a, b) for a, b in zip(u, k))
+    if len(u) != len(k):
+        return False
+    bad = [i for i, (a, b) in enumerate(zip(u, k)) if not token_compatible(a, b)]
+    if not bad:
+        return True
+    if not allow_context or len(k) < 2 or len(bad) > 1:
+        return False
+    # Từ màu người dùng gõ không bao giờ bị "nới" thành một chữ của cụm sản phẩm
+    # ('túi đeo hồng' không phải 'túi đeo hông', 'áo đỏ ngủ' không phải 'đồ ngủ').
+    i = bad[0]
+    return u[i] not in COLOUR_HOMOGRAPH_FORMS and k[i] not in COLOUR_HOMOGRAPH_FORMS

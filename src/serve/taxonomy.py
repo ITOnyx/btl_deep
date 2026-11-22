@@ -250,8 +250,8 @@ _raw_keywords = [
     ("dù", "Phụ kiện thời trang", "Phụ kiện khác", "Umbrellas"),
 
     # Chăm sóc cá nhân & Mỹ phẩm
-    ("nước hoa", "Chăm sóc cá nhân", "Nước hoa & Khử mùi", "Perfumes"),
-    ("dầu thơm", "Chăm sóc cá nhân", "Nước hoa & Khử mùi", "Perfumes"),
+    ("nước hoa", "Chăm sóc cá nhân", "Nước hoa & Khử mùi", "Perfume and Body Mist"),
+    ("dầu thơm", "Chăm sóc cá nhân", "Nước hoa & Khử mùi", "Perfume and Body Mist"),
     ("xịt toàn thân", "Chăm sóc cá nhân", "Nước hoa & Khử mùi", "Deodorant"),
     ("son môi", "Chăm sóc cá nhân", "Trang điểm & Móng", "Lipstick"),
     ("son", "Chăm sóc cá nhân", "Trang điểm & Móng", "Lipstick"),
@@ -264,7 +264,7 @@ _raw_keywords = [
     ("sữa rửa mặt", "Chăm sóc cá nhân", "Chăm sóc da & Cơ thể", "Face Wash and Cleanser"),
     ("kem chống nắng", "Chăm sóc cá nhân", "Chăm sóc da & Cơ thể", "Sunscreen"),
     ("sơn móng tay", "Chăm sóc cá nhân", "Trang điểm & Móng", "Nail Polish"),
-    ("dầu gội", "Chăm sóc cá nhân", "Chăm sóc tóc", "Hair"),
+    ("dầu gội", "Chăm sóc cá nhân", "Chăm sóc tóc", None),  # catalog không có loại "Hair"
     ("mỹ phẩm", "Chăm sóc cá nhân", None, None),
 
     # Đồ thể thao
@@ -281,6 +281,8 @@ _PROTECTED_NON_PRODUCT = [
     ("tất cả", None), ("đậm màu", 0), ("màu đậm", None), ("đỏ đậm", 1),
     ("xanh đậm", None), ("đen đậm", None), ("nâu đậm", None), ("tím đậm", None),
     ("xám đậm", None), ("vàng đậm", None), ("hồng đậm", None), ("cam đậm", None),
+    # 'giong vay' gõ không dấu gần như luôn là 'giống vậy' (không phải 'giống váy')
+    ("giống vậy", None), ("như vậy", None), ("vậy thì", None),
 ]
 _PROTECTED_PATTERNS = [
     (re.compile(rf"(?<!\w){re.escape(_remove_diacritics(ph))}(?!\w)"), ph, amb_idx)
@@ -310,7 +312,37 @@ def get_taxonomy(item: Dict[str, Any]) -> Tuple[str, str, str]:
     return ARTICLE_TO_TAXONOMY.get(art_str, ("Khác", "Khác", art_str))
 
 
-def match_query_taxonomy(query_text: str, parsed_attributes: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+def _mask_protected(q_low: str) -> str:
+    """Chuỗi bỏ dấu (cùng độ dài q_low) đã che các cụm phi-sản phẩm ('tất cả', 'xanh đậm'...)."""
+    q_norm = strip_keep_len(q_low)
+    for ppat, ph_acc, amb_idx in _PROTECTED_PATTERNS:
+        for m in ppat.finditer(q_norm):
+            span = q_low[m.start():m.end()]
+            if not span_compatible(span, ph_acc):
+                continue
+            if amb_idx is not None:
+                amb_tok = span.split()[amb_idx]
+                if amb_tok == strip_keep_len(amb_tok):  # từ mơ hồ gõ không dấu -> không che
+                    continue
+            q_norm = q_norm[:m.start()] + " " * (m.end() - m.start()) + q_norm[m.end():]
+    return q_norm
+
+
+def product_keyword_spans(q_low: str) -> List[Tuple[int, int]]:
+    """Các span (start, end) trong q_low (đã normalize_query) của từ khóa sản phẩm khớp CHẶT,
+    dài trước, không chồng lấn. Dùng để biết một chữ màu có đứng sau danh từ sản phẩm không."""
+    q_norm = _mask_protected(q_low)
+    spans: List[Tuple[int, int]] = []
+    for pat, *_rest, kw_acc in QUERY_TAXONOMY_KEYWORDS:
+        for m in pat.finditer(q_norm):
+            if span_compatible(q_low[m.start():m.end()], kw_acc):
+                spans.append((m.start(), m.end()))
+                q_norm = q_norm[:m.start()] + " " * (m.end() - m.start()) + q_norm[m.end():]
+    return sorted(spans)
+
+
+def match_query_taxonomy(query_text: str, parsed_attributes: Optional[Dict[str, Any]] = None,
+                         allow_context: bool = True) -> Dict[str, Any]:
     """
     Determines target domain, group, and articleType from user query or modifier text.
     Returns:
@@ -335,25 +367,19 @@ def match_query_taxonomy(query_text: str, parsed_attributes: Optional[Dict[str, 
 
     # 2. Match against broad taxonomy keywords (e.g. "áo", "giày", "túi", "quần")
     q_low = normalize_query(query_text)
-    q_norm = strip_keep_len(q_low)
-    for ppat, ph_acc, amb_idx in _PROTECTED_PATTERNS:
-        for m in ppat.finditer(q_norm):
-            span = q_low[m.start():m.end()]
-            if not span_compatible(span, ph_acc):
-                continue
-            if amb_idx is not None:
-                amb_tok = span.split()[amb_idx]
-                if amb_tok == strip_keep_len(amb_tok):  # từ mơ hồ gõ không dấu -> không che
-                    continue
-            q_norm = q_norm[:m.start()] + " " * (m.end() - m.start()) + q_norm[m.end():]
-    for pat, dom, grp, art, _, kw_acc in QUERY_TAXONOMY_KEYWORDS:
-        if any(span_compatible(q_low[m.start():m.end()], kw_acc) for m in pat.finditer(q_norm)):
-            return {
-                "domain": dom,
-                "group": grp,
-                "articleType": art,
-                "explicit_type": (art is not None)
-            }
+    q_norm = _mask_protected(q_low)
+    # Khớp chặt trước trên mọi từ khóa; chỉ khi không có gì mới khớp nới theo ngữ cảnh
+    # ('áo chống nắng vì da' là áo, không phải 'ví da').
+    for relax in ((False, True) if allow_context else (False,)):
+        for pat, dom, grp, art, _, kw_acc in QUERY_TAXONOMY_KEYWORDS:
+            if any(span_compatible(q_low[m.start():m.end()], kw_acc, allow_context=relax)
+                   for m in pat.finditer(q_norm)):
+                return {
+                    "domain": dom,
+                    "group": grp,
+                    "articleType": art,
+                    "explicit_type": (art is not None)
+                }
 
     return {
         "domain": None,

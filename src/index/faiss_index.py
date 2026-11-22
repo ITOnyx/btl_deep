@@ -56,11 +56,9 @@ class FaissHNSWIndex:
         Tìm kiếm Top-K vector gần nhất theo cosine similarity (inner product trên vector L2-normalized).
         Trả về: (scores, indices) với shape [batch_size, top_k].
         """
-        if query_vectors.dtype != np.float32:
-            query_vectors = query_vectors.astype(np.float32)
-        if not query_vectors.flags["C_CONTIGUOUS"]:
-            query_vectors = np.ascontiguousarray(query_vectors)
-
+        # Sao chép trước khi chuẩn hoá: normalize_L2 sửa tại chỗ, không được ghi đè mảng của người gọi
+        # (vd. trên CPU, vector truy vấn CIR có thể là view của ma trận embedding gallery).
+        query_vectors = np.array(query_vectors, dtype=np.float32, order="C", copy=True)
         faiss.normalize_L2(query_vectors)
         scores, indices = self.index.search(query_vectors, top_k)
         return scores, indices
@@ -116,11 +114,9 @@ class FaissFlatIndex:
         query_vectors: np.ndarray,
         top_k: int = 10
     ) -> Tuple[np.ndarray, np.ndarray]:
-        if query_vectors.dtype != np.float32:
-            query_vectors = query_vectors.astype(np.float32)
-        if not query_vectors.flags["C_CONTIGUOUS"]:
-            query_vectors = np.ascontiguousarray(query_vectors)
-
+        # Sao chép trước khi chuẩn hoá: normalize_L2 sửa tại chỗ, không được ghi đè mảng của người gọi
+        # (vd. trên CPU, vector truy vấn CIR có thể là view của ma trận embedding gallery).
+        query_vectors = np.array(query_vectors, dtype=np.float32, order="C", copy=True)
         faiss.normalize_L2(query_vectors)
         return self.index.search(query_vectors, top_k)
 

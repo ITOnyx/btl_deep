@@ -42,6 +42,10 @@ def _build_restoration_table() -> List[Tuple[re.Pattern, str, int]]:
     pairs.setdefault("di hoc", "đi học")
     pairs.setdefault("di tiec", "đi tiệc")
     pairs.setdefault("hang ngay", "hằng ngày")
+    # không để 'vay' trong 'giong vay' bị khôi phục thành 'váy'
+    pairs.setdefault("giong vay", "giống vậy")
+    pairs.setdefault("nhu vay", "như vậy")
+    pairs.setdefault("vay thi", "vậy thì")
 
     for lex in (ARTICLE_TYPE_LEXICON_V2, GENDER_LEXICON_V2, COLOUR_LEXICON_V2):
         for kw_list in lex.values():
