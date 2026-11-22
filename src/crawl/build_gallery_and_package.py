@@ -7,7 +7,7 @@ Pha 6 — Bàn giao cho giảng viên xem (Offline Gallery, Thumbnails, Dataset 
    - Có phân trang (60 ảnh/trang), tìm kiếm từ khóa tiếng Việt, bộ lọc theo Brand / Loại sản phẩm (articleType) /
      Giới tính (gender) / Màu sắc (baseColour) / Trạng thái nhãn (label_status).
    - Hiển thị rõ nhãn, kích thước ảnh gốc, nguồn suy nhãn (label_source), thương hiệu và link trang sản phẩm gốc.
-   - Mở trực tiếp được trên Windows có dấu cách và tiếng Việt trong đường dẫn (D:\Kì 7\Hoc_sau_ver4\...).
+   - Mở trực tiếp được trên Windows có dấu cách và tiếng Việt trong đường dẫn (D:\\Kì 7\\Hoc_sau_ver4\\...).
 3. Sinh reports/crawl_v2/dataset_summary.md với số liệu đếm thật 100% trên đĩa.
 4. Sinh reports/crawl_v2/README.md (mục đích học thuật/nội bộ, bản quyền thương hiệu, cách mở gallery).
 5. Cập nhật reports/crawl_v2/run_manifest.json.

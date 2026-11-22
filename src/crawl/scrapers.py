@@ -12,7 +12,7 @@ from __future__ import annotations
 import json
 import random
 import re
-from typing import Any, Dict, Iterator, List, Set
+from typing import Any, Dict, Iterator, List, Set, Tuple
 from urllib.parse import urlparse
 
 from bs4 import BeautifulSoup
