@@ -1,0 +1,3347 @@
+{
+ "source_gallery": "index/crawl_v2_gallery",
+ "seed": 42,
+ "gallery_id_map_sha256": "46b12823ec5f8a0cb1512b8ab0bfee4be3c90b4fd292bd9407d233bfd99df12c",
+ "queries": [
+  {
+   "id": "cv2_t000",
+   "kind": "template",
+   "query": "giày cao gót nữ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Heels"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t001",
+   "kind": "template",
+   "query": "quần short nam màu nâu",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Brown"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t002",
+   "kind": "template",
+   "query": "ao thun cho nam mau be",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Beige"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t003",
+   "kind": "template",
+   "query": "áo thun màu trắng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "baseColour": [
+     "White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t004",
+   "kind": "template",
+   "query": "quan lot tam giac nam",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Briefs"
+    ],
+    "gender": "Men"
+   }
+  },
+  {
+   "id": "cv2_t005",
+   "kind": "template",
+   "query": "ca vat cho nam mau xanh duong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Ties"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t006",
+   "kind": "template",
+   "query": "kinh mat cho nam mau tim",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Purple"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t007",
+   "kind": "template",
+   "query": "dép sandal nữ đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t008",
+   "kind": "template",
+   "query": "túi xách nữ màu xanh lá",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Handbags"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Green"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t009",
+   "kind": "template",
+   "query": "quần boxer nam màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Boxers"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t010",
+   "kind": "template",
+   "query": "ao khoac mau be",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Jackets"
+    ],
+    "baseColour": [
+     "Beige"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t011",
+   "kind": "template",
+   "query": "áo thun nam đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t012",
+   "kind": "template",
+   "query": "quần short cho bé trai",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ],
+    "gender": "Boys"
+   }
+  },
+  {
+   "id": "cv2_t013",
+   "kind": "template",
+   "query": "áo thun nam",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "gender": "Men"
+   }
+  },
+  {
+   "id": "cv2_t014",
+   "kind": "template",
+   "query": "kinh mat nam",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "gender": "Men"
+   }
+  },
+  {
+   "id": "cv2_t015",
+   "kind": "template",
+   "query": "balo màu hồng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ],
+    "baseColour": [
+     "Pink"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t016",
+   "kind": "template",
+   "query": "kính mát màu xanh lá",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "baseColour": [
+     "Green"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t017",
+   "kind": "template",
+   "query": "giày thể thao nữ màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t018",
+   "kind": "template",
+   "query": "kinh mat nu tim",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Purple"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t019",
+   "kind": "template",
+   "query": "quan jean cho nam mau xanh duong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Jeans"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t020",
+   "kind": "template",
+   "query": "túi xách màu xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Handbags"
+    ],
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t021",
+   "kind": "template",
+   "query": "váy liền bé gái màu hồng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Pink"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t022",
+   "kind": "template",
+   "query": "áo thun cho bé trai",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "gender": "Boys"
+   }
+  },
+  {
+   "id": "cv2_t023",
+   "kind": "template",
+   "query": "balo",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t024",
+   "kind": "template",
+   "query": "ao so mi cho nam",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ],
+    "gender": "Men"
+   }
+  },
+  {
+   "id": "cv2_t025",
+   "kind": "template",
+   "query": "giay the thao cho be trai mau xam",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "gender": "Boys",
+    "baseColour": [
+     "Grey"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t026",
+   "kind": "template",
+   "query": "ao thun cho nam mau xam",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Grey"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t027",
+   "kind": "template",
+   "query": "giay tay cong so nam mau nau",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Formal Shoes"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Brown"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t028",
+   "kind": "template",
+   "query": "vay lien cho be gai xanh duong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t029",
+   "kind": "template",
+   "query": "áo khoác cho nam màu xanh rêu",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jackets"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Olive"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t030",
+   "kind": "template",
+   "query": "áo thun cho bé gái tím",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Purple"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t031",
+   "kind": "template",
+   "query": "kính mát nam màu cam",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Orange"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t032",
+   "kind": "template",
+   "query": "giay bup be nu",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Flats"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t033",
+   "kind": "template",
+   "query": "kính mát hồng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "baseColour": [
+     "Pink"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t034",
+   "kind": "template",
+   "query": "ao cho nu mau xanh navy",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Tops"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Navy Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t035",
+   "kind": "template",
+   "query": "giày thể thao bé gái màu tím",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Purple"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t036",
+   "kind": "template",
+   "query": "áo thun cho nam",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "gender": "Men"
+   }
+  },
+  {
+   "id": "cv2_t037",
+   "kind": "template",
+   "query": "dép xỏ ngón cho nam màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t038",
+   "kind": "template",
+   "query": "dép sandal nữ màu đỏ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Red"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t039",
+   "kind": "template",
+   "query": "dép sandal bé gái màu kem",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Cream"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t040",
+   "kind": "template",
+   "query": "quần dài màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ],
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t041",
+   "kind": "template",
+   "query": "túi xách màu trắng ngà",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Handbags"
+    ],
+    "baseColour": [
+     "Off White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t042",
+   "kind": "template",
+   "query": "dép xỏ ngón nữ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t043",
+   "kind": "template",
+   "query": "balo màu xám",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ],
+    "baseColour": [
+     "Grey"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t044",
+   "kind": "template",
+   "query": "phụ kiện du lịch",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Travel Accessory"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t045",
+   "kind": "template",
+   "query": "giày thường nữ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Casual Shoes"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t046",
+   "kind": "template",
+   "query": "váy liền cho nữ màu màu đào",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Peach"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t047",
+   "kind": "template",
+   "query": "giày thể thao nam màu trắng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t048",
+   "kind": "template",
+   "query": "quan jean cho nam mau xam",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Jeans"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Grey"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t049",
+   "kind": "template",
+   "query": "dep sandal nu mau trang",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t050",
+   "kind": "template",
+   "query": "áo thun bé trai màu xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "gender": "Boys",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t051",
+   "kind": "template",
+   "query": "áo sơ mi cho nam màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t052",
+   "kind": "template",
+   "query": "ao cho nu mau trang",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Tops"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t053",
+   "kind": "template",
+   "query": "bộ quần áo cho bé gái màu vàng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clothing Set"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Yellow"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t054",
+   "kind": "template",
+   "query": "áo thun nam đỏ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Red"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t055",
+   "kind": "template",
+   "query": "kính mát cho nam màu xanh lá",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Green"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t056",
+   "kind": "template",
+   "query": "vay lien be gai vang",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Yellow"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t057",
+   "kind": "template",
+   "query": "ca vat do",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Ties"
+    ],
+    "baseColour": [
+     "Red"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t058",
+   "kind": "template",
+   "query": "giày cao gót cho nữ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Heels"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t059",
+   "kind": "template",
+   "query": "bộ quần áo bé gái xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clothing Set"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t060",
+   "kind": "template",
+   "query": "giay cao got nu mau hong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Heels"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Pink"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t061",
+   "kind": "template",
+   "query": "túi trống thể thao đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Duffel Bag"
+    ],
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t062",
+   "kind": "template",
+   "query": "balo den",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ],
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t063",
+   "kind": "template",
+   "query": "kính mát cho nữ màu trắng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t064",
+   "kind": "template",
+   "query": "kính mát nữ màu xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t065",
+   "kind": "template",
+   "query": "balo nữ màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t066",
+   "kind": "template",
+   "query": "dép sandal cho nam xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t067",
+   "kind": "template",
+   "query": "áo sơ mi nam màu xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t068",
+   "kind": "template",
+   "query": "ao so mi cho nam tim",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Purple"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t069",
+   "kind": "template",
+   "query": "giày thể thao bé trai màu xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "gender": "Boys",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t070",
+   "kind": "template",
+   "query": "dép sandal bé gái màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t071",
+   "kind": "template",
+   "query": "kính mát nam",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ],
+    "gender": "Men"
+   }
+  },
+  {
+   "id": "cv2_t072",
+   "kind": "template",
+   "query": "dép sandal nam",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "gender": "Men"
+   }
+  },
+  {
+   "id": "cv2_t073",
+   "kind": "template",
+   "query": "dong ho mau dong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Watches"
+    ],
+    "baseColour": [
+     "Bronze"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t074",
+   "kind": "template",
+   "query": "quần dài nam xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t075",
+   "kind": "template",
+   "query": "đồng hồ cho nữ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Watches"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t076",
+   "kind": "template",
+   "query": "dép xỏ ngón cho nam màu xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t077",
+   "kind": "template",
+   "query": "giày thể thao cho nữ màu xám",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Grey"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t078",
+   "kind": "template",
+   "query": "vali kéo đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trolley Bag"
+    ],
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t079",
+   "kind": "template",
+   "query": "váy liền màu hồng hoa hồng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "baseColour": [
+     "Rose"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t080",
+   "kind": "template",
+   "query": "quần short cho bé trai tím",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ],
+    "gender": "Boys",
+    "baseColour": [
+     "Purple"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t081",
+   "kind": "template",
+   "query": "dép sandal cho nam màu xanh rêu",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Olive"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t082",
+   "kind": "template",
+   "query": "quần short cho nam màu trắng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t083",
+   "kind": "template",
+   "query": "giay the thao be gai mau hong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Pink"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t084",
+   "kind": "template",
+   "query": "giay tay cong so nam den",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Formal Shoes"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t085",
+   "kind": "template",
+   "query": "chân váy nữ kaki",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Skirts"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Khaki"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t086",
+   "kind": "template",
+   "query": "bo quan ao be gai hong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Clothing Set"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Pink"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t087",
+   "kind": "template",
+   "query": "quan boxer cho nam",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Boxers"
+    ],
+    "gender": "Men"
+   }
+  },
+  {
+   "id": "cv2_t088",
+   "kind": "template",
+   "query": "dép xỏ ngón nữ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t089",
+   "kind": "template",
+   "query": "giay bup be nu mau den",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Flats"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t090",
+   "kind": "template",
+   "query": "túi xách nữ màu kem",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Handbags"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Cream"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t091",
+   "kind": "template",
+   "query": "quần dài cho bé gái xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t092",
+   "kind": "template",
+   "query": "quần short bé trai",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ],
+    "gender": "Boys"
+   }
+  },
+  {
+   "id": "cv2_t093",
+   "kind": "template",
+   "query": "giày thể thao nữ kem",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Cream"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t094",
+   "kind": "template",
+   "query": "ví bóp nam màu vàng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Wallets"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Yellow"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t095",
+   "kind": "template",
+   "query": "giay the thao mau do",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "baseColour": [
+     "Red"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t096",
+   "kind": "template",
+   "query": "ví bóp cho nam xanh navy",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Wallets"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Navy Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t097",
+   "kind": "template",
+   "query": "quần dài nam",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ],
+    "gender": "Men"
+   }
+  },
+  {
+   "id": "cv2_t098",
+   "kind": "template",
+   "query": "balo cho nu",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t099",
+   "kind": "template",
+   "query": "dép xỏ ngón nữ màu kem",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Cream"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t100",
+   "kind": "template",
+   "query": "tui deo cheo nam mau den",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Messenger Bag"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t101",
+   "kind": "template",
+   "query": "balo màu xanh navy",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ],
+    "baseColour": [
+     "Navy Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t102",
+   "kind": "template",
+   "query": "bộ quần áo cho bé trai màu đỏ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clothing Set"
+    ],
+    "gender": "Boys",
+    "baseColour": [
+     "Red"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t103",
+   "kind": "template",
+   "query": "vali keo mau xanh duong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Trolley Bag"
+    ],
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t104",
+   "kind": "template",
+   "query": "áo khoác nữ màu trắng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jackets"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t105",
+   "kind": "template",
+   "query": "bộ jumpsuit liền quần cho nữ màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jumpsuit"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t106",
+   "kind": "template",
+   "query": "váy liền màu kaki",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "baseColour": [
+     "Khaki"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t107",
+   "kind": "template",
+   "query": "giày thể thao màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ],
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t108",
+   "kind": "template",
+   "query": "dep sandal nu mau hong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Pink"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t109",
+   "kind": "template",
+   "query": "áo sơ mi màu trắng ngà",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ],
+    "baseColour": [
+     "Off White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t110",
+   "kind": "template",
+   "query": "áo sơ mi màu be",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ],
+    "baseColour": [
+     "Beige"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t111",
+   "kind": "template",
+   "query": "áo khoác nam màu xám",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jackets"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Grey"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t112",
+   "kind": "template",
+   "query": "dép sandal màu xám",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ],
+    "baseColour": [
+     "Grey"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t113",
+   "kind": "template",
+   "query": "áo sơ mi nữ trắng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t114",
+   "kind": "template",
+   "query": "quan short nam mau be",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Beige"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t115",
+   "kind": "template",
+   "query": "váy liền nữ đỏ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Red"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t116",
+   "kind": "template",
+   "query": "dep xo ngon nu do",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Red"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t117",
+   "kind": "template",
+   "query": "giày thường cho nữ màu kem",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Casual Shoes"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Cream"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t118",
+   "kind": "template",
+   "query": "vay lien nu mau kem",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Cream"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t119",
+   "kind": "template",
+   "query": "ca vat nam mau den",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Ties"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t120",
+   "kind": "template",
+   "query": "balo xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ],
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t121",
+   "kind": "template",
+   "query": "vi bop nam mau den",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Wallets"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t122",
+   "kind": "template",
+   "query": "vali kéo màu xám",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trolley Bag"
+    ],
+    "baseColour": [
+     "Grey"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t123",
+   "kind": "template",
+   "query": "quan short den",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ],
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t124",
+   "kind": "template",
+   "query": "túi xách nữ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Handbags"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t125",
+   "kind": "template",
+   "query": "tất vớ nam đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Socks"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t126",
+   "kind": "template",
+   "query": "bộ quần áo bé trai",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clothing Set"
+    ],
+    "gender": "Boys"
+   }
+  },
+  {
+   "id": "cv2_t127",
+   "kind": "template",
+   "query": "balo bé gái màu tím",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Purple"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t128",
+   "kind": "template",
+   "query": "quần dài cho bé trai màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ],
+    "gender": "Boys",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t129",
+   "kind": "template",
+   "query": "dép xỏ ngón bé gái màu hồng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Pink"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t130",
+   "kind": "template",
+   "query": "quần dài cho nữ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ],
+    "gender": "Women"
+   }
+  },
+  {
+   "id": "cv2_t131",
+   "kind": "template",
+   "query": "ao khoac mau nau",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Jackets"
+    ],
+    "baseColour": [
+     "Brown"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t132",
+   "kind": "template",
+   "query": "quần short bé trai màu xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ],
+    "gender": "Boys",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t133",
+   "kind": "template",
+   "query": "tui deo cheo nam mau nau",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Messenger Bag"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Brown"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t134",
+   "kind": "template",
+   "query": "vay lien be gai mau do",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Red"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t135",
+   "kind": "template",
+   "query": "vay lien be gai tim",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ],
+    "gender": "Girls",
+    "baseColour": [
+     "Purple"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t136",
+   "kind": "template",
+   "query": "bo quan ao be trai",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Clothing Set"
+    ],
+    "gender": "Boys"
+   }
+  },
+  {
+   "id": "cv2_t137",
+   "kind": "template",
+   "query": "dong ho mau dong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Watches"
+    ],
+    "baseColour": [
+     "Bronze"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t138",
+   "kind": "template",
+   "query": "quần lót tam giác nam đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Briefs"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t139",
+   "kind": "template",
+   "query": "tat vo mau den",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Socks"
+    ],
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t140",
+   "kind": "template",
+   "query": "phụ kiện du lịch màu đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Travel Accessory"
+    ],
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t141",
+   "kind": "template",
+   "query": "chân váy nữ trắng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Skirts"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "White"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t142",
+   "kind": "template",
+   "query": "áo sơ mi nữ màu tím",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Purple"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t143",
+   "kind": "template",
+   "query": "quần dài nam màu nâu",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Brown"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t144",
+   "kind": "template",
+   "query": "ao so mi nam hong",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Pink"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t145",
+   "kind": "template",
+   "query": "dép xỏ ngón bé trai màu xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ],
+    "gender": "Boys",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t146",
+   "kind": "template",
+   "query": "ví cầm tay cho nữ đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clutches"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Black"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t147",
+   "kind": "template",
+   "query": "dep xo ngon nam mau nau",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Brown"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t148",
+   "kind": "template",
+   "query": "ví cầm tay nữ màu xanh dương",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clutches"
+    ],
+    "gender": "Women",
+    "baseColour": [
+     "Blue"
+    ]
+   }
+  },
+  {
+   "id": "cv2_t149",
+   "kind": "template",
+   "query": "quan dai nam mau xanh la",
+   "has_diacritics": false,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ],
+    "gender": "Men",
+    "baseColour": [
+     "Green"
+    ]
+   }
+  },
+  {
+   "id": "cv2_n000",
+   "kind": "title",
+   "query": "Túi Xách Nhỏ Top Handle Phối Khoá",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Handbags"
+    ]
+   },
+   "source_item": "cr2_003897"
+  },
+  {
+   "id": "cv2_n001",
+   "kind": "title",
+   "query": "Set 6 charm Hero năng lượng bé trai - Space Hero Rabity 388.003",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Bracelet"
+    ]
+   },
+   "source_item": "cr2_010917"
+  },
+  {
+   "id": "cv2_n002",
+   "kind": "title",
+   "query": "Bộ thun ngắn tay bé gái Rabity 960.087",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clothing Set"
+    ]
+   },
+   "source_item": "cr2_010620"
+  },
+  {
+   "id": "cv2_n003",
+   "kind": "title",
+   "query": "Áo Nỉ Sweatshirt Nam Trắng Aristino Regular Fit ASW024BS0",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sweatshirts"
+    ]
+   },
+   "source_item": "cr2_004486"
+  },
+  {
+   "id": "cv2_n004",
+   "kind": "title",
+   "query": "Khăn Lụa Cài Túi Áo Vest Nam Họa Tiết AK2002S0H4",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Scarves"
+    ]
+   },
+   "source_item": "cr2_007993"
+  },
+  {
+   "id": "cv2_n005",
+   "kind": "title",
+   "query": "Cà Vạt Nam Bản To Đan Lát Aristino ATI005S0H2",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Ties"
+    ]
+   },
+   "source_item": "cr2_006610"
+  },
+  {
+   "id": "cv2_n006",
+   "kind": "title",
+   "query": "Bộ đồ bơi tay dài nàng tiên cá bé gái Rabity 974.022",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Swimwear"
+    ]
+   },
+   "source_item": "cr2_011125"
+  },
+  {
+   "id": "cv2_n007",
+   "kind": "title",
+   "query": "Quần Boxer Nam Aristino Bamboo kháng khuẩn ABX1608",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Boxers"
+    ]
+   },
+   "source_item": "cr2_006440"
+  },
+  {
+   "id": "cv2_n008",
+   "kind": "title",
+   "query": "Túi Cầm Tay Nam Navy Da Thực Vật Aristino ACL030S0H4",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clutches"
+    ]
+   },
+   "source_item": "cr2_007672"
+  },
+  {
+   "id": "cv2_n009",
+   "kind": "title",
+   "query": "Combo Travel Set Larita Miyo Mint Tiện Lợi",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trolley Bag"
+    ]
+   },
+   "source_item": "cr2_000018"
+  },
+  {
+   "id": "cv2_n010",
+   "kind": "title",
+   "query": "Quần rời dệt kim Nam Aristino Regular Fit APA009W3",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Track Pants"
+    ]
+   },
+   "source_item": "cr2_006341"
+  },
+  {
+   "id": "cv2_n011",
+   "kind": "title",
+   "query": "Áo Tweed Caily",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jackets"
+    ]
+   },
+   "source_item": "cr2_004337"
+  },
+  {
+   "id": "cv2_n012",
+   "kind": "title",
+   "query": "Dây lưng lẻ da bò dập vân xỏ kim Aristino ALE0290Z",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Belts"
+    ]
+   },
+   "source_item": "cr2_009498"
+  },
+  {
+   "id": "cv2_n013",
+   "kind": "title",
+   "query": "Giày Tây Biti's Nam Màu Đen BVM002377DEN",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Formal Shoes"
+    ]
+   },
+   "source_item": "cr2_006736"
+  },
+  {
+   "id": "cv2_n014",
+   "kind": "title",
+   "query": "Ví Đứng Nam Aristino AVW0220Z1",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Wallets"
+    ]
+   },
+   "source_item": "cr2_009456"
+  },
+  {
+   "id": "cv2_n015",
+   "kind": "title",
+   "query": "Áo Blazer Nam Aristino Business Brezza 1BZ0130H0",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Blazers"
+    ]
+   },
+   "source_item": "cr2_007245"
+  },
+  {
+   "id": "cv2_n016",
+   "kind": "title",
+   "query": "Set đồ tập thể thao nữ 3 - Tím Đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tops"
+    ]
+   },
+   "source_item": "cr2_000348"
+  },
+  {
+   "id": "cv2_n017",
+   "kind": "title",
+   "query": "Túi Đeo Chéo Nam Aristino Da Bò Dập Nổi Họa Tiết Đan Lát ACB0120S2",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Messenger Bag"
+    ]
+   },
+   "source_item": "cr2_008509"
+  },
+  {
+   "id": "cv2_n018",
+   "kind": "title",
+   "query": "Áo Khoác Gile Vải Double Face Mềm Mịn Co Giãn Phom Rộng F4 - The No Style 126 Be",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Waistcoat"
+    ]
+   },
+   "source_item": "cr2_010195"
+  },
+  {
+   "id": "cv2_n019",
+   "kind": "title",
+   "query": "Chân váy đuôi cá cách điệu",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Skirts"
+    ]
+   },
+   "source_item": "cr2_007657"
+  },
+  {
+   "id": "cv2_n020",
+   "kind": "title",
+   "query": "Áo bơi dài tay nữ Coolmate",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Bra"
+    ]
+   },
+   "source_item": "cr2_000387"
+  },
+  {
+   "id": "cv2_n021",
+   "kind": "title",
+   "query": "Đồng Hồ Đôi SRWatch SG1079.1402TE & SL1079.1402TE Size 39mm/30mm",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Watches"
+    ]
+   },
+   "source_item": "cr2_002178"
+  },
+  {
+   "id": "cv2_n022",
+   "kind": "title",
+   "query": "Mũ/nón cói chống nắng nửa đầu hình gấu bé gái Rabity 971.042",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Hat"
+    ]
+   },
+   "source_item": "cr2_011163"
+  },
+  {
+   "id": "cv2_n023",
+   "kind": "title",
+   "query": "Giày Cao Gót Slingback Phối Xích",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Heels"
+    ]
+   },
+   "source_item": "cr2_004459"
+  },
+  {
+   "id": "cv2_n024",
+   "kind": "title",
+   "query": "Túi Bao Tử Đeo Hông Nam Canvas Đen Aristino AWB0010S2",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Waist Pouch"
+    ]
+   },
+   "source_item": "cr2_008540"
+  },
+  {
+   "id": "cv2_n025",
+   "kind": "title",
+   "query": "Pack 5 Quần Lót Trunk Cotton Co Giãn Comfort",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trunk"
+    ]
+   },
+   "source_item": "cr2_000277"
+  },
+  {
+   "id": "cv2_n026",
+   "kind": "title",
+   "query": "Dép Biti's Nữ Màu Cam BXW021600CAM",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ]
+   },
+   "source_item": "cr2_006391"
+  },
+  {
+   "id": "cv2_n027",
+   "kind": "title",
+   "query": "Quần Jeans Nam Aristino AJN0030Z",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jeans"
+    ]
+   },
+   "source_item": "cr2_005736"
+  },
+  {
+   "id": "cv2_n028",
+   "kind": "title",
+   "query": "Giày búp bê bé gái Rabity 683.039",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flats"
+    ]
+   },
+   "source_item": "cr2_010758"
+  },
+  {
+   "id": "cv2_n029",
+   "kind": "title",
+   "query": "Giày thể thao trẻ em Rabity 684.015",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Casual Shoes"
+    ]
+   },
+   "source_item": "cr2_010681"
+  },
+  {
+   "id": "cv2_n030",
+   "kind": "title",
+   "query": "Ribbed Knit Top - Áo len ôm",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ]
+   },
+   "source_item": "cr2_003363"
+  },
+  {
+   "id": "cv2_n031",
+   "kind": "title",
+   "query": "Nón Baseball Cap Corduroy Bền Bỉ NB 017 Màu Đỏ",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Caps"
+    ]
+   },
+   "source_item": "cr2_011436"
+  },
+  {
+   "id": "cv2_n032",
+   "kind": "title",
+   "query": "Găng Tay Nam Nữ Dài Dạng Ống Chống Nắng UPF 50+ - #Y2010 297 Đen 99",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Gloves"
+    ]
+   },
+   "source_item": "cr2_002598"
+  },
+  {
+   "id": "cv2_n033",
+   "kind": "title",
+   "query": "Tomtoc LSP_03 Defender - A22 Túi xách chống sốc Laptop 16 inch Dark Blue",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Duffel Bag"
+    ]
+   },
+   "source_item": "cr2_001039"
+  },
+  {
+   "id": "cv2_n034",
+   "kind": "title",
+   "query": "Larita Embroidery Patches Set S Đa Màu",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Travel Accessory"
+    ]
+   },
+   "source_item": "cr2_001303"
+  },
+  {
+   "id": "cv2_n035",
+   "kind": "title",
+   "query": "Áo Sơ Mi Ngắn Tay Nam Aristino Perfect fit ASS416SAH2",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ]
+   },
+   "source_item": "cr2_001072"
+  },
+  {
+   "id": "cv2_n036",
+   "kind": "title",
+   "query": "Combo 2 Đôi Vớ Cổ Thấp Biti's Màu Xám Đậm & Đen ASUG00010XAD",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Socks"
+    ]
+   },
+   "source_item": "cr2_009340"
+  },
+  {
+   "id": "cv2_n037",
+   "kind": "title",
+   "query": "Đầm ngắn sát nách cổ V",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jumpsuit"
+    ]
+   },
+   "source_item": "cr2_003102"
+  },
+  {
+   "id": "cv2_n038",
+   "kind": "title",
+   "query": "Kính Mát PK301",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ]
+   },
+   "source_item": "cr2_003946"
+  },
+  {
+   "id": "cv2_n039",
+   "kind": "title",
+   "query": "Đầm váy thun ngắn tay Minnie Disney bé gái Rabity 550.094",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ]
+   },
+   "source_item": "cr2_011165"
+  },
+  {
+   "id": "cv2_n040",
+   "kind": "title",
+   "query": "Giày da bò Chelsea Boot Nam Aristino Leather ASH0900Z",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Booties"
+    ]
+   },
+   "source_item": "cr2_007164"
+  },
+  {
+   "id": "cv2_n041",
+   "kind": "title",
+   "query": "Giày Sandal Đế Xuồng Quai Phối Buckle Vuông",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ]
+   },
+   "source_item": "cr2_001571"
+  },
+  {
+   "id": "cv2_n042",
+   "kind": "title",
+   "query": "Quần Short Jean Nam Aristino Regular Fit AJH005AS0",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ]
+   },
+   "source_item": "cr2_006169"
+  },
+  {
+   "id": "cv2_n043",
+   "kind": "title",
+   "query": "áo len lông cừu khuy ngọc trai",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sweaters"
+    ]
+   },
+   "source_item": "cr2_005203"
+  },
+  {
+   "id": "cv2_n044",
+   "kind": "title",
+   "query": "Quần dài nhung bé trai Rabity 947.001",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ]
+   },
+   "source_item": "cr2_010351"
+  },
+  {
+   "id": "cv2_n045",
+   "kind": "title",
+   "query": "Balo Teen Nam Nữ Biti's Helio Màu Đen BBBB02400DEN",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ]
+   },
+   "source_item": "cr2_007470"
+  },
+  {
+   "id": "cv2_n046",
+   "kind": "title",
+   "query": "Giày Thể Thao Nữ Biti's Hunter Street Màu Đen HSW015800DEN",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ]
+   },
+   "source_item": "cr2_002537"
+  },
+  {
+   "id": "cv2_n047",
+   "kind": "title",
+   "query": "Nón Nam Dad Hat Vải Dù Nhăn \"Healing Club\" - #Y2010 207 Đen 99",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Ring"
+    ]
+   },
+   "source_item": "cr2_010284"
+  },
+  {
+   "id": "cv2_n048",
+   "kind": "title",
+   "query": "Quần Lót Nam Briefs Bamboo Aristino ABF005EXP01",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Briefs"
+    ]
+   },
+   "source_item": "cr2_008322"
+  },
+  {
+   "id": "cv2_n049",
+   "kind": "title",
+   "query": "Túi Tote Canvas 100% Cotton Chịu Lực Ngăn Chứa Lớn - #Y2010 193 Nâu Đậm",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Handbags"
+    ]
+   },
+   "source_item": "cr2_011252"
+  },
+  {
+   "id": "cv2_n050",
+   "kind": "title",
+   "query": "Đồ bộ thun dài tay bé trai trung nhí Rabity 961.002.003",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clothing Set"
+    ]
+   },
+   "source_item": "cr2_010478"
+  },
+  {
+   "id": "cv2_n051",
+   "kind": "title",
+   "query": "Áo Nỉ Sweatshirt Nam Họa Tiết Aristino Regular Fit ASW005BS0",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sweatshirts"
+    ]
+   },
+   "source_item": "cr2_004495"
+  },
+  {
+   "id": "cv2_n052",
+   "kind": "title",
+   "query": "Khăn Lụa Cài Túi Áo Vest Nam Đan Lát Aristino AK2003S0H4",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Scarves"
+    ]
+   },
+   "source_item": "cr2_007978"
+  },
+  {
+   "id": "cv2_n053",
+   "kind": "title",
+   "query": "Cà Vạt Nam Bản To 7x3.8cm Aristino ATI0010S2",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Ties"
+    ]
+   },
+   "source_item": "cr2_006575"
+  },
+  {
+   "id": "cv2_n054",
+   "kind": "title",
+   "query": "Bộ đồ bơi bé gái Rabity 974.037",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Swimwear"
+    ]
+   },
+   "source_item": "cr2_010904"
+  },
+  {
+   "id": "cv2_n055",
+   "kind": "title",
+   "query": "Quần Boxer Nam Aristino Polyamide ABX072",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Boxers"
+    ]
+   },
+   "source_item": "cr2_006361"
+  },
+  {
+   "id": "cv2_n056",
+   "kind": "title",
+   "query": "Ví Cầm Tay Zip Long Wallet",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clutches"
+    ]
+   },
+   "source_item": "cr2_004354"
+  },
+  {
+   "id": "cv2_n057",
+   "kind": "title",
+   "query": "Combo Travel & Gym Larita Miyo Mint Năng Động",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trolley Bag"
+    ]
+   },
+   "source_item": "cr2_000025"
+  },
+  {
+   "id": "cv2_n058",
+   "kind": "title",
+   "query": "Quần rời dệt kim Nam Aristino Regular Fit APA007W3",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Track Pants"
+    ]
+   },
+   "source_item": "cr2_006342"
+  },
+  {
+   "id": "cv2_n059",
+   "kind": "title",
+   "query": "Áo khoác bé trai Rabity 92762",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jackets"
+    ]
+   },
+   "source_item": "cr2_009944"
+  },
+  {
+   "id": "cv2_n060",
+   "kind": "title",
+   "query": "Thắt lưng Quickfit Baron",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Belts"
+    ]
+   },
+   "source_item": "cr2_001866"
+  },
+  {
+   "id": "cv2_n061",
+   "kind": "title",
+   "query": "Giày Tây Nam Biti's X Màu Đen BVM004288DEN",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Formal Shoes"
+    ]
+   },
+   "source_item": "cr2_006764"
+  },
+  {
+   "id": "cv2_n062",
+   "kind": "title",
+   "query": "Ví Nam Nhôm Gạt Lấy Thẻ Nhanh Siêu Nhẹ Chống Quét Trộm RFID - #Y2010 179 Đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Wallets"
+    ]
+   },
+   "source_item": "cr2_011530"
+  },
+  {
+   "id": "cv2_n063",
+   "kind": "title",
+   "query": "Áo Khoác Blazer Nam Aristino Premio ABZ0080Z4",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Blazers"
+    ]
+   },
+   "source_item": "cr2_004252"
+  },
+  {
+   "id": "cv2_n064",
+   "kind": "title",
+   "query": "Áo dệt kim kiểu vặn thừng",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tops"
+    ]
+   },
+   "source_item": "cr2_001547"
+  },
+  {
+   "id": "cv2_n065",
+   "kind": "title",
+   "query": "Túi Đeo Chéo Chest Bag Kiểu Kén Trượt Nước Chống Mỏi - #Y2010 185 Đen",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Messenger Bag"
+    ]
+   },
+   "source_item": "cr2_011347"
+  },
+  {
+   "id": "cv2_n066",
+   "kind": "title",
+   "query": "Áo ren cổ V Ivory",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Waistcoat"
+    ]
+   },
+   "source_item": "cr2_005249"
+  },
+  {
+   "id": "cv2_n067",
+   "kind": "title",
+   "query": "Zuýp đuôi cá 2 lớp",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Skirts"
+    ]
+   },
+   "source_item": "cr2_007710"
+  },
+  {
+   "id": "cv2_n068",
+   "kind": "title",
+   "query": "Áo Bra Thể Thao Medium Support",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Bra"
+    ]
+   },
+   "source_item": "cr2_000367"
+  },
+  {
+   "id": "cv2_n069",
+   "kind": "title",
+   "query": "Đồng Hồ Đôi SRWatch SG1071.1402TE & SL1071.1402TE Size 40mm/30mm",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Watches"
+    ]
+   },
+   "source_item": "cr2_001227"
+  },
+  {
+   "id": "cv2_n070",
+   "kind": "title",
+   "query": "Mũ bé trai Rabity 371.005",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Hat"
+    ]
+   },
+   "source_item": "cr2_011010"
+  },
+  {
+   "id": "cv2_n071",
+   "kind": "title",
+   "query": "Giày Cao Gót Slingback Mũi Tròn Phối Nơ Pu",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Heels"
+    ]
+   },
+   "source_item": "cr2_005002"
+  },
+  {
+   "id": "cv2_n072",
+   "kind": "title",
+   "query": "Quần Lót Trunk Cotton Co Giãn Comfort",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trunk"
+    ]
+   },
+   "source_item": "cr2_000421"
+  },
+  {
+   "id": "cv2_n073",
+   "kind": "title",
+   "query": "Dép Biti's Nữ Màu Xanh Lá Cây BEW004800XLC",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flip Flops"
+    ]
+   },
+   "source_item": "cr2_006347"
+  },
+  {
+   "id": "cv2_n074",
+   "kind": "title",
+   "query": "Quần Jeans Nam Aristino Slim Fit AJN0070Z",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jeans"
+    ]
+   },
+   "source_item": "cr2_005754"
+  },
+  {
+   "id": "cv2_n075",
+   "kind": "title",
+   "query": "Giày búp bê bé gái Rabity 683.019 (Size 31 - Size 35)",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Flats"
+    ]
+   },
+   "source_item": "cr2_010745"
+  },
+  {
+   "id": "cv2_n076",
+   "kind": "title",
+   "query": "Dép Biti's Nữ Màu Đen BFW007288DEN",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Casual Shoes"
+    ]
+   },
+   "source_item": "cr2_009056"
+  },
+  {
+   "id": "cv2_n077",
+   "kind": "title",
+   "query": "Áo thun cổ 3 phân dài tay bé gái Rabity 92838",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Tshirts"
+    ]
+   },
+   "source_item": "cr2_009786"
+  },
+  {
+   "id": "cv2_n078",
+   "kind": "title",
+   "query": "Mũ Lưỡi Trai Nam Aristino ACP0020H0",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Caps"
+    ]
+   },
+   "source_item": "cr2_007462"
+  },
+  {
+   "id": "cv2_n079",
+   "kind": "title",
+   "query": "Găng Tay Nam Nữ Dài Dạng Ống Xỏ Ngón Chống Nắng UPF 50+ - #Y2010 298 Đen 99",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Gloves"
+    ]
+   },
+   "source_item": "cr2_001198"
+  },
+  {
+   "id": "cv2_n080",
+   "kind": "title",
+   "query": "Túi Trống Du Lịch Gym Đa Năng Đáy Mở Rộng Kháng Nước - #Y2010 200 Xanh Lá Đậm",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Duffel Bag"
+    ]
+   },
+   "source_item": "cr2_011378"
+  },
+  {
+   "id": "cv2_n081",
+   "kind": "title",
+   "query": "Larita Sticker Starter Set S Đa Màu",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Travel Accessory"
+    ]
+   },
+   "source_item": "cr2_001120"
+  },
+  {
+   "id": "cv2_n082",
+   "kind": "title",
+   "query": "Áo sơ mi lụa Layered Bow",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shirts"
+    ]
+   },
+   "source_item": "cr2_001059"
+  },
+  {
+   "id": "cv2_n083",
+   "kind": "title",
+   "query": "Combo 3 Vớ Công Thái Học Cổ Ngắn Kháng Khuẩn Đệm Giảm Chấn #Y2010 161 Màu Xám",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Socks"
+    ]
+   },
+   "source_item": "cr2_011464"
+  },
+  {
+   "id": "cv2_n084",
+   "kind": "title",
+   "query": "Jumpsuit sơ mi cổ Vest",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Jumpsuit"
+    ]
+   },
+   "source_item": "cr2_007328"
+  },
+  {
+   "id": "cv2_n085",
+   "kind": "title",
+   "query": "Gọng Kính G2964",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sunglasses"
+    ]
+   },
+   "source_item": "cr2_005129"
+  },
+  {
+   "id": "cv2_n086",
+   "kind": "title",
+   "query": "Đầm xòe Rosa Charm",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Dresses"
+    ]
+   },
+   "source_item": "cr2_005953"
+  },
+  {
+   "id": "cv2_n087",
+   "kind": "title",
+   "query": "Giày Sandal Bé Gái Biti's Cool Màu Kem BEG007800KEM",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sandals"
+    ]
+   },
+   "source_item": "cr2_008409"
+  },
+  {
+   "id": "cv2_n088",
+   "kind": "title",
+   "query": "Quần Short Âu Nam Aristino Regular ASO063FAH2",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Shorts"
+    ]
+   },
+   "source_item": "cr2_005882"
+  },
+  {
+   "id": "cv2_n089",
+   "kind": "title",
+   "query": "Áo len dáng ôm trễ vai",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sweaters"
+    ]
+   },
+   "source_item": "cr2_005184"
+  },
+  {
+   "id": "cv2_n090",
+   "kind": "title",
+   "query": "Quần Âu Nam Aristino Regular Fit ATR0090S1",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Trousers"
+    ]
+   },
+   "source_item": "cr2_004897"
+  },
+  {
+   "id": "cv2_n091",
+   "kind": "title",
+   "query": "Balo bé gái Rabity 672.502",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Backpacks"
+    ]
+   },
+   "source_item": "cr2_011043"
+  },
+  {
+   "id": "cv2_n092",
+   "kind": "title",
+   "query": "Giày Thể Thao Biti's Basic Nam BSM000600",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sports Shoes"
+    ]
+   },
+   "source_item": "cr2_003621"
+  },
+  {
+   "id": "cv2_n093",
+   "kind": "title",
+   "query": "Nón Nam Dad Hat Vải Dù Nhăn Trượt Nước \"Chill Mode On\" - #Y2010 208 Be 13",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Ring"
+    ]
+   },
+   "source_item": "cr2_009535"
+  },
+  {
+   "id": "cv2_n094",
+   "kind": "title",
+   "query": "Combo 2 quần lót modal hoạ tiết Minnie bản quyền Disney bé gái Rabity 635.503",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Briefs"
+    ]
+   },
+   "source_item": "cr2_010844"
+  },
+  {
+   "id": "cv2_n095",
+   "kind": "title",
+   "query": "Túi Xách Nhỏ Juno Club",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Handbags"
+    ]
+   },
+   "source_item": "cr2_001446"
+  },
+  {
+   "id": "cv2_n096",
+   "kind": "title",
+   "query": "Set váy bé gái Rabity 957.010",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Clothing Set"
+    ]
+   },
+   "source_item": "cr2_011063"
+  },
+  {
+   "id": "cv2_n097",
+   "kind": "title",
+   "query": "Áo Nỉ Sweatshirt Nam Aristino Regular Fit ASW002BH0",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Sweatshirts"
+    ]
+   },
+   "source_item": "cr2_004516"
+  },
+  {
+   "id": "cv2_n098",
+   "kind": "title",
+   "query": "Khăn Quàng Cổ Nam Aristino Business 1SF006S0H4",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Scarves"
+    ]
+   },
+   "source_item": "cr2_007660"
+  },
+  {
+   "id": "cv2_n099",
+   "kind": "title",
+   "query": "Cà Vạt Nam Kẻ Bản To 7x3.8cm Aristino ATI0240S2",
+   "has_diacritics": true,
+   "spec": {
+    "articleType": [
+     "Ties"
+    ]
+   },
+   "source_item": "cr2_006555"
+  }
+ ]
+}
