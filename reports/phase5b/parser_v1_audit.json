@@ -1,0 +1,244 @@
+[
+  {
+    "dataset": "DEV (handwritten_queries)",
+    "n_queries": 100,
+    "slot_pred_nonempty": {
+      "articleType": 88,
+      "gender": 88,
+      "baseColour": 76
+    },
+    "slot_fp_counts": {
+      "baseColour": 12,
+      "articleType": 1
+    },
+    "slot_fp_rate_over_queries": {
+      "articleType": 0.01,
+      "gender": 0.0,
+      "baseColour": 0.12
+    },
+    "slot_fp_rate_over_preds": {
+      "articleType": 0.0114,
+      "gender": 0.0,
+      "baseColour": 0.1579
+    },
+    "slot_fp_empty_spec": {
+      "baseColour": 7
+    },
+    "slot_fp_mismatch_spec": {
+      "baseColour": 5,
+      "articleType": 1
+    },
+    "colour_fp_tokens": {
+      "Beige (be)": 2,
+      "Red (do)": 2,
+      "Orange (cam)": 2,
+      "Off White (be,kem)": 1,
+      "Pink (hong)": 1,
+      "Yellow (hong,vang)": 1,
+      "White (bac,da,trang)": 1,
+      "White (den,trang)": 1,
+      "Purple (bac,tim)": 1
+    },
+    "tim_mua_purple_count": 0,
+    "tim_mua_purple_ids": []
+  },
+  {
+    "dataset": "Val A (synthetic)",
+    "n_queries": 240,
+    "slot_pred_nonempty": {
+      "articleType": 228,
+      "gender": 240,
+      "baseColour": 201
+    },
+    "slot_fp_counts": {
+      "baseColour": 10,
+      "articleType": 1
+    },
+    "slot_fp_rate_over_queries": {
+      "articleType": 0.0042,
+      "gender": 0.0,
+      "baseColour": 0.0417
+    },
+    "slot_fp_rate_over_preds": {
+      "articleType": 0.0044,
+      "gender": 0.0,
+      "baseColour": 0.0498
+    },
+    "slot_fp_empty_spec": {
+      "baseColour": 4
+    },
+    "slot_fp_mismatch_spec": {
+      "baseColour": 6,
+      "articleType": 1
+    },
+    "colour_fp_tokens": {
+      "Beige (be,den)": 2,
+      "Red (do,xanh)": 2,
+      "Red (do)": 2,
+      "Beige (be,do)": 2,
+      "Beige (be)": 1,
+      "Orange (cam)": 1
+    },
+    "tim_mua_purple_count": 0,
+    "tim_mua_purple_ids": []
+  },
+  {
+    "dataset": "Val B-synth (all)",
+    "n_queries": 245,
+    "slot_pred_nonempty": {
+      "articleType": 158,
+      "gender": 148,
+      "baseColour": 190
+    },
+    "slot_fp_counts": {
+      "baseColour": 80
+    },
+    "slot_fp_rate_over_queries": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.3265
+    },
+    "slot_fp_rate_over_preds": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.4211
+    },
+    "slot_fp_empty_spec": {
+      "baseColour": 20
+    },
+    "slot_fp_mismatch_spec": {
+      "baseColour": 60
+    },
+    "colour_fp_tokens": {
+      "Purple (tim_mua)": 38,
+      "Purple (tim)": 10,
+      "Purple (den,tim)": 7,
+      "Purple (tim,trang)": 6,
+      "Purple (tim,xanh)": 5,
+      "White (trang)": 3,
+      "Purple (da,tim)": 3,
+      "Purple (do,tim)": 2,
+      "Beige (be)": 2,
+      "Blue (tim_mua)": 1,
+      "Purple (da,nau,tim)": 1,
+      "Purple (da,tim,xanh)": 1,
+      "Blue (xanh)": 1,
+      "White (tim_mua)": 1,
+      "Purple (hong,tim)": 1
+    },
+    "tim_mua_purple_count": 38,
+    "tim_mua_purple_ids": [
+      "val_b_synth_000",
+      "val_b_synth_005",
+      "val_b_synth_017",
+      "val_b_synth_024",
+      "val_b_synth_033",
+      "val_b_synth_048",
+      "val_b_synth_053",
+      "val_b_synth_054",
+      "val_b_synth_062",
+      "val_b_synth_063",
+      "val_b_synth_083",
+      "val_b_synth_084",
+      "val_b_synth_094",
+      "val_b_synth_095",
+      "val_b_synth_104",
+      "val_b_synth_108",
+      "val_b_synth_125",
+      "val_b_synth_130",
+      "val_b_synth_135",
+      "val_b_synth_139",
+      "val_b_synth_142",
+      "val_b_synth_144",
+      "val_b_synth_153",
+      "val_b_synth_154",
+      "val_b_synth_158",
+      "val_b_synth_161",
+      "val_b_synth_169",
+      "val_b_synth_181",
+      "val_b_synth_188",
+      "val_b_synth_197",
+      "val_b_synth_210",
+      "val_b_synth_218",
+      "val_b_synth_220",
+      "val_b_synth_227",
+      "val_b_synth_229",
+      "val_b_synth_230",
+      "val_b_synth_232",
+      "val_b_synth_235"
+    ]
+  },
+  {
+    "dataset": "Val B-synth (clean only)",
+    "n_queries": 165,
+    "slot_pred_nonempty": {
+      "articleType": 115,
+      "gender": 103,
+      "baseColour": 132
+    },
+    "slot_fp_counts": {
+      "baseColour": 53
+    },
+    "slot_fp_rate_over_queries": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.3212
+    },
+    "slot_fp_rate_over_preds": {
+      "articleType": 0.0,
+      "gender": 0.0,
+      "baseColour": 0.4015
+    },
+    "slot_fp_empty_spec": {
+      "baseColour": 14
+    },
+    "slot_fp_mismatch_spec": {
+      "baseColour": 39
+    },
+    "colour_fp_tokens": {
+      "Purple (tim_mua)": 26,
+      "Purple (tim)": 6,
+      "Purple (den,tim)": 5,
+      "Purple (tim,xanh)": 4,
+      "Purple (tim,trang)": 3,
+      "White (trang)": 2,
+      "Purple (do,tim)": 2,
+      "Blue (tim_mua)": 1,
+      "Purple (da,nau,tim)": 1,
+      "Purple (da,tim,xanh)": 1,
+      "Beige (be)": 1,
+      "Blue (xanh)": 1,
+      "White (tim_mua)": 1,
+      "Purple (hong,tim)": 1
+    },
+    "tim_mua_purple_count": 26,
+    "tim_mua_purple_ids": [
+      "val_b_synth_000",
+      "val_b_synth_005",
+      "val_b_synth_017",
+      "val_b_synth_024",
+      "val_b_synth_033",
+      "val_b_synth_048",
+      "val_b_synth_053",
+      "val_b_synth_054",
+      "val_b_synth_062",
+      "val_b_synth_063",
+      "val_b_synth_083",
+      "val_b_synth_084",
+      "val_b_synth_094",
+      "val_b_synth_095",
+      "val_b_synth_104",
+      "val_b_synth_108",
+      "val_b_synth_125",
+      "val_b_synth_130",
+      "val_b_synth_135",
+      "val_b_synth_139",
+      "val_b_synth_142",
+      "val_b_synth_144",
+      "val_b_synth_153",
+      "val_b_synth_154",
+      "val_b_synth_158",
+      "val_b_synth_161"
+    ]
+  }
+]

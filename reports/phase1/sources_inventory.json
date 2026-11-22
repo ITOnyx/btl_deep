@@ -1,0 +1,44 @@
+{
+  "kaggle_fashion": {
+    "name": "Kaggle Fashion Product Images (Myntra)",
+    "on_disk": true,
+    "path": "data\\fashion-dataset",
+    "num_products_metadata": 44424,
+    "num_images": 40913,
+    "schema": [
+      "id",
+      "gender",
+      "masterCategory",
+      "subCategory",
+      "articleType",
+      "baseColour",
+      "season",
+      "year",
+      "usage",
+      "productDisplayName"
+    ],
+    "label_language": "en",
+    "license": "CC0: Public Domain",
+    "catalog_role": "primary_catalog"
+  },
+  "shopping100k": {
+    "name": "Shopping100k Dataset",
+    "on_disk": true,
+    "path": "data\\Shopping100k",
+    "num_images": 100586,
+    "schema": "attributes txt + raw images",
+    "label_language": "en",
+    "license": "Academic non-commercial",
+    "catalog_role": "available_on_disk_unmapped"
+  },
+  "tiki_shopee_crawled": {
+    "name": "Tiki/Shopee Crawled Products",
+    "on_disk": false,
+    "path": "data\\images_crawled",
+    "num_images": 0,
+    "schema": "N/A",
+    "label_language": "N/A",
+    "license": "N/A",
+    "catalog_role": "không có"
+  }
+}

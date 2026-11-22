@@ -1,0 +1,384 @@
+section,label,keyword,sources
+articleType,Tshirts,áo thun,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Tshirts,áo phông,parser_v1 (accented_equiv)
+articleType,Tshirts,áo polo,parser_v1 (accented_equiv)
+articleType,Tshirts,t-shirt,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Tshirts,tshirt,parser_v1 (exact); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Tshirts,polo,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Shirts,áo sơ mi,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Shirts,sơ mi,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+articleType,Shirts,shirt,parser_v1 (exact); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Tops,áo kiểu,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Tops,áo croptop,parser_v1 (accented_equiv)
+articleType,Tops,crop top,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Tops,áo trễ vai,parser_v1 (accented_equiv)
+articleType,Tops,áo cánh,pre_b_human_src (52ef61f)
+articleType,Tops,áo điệu,pre_b_human_src (52ef61f)
+articleType,Jackets,áo khoác,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Jackets,áo gió,parser_v1 (accented_equiv)
+articleType,Jackets,áo da,parser_v1 (accented_equiv); homograph_table_2c1c.md
+articleType,Jackets,áo vest,parser_v1 (accented_equiv)
+articleType,Jackets,jacket,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Blazers,áo blazer,catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Blazers,blazer,catalog_rebuild.title_vi
+articleType,Blazers,blazers,catalog_rebuild.articleType
+articleType,Rain Jacket,rain jacket,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Sweatshirts,áo nỉ,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+articleType,Sweatshirts,áo hoodie,parser_v1 (accented_equiv)
+articleType,Sweatshirts,hoodie,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Sweatshirts,sweatshirt,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Sweaters,áo len,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Sweaters,sweater,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Waistcoat,áo gile,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Waistcoat,gile,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Kurtas,áo kurta,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Kurtas,kurta,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Kurtis,áo kurti,catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Kurtis,kurti,catalog_rebuild.title_vi
+articleType,Kurta Sets,kurta set,catalog_rebuild.title_vi
+articleType,Kurta Sets,kurta sets,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Tunics,áo tunic,pre_b_human_src (64aba60)
+articleType,Tunics,tunic,catalog_rebuild.title_vi
+articleType,Tunics,tunics,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Sarees,sari,catalog_rebuild.title_vi
+articleType,Sarees,saree,catalog_rebuild.title_vi
+articleType,Sarees,sarees,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Dupatta,khăn dupatta,pre_b_human_src (b27dc7a)
+articleType,Dupatta,dupatta,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_vi_gaps.md; catalog_rebuild.title_vi
+articleType,Jeans,quần jean,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Jeans,quần bò,parser_v1 (accented_equiv)
+articleType,Jeans,quần jeans,parser_v1 (accented_equiv)
+articleType,Jeans,jeans,parser_v1 (exact); catalog_rebuild.articleType; homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Trousers,quần tây,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Trousers,quần âu,parser_v1 (accented_equiv)
+articleType,Trousers,quần dài,parser_v1 (accented_equiv)
+articleType,Trousers,quần vải,parser_v1 (accented_equiv)
+articleType,Trousers,quần kaki,pre_b_human_src (6adf41e)
+articleType,Trousers,trousers,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Shorts,quần short,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Shorts,quần đùi,parser_v1 (accented_equiv)
+articleType,Shorts,quần sooc,parser_v1 (accented_equiv)
+articleType,Shorts,shorts,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Capris,capri,catalog_vi_gaps.md; catalog_rebuild.title_vi
+articleType,Capris,capris,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_vi_gaps.md; catalog_rebuild.title_vi
+articleType,Track Pants,quần thể thao,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+articleType,Track Pants,quần jogger,parser_v1 (accented_equiv)
+articleType,Track Pants,track pants,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Track Pants,quần nỉ,parser_v1 (accented_equiv)
+articleType,Leggings,quần legging,pre_b_human_src (6adf41e)
+articleType,Leggings,legging,catalog_rebuild.title_vi
+articleType,Leggings,leggings,catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Tights,tights,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Dresses,đầm,parser_v1 (accented_equiv); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Dresses,váy liền,parser_v1 (accented_equiv)
+articleType,Dresses,váy đầm,parser_v1 (accented_equiv)
+articleType,Dresses,váy dự tiệc,parser_v1 (accented_equiv)
+articleType,Dresses,váy,parser_v1 (accented_equiv); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Dresses,dress,parser_v1 (exact); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Skirts,chân váy,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Skirts,váy ngắn,parser_v1 (accented_equiv)
+articleType,Skirts,váy xòe,parser_v1 (accented_equiv)
+articleType,Skirts,skirt,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Jumpsuit,áo liền quần,pre_b_human_src (b27dc7a)
+articleType,Jumpsuit,jumpsuit,catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Nightdress,váy ngủ,catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Nightdress,nightdress,catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Night suits,bộ đồ ngủ,pre_b_human_src (6adf41e)
+articleType,Night suits,đồ ngủ,homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Night suits,night suits,catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Sports Shoes,giày thể thao,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Sports Shoes,giày chạy bộ,parser_v1 (accented_equiv)
+articleType,Sports Shoes,giày đá bóng,pre_b_human_src (6adf41e)
+articleType,Sports Shoes,giày tập gym,pre_b_human_src (6adf41e)
+articleType,Sports Shoes,sports shoes,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Casual Shoes,giày thường,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Casual Shoes,giày lười,parser_v1 (accented_equiv)
+articleType,Casual Shoes,giày vải,parser_v1 (accented_equiv)
+articleType,Casual Shoes,giày sneaker,parser_v1 (accented_equiv)
+articleType,Casual Shoes,sneaker,catalog_rebuild.title_vi
+articleType,Casual Shoes,sneakers,catalog_rebuild.title_vi
+articleType,Casual Shoes,giày bata,parser_v1 (accented_equiv)
+articleType,Casual Shoes,casual shoes,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Formal Shoes,giày tây,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+articleType,Formal Shoes,giày da công sở,parser_v1 (accented_equiv)
+articleType,Formal Shoes,giày công sở,parser_v1 (accented_equiv)
+articleType,Formal Shoes,formal shoes,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Sandals,giày xăng đan,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Sandals,xăng đan,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+articleType,Sandals,sandal,parser_v1 (exact); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Sandals,sandals,parser_v1 (exact); catalog_rebuild.articleType; homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Sandals,dép quai hậu,parser_v1 (accented_equiv)
+articleType,Sports Sandals,sports sandals,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Flip Flops,dép xỏ ngón,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Flip Flops,dép tông,parser_v1 (accented_equiv)
+articleType,Flip Flops,dép kẹp,parser_v1 (accented_equiv)
+articleType,Flip Flops,dép lê,parser_v1 (accented_equiv)
+articleType,Flip Flops,flip flops,parser_v1 (exact); catalog_rebuild.articleType; homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Heels,giày cao gót,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Heels,cao gót,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+articleType,Heels,guốc cao gót,pre_b_human_src (52ef61f)
+articleType,Heels,heels,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Flats,giày búp bê,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Flats,giày bệt,parser_v1 (accented_equiv)
+articleType,Flats,giày đế bằng,pre_b_human_src (52ef61f)
+articleType,Flats,flats,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Booties,giày bốt,catalog_rebuild.title_vi
+articleType,Booties,bốt cổ thấp,pre_b_human_src (b27dc7a)
+articleType,Booties,booties,catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Watches,đồng hồ đeo tay,pre_b_human_src (6adf41e)
+articleType,Watches,đồng hồ,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Watches,watch,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Watches,watches,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Handbags,túi xách tay,pre_b_human_src (6adf41e)
+articleType,Handbags,túi xách,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Handbags,túi đeo vai,parser_v1 (accented_equiv)
+articleType,Handbags,túi công sở,pre_b_human_src (52ef61f)
+articleType,Handbags,túi nữ,parser_v1 (accented_equiv)
+articleType,Handbags,handbag,parser_v1 (exact); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Messenger Bag,túi đeo chéo,catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Messenger Bag,messenger bag,catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Duffel Bag,túi trống,pre_b_human_src (6adf41e)
+articleType,Duffel Bag,duffel bag,catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Waist Pouch,túi bao tử,pre_b_human_src (6adf41e)
+articleType,Waist Pouch,túi đeo hông,pre_b_human_src (6adf41e)
+articleType,Waist Pouch,waist pouch,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Backpacks,ba lô,parser_v1 (accented_equiv)
+articleType,Backpacks,balo,parser_v1 (exact); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Backpacks,cặp sách,parser_v1 (accented_equiv)
+articleType,Backpacks,backpack,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Rucksacks,balo du lịch,pre_b_human_src (6adf41e)
+articleType,Rucksacks,rucksack,catalog_rebuild.title_vi
+articleType,Laptop Bag,túi đựng laptop,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Laptop Bag,cặp laptop,parser_v1 (accented_equiv)
+articleType,Laptop Bag,túi laptop,parser_v1 (accented_equiv)
+articleType,Laptop Bag,balo laptop,pre_b_human_src (6adf41e)
+articleType,Wallets,ví da,parser_v1 (accented_equiv); homograph_table_2c1c.md
+articleType,Wallets,ví cầm tay,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Wallets,ví tiền,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Wallets,bóp tiền,pre_b_human_src (6adf41e)
+articleType,Wallets,bóp da,pre_b_human_src (52ef61f)
+articleType,Wallets,bóp,parser_v1 (accented_equiv); homograph_table_2c1c.md
+articleType,Wallets,ví,parser_v1 (accented_equiv); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Wallets,wallet,parser_v1 (exact); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Clutches,ví dự tiệc,pre_b_human_src (6adf41e)
+articleType,Clutches,clutch,catalog_rebuild.title_vi
+articleType,Clutches,clutches,catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Belts,thắt lưng,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Belts,dây nịt,parser_v1 (accented_equiv)
+articleType,Belts,dây lưng,pre_b_human_src (52ef61f)
+articleType,Belts,belt,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Sunglasses,kính râm,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Sunglasses,kính mát,parser_v1 (accented_equiv)
+articleType,Sunglasses,mắt kính,parser_v1 (accented_equiv)
+articleType,Sunglasses,sunglasses,parser_v1 (exact); catalog_rebuild.articleType; homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Caps,mũ lưỡi trai,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Caps,nón kết,parser_v1 (accented_equiv)
+articleType,Caps,mũ kết,parser_v1 (accented_equiv)
+articleType,Caps,nón lưỡi trai,parser_v1 (accented_equiv)
+articleType,Caps,mũ,parser_v1 (accented_equiv); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Caps,nón,parser_v1 (accented_equiv); homograph_table_2c1c.md
+articleType,Socks,tất,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Socks,vớ,parser_v1 (accented_equiv); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Socks,socks,parser_v1 (exact); catalog_rebuild.articleType; homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Ties,cà vạt,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Ties,caravat,parser_v1 (exact)
+articleType,Ties,tie,parser_v1 (exact); homograph_table_2c1c.md; catalog_rebuild.title_vi
+articleType,Scarves,khăn choàng,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+articleType,Scarves,khăn quàng,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+articleType,Scarves,scarf,parser_v1 (exact); catalog_rebuild.title_vi
+articleType,Mufflers,khăn quàng cổ,pre_b_human_src (6adf41e)
+articleType,Mufflers,muffler,catalog_rebuild.title_vi
+articleType,Bra,áo ngực,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Bra,áo lót,parser_v1 (accented_equiv)
+articleType,Bra,bra,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Briefs,quần lót nam,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Briefs,quần sịp,parser_v1 (accented_equiv)
+articleType,Briefs,briefs,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Boxers,quần lót boxer,pre_b_human_src (6adf41e)
+articleType,Boxers,quần boxer,pre_b_human_src (64aba60)
+articleType,Boxers,boxer,catalog_vi_gaps.md; catalog_rebuild.title_vi
+articleType,Trunk,quần lót trunk,pre_b_human_src (64aba60)
+articleType,Trunk,trunk,catalog_rebuild.articleType; catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Innerwear Vests,áo ba lỗ,parser_v1 (accented_equiv)
+articleType,Innerwear Vests,áo may ô,parser_v1 (accented_equiv)
+articleType,Earrings,bông tai,catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Earrings,hoa tai,pre_b_human_src (6adf41e)
+articleType,Earrings,khuyên tai,pre_b_human_src (52ef61f)
+articleType,Earrings,earrings,catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Bracelet,lắc tay,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Bracelet,vòng tay,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+articleType,Bracelet,bracelet,parser_v1 (exact); catalog_rebuild.articleType; catalog_rebuild.title_vi
+articleType,Necklace and Chains,dây chuyền,catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Necklace and Chains,vòng cổ,pre_b_human_src (b27dc7a)
+articleType,Pendant,mặt dây chuyền,parser_v1 (accented_equiv); catalog_rebuild.articleType_vi; catalog_rebuild.title_vi
+articleType,Perfume and Body Mist,nước hoa,parser_v1 (accented_equiv)
+articleType,Perfume and Body Mist,dầu thơm,parser_v1 (accented_equiv)
+gender,Boys,bé trai,parser_v1 (accented_equiv); catalog_rebuild.gender_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+gender,Boys,trẻ em nam,parser_v1 (accented_equiv)
+gender,Boys,nhóc nam,parser_v1 (accented_equiv)
+gender,Girls,bé gái,parser_v1 (accented_equiv); catalog_rebuild.gender_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+gender,Girls,trẻ em nữ,parser_v1 (accented_equiv)
+gender,Girls,nhóc nữ,parser_v1 (accented_equiv)
+gender,Unisex,unisex,parser_v1 (exact); catalog_rebuild.gender; catalog_rebuild.title_vi
+gender,Unisex,nam nữ,parser_v1 (accented_equiv); catalog_rebuild.gender_vi; catalog_rebuild.title_vi
+gender,Unisex,nữ nam,structural_unisex_combo (catalog gender_vi Nam+Nữ)
+gender,Unisex,nam và nữ,structural_unisex_combo (catalog gender_vi Nam+Nữ)
+gender,Unisex,nữ và nam,structural_unisex_combo (catalog gender_vi Nam+Nữ)
+gender,Unisex,cả nam và nữ,parser_v1 (accented_equiv)
+gender,Men,nam giới,pre_b_human_src (b27dc7a)
+gender,Men,của nam,pre_b_human_src (52ef61f)
+gender,Men,cho nam,pre_b_human_src (6adf41e)
+gender,Men,đàn ông,parser_v1 (accented_equiv)
+gender,Men,phái mạnh,parser_v1 (accented_equiv)
+gender,Men,con trai,parser_v1 (exact)
+gender,Men,nam,parser_v1 (exact); catalog_rebuild.gender_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+gender,Women,nữ giới,pre_b_human_src (52ef61f)
+gender,Women,của nữ,pre_b_human_src (52ef61f)
+gender,Women,cho nữ,pre_b_human_src (6adf41e)
+gender,Women,phụ nữ,parser_v1 (accented_equiv)
+gender,Women,con gái,parser_v1 (accented_equiv)
+gender,Women,phái đẹp,parser_v1 (accented_equiv)
+gender,Women,chị em,parser_v1 (accented_equiv)
+gender,Women,nữ,parser_v1 (accented_equiv); catalog_rebuild.gender_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Navy Blue,xanh navy,parser_v1 (exact); catalog_rebuild.baseColour_vi; catalog_vi_gaps.md; catalog_rebuild.title_vi
+baseColour,Navy Blue,xanh tím than,parser_v1 (accented_equiv)
+baseColour,Navy Blue,xanh đen,parser_v1 (accented_equiv)
+baseColour,Navy Blue,xanh than,pre_b_human_src (b27dc7a)
+baseColour,Navy Blue,navy,parser_v1 (exact); catalog_vi_gaps.md; catalog_rebuild.title_vi
+baseColour,Off White,trắng ngà,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Off White,trắng sữa,parser_v1 (accented_equiv)
+baseColour,Off White,màu kem,parser_v1 (accented_equiv); catalog_rebuild.title_vi
+baseColour,Off White,kem,parser_v1 (exact); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Coffee Brown,nâu cà phê,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Coffee Brown,nâu đậm,parser_v1 (accented_equiv)
+baseColour,Teal,xanh cổ vịt,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Teal,xanh ngọc,parser_v1 (accented_equiv)
+baseColour,Turquoise Blue,turquoise,catalog_vi_gaps.md; catalog_rebuild.title_vi
+baseColour,Olive,xanh ô liu,pre_b_human_src (6adf41e)
+baseColour,Olive,olive,catalog_rebuild.baseColour; catalog_rebuild.title_vi
+baseColour,Steel,màu thép,pre_b_human_src (92ca6c5)
+baseColour,Steel,thép không gỉ,pre_b_human_src (6adf41e)
+baseColour,Steel,steel,catalog_rebuild.baseColour; catalog_rebuild.baseColour_vi; catalog_vi_gaps.md; catalog_rebuild.title_vi
+baseColour,Charcoal,than chì,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Charcoal,xám đậm,parser_v1 (accented_equiv)
+baseColour,Charcoal,xám lông chuột,parser_v1 (accented_equiv)
+baseColour,Charcoal,lông chuột,pre_b_human_src (52ef61f)
+baseColour,Grey Melange,xám tiêu,pre_b_human_src (6adf41e)
+baseColour,Grey Melange,grey melange,catalog_rebuild.baseColour; catalog_rebuild.baseColour_vi; catalog_vi_gaps.md; catalog_rebuild.title_vi
+baseColour,Maroon,đỏ đô,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Maroon,đỏ thẫm,parser_v1 (accented_equiv)
+baseColour,Maroon,đỏ rượu,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Maroon,đỏ mận,parser_v1 (accented_equiv)
+baseColour,Maroon,maroon,parser_v1 (exact); catalog_rebuild.baseColour; catalog_rebuild.title_vi
+baseColour,Burgundy,burgundy,catalog_rebuild.baseColour; catalog_rebuild.title_vi
+baseColour,Gold,vàng kim,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Gold,vàng đồng,parser_v1 (accented_equiv)
+baseColour,Gold,vàng hồng,pre_b_human_src (6adf41e)
+baseColour,Gold,gold,parser_v1 (exact); catalog_rebuild.baseColour; catalog_rebuild.title_vi
+baseColour,Lavender,lavender,catalog_rebuild.baseColour; catalog_rebuild.title_vi
+baseColour,White,trắng tinh,pre_b_human_src (52ef61f)
+baseColour,White,trắng,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,White,white,parser_v1 (exact); catalog_rebuild.baseColour; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Black,đen tuyền,pre_b_human_src (52ef61f)
+baseColour,Black,đen,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Black,black,parser_v1 (exact); catalog_rebuild.baseColour; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Blue,xanh dương,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Blue,xanh biển,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Blue,xanh da trời,parser_v1 (accented_equiv)
+baseColour,Blue,xanh lam,parser_v1 (exact)
+baseColour,Blue,xanh đậm,homograph_table_2c1c.md
+baseColour,Blue,blue,parser_v1 (exact); catalog_rebuild.baseColour; catalog_vi_gaps.md; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Green,xanh lá,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Green,xanh lục,parser_v1 (accented_equiv)
+baseColour,Green,xanh rêu,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Green,green,parser_v1 (exact); catalog_rebuild.baseColour; catalog_rebuild.title_vi
+baseColour,Red,đỏ tươi,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Red,đỏ,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Red,red,parser_v1 (exact); catalog_rebuild.baseColour; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Pink,hồng phấn,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Pink,hồng,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Pink,pink,parser_v1 (exact); catalog_rebuild.baseColour; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Yellow,vàng tươi,parser_v1 (accented_equiv)
+baseColour,Yellow,vàng,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Yellow,yellow,parser_v1 (exact); catalog_rebuild.baseColour; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Orange,màu cam,catalog_rebuild.title_vi
+baseColour,Orange,cam,parser_v1 (exact); catalog_rebuild.baseColour_vi; catalog_vi_gaps.md; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Orange,orange,parser_v1 (exact); catalog_rebuild.baseColour; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Purple,màu tím,homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Purple,tím,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Purple,purple,parser_v1 (exact); catalog_rebuild.baseColour; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Brown,nâu đất,parser_v1 (accented_equiv)
+baseColour,Brown,nâu bò,pre_b_human_src (52ef61f)
+baseColour,Brown,nâu,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Brown,brown,parser_v1 (exact); catalog_rebuild.baseColour; catalog_vi_gaps.md; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Grey,xám ghi,pre_b_human_src (52ef61f)
+baseColour,Grey,xám,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Grey,ghi,parser_v1 (exact); homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Grey,grey,parser_v1 (exact); catalog_rebuild.baseColour; catalog_vi_gaps.md; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Grey,gray,parser_v1 (exact)
+baseColour,Beige,màu kem be,pre_b_human_src (52ef61f)
+baseColour,Beige,màu be,parser_v1 (accented_equiv); homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Beige,be,parser_v1 (exact); catalog_rebuild.baseColour_vi; catalog_vi_gaps.md; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Beige,beige,parser_v1 (exact); catalog_rebuild.baseColour; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Silver,bạc sáng,pre_b_human_src (52ef61f)
+baseColour,Silver,ánh bạc,pre_b_human_src (52ef61f)
+baseColour,Silver,bạc,parser_v1 (accented_equiv); catalog_rebuild.baseColour_vi; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Silver,silver,parser_v1 (exact); catalog_rebuild.baseColour; homograph_table_2c1c.md; catalog_rebuild.title_vi
+baseColour,Khaki,kaki,parser_v1 (exact); catalog_rebuild.baseColour_vi; catalog_rebuild.title_vi
+baseColour,Khaki,khaki,parser_v1 (exact); catalog_rebuild.baseColour; catalog_rebuild.title_vi
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,tìm mua,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,tim mua,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,cần tìm,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,can tim,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,đồ ngủ,homograph_table_2c1c.md; catalog_rebuild.title_vi
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,do ngu,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,bộ đồ ngủ,pre_b_human_src (6adf41e)
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,bo do ngu,pre_b_human_src (64aba60)
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,đựng đồ,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,dung do,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,bộ đồ,catalog_rebuild.title_vi
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,bo do,pre_b_human_src (64aba60)
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,cầm tay,homograph_table_2c1c.md; catalog_rebuild.title_vi
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,cam tay,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,búp bê,homograph_table_2c1c.md; catalog_rebuild.title_vi
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,bup be,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,trái tim,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,trai tim,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,thời trang,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,thoi trang,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,trang phục,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,trang phuc,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,trang điểm,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,trang diem,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,đeo hông,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,deo hong,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,đậm màu,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,dam mau,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,xanh đậm,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,xanh dam,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,hàng năm,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,hang nam,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,đi đến,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,di den,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,da thật,pre_b_human_src (6adf41e)
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,da bò,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,da bo,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,dây da,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,day da,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,đính đá,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,dinh da,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,đá bóng,homograph_table_2c1c.md
+PROTECTED_NON_COLOUR_PHRASES,PROTECTED,da bong,homograph_table_2c1c.md
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,bac,homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,be,catalog_vi_gaps.md; homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,cam,catalog_vi_gaps.md; homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,den,homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,do,catalog_vi_gaps.md; homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,ghi,homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,hong,homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,kem,homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,nau,homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,tim,homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,trang,homograph_table_2c1c.md; catalog_rebuild.title_vi
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,vang,homograph_table_2c1c.md
+HOMOGRAPH_COLOUR_TOKENS,HOMOGRAPH,xam,homograph_table_2c1c.md

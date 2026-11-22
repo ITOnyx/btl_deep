@@ -1,0 +1,74 @@
+{
+  "version": "v3",
+  "status": "LOCKED_BEFORE_STEP3",
+  "seed": 42,
+  "evaluation_protocol": {
+    "search_mode": "exact",
+    "candidate_pool": "full_gallery",
+    "tie_rule": "conservative",
+    "tie_epsilon": 1e-5,
+    "zscore_cosine_on_val": true,
+    "cluster_map_definition": "mean mAP within each spec_cluster_id, then unweighted mean across clusters"
+  },
+  "selection_cv": {
+    "method": "5-fold_cluster_cv",
+    "cluster_key": "spec_cluster_id",
+    "datasets": ["A", "B-synth (clean only; typo reported separately)"],
+    "b_human_in_objective": false,
+    "objective_formula": "0.4 * mAP_A_cluster + 0.6 * mAP_B_synth_clean_cluster"
+  },
+  "b_human_confirmation_gate": {
+    "min_queries": 60,
+    "max_map_drop_vs_v1_baseline_ci_low": 0.02,
+    "max_catastrophic_drop_rate": 0.05,
+    "bootstrap_resamples": 1000,
+    "bootstrap_unit": "spec_cluster_id"
+  },
+  "constraints": {
+    "c_nested_20pct_min_map_vs_model_only": -0.03,
+    "c_nested_20pct_min_map_vs_baseline": -0.05,
+    "b_synth_max_catastrophic_drop_rate": 0.05,
+    "ab_synth_max_r10_drop_vs_baseline": 0.01,
+    "t2i_p95_max_latency_increase_ms": 20.0,
+    "t2i_p95_max_latency_ms": 200.0,
+    "parser_fp_rate_must_not_exceed_v1": true
+  },
+  "simplicity_order_from_simplest_to_complex": [
+    "mean_centering=false < mean_centering=true",
+    "bm25=false < bm25=true",
+    "dual_encode=false < dual_encode=true",
+    "query_rewrite=false < query_rewrite=true",
+    "slot_weights=uniform < slot_weights=weighted",
+    "smaller_gamma < larger_gamma"
+  ],
+  "tie_breaking_rule": "If Score difference falls within 95% paired cluster bootstrap CI, choose the simpler config according to simplicity_order.",
+  "parallel_reporting": [
+    "best_by_score_config",
+    "safe_config (satisfies constraints 5(i) & 5(ii) with lowest gamma)"
+  ],
+  "mandatory_ablation_row": "cfg_02 (parser_v2 + gamma=0.3 uniform)",
+  "config_grid": [
+    {"config_id": "cfg_01", "role": "baseline_v1", "parser": "parser_v1", "gamma": 0.3, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_02", "role": "mandatory_ablation_v2", "parser": "parser_v2", "gamma": 0.3, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_03", "role": "grid", "parser": "parser_v2", "gamma": 0.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_04", "role": "grid", "parser": "parser_v2", "gamma": 0.8, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_05", "role": "grid", "parser": "parser_v2", "gamma": 1.0, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_06", "role": "grid", "parser": "parser_v2", "gamma": 1.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_07", "role": "grid", "parser": "parser_v2", "gamma": 0.5, "slot_weights": {"articleType": 0.6, "gender": 0.2, "baseColour": 0.2}, "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_08", "role": "grid", "parser": "parser_v2", "gamma": 0.8, "slot_weights": {"articleType": 0.6, "gender": 0.2, "baseColour": 0.2}, "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_09", "role": "grid", "parser": "parser_v2", "gamma": 1.0, "slot_weights": {"articleType": 0.6, "gender": 0.2, "baseColour": 0.2}, "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_10", "role": "grid", "parser": "parser_v2", "gamma": 1.5, "slot_weights": {"articleType": 0.6, "gender": 0.2, "baseColour": 0.2}, "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_11", "role": "grid", "parser": "parser_v2", "gamma": 0.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": true},
+    {"config_id": "cfg_12", "role": "grid", "parser": "parser_v2", "gamma": 1.0, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": true},
+    {"config_id": "cfg_13", "role": "grid", "parser": "parser_v2", "gamma": 1.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": false, "query_rewrite": true},
+    {"config_id": "cfg_14", "role": "grid", "parser": "parser_v2", "gamma": 0.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": true, "query_rewrite": false},
+    {"config_id": "cfg_15", "role": "grid", "parser": "parser_v2", "gamma": 1.0, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": true, "query_rewrite": false},
+    {"config_id": "cfg_16", "role": "grid", "parser": "parser_v2", "gamma": 1.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": false, "dual_encode": true, "query_rewrite": false},
+    {"config_id": "cfg_17", "role": "grid", "parser": "parser_v2", "gamma": 0.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": true, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_18", "role": "grid", "parser": "parser_v2", "gamma": 1.0, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": true, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_19", "role": "grid", "parser": "parser_v2", "gamma": 1.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": false, "bm25": true, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_20", "role": "grid", "parser": "parser_v2", "gamma": 0.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": true, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_21", "role": "grid", "parser": "parser_v2", "gamma": 1.0, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": true, "bm25": false, "dual_encode": false, "query_rewrite": false},
+    {"config_id": "cfg_22", "role": "grid", "parser": "parser_v2", "gamma": 1.5, "slot_weights": "uniform", "zscore_cosine": true, "mean_centering": true, "bm25": false, "dual_encode": false, "query_rewrite": false}
+  ]
+}

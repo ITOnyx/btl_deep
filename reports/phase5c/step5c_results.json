@@ -1,0 +1,2271 @@
+{
+  "rule_sha256": "e3d75ec5df7ab6de4cb9ad07e21b9c1a58c5c029c3a9b7749f28518c6c4f0c8c",
+  "folds_sha256": "dfd301722ec86734fd0f0bdb38bcb3784d7db22334a6535c51630fb825f91e25",
+  "seed": 42,
+  "b_human_label": "B-human-v4 (kiểm chứng ngoài mẫu, chưa độc lập tuyệt đối)",
+  "b_human_is_ref_only": false,
+  "fallback_stats": {
+    "A": {
+      "std": {
+        "n_total": 240,
+        "n_cache_hit": 238,
+        "n_fallback": 2,
+        "fallback_rate": 0.0083
+      },
+      "fuzzy": {
+        "n_total": 240,
+        "n_cache_hit": 238,
+        "n_fallback": 2,
+        "fallback_rate": 0.0083
+      }
+    },
+    "B_clean": {
+      "std": {
+        "n_total": 165,
+        "n_cache_hit": 165,
+        "n_fallback": 0,
+        "fallback_rate": 0.0
+      },
+      "fuzzy": {
+        "n_total": 165,
+        "n_cache_hit": 165,
+        "n_fallback": 0,
+        "fallback_rate": 0.0
+      }
+    },
+    "B_typo": {
+      "std": {
+        "n_total": 80,
+        "n_cache_hit": 77,
+        "n_fallback": 3,
+        "fallback_rate": 0.0375
+      },
+      "fuzzy": {
+        "n_total": 80,
+        "n_cache_hit": 77,
+        "n_fallback": 3,
+        "fallback_rate": 0.0375
+      }
+    },
+    "C_20": {
+      "std": {
+        "n_total": 160,
+        "n_cache_hit": 160,
+        "n_fallback": 0,
+        "fallback_rate": 0.0
+      },
+      "fuzzy": {
+        "n_total": 160,
+        "n_cache_hit": 160,
+        "n_fallback": 0,
+        "fallback_rate": 0.0
+      }
+    },
+    "B_human": {
+      "std": {
+        "n_total": 89,
+        "n_cache_hit": 88,
+        "n_fallback": 1,
+        "fallback_rate": 0.0112
+      },
+      "fuzzy": {
+        "n_total": 89,
+        "n_cache_hit": 88,
+        "n_fallback": 1,
+        "fallback_rate": 0.0112
+      }
+    }
+  },
+  "top_by_cv_score": "cfg_v5_06",
+  "tied_within_95ci": [
+    "cfg_v5_09",
+    "cfg_v5_04",
+    "cfg_v5_10",
+    "cfg_v5_11",
+    "cfg_v5_06",
+    "cfg_v5_08b"
+  ],
+  "winner_config_id": "cfg_v5_09",
+  "safe_config_id": "cfg_v5_01",
+  "b_human_gate": {
+    "winner": {
+      "mAP": 0.607,
+      "delta_mAP_vs_cfg_v5_01": 0.0832,
+      "delta_CI95": [
+        0.0234,
+        0.1459
+      ],
+      "catastrophic_drop_rate": 0.0225,
+      "mAP_with_colour": 0.6723,
+      "n_with_colour": 48,
+      "mAP_without_colour": 0.5305,
+      "n_without_colour": 41,
+      "mAP_by_dia_class": {
+        "full": {
+          "n": 62,
+          "mAP": 0.6074
+        },
+        "none": {
+          "n": 21,
+          "mAP": 0.6294
+        },
+        "partial": {
+          "n": 6,
+          "mAP": 0.5241
+        }
+      }
+    },
+    "safe": {
+      "mAP": 0.5237,
+      "delta_mAP_vs_cfg_v5_01": 0.0,
+      "delta_CI95": [
+        0.0,
+        0.0
+      ],
+      "catastrophic_drop_rate": 0.0,
+      "mAP_with_colour": 0.5095,
+      "n_with_colour": 48,
+      "mAP_without_colour": 0.5404,
+      "n_without_colour": 41,
+      "mAP_by_dia_class": {
+        "full": {
+          "n": 62,
+          "mAP": 0.5255
+        },
+        "none": {
+          "n": 21,
+          "mAP": 0.5518
+        },
+        "partial": {
+          "n": 6,
+          "mAP": 0.4071
+        }
+      }
+    },
+    "baseline_cfg_v5_01": {
+      "mAP": 0.5237,
+      "delta_mAP_vs_cfg_v5_01": 0.0,
+      "delta_CI95": [
+        0.0,
+        0.0
+      ],
+      "catastrophic_drop_rate": 0.0,
+      "mAP_with_colour": 0.5095,
+      "n_with_colour": 48,
+      "mAP_without_colour": 0.5404,
+      "n_without_colour": 41,
+      "mAP_by_dia_class": {
+        "full": {
+          "n": 62,
+          "mAP": 0.5255
+        },
+        "none": {
+          "n": 21,
+          "mAP": 0.5518
+        },
+        "partial": {
+          "n": 6,
+          "mAP": 0.4071
+        }
+      }
+    },
+    "cfg_v5_06_fuzzy": {
+      "mAP": 0.6128,
+      "delta_mAP_vs_cfg_v5_01": 0.0891,
+      "delta_CI95": [
+        0.0296,
+        0.1518
+      ],
+      "catastrophic_drop_rate": 0.0225,
+      "mAP_with_colour": 0.683,
+      "n_with_colour": 48,
+      "mAP_without_colour": 0.5305,
+      "n_without_colour": 41,
+      "mAP_by_dia_class": {
+        "full": {
+          "n": 62,
+          "mAP": 0.6157
+        },
+        "none": {
+          "n": 21,
+          "mAP": 0.6294
+        },
+        "partial": {
+          "n": 6,
+          "mAP": 0.5241
+        }
+      }
+    },
+    "cfg_v5_08a_internvl2_only": {
+      "mAP": 0.5972,
+      "delta_mAP_vs_cfg_v5_01": 0.0734,
+      "delta_CI95": [
+        0.012,
+        0.1368
+      ],
+      "catastrophic_drop_rate": 0.0225,
+      "mAP_with_colour": 0.6563,
+      "n_with_colour": 48,
+      "mAP_without_colour": 0.528,
+      "n_without_colour": 41,
+      "mAP_by_dia_class": {
+        "full": {
+          "n": 62,
+          "mAP": 0.5982
+        },
+        "none": {
+          "n": 21,
+          "mAP": 0.6294
+        },
+        "partial": {
+          "n": 6,
+          "mAP": 0.4739
+        }
+      }
+    },
+    "cfg_v5_08b_internvl2_plus_aux": {
+      "mAP": 0.612,
+      "delta_mAP_vs_cfg_v5_01": 0.0883,
+      "delta_CI95": [
+        0.0283,
+        0.1504
+      ],
+      "catastrophic_drop_rate": 0.0225,
+      "mAP_with_colour": 0.6821,
+      "n_with_colour": 48,
+      "mAP_without_colour": 0.53,
+      "n_without_colour": 41,
+      "mAP_by_dia_class": {
+        "full": {
+          "n": 62,
+          "mAP": 0.6149
+        },
+        "none": {
+          "n": 21,
+          "mAP": 0.6286
+        },
+        "partial": {
+          "n": 6,
+          "mAP": 0.5245
+        }
+      }
+    }
+  },
+  "identical_metric_groups": {
+    "exact_all_datasets_4dec": [
+      [
+        "cfg_v5_09",
+        "cfg_v5_10"
+      ]
+    ],
+    "identical_on_A_Bc_Bt_Bhuman_4dec": [
+      [
+        "cfg_v5_04",
+        "cfg_v5_09",
+        "cfg_v5_10",
+        "cfg_v5_11"
+      ]
+    ]
+  },
+  "cosine_std_mean_A": 0.1601,
+  "oracle_parser_winner": {
+    "Bc_mAP_cluster": 0.6209108918577256,
+    "B_human_mAP": 0.6530192008672385
+  },
+  "hubness_c8": {
+    "B_clean_model_only": {
+      "n_queries": 165,
+      "gallery_size": 1884,
+      "top_k": 10,
+      "unique_items_retrieved": 638,
+      "coverage_ratio": 0.3386411889596603,
+      "max_appearances": 36,
+      "max_query_pct": 0.21818181818181817,
+      "top1_hub_slot_share": 0.02181818181818182,
+      "top5_hub_slot_share": 0.09818181818181818,
+      "top10_hub_slot_share": 0.15454545454545454,
+      "mean_appearances": 0.8757961783439491,
+      "std_appearances": 2.47824250976883,
+      "skewness": 7.594302400581234,
+      "hub_threshold": 5,
+      "n_hubs_above_threshold": 79,
+      "top5_counts": [
+        36,
+        35,
+        34,
+        29,
+        28
+      ]
+    },
+    "B_clean_winner": {
+      "n_queries": 165,
+      "gallery_size": 1884,
+      "top_k": 10,
+      "unique_items_retrieved": 905,
+      "coverage_ratio": 0.48036093418259024,
+      "max_appearances": 11,
+      "max_query_pct": 0.06666666666666667,
+      "top1_hub_slot_share": 0.006666666666666667,
+      "top5_hub_slot_share": 0.030303030303030304,
+      "top10_hub_slot_share": 0.051515151515151514,
+      "mean_appearances": 0.8757961783439491,
+      "std_appearances": 1.2616624327996124,
+      "skewness": 2.4370804346582893,
+      "hub_threshold": 5,
+      "n_hubs_above_threshold": 34,
+      "top5_counts": [
+        11,
+        11,
+        10,
+        10,
+        8
+      ]
+    },
+    "B_human_model_only": {
+      "n_queries": 89,
+      "gallery_size": 1884,
+      "top_k": 10,
+      "unique_items_retrieved": 525,
+      "coverage_ratio": 0.2786624203821656,
+      "max_appearances": 13,
+      "max_query_pct": 0.14606741573033707,
+      "top1_hub_slot_share": 0.014606741573033709,
+      "top5_hub_slot_share": 0.05056179775280899,
+      "top10_hub_slot_share": 0.08426966292134831,
+      "mean_appearances": 0.4723991507430998,
+      "std_appearances": 1.026600753005503,
+      "skewness": 3.8832016631362287,
+      "hub_threshold": 5,
+      "n_hubs_above_threshold": 22,
+      "top5_counts": [
+        13,
+        10,
+        9,
+        7,
+        6
+      ]
+    },
+    "B_human_winner": {
+      "n_queries": 89,
+      "gallery_size": 1884,
+      "top_k": 10,
+      "unique_items_retrieved": 682,
+      "coverage_ratio": 0.3619957537154989,
+      "max_appearances": 6,
+      "max_query_pct": 0.06741573033707865,
+      "top1_hub_slot_share": 0.006741573033707865,
+      "top5_hub_slot_share": 0.02696629213483146,
+      "top10_hub_slot_share": 0.046067415730337076,
+      "mean_appearances": 0.4723991507430998,
+      "std_appearances": 0.7305746058353131,
+      "skewness": 1.859826306687193,
+      "hub_threshold": 5,
+      "n_hubs_above_threshold": 3,
+      "top5_counts": [
+        6,
+        5,
+        5,
+        4,
+        4
+      ]
+    }
+  },
+  "model_only": {
+    "A_mAP_cluster": 0.49704266855887674,
+    "A_R10": 0.9083333333333333,
+    "Bc_mAP_cluster": 0.11765818728213295,
+    "Bc_R10": 0.296969696969697,
+    "C20_mAP": 0.2971562082216932,
+    "B_human_mAP": 0.2167708327276673,
+    "B_human_R1": 0.30337078651685395,
+    "B_human_R10": 0.5842696629213483
+  },
+  "latency_c9": {
+    "cfg_v5_01": {
+      "profile_rep_config_id": "cfg_v5_01",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        86.524,
+        88.416,
+        104.724,
+        117.735,
+        103.815
+      ],
+      "p95_median_ms": 103.815,
+      "p95_iqr_ms": 16.307,
+      "p50_ms": 53.924,
+      "p99_ms": 136.603,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_02": {
+      "profile_rep_config_id": "cfg_v5_02",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        92.744,
+        91.584,
+        99.307,
+        106.159,
+        118.226
+      ],
+      "p95_median_ms": 99.307,
+      "p95_iqr_ms": 13.415,
+      "p50_ms": 77.883,
+      "p99_ms": 183.061,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_03": {
+      "profile_rep_config_id": "cfg_v5_03",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        85.278,
+        86.48,
+        96.35,
+        96.336,
+        86.549
+      ],
+      "p95_median_ms": 86.549,
+      "p95_iqr_ms": 9.855,
+      "p50_ms": 54.113,
+      "p99_ms": 140.456,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_04": {
+      "profile_rep_config_id": "cfg_v5_03",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        85.278,
+        86.48,
+        96.35,
+        96.336,
+        86.549
+      ],
+      "p95_median_ms": 86.549,
+      "p95_iqr_ms": 9.855,
+      "p50_ms": 54.113,
+      "p99_ms": 140.456,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_05": {
+      "profile_rep_config_id": "cfg_v5_03",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        85.278,
+        86.48,
+        96.35,
+        96.336,
+        86.549
+      ],
+      "p95_median_ms": 86.549,
+      "p95_iqr_ms": 9.855,
+      "p50_ms": 54.113,
+      "p99_ms": 140.456,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_06": {
+      "profile_rep_config_id": "cfg_v5_06",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        83.041,
+        95.204,
+        88.1,
+        91.912,
+        91.479
+      ],
+      "p95_median_ms": 91.479,
+      "p95_iqr_ms": 3.812,
+      "p50_ms": 53.887,
+      "p99_ms": 144.084,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_07": {
+      "profile_rep_config_id": "cfg_v5_06",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        83.041,
+        95.204,
+        88.1,
+        91.912,
+        91.479
+      ],
+      "p95_median_ms": 91.479,
+      "p95_iqr_ms": 3.812,
+      "p50_ms": 53.887,
+      "p99_ms": 144.084,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_08a": {
+      "profile_rep_config_id": "cfg_v5_08a",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        86.704,
+        84.716,
+        87.357,
+        91.585,
+        110.09
+      ],
+      "p95_median_ms": 87.357,
+      "p95_iqr_ms": 4.881,
+      "p50_ms": 54.672,
+      "p99_ms": 186.685,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_08b": {
+      "profile_rep_config_id": "cfg_v5_08b",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        89.351,
+        92.429,
+        85.816,
+        90.693,
+        97.349
+      ],
+      "p95_median_ms": 90.693,
+      "p95_iqr_ms": 3.079,
+      "p50_ms": 55.017,
+      "p99_ms": 166.834,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_09": {
+      "profile_rep_config_id": "cfg_v5_03",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        85.278,
+        86.48,
+        96.35,
+        96.336,
+        86.549
+      ],
+      "p95_median_ms": 86.549,
+      "p95_iqr_ms": 9.855,
+      "p50_ms": 54.113,
+      "p99_ms": 140.456,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_10": {
+      "profile_rep_config_id": "cfg_v5_03",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        85.278,
+        86.48,
+        96.35,
+        96.336,
+        86.549
+      ],
+      "p95_median_ms": 86.549,
+      "p95_iqr_ms": 9.855,
+      "p50_ms": 54.113,
+      "p99_ms": 140.456,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    },
+    "cfg_v5_11": {
+      "profile_rep_config_id": "cfg_v5_03",
+      "n_runs": 5,
+      "n_queries_per_run": 200,
+      "p95_runs_ms": [
+        85.278,
+        86.48,
+        96.35,
+        96.336,
+        86.549
+      ],
+      "p95_median_ms": 86.549,
+      "p95_iqr_ms": 9.855,
+      "p50_ms": 54.113,
+      "p99_ms": 140.456,
+      "telemetry": [
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 84,
+            "graphics_clock_mhz": 1245,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1522,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 1125,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        },
+        {
+          "before": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 86,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 5500
+          },
+          "after": {
+            "gpu": "NVIDIA GeForce RTX 2050",
+            "temp_c": 87,
+            "graphics_clock_mhz": 832,
+            "mem_clock_mhz": 6000
+          }
+        }
+      ]
+    }
+  },
+  "configs": {
+    "cfg_v5_01": {
+      "config": {
+        "config_id": "cfg_v5_01",
+        "competes_for_winner": true,
+        "role": "v4_winner_baseline",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 1.5,
+        "query_rewrite": true,
+        "i3_mode": "none",
+        "conf_gating": false,
+        "fuzzy_typo": false,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.5296,
+      "fold_scores": [
+        0.5257,
+        0.4703,
+        0.5392,
+        0.538,
+        0.5749
+      ],
+      "A_mAP_cluster": 0.8650364079245985,
+      "A_R10": 0.9833333333333333,
+      "Bc_mAP_cluster": 0.3061343420215835,
+      "Bc_R10": 0.6,
+      "Bt_mAP_cluster": 0.18951126487450884,
+      "C20_mAP": 0.5692876837374945,
+      "cat_drop_Bc": 0.0,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 783,
+        "coverage_ratio": 0.4156050955414013,
+        "max_appearances": 16,
+        "max_query_pct": 0.09696969696969697,
+        "top1_hub_slot_share": 0.009696969696969697,
+        "top5_hub_slot_share": 0.04242424242424243,
+        "top10_hub_slot_share": 0.07515151515151515,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.6415737855754702,
+        "skewness": 3.6153990838859453,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 70,
+        "top5_counts": [
+          16,
+          14,
+          14,
+          13,
+          13
+        ]
+      },
+      "B_human_mAP": 0.5237291019096098,
+      "B_human_R1": 0.7752808988764045,
+      "B_human_R10": 0.8314606741573034,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 103.815,
+      "latency_p95_iqr_ms": 16.307,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_02": {
+      "config": {
+        "config_id": "cfg_v5_02",
+        "competes_for_winner": false,
+        "role": "i3_direct_equivalence_latency_only",
+        "parser": "parser_v2.1",
+        "bonus_mode": "zscore",
+        "gamma": 1.5,
+        "query_rewrite": true,
+        "i3_mode": "direct",
+        "conf_gating": false,
+        "fuzzy_typo": false,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.6037,
+      "fold_scores": [
+        0.5734,
+        0.5905,
+        0.6295,
+        0.6053,
+        0.6199
+      ],
+      "A_mAP_cluster": 0.7270622866307219,
+      "A_R10": 0.975,
+      "Bc_mAP_cluster": 0.5215611783382033,
+      "Bc_R10": 0.7757575757575758,
+      "Bt_mAP_cluster": 0.31553700943648344,
+      "C20_mAP": 0.6217314958283492,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 881,
+        "coverage_ratio": 0.4676220806794055,
+        "max_appearances": 13,
+        "max_query_pct": 0.07878787878787878,
+        "top1_hub_slot_share": 0.00787878787878788,
+        "top5_hub_slot_share": 0.034545454545454546,
+        "top10_hub_slot_share": 0.05818181818181818,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.3396089650579106,
+        "skewness": 2.858248286511376,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 37,
+        "top5_counts": [
+          13,
+          12,
+          11,
+          11,
+          10
+        ]
+      },
+      "B_human_mAP": 0.5545311720996138,
+      "B_human_R1": 0.8089887640449438,
+      "B_human_R10": 0.8876404494382022,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 99.307,
+      "latency_p95_iqr_ms": 13.415,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_03": {
+      "config": {
+        "config_id": "cfg_v5_03",
+        "competes_for_winner": false,
+        "role": "i3_cached_equivalence_latency_only",
+        "parser": "parser_v2.1",
+        "bonus_mode": "zscore",
+        "gamma": 1.5,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": false,
+        "fuzzy_typo": false,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.604,
+      "fold_scores": [
+        0.5733,
+        0.5912,
+        0.6302,
+        0.6047,
+        0.6205
+      ],
+      "A_mAP_cluster": 0.7271361226890123,
+      "A_R10": 0.9791666666666666,
+      "Bc_mAP_cluster": 0.521897476272848,
+      "Bc_R10": 0.7818181818181819,
+      "Bt_mAP_cluster": 0.31540623900998255,
+      "C20_mAP": 0.6210773427245061,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 882,
+        "coverage_ratio": 0.4681528662420382,
+        "max_appearances": 13,
+        "max_query_pct": 0.07878787878787878,
+        "top1_hub_slot_share": 0.00787878787878788,
+        "top5_hub_slot_share": 0.034545454545454546,
+        "top10_hub_slot_share": 0.05818181818181818,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.3388162820241603,
+        "skewness": 2.8616714306886295,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 37,
+        "top5_counts": [
+          13,
+          12,
+          11,
+          11,
+          10
+        ]
+      },
+      "B_human_mAP": 0.5543776468234459,
+      "B_human_R1": 0.8089887640449438,
+      "B_human_R10": 0.8876404494382022,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 86.549,
+      "latency_p95_iqr_ms": 9.855,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_04": {
+      "config": {
+        "config_id": "cfg_v5_04",
+        "competes_for_winner": true,
+        "role": "tier_soft_plus_i3_cached",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 1.5,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": false,
+        "fuzzy_typo": false,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.7031,
+      "fold_scores": [
+        0.6676,
+        0.668,
+        0.747,
+        0.6938,
+        0.7393
+      ],
+      "A_mAP_cluster": 0.863848422934362,
+      "A_R10": 0.9875,
+      "Bc_mAP_cluster": 0.5961398976841581,
+      "Bc_R10": 0.793939393939394,
+      "Bt_mAP_cluster": 0.33846053877869825,
+      "C20_mAP": 0.7193143591461955,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 905,
+        "coverage_ratio": 0.48036093418259024,
+        "max_appearances": 11,
+        "max_query_pct": 0.06666666666666667,
+        "top1_hub_slot_share": 0.006666666666666667,
+        "top5_hub_slot_share": 0.030303030303030304,
+        "top10_hub_slot_share": 0.051515151515151514,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.2616624327996124,
+        "skewness": 2.4370804346582893,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 34,
+        "top5_counts": [
+          11,
+          11,
+          10,
+          10,
+          8
+        ]
+      },
+      "B_human_mAP": 0.606978420558968,
+      "B_human_R1": 0.8314606741573034,
+      "B_human_R10": 0.898876404494382,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 86.549,
+      "latency_p95_iqr_ms": 9.855,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_05": {
+      "config": {
+        "config_id": "cfg_v5_05",
+        "competes_for_winner": true,
+        "role": "ablation_I2_on_04",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 1.5,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": true,
+        "fuzzy_typo": false,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.7011,
+      "fold_scores": [
+        0.6592,
+        0.6676,
+        0.747,
+        0.6923,
+        0.7393
+      ],
+      "A_mAP_cluster": 0.863848422934362,
+      "A_R10": 0.9875,
+      "Bc_mAP_cluster": 0.592730320182182,
+      "Bc_R10": 0.793939393939394,
+      "Bt_mAP_cluster": 0.33846053877869825,
+      "C20_mAP": 0.7193143591461955,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 904,
+        "coverage_ratio": 0.47983014861995754,
+        "max_appearances": 12,
+        "max_query_pct": 0.07272727272727272,
+        "top1_hub_slot_share": 0.007272727272727273,
+        "top5_hub_slot_share": 0.03151515151515152,
+        "top10_hub_slot_share": 0.05333333333333334,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.27255370951278,
+        "skewness": 2.573206523149173,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 35,
+        "top5_counts": [
+          12,
+          11,
+          11,
+          10,
+          8
+        ]
+      },
+      "B_human_mAP": 0.606978420558968,
+      "B_human_R1": 0.8314606741573034,
+      "B_human_R10": 0.898876404494382,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 86.549,
+      "latency_p95_iqr_ms": 9.855,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_06": {
+      "config": {
+        "config_id": "cfg_v5_06",
+        "competes_for_winner": true,
+        "role": "ablation_I7_on_04",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 1.5,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": false,
+        "fuzzy_typo": true,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.7056,
+      "fold_scores": [
+        0.6676,
+        0.6804,
+        0.747,
+        0.6938,
+        0.7393
+      ],
+      "A_mAP_cluster": 0.863848422934362,
+      "A_R10": 0.9875,
+      "Bc_mAP_cluster": 0.6002765018207623,
+      "Bc_R10": 0.793939393939394,
+      "Bt_mAP_cluster": 0.437188281615924,
+      "C20_mAP": 0.7224257182731797,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 904,
+        "coverage_ratio": 0.47983014861995754,
+        "max_appearances": 11,
+        "max_query_pct": 0.06666666666666667,
+        "top1_hub_slot_share": 0.006666666666666667,
+        "top5_hub_slot_share": 0.030303030303030304,
+        "top10_hub_slot_share": 0.051515151515151514,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.2603996909560238,
+        "skewness": 2.423142885909314,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 34,
+        "top5_counts": [
+          11,
+          11,
+          10,
+          10,
+          8
+        ]
+      },
+      "B_human_mAP": 0.6127821890936302,
+      "B_human_R1": 0.8426966292134831,
+      "B_human_R10": 0.9101123595505618,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 91.479,
+      "latency_p95_iqr_ms": 3.812,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_07": {
+      "config": {
+        "config_id": "cfg_v5_07",
+        "competes_for_winner": true,
+        "role": "combo_I2_I7_on_04",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 1.5,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": true,
+        "fuzzy_typo": true,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.7036,
+      "fold_scores": [
+        0.6592,
+        0.68,
+        0.747,
+        0.6923,
+        0.7393
+      ],
+      "A_mAP_cluster": 0.863848422934362,
+      "A_R10": 0.9875,
+      "Bc_mAP_cluster": 0.5968669243187861,
+      "Bc_R10": 0.793939393939394,
+      "Bt_mAP_cluster": 0.437188281615924,
+      "C20_mAP": 0.7224257182731797,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 903,
+        "coverage_ratio": 0.47929936305732485,
+        "max_appearances": 11,
+        "max_query_pct": 0.06666666666666667,
+        "top1_hub_slot_share": 0.006666666666666667,
+        "top5_hub_slot_share": 0.03090909090909091,
+        "top10_hub_slot_share": 0.05272727272727273,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.2700486277474357,
+        "skewness": 2.512685293287054,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 36,
+        "top5_counts": [
+          11,
+          11,
+          11,
+          10,
+          8
+        ]
+      },
+      "B_human_mAP": 0.6127821890936302,
+      "B_human_R1": 0.8426966292134831,
+      "B_human_R10": 0.9101123595505618,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 91.479,
+      "latency_p95_iqr_ms": 3.812,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_08a": {
+      "config": {
+        "config_id": "cfg_v5_08a",
+        "competes_for_winner": true,
+        "role": "ablation_I5_internvl2_only_on_04",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 1.5,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": false,
+        "fuzzy_typo": false,
+        "text_gallery": "internvl2_only",
+        "text_alpha": 0.85
+      },
+      "cv_score": 0.6904,
+      "fold_scores": [
+        0.6551,
+        0.6535,
+        0.7241,
+        0.6883,
+        0.7311
+      ],
+      "A_mAP_cluster": 0.8420544810537149,
+      "A_R10": 0.9875,
+      "Bc_mAP_cluster": 0.5893595251280622,
+      "Bc_R10": 0.8,
+      "Bt_mAP_cluster": 0.33545454003419434,
+      "C20_mAP": 0.7015935980504181,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 894,
+        "coverage_ratio": 0.4745222929936306,
+        "max_appearances": 18,
+        "max_query_pct": 0.10909090909090909,
+        "top1_hub_slot_share": 0.01090909090909091,
+        "top5_hub_slot_share": 0.03696969696969697,
+        "top10_hub_slot_share": 0.06,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.33205943106285,
+        "skewness": 3.3512823460381562,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 36,
+        "top5_counts": [
+          18,
+          12,
+          11,
+          10,
+          10
+        ]
+      },
+      "B_human_mAP": 0.5971677363075076,
+      "B_human_R1": 0.7752808988764045,
+      "B_human_R10": 0.898876404494382,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 87.357,
+      "latency_p95_iqr_ms": 4.881,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_08b": {
+      "config": {
+        "config_id": "cfg_v5_08b",
+        "competes_for_winner": true,
+        "role": "ablation_I5_internvl2_plus_aux_on_04",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 1.5,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": false,
+        "fuzzy_typo": false,
+        "text_gallery": "internvl2_plus_aux",
+        "text_alpha": 0.85
+      },
+      "cv_score": 0.7039,
+      "fold_scores": [
+        0.6674,
+        0.6724,
+        0.7489,
+        0.6945,
+        0.7363
+      ],
+      "A_mAP_cluster": 0.8639797631121039,
+      "A_R10": 0.9875,
+      "Bc_mAP_cluster": 0.5973282450971619,
+      "Bc_R10": 0.806060606060606,
+      "Bt_mAP_cluster": 0.34608017749223924,
+      "C20_mAP": 0.7160975871685613,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 901,
+        "coverage_ratio": 0.47823779193205945,
+        "max_appearances": 12,
+        "max_query_pct": 0.07272727272727272,
+        "top1_hub_slot_share": 0.007272727272727273,
+        "top5_hub_slot_share": 0.030303030303030304,
+        "top10_hub_slot_share": 0.05333333333333334,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.2837660861609106,
+        "skewness": 2.497871272035137,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 36,
+        "top5_counts": [
+          12,
+          11,
+          9,
+          9,
+          9
+        ]
+      },
+      "B_human_mAP": 0.6120442318606071,
+      "B_human_R1": 0.8539325842696629,
+      "B_human_R10": 0.898876404494382,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 90.693,
+      "latency_p95_iqr_ms": 3.079,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_09": {
+      "config": {
+        "config_id": "cfg_v5_09",
+        "competes_for_winner": true,
+        "role": "gamma_sweep_tier_soft_1.0",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 1.0,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": false,
+        "fuzzy_typo": false,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.7031,
+      "fold_scores": [
+        0.6676,
+        0.668,
+        0.747,
+        0.6937,
+        0.7393
+      ],
+      "A_mAP_cluster": 0.863848422934362,
+      "A_R10": 0.9875,
+      "Bc_mAP_cluster": 0.5961237876202011,
+      "Bc_R10": 0.793939393939394,
+      "Bt_mAP_cluster": 0.33846053877869825,
+      "C20_mAP": 0.7195204101355579,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 905,
+        "coverage_ratio": 0.48036093418259024,
+        "max_appearances": 11,
+        "max_query_pct": 0.06666666666666667,
+        "top1_hub_slot_share": 0.006666666666666667,
+        "top5_hub_slot_share": 0.030303030303030304,
+        "top10_hub_slot_share": 0.051515151515151514,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.2616624327996124,
+        "skewness": 2.4370804346582893,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 34,
+        "top5_counts": [
+          11,
+          11,
+          10,
+          10,
+          8
+        ]
+      },
+      "B_human_mAP": 0.606978420558968,
+      "B_human_R1": 0.8314606741573034,
+      "B_human_R10": 0.898876404494382,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 86.549,
+      "latency_p95_iqr_ms": 9.855,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_10": {
+      "config": {
+        "config_id": "cfg_v5_10",
+        "competes_for_winner": true,
+        "role": "gamma_sweep_tier_soft_2.0",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 2.0,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": false,
+        "fuzzy_typo": false,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.7031,
+      "fold_scores": [
+        0.6676,
+        0.668,
+        0.747,
+        0.6938,
+        0.7393
+      ],
+      "A_mAP_cluster": 0.863848422934362,
+      "A_R10": 0.9875,
+      "Bc_mAP_cluster": 0.5961398976841581,
+      "Bc_R10": 0.793939393939394,
+      "Bt_mAP_cluster": 0.33846053877869825,
+      "C20_mAP": 0.7194832102627826,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 905,
+        "coverage_ratio": 0.48036093418259024,
+        "max_appearances": 11,
+        "max_query_pct": 0.06666666666666667,
+        "top1_hub_slot_share": 0.006666666666666667,
+        "top5_hub_slot_share": 0.030303030303030304,
+        "top10_hub_slot_share": 0.051515151515151514,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.2616624327996124,
+        "skewness": 2.4370804346582893,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 34,
+        "top5_counts": [
+          11,
+          11,
+          10,
+          10,
+          8
+        ]
+      },
+      "B_human_mAP": 0.606978420558968,
+      "B_human_R1": 0.8314606741573034,
+      "B_human_R10": 0.898876404494382,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 86.549,
+      "latency_p95_iqr_ms": 9.855,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    },
+    "cfg_v5_11": {
+      "config": {
+        "config_id": "cfg_v5_11",
+        "competes_for_winner": true,
+        "role": "gamma_sweep_tier_soft_3.0",
+        "parser": "parser_v2.1",
+        "bonus_mode": "tier_soft",
+        "gamma": 3.0,
+        "query_rewrite": true,
+        "i3_mode": "cached",
+        "conf_gating": false,
+        "fuzzy_typo": false,
+        "text_gallery": "none",
+        "text_alpha": 1.0
+      },
+      "cv_score": 0.7031,
+      "fold_scores": [
+        0.6676,
+        0.668,
+        0.747,
+        0.6938,
+        0.7393
+      ],
+      "A_mAP_cluster": 0.863848422934362,
+      "A_R10": 0.9875,
+      "Bc_mAP_cluster": 0.5961398976841581,
+      "Bc_R10": 0.793939393939394,
+      "Bt_mAP_cluster": 0.33846053877869825,
+      "C20_mAP": 0.719656706887496,
+      "cat_drop_Bc": 0.0061,
+      "hubness_Bc": {
+        "n_queries": 165,
+        "gallery_size": 1884,
+        "top_k": 10,
+        "unique_items_retrieved": 905,
+        "coverage_ratio": 0.48036093418259024,
+        "max_appearances": 11,
+        "max_query_pct": 0.06666666666666667,
+        "top1_hub_slot_share": 0.006666666666666667,
+        "top5_hub_slot_share": 0.030303030303030304,
+        "top10_hub_slot_share": 0.051515151515151514,
+        "mean_appearances": 0.8757961783439491,
+        "std_appearances": 1.2616624327996124,
+        "skewness": 2.4370804346582893,
+        "hub_threshold": 5,
+        "n_hubs_above_threshold": 34,
+        "top5_counts": [
+          11,
+          11,
+          10,
+          10,
+          8
+        ]
+      },
+      "B_human_mAP": 0.606978420558968,
+      "B_human_R1": 0.8314606741573034,
+      "B_human_R10": 0.898876404494382,
+      "parser_fp_rate": 0.0101,
+      "latency_p95_median_ms": 86.549,
+      "latency_p95_iqr_ms": 9.855,
+      "constraints": {
+        "5i_c20": true,
+        "5ii_cat_drop": true,
+        "5iii_r10": true,
+        "5iv_latency": true,
+        "5v_parser_fp": true,
+        "all_passed": true
+      }
+    }
+  }
+}

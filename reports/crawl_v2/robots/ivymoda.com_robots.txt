@@ -1,0 +1,11 @@
+# Fetched from: https://ivymoda.com/robots.txt
+# Timestamp (UTC): 2026-11-20T01:13:30+00:00
+# HTTP Status: 200
+# User-Agent: AcademicResearchBot/2.0 (Hoc_sau_ver4 Vietnamese Fashion Visual Search; non-commercial academic evaluation; contact: nguyen-student@university.edu.vn)
+
+User-agent: *
+Disallow: */*?hid_row=*
+Disallow: *?hid_row=*
+Disallow: /timkiem?*
+Sitemap: https://ivymoda.com/sitemap.xml
+Disallow: */tim-kiem/

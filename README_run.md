@@ -1,111 +1,58 @@
-# SigLIP E-commerce Visual Search - Run Guide (Pha 4)
+# Hướng dẫn Chạy Ứng dụng Streamlit (Pha 6)
 
-Hệ thống tìm kiếm thời trang đa phương thức tiếng Việt trên tập dữ liệu thời trang (38.644 sản phẩm in-scope) sử dụng SigLIP So400M và Hybrid Retrieval (Parser V2 + Attribute Index + BM25 RRF + CIR Combiner).
-
----
-
-## 1. Cấu trúc thư mục chính
-- `data/catalog/catalog.parquet`: Danh mục sản phẩm đã làm sạch (38.644 sản phẩm in-scope).
-- `index_v2/`:
-  - `image_embeddings_v2.npy`: 38.646 vector ảnh chuẩn hóa (1152-d, map 38.644 in-scope qua `id_map_v2.json`).
-  - `text_embeddings_v2.npy`: 38.646 vector text sản phẩm chuẩn hóa (1152-d).
-  - `id_map_v2.json`: Bản đồ index sang item_id.
-- `src/`:
-  - `model_siglip.py`, `model_siglip_cir.py`: Wrapper suy luận đa phương thức SigLIP và CIR Combiner.
-  - `query_parser_v2.py`: Bộ phân tích truy vấn tiếng Việt (hỗ trợ có dấu và không dấu).
-  - `lexicon_vi.json`: Từ điển 60 articleTypes, 47 baseColours, genders, usages.
-  - `brands_v2.json`: 234 thương hiệu nhận diện từ catalog kèm alias đã duyệt.
-  - `attr_index.py`: Chỉ mục thuộc tính mảng số NumPy, lọc chính xác và nới lỏng nhiều tầng (L0..L6).
-  - `lexical.py`: BM25 CSR thưa tốc độ cao (~4 ms) với mở rộng song ngữ.
-  - `scoring.py`: Chuẩn hóa vector và Scorer bù tâm đặc trưng huấn luyện.
-  - `search_pipeline.py`: Pipeline tìm kiếm hợp nhất (`VisualSearchEngine`).
-  - `diag/`: Các kịch bản chẩn đoán, audit, kiểm toán, trắc nghiệm độ trễ lịch sử.
-  - `experiments/`: Các kịch bản thực nghiệm, tuning lưới tham số, huấn luyện offline.
-- `tests/`: Bộ kiểm thử tự động hệ thống (`test_app_service.py`, `test_search_pipeline.py`, `test_cir_flow.py`, `test_manifest_verification.py`).
-- `eval/`: Bộ dữ liệu kiểm thử (Q1b, Q2, Q3, Q5, Heldout).
-- `reports/`:
-  - `phase1/`: Báo cáo làm sạch dữ liệu, đề xuất phạm vi (scope).
-  - `phase2/`: Báo cáo khảo sát và xây dựng chỉ mục vector.
-  - `phase3/`: Báo cáo đối soát Pha 3f/3g (`phase3f_errata.md`), lưới tham số, dữ liệu thực nghiệm A/B.
-  - `phase4/`: Báo cáo kiểm thử thực tế Pha 4 (`phase4_smoke.json`, `phase4_cir_20queries_eval.json`, `phase4_trunc64_pad128_eval.json`).
-  - `quarantine_log.csv`: Nhật ký cách ly ảnh theo Luật bất biến 2.
-  - `run_manifest.json`: Siêu dữ liệu chạy, hash môi trường và chỉ số tái lập theo Luật bất biến 8.
+> *Ghi chú:* Đây là tài liệu hướng dẫn nhanh cho phần khởi chạy ứng dụng (Pha 6). Tài liệu đầy đủ toàn diện của toàn bộ dự án sẽ được tổng hợp ở Pha 7 theo đề cương.
 
 ---
 
-## 2. Cách chạy Pipeline tìm kiếm (`VisualSearchEngine`)
+## 1. Lệnh Khởi chạy Nhanh
 
-Đối chiếu chính xác tham số tối ưu từ `config.yaml` (`gamma=0.3, alpha=1.0, enable_text_fusion=False, rrf_k=60, filter_mode="relaxed"`):
-
-```python
-from src.search_pipeline import VisualSearchEngine
-
-# Khởi tạo engine tìm kiếm (khớp chuẩn tham số từ config.yaml)
-engine = VisualSearchEngine(
-    gamma=0.3,                # Thưởng thuộc tính khớp mềm (scoring.mu_gamma)
-    alpha=1.0,                # Trọng số ảnh trong text fusion (alpha*=1.0 tiết kiệm RAM)
-    rrf_k=60,                 # Tham số hợp nhất RRF (inference.rrf_k)
-    filter_mode="relaxed",    # Nới lỏng nhiều tầng L0..L6
-    enable_bm25=True,         # Bật tìm kiếm từ vựng BM25 (inference.enable_bm25)
-    enable_text_fusion=False  # Đóng băng text fusion theo quy tắc F3 (inference.enable_text_fusion)
-)
-
-# 1. Tìm kiếm theo văn bản tiếng Việt (Hybrid Config 5 hoặc Dense Config 0)
-results = engine.search_text("áo sơ mi nam trắng công sở", top_k=10, use_soft_bonus=True)
-for r in results:
-    print(f"[{r['rank']}] {r['item_id']} - {r['name']} ({r['articleType']}, {r['baseColour']}) | Điểm: {r['score']:.4f} ({r['latency_ms']:.2f} ms)")
-
-# 2. Tìm kiếm theo ảnh (Visual Search)
-img_results = engine.search_image("data/fashion-dataset/images/15970.jpg", top_k=10, use_flip_aug=True, use_knn_voting=True)
-for r in img_results:
-    print(f"[{r['rank']}] {r['item_id']} - {r['name']} | Điểm: {r['score']:.4f}")
-
-# 3. Tìm kiếm ảnh + văn bản bổ trợ (Composed Image Retrieval - CIR)
-cir_results = engine.search_cir("data/fashion-dataset/images/15970.jpg", modifier_text="màu xanh navy", top_k=10)
-for r in cir_results:
-    print(f"[{r['rank']}] {r['item_id']} - {r['name']} ({r['baseColour']}) | Điểm: {r['score']:.4f}")
-```
-
----
-
-## 3. Chạy đánh giá toàn diện Pha 3e
+Khởi chạy ứng dụng Streamlit cục bộ tại máy chủ nội bộ:
 
 ```bash
-# Đánh giá toàn bộ các bộ test (Q1b, Q2, Q3, Q5, Heldout, Q4)
-python src/evaluate_phase3e_test.py
+# Đứng tại thư mục gốc của dự án:
+streamlit run app/main.py --server.port 8501 --server.address 127.0.0.1
 ```
-Kết quả lưu tại:
-- `eval/results_3e.json`
-- `reports/contact_sheets/heldout_*.png`
-- `eval/manual_ratings_heldout.csv`
+
+Mở trình duyệt: `http://127.0.0.1:8501`
+
+### Chạy như app Windows (cửa sổ riêng, không cần trình duyệt)
+
+Cần thêm `pywebview` (đã thử với 5.4) và Microsoft Edge WebView2 Runtime (có sẵn trên Windows 10/11):
+
+```powershell
+pip install pywebview==5.4
+# Tạo shortcut "Tra cứu thời trang" trên Desktop và Start Menu (chạy một lần):
+powershell -ExecutionPolicy Bypass -File scripts\create_desktop_shortcut.ps1
+```
+
+- Bấm đúp shortcut để mở app. Server Streamlit chạy ẩn trên một cổng trống của `127.0.0.1`
+  và tự tắt khi đóng cửa sổ. Mỗi lúc chỉ chạy được một phiên.
+- Không có shortcut, hoặc cần xem lỗi trong console: chạy `Chay_ung_dung.bat` ở thư mục gốc.
+- Log nằm ở `%LOCALAPPDATA%\FashionSearch\logs\` (`desktop.log` của trình khởi chạy, `streamlit.log` của server).
+- Đổi icon: sửa `scripts/make_app_icon.py`, chạy lại nó, rồi chạy lại script tạo shortcut.
 
 ---
 
-## 4. Chạy ứng dụng Web Demo (Streamlit - Pha 4)
+## 2. Các Luồng Nghiệp vụ Chính
 
-Ứng dụng web phục vụ tìm kiếm thời trang đa phương thức được triển khai bằng Streamlit theo đúng cấu hình tại `config.yaml` (`port: 8501`).
+1. **Luồng 1 (Text → Ảnh):** Hỗ trợ truy vấn tự nhiên tiếng Việt có dấu và không dấu (ví dụ: `áo sơ mi nam màu xanh`, `ao so mi nam mau xanh`, `váy hoa nữ`, `giay the thao nam`).
+2. **Luồng 2 (Ảnh → Ảnh):** Tải ảnh trực tiếp lên bộ nhớ RAM để tìm sản phẩm tương đồng; hỗ trợ kiểm tra Sanity Check tự truy xuất (Self-Retrieval) đạt Rank 1 với Cosine ≈ 1.0000.
+3. **Luồng 3 (CIR Catalog):** Hòa trộn vector sản phẩm catalog có sẵn với câu chỉnh sửa văn bản (Modifier).
+4. **Luồng 4 (CIR Upload):** Hòa trộn ảnh người dùng tải lên với câu chỉnh sửa văn bản.
 
-### Khởi chạy ứng dụng:
-```bash
-streamlit run app/main.py --server.port 8501
-```
+---
 
-### Các tính năng và Tab chính:
-1. **Tuân thủ Luật bất biến 7 (Rule 7 Checkpoint Hash Verification):**
-   - Ứng dụng tự động kiểm tra mã băm SHA-256 của checkpoint SigLIP (`best_model.pt`) đối chiếu với `config.yaml` và `index_v2/manifest.json`.
-   - Nếu phát hiện sai lệch (mismatched hash), ứng dụng lập tức từ chối tải và hiển thị cảnh báo đỏ nhằm ngăn ngừa trôi dạt phân phối vector.
-2. **Tab 1: Văn bản tiếng Việt $\to$ Ảnh:**
-   - Trích xuất thực thể bằng `QueryParserV2` (loại sản phẩm, giới tính, màu sắc, thương hiệu, hỗ trợ cả câu có dấu và không dấu).
-   - Nới lỏng đa tầng `L0..L6`, lọc BM25 RRF ($k=60$) kết hợp Soft Bonus $\gamma=0.3$ (Cấu hình C5 tối ưu).
-   - Hỗ trợ chuyển đổi so sánh tức thì với Cấu hình C0 (Dense thuần SigLIP).
-   - Hiển thị chi tiết độ trễ từng giai đoạn (Parser, Dense, BM25, RRF, Filter).
-3. **Tab 2: Ảnh $\to$ Ảnh (Visual Search):**
-   - Tải ảnh tải lên hoặc chọn ảnh mẫu từ catalog.
-   - Hỗ trợ lật ảnh tăng cường (Flip Augmentation TTA) và bầu chọn thuộc tính k-NN ($k=5$).
-4. **Tab 3: Ảnh + Văn bản bổ trợ (Composed Image Retrieval - CIR):**
-   - Ghép đặc trưng ảnh tham chiếu và câu bổ trợ tiếng Việt (ví dụ: *"đổi sang màu đỏ"*, *"chuyển sang áo dài tay"*) qua bộ kết hợp `MultimodalSigLIPWithCIR`.
-   - Hiển thị trực quan ảnh gốc bên cạnh danh sách sản phẩm gợi ý sau khi thay đổi thuộc tính.
-5. **Tab 4: Đối soát & Báo cáo Hệ thống:**
-   - Bảng tổng hợp đối chiếu chỉ tiêu Q1b giữa C5 vs C0.
-   - Thống kê độ trễ qua 5 lần chạy (latency telemetry) và chứng nhận đạt SLA có điều kiện.
-   - Bảng theo dõi và ghi chú Errata Rev5.
+## 3. Cấu hình Mặc định & Lựa chọn Thanh bên
+
+- **Gallery mặc định:** `test_gallery` ($N=1,290$ sản phẩm test split chuẩn). Lựa chọn phụ `reference_gallery` ($N=38,646$) mang nhãn *ƯỚC LƯỢNG LẠC QUAN* do chứa ảnh tập train.
+- **Cấu hình Text → Ảnh:**
+  - `cfg_v5_10` (Mặc định trên giao diện): Phân loại 3 tầng + chặn lệch lĩnh vực (mở rộng sau Pha 6, chưa chạy trên tập đóng băng `held-out v2`).
+  - `cfg_v5_11` (DEV SET, chọn thủ công): cfg_v5_10 + (1) khôi phục dấu trước khi encode, (2) parser v3 (`src/serve/parser_v3.py`: từ vựng bổ sung, khớp lại trên chuỗi bỏ dấu, khớp mờ sai 1 ký tự, "ví cầm tay" → Clutches), (3) bổ sung 30 ứng viên cùng loại theo cosine khi truy vấn nêu rõ loại (loại hiếm như jumpsuit), (4) trọng số giới tính ×3 khi truy vấn nêu nam/nữ. Mọi thay đổi chỉ ở bước suy luận; checkpoint và các cấu hình cũ giữ nguyên. Từ vựng/trọng số rút ra sau khi xem lỗi trên tập dev nên chỉ là số DEV, chưa chạy trên held-out. Đo thật bằng app (`reports/dev_v6/run3_all_queries`, reference_gallery, lạc quan): R@10 hand 0.970, val_a 1.000, val_b 0.898, val_h 0.978; p95 ≤ 81 ms.
+  - `cir_v1_07` (DEV SET, chọn thủ công): dùng vector ảnh tham chiếu (bỏ qua combiner chưa huấn luyện hiệu quả) + giữ loại/màu/giới tính gốc, đổi theo modifier (giới tính tường minh ×5), loại ảnh gốc khỏi kết quả, parser v3. Offline trên cir_eval_val (val_gallery): hit@10 0.975 so với 0.775 của cir_v1_06; ground truth CIR dựa trên thuộc tính nên có tính vòng tròn.
+  - `cfg_v5_09` (Chính thức Pha 5c): Cấu hình chiến thắng ($\gamma=1.0$, tier_soft bonus).
+  - `cfg_v5_01` (An toàn): Cấu hình an toàn baseline ($\gamma=1.5$).
+  - `model_only` (Tham chiếu): Model thuần SigLIP ($\gamma=0.0$, cosine thuần).
+- **Cấu hình CIR:**
+  - `cir_v1_05` (Mặc định): Hệ thống CIR (+ C3 Attribute Bonus).
+  - `cir_v1_01` (Tham chiếu): Baseline bộ nối thuần tiếng Anh.
+- **Bảo mật Hash Guard (Luật 6):** Tự động đối chiếu SHA-256 của checkpoint trong `config.yaml` (`e2f82fee...`) với `manifest.json`. Lệch sẽ từ chối nạp và hiển thị thông báo lỗi.

@@ -1,0 +1,1602 @@
+{
+  "10313": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay nữ sang trọng.  Nó có thiết kế hiện đại, với dây đeo kim loại màu bạc sáng bóng, kết hợp với mặt đồng hồ tròn trịa, màu trắng bạc",
+    "cleaned_caption": "đồng hồ đeo tay nữ sang trọng.  Nó có thiết kế hiện đại, với dây đeo kim loại màu bạc sáng bóng, kết hợp với mặt đồng hồ tròn trịa, màu trắng bạc",
+    "latency_sec": 10.457,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "11179": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay nữ cổ điển. Nó có màu vàng đồng, dây đeo da màu nâu sẫm, thiết kế cổ điển với mặt đồng hồ màu trắng kem, các kim chỉ giờ",
+    "cleaned_caption": "đồng hồ đeo tay nữ cổ điển. Nó có màu vàng đồng, dây đeo da màu nâu sẫm, thiết kế cổ điển với mặt đồng hồ màu trắng kem, các kim chỉ giờ",
+    "latency_sec": 9.488,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "11608": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc váy ngắn màu trắng, kiểu dáng ôm sát cơ thể, được thiết kế đơn giản với phần cổ tròn và tay ngắn.  Váy có phần thân trên được thiết kế ô",
+    "cleaned_caption": "váy ngắn màu trắng, kiểu dáng ôm sát cơ thể, được thiết kế đơn giản với phần cổ tròn và tay ngắn.  Váy có phần thân trên được thiết kế ô",
+    "latency_sec": 9.683,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "11765": {
+    "raw_caption": "Đây là một chiếc áo thun trắng in dòng chữ \"MAKE YOUR PATH\" màu xanh dương nhạt.  Áo có kiểu dáng đơn giản, tay ngắn, cổ tròn.  Màu sắc tươi sáng,",
+    "cleaned_caption": "áo thun trắng in dòng chữ \"MAKE YOUR PATH\" màu xanh dương nhạt.  Áo có kiểu dáng đơn giản, tay ngắn, cổ tròn.  Màu sắc tươi sáng,",
+    "latency_sec": 9.812,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "11920": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày nam màu đen. Đây là loại giày nam, kiểu dáng đơn giản, kiểu dáng giày nam truyền thống.  Màu sắc chủ đạo là đen, tạo cảm giác sang trọng và",
+    "cleaned_caption": "giày nam màu đen. Đây là loại giày nam, kiểu dáng đơn giản, kiểu dáng giày nam truyền thống.  Màu sắc chủ đạo là đen, tạo cảm giác sang trọng và",
+    "latency_sec": 9.194,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "12166": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc áo sơ mi trắng chất liệu cotton, tay ngắn, cổ tròn. Cô ấy đeo một chiếc khăn quàng cổ màu đỏ tía, kiểu dáng đơn giản, thanh lịch.",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc áo sơ mi trắng chất liệu cotton, tay ngắn, cổ tròn. Cô ấy đeo một chiếc khăn quàng cổ màu đỏ tía, kiểu dáng đơn giản, thanh lịch.",
+    "latency_sec": 9.495,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "12839": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc váy ngắn, có vẻ là váy nữ, màu xám nhạt. Váy có kiểu dáng xếp ly, phần thân trên rộng hơn phần thân dưới. Điểm nổi bật là phần cổ",
+    "cleaned_caption": "váy ngắn, có vẻ là váy nữ, màu xám nhạt. Váy có kiểu dáng xếp ly, phần thân trên rộng hơn phần thân dưới. Điểm nổi bật là phần cổ",
+    "latency_sec": 9.52,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "12910": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc một chiếc áo sơ mi màu xanh đậm, kiểu dáng cổ điển, có hai túi ở hai bên ngực.  Áo có vẻ được làm từ chất liệu cotton hoặc vải tương tự,",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc một chiếc áo sơ mi màu xanh đậm, kiểu dáng cổ điển, có hai túi ở hai bên ngực.  Áo có vẻ được làm từ chất liệu cotton hoặc vải tương tự,",
+    "latency_sec": 9.459,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "13107": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc áo thun đen của thương hiệu Adidas. Áo có kiểu dáng đơn giản, tay ngắn, chất liệu dường như là cotton hoặc vải tổng hợp.  Màu đen của áo",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc áo thun đen của thương hiệu Adidas. Áo có kiểu dáng đơn giản, tay ngắn, chất liệu dường như là cotton hoặc vải tổng hợp.  Màu đen của áo",
+    "latency_sec": 9.621,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "13680": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao Adidas.  Đây là loại giày thể thao, có màu trắng chủ đạo với các chi tiết màu xanh dương nhạt.  Giày có thiết kế hiện đại",
+    "cleaned_caption": "giày thể thao Adidas.  Đây là loại giày thể thao, có màu trắng chủ đạo với các chi tiết màu xanh dương nhạt.  Giày có thiết kế hiện đại",
+    "latency_sec": 9.434,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "14081": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc áo vest màu xanh lá cây đậm, có cổ áo kiểu dáng cổ điển. Áo vest có thiết kế đơn giản, tay ngắn, được may với các đường kẻ dọc tạo điểm",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc áo vest màu xanh lá cây đậm, có cổ áo kiểu dáng cổ điển. Áo vest có thiết kế đơn giản, tay ngắn, được may với các đường kẻ dọc tạo điểm",
+    "latency_sec": 9.356,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "14166": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc dây đeo bông màu đen. Đây là loại dây đeo bông, có thiết kế kiểu dáng cổ điển, với phần đế màu đen bóng và phần đính kèm kim loại màu bạc",
+    "cleaned_caption": "dây đeo bông màu đen. Đây là loại dây đeo bông, có thiết kế kiểu dáng cổ điển, với phần đế màu đen bóng và phần đính kèm kim loại màu bạc",
+    "latency_sec": 9.375,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "14373": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép lê màu nâu nhạt, kiểu dáng cổ điển.  Đôi dép có quai xích màu trắng kem, được trang trí bằng các dải ren nhiều màu sắc bắt mắt",
+    "cleaned_caption": "dép lê màu nâu nhạt, kiểu dáng cổ điển.  Đôi dép có quai xích màu trắng kem, được trang trí bằng các dải ren nhiều màu sắc bắt mắt",
+    "latency_sec": 9.486,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "14604": {
+    "raw_caption": "Hình ảnh hiển thị một đôi chân đeo gót, có lẽ là loại chân đeo gót chân.  Chất liệu vải dường như mềm mại, có độ dày vừa phải.  Màu sắc chủ đạo",
+    "cleaned_caption": "chân đeo gót, có lẽ là loại chân đeo gót chân.  Chất liệu vải dường như mềm mại, có độ dày vừa phải.  Màu sắc chủ đạo",
+    "latency_sec": 10.099,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "14625": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc quần jeans kiểu dáng đơn giản, màu xanh nhạt, có kiểu dáng ôm sát.  Đây là một loại quần jeans phổ biến, thường được mặc trong thời trang trẻ em hoặc nam",
+    "cleaned_caption": "quần jeans kiểu dáng đơn giản, màu xanh nhạt, có kiểu dáng ôm sát.  Đây là một loại quần jeans phổ biến, thường được mặc trong thời trang trẻ em hoặc nam",
+    "latency_sec": 9.263,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "14686": {
+    "raw_caption": "Ảnh chụp một chiếc áo polo màu đỏ và trắng, kiểu dáng cổ tay, có viền trắng.  Áo có thiết kế đơn giản, tay ngắn, phù hợp với nhiều đối tượng.  Màu sắc nổi",
+    "cleaned_caption": "Ảnh chụp một chiếc áo polo màu đỏ và trắng, kiểu dáng cổ tay, có viền trắng.  Áo có thiết kế đơn giản, tay ngắn, phù hợp với nhiều đối tượng.  Màu sắc nổi",
+    "latency_sec": 9.466,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "14753": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc áo sơ mi trắng kẻ sọc, quần tây đen.  Áo sơ mi có kiểu dáng đơn giản, lịch sự, phù hợp với nhiều hoàn cảnh.  Quần tây đen tạo nên",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc áo sơ mi trắng kẻ sọc, quần tây đen.  Áo sơ mi có kiểu dáng đơn giản, lịch sự, phù hợp với nhiều hoàn cảnh.  Quần tây đen tạo nên",
+    "latency_sec": 9.644,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "14892": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách màu xanh dương nhạt, có quai xách màu trắng. Túi có thiết kế đơn giản, với phần thân chính màu xanh dương nhạt, viền trắng",
+    "cleaned_caption": "túi xách màu xanh dương nhạt, có quai xách màu trắng. Túi có thiết kế đơn giản, với phần thân chính màu xanh dương nhạt, viền trắng",
+    "latency_sec": 9.213,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "15337": {
+    "raw_caption": "Hình ảnh hiển thị một bộ trang phục nam giới, có lẽ là bộ đồ thể thao hoặc bộ quần áo tập thể.  Màu sắc chủ đạo là xanh đậm, kết hợp với các đường viền màu x",
+    "cleaned_caption": "trang phục nam giới, có lẽ là bộ đồ thể thao hoặc bộ quần áo tập thể.  Màu sắc chủ đạo là xanh đậm, kết hợp với các đường viền màu x",
+    "latency_sec": 9.393,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "15622": {
+    "raw_caption": "Ảnh hiển thị một chiếc quần short đen. Đây là loại quần short thể thao, có kiểu dáng ôm sát, rộng rãi, phù hợp cho nam giới. Màu sắc chủ đạo là đen, với logo Nike màu trắng",
+    "cleaned_caption": "Ảnh hiển thị một chiếc quần short đen. Đây là loại quần short thể thao, có kiểu dáng ôm sát, rộng rãi, phù hợp cho nam giới. Màu sắc chủ đạo là đen, với logo Nike màu trắng",
+    "latency_sec": 9.339,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "15802": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc quần short màu đen. Đây là loại quần short, có vẻ là loại quần short nữ, được thiết kế với kiểu dáng ôm sát, có phần viền tay áo màu đỏ.  Mà",
+    "cleaned_caption": "quần short màu đen. Đây là loại quần short, có vẻ là loại quần short nữ, được thiết kế với kiểu dáng ôm sát, có phần viền tay áo màu đỏ.  Mà",
+    "latency_sec": 9.737,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "15959": {
+    "raw_caption": "Ảnh hiển thị một chiếc cà vạt đen với họa tiết hình học màu hồng nhạt.  Đây là một chiếc cà vạt nữ, được thiết kế với kiểu dáng cổ điển, có phần đầu cài được trang",
+    "cleaned_caption": "Ảnh hiển thị một chiếc cà vạt đen với họa tiết hình học màu hồng nhạt.  Đây là một chiếc cà vạt nữ, được thiết kế với kiểu dáng cổ điển, có phần đầu cài được trang",
+    "latency_sec": 9.402,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "16112": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép lê màu đen.  Đây là loại dép lê, một loại dép lê phổ biến được sử dụng cho cả nam và nữ.  Đôi dép có quai đeo bằng da",
+    "cleaned_caption": "dép lê màu đen.  Đây là loại dép lê, một loại dép lê phổ biến được sử dụng cho cả nam và nữ.  Đôi dép có quai đeo bằng da",
+    "latency_sec": 9.456,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "16169": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày da kiểu dáng nam.  Đôi giày có màu đen, kiểu dáng dáng vẻ, với phần thân giày được làm từ chất liệu da bóng, tạo cảm giác sang trọng.",
+    "cleaned_caption": "giày da kiểu dáng nam.  Đôi giày có màu đen, kiểu dáng dáng vẻ, với phần thân giày được làm từ chất liệu da bóng, tạo cảm giác sang trọng.",
+    "latency_sec": 9.753,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "16465": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc một chiếc áo sơ mi kẻ caro đen trắng.  Áo có kiểu dáng đơn giản, tay ngắn, cài khuy.  Màu sắc chủ đạo là đen và trắng,",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc một chiếc áo sơ mi kẻ caro đen trắng.  Áo có kiểu dáng đơn giản, tay ngắn, cài khuy.  Màu sắc chủ đạo là đen và trắng,",
+    "latency_sec": 9.648,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "16504": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc quần jeans. Quần jeans có màu xanh nhạt, kiểu dáng ôm sát, có phần túi ở phía sau.  Người đàn ông mặc áo thun màu đỏ.  Kiểu",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc quần jeans. Quần jeans có màu xanh nhạt, kiểu dáng ôm sát, có phần túi ở phía sau.  Người đàn ông mặc áo thun màu đỏ.  Kiểu",
+    "latency_sec": 9.631,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "17008": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép lê màu đen bóng, kiểu dáng đơn giản, kiểu dáng dép lê truyền thống.  Đôi dép có quai xích nhỏ, được trang trí bằng một vòng kim cương",
+    "cleaned_caption": "dép lê màu đen bóng, kiểu dáng đơn giản, kiểu dáng dép lê truyền thống.  Đôi dép có quai xích nhỏ, được trang trí bằng một vòng kim cương",
+    "latency_sec": 9.279,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "17387": {
+    "raw_caption": "Ảnh chụp một chiếc khăn quàng cổ màu xanh đậm, có họa tiết sọc ngang. Khăn có kiểu dáng đơn giản, được quấn quanh cổ, tạo cảm giác thanh lịch và nữ tính.",
+    "cleaned_caption": "Ảnh chụp một chiếc khăn quàng cổ màu xanh đậm, có họa tiết sọc ngang. Khăn có kiểu dáng đơn giản, được quấn quanh cổ, tạo cảm giác thanh lịch và nữ tính.",
+    "latency_sec": 10.475,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "17402": {
+    "raw_caption": "Hình ảnh hiển thị một đôi ủng cao cổ màu đen.  Đôi ủng có thiết kế đơn giản, với các sọc ngang màu sắc sặc sỡ (xanh dương, đỏ, vàng, cam) chạy",
+    "cleaned_caption": "ủng cao cổ màu đen.  Đôi ủng có thiết kế đơn giản, với các sọc ngang màu sắc sặc sỡ (xanh dương, đỏ, vàng, cam) chạy",
+    "latency_sec": 9.239,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "17408": {
+    "raw_caption": "Hình ảnh hiển thị một đôi sock đen. Đây là loại trang phục thường được mặc trong thời trang nữ giới.  Màu sắc chủ đạo là đen, với họa tiết chấm bi nhỏ màu tím nhạt",
+    "cleaned_caption": "sock đen. Đây là loại trang phục thường được mặc trong thời trang nữ giới.  Màu sắc chủ đạo là đen, với họa tiết chấm bi nhỏ màu tím nhạt",
+    "latency_sec": 9.352,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "17662": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày dép nữ màu đen.  Đây là một đôi giày dép nữ, kiểu dáng dáng giày cao gót, có quai xích nhỏ và khóa dây.  Màu sắc",
+    "cleaned_caption": "giày dép nữ màu đen.  Đây là một đôi giày dép nữ, kiểu dáng dáng giày cao gót, có quai xích nhỏ và khóa dây.  Màu sắc",
+    "latency_sec": 9.173,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "17774": {
+    "raw_caption": "Ảnh chụp một chiếc dây đeo bông màu đen. Đây là loại dây đeo bông, có thiết kế đơn giản, hiện đại.  Màu đen tạo cảm giác sang trọng và lịch lãm.  Dây",
+    "cleaned_caption": "Ảnh chụp một chiếc dây đeo bông màu đen. Đây là loại dây đeo bông, có thiết kế đơn giản, hiện đại.  Màu đen tạo cảm giác sang trọng và lịch lãm.  Dây",
+    "latency_sec": 9.685,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "17786": {
+    "raw_caption": "Hình ảnh hiển thị một đôi sock màu xám đậm, có vẻ là chất liệu vải dệt.  Đây là loại trang phục thường được mặc trong thời trang nam giới.  Đôi sock có kiểu dáng dài",
+    "cleaned_caption": "sock màu xám đậm, có vẻ là chất liệu vải dệt.  Đây là loại trang phục thường được mặc trong thời trang nam giới.  Đôi sock có kiểu dáng dài",
+    "latency_sec": 9.188,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "17811": {
+    "raw_caption": "Đây là một chiếc áo thun nữ trẻ, màu xanh nhạt, có thiết kế hình ảnh hoạt hình.  Áo có kiểu dáng cổ tròn, tay ngắn, và được in hình một nhân vật hoạt hình",
+    "cleaned_caption": "áo thun nữ trẻ, màu xanh nhạt, có thiết kế hình ảnh hoạt hình.  Áo có kiểu dáng cổ tròn, tay ngắn, và được in hình một nhân vật hoạt hình",
+    "latency_sec": 9.537,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "18266": {
+    "raw_caption": "Ảnh chụp một chiếc áo dài nữ màu xanh dương nhạt, họa tiết chấm bi trắng.  Đây là một chiếc áo dài truyền thống Việt Nam, có kiểu dáng tay dài, ôm sát cơ thể,",
+    "cleaned_caption": "Ảnh chụp một chiếc áo dài nữ màu xanh dương nhạt, họa tiết chấm bi trắng.  Đây là một chiếc áo dài truyền thống Việt Nam, có kiểu dáng tay dài, ôm sát cơ thể,",
+    "latency_sec": 10.053,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "18376": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc một chiếc quần short đen bóng, có viền đỏ ở phía sau. Quần có kiểu dáng ôm sát, chất liệu dường như là vải mềm mại.  Màu sắc chủ",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc một chiếc quần short đen bóng, có viền đỏ ở phía sau. Quần có kiểu dáng ôm sát, chất liệu dường như là vải mềm mại.  Màu sắc chủ",
+    "latency_sec": 9.559,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "18517": {
+    "raw_caption": "Ảnh chụp một người đàn ông trẻ tuổi, có vẻ ngoài năng động, đang mặc một chiếc áo khoác màu xanh lá cây neon. Áo khoác có kiểu dáng đơn giản, tay ngắn, được thiết kế với",
+    "cleaned_caption": "Ảnh chụp một người đàn ông trẻ tuổi, có vẻ ngoài năng động, đang mặc một chiếc áo khoác màu xanh lá cây neon. Áo khoác có kiểu dáng đơn giản, tay ngắn, được thiết kế với",
+    "latency_sec": 9.24,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "18820": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nữ màu đen.  Đây là một chiếc túi xách có thiết kế đơn giản, hiện đại.  Màu đen tạo cảm giác sang trọng và lịch sự.  Chiếc túi",
+    "cleaned_caption": "túi xách nữ màu đen.  Đây là một chiếc túi xách có thiết kế đơn giản, hiện đại.  Màu đen tạo cảm giác sang trọng và lịch sự.  Chiếc túi",
+    "latency_sec": 9.514,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "19441": {
+    "raw_caption": "Hình ảnh hiển thị hai chiếc găng tay gạc đen. Đây là loại găng tay gạc, có thiết kế dạng găng tay, được làm từ chất liệu vải dày dặn, có độ",
+    "cleaned_caption": "hai chiếc găng tay gạc đen. Đây là loại găng tay gạc, có thiết kế dạng găng tay, được làm từ chất liệu vải dày dặn, có độ",
+    "latency_sec": 9.358,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "19502": {
+    "raw_caption": "Hình ảnh hiển thị một đôi găng tay dài, có vẻ là loại găng tay thể thao.  Màu sắc chủ đạo là xám đậm, với các đường kẻ sọc ngang màu đen, trắng",
+    "cleaned_caption": "găng tay dài, có vẻ là loại găng tay thể thao.  Màu sắc chủ đạo là xám đậm, với các đường kẻ sọc ngang màu đen, trắng",
+    "latency_sec": 9.105,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "19804": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc một chiếc áo polo màu xanh dương nhạt. Áo có kiểu dáng cổ điển, tay ngắn, có khuy cài ở cổ. Trên ngực áo có logo của một câu lạc",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc một chiếc áo polo màu xanh dương nhạt. Áo có kiểu dáng cổ điển, tay ngắn, có khuy cài ở cổ. Trên ngực áo có logo của một câu lạc",
+    "latency_sec": 9.608,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "20464": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nhỏ, màu đen, có thiết kế kiểu dáng cổ điển.  Túi có khóa kéo kim loại màu vàng đồng, tạo điểm nhấn.  Chất liệu dường như là",
+    "cleaned_caption": "túi xách nhỏ, màu đen, có thiết kế kiểu dáng cổ điển.  Túi có khóa kéo kim loại màu vàng đồng, tạo điểm nhấn.  Chất liệu dường như là",
+    "latency_sec": 10.021,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "20627": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách da màu nâu nhạt, có thiết kế đơn giản nhưng tinh tế.  Nó có kích thước vừa phải, phù hợp với nhiều đối tượng.  Túi có khóa",
+    "cleaned_caption": "túi xách da màu nâu nhạt, có thiết kế đơn giản nhưng tinh tế.  Nó có kích thước vừa phải, phù hợp với nhiều đối tượng.  Túi có khóa",
+    "latency_sec": 9.286,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "21508": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nữ cao cấp.  Túi có màu đen chủ đạo, được làm từ chất liệu da hoặc giả da cao cấp, tạo cảm giác sang trọng và lịch lãm.",
+    "cleaned_caption": "túi xách nữ cao cấp.  Túi có màu đen chủ đạo, được làm từ chất liệu da hoặc giả da cao cấp, tạo cảm giác sang trọng và lịch lãm.",
+    "latency_sec": 9.39,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "21727": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày bóng rổ màu trắng. Đây là loại giày bóng rổ, có thiết kế hiện đại và tinh tế.  Màu sắc chủ đạo là trắng, với các chi tiết màu",
+    "cleaned_caption": "giày bóng rổ màu trắng. Đây là loại giày bóng rổ, có thiết kế hiện đại và tinh tế.  Màu sắc chủ đạo là trắng, với các chi tiết màu",
+    "latency_sec": 9.244,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "22224": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo thun màu xanh lá cây nhạt, kiểu dáng tay ngắn, đơn giản.  Áo có in hình một quả địa cầu màu xanh dương với một chú chim nhỏ màu x",
+    "cleaned_caption": "áo thun màu xanh lá cây nhạt, kiểu dáng tay ngắn, đơn giản.  Áo có in hình một quả địa cầu màu xanh dương với một chú chim nhỏ màu x",
+    "latency_sec": 9.527,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "22674": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc ba lô màu trắng đen. Đây là một chiếc ba lô thông thường, có thiết kế đơn giản nhưng hiện đại.  Màu sắc chủ đạo là trắng và đen, tạo nên sự tương",
+    "cleaned_caption": "ba lô màu trắng đen. Đây là một chiếc ba lô thông thường, có thiết kế đơn giản nhưng hiện đại.  Màu sắc chủ đạo là trắng và đen, tạo nên sự tương",
+    "latency_sec": 9.188,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "22844": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày đàn nam màu be nhạt.  Đây là loại giày đàn, có kiểu dáng đơn giản, hiện đại.  Màu sắc chủ đạo là be nhạt, tạo cảm giác nhẹ",
+    "cleaned_caption": "giày đàn nam màu be nhạt.  Đây là loại giày đàn, có kiểu dáng đơn giản, hiện đại.  Màu sắc chủ đạo là be nhạt, tạo cảm giác nhẹ",
+    "latency_sec": 10.112,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "23148": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo khoác hoodie màu xanh lá nhạt.  Đây là một chiếc áo khoác hoodie, có kiểu dáng dài tay, có cổ và khóa kéo.  Màu sắc",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo khoác hoodie màu xanh lá nhạt.  Đây là một chiếc áo khoác hoodie, có kiểu dáng dài tay, có cổ và khóa kéo.  Màu sắc",
+    "latency_sec": 11.012,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "23278": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay nữ thời trang.  Nó có vỏ sơn màu trắng kem, dây đeo bằng chất liệu da đen.  Thiết kế đơn giản, tinh tế.  Đặc điểm",
+    "cleaned_caption": "đồng hồ đeo tay nữ thời trang.  Nó có vỏ sơn màu trắng kem, dây đeo bằng chất liệu da đen.  Thiết kế đơn giản, tinh tế.  Đặc điểm",
+    "latency_sec": 9.702,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "24302": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày Converse màu xanh navy. Đây là loại giày thể thao, có kiểu dáng đơn giản, hiện đại. Giày có phần thân giày màu trắng, đế giày",
+    "cleaned_caption": "giày Converse màu xanh navy. Đây là loại giày thể thao, có kiểu dáng đơn giản, hiện đại. Giày có phần thân giày màu trắng, đế giày",
+    "latency_sec": 9.194,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "24608": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc áo polo màu xanh lá cây. Áo có kiểu dáng cổ điển, tay ngắn, có hai túi ở phía trước.  Màu sắc tươi sáng, tạo cảm giác năng động.",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc áo polo màu xanh lá cây. Áo có kiểu dáng cổ điển, tay ngắn, có hai túi ở phía trước.  Màu sắc tươi sáng, tạo cảm giác năng động.",
+    "latency_sec": 10.223,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "24789": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách da màu nâu đất, có vẻ là da thật hoặc giả da cao cấp.  Túi có kiểu dáng nhỏ gọn, hình chữ nhật, với quai xách chắc",
+    "cleaned_caption": "túi xách da màu nâu đất, có vẻ là da thật hoặc giả da cao cấp.  Túi có kiểu dáng nhỏ gọn, hình chữ nhật, với quai xách chắc",
+    "latency_sec": 9.412,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "25048": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc giày dạ màu đen sang trọng, được đặt trong một hộp giày cao cấp. Giày có họa tiết caro tím tinh tế, tạo nên vẻ đẹp lịch lãm và",
+    "cleaned_caption": "giày dạ màu đen sang trọng, được đặt trong một hộp giày cao cấp. Giày có họa tiết caro tím tinh tế, tạo nên vẻ đẹp lịch lãm và",
+    "latency_sec": 9.498,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "25206": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nam.  Màu sắc chính là màu be nhạt, tạo cảm giác nhẹ nhàng, tinh tế.  Túi có thiết kế kiểu dáng đơn giản, hiện đại",
+    "cleaned_caption": "túi xách nam.  Màu sắc chính là màu be nhạt, tạo cảm giác nhẹ nhàng, tinh tế.  Túi có thiết kế kiểu dáng đơn giản, hiện đại",
+    "latency_sec": 9.902,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "25459": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao Nike.  Đây là đôi giày thể thao nữ, có màu sắc chủ đạo là xám bạc và cam.  Kiểu dáng là giày thể thao,",
+    "cleaned_caption": "giày thể thao Nike.  Đây là đôi giày thể thao nữ, có màu sắc chủ đạo là xám bạc và cam.  Kiểu dáng là giày thể thao,",
+    "latency_sec": 9.468,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "25927": {
+    "raw_caption": "Ảnh chụp một người phụ nữ trẻ mặc áo thun trắng tay ngắn, chất liệu dường như mềm mại, ôm sát cơ thể.  Kiểu dáng áo thun đơn giản, không cầu kỳ, phù hợp với",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ trẻ mặc áo thun trắng tay ngắn, chất liệu dường như mềm mại, ôm sát cơ thể.  Kiểu dáng áo thun đơn giản, không cầu kỳ, phù hợp với",
+    "latency_sec": 9.297,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "26073": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc áo sơ mi kẻ sọc xanh trắng, quần âu màu xám đậm. Áo sơ mi có kiểu dáng ôm sát, cổ điển, cài khuy. Quần â",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc áo sơ mi kẻ sọc xanh trắng, quần âu màu xám đậm. Áo sơ mi có kiểu dáng ôm sát, cổ điển, cài khuy. Quần â",
+    "latency_sec": 9.555,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "26438": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nhỏ, màu xanh ngọc lam, được làm từ chất liệu vải thô, có vẻ ngoài khá mềm mại. Túi có quai xách màu xanh dương",
+    "cleaned_caption": "túi xách nhỏ, màu xanh ngọc lam, được làm từ chất liệu vải thô, có vẻ ngoài khá mềm mại. Túi có quai xách màu xanh dương",
+    "latency_sec": 9.156,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "26484": {
+    "raw_caption": "Đây là một chiếc áo thun nữ màu trắng, in hình logo của trường học \"Pomichia\" với dòng chữ \"ROOM FOR\" và \"JUICE AND ENJOY THE GAME\" cùng dòng chữ \"ATH",
+    "cleaned_caption": "áo thun nữ màu trắng, in hình logo của trường học \"Pomichia\" với dòng chữ \"ROOM FOR\" và \"JUICE AND ENJOY THE GAME\" cùng dòng chữ \"ATH",
+    "latency_sec": 9.103,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "2654": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nhỏ, màu đỏ tươi, được làm từ chất liệu vải thổ cẩm.  Túi có quai xách chắc chắn, thiết kế đơn giản nhưng tinh tế.",
+    "cleaned_caption": "túi xách nhỏ, màu đỏ tươi, được làm từ chất liệu vải thổ cẩm.  Túi có quai xách chắc chắn, thiết kế đơn giản nhưng tinh tế.",
+    "latency_sec": 9.317,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "26627": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày dép nữ.  Đôi giày có màu xám đậm, chất liệu dường như là vải tổng hợp hoặc chất liệu tổng hợp, tạo cảm giác chắc chắn và thoáng mát.",
+    "cleaned_caption": "giày dép nữ.  Đôi giày có màu xám đậm, chất liệu dường như là vải tổng hợp hoặc chất liệu tổng hợp, tạo cảm giác chắc chắn và thoáng mát.",
+    "latency_sec": 10.276,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "26724": {
+    "raw_caption": "Hình ảnh cho thấy một người đàn ông mặc một chiếc áo thun màu xanh lá cây tươi sáng. Áo có thiết kế đơn giản, in hình một con sư tử màu xanh nhạt.  Kiểu dáng áo",
+    "cleaned_caption": "một người đàn ông mặc một chiếc áo thun màu xanh lá cây tươi sáng. Áo có thiết kế đơn giản, in hình một con sư tử màu xanh nhạt.  Kiểu dáng áo",
+    "latency_sec": 11.669,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "26893": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo thun nữ màu xanh ngọc lam.  Đây là một chiếc áo thun ngắn tay, có kiểu dáng cổ tròn, tay áo phồng nhẹ, được may với những",
+    "cleaned_caption": "áo thun nữ màu xanh ngọc lam.  Đây là một chiếc áo thun ngắn tay, có kiểu dáng cổ tròn, tay áo phồng nhẹ, được may với những",
+    "latency_sec": 9.324,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "27821": {
+    "raw_caption": "Ảnh chụp một chiếc dây đeo bông màu đen. Đây là loại dây đeo bông, có vẻ là loại dây đeo bông cao cấp, được thiết kế với kiểu dáng đơn giản, thanh lịch.",
+    "cleaned_caption": "Ảnh chụp một chiếc dây đeo bông màu đen. Đây là loại dây đeo bông, có vẻ là loại dây đeo bông cao cấp, được thiết kế với kiểu dáng đơn giản, thanh lịch.",
+    "latency_sec": 9.812,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "28281": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc kính mát kiểu dáng tròn, màu tím nhạt.  Nó có gọng kim loại màu bạc sáng bóng, tạo cảm giác hiện đại và sang trọng.  Kính có thiết kế đơn",
+    "cleaned_caption": "kính mát kiểu dáng tròn, màu tím nhạt.  Nó có gọng kim loại màu bạc sáng bóng, tạo cảm giác hiện đại và sang trọng.  Kính có thiết kế đơn",
+    "latency_sec": 9.236,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "28895": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc quần lót nữ màu hồng nhạt.  Đây là một loại quần lót, có thiết kế dáng đứng, ôm sát cơ thể.  Màu sắc của quần lót là hồng nh",
+    "cleaned_caption": "quần lót nữ màu hồng nhạt.  Đây là một loại quần lót, có thiết kế dáng đứng, ôm sát cơ thể.  Màu sắc của quần lót là hồng nh",
+    "latency_sec": 9.293,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "28964": {
+    "raw_caption": "Ảnh chụp một chiếc váy ngắn, kiểu dáng ôm sát, màu trắng kem làm nền, được in họa tiết hoa màu xanh dương nhạt. Váy có cổ tròn, tay ngắn, chất",
+    "cleaned_caption": "Ảnh chụp một chiếc váy ngắn, kiểu dáng ôm sát, màu trắng kem làm nền, được in họa tiết hoa màu xanh dương nhạt. Váy có cổ tròn, tay ngắn, chất",
+    "latency_sec": 9.559,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "29300": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc áo polo màu xám nhạt, có cổ áo polo, tay ngắn, chất liệu vải mềm mại.  Áo có một đường kẻ màu xanh đậm ở giữa, được may ở",
+    "cleaned_caption": "áo polo màu xám nhạt, có cổ áo polo, tay ngắn, chất liệu vải mềm mại.  Áo có một đường kẻ màu xanh đậm ở giữa, được may ở",
+    "latency_sec": 10.041,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "29572": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày vải màu xám nhạt, kiểu dáng vênh vân, được thiết kế dành cho trẻ em.  Kiểu dáng là giày vênh vân, có đ",
+    "cleaned_caption": "giày vải màu xám nhạt, kiểu dáng vênh vân, được thiết kế dành cho trẻ em.  Kiểu dáng là giày vênh vân, có đ",
+    "latency_sec": 9.06,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "29840": {
+    "raw_caption": "Hình ảnh cho thấy một người đàn ông mặc một chiếc áo sơ mi kẻ caro màu xanh dương nhạt, đỏ và trắng.  Áo có kiểu dáng cổ điển, cúc áo và có hai túi ở hai bên",
+    "cleaned_caption": "một người đàn ông mặc một chiếc áo sơ mi kẻ caro màu xanh dương nhạt, đỏ và trắng.  Áo có kiểu dáng cổ điển, cúc áo và có hai túi ở hai bên",
+    "latency_sec": 9.423,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "30075": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay nữ cao cấp.  Nó có dây đeo bằng chất liệu vải dạ màu tím nhạt, tạo cảm giác nữ tính và sang trọng. Mặt đồng hồ được tr",
+    "cleaned_caption": "đồng hồ đeo tay nữ cao cấp.  Nó có dây đeo bằng chất liệu vải dạ màu tím nhạt, tạo cảm giác nữ tính và sang trọng. Mặt đồng hồ được tr",
+    "latency_sec": 9.218,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "30300": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo thun trắng in hình chung kết của Chassey Derby.  Áo có kiểu dáng đơn giản, tay ngắn, chất liệu cotton mềm mại.  Màu sắc chủ đạo là",
+    "cleaned_caption": "áo thun trắng in hình chung kết của Chassey Derby.  Áo có kiểu dáng đơn giản, tay ngắn, chất liệu cotton mềm mại.  Màu sắc chủ đạo là",
+    "latency_sec": 9.726,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "30557": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc kính mát màu nâu đậm, kiểu dáng kiểu dáng hiện đại.  Nó có gọng kính màu nâu đậm, thiết kế hình chữ nhật với phần viền màu vàng nhạt ở giữa.",
+    "cleaned_caption": "kính mát màu nâu đậm, kiểu dáng kiểu dáng hiện đại.  Nó có gọng kính màu nâu đậm, thiết kế hình chữ nhật với phần viền màu vàng nhạt ở giữa.",
+    "latency_sec": 8.984,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "30752": {
+    "raw_caption": "Hình ảnh cho thấy một người đàn ông mặc một chiếc áo dài màu xanh dương nhạt, kiểu dáng dài tay, có cổ áo và hai nút ở giữa.  Áo dài có chất liệu dường như mềm",
+    "cleaned_caption": "một người đàn ông mặc một chiếc áo dài màu xanh dương nhạt, kiểu dáng dài tay, có cổ áo và hai nút ở giữa.  Áo dài có chất liệu dường như mềm",
+    "latency_sec": 9.764,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "30810": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo dài trắng dài đến đầu gối, chất liệu vải trắng, kiểu dáng đơn giản, tay áo dài.  Cô ấy mặc quần màu be nhạt, kiểu dáng đơn",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo dài trắng dài đến đầu gối, chất liệu vải trắng, kiểu dáng đơn giản, tay áo dài.  Cô ấy mặc quần màu be nhạt, kiểu dáng đơn",
+    "latency_sec": 10.455,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "30863": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc áo dài màu xanh ngọc lam, kiểu dáng cổ cao, tay dài, có khuy cài ở cổ và hai túi ở hai bên hông. Áo dài có chất liệu",
+    "cleaned_caption": "áo dài màu xanh ngọc lam, kiểu dáng cổ cao, tay dài, có khuy cài ở cổ và hai túi ở hai bên hông. Áo dài có chất liệu",
+    "latency_sec": 9.558,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "31356": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc áo polo ngắn tay màu trắng và đỏ sọc ngang. Áo có cổ điển, tay ngắn, chất liệu dường như mềm mại.  Kiểu dáng áo là áo polo",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc áo polo ngắn tay màu trắng và đỏ sọc ngang. Áo có cổ điển, tay ngắn, chất liệu dường như mềm mại.  Kiểu dáng áo là áo polo",
+    "latency_sec": 9.465,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "31423": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo thun trắng cổ tròn, chất liệu mềm mại, có họa tiết hình tròn đen trắng ở phần chân váy.  Kiểu dáng áo thun đơn giản,",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo thun trắng cổ tròn, chất liệu mềm mại, có họa tiết hình tròn đen trắng ở phần chân váy.  Kiểu dáng áo thun đơn giản,",
+    "latency_sec": 9.874,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "31578": {
+    "raw_caption": "Đây là một chiếc áo thun màu xám đậm, có kiểu dáng đơn giản, tay ngắn.  Áo có in dòng chữ \"LET'S MAKE LOTS OF MONEY\" bằng màu vàng nhạt, tạo cảm giác",
+    "cleaned_caption": "áo thun màu xám đậm, có kiểu dáng đơn giản, tay ngắn.  Áo có in dòng chữ \"LET'S MAKE LOTS OF MONEY\" bằng màu vàng nhạt, tạo cảm giác",
+    "latency_sec": 9.306,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "31955": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao nữ.  Màu sắc chủ đạo là đen và xanh lá cây neon.  Kiểu dáng là giày thể thao, có thiết kế hiện đại, với phần",
+    "cleaned_caption": "giày thể thao nữ.  Màu sắc chủ đạo là đen và xanh lá cây neon.  Kiểu dáng là giày thể thao, có thiết kế hiện đại, với phần",
+    "latency_sec": 9.225,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "32144": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc quần short màu trắng, được may với phần đệm màu đỏ.  Đây là loại quần short nữ, có thiết kế đơn giản, kiểu dáng ngắn, có phần đệm ở phần eo.",
+    "cleaned_caption": "quần short màu trắng, được may với phần đệm màu đỏ.  Đây là loại quần short nữ, có thiết kế đơn giản, kiểu dáng ngắn, có phần đệm ở phần eo.",
+    "latency_sec": 9.323,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "32427": {
+    "raw_caption": "Ảnh chụp một người đàn ông đang mặc quần short ngắn màu đen. Quần có kiểu dáng ôm sát, chất liệu dường như là cotton hoặc vải tổng hợp, có các đường may dọc thân quần.  Người",
+    "cleaned_caption": "Ảnh chụp một người đàn ông đang mặc quần short ngắn màu đen. Quần có kiểu dáng ôm sát, chất liệu dường như là cotton hoặc vải tổng hợp, có các đường may dọc thân quần.  Người",
+    "latency_sec": 10.142,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "32508": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép lê màu nâu đậm, kiểu dáng dép lê truyền thống.  Đôi dép có thiết kế đơn giản, với phần đế rộng và phần đế nhỏ hơn ở phần chân.",
+    "cleaned_caption": "dép lê màu nâu đậm, kiểu dáng dép lê truyền thống.  Đôi dép có thiết kế đơn giản, với phần đế rộng và phần đế nhỏ hơn ở phần chân.",
+    "latency_sec": 9.01,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "32836": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày dép quai xích màu hồng nhạt, kiểu dáng đơn giản, kiểu dáng quai xích truyền thống.  Đôi giày có gót quai xích nhỏ, phần",
+    "cleaned_caption": "giày dép quai xích màu hồng nhạt, kiểu dáng đơn giản, kiểu dáng quai xích truyền thống.  Đôi giày có gót quai xích nhỏ, phần",
+    "latency_sec": 9.084,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "32848": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép quai xích màu hồng nhạt, kiểu dáng đơn giản, kiểu dáng quai xích truyền thống.  Đôi dép có quai xích chắc chắn, được may bằng chất liệu",
+    "cleaned_caption": "dép quai xích màu hồng nhạt, kiểu dáng đơn giản, kiểu dáng quai xích truyền thống.  Đôi dép có quai xích chắc chắn, được may bằng chất liệu",
+    "latency_sec": 9.706,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "32981": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc áo thun màu đỏ tươi, kiểu dáng đơn giản, tay ngắn.  Áo có in hình một chú chim hoạt hình màu xanh dương với dòng chữ \"MISTAKES? WHO",
+    "cleaned_caption": "áo thun màu đỏ tươi, kiểu dáng đơn giản, tay ngắn.  Áo có in hình một chú chim hoạt hình màu xanh dương với dòng chữ \"MISTAKES? WHO",
+    "latency_sec": 9.193,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "3308": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao màu trắng chủ đạo, được thiết kế với các đường viền màu đen và vàng.  Kiểu dáng giày thể thao hiện đại, có phần đế đệm",
+    "cleaned_caption": "giày thể thao màu trắng chủ đạo, được thiết kế với các đường viền màu đen và vàng.  Kiểu dáng giày thể thao hiện đại, có phần đế đệm",
+    "latency_sec": 9.421,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "33092": {
+    "raw_caption": "Hình ảnh cho thấy một đôi dép lê được trang trí cầu kỳ.  Đôi dép có kiểu dáng dáng vẻ, với phần quai dép được làm từ chất liệu lê, tạo cảm giác mềm mại và sang trọng",
+    "cleaned_caption": "dép lê được trang trí cầu kỳ.  Đôi dép có kiểu dáng dáng vẻ, với phần quai dép được làm từ chất liệu lê, tạo cảm giác mềm mại và sang trọng",
+    "latency_sec": 9.02,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "33316": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo sơ mi ngắn tay màu xanh nhạt kẻ sọc, có vẻ là chất liệu cotton hoặc vải tương tự. Áo có kiểu dáng cổ điển, tay ngắn, cài",
+    "cleaned_caption": "áo sơ mi ngắn tay màu xanh nhạt kẻ sọc, có vẻ là chất liệu cotton hoặc vải tương tự. Áo có kiểu dáng cổ điển, tay ngắn, cài",
+    "latency_sec": 10.163,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "33417": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nhỏ, màu nâu đậm, có thiết kế cổ điển.  Nó có hình dạng chữ nhật, với phần thân được làm từ chất liệu da hoặc giả da có vân sọc",
+    "cleaned_caption": "túi xách nhỏ, màu nâu đậm, có thiết kế cổ điển.  Nó có hình dạng chữ nhật, với phần thân được làm từ chất liệu da hoặc giả da có vân sọc",
+    "latency_sec": 9.223,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "33541": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo thun hoa đen trắng. Áo có kiểu dáng cổ chữ V, tay ngắn, chất liệu dường như là cotton hoặc vải tương tự. Màu sắc chủ",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo thun hoa đen trắng. Áo có kiểu dáng cổ chữ V, tay ngắn, chất liệu dường như là cotton hoặc vải tương tự. Màu sắc chủ",
+    "latency_sec": 9.648,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "33952": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo polo màu cam nhạt, kiểu dáng cổ điển, tay ngắn.  Áo có chất liệu dường như mềm mại, có thể là cotton hoặc vải cotton.  Màu sắc",
+    "cleaned_caption": "áo polo màu cam nhạt, kiểu dáng cổ điển, tay ngắn.  Áo có chất liệu dường như mềm mại, có thể là cotton hoặc vải cotton.  Màu sắc",
+    "latency_sec": 9.811,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "34385": {
+    "raw_caption": "Đây là một chiếc áo thun màu đỏ tươi, có in hình ảnh ba con chuột màu cam và dòng chữ \"DO BANANA DON DO\" cùng logo \"DO\" và \"BANANA DON DO\" ở góc",
+    "cleaned_caption": "áo thun màu đỏ tươi, có in hình ảnh ba con chuột màu cam và dòng chữ \"DO BANANA DON DO\" cùng logo \"DO\" và \"BANANA DON DO\" ở góc",
+    "latency_sec": 9.115,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "34797": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc mũ cói màu xám đậm, kiểu dáng truyền thống.  Nó được thiết kế với phần mũ rộng, phần lưỡi trai nhỏ gọn, và phần đầu mũ có hình dạng tròn",
+    "cleaned_caption": "mũ cói màu xám đậm, kiểu dáng truyền thống.  Nó được thiết kế với phần mũ rộng, phần lưỡi trai nhỏ gọn, và phần đầu mũ có hình dạng tròn",
+    "latency_sec": 9.337,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "34837": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao nữ màu đen bóng, có phần đế màu neon sáng.  Thiết kế giày hiện đại, với các đường may dọc và các chi tiết màu xanh lá cây",
+    "cleaned_caption": "giày thể thao nữ màu đen bóng, có phần đế màu neon sáng.  Thiết kế giày hiện đại, với các đường may dọc và các chi tiết màu xanh lá cây",
+    "latency_sec": 9.258,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "34908": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc một chiếc váy dài màu cam nhạt, kiểu dáng ôm sát cơ thể. Váy có cổ tròn, tay ngắn, được may bằng chất liệu vải mềm mại.",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc một chiếc váy dài màu cam nhạt, kiểu dáng ôm sát cơ thể. Váy có cổ tròn, tay ngắn, được may bằng chất liệu vải mềm mại.",
+    "latency_sec": 9.938,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "34952": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo dài màu be nhạt, được thiết kế với họa tiết in hình lặp lại nhiều lần.  Áo dài có kiểu dáng ôm sát thân, tay dài,",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc một chiếc áo dài màu be nhạt, được thiết kế với họa tiết in hình lặp lại nhiều lần.  Áo dài có kiểu dáng ôm sát thân, tay dài,",
+    "latency_sec": 9.208,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "34977": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc áo dài màu đỏ đô, được trang trí bằng một chiếc khăn trải dài màu be, nâu và đen. Khăn trải dài được thiết kế với họa tiết hình học, có vẻ như",
+    "cleaned_caption": "áo dài màu đỏ đô, được trang trí bằng một chiếc khăn trải dài màu be, nâu và đen. Khăn trải dài được thiết kế với họa tiết hình học, có vẻ như",
+    "latency_sec": 9.431,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "35633": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép lê màu xanh dương đậm, được thiết kế với kiểu dáng dép lê truyền thống.  Đôi dép có quai đeo màu xanh dương đậm, phần đế dép màu",
+    "cleaned_caption": "dép lê màu xanh dương đậm, được thiết kế với kiểu dáng dép lê truyền thống.  Đôi dép có quai đeo màu xanh dương đậm, phần đế dép màu",
+    "latency_sec": 9.405,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "35691": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao nam màu nâu sẫm, được làm từ chất liệu da bóng.  Đôi giày có kiểu dáng cổ điển, với phần thân giày được thiết kế với",
+    "cleaned_caption": "giày thể thao nam màu nâu sẫm, được làm từ chất liệu da bóng.  Đôi giày có kiểu dáng cổ điển, với phần thân giày được thiết kế với",
+    "latency_sec": 9.535,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "36621": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép nỉ nữ.  Đôi dép có màu xanh ngọc lam, được làm từ chất liệu vải dệt, tạo cảm giác mềm mại và thoáng mát.  Kiểu dáng là",
+    "cleaned_caption": "dép nỉ nữ.  Đôi dép có màu xanh ngọc lam, được làm từ chất liệu vải dệt, tạo cảm giác mềm mại và thoáng mát.  Kiểu dáng là",
+    "latency_sec": 9.264,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "36744": {
+    "raw_caption": "Đây là một chiếc áo thun nữ trẻ em màu hồng nhạt.  Thiết kế áo có kiểu dáng đơn giản, tay ngắn, cổ tròn.  Điểm nổi bật là hình in một nhân vật hoạt hình đáng yêu",
+    "cleaned_caption": "áo thun nữ trẻ em màu hồng nhạt.  Thiết kế áo có kiểu dáng đơn giản, tay ngắn, cổ tròn.  Điểm nổi bật là hình in một nhân vật hoạt hình đáng yêu",
+    "latency_sec": 9.308,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "3696": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao nữ màu đen.  Đây là loại giày thể thao, có thiết kế đơn giản nhưng hiện đại.  Màu đen chủ đạo tạo nên vẻ ngoài sang trọng và",
+    "cleaned_caption": "giày thể thao nữ màu đen.  Đây là loại giày thể thao, có thiết kế đơn giản nhưng hiện đại.  Màu đen chủ đạo tạo nên vẻ ngoài sang trọng và",
+    "latency_sec": 9.76,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "37160": {
+    "raw_caption": "Ảnh chụp một người phụ nữ trẻ mặc áo thun màu hồng nhạt, kiểu dáng tay dài, ôm sát cơ thể.  Áo có chất liệu mềm mại, tạo cảm giác thoải mái.  Cô ấy mặc",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ trẻ mặc áo thun màu hồng nhạt, kiểu dáng tay dài, ôm sát cơ thể.  Áo có chất liệu mềm mại, tạo cảm giác thoải mái.  Cô ấy mặc",
+    "latency_sec": 9.469,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "37299": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay Casio. Nó có thiết kế hiện đại, sang trọng với mặt đồng hồ màu trắng bạc, viền xanh dương và xanh dương đậm. Kim giờ, kim phút và",
+    "cleaned_caption": "đồng hồ đeo tay Casio. Nó có thiết kế hiện đại, sang trọng với mặt đồng hồ màu trắng bạc, viền xanh dương và xanh dương đậm. Kim giờ, kim phút và",
+    "latency_sec": 8.941,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "37315": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay nữ Tachymeter.  Nó có dây đeo kim loại màu trắng, vỏ mặt đồng hồ màu trắng xám đậm. Đồng hồ có thiết kế cổ điển, với mặt",
+    "cleaned_caption": "đồng hồ đeo tay nữ Tachymeter.  Nó có dây đeo kim loại màu trắng, vỏ mặt đồng hồ màu trắng xám đậm. Đồng hồ có thiết kế cổ điển, với mặt",
+    "latency_sec": 9.249,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "37927": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo thun nữ màu hồng tươi sáng.  Áo có kiểu dáng ôm sát cơ thể, tay áo ngắn, phần thân trên được thiết kế với họa tiết hoa nhỏ màu hồng",
+    "cleaned_caption": "áo thun nữ màu hồng tươi sáng.  Áo có kiểu dáng ôm sát cơ thể, tay áo ngắn, phần thân trên được thiết kế với họa tiết hoa nhỏ màu hồng",
+    "latency_sec": 9.28,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "39202": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày dép nữ.  Đôi giày có kiểu dáng quai xích kiểu dáng cổ điển, được làm từ chất liệu vải nỉ màu nâu đất.  Kiểu dáng gi",
+    "cleaned_caption": "giày dép nữ.  Đôi giày có kiểu dáng quai xích kiểu dáng cổ điển, được làm từ chất liệu vải nỉ màu nâu đất.  Kiểu dáng gi",
+    "latency_sec": 9.121,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "39480": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo dài màu hồng tươi sáng, có họa tiết hoa văn tinh tế.  Đây là một chiếc áo dài nữ, có kiểu dáng ôm sát cơ thể, tay áo ngắn,",
+    "cleaned_caption": "áo dài màu hồng tươi sáng, có họa tiết hoa văn tinh tế.  Đây là một chiếc áo dài nữ, có kiểu dáng ôm sát cơ thể, tay áo ngắn,",
+    "latency_sec": 9.431,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "39592": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép chong chóng màu vàng tươi sáng, được làm từ chất liệu vải dệt.  Đôi dép có kiểu dáng đơn giản, với phần đế cao và phần quai xích",
+    "cleaned_caption": "dép chong chóng màu vàng tươi sáng, được làm từ chất liệu vải dệt.  Đôi dép có kiểu dáng đơn giản, với phần đế cao và phần quai xích",
+    "latency_sec": 10.067,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "39724": {
+    "raw_caption": "Ảnh chụp một chiếc váy ngắn màu hồng tím với họa tiết hoa nhỏ màu vàng nhạt. Váy có kiểu dáng ôm sát cơ thể, tay áo phồng nhẹ, được thắt lưng ca",
+    "cleaned_caption": "Ảnh chụp một chiếc váy ngắn màu hồng tím với họa tiết hoa nhỏ màu vàng nhạt. Váy có kiểu dáng ôm sát cơ thể, tay áo phồng nhẹ, được thắt lưng ca",
+    "latency_sec": 9.499,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "40000": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc kính mắt tròn, kiểu dáng thời trang, có màu xám đậm.  Đây là loại kính mắt thường được gọi là kính gió, được thiết kế để che nắng và che mưa.",
+    "cleaned_caption": "kính mắt tròn, kiểu dáng thời trang, có màu xám đậm.  Đây là loại kính mắt thường được gọi là kính gió, được thiết kế để che nắng và che mưa.",
+    "latency_sec": 9.152,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "40526": {
+    "raw_caption": "Đây là một chiếc đồng hồ Titan Regalia nữ.  Nó có dây đeo kim loại màu trắng và vàng, kiểu dáng cổ điển, sang trọng. Mặt đồng hồ màu trắng, thiết kế hiện đại, tinh tế.",
+    "cleaned_caption": "đồng hồ Titan Regalia nữ.  Nó có dây đeo kim loại màu trắng và vàng, kiểu dáng cổ điển, sang trọng. Mặt đồng hồ màu trắng, thiết kế hiện đại, tinh tế.",
+    "latency_sec": 9.336,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "40606": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc một chiếc váy ngắn màu tím đậm, được thêu hoa văn màu xanh lá cây, vàng và tím. Váy có kiểu dáng ôm sát cơ thể, t",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc một chiếc váy ngắn màu tím đậm, được thêu hoa văn màu xanh lá cây, vàng và tím. Váy có kiểu dáng ôm sát cơ thể, t",
+    "latency_sec": 9.653,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "4131": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao màu xanh lá cây đậm, kiểu dáng cổ điển.  Đây là đôi giày thể thao nữ, có kiểu dáng đơn giản, không cầu kỳ.  Màu",
+    "cleaned_caption": "giày thể thao màu xanh lá cây đậm, kiểu dáng cổ điển.  Đây là đôi giày thể thao nữ, có kiểu dáng đơn giản, không cầu kỳ.  Màu",
+    "latency_sec": 9.217,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "42046": {
+    "raw_caption": "Ảnh chụp một chiếc túi xách da đen.  Đây là một chiếc túi xách nữ, có thiết kế đơn giản nhưng tinh tế. Màu sắc chủ đạo là đen, tạo cảm giác sang trọng và lịch lãm",
+    "cleaned_caption": "Ảnh chụp một chiếc túi xách da đen.  Đây là một chiếc túi xách nữ, có thiết kế đơn giản nhưng tinh tế. Màu sắc chủ đạo là đen, tạo cảm giác sang trọng và lịch lãm",
+    "latency_sec": 10.108,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "42230": {
+    "raw_caption": "Ảnh chụp một chiếc áo thun nữ. Áo có màu xanh dương nhạt, chất liệu dường như là cotton hoặc vải cotton mềm mại.  Thiết kế áo có kiểu dáng ôm sát, tay ngắn",
+    "cleaned_caption": "Ảnh chụp một chiếc áo thun nữ. Áo có màu xanh dương nhạt, chất liệu dường như là cotton hoặc vải cotton mềm mại.  Thiết kế áo có kiểu dáng ôm sát, tay ngắn",
+    "latency_sec": 10.073,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "42271": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày lười nam.  Đôi giày có màu trắng chủ đạo, phần thân giày được làm từ chất liệu vải dệt, tạo cảm giác thoáng mát.  Đế gi",
+    "cleaned_caption": "giày lười nam.  Đôi giày có màu trắng chủ đạo, phần thân giày được làm từ chất liệu vải dệt, tạo cảm giác thoáng mát.  Đế gi",
+    "latency_sec": 9.193,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "42273": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao màu trắng, kiểu dáng cổ điển.  Đây là một đôi giày thể thao nữ, có phần đế cao và chất liệu vải dường như là chất",
+    "cleaned_caption": "giày thể thao màu trắng, kiểu dáng cổ điển.  Đây là một đôi giày thể thao nữ, có phần đế cao và chất liệu vải dường như là chất",
+    "latency_sec": 9.332,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "42632": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc nhẫn vàng nữ.  Nó có thiết kế thanh lịch, hiện đại với đường nét mảnh mai và tinh tế.  Màu vàng chủ đạo là vàng vàng, tạo cảm giác sang",
+    "cleaned_caption": "nhẫn vàng nữ.  Nó có thiết kế thanh lịch, hiện đại với đường nét mảnh mai và tinh tế.  Màu vàng chủ đạo là vàng vàng, tạo cảm giác sang",
+    "latency_sec": 9.248,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "43184": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay đính kim loại màu đen. Nó có thiết kế cổ điển, sang trọng, phù hợp với nhiều đối tượng.  Hình dáng đồng hồ là kiểu đeo tay, với",
+    "cleaned_caption": "đồng hồ đeo tay đính kim loại màu đen. Nó có thiết kế cổ điển, sang trọng, phù hợp với nhiều đối tượng.  Hình dáng đồng hồ là kiểu đeo tay, với",
+    "latency_sec": 9.083,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "43207": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay nữ thông minh. Nó có dây đeo bằng chất liệu da hoặc vải mềm mại, màu đen. Đồng hồ có màn hình LCD hiển thị giờ, phút, giây",
+    "cleaned_caption": "đồng hồ đeo tay nữ thông minh. Nó có dây đeo bằng chất liệu da hoặc vải mềm mại, màu đen. Đồng hồ có màn hình LCD hiển thị giờ, phút, giây",
+    "latency_sec": 9.231,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "43484": {
+    "raw_caption": "Hình ảnh cho thấy một người đàn ông mặc một chiếc áo sơ mi kẻ caro màu xanh lá cây nhạt. Áo có kiểu dáng cổ điển, tay ngắn, chất liệu dường như là cotton hoặc vải",
+    "cleaned_caption": "một người đàn ông mặc một chiếc áo sơ mi kẻ caro màu xanh lá cây nhạt. Áo có kiểu dáng cổ điển, tay ngắn, chất liệu dường như là cotton hoặc vải",
+    "latency_sec": 9.533,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "43492": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc áo thun pha hình ảnh đội bóng. Áo có màu trắng kem, in hình một nhóm cầu thủ bóng đá với phong cách cổ điển, đen trắng.  Người mặc áo là một",
+    "cleaned_caption": "áo thun pha hình ảnh đội bóng. Áo có màu trắng kem, in hình một nhóm cầu thủ bóng đá với phong cách cổ điển, đen trắng.  Người mặc áo là một",
+    "latency_sec": 10.369,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "43494": {
+    "raw_caption": "Đây là một chiếc áo thun màu xanh nhạt, có thiết kế đơn giản nhưng bắt mắt.  Áo có kiểu dáng tay ngắn, rộng rãi, tạo cảm giác thoải mái.  Hình in trên áo là",
+    "cleaned_caption": "áo thun màu xanh nhạt, có thiết kế đơn giản nhưng bắt mắt.  Áo có kiểu dáng tay ngắn, rộng rãi, tạo cảm giác thoải mái.  Hình in trên áo là",
+    "latency_sec": 9.568,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "43701": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc áo thun màu đỏ đô, kiểu dáng cổ chữ V, được may ôm sát cơ thể.  Áo có chất liệu mềm mại, được buộc nơ đen ở cổ.  Người mẫu",
+    "cleaned_caption": "áo thun màu đỏ đô, kiểu dáng cổ chữ V, được may ôm sát cơ thể.  Áo có chất liệu mềm mại, được buộc nơ đen ở cổ.  Người mẫu",
+    "latency_sec": 9.453,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "4397": {
+    "raw_caption": "Hình ảnh cho thấy một người đàn ông trẻ tuổi, có vẻ ngoài năng động, đang mặc một chiếc áo thun ngắn tay màu xám đen.  Thiết kế trên áo có hình ảnh các công cụ và thiết bị công",
+    "cleaned_caption": "một người đàn ông trẻ tuổi, có vẻ ngoài năng động, đang mặc một chiếc áo thun ngắn tay màu xám đen.  Thiết kế trên áo có hình ảnh các công cụ và thiết bị công",
+    "latency_sec": 9.665,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "44601": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nhỏ, màu be nhạt, có vẻ là chất liệu vải thô, không phải chất liệu cao cấp.  Túi có đường viền trắng, in logo \"",
+    "cleaned_caption": "túi xách nhỏ, màu be nhạt, có vẻ là chất liệu vải thô, không phải chất liệu cao cấp.  Túi có đường viền trắng, in logo \"",
+    "latency_sec": 9.469,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "45045": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay nữ, có vẻ ngoài trẻ trung và năng động.  Nó có dây đeo bằng da màu đen, chất liệu có vẻ mềm mại và chắc chắn. Mặt đồng hồ màu",
+    "cleaned_caption": "đồng hồ đeo tay nữ, có vẻ ngoài trẻ trung và năng động.  Nó có dây đeo bằng da màu đen, chất liệu có vẻ mềm mại và chắc chắn. Mặt đồng hồ màu",
+    "latency_sec": 9.224,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "45324": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày cao gót nữ.  Màu sắc chủ đạo là hồng nhạt, tạo cảm giác nhẹ nhàng, nữ tính. Kiểu dáng là kiểu giày quai xích,",
+    "cleaned_caption": "giày cao gót nữ.  Màu sắc chủ đạo là hồng nhạt, tạo cảm giác nhẹ nhàng, nữ tính. Kiểu dáng là kiểu giày quai xích,",
+    "latency_sec": 10.141,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "45872": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay nữ thời trang.  Nó có thiết kế cổ điển, với mặt đồng hồ màu đen bóng, kim chỉ giờ và phút màu bạc sáng bóng. Vỏ đồng hồ làm bằng",
+    "cleaned_caption": "đồng hồ đeo tay nữ thời trang.  Nó có thiết kế cổ điển, với mặt đồng hồ màu đen bóng, kim chỉ giờ và phút màu bạc sáng bóng. Vỏ đồng hồ làm bằng",
+    "latency_sec": 10.03,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "4590": {
+    "raw_caption": "Ảnh chụp một chiếc ba lô màu đỏ tươi, kiểu dáng hiện đại, có tay cầm và khóa kéo.  Thiết kế của ba lô khá đơn giản nhưng chắc chắn, với phần thân ba lô được làm từ",
+    "cleaned_caption": "Ảnh chụp một chiếc ba lô màu đỏ tươi, kiểu dáng hiện đại, có tay cầm và khóa kéo.  Thiết kế của ba lô khá đơn giản nhưng chắc chắn, với phần thân ba lô được làm từ",
+    "latency_sec": 9.322,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "46044": {
+    "raw_caption": "Hình ảnh hiển thị hai chiếc bông tai nhỏ nhắn, hình hoa cách điệu, được làm từ chất liệu kim loại sáng bóng. Chúng có màu trắng bạc, tạo cảm giác sang trọng và tinh tế.  Ki",
+    "cleaned_caption": "hai chiếc bông tai nhỏ nhắn, hình hoa cách điệu, được làm từ chất liệu kim loại sáng bóng. Chúng có màu trắng bạc, tạo cảm giác sang trọng và tinh tế.  Ki",
+    "latency_sec": 9.487,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "46156": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc vòng cổ bằng dây kim loại màu nâu sẫm, được trang trí bằng những hạt nhỏ màu cam.  Vòng cổ có thiết kế đơn giản, không có họa tiết cầu kỳ",
+    "cleaned_caption": "vòng cổ bằng dây kim loại màu nâu sẫm, được trang trí bằng những hạt nhỏ màu cam.  Vòng cổ có thiết kế đơn giản, không có họa tiết cầu kỳ",
+    "latency_sec": 9.721,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "46306": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc dây đeo bông màu xám đậm, có thiết kế tinh tế.  Đây là một loại dây đeo bông, thường được sử dụng làm phụ kiện thời trang.  Mà",
+    "cleaned_caption": "dây đeo bông màu xám đậm, có thiết kế tinh tế.  Đây là một loại dây đeo bông, thường được sử dụng làm phụ kiện thời trang.  Mà",
+    "latency_sec": 9.787,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "46589": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép trống màu vàng gold.  Đây là một đôi dép trống, có thiết kế kiểu dáng hiện đại, với phần đế dép được làm từ chất liệu mềm mại, có thể là da",
+    "cleaned_caption": "dép trống màu vàng gold.  Đây là một đôi dép trống, có thiết kế kiểu dáng hiện đại, với phần đế dép được làm từ chất liệu mềm mại, có thể là da",
+    "latency_sec": 9.735,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "47125": {
+    "raw_caption": "Đây là một đôi giày thể thao dành cho trẻ em. Màu sắc chủ đạo là xanh dương nhạt, kết hợp với các màu sắc tươi sáng như vàng, đỏ và xanh lá cây. Giày có",
+    "cleaned_caption": "giày thể thao dành cho trẻ em. Màu sắc chủ đạo là xanh dương nhạt, kết hợp với các màu sắc tươi sáng như vàng, đỏ và xanh lá cây. Giày có",
+    "latency_sec": 10.892,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "47156": {
+    "raw_caption": "Ảnh hiển thị một chiếc ví da màu đen.  Đây là một chiếc ví nam, có thiết kế đơn giản, hiện đại.  Ví có hình chữ nhật, chất liệu da mềm mại, tạo cảm giác sang trọng và",
+    "cleaned_caption": "Ảnh hiển thị một chiếc ví da màu đen.  Đây là một chiếc ví nam, có thiết kế đơn giản, hiện đại.  Ví có hình chữ nhật, chất liệu da mềm mại, tạo cảm giác sang trọng và",
+    "latency_sec": 10.136,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "47185": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày da màu đen sang trọng. Đây là đôi giày nam, có kiểu dáng cổ điển, đơn giản nhưng tinh tế.  Màu đen bóng bẩy của giày tạo cảm",
+    "cleaned_caption": "giày da màu đen sang trọng. Đây là đôi giày nam, có kiểu dáng cổ điển, đơn giản nhưng tinh tế.  Màu đen bóng bẩy của giày tạo cảm",
+    "latency_sec": 9.829,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "4732": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép lê màu trắng. Đây là loại dép lê truyền thống, được làm từ chất liệu vải mềm mại.  Đôi dép có kiểu dáng đơn giản, với phần đế rộng và",
+    "cleaned_caption": "dép lê màu trắng. Đây là loại dép lê truyền thống, được làm từ chất liệu vải mềm mại.  Đôi dép có kiểu dáng đơn giản, với phần đế rộng và",
+    "latency_sec": 10.067,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "47524": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc một chiếc quần short màu đỏ tươi.  Đây là loại quần short nam, có kiểu dáng đơn giản, ôm sát cơ thể.  Màu sắc rực rỡ, nổi bật trên",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc một chiếc quần short màu đỏ tươi.  Đây là loại quần short nam, có kiểu dáng đơn giản, ôm sát cơ thể.  Màu sắc rực rỡ, nổi bật trên",
+    "latency_sec": 9.991,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "47978": {
+    "raw_caption": "Đây là một chiếc đồng hồ dây nữ của thương hiệu HELIX TIMEX.  Nó có màu tím đậm, thiết kế hiện đại và sang trọng. Đồng hồ có dây đeo bằng chất liệu nhựa đen, tạo cảm giác",
+    "cleaned_caption": "đồng hồ dây nữ của thương hiệu HELIX TIMEX.  Nó có màu tím đậm, thiết kế hiện đại và sang trọng. Đồng hồ có dây đeo bằng chất liệu nhựa đen, tạo cảm giác",
+    "latency_sec": 9.801,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "4841": {
+    "raw_caption": "Hình ảnh cho thấy một người đàn ông nam đang mặc một chiếc áo polo màu trắng. Áo có cổ cao, tay áo ngắn, in logo của đội tuyển bóng đá Ấn Độ (India) màu cam đậm ở giữa",
+    "cleaned_caption": "một người đàn ông nam đang mặc một chiếc áo polo màu trắng. Áo có cổ cao, tay áo ngắn, in logo của đội tuyển bóng đá Ấn Độ (India) màu cam đậm ở giữa",
+    "latency_sec": 10.453,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "48679": {
+    "raw_caption": "Hình ảnh hiển thị hai chiếc bông tai nhỏ nhắn, kiểu dáng hiện đại. Chúng có màu trắng bạc, được làm từ chất liệu kim loại sáng bóng.  Đặc điểm nổi bật là họa tiết hoa nhỏ lấp",
+    "cleaned_caption": "hai chiếc bông tai nhỏ nhắn, kiểu dáng hiện đại. Chúng có màu trắng bạc, được làm từ chất liệu kim loại sáng bóng.  Đặc điểm nổi bật là họa tiết hoa nhỏ lấp",
+    "latency_sec": 10.252,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "48726": {
+    "raw_caption": "Hình ảnh hiển thị hai chiếc nhẫn cưới. Chúng có màu trắng tinh khiết, thiết kế đơn giản nhưng tinh tế.  Kiểu dáng là kiểu nhẫn tròn, được thiết kế với đường viền m",
+    "cleaned_caption": "hai chiếc nhẫn cưới. Chúng có màu trắng tinh khiết, thiết kế đơn giản nhưng tinh tế.  Kiểu dáng là kiểu nhẫn tròn, được thiết kế với đường viền m",
+    "latency_sec": 9.52,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "48825": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc vòng tay kim loại sáng bóng, được làm từ đá quý. Vòng tay có thiết kế đơn giản, với các viên đá nhỏ li ti được sắp xếp theo hình dạng vòng tròn",
+    "cleaned_caption": "vòng tay kim loại sáng bóng, được làm từ đá quý. Vòng tay có thiết kế đơn giản, với các viên đá nhỏ li ti được sắp xếp theo hình dạng vòng tròn",
+    "latency_sec": 9.539,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "49059": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao nữ.  Màu sắc chủ đạo là xám nhạt, kết hợp với các chi tiết màu xanh dương và đỏ.  Kiểu dáng là giày thể th",
+    "cleaned_caption": "giày thể thao nữ.  Màu sắc chủ đạo là xám nhạt, kết hợp với các chi tiết màu xanh dương và đỏ.  Kiểu dáng là giày thể th",
+    "latency_sec": 10.008,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "49791": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc mũ lưỡi trai màu vàng tươi, có viền đen ở hai bên.  Thiết kế mũ có hình dạng hơi cong, tạo cảm giác thoải mái.  Trên mũ có in logo của",
+    "cleaned_caption": "mũ lưỡi trai màu vàng tươi, có viền đen ở hai bên.  Thiết kế mũ có hình dạng hơi cong, tạo cảm giác thoải mái.  Trên mũ có in logo của",
+    "latency_sec": 9.694,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "49893": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay nữ màu vàng tươi sáng. Nó có thiết kế đơn giản, hiện đại với mặt đồng hồ màu trắng, số giờ, phút, giây được in rõ ràng.  Đồng hồ",
+    "cleaned_caption": "đồng hồ đeo tay nữ màu vàng tươi sáng. Nó có thiết kế đơn giản, hiện đại với mặt đồng hồ màu trắng, số giờ, phút, giây được in rõ ràng.  Đồng hồ",
+    "latency_sec": 9.797,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "49916": {
+    "raw_caption": "Hình ảnh cho thấy một người phụ nữ đang mặc một chiếc sáo thổ cẩm màu đen. Sáo có thiết kế tinh tế, với phần tà rộng và phần thân sáo được thiết kế mềm mại, tạo cảm giác",
+    "cleaned_caption": "một người phụ nữ đang mặc một chiếc sáo thổ cẩm màu đen. Sáo có thiết kế tinh tế, với phần tà rộng và phần thân sáo được thiết kế mềm mại, tạo cảm giác",
+    "latency_sec": 10.705,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "49972": {
+    "raw_caption": "Ảnh chụp một người đàn ông nam đang mặc một chiếc áo ba lỗ màu xanh đậm, chất liệu dường như là vải thun. Áo có kiểu dáng đơn giản, ôm sát cơ thể.  Người",
+    "cleaned_caption": "Ảnh chụp một người đàn ông nam đang mặc một chiếc áo ba lỗ màu xanh đậm, chất liệu dường như là vải thun. Áo có kiểu dáng đơn giản, ôm sát cơ thể.  Người",
+    "latency_sec": 10.361,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "50298": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc áo khoác nam.  Màu sắc chủ đạo là đen, với các đường kẻ sọc trắng và xanh dương nhạt tạo điểm nhấn.  Kiểu dáng áo khoác là kiểu dáng",
+    "cleaned_caption": "áo khoác nam.  Màu sắc chủ đạo là đen, với các đường kẻ sọc trắng và xanh dương nhạt tạo điểm nhấn.  Kiểu dáng áo khoác là kiểu dáng",
+    "latency_sec": 9.724,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "50444": {
+    "raw_caption": "Ảnh hiển thị một bộ đồ lót màu đen, có in logo \"chromo2\" màu trắng.  Đây là một loại trang phục nữ, có thiết kế ôm sát, phù hợp cho các vùng eo và thân",
+    "cleaned_caption": "Ảnh hiển thị một bộ đồ lót màu đen, có in logo \"chromo2\" màu trắng.  Đây là một loại trang phục nữ, có thiết kế ôm sát, phù hợp cho các vùng eo và thân",
+    "latency_sec": 10.32,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "5055": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày thể thao nữ.  Màu sắc chủ đạo là đen và trắng, với các chi tiết màu đỏ và cam.  Kiểu dáng là giày thể thao đơn giản, không",
+    "cleaned_caption": "giày thể thao nữ.  Màu sắc chủ đạo là đen và trắng, với các chi tiết màu đỏ và cam.  Kiểu dáng là giày thể thao đơn giản, không",
+    "latency_sec": 10.232,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "50989": {
+    "raw_caption": "Ảnh chụp một đôi chân dài, chất liệu ren, màu be nhạt.  Đây là loại quần short hoặc quần lót, có kiểu dáng ôm sát, rộng rãi ở phần thân trên và thắt lưng ở eo.",
+    "cleaned_caption": "Ảnh chụp một đôi chân dài, chất liệu ren, màu be nhạt.  Đây là loại quần short hoặc quần lót, có kiểu dáng ôm sát, rộng rãi ở phần thân trên và thắt lưng ở eo.",
+    "latency_sec": 9.649,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "5115": {
+    "raw_caption": "Ảnh chụp một người phụ nữ trẻ mặc áo ba lỗ màu tím nhạt, có họa tiết hoa văn trang trí tinh xảo. Cô ấy kết hợp áo với quần short đen, tạo nên vẻ ngoài",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ trẻ mặc áo ba lỗ màu tím nhạt, có họa tiết hoa văn trang trí tinh xảo. Cô ấy kết hợp áo với quần short đen, tạo nên vẻ ngoài",
+    "latency_sec": 9.598,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "51158": {
+    "raw_caption": "Hình ảnh hiển thị một đôi sock màu nâu đậm, kiểu dáng đơn giản, có đường chỉ song song chạy dọc theo thân sock.  Đây là loại sock thường được mặc trong thời trang nam giới, phù hợp",
+    "cleaned_caption": "sock màu nâu đậm, kiểu dáng đơn giản, có đường chỉ song song chạy dọc theo thân sock.  Đây là loại sock thường được mặc trong thời trang nam giới, phù hợp",
+    "latency_sec": 10.117,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "51377": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc quần short màu be nhạt, kiểu dáng đơn giản, rộng rãi.  Quần có hai túi ở phía sau.  Người đàn ông mặc áo thun màu đỏ tía, kiểu dáng",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc quần short màu be nhạt, kiểu dáng đơn giản, rộng rãi.  Quần có hai túi ở phía sau.  Người đàn ông mặc áo thun màu đỏ tía, kiểu dáng",
+    "latency_sec": 9.799,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "51653": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay Fossil, có dây đeo bằng dây kim loại màu đen.  Nó là một chiếc đồng hồ cổ điển, có thiết kế đơn giản nhưng tinh tế.  Màu",
+    "cleaned_caption": "đồng hồ đeo tay Fossil, có dây đeo bằng dây kim loại màu đen.  Nó là một chiếc đồng hồ cổ điển, có thiết kế đơn giản nhưng tinh tế.  Màu",
+    "latency_sec": 9.826,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "51826": {
+    "raw_caption": "Ảnh chụp một người phụ nữ trẻ, có vẻ ngoài nữ tính, đang mặc một chiếc áo ngực màu trắng.  Cô ấy có mái tóc dài, xoăn nhẹ, trang điểm nhẹ nhàng.  Kiểu dáng áo",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ trẻ, có vẻ ngoài nữ tính, đang mặc một chiếc áo ngực màu trắng.  Cô ấy có mái tóc dài, xoăn nhẹ, trang điểm nhẹ nhàng.  Kiểu dáng áo",
+    "latency_sec": 10.687,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "51890": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nhỏ, màu vàng nhạt, có vẻ là da thật.  Nó có thiết kế đơn giản, với một khóa kéo nhỏ ở giữa và một quai xách bằng da màu vàng",
+    "cleaned_caption": "túi xách nhỏ, màu vàng nhạt, có vẻ là da thật.  Nó có thiết kế đơn giản, với một khóa kéo nhỏ ở giữa và một quai xách bằng da màu vàng",
+    "latency_sec": 9.598,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "52380": {
+    "raw_caption": "Hình ảnh cho thấy một chiếc váy ngắn màu xanh nhạt, kiểu dáng ôm sát cơ thể, được may với họa tiết sọc dọc màu xanh dương nhạt và vàng nhạt. Váy",
+    "cleaned_caption": "váy ngắn màu xanh nhạt, kiểu dáng ôm sát cơ thể, được may với họa tiết sọc dọc màu xanh dương nhạt và vàng nhạt. Váy",
+    "latency_sec": 9.527,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "52896": {
+    "raw_caption": "Hình ảnh cho thấy một bộ trang phục dạ hội nữ, có lẽ là dạ hội truyền thống Á Đông.  Màu sắc chủ đạo là hồng nhạt, tạo cảm giác nhẹ nhàng, nữ tính.  Kiểu",
+    "cleaned_caption": "trang phục dạ hội nữ, có lẽ là dạ hội truyền thống Á Đông.  Màu sắc chủ đạo là hồng nhạt, tạo cảm giác nhẹ nhàng, nữ tính.  Kiểu",
+    "latency_sec": 10.157,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "53462": {
+    "raw_caption": "Ảnh chụp một người phụ nữ trẻ mặc một chiếc áo bơi màu đỏ đô, có kiểu dáng ôm sát cơ thể, chất liệu dường như là ren hoặc vải lụa.  Cô ấy đang mặc một chiếc",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ trẻ mặc một chiếc áo bơi màu đỏ đô, có kiểu dáng ôm sát cơ thể, chất liệu dường như là ren hoặc vải lụa.  Cô ấy đang mặc một chiếc",
+    "latency_sec": 10.747,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "53779": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc áo thun đen có in hình một gói ngũ cốc Farts Cereal.  Áo có tay ngắn, cổ tròn, kiểu dáng hiện đại. Màu sắc chủ đạo là",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc áo thun đen có in hình một gói ngũ cốc Farts Cereal.  Áo có tay ngắn, cổ tròn, kiểu dáng hiện đại. Màu sắc chủ đạo là",
+    "latency_sec": 9.849,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "54168": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc vòng cổ bằng chất liệu vàng và bạc. Vòng cổ có thiết kế độc đáo, với phần đầu nối liền với một dải hạt nhỏ màu trắng bạc được sắp xếp theo kiểu zig-zag",
+    "cleaned_caption": "vòng cổ bằng chất liệu vàng và bạc. Vòng cổ có thiết kế độc đáo, với phần đầu nối liền với một dải hạt nhỏ màu trắng bạc được sắp xếp theo kiểu zig-zag",
+    "latency_sec": 10.27,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "54412": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nhỏ, màu be nhạt, có thiết kế hình chữ nhật.  Túi có khóa kéo hình chữ nhật, làm bằng kim loại màu vàng đồng.  Thiết kế của túi",
+    "cleaned_caption": "túi xách nhỏ, màu be nhạt, có thiết kế hình chữ nhật.  Túi có khóa kéo hình chữ nhật, làm bằng kim loại màu vàng đồng.  Thiết kế của túi",
+    "latency_sec": 9.913,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "54558": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc một chiếc váy ngắn màu xanh nhạt, có họa tiết thổ cẩm màu hồng và tím. Váy có kiểu dáng ôm sát, tay ngắn, cổ tr",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc một chiếc váy ngắn màu xanh nhạt, có họa tiết thổ cẩm màu hồng và tím. Váy có kiểu dáng ôm sát, tay ngắn, cổ tr",
+    "latency_sec": 9.846,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "5480": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép lê màu đen. Đây là loại dép lê, có thiết kế đơn giản, hiện đại.  Đôi dép có quai xách màu đen, phần thân dép được làm từ chất",
+    "cleaned_caption": "dép lê màu đen. Đây là loại dép lê, có thiết kế đơn giản, hiện đại.  Đôi dép có quai xách màu đen, phần thân dép được làm từ chất",
+    "latency_sec": 9.611,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "57247": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nữ.  Màu sắc chủ đạo là nâu đỏ, có vẻ là da thật hoặc giả da.  Túi có kiểu dáng hình chữ nhật, hơi cong, với qu",
+    "cleaned_caption": "túi xách nữ.  Màu sắc chủ đạo là nâu đỏ, có vẻ là da thật hoặc giả da.  Túi có kiểu dáng hình chữ nhật, hơi cong, với qu",
+    "latency_sec": 10.793,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "57427": {
+    "raw_caption": "Đây là một chiếc áo thun nữ màu xanh lá cây tươi sáng.  Áo có kiểu dáng đơn giản, tay ngắn, cổ tròn.  Thiết kế in hình một quả táo đỏ và hai chú chim",
+    "cleaned_caption": "áo thun nữ màu xanh lá cây tươi sáng.  Áo có kiểu dáng đơn giản, tay ngắn, cổ tròn.  Thiết kế in hình một quả táo đỏ và hai chú chim",
+    "latency_sec": 10.117,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "58259": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nam. Túi có màu xanh lá cây đậm, có vẻ ngoài cũ kỹ, với những vết bẩn và dấu hiệu của thời gian.  Thiết kế của túi khá",
+    "cleaned_caption": "túi xách nam. Túi có màu xanh lá cây đậm, có vẻ ngoài cũ kỹ, với những vết bẩn và dấu hiệu của thời gian.  Thiết kế của túi khá",
+    "latency_sec": 11.295,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "58313": {
+    "raw_caption": "Hình ảnh hiển thị một đôi chân váy trắng, có vẻ là loại chân váy, được thiết kế dành cho nam giới.  Màu sắc chủ đạo là trắng, tạo cảm giác sạch sẽ và tinh tế.",
+    "cleaned_caption": "chân váy trắng, có vẻ là loại chân váy, được thiết kế dành cho nam giới.  Màu sắc chủ đạo là trắng, tạo cảm giác sạch sẽ và tinh tế.",
+    "latency_sec": 10.809,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "58456": {
+    "raw_caption": "Đây là một chiếc đồng hồ đeo tay Fossil. Nó có màu trắng bạc, thiết kế cổ điển, sang trọng. Đồng hồ có dây đeo kim loại màu trắng, kiểu dáng cổ điển, không phải kiểu đ",
+    "cleaned_caption": "đồng hồ đeo tay Fossil. Nó có màu trắng bạc, thiết kế cổ điển, sang trọng. Đồng hồ có dây đeo kim loại màu trắng, kiểu dáng cổ điển, không phải kiểu đ",
+    "latency_sec": 10.772,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "58588": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc vòng cổ kim loại màu bạc, có hình dạng hình lục giác với các đường nét sắc sảo.  Màu sắc chủ đạo là tím đậm, tạo cảm giác sang trọng và bí",
+    "cleaned_caption": "vòng cổ kim loại màu bạc, có hình dạng hình lục giác với các đường nét sắc sảo.  Màu sắc chủ đạo là tím đậm, tạo cảm giác sang trọng và bí",
+    "latency_sec": 10.592,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "5985": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc áo sơ mi kẻ caro màu xanh lá cây, đen và trắng. Áo có cổ, cài khuy, tay áo dài, chất liệu cotton.  Kiểu dáng áo",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc áo sơ mi kẻ caro màu xanh lá cây, đen và trắng. Áo có cổ, cài khuy, tay áo dài, chất liệu cotton.  Kiểu dáng áo",
+    "latency_sec": 12.122,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "6157": {
+    "raw_caption": "Đây là một chiếc áo thun nam màu xám nhạt, có in hình một chiếc mũ lưỡi trai màu vàng nhạt và dòng chữ \"TROPICS SUMMER\" màu hồng đậm.  Thiết kế đơn",
+    "cleaned_caption": "áo thun nam màu xám nhạt, có in hình một chiếc mũ lưỡi trai màu vàng nhạt và dòng chữ \"TROPICS SUMMER\" màu hồng đậm.  Thiết kế đơn",
+    "latency_sec": 10.576,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "6552": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo thun nữ trẻ.  Áo có màu tím nhạt, được thiết kế với kiểu dáng ôm sát cơ thể, tay ngắn và cổ tròn.  Điểm nổi bật là",
+    "cleaned_caption": "áo thun nữ trẻ.  Áo có màu tím nhạt, được thiết kế với kiểu dáng ôm sát cơ thể, tay ngắn và cổ tròn.  Điểm nổi bật là",
+    "latency_sec": 10.31,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "6738": {
+    "raw_caption": "Đây là một chiếc găng tay đeo chân, có màu đen chủ đạo với các chi tiết màu cam và xám. Găng tay có thiết kế dạng ô vuông, với phần đế màu cam và phần",
+    "cleaned_caption": "găng tay đeo chân, có màu đen chủ đạo với các chi tiết màu cam và xám. Găng tay có thiết kế dạng ô vuông, với phần đế màu cam và phần",
+    "latency_sec": 10.059,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "6785": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc một chiếc áo khoác mùa hè màu đỏ tươi. Áo khoác có kiểu dáng đơn giản, với phần thân trên được thiết kế với các đường viền đen chạy dọc theo thân",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc một chiếc áo khoác mùa hè màu đỏ tươi. Áo khoác có kiểu dáng đơn giản, với phần thân trên được thiết kế với các đường viền đen chạy dọc theo thân",
+    "latency_sec": 10.198,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7028": {
+    "raw_caption": "Hình ảnh cho thấy một người đàn ông mặc một chiếc quần short kẻ caro màu xanh dương nhạt.  Quần có kiểu dáng đơn giản, không quá cầu kỳ, phù hợp với nhiều phong cách.  Người",
+    "cleaned_caption": "một người đàn ông mặc một chiếc quần short kẻ caro màu xanh dương nhạt.  Quần có kiểu dáng đơn giản, không quá cầu kỳ, phù hợp với nhiều phong cách.  Người",
+    "latency_sec": 9.615,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7056": {
+    "raw_caption": "Ảnh chụp một chiếc túi xách nam.  Màu sắc chủ đạo là đen, cam và xám.  Thiết kế có vẻ hiện đại, năng động.  Túi có khóa kéo, thiết kế đơn giản nhưng",
+    "cleaned_caption": "Ảnh chụp một chiếc túi xách nam.  Màu sắc chủ đạo là đen, cam và xám.  Thiết kế có vẻ hiện đại, năng động.  Túi có khóa kéo, thiết kế đơn giản nhưng",
+    "latency_sec": 10.407,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7099": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách nam màu xám đậm, có thiết kế dạng túi xách với khóa kéo và quai xách.  Túi có chất liệu vải dệt, có vẻ ngoài chắc",
+    "cleaned_caption": "túi xách nam màu xám đậm, có thiết kế dạng túi xách với khóa kéo và quai xách.  Túi có chất liệu vải dệt, có vẻ ngoài chắc",
+    "latency_sec": 10.448,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7131": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc một chiếc quần short màu đen.  Quần có kiểu dáng ôm sát, chất liệu dường như là cotton hoặc vải tổng hợp, tạo cảm giác thoải mái.  Màu đen",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc một chiếc quần short màu đen.  Quần có kiểu dáng ôm sát, chất liệu dường như là cotton hoặc vải tổng hợp, tạo cảm giác thoải mái.  Màu đen",
+    "latency_sec": 9.856,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7366": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày da kiểu dáng cổ điển, màu đen.  Đây là một đôi giày nam, có kiểu dáng cổ cao, phần thân giày được làm từ chất liệu da mềm mại, có",
+    "cleaned_caption": "giày da kiểu dáng cổ điển, màu đen.  Đây là một đôi giày nam, có kiểu dáng cổ cao, phần thân giày được làm từ chất liệu da mềm mại, có",
+    "latency_sec": 10.095,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7373": {
+    "raw_caption": "Hình ảnh hiển thị một đôi dép lê màu đen. Đây là loại dép lê phổ biến được sử dụng bởi cả nam và nữ.  Đôi dép có kiểu dáng đơn giản, với phần đế rộng và phần qu",
+    "cleaned_caption": "dép lê màu đen. Đây là loại dép lê phổ biến được sử dụng bởi cả nam và nữ.  Đôi dép có kiểu dáng đơn giản, với phần đế rộng và phần qu",
+    "latency_sec": 10.039,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7494": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo thun nữ màu xanh nhạt, kiểu dáng tay ngắn, cổ tròn.  Áo có chất liệu vải mềm mại, tạo cảm giác thoải mái.  Màu sắc",
+    "cleaned_caption": "áo thun nữ màu xanh nhạt, kiểu dáng tay ngắn, cổ tròn.  Áo có chất liệu vải mềm mại, tạo cảm giác thoải mái.  Màu sắc",
+    "latency_sec": 10.26,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7525": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo thun nữ màu đỏ tươi.  Áo có kiểu dáng cổ tròn, tay ngắn, chất liệu dường như mềm mại.  Trên áo có in logo một con gà trống",
+    "cleaned_caption": "áo thun nữ màu đỏ tươi.  Áo có kiểu dáng cổ tròn, tay ngắn, chất liệu dường như mềm mại.  Trên áo có in logo một con gà trống",
+    "latency_sec": 9.796,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7569": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo thun ngắn tay màu xanh dương nhạt, có kiểu dáng hiện đại và năng động.  Đây là một chiếc áo thun thể thao, được thiết kế dành cho nam giới",
+    "cleaned_caption": "áo thun ngắn tay màu xanh dương nhạt, có kiểu dáng hiện đại và năng động.  Đây là một chiếc áo thun thể thao, được thiết kế dành cho nam giới",
+    "latency_sec": 10.613,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7701": {
+    "raw_caption": "Ảnh chụp một chiếc áo thun nữ màu hồng nhạt, thiết kế đơn giản nhưng đáng yêu.  Hình in trên áo là một cô gái hoạt hình với mái tóc dài, đội mũ và mặc váy, tạo cảm giác",
+    "cleaned_caption": "Ảnh chụp một chiếc áo thun nữ màu hồng nhạt, thiết kế đơn giản nhưng đáng yêu.  Hình in trên áo là một cô gái hoạt hình với mái tóc dài, đội mũ và mặc váy, tạo cảm giác",
+    "latency_sec": 10.103,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "7829": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc áo thun nữ màu xám nhạt, có viền tay áo màu xanh đậm. Áo có in chữ \"PAULINE\" màu xanh đậm, bên dưới là dòng chữ",
+    "cleaned_caption": "áo thun nữ màu xám nhạt, có viền tay áo màu xanh đậm. Áo có in chữ \"PAULINE\" màu xanh đậm, bên dưới là dòng chữ",
+    "latency_sec": 9.846,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "8313": {
+    "raw_caption": "Hình ảnh hiển thị một chiếc túi xách tote màu đen. Đây là một chiếc túi xách nữ, có quai xách chắc chắn.  Thiết kế của túi khá đơn giản, với phần thân túi được làm từ chất",
+    "cleaned_caption": "túi xách tote màu đen. Đây là một chiếc túi xách nữ, có quai xách chắc chắn.  Thiết kế của túi khá đơn giản, với phần thân túi được làm từ chất",
+    "latency_sec": 9.982,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "8467": {
+    "raw_caption": "Ảnh chụp một người phụ nữ mặc áo sơ mi màu xanh dương đậm, chất liệu có vẻ là cotton hoặc linen, cổ áo sơ mi. Cô ấy đeo một chiếc khăn quàng cổ màu xanh dương đậm, kiểu",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ mặc áo sơ mi màu xanh dương đậm, chất liệu có vẻ là cotton hoặc linen, cổ áo sơ mi. Cô ấy đeo một chiếc khăn quàng cổ màu xanh dương đậm, kiểu",
+    "latency_sec": 10.133,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "8490": {
+    "raw_caption": "Ảnh chụp một người phụ nữ trẻ mặc một chiếc áo crop top màu trắng kem, chất liệu vải ren mềm mại. Áo có kiểu dáng ôm sát cơ thể, tay ngắn, có viền ren ở phần cổ",
+    "cleaned_caption": "Ảnh chụp một người phụ nữ trẻ mặc một chiếc áo crop top màu trắng kem, chất liệu vải ren mềm mại. Áo có kiểu dáng ôm sát cơ thể, tay ngắn, có viền ren ở phần cổ",
+    "latency_sec": 10.758,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "8752": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày dép nữ nhỏ nhắn, màu tím nhạt.  Đây là loại giày dép có kiểu dáng đơn giản, với phần thân giày được làm từ chất liệu nhựa dường như là",
+    "cleaned_caption": "giày dép nữ nhỏ nhắn, màu tím nhạt.  Đây là loại giày dép có kiểu dáng đơn giản, với phần thân giày được làm từ chất liệu nhựa dường như là",
+    "latency_sec": 10.823,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "9029": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày nam màu nâu đất.  Đây là một đôi giày nam cổ điển, kiểu dáng đơn giản nhưng lịch sự.  Màu sắc chủ đạo là nâu đất, tạo cảm giác",
+    "cleaned_caption": "giày nam màu nâu đất.  Đây là một đôi giày nam cổ điển, kiểu dáng đơn giản nhưng lịch sự.  Màu sắc chủ đạo là nâu đất, tạo cảm giác",
+    "latency_sec": 10.075,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "9385": {
+    "raw_caption": "Hình ảnh hiển thị một đôi giày bóng đá nữ.  Đôi giày có màu xám đen chủ đạo, với logo Nike màu xanh neon nổi bật ở phía trước.  Kiểu dáng giày là kiểu gi",
+    "cleaned_caption": "giày bóng đá nữ.  Đôi giày có màu xám đen chủ đạo, với logo Nike màu xanh neon nổi bật ở phía trước.  Kiểu dáng giày là kiểu gi",
+    "latency_sec": 10.135,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "9709": {
+    "raw_caption": "Ảnh chụp một người đàn ông mặc áo sơ mi kẻ caro xanh lá cây và xanh dương. Áo có kiểu dáng đơn giản, cổ điển, tay ngắn, có hai túi ở hai bên ngực.  Mà",
+    "cleaned_caption": "Ảnh chụp một người đàn ông mặc áo sơ mi kẻ caro xanh lá cây và xanh dương. Áo có kiểu dáng đơn giản, cổ điển, tay ngắn, có hai túi ở hai bên ngực.  Mà",
+    "latency_sec": 10.107,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  },
+  "9821": {
+    "raw_caption": "Đây là một chiếc áo thun nữ màu tím nhạt, kiểu dáng đơn giản, tay ngắn.  Trên áo có in hình một chú chim nhỏ màu vàng tươi với dòng chữ \"LITTLE MISS SUNSHINE\"",
+    "cleaned_caption": "áo thun nữ màu tím nhạt, kiểu dáng đơn giản, tay ngắn.  Trên áo có in hình một chú chim nhỏ màu vàng tươi với dòng chữ \"LITTLE MISS SUNSHINE\"",
+    "latency_sec": 10.022,
+    "model_id": "5CD-AI/Vintern-1B-v3_5",
+    "revision": "b98f263eab246eb5269ade64edbdca8a887dc44d",
+    "seed": 42
+  }
+}

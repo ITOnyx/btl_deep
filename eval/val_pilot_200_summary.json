@@ -1,0 +1,17 @@
+{
+  "n_samples": 200,
+  "seed": 42,
+  "config_A": {
+    "gt_128_rate": 0.0,
+    "zh_rate": 0.0,
+    "en_rate": 0.0,
+    "meta_match_rate": 0.0
+  },
+  "config_B": {
+    "gt_128_rate": 0.0,
+    "zh_rate": 0.0,
+    "en_rate": 1.5,
+    "meta_match_rate": 100.0
+  },
+  "stop_gate_config_B_triggered": false
+}

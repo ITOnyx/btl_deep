@@ -1,0 +1,308 @@
+{
+  "overall": {
+    "n_pairs": 120,
+    "cir_v1_01_vs_baseline": {
+      "n_pairs": 120,
+      "small_n_warning": null,
+      "comparison": "cir_v1_01 vs cir_i2i_baseline",
+      "recall@1": {
+        "mean_diff": 0.06666666666666667,
+        "ci_low": 0.025,
+        "ci_high": 0.11666666666666667,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_v1_01 hơn cir_i2i_baseline)"
+      },
+      "recall@5": {
+        "mean_diff": -0.14166666666666666,
+        "ci_low": -0.23354166666666665,
+        "ci_high": -0.03333333333333333,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+      },
+      "recall@10": {
+        "mean_diff": -0.31666666666666665,
+        "ci_low": -0.4166666666666667,
+        "ci_high": -0.21645833333333353,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+      },
+      "mAP": {
+        "mean_diff": -0.057279645384885586,
+        "ci_low": -0.08527300737130958,
+        "ci_high": -0.031253713293430775,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+      }
+    },
+    "cir_v1_05_vs_baseline": {
+      "n_pairs": 120,
+      "small_n_warning": null,
+      "comparison": "cir_v1_05 vs cir_i2i_baseline",
+      "recall@1": {
+        "mean_diff": 0.3,
+        "ci_low": 0.21666666666666667,
+        "ci_high": 0.38333333333333336,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+      },
+      "recall@5": {
+        "mean_diff": 0.16666666666666666,
+        "ci_low": 0.05812500000000001,
+        "ci_high": 0.2833333333333333,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+      },
+      "recall@10": {
+        "mean_diff": 0.016666666666666666,
+        "ci_low": -0.08333333333333333,
+        "ci_high": 0.11666666666666667,
+        "n": 120,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      },
+      "mAP": {
+        "mean_diff": 0.17154253519497212,
+        "ci_low": 0.12129838576299823,
+        "ci_high": 0.22496322388227855,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+      }
+    },
+    "cir_v1_05_vs_cir_v1_01": {
+      "n_pairs": 120,
+      "small_n_warning": null,
+      "comparison": "cir_v1_05 vs cir_v1_01",
+      "recall@1": {
+        "mean_diff": 0.23333333333333334,
+        "ci_low": 0.15833333333333333,
+        "ci_high": 0.30833333333333335,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      },
+      "recall@5": {
+        "mean_diff": 0.30833333333333335,
+        "ci_low": 0.225,
+        "ci_high": 0.38333333333333336,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      },
+      "recall@10": {
+        "mean_diff": 0.3333333333333333,
+        "ci_low": 0.25,
+        "ci_high": 0.40854166666666647,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      },
+      "mAP": {
+        "mean_diff": 0.2288221805798577,
+        "ci_low": 0.18331244728009166,
+        "ci_high": 0.27480950496732853,
+        "n": 120,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      }
+    }
+  },
+  "baseColour": {
+    "n_pairs": 80,
+    "cir_v1_01_vs_baseline": {
+      "n_pairs": 80,
+      "small_n_warning": null,
+      "comparison": "cir_v1_01 vs cir_i2i_baseline",
+      "recall@1": {
+        "mean_diff": 0.075,
+        "ci_low": 0.025,
+        "ci_high": 0.15,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_v1_01 hơn cir_i2i_baseline)"
+      },
+      "recall@5": {
+        "mean_diff": -0.1875,
+        "ci_low": -0.3125,
+        "ci_high": -0.0625,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+      },
+      "recall@10": {
+        "mean_diff": -0.3625,
+        "ci_low": -0.4875,
+        "ci_high": -0.2375,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+      },
+      "mAP": {
+        "mean_diff": -0.07258910097504061,
+        "ci_low": -0.11056862398181548,
+        "ci_high": -0.033658176061215093,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+      }
+    },
+    "cir_v1_05_vs_baseline": {
+      "n_pairs": 80,
+      "small_n_warning": null,
+      "comparison": "cir_v1_05 vs cir_i2i_baseline",
+      "recall@1": {
+        "mean_diff": 0.4,
+        "ci_low": 0.3,
+        "ci_high": 0.5125,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+      },
+      "recall@5": {
+        "mean_diff": 0.25,
+        "ci_low": 0.1125,
+        "ci_high": 0.3875,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+      },
+      "recall@10": {
+        "mean_diff": 0.0625,
+        "ci_low": -0.05,
+        "ci_high": 0.16281249999999972,
+        "n": 80,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      },
+      "mAP": {
+        "mean_diff": 0.2495417522263316,
+        "ci_low": 0.18458761028328027,
+        "ci_high": 0.3134870064256681,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+      }
+    },
+    "cir_v1_05_vs_cir_v1_01": {
+      "n_pairs": 80,
+      "small_n_warning": null,
+      "comparison": "cir_v1_05 vs cir_v1_01",
+      "recall@1": {
+        "mean_diff": 0.325,
+        "ci_low": 0.225,
+        "ci_high": 0.425,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      },
+      "recall@5": {
+        "mean_diff": 0.4375,
+        "ci_low": 0.3375,
+        "ci_high": 0.55,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      },
+      "recall@10": {
+        "mean_diff": 0.425,
+        "ci_low": 0.325,
+        "ci_high": 0.525,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      },
+      "mAP": {
+        "mean_diff": 0.32213085320137225,
+        "ci_low": 0.26190990004098325,
+        "ci_high": 0.3809124278848506,
+        "n": 80,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      }
+    }
+  },
+  "gender": {
+    "n_pairs": 40,
+    "cir_v1_01_vs_baseline": {
+      "n_pairs": 40,
+      "small_n_warning": null,
+      "comparison": "cir_v1_01 vs cir_i2i_baseline",
+      "recall@1": {
+        "mean_diff": 0.05,
+        "ci_low": 0.0,
+        "ci_high": 0.125,
+        "n": 40,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      },
+      "recall@5": {
+        "mean_diff": -0.05,
+        "ci_low": -0.2,
+        "ci_high": 0.1,
+        "n": 40,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      },
+      "recall@10": {
+        "mean_diff": -0.225,
+        "ci_low": -0.4,
+        "ci_high": -0.05,
+        "n": 40,
+        "label": "Khác biệt có ý nghĩa (cir_i2i_baseline hơn cir_v1_01)"
+      },
+      "mAP": {
+        "mean_diff": -0.026660734204575542,
+        "ci_low": -0.05785219308775159,
+        "ci_high": 0.007417868787330406,
+        "n": 40,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      }
+    },
+    "cir_v1_05_vs_baseline": {
+      "n_pairs": 40,
+      "small_n_warning": null,
+      "comparison": "cir_v1_05 vs cir_i2i_baseline",
+      "recall@1": {
+        "mean_diff": 0.1,
+        "ci_low": 0.025,
+        "ci_high": 0.2,
+        "n": 40,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_i2i_baseline)"
+      },
+      "recall@5": {
+        "mean_diff": 0.0,
+        "ci_low": -0.15,
+        "ci_high": 0.175,
+        "n": 40,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      },
+      "recall@10": {
+        "mean_diff": -0.075,
+        "ci_low": -0.275,
+        "ci_high": 0.1,
+        "n": 40,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      },
+      "mAP": {
+        "mean_diff": 0.015544101132253208,
+        "ci_low": -0.029148389216929884,
+        "ci_high": 0.063680005735603,
+        "n": 40,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      }
+    },
+    "cir_v1_05_vs_cir_v1_01": {
+      "n_pairs": 40,
+      "small_n_warning": null,
+      "comparison": "cir_v1_05 vs cir_v1_01",
+      "recall@1": {
+        "mean_diff": 0.05,
+        "ci_low": 0.0,
+        "ci_high": 0.125,
+        "n": 40,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      },
+      "recall@5": {
+        "mean_diff": 0.05,
+        "ci_low": 0.0,
+        "ci_high": 0.125,
+        "n": 40,
+        "label": "Chưa kết luận được (CI chứa hoặc chạm 0)"
+      },
+      "recall@10": {
+        "mean_diff": 0.15,
+        "ci_low": 0.05,
+        "ci_high": 0.275,
+        "n": 40,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      },
+      "mAP": {
+        "mean_diff": 0.04220483533682874,
+        "ci_low": 0.017879067345569242,
+        "ci_high": 0.07350386039226892,
+        "n": 40,
+        "label": "Khác biệt có ý nghĩa (cir_v1_05 hơn cir_v1_01)"
+      }
+    }
+  }
+}

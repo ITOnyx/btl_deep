@@ -1,0 +1,1035 @@
+{
+  "status": "HALTED_PROMPT14D_STEP2_GPU_PROCESSES_STILL_ACTIVE",
+  "branch": "phase7a",
+  "git_commit": "f22b57033e083bbf900ca05c7464187a17436993",
+  "seed": 42,
+  "timestamp_local": "2026-11-14 22:12:18 +07:00",
+  "preserved_halted_reports": {
+    "prompt14_preflight": [
+      "reports/phase5c/final_eval_report_halted_preflight.md",
+      "reports/phase5c/final_eval_results_halted_preflight.json"
+    ],
+    "prompt14b": [
+      "reports/phase5c/final_eval_report_halted_prompt14b.md",
+      "reports/phase5c/final_eval_results_halted_prompt14b.json"
+    ],
+    "prompt14c": [
+      "reports/phase5c/final_eval_report_halted_prompt14c.md",
+      "reports/phase5c/final_eval_results_halted_prompt14c.json"
+    ]
+  },
+  "step_1a_hash_check": {
+    "all_locked_hashes_matched": true,
+    "locked_hashes": {
+      "best_model_pt": {
+        "path": "data/checkpoints_siglip-vit/best_model.pt",
+        "expected_sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "actual_sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matched": true
+      },
+      "selection_rule_v5": {
+        "path": "reports/phase5c/selection_rule_v5.json",
+        "expected_sha256": "e3d75ec5df7ab6de4cb9ad07e21b9c1a58c5c029c3a9b7749f28518c6c4f0c8c",
+        "actual_sha256": "e3d75ec5df7ab6de4cb9ad07e21b9c1a58c5c029c3a9b7749f28518c6c4f0c8c",
+        "matched": true
+      },
+      "selection_rule_cir_v1": {
+        "path": "reports/phase5c/selection_rule_cir_v1.json",
+        "expected_sha256": "4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067",
+        "actual_sha256": "4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067",
+        "matched": true
+      },
+      "cir_eval_test": {
+        "path": "eval/cir_eval_test.json",
+        "expected_sha256": "d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b",
+        "actual_sha256": "d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b",
+        "matched": true
+      },
+      "test_split": {
+        "path": "eval/test_split.json",
+        "expected_sha256": "d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681",
+        "actual_sha256": "d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681",
+        "matched": true
+      },
+      "catalog_rebuild": {
+        "path": "data/catalog/catalog_rebuild.parquet",
+        "expected_sha256": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+        "actual_sha256": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+        "matched": true
+      },
+      "locked_final_definitions_py": {
+        "path": "src/eval/locked_final_definitions.py",
+        "expected_sha256": "d8d7ef1926a2b6f1db348a13d0c87af7bfb48a2ca06530a1c141c8e14da2aca7",
+        "actual_sha256": "d8d7ef1926a2b6f1db348a13d0c87af7bfb48a2ca06530a1c141c8e14da2aca7",
+        "matched": true
+      },
+      "build_val_text_index_v5_py": {
+        "path": "scripts/build_val_text_index_v5.py",
+        "expected_sha256": "da87e18c0027c769a072d99d59fe47e7c5e2fc9a71f1a4116c9280d232d2e867",
+        "actual_sha256": "da87e18c0027c769a072d99d59fe47e7c5e2fc9a71f1a4116c9280d232d2e867",
+        "matched": true
+      },
+      "test_queries_heldout_v2": {
+        "path": "eval/test_queries_heldout_v2.json",
+        "exists": false,
+        "actual_sha256": null
+      }
+    },
+    "test_gallery_image_index": {
+      "manifest_path": "index/test_gallery/manifest.json",
+      "manifest_sha256": "57348838c4aa920e853ba004b60f5f4a1b6fdebbc1d59043cd122691867f92aa",
+      "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+      "catalog_hash": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+      "checkpoint_hash_matches_config": true,
+      "n_vectors": 1290
+    },
+    "test_gallery_text_v5": {
+      "manifest_path": "index/test_gallery_text_v5/manifest.json",
+      "manifest_sha256": "286fe59ed6c2348dd9815263085269fd688993c83e1ede91d9152344184a2477",
+      "manifest_sha256_prefix_286fe59e_matched": true,
+      "rebuilt_or_modified": false,
+      "hash_guard_and_sanity": {
+        "passed": true,
+        "checkpoint_hash_match": true,
+        "catalog_hash_match": true,
+        "n_vectors": 1290,
+        "expected_n_vectors": 1290,
+        "n_vectors_match": true,
+        "n_duplicate_ids": 0,
+        "id_order_matches_gallery_id_map": true,
+        "id_order_sha256": "6ca5bbf0b268103da2b901538effc004057faa817e7473d96dd49395418ee282",
+        "files": {
+          "internvl2_only_embeddings": {
+            "file": "internvl2_only_embeddings.npy",
+            "sha256": "7d4344b33194cc01b8a211b978e82357ef7b04ec65f3a435895e8b4efb58aaf3",
+            "sha256_matches_manifest": true,
+            "shape": [
+              1290,
+              1152
+            ],
+            "dtype": "float32",
+            "nan_or_inf_count": 0,
+            "l2_norm_min": 0.9996054172515869,
+            "l2_norm_mean": 1.0000354051589966,
+            "l2_norm_max": 1.0003639459609985,
+            "l2_norm_ok": true,
+            "passed": true
+          },
+          "internvl2_plus_aux_embeddings": {
+            "file": "internvl2_plus_aux_embeddings.npy",
+            "sha256": "53c75ab8a110a0053fc5e1d74d8a0407c14aebe2f9744d4f65f104fb1084d450",
+            "sha256_matches_manifest": true,
+            "shape": [
+              1290,
+              1152
+            ],
+            "dtype": "float32",
+            "nan_or_inf_count": 0,
+            "l2_norm_min": 0.9995230436325073,
+            "l2_norm_mean": 1.0000028610229492,
+            "l2_norm_max": 1.0004714727401733,
+            "l2_norm_ok": true,
+            "passed": true
+          },
+          "metadata_aux_embeddings": {
+            "file": "metadata_aux_embeddings.npy",
+            "sha256": "0339efc1e3799fe2d449b92c412f7a06742190b44f9d716bbf9b2f30c5eb101c",
+            "sha256_matches_manifest": true,
+            "shape": [
+              1290,
+              1152
+            ],
+            "dtype": "float32",
+            "nan_or_inf_count": 0,
+            "l2_norm_min": 0.9995219707489014,
+            "l2_norm_mean": 1.0000081062316895,
+            "l2_norm_max": 1.0004698038101196,
+            "l2_norm_ok": true,
+            "passed": true
+          }
+        }
+      }
+    }
+  },
+  "step_1b_caption_audit": {
+    "q1_raw_caption_storage": {
+      "raw_caption_column_in_shard_test_parquet": false,
+      "shard_test_columns": [
+        "product_id",
+        "source",
+        "image_path",
+        "loc_status",
+        "title_raw",
+        "title_vi",
+        "articleType",
+        "articleType_vi",
+        "articleType_vi_nodiacritics",
+        "gender",
+        "gender_vi",
+        "gender_vi_nodiacritics",
+        "baseColour",
+        "baseColour_vi",
+        "baseColour_vi_nodiacritics",
+        "masterCategory",
+        "subCategory",
+        "label_origin",
+        "is_test_candidate",
+        "filter_flag",
+        "blur_score",
+        "short_side",
+        "width",
+        "height",
+        "sha1",
+        "phash",
+        "in_scope",
+        "split",
+        "caption_model",
+        "model_revision",
+        "seed",
+        "gen_params",
+        "method",
+        "caption_vi",
+        "token_len",
+        "combination_method",
+        "caption_A",
+        "caption_B",
+        "caption_C",
+        "merge_conflicts"
+      ],
+      "cache_core_or_aux_test_json_files_on_disk": 0,
+      "unlinked_by_script": "src/caption/batch_runner.py lines 190-193 (shard_cache_core_path.unlink(), shard_cache_aux_path.unlink())",
+      "saved_raw_caption_count_test_shards_1500": 0,
+      "saved_raw_caption_count_test_gallery_1290": 0,
+      "pilot_cache_overlap_with_test_1500": 0,
+      "pilot_cache_overlap_with_test_1290": 0
+    },
+    "q2_splitter_and_generator_comparison": {
+      "merger_file": "src/caption/merger.py",
+      "merger_last_commit": "dfc150ad90edc9d426892a4cbf32eb0221b24955",
+      "merger_last_commit_date": "2026-11-12 09:21:45 +0700",
+      "merger_changed_between_test_and_val": false,
+      "generator_file": "src/caption/generator.py",
+      "generator_commit_before_shard_test_0001": "98aed711125e57d75c5cedb796ca9e4b4d0adcb1 (2026-11-12 09:34:50 +0700, max_new_tokens=96, max_num=2, use_thumbnail=True)",
+      "generator_commit_from_shard_test_0001_and_val": "2e057d6bf870b4281fe556e03f2e0c2bf9d5a076 (2026-11-12 17:43:50 +0700, max_new_tokens=48, max_num=1, use_thumbnail=False)",
+      "per_shard_breakdown": [
+        {
+          "shard_name": "shard_test_0000.parquet",
+          "sha256": "9cf154b9c1f8f33adadb209fb234ac731a03b685c7988a42c8ffda295581d690",
+          "mtime_local": "2026-11-12 18:57:06",
+          "n_rows_total": 500,
+          "n_rows_in_test_gallery": 442,
+          "has_raw_caption_column": false,
+          "all_rows_caption_A_le_6_tokens": 456,
+          "all_rows_caption_A_starts_1_dot": 458,
+          "all_rows_caption_A_eq_68_tokens": 0,
+          "test_gallery_caption_A_le_6_tokens": 411,
+          "test_gallery_caption_A_starts_1_dot": 413,
+          "test_gallery_caption_A_eq_68_tokens": 0,
+          "test_gallery_caption_B_contains_1_Th": 0
+        },
+        {
+          "shard_name": "shard_test_0001.parquet",
+          "sha256": "32db89eebeb87982714add0af4be9126644a77e3f4502698da5044e03c10c03c",
+          "mtime_local": "2026-11-12 23:31:43",
+          "n_rows_total": 500,
+          "n_rows_in_test_gallery": 419,
+          "has_raw_caption_column": false,
+          "all_rows_caption_A_le_6_tokens": 0,
+          "all_rows_caption_A_starts_1_dot": 0,
+          "all_rows_caption_A_eq_68_tokens": 493,
+          "test_gallery_caption_A_le_6_tokens": 0,
+          "test_gallery_caption_A_starts_1_dot": 0,
+          "test_gallery_caption_A_eq_68_tokens": 418,
+          "test_gallery_caption_B_contains_1_Th": 0
+        },
+        {
+          "shard_name": "shard_test_0002.parquet",
+          "sha256": "e888366e043a5ba13d751669ddcdd032925eeb29073d7a0e08d92c8b4d9af7c2",
+          "mtime_local": "2026-11-13 01:52:11",
+          "n_rows_total": 500,
+          "n_rows_in_test_gallery": 429,
+          "has_raw_caption_column": false,
+          "all_rows_caption_A_le_6_tokens": 0,
+          "all_rows_caption_A_starts_1_dot": 0,
+          "all_rows_caption_A_eq_68_tokens": 491,
+          "test_gallery_caption_A_le_6_tokens": 0,
+          "test_gallery_caption_A_starts_1_dot": 0,
+          "test_gallery_caption_A_eq_68_tokens": 425,
+          "test_gallery_caption_B_contains_1_Th": 0
+        }
+      ],
+      "val_gallery_1884_exact_68tok_echo_count": 1859,
+      "test_gallery_1290_exact_68tok_echo_count": 841,
+      "root_cause_summary": "Hàm clean_introductory_phrases() và merge_caption_v1() trong src/caption/merger.py KHÔNG thay đổi giữa shard_test và shard_val (cùng khóa từ commit dfc150a lúc 09:21:45 ngày 12/11/2026). Sự khác biệt nằm ở commit 2e057d6 (17:43:50 ngày 12/11/2026) trong src/caption/generator.py khi giảm max_new_tokens từ 96 xuống 48 (và max_num từ 2 xuống 1): (1) Ở shard_test_0000 (chạy Stage 1 trước 17:43:50 với max_new_tokens=96), InternVL2-2B lặp lại (echo) đề bài tới cụm 'YÊU CẦU BẮT BUỘC:\\n\\n1. Thô' (có dấu hai chấm ':'), nên regex số 3 r'^(mô tả ngắn gọn...|yêu cầu bắt buộc)[\\s\\S]*?:\\s*' trong clean_introductory_phrases() cắt toàn bộ phần trước dấu ':', để lại '1. Thô' (393/1,290 mục <= 6 token; 413/1,290 mục bắt đầu bằng '1.'). (2) Ở shard_test_0001, shard_test_0002 và toàn bộ shard_val_0000..0003 (chạy với max_new_tokens=48), chuỗi echo đề bài dừng ở 'Mô tả ngắn gọn, súc tích sản phẩm thời trang trong hình bằng' (68 token SigLIP, chưa tới dấu ':'), nên regex số 3 không khớp và giữ nguyên 68 token echo đề bài (841/1,290 mục test và 1,859/1,884 mục val). (3) Với caption_B (merge_v1), cả ở val lẫn test, phần thân lấy từ caption_C (Vintern-1B-v3_5) đứng trước và giới hạn ở <= 128 token nên 0/1,290 mục test chứa '1. Th' trong caption_B."
+    },
+    "q3_recovery_count_without_model": {
+      "truncated_eq_1_Tho_6chars_in_test_gallery": 405,
+      "truncated_eq_1_star_Th_7chars_in_test_gallery": 6,
+      "truncated_eq_1_Thong_8chars_in_test_gallery": 2,
+      "truncated_le_6_tokens_in_test_gallery": 411,
+      "starts_with_1_dot_in_test_gallery": 413,
+      "recoverable_from_disk_without_running_model": 0,
+      "n_changed_if_reapplying_clean_introductory_phrases_on_saved_caption_A": 0,
+      "token_len_min_after_reapply": 4,
+      "token_len_median_after_reapply": 68.0,
+      "token_len_mean_after_reapply": 49.31,
+      "pilot_200_reference_raw_1tho_count": 185,
+      "pilot_200_reference_raw_1tho_siglip_tokens": 120
+    },
+    "q4_cfg_v5_caption_dependency": {
+      "total_v5_configs": 12,
+      "configs_using_caption_index": [
+        "cfg_v5_08a",
+        "cfg_v5_08b"
+      ],
+      "configs_not_using_caption_index": [
+        "cfg_v5_01",
+        "cfg_v5_02",
+        "cfg_v5_03",
+        "cfg_v5_04",
+        "cfg_v5_05",
+        "cfg_v5_06",
+        "cfg_v5_07",
+        "cfg_v5_09",
+        "cfg_v5_10",
+        "cfg_v5_11"
+      ],
+      "cfg_v5_09_depends_on_test_caption_index": false,
+      "cfg_v5_01_depends_on_test_caption_index": false,
+      "cfg_v5_06_depends_on_test_caption_index": false,
+      "model_only_depends_on_test_caption_index": false,
+      "cfg_v5_08b_uses_file": "internvl2_plus_aux_embeddings.npy (caption_B = merge_v1, 0/1,290 mục chứa '1. Th')",
+      "cfg_v5_08a_uses_file": "internvl2_only_embeddings.npy (caption_A, có 393/1,290 mục <= 6 token)",
+      "config_table": [
+        {
+          "config_id": "cfg_v5_01",
+          "role": "v4_winner_baseline",
+          "gamma": 1.5,
+          "i3_mode": "none",
+          "conf_gating": false,
+          "fuzzy_typo": false,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        },
+        {
+          "config_id": "cfg_v5_02",
+          "role": "i3_direct_equivalence_latency_only",
+          "gamma": 1.5,
+          "i3_mode": "direct",
+          "conf_gating": false,
+          "fuzzy_typo": false,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        },
+        {
+          "config_id": "cfg_v5_03",
+          "role": "i3_cached_equivalence_latency_only",
+          "gamma": 1.5,
+          "i3_mode": "cached",
+          "conf_gating": false,
+          "fuzzy_typo": false,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        },
+        {
+          "config_id": "cfg_v5_04",
+          "role": "tier_soft_plus_i3_cached",
+          "gamma": 1.5,
+          "i3_mode": "cached",
+          "conf_gating": false,
+          "fuzzy_typo": false,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        },
+        {
+          "config_id": "cfg_v5_05",
+          "role": "ablation_I2_on_04",
+          "gamma": 1.5,
+          "i3_mode": "cached",
+          "conf_gating": true,
+          "fuzzy_typo": false,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        },
+        {
+          "config_id": "cfg_v5_06",
+          "role": "ablation_I7_on_04",
+          "gamma": 1.5,
+          "i3_mode": "cached",
+          "conf_gating": false,
+          "fuzzy_typo": true,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        },
+        {
+          "config_id": "cfg_v5_07",
+          "role": "combo_I2_I7_on_04",
+          "gamma": 1.5,
+          "i3_mode": "cached",
+          "conf_gating": true,
+          "fuzzy_typo": true,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        },
+        {
+          "config_id": "cfg_v5_08a",
+          "role": "ablation_I5_internvl2_only_on_04",
+          "gamma": 1.5,
+          "i3_mode": "cached",
+          "conf_gating": false,
+          "fuzzy_typo": false,
+          "text_gallery": "internvl2_only",
+          "text_alpha": 0.85,
+          "uses_test_caption_index": true,
+          "npy_file_used": "internvl2_only_embeddings.npy (caption_A)"
+        },
+        {
+          "config_id": "cfg_v5_08b",
+          "role": "ablation_I5_internvl2_plus_aux_on_04",
+          "gamma": 1.5,
+          "i3_mode": "cached",
+          "conf_gating": false,
+          "fuzzy_typo": false,
+          "text_gallery": "internvl2_plus_aux",
+          "text_alpha": 0.85,
+          "uses_test_caption_index": true,
+          "npy_file_used": "internvl2_plus_aux_embeddings.npy (caption_B = merge_v1)"
+        },
+        {
+          "config_id": "cfg_v5_09",
+          "role": "gamma_sweep_tier_soft_1.0",
+          "gamma": 1.0,
+          "i3_mode": "cached",
+          "conf_gating": false,
+          "fuzzy_typo": false,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        },
+        {
+          "config_id": "cfg_v5_10",
+          "role": "gamma_sweep_tier_soft_2.0",
+          "gamma": 2.0,
+          "i3_mode": "cached",
+          "conf_gating": false,
+          "fuzzy_typo": false,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        },
+        {
+          "config_id": "cfg_v5_11",
+          "role": "gamma_sweep_tier_soft_3.0",
+          "gamma": 3.0,
+          "i3_mode": "cached",
+          "conf_gating": false,
+          "fuzzy_typo": false,
+          "text_gallery": "none",
+          "text_alpha": 1.0,
+          "uses_test_caption_index": false,
+          "npy_file_used": "none"
+        }
+      ]
+    },
+    "q5_metadata_aux_and_vi_sources": {
+      "v5_configs_using_metadata_aux": [],
+      "cir_v1_configs_using_metadata_aux": [],
+      "n_configs_using_metadata_aux": 0,
+      "impact_on_v5_and_cir_v1_eval": "Không ảnh hưởng (0 cấu hình trong selection_rule_v5.json và selection_rule_cir_v1.json sử dụng metadata_aux_embeddings.npy; selection_rule_v5.json dòng 40 khóa forbid_title_vi=true).",
+      "test_gallery_n_items": 1290,
+      "id_map_json_vi_non_empty_counts": {
+        "title_vi": 0,
+        "articleType_vi": 0,
+        "gender_vi": 0,
+        "baseColour_vi": 0
+      },
+      "catalog_rebuild_parquet_vi_non_empty_counts": {
+        "title_vi": 1290,
+        "articleType_vi": 1290,
+        "gender_vi": 1290,
+        "baseColour_vi": 1290
+      },
+      "shard_test_parquet_vi_non_empty_counts": {
+        "title_vi": 1290,
+        "articleType_vi": 1290,
+        "gender_vi": 1290,
+        "baseColour_vi": 1290
+      }
+    },
+    "q6_unverifiable_items": [
+      "Không xác minh được nội dung từng ký tự của raw_caption (trước bước clean_introductory_phrases) trên 1,500 mục của shard_test_0000..0002.parquet (1,290 mục test_gallery), vì src/caption/batch_runner.py không lưu cột raw_caption vào tệp .parquet và đã xóa (unlink) tệp cache_core_test_0000..0002.json ngay sau khi hoàn tất mỗi shard vào ngày 12–13/11/2026.",
+      "Không xác minh được nếu chạy lại InternVL2-2B với prompt khác hoặc giải pháp chống lặp đề bài trên 1,290 ảnh test_gallery thì caption_A (internvl2_only) sẽ thay đổi điểm số của cfg_v5_08a bao nhiêu nếu không thực sự chạy lại model VLM."
+    ]
+  },
+  "step_2_gpu_check": {
+    "checked_at_local": "2026-11-14 22:06:14",
+    "agent_python_pid": 15912,
+    "nvidia_smi_raw": "Sat Nov 14 22:05:42 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 560.76                 Driver Version: 560.76         CUDA Version: 12.6     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 2050      WDDM  |   00000000:01:00.0 Off |                  N/A |\n| N/A   59C    P5              4W /   35W |     236MiB /   4096MiB |     31%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A      1560    C+G   C:\\Windows\\System32\\ShellHost.exe           N/A      |\n|    0   N/A  N/A      1596    C+G   ...rograms\\antigravity\\Antigravity.exe      N/A      |\n|    0   N/A  N/A      2912    C+G   ...rograms\\antigravity\\Antigravity.exe      N/A      |\n|    0   N/A  N/A      3588    C+G   ...4__8wekyb3d8bbwe\\EdgeGameAssist.exe      N/A      |\n|    0   N/A  N/A     12004    C+G   ...cw5n1h2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A     12964    C+G   ...nt.CBS_cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A     12976    C+G   ...2txyewy\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A     13176    C+G   ..._x64__cw5n1h2txyewy\\WidgetBoard.exe      N/A      |\n|    0   N/A  N/A     13356    C+G   ...on\\157.0.4341.46\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A     16284    C+G   ...er\\ldmutiplayer\\dnmultiplayerex.exe      N/A      |\n|    0   N/A  N/A     17140    C+G   ...CBS_cw5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A     22288    C+G   ...ekyb3d8bbwe\\PhoneExperienceHost.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+    "processes": [
+      {
+        "pid": 1560,
+        "type": "C+G",
+        "nvidia_smi_name": "C:\\Windows\\System32\\ShellHost.exe",
+        "gpu_memory": "N/A",
+        "process_name": "ShellHost.exe",
+        "executable_path": "C:\\Windows\\System32\\ShellHost.exe",
+        "parent_pid": 10500,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      },
+      {
+        "pid": 1596,
+        "type": "C+G",
+        "nvidia_smi_name": "...rograms\\antigravity\\Antigravity.exe",
+        "gpu_memory": "N/A",
+        "process_name": "Antigravity.exe",
+        "executable_path": "C:\\Users\\nguye\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe",
+        "parent_pid": 12056,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      },
+      {
+        "pid": 2912,
+        "type": "C+G",
+        "nvidia_smi_name": "...rograms\\antigravity\\Antigravity.exe",
+        "gpu_memory": "N/A",
+        "process_name": "Antigravity.exe",
+        "executable_path": "C:\\Users\\nguye\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe",
+        "parent_pid": 12056,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      },
+      {
+        "pid": 3588,
+        "type": "C+G",
+        "nvidia_smi_name": "...4__8wekyb3d8bbwe\\EdgeGameAssist.exe",
+        "gpu_memory": "N/A",
+        "process_name": "EdgeGameAssist.exe",
+        "executable_path": "C:\\Program Files\\WindowsApps\\Microsoft.Edge.GameAssist_1.0.4019.0_x64__8wekyb3d8bbwe\\EdgeGameAssist.exe",
+        "parent_pid": 1540,
+        "classification": "FORBIDDEN_GAME_OR_EMULATOR"
+      },
+      {
+        "pid": 12004,
+        "type": "C+G",
+        "nvidia_smi_name": "...cw5n1h2txyewy\\CrossDeviceResume.exe",
+        "gpu_memory": "N/A",
+        "process_name": "CrossDeviceResume.exe",
+        "executable_path": "C:\\WINDOWS\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\CrossDeviceResume.exe",
+        "parent_pid": 10500,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      },
+      {
+        "pid": 12964,
+        "type": "C+G",
+        "nvidia_smi_name": "...nt.CBS_cw5n1h2txyewy\\SearchHost.exe",
+        "gpu_memory": "N/A",
+        "process_name": "SearchHost.exe",
+        "executable_path": "C:\\WINDOWS\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\SearchHost.exe",
+        "parent_pid": 1540,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      },
+      {
+        "pid": 12976,
+        "type": "C+G",
+        "nvidia_smi_name": "...2txyewy\\StartMenuExperienceHost.exe",
+        "gpu_memory": "N/A",
+        "process_name": "StartMenuExperienceHost.exe",
+        "executable_path": "C:\\WINDOWS\\SystemApps\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\StartMenuExperienceHost.exe",
+        "parent_pid": 1540,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      },
+      {
+        "pid": 13176,
+        "type": "C+G",
+        "nvidia_smi_name": "..._x64__cw5n1h2txyewy\\WidgetBoard.exe",
+        "gpu_memory": "N/A",
+        "process_name": "WidgetBoard.exe",
+        "executable_path": "C:\\Program Files\\WindowsApps\\MicrosoftWindows.Client.WebExperience_526.21100.40.0_x64__cw5n1h2txyewy\\WidgetBoard.exe",
+        "parent_pid": 1540,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      },
+      {
+        "pid": 13356,
+        "type": "C+G",
+        "nvidia_smi_name": "...on\\157.0.4341.46\\msedgewebview2.exe",
+        "gpu_memory": "N/A",
+        "process_name": "msedgewebview2.exe",
+        "executable_path": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\157.0.4341.46\\msedgewebview2.exe",
+        "parent_pid": 13784,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      },
+      {
+        "pid": 16284,
+        "type": "C+G",
+        "nvidia_smi_name": "...er\\ldmutiplayer\\dnmultiplayerex.exe",
+        "gpu_memory": "N/A",
+        "process_name": "dnmultiplayerex.exe",
+        "executable_path": "D:\\LDPlayer\\ldmutiplayer\\dnmultiplayerex.exe",
+        "parent_pid": 4840,
+        "classification": "FORBIDDEN_GAME_OR_EMULATOR"
+      },
+      {
+        "pid": 17140,
+        "type": "C+G",
+        "nvidia_smi_name": "...CBS_cw5n1h2txyewy\\TextInputHost.exe",
+        "gpu_memory": "N/A",
+        "process_name": "TextInputHost.exe",
+        "executable_path": "C:\\WINDOWS\\SystemApps\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\TextInputHost.exe",
+        "parent_pid": 1540,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      },
+      {
+        "pid": 22288,
+        "type": "C+G",
+        "nvidia_smi_name": "...ekyb3d8bbwe\\PhoneExperienceHost.exe",
+        "gpu_memory": "N/A",
+        "process_name": "PhoneExperienceHost.exe",
+        "executable_path": "...ekyb3d8bbwe\\PhoneExperienceHost.exe",
+        "parent_pid": null,
+        "classification": "ALLOWED_WINDOWS_OR_IDE"
+      }
+    ],
+    "forbidden_processes_count": 2,
+    "forbidden_processes": [
+      {
+        "pid": 3588,
+        "type": "C+G",
+        "nvidia_smi_name": "...4__8wekyb3d8bbwe\\EdgeGameAssist.exe",
+        "gpu_memory": "N/A",
+        "process_name": "EdgeGameAssist.exe",
+        "executable_path": "C:\\Program Files\\WindowsApps\\Microsoft.Edge.GameAssist_1.0.4019.0_x64__8wekyb3d8bbwe\\EdgeGameAssist.exe",
+        "parent_pid": 1540,
+        "classification": "FORBIDDEN_GAME_OR_EMULATOR"
+      },
+      {
+        "pid": 16284,
+        "type": "C+G",
+        "nvidia_smi_name": "...er\\ldmutiplayer\\dnmultiplayerex.exe",
+        "gpu_memory": "N/A",
+        "process_name": "dnmultiplayerex.exe",
+        "executable_path": "D:\\LDPlayer\\ldmutiplayer\\dnmultiplayerex.exe",
+        "parent_pid": 4840,
+        "classification": "FORBIDDEN_GAME_OR_EMULATOR"
+      }
+    ],
+    "has_forbidden_processes": true,
+    "idle_30s_summary": {
+      "n_samples": 30,
+      "interval_sec": 1.0,
+      "gpu_util_pct": {
+        "median": 29.5,
+        "mean": 26.23,
+        "min": 0.0,
+        "max": 60.0
+      },
+      "mem_util_pct": {
+        "median": 2.0,
+        "mean": 1.73,
+        "min": 0.0,
+        "max": 4.0
+      },
+      "temp_c": {
+        "median": 59.0,
+        "mean": 58.97,
+        "min": 58.0,
+        "max": 59.0
+      },
+      "power_w": {
+        "median": 4.11,
+        "mean": 4.06,
+        "min": 3.47,
+        "max": 4.4
+      },
+      "gr_clock_mhz": {
+        "median": 487.0,
+        "mean": 508.03,
+        "min": 345.0,
+        "max": 615.0
+      },
+      "mem_clock_mhz": {
+        "median": 810.0,
+        "mean": 756.0,
+        "min": 405.0,
+        "max": 810.0
+      },
+      "pstate_counts": {
+        "P5": 26,
+        "P8": 4
+      }
+    },
+    "samples": [
+      {
+        "sample_idx": 1,
+        "timestamp": "2026/11/14 22:05:42.405",
+        "gpu_util_pct": 31.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.25,
+        "gr_clock_mhz": 457.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 2,
+        "timestamp": "2026/11/14 22:05:43.505",
+        "gpu_util_pct": 60.0,
+        "mem_util_pct": 4.0,
+        "temp_c": 59.0,
+        "power_w": 4.4,
+        "gr_clock_mhz": 615.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 3,
+        "timestamp": "2026/11/14 22:05:44.603",
+        "gpu_util_pct": 29.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 3.95,
+        "gr_clock_mhz": 615.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 4,
+        "timestamp": "2026/11/14 22:05:45.716",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.24,
+        "gr_clock_mhz": 487.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 5,
+        "timestamp": "2026/11/14 22:05:46.809",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.1,
+        "gr_clock_mhz": 420.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      },
+      {
+        "sample_idx": 6,
+        "timestamp": "2026/11/14 22:05:47.896",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.23,
+        "gr_clock_mhz": 607.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 7,
+        "timestamp": "2026/11/14 22:05:48.957",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.24,
+        "gr_clock_mhz": 480.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 8,
+        "timestamp": "2026/11/14 22:05:50.024",
+        "gpu_util_pct": 48.0,
+        "mem_util_pct": 3.0,
+        "temp_c": 59.0,
+        "power_w": 3.62,
+        "gr_clock_mhz": 420.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      },
+      {
+        "sample_idx": 9,
+        "timestamp": "2026/11/14 22:05:51.147",
+        "gpu_util_pct": 29.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.14,
+        "gr_clock_mhz": 592.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 10,
+        "timestamp": "2026/11/14 22:05:52.256",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.04,
+        "gr_clock_mhz": 457.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 11,
+        "timestamp": "2026/11/14 22:05:53.331",
+        "gpu_util_pct": 29.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.17,
+        "gr_clock_mhz": 570.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 12,
+        "timestamp": "2026/11/14 22:05:54.385",
+        "gpu_util_pct": 28.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.12,
+        "gr_clock_mhz": 570.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 13,
+        "timestamp": "2026/11/14 22:05:55.465",
+        "gpu_util_pct": 0.0,
+        "mem_util_pct": 0.0,
+        "temp_c": 59.0,
+        "power_w": 3.47,
+        "gr_clock_mhz": 352.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      },
+      {
+        "sample_idx": 14,
+        "timestamp": "2026/11/14 22:05:56.541",
+        "gpu_util_pct": 28.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.13,
+        "gr_clock_mhz": 457.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 15,
+        "timestamp": "2026/11/14 22:05:57.646",
+        "gpu_util_pct": 27.0,
+        "mem_util_pct": 1.0,
+        "temp_c": 59.0,
+        "power_w": 3.93,
+        "gr_clock_mhz": 345.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      },
+      {
+        "sample_idx": 16,
+        "timestamp": "2026/11/14 22:05:58.756",
+        "gpu_util_pct": 28.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 3.98,
+        "gr_clock_mhz": 450.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 17,
+        "timestamp": "2026/11/14 22:05:59.920",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.08,
+        "gr_clock_mhz": 480.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 18,
+        "timestamp": "2026/11/14 22:06:00.994",
+        "gpu_util_pct": 0.0,
+        "mem_util_pct": 0.0,
+        "temp_c": 59.0,
+        "power_w": 3.82,
+        "gr_clock_mhz": 480.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 19,
+        "timestamp": "2026/11/14 22:06:02.075",
+        "gpu_util_pct": 31.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.18,
+        "gr_clock_mhz": 577.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 20,
+        "timestamp": "2026/11/14 22:06:03.152",
+        "gpu_util_pct": 13.0,
+        "mem_util_pct": 1.0,
+        "temp_c": 59.0,
+        "power_w": 3.98,
+        "gr_clock_mhz": 577.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 21,
+        "timestamp": "2026/11/14 22:06:04.226",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.27,
+        "gr_clock_mhz": 427.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 22,
+        "timestamp": "2026/11/14 22:06:05.334",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.29,
+        "gr_clock_mhz": 607.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 23,
+        "timestamp": "2026/11/14 22:06:06.422",
+        "gpu_util_pct": 19.0,
+        "mem_util_pct": 1.0,
+        "temp_c": 58.0,
+        "power_w": 4.08,
+        "gr_clock_mhz": 480.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 24,
+        "timestamp": "2026/11/14 22:06:07.525",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 3.91,
+        "gr_clock_mhz": 570.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 25,
+        "timestamp": "2026/11/14 22:06:08.600",
+        "gpu_util_pct": 0.0,
+        "mem_util_pct": 0.0,
+        "temp_c": 59.0,
+        "power_w": 3.94,
+        "gr_clock_mhz": 570.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 26,
+        "timestamp": "2026/11/14 22:06:09.673",
+        "gpu_util_pct": 28.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.11,
+        "gr_clock_mhz": 585.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 27,
+        "timestamp": "2026/11/14 22:06:10.764",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.24,
+        "gr_clock_mhz": 585.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 28,
+        "timestamp": "2026/11/14 22:06:11.838",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 4.22,
+        "gr_clock_mhz": 435.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 29,
+        "timestamp": "2026/11/14 22:06:13.014",
+        "gpu_util_pct": 29.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 59.0,
+        "power_w": 3.66,
+        "gr_clock_mhz": 487.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "sample_idx": 30,
+        "timestamp": "2026/11/14 22:06:14.091",
+        "gpu_util_pct": 0.0,
+        "mem_util_pct": 0.0,
+        "temp_c": 59.0,
+        "power_w": 3.95,
+        "gr_clock_mhz": 487.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      }
+    ]
+  },
+  "part_a_latency": {
+    "status": "NOT_RUN_HALTED_AT_STEP_2_FORBIDDEN_GPU_PROCESSES",
+    "reason": "Theo quy tắc Bước 2 Prompt 14d: 'Còn dnmultiplayerex.exe, EdgeGameAssist.exe, RobloxPlayerBeta.exe hoặc tiến trình game/giả lập/đồ họa nặng khác: DỪNG, báo, KHÔNG tự kill.' Phát hiện 2 tiến trình thuộc danh sách cấm đang chạy trên GPU 0."
+  },
+  "cir_selection": {
+    "status": "PENDING_PART_A_CLEAN_GPU_LATENCY",
+    "provisional_winner_on_val": "cir_v1_05",
+    "baseline_model_only": "cir_v1_01"
+  },
+  "part_b_quality_test_gallery": {
+    "status": "NOT_RUN_MISSING_HELDOUT_V2_AND_HALTED_AT_STEP_2",
+    "test_gallery_touched_for_quality_eval": false,
+    "cir_eval_test_opened_beyond_sha256": false
+  },
+  "pytest_summary": {
+    "passed": 70,
+    "failed": 0,
+    "warnings": 2,
+    "duration_sec": 89.38,
+    "summary_line": "70 passed, 2 warnings in 89.38s"
+  },
+  "md_json_verification": {
+    "status": "PASS_EXACT_MATCH",
+    "total_checked_items": 56,
+    "matched_items": 56,
+    "mismatched_items": 0,
+    "mismatches": []
+  }
+}

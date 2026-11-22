@@ -1,0 +1,415 @@
+{
+  "phase": 2,
+  "timestamp_utc": "2026-11-19T14:36:31.550093+00:00",
+  "seed": 42,
+  "7_inventory_and_splits": {
+    "catalog_rebuild_sha256": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+    "catalog_rows": 44424,
+    "catalog_cols": 36,
+    "styles_csv_rows": 44446,
+    "quality_metrics_rows": 44419,
+    "fashion_images_remaining_in_source_dir": 40913,
+    "quarantined_quality_jpgs": 3528,
+    "total_actual_images_source_plus_quarantine": 44441,
+    "filter_flag_counts": {
+      "pass": 40891,
+      "blurry": 1286,
+      "duplicate": 1188,
+      "banner": 935,
+      "low_res": 119,
+      "missing_image": 5
+    },
+    "in_scope_true_total": 41893,
+    "in_scope_and_pass": 38644,
+    "catalog_split_column_all": {
+      "train": 42924,
+      "test": 1500
+    },
+    "catalog_split_column_pass": {
+      "train": 39519,
+      "test": 1372
+    },
+    "catalog_split_column_clean_in_scope": {
+      "train": 37354,
+      "test": 1290
+    },
+    "val_split_json_total": 2000,
+    "val_split_json_clean_in_scope": 1884,
+    "test_split_json_total": 1372,
+    "test_split_json_clean_in_scope": 1290,
+    "shopping100k_jpg_count": 100586
+  },
+  "8_leakage_and_coverage": {
+    "catalog_nonempty_sha1_rows": 0,
+    "catalog_nonempty_phash_rows": 0,
+    "effective_nonempty_sha1_train_clean": 37354,
+    "effective_nonempty_phash_test_clean": 1290,
+    "pid_overlap_train_test_all": 0,
+    "pid_overlap_val_test": 0,
+    "pid_overlap_train_col_vs_val_json": 2000,
+    "val_json_split_column_distribution_in_catalog": {
+      "train": 2000
+    },
+    "train_clean_excluding_val_count": 35470,
+    "sha1_overlap_test_vs_train_clean": 0,
+    "sha1_overlap_test_vs_val_clean": 0,
+    "sha1_overlap_test_vs_train_all_pass": 0,
+    "phash_exact_overlap_test_vs_train_clean": 45,
+    "phash_exact_overlap_test_vs_val_clean": 3,
+    "phash_exact_overlap_test_vs_train_all_pass": 56,
+    "phash_hamming_le1_test_vs_train_same_attr_count": 0,
+    "phash_hamming_le1_test_vs_train_any_attr_count": 78,
+    "phash_hamming_le1_any_attr_examples": [
+      {
+        "test_pid": "36360",
+        "train_pid": "50313",
+        "hamming": 0,
+        "test_attr": [
+          "Ties",
+          "Men",
+          "Gold"
+        ],
+        "train_attr": [
+          "Ties",
+          "Men",
+          "Brown"
+        ]
+      },
+      {
+        "test_pid": "36360",
+        "train_pid": "36367",
+        "hamming": 0,
+        "test_attr": [
+          "Ties",
+          "Men",
+          "Gold"
+        ],
+        "train_attr": [
+          "Ties",
+          "Men",
+          "Red"
+        ]
+      },
+      {
+        "test_pid": "36360",
+        "train_pid": "49716",
+        "hamming": 0,
+        "test_attr": [
+          "Ties",
+          "Men",
+          "Gold"
+        ],
+        "train_attr": [
+          "Ties",
+          "Men",
+          "Blue"
+        ]
+      },
+      {
+        "test_pid": "36360",
+        "train_pid": "35080",
+        "hamming": 0,
+        "test_attr": [
+          "Ties",
+          "Men",
+          "Gold"
+        ],
+        "train_attr": [
+          "Ties",
+          "Men",
+          "Navy Blue"
+        ]
+      },
+      {
+        "test_pid": "36360",
+        "train_pid": "36370",
+        "hamming": 0,
+        "test_attr": [
+          "Ties",
+          "Men",
+          "Gold"
+        ],
+        "train_attr": [
+          "Ties",
+          "Men",
+          "Black"
+        ]
+      },
+      {
+        "test_pid": "47590",
+        "train_pid": "47599",
+        "hamming": 0,
+        "test_attr": [
+          "Heels",
+          "Women",
+          "Green"
+        ],
+        "train_attr": [
+          "Flats",
+          "Women",
+          "Brown"
+        ]
+      },
+      {
+        "test_pid": "10294",
+        "train_pid": "57496",
+        "hamming": 0,
+        "test_attr": [
+          "Formal Shoes",
+          "Men",
+          "Brown"
+        ],
+        "train_attr": [
+          "Casual Shoes",
+          "Men",
+          "Black"
+        ]
+      },
+      {
+        "test_pid": "39578",
+        "train_pid": "39609",
+        "hamming": 0,
+        "test_attr": [
+          "Heels",
+          "Women",
+          "Bronze"
+        ],
+        "train_attr": [
+          "Heels",
+          "Women",
+          "Brown"
+        ]
+      },
+      {
+        "test_pid": "39578",
+        "train_pid": "41672",
+        "hamming": 0,
+        "test_attr": [
+          "Heels",
+          "Women",
+          "Bronze"
+        ],
+        "train_attr": [
+          "Heels",
+          "Women",
+          "Silver"
+        ]
+      },
+      {
+        "test_pid": "34785",
+        "train_pid": "43548",
+        "hamming": 0,
+        "test_attr": [
+          "Sports Sandals",
+          "Men",
+          "Grey"
+        ],
+        "train_attr": [
+          "Sandals",
+          "Men",
+          "Khaki"
+        ]
+      }
+    ],
+    "article_type_clean_total": 102,
+    "article_type_test_clean": 80,
+    "disk_image_sha1_audit": {
+      "test_clean_unique_sha1": 1290,
+      "train_clean_unique_sha1": 37300,
+      "exact_sha1_overlap_same_attr_count": 0,
+      "exact_sha1_overlap_diff_attr_count": 3,
+      "exact_sha1_overlap_diff_attr_pairs": [
+        {
+          "test_pid": "8721",
+          "train_pid": "9609",
+          "sha1": "4dffc4421ed51902b733e6fe2582c20152c2174c",
+          "phash": "b991739b292de063",
+          "test_attr": [
+            "Shirts",
+            "Men",
+            "White"
+          ],
+          "train_attr": [
+            "Shirts",
+            "Men",
+            "Purple"
+          ]
+        },
+        {
+          "test_pid": "28174",
+          "train_pid": "28182",
+          "sha1": "6f2614a3384747789bf825a71f91f7fcdc2e6ec7",
+          "phash": "e29991666a99b56a",
+          "test_attr": [
+            "Sunglasses",
+            "Men",
+            "Bronze"
+          ],
+          "train_attr": [
+            "Sunglasses",
+            "Men",
+            "Copper"
+          ]
+        },
+        {
+          "test_pid": "28352",
+          "train_pid": "28354",
+          "sha1": "8e9450e882b8241f763b1cc77961762a5d482c96",
+          "phash": "e29c94636a94b76a",
+          "test_attr": [
+            "Sunglasses",
+            "Men",
+            "Bronze"
+          ],
+          "train_attr": [
+            "Sunglasses",
+            "Men",
+            "Brown"
+          ]
+        }
+      ]
+    }
+  },
+  "9_quarantine_integrity": {
+    "quarantine_log_total_rows": 17498,
+    "status_counts": {
+      "restored": 13226,
+      "quarantined": 4272
+    },
+    "active_quarantined_by_reason": {
+      "blurry": 1286,
+      "duplicate": 1188,
+      "banner": 935,
+      "legacy_eval_artifact": 277,
+      "legacy_report": 179,
+      "legacy_src_code": 155,
+      "low_res": 119,
+      "untouchable_legacy_index_or_catalog": 107,
+      "legacy_test": 9,
+      "legacy_ui_backup": 5,
+      "out_of_scope_beauty": 4,
+      "legacy_app_code": 2,
+      "legacy_root_doc": 1,
+      "legacy_script": 1,
+      "temporary_maintenance_script": 1,
+      "scratch_draft_heldout_v2": 1,
+      "scratch_script_make_draft": 1,
+      "superseded_script_14g_report": 1
+    },
+    "disk_quarantine_total_files": 4268,
+    "active_logged_unique_paths": 4272,
+    "missing_from_quarantine_count": 4,
+    "unlogged_files_in_quarantine_count": 0,
+    "unlogged_files_in_quarantine_sample": [],
+    "pass_images_missing_on_disk_count": 0
+  },
+  "10_reference_gallery_diff": {
+    "reference_gallery_len": 38646,
+    "clean_in_scope_len": 38644,
+    "extra_in_reference_gallery_pids": [
+      "42066",
+      "43230"
+    ],
+    "missing_in_reference_gallery_pids": [],
+    "extra_rows_details": [
+      {
+        "product_id": "43230",
+        "articleType": "Key chain",
+        "masterCategory": "Accessories",
+        "filter_flag": "pass",
+        "in_scope": false,
+        "split": "train"
+      },
+      {
+        "product_id": "42066",
+        "articleType": "Key chain",
+        "masterCategory": "Accessories",
+        "filter_flag": "pass",
+        "in_scope": false,
+        "split": "train"
+      }
+    ],
+    "test_gallery_len": 1290,
+    "test_gallery_exact_match_test_clean": true,
+    "extra_pids_in_test_gallery": []
+  },
+  "11_train_caption_status": {
+    "catalog_caption_columns": [
+      "caption_model",
+      "caption_vi"
+    ],
+    "train_clean_non_null_in_catalog": {
+      "caption_model": 0,
+      "caption_vi": 0
+    },
+    "caption_shards_on_disk": {
+      "shard_test_0000.parquet": {
+        "rows": 500,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 0,
+        "overlap_with_test_json": 465
+      },
+      "shard_test_0001.parquet": {
+        "rows": 500,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 0,
+        "overlap_with_test_json": 451
+      },
+      "shard_test_0002.parquet": {
+        "rows": 500,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 0,
+        "overlap_with_test_json": 456
+      },
+      "shard_val_0000.parquet": {
+        "rows": 500,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 500,
+        "overlap_with_test_json": 0
+      },
+      "shard_val_0001.parquet": {
+        "rows": 500,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 500,
+        "overlap_with_test_json": 0
+      },
+      "shard_val_0002.parquet": {
+        "rows": 500,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 500,
+        "overlap_with_test_json": 0
+      },
+      "shard_val_0003.parquet": {
+        "rows": 384,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 384,
+        "overlap_with_test_json": 0
+      },
+      "shard_val_core_0000.parquet": {
+        "rows": 500,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 500,
+        "overlap_with_test_json": 0
+      },
+      "shard_val_core_0001.parquet": {
+        "rows": 500,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 500,
+        "overlap_with_test_json": 0
+      },
+      "shard_val_core_0002.parquet": {
+        "rows": 500,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 500,
+        "overlap_with_test_json": 0
+      },
+      "shard_val_core_0003.parquet": {
+        "rows": 384,
+        "overlap_with_train_clean": 0,
+        "overlap_with_val_json": 384,
+        "overlap_with_test_json": 0
+      }
+    },
+    "train_excluding_val_captioned_in_shards": 0
+  }
+}

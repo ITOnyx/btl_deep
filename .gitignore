@@ -7,6 +7,8 @@ __pycache__/
 env/
 
 # Raw dataset and checkpoints
+_build/
+data/Shopping100k/
 data/fashion-dataset/
 data/images*
 data/**/images*
@@ -25,6 +27,8 @@ checkpoint*
 
 # Large generated files
 reports/contact_sheets/*.png
+eval/**/*.png
+_backup_ui/
 *.parquet
 data/catalog/*.json
 
@@ -34,7 +38,19 @@ index/*
 index_v2/*
 !index_v2/.gitkeep
 !index_v2/manifest.json
+index_v3_*/*
+!index_v3_*/manifest.json
+
+# Scratch & drafts
+*.draft.json
+*.draft.py
+*.scratch.*
 
 # Temporary / OS
 .DS_Store
 Thumbs.db
+
+# Crawl v2 raw images and gallery thumbnails
+data/crawl_v2/
+reports/crawl_v2/gallery/thumbs/
+

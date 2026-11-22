@@ -1,0 +1,76 @@
+{
+  "version": "v4",
+  "status": "LOCKED_BEFORE_EXPERIMENTS",
+  "seed": 42,
+  "predecessor_tag": "phase5b-step3",
+  "evaluation_protocol": {
+    "search_mode": "exact",
+    "candidate_pool": "full_gallery",
+    "tie_rule": "conservative",
+    "tie_epsilon": 1e-5,
+    "cluster_map_definition": "mean AP within each spec_cluster_id, then unweighted mean across clusters"
+  },
+  "selection_cv": {
+    "method": "5-fold_cluster_cv",
+    "cluster_key": "spec_cluster_id",
+    "folds_file": "reports/phase5b/folds.json",
+    "folds_sha256": "dfd301722ec86734fd0f0bdb38bcb3784d7db22334a6535c51630fb825f91e25",
+    "datasets": ["A", "B-synth (clean only; typo reported separately)"],
+    "b_human_in_objective": false,
+    "objective_formula": "0.4 * mAP_A_cluster + 0.6 * mAP_B_synth_clean_cluster"
+  },
+  "confirmation_gate": {
+    "preferred_gate": "B-human-v4 (new user-written validation set, locked by SHA-256)",
+    "fallback_reference": "B-human validated (65 queries, 61 clusters — marked as REFERENCE ONLY because observed in v3)",
+    "max_map_drop_vs_cfg01_ci_low": 0.02,
+    "max_catastrophic_drop_rate": 0.05,
+    "bootstrap_resamples": 1000,
+    "bootstrap_unit": "spec_cluster_id"
+  },
+  "constraints": {
+    "c_nested_20pct_min_map_vs_model_only": -0.03,
+    "c_nested_20pct_min_map_vs_cfg01_baseline": -0.05,
+    "b_synth_max_catastrophic_drop_rate": 0.05,
+    "ab_synth_max_r10_drop_vs_cfg01": 0.01,
+    "t2i_p95_max_latency_increase_ms_vs_cfg01": 20.0,
+    "t2i_p95_max_latency_ms": 200.0,
+    "parser_fp_rate_must_not_exceed_v1": true
+  },
+  "simplicity_order_from_simplest_to_complex": [
+    "prf_rocchio=false < prf_rocchio=true",
+    "csls=false < csls=true",
+    "text_gallery=false < text_gallery=true",
+    "multi_template=false < multi_template=true",
+    "fuzzy_typo=false < fuzzy_typo=true",
+    "conf_gating=false < conf_gating=true",
+    "bonus_mode=zscore < bonus_mode=sigma_scaled < bonus_mode=tier_soft",
+    "smaller_gamma < larger_gamma"
+  ],
+  "tie_breaking_rule": "If Score difference falls within 95% paired cluster bootstrap CI (1000 resamples), choose the simpler config according to simplicity_order.",
+  "parallel_reporting": [
+    "model_only",
+    "system_soft (v3 winner cfg_13 & best_by_score)",
+    "system_gated (conf_gating / tier_soft)",
+    "safe_config (satisfies constraints 5(i) & 5(ii) with lowest gamma)"
+  ],
+  "config_grid": [
+    {"config_id": "cfg_v4_01", "role": "v3_winner_baseline", "idea": "baseline_cfg13", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_02", "role": "ablation_I1", "idea": "I1_sigma_scaled", "parser": "parser_v2.1", "bonus_mode": "sigma_scaled", "gamma": 1.0, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_03", "role": "ablation_I1", "idea": "I1_sigma_scaled", "parser": "parser_v2.1", "bonus_mode": "sigma_scaled", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_04", "role": "ablation_I1", "idea": "I1_sigma_scaled", "parser": "parser_v2.1", "bonus_mode": "sigma_scaled", "gamma": 2.0, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_05", "role": "ablation_I1", "idea": "I1_tier_soft", "parser": "parser_v2.1", "bonus_mode": "tier_soft", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_06", "role": "ablation_I2", "idea": "I2_conf_gating", "parser": "parser_v2.1", "bonus_mode": "sigma_scaled", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": true, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_07", "role": "ablation_I2", "idea": "I2_conf_gating", "parser": "parser_v2.1", "bonus_mode": "sigma_scaled", "gamma": 2.0, "query_rewrite": true, "multi_template": 1, "conf_gating": true, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_08", "role": "ablation_I7", "idea": "I7_fuzzy_typo", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": true, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_09", "role": "ablation_I6", "idea": "I6_CSLS", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 10, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_10", "role": "ablation_I6", "idea": "I6_CSLS", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 20, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_11", "role": "ablation_I5", "idea": "I5_text_gallery_internvl2", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "internvl2_only", "text_alpha": 0.7, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_12", "role": "ablation_I5", "idea": "I5_text_gallery_internvl2", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "internvl2_only", "text_alpha": 0.85, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_13", "role": "ablation_I5", "idea": "I5_text_gallery_aux_law5", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "internvl2_plus_aux", "text_alpha": 0.85, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_14", "role": "ablation_I3", "idea": "I3_multi_template_batch", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 2, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_15", "role": "ablation_I3", "idea": "I3_multi_template_batch", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 3, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_16", "role": "ablation_I4", "idea": "I4_rocchio_prf", "parser": "parser_v2.1", "bonus_mode": "zscore", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": false, "fuzzy_typo": false, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 3, "rocchio_beta": 0.2},
+    {"config_id": "cfg_v4_17", "role": "combo_1", "idea": "I1_I2_I7", "parser": "parser_v2.1", "bonus_mode": "sigma_scaled", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": true, "fuzzy_typo": true, "csls_k": 0, "text_gallery": "none", "text_alpha": 1.0, "rocchio_k": 0, "rocchio_beta": 0.0},
+    {"config_id": "cfg_v4_18", "role": "combo_2", "idea": "I1_I2_I7_I5", "parser": "parser_v2.1", "bonus_mode": "sigma_scaled", "gamma": 1.5, "query_rewrite": true, "multi_template": 1, "conf_gating": true, "fuzzy_typo": true, "csls_k": 0, "text_gallery": "internvl2_only", "text_alpha": 0.85, "rocchio_k": 0, "rocchio_beta": 0.0}
+  ]
+}

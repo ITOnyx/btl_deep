@@ -1,0 +1,354 @@
+{
+  "phase": 3,
+  "timestamp_utc": "2026-11-19T17:09:41.115628+00:00",
+  "seed": 42,
+  "worktree_verification": {
+    "worktree_root": "D:\\Kì 7\\Hoc_sau_ver4\\reports\\verification\\_clean_head",
+    "git_head": "0c8e49e2afe14328bcd272fa2a50e184389702ea",
+    "git_status_porcelain": "?? data/",
+    "siglip_model_module_path": "D:\\Kì 7\\Hoc_sau_ver4\\reports\\verification\\_clean_head\\src\\model\\siglip_model.py",
+    "preprocessor_module_path": "D:\\Kì 7\\Hoc_sau_ver4\\reports\\verification\\_clean_head\\src\\preprocess\\pipeline.py",
+    "faiss_index_module_path": "D:\\Kì 7\\Hoc_sau_ver4\\reports\\verification\\_clean_head\\src\\index\\faiss_index.py",
+    "all_modules_from_clean_worktree": true
+  },
+  "12_checkpoint_and_architecture": {
+    "checkpoint_sha256_verified": true,
+    "checkpoint_tensor_key_count": 908,
+    "model_tensor_key_count": 908,
+    "strict_load_missing_keys": 0,
+    "strict_load_unexpected_keys": 0,
+    "matched_keys_ratio": "908/908",
+    "position_embedding_shape": [
+      128,
+      1152
+    ],
+    "position_ids_shape": [
+      1,
+      128
+    ],
+    "max_position_embeddings_config": 128,
+    "embedding_dim": 1152,
+    "text_input_ids_shape": [
+      3,
+      128
+    ],
+    "text_embedding_output_shape": [
+      3,
+      1152
+    ],
+    "text_embedding_l2_norms": [
+      0.9999332427978516,
+      1.0000898838043213,
+      0.999893844127655
+    ]
+  },
+  "13_parity_check_200": {
+    "n_samples": 200,
+    "passed_ge_0999_count": 200,
+    "reported_min_cosine": 0.99966007,
+    "actual_min_cosine": 0.999660074710846,
+    "min_cosine_abs_diff": 4.710845935562702e-09,
+    "reported_mean_cosine": 0.99998093,
+    "actual_mean_cosine": 0.9999809265136719,
+    "mean_cosine_abs_diff": 3.4863281150876446e-09,
+    "actual_median_cosine": 0.9999910593032837,
+    "actual_max_cosine": 0.9999977946281433,
+    "actual_std_cosine": 3.401902722544037e-05,
+    "image_embedding_l2_norm_min": 0.9996510744094849,
+    "image_embedding_l2_norm_max": 1.000380516052246,
+    "image_embedding_l2_norm_mean": 1.0000032186508179,
+    "lowest_10_samples": [
+      {
+        "index": 63,
+        "item_id": "18237",
+        "path": "data/fashion-dataset/images/18237.jpg",
+        "articleType": "Tshirts",
+        "cosine": 0.999660074710846
+      },
+      {
+        "index": 94,
+        "item_id": "41268",
+        "path": "data/fashion-dataset/images/41268.jpg",
+        "articleType": "Wallets",
+        "cosine": 0.999796450138092
+      },
+      {
+        "index": 15,
+        "item_id": "42419",
+        "path": "data/fashion-dataset/images/42419.jpg",
+        "articleType": "Tops",
+        "cosine": 0.9998372793197632
+      },
+      {
+        "index": 53,
+        "item_id": "42841",
+        "path": "data/fashion-dataset/images/42841.jpg",
+        "articleType": "Handbags",
+        "cosine": 0.9998475313186646
+      },
+      {
+        "index": 67,
+        "item_id": "19123",
+        "path": "data/fashion-dataset/images/19123.jpg",
+        "articleType": "Flip Flops",
+        "cosine": 0.9998870491981506
+      },
+      {
+        "index": 159,
+        "item_id": "12500",
+        "path": "data/fashion-dataset/images/12500.jpg",
+        "articleType": "Shirts",
+        "cosine": 0.9999096393585205
+      },
+      {
+        "index": 3,
+        "item_id": "21379",
+        "path": "data/fashion-dataset/images/21379.jpg",
+        "articleType": "Track Pants",
+        "cosine": 0.9999279975891113
+      },
+      {
+        "index": 91,
+        "item_id": "23882",
+        "path": "data/fashion-dataset/images/23882.jpg",
+        "articleType": "Sports Shoes",
+        "cosine": 0.9999333620071411
+      },
+      {
+        "index": 149,
+        "item_id": "21510",
+        "path": "data/fashion-dataset/images/21510.jpg",
+        "articleType": "Handbags",
+        "cosine": 0.999933660030365
+      },
+      {
+        "index": 49,
+        "item_id": "10866",
+        "path": "data/fashion-dataset/images/10866.jpg",
+        "articleType": "Tshirts",
+        "cosine": 0.9999407529830933
+      }
+    ],
+    "highest_5_samples": [
+      {
+        "index": 54,
+        "item_id": "22198",
+        "path": "data/fashion-dataset/images/22198.jpg",
+        "articleType": "Casual Shoes",
+        "cosine": 0.9999977946281433
+      },
+      {
+        "index": 130,
+        "item_id": "30462",
+        "path": "data/fashion-dataset/images/30462.jpg",
+        "articleType": "Bra",
+        "cosine": 0.9999973177909851
+      },
+      {
+        "index": 64,
+        "item_id": "54118",
+        "path": "data/fashion-dataset/images/54118.jpg",
+        "articleType": "Heels",
+        "cosine": 0.9999973177909851
+      },
+      {
+        "index": 62,
+        "item_id": "23876",
+        "path": "data/fashion-dataset/images/23876.jpg",
+        "articleType": "Sweatshirts",
+        "cosine": 0.9999973177909851
+      },
+      {
+        "index": 106,
+        "item_id": "28200",
+        "path": "data/fashion-dataset/images/28200.jpg",
+        "articleType": "Sunglasses",
+        "cosine": 0.9999972581863403
+      }
+    ]
+  },
+  "test_gallery": {
+    "14_faiss_hnsw_params": {
+      "index_class": "IndexHNSWFlat",
+      "d": 1152,
+      "M": 32,
+      "nb_neighbors_level0": 64,
+      "efConstruction": 200,
+      "efSearch": 128,
+      "metric_type_code": 0,
+      "metric_is_inner_product": true,
+      "ntotal": 1290,
+      "embeddings_shape": [
+        1290,
+        1152
+      ],
+      "embeddings_l2_norm_min": 0.9996198415756226,
+      "embeddings_l2_norm_max": 1.0003889799118042,
+      "embeddings_l2_norm_mean": 0.9999977946281433
+    },
+    "15_ann_recall_self_query_and_mapping": {
+      "ann_recall_100_random_seed42": {
+        "32": {
+          "recall_at_10": 1.0,
+          "latency_ms_per_query": 0.0155
+        },
+        "64": {
+          "recall_at_10": 1.0,
+          "latency_ms_per_query": 0.026
+        },
+        "128": {
+          "recall_at_10": 1.0,
+          "latency_ms_per_query": 0.0308
+        },
+        "256": {
+          "recall_at_10": 1.0,
+          "latency_ms_per_query": 0.0609
+        }
+      },
+      "ann_recall_large_ef128": {
+        "n_queries_tested": 1290,
+        "recall_at_10": 1.0,
+        "perfect_10_of_10_queries": 1290
+      },
+      "faiss_reconstruct_vs_npy_max_abs_diff": 4.4971704483032227e-05,
+      "live_reencode_5_samples_cosines": [
+        0.9998018145561218,
+        0.9996967911720276,
+        1.0001270771026611,
+        0.9997676014900208,
+        0.9999665021896362
+      ],
+      "live_reencode_min_cosine": 0.9996967911720276,
+      "self_query_50_seed42": {
+        "tested": 50,
+        "rank1_matches": 50,
+        "min_cosine": 0.9999998807907104,
+        "mean_cosine": 1.0000000417232513
+      },
+      "self_query_all_vectors": {
+        "total_vectors": 1290,
+        "exact_self_at_rank1": 1290,
+        "self_in_top2_with_cos_ge_09999": 1290,
+        "min_top1_cosine": 0.9999998211860657,
+        "mean_top1_cosine": 1.0
+      }
+    },
+    "16_sanity_checks_phase4": {
+      "c1_zero_duplicate_ids": {
+        "passed": true,
+        "duplicate_count": 0,
+        "total_ids": 1290
+      },
+      "c2_zero_test_leak_into_train_by_id": {
+        "passed": true,
+        "leak_count": 0
+      },
+      "c3_self_query_rank1_50_seed42": {
+        "passed": true,
+        "rank1_matches": "50/50",
+        "min_cosine": 0.9999998807907104
+      },
+      "c4_vector_count_consistency": {
+        "passed": true,
+        "n_embeddings": 1290,
+        "n_id_map": 1290,
+        "n_hnsw": 1290,
+        "n_manifest": 1290
+      },
+      "hash_guard": {
+        "passed": true,
+        "manifest_checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d"
+      },
+      "all_4_sanity_checks_passed": true
+    }
+  },
+  "reference_gallery": {
+    "14_faiss_hnsw_params": {
+      "index_class": "IndexHNSWFlat",
+      "d": 1152,
+      "M": 32,
+      "nb_neighbors_level0": 64,
+      "efConstruction": 200,
+      "efSearch": 128,
+      "metric_type_code": 0,
+      "metric_is_inner_product": true,
+      "ntotal": 38646,
+      "embeddings_shape": [
+        38646,
+        1152
+      ],
+      "embeddings_l2_norm_min": 0.9995756149291992,
+      "embeddings_l2_norm_max": 1.0004328489303589,
+      "embeddings_l2_norm_mean": 1.0000003576278687
+    },
+    "15_ann_recall_self_query_and_mapping": {
+      "ann_recall_100_random_seed42": {
+        "32": {
+          "recall_at_10": 1.0,
+          "latency_ms_per_query": 0.0402
+        },
+        "64": {
+          "recall_at_10": 1.0,
+          "latency_ms_per_query": 0.0581
+        },
+        "128": {
+          "recall_at_10": 1.0,
+          "latency_ms_per_query": 0.098
+        },
+        "256": {
+          "recall_at_10": 1.0,
+          "latency_ms_per_query": 0.1502
+        }
+      },
+      "ann_recall_large_ef128": {
+        "n_queries_tested": 1000,
+        "recall_at_10": 1.0,
+        "perfect_10_of_10_queries": 1000
+      },
+      "faiss_reconstruct_vs_npy_max_abs_diff": 5.7220458984375e-05,
+      "live_reencode_5_samples_cosines": [
+        1.000023603439331,
+        0.999424159526825,
+        0.9997238516807556,
+        1.0000336170196533,
+        1.0000064373016357
+      ],
+      "live_reencode_min_cosine": 0.999424159526825,
+      "self_query_50_seed42": {
+        "tested": 50,
+        "rank1_matches": 50,
+        "min_cosine": 0.9999998807907104,
+        "mean_cosine": 1.0000000381469727
+      },
+      "self_query_all_vectors": null
+    },
+    "16_sanity_checks_phase4": {
+      "c1_zero_duplicate_ids": {
+        "passed": true,
+        "duplicate_count": 0,
+        "total_ids": 38646
+      },
+      "c2_zero_test_leak_into_train_by_id": {
+        "passed": true,
+        "leak_count": 0
+      },
+      "c3_self_query_rank1_50_seed42": {
+        "passed": true,
+        "rank1_matches": "50/50",
+        "min_cosine": 0.9999998807907104
+      },
+      "c4_vector_count_consistency": {
+        "passed": true,
+        "n_embeddings": 38646,
+        "n_id_map": 38646,
+        "n_hnsw": 38646,
+        "n_manifest": 38646
+      },
+      "hash_guard": {
+        "passed": true,
+        "manifest_checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d"
+      },
+      "all_4_sanity_checks_passed": true
+    }
+  }
+}

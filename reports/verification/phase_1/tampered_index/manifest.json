@@ -1,0 +1,22 @@
+{
+  "gallery_type": "official_test_split",
+  "checkpoint_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "catalog_hash": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+  "n_vectors": 1290,
+  "embedding_dim": 1152,
+  "hnsw_params": {
+    "type": "IndexHNSWFlat",
+    "M": 32,
+    "ef_construction": 200,
+    "ef_search": 128,
+    "metric": "inner_product"
+  },
+  "commit_hash": "5c2cd53ab3cc763b978790098f4dd2e40ba0bec2",
+  "seed": 42,
+  "created_at": "2026-11-12 16:34:07",
+  "files": {
+    "embeddings": "image_embeddings.npy",
+    "id_map": "id_map.json",
+    "index_bin": "faiss_hnsw.bin"
+  }
+}

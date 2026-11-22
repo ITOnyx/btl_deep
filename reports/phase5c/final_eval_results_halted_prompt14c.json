@@ -1,0 +1,955 @@
+{
+  "status": "HALTED_PROMPT14C_STEP2_GPU_PROCESSES_STILL_ACTIVE",
+  "halt_reasons": [
+    "Bước 1 (HOÀN TẤT): Đã tạo scripts/build_test_text_index_v5.py (Phương án 1B, không sửa build_val_text_index_v5.py), kiểm chứng trên index/_verify_val_text_v5/ đạt exact_byte_match=True (min_cosine >= 0.99999976 >= 0.9999 trên cả 3 tệp .npy), dựng xong index/test_gallery_text_v5/ (1,290 vector, Hash Guard PASS, 0 id trùng, 0 NaN) và hoàn tất pytest tests/test_build_test_text_index_v5.py (3 passed).",
+    "Bước 2 (CHẶN PHẦN A): nvidia-smi lúc 21:27:45 vẫn ghi nhận dnmultiplayerex.exe (PID 16284, chạy từ 15:22:21, ParentPID 4840) và EdgeGameAssist.exe (PID 3588, chạy từ 18:37:24, ParentPID 1540) đang giữ context C+G trên GPU 0. Mẫu GPU-Util nghỉ 30s (khi chưa nạp model) có median = 31.0%, max = 59.0%, Temp = 71-72°C (P5). Theo đúng quy tắc Bước 2 (Nếu còn dnmultiplayerex.exe, EdgeGameAssist.exe...: DỪNG, báo, KHÔNG tự kill), agent dừng trước Phần A."
+  ],
+  "timestamp_utc": "2026-11-14T14:30:19Z",
+  "git_commit": "1d30dd62111d49ad78e8e4cf3f44705abbf61462",
+  "seed": 42,
+  "step_0": {
+    "0_1_hashes": {
+      "best_model_pt": {
+        "path": "data/checkpoints_siglip-vit/best_model.pt",
+        "expected_sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "actual_sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+        "matched": true
+      },
+      "selection_rule_v5": {
+        "path": "reports/phase5c/selection_rule_v5.json",
+        "expected_sha256": "e3d75ec5df7ab6de4cb9ad07e21b9c1a58c5c029c3a9b7749f28518c6c4f0c8c",
+        "actual_sha256": "e3d75ec5df7ab6de4cb9ad07e21b9c1a58c5c029c3a9b7749f28518c6c4f0c8c",
+        "matched": true
+      },
+      "selection_rule_cir_v1": {
+        "path": "reports/phase5c/selection_rule_cir_v1.json",
+        "expected_sha256": "4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067",
+        "actual_sha256": "4a5359f9f940a75a581847fd5f5b3c9900c6b2c4ba6dc77f5cc3637c6fa21067",
+        "matched": true
+      },
+      "cir_eval_test": {
+        "path": "eval/cir_eval_test.json",
+        "expected_sha256": "d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b",
+        "actual_sha256": "d6e33f4ee914152695513933de3bedc183a8f60b4d05c6bd3a2d8c0cfb90961b",
+        "matched": true
+      },
+      "test_split": {
+        "path": "eval/test_split.json",
+        "expected_sha256": "d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681",
+        "actual_sha256": "d61bd87b7ae495cbfe047c4852b9fec06d8479158f1664b5c0712388addad681",
+        "matched": true
+      },
+      "catalog_rebuild": {
+        "path": "data/catalog/catalog_rebuild.parquet",
+        "expected_sha256": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+        "actual_sha256": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+        "matched": true
+      },
+      "test_queries_heldout_v2": {
+        "path": "eval/test_queries_heldout_v2.json",
+        "exists": false,
+        "actual_sha256": null,
+        "worksheet_csv_path": "reports/phase5c/heldout_v2_worksheet.csv",
+        "worksheet_csv_sha256": "f1da994630e522f52b22685cac8a17435635e076543de98e78096db65ec945ce"
+      },
+      "locked_final_definitions_py": {
+        "path": "src/eval/locked_final_definitions.py",
+        "actual_sha256": "d8d7ef1926a2b6f1db348a13d0c87af7bfb48a2ca06530a1c141c8e14da2aca7"
+      }
+    },
+    "0_1_core_hashes_matched": true,
+    "0_2_index_guards": {
+      "test_gallery_image_index": {
+        "manifest_path": "index/test_gallery/manifest.json",
+        "manifest_sha256": "57348838c4aa920e853ba004b60f5f4a1b6fdebbc1d59043cd122691867f92aa",
+        "checkpoint_hash_matched": true,
+        "catalog_hash_matched": true,
+        "n_vectors": 1290,
+        "embeddings_shape": [
+          1290,
+          1152
+        ],
+        "passed": true
+      },
+      "val_gallery_caption_index_v5": {
+        "manifest_path": "index/val_gallery_text_v5/manifest.json",
+        "exists": true,
+        "manifest_sha256": "6d44fe7dc702257d294e375f409858b1ed53b1814d0363ea21c0b2cbce258c15"
+      },
+      "test_gallery_caption_index_v5": {
+        "manifest_path": "index/test_gallery_text_v5/manifest.json",
+        "exists": true,
+        "manifest_sha256": "286fe59ed6c2348dd9815263085269fd688993c83e1ede91d9152344184a2477",
+        "n_vectors": 1290,
+        "checkpoint_hash_matched": true,
+        "catalog_hash_matched": true,
+        "id_order_sha256": "6ca5bbf0b268103da2b901538effc004057faa817e7473d96dd49395418ee282",
+        "files": {
+          "internvl2_only_embeddings": {
+            "file": "internvl2_only_embeddings.npy",
+            "sha256": "7d4344b33194cc01b8a211b978e82357ef7b04ec65f3a435895e8b4efb58aaf3"
+          },
+          "internvl2_plus_aux_embeddings": {
+            "file": "internvl2_plus_aux_embeddings.npy",
+            "sha256": "53c75ab8a110a0053fc5e1d74d8a0407c14aebe2f9744d4f65f104fb1084d450"
+          },
+          "metadata_aux_embeddings": {
+            "file": "metadata_aux_embeddings.npy",
+            "sha256": "0339efc1e3799fe2d449b92c412f7a06742190b44f9d716bbf9b2f30c5eb101c"
+          }
+        },
+        "passed": true
+      }
+    },
+    "0_3_parity_check_test_gallery_200": {
+      "gallery": "index/test_gallery",
+      "n_samples": 200,
+      "seed": 42,
+      "device": "cuda",
+      "min_cosine": 0.999978,
+      "mean_cosine": 1.0,
+      "median_cosine": 1.0,
+      "threshold": 0.999,
+      "passed": true
+    },
+    "0_3_phase3_reference_min_cosine": 0.999660074710846,
+    "0_4_heldout_v2_check": {
+      "exists": false,
+      "passed": false,
+      "reason": "Thiếu tệp eval/test_queries_heldout_v2.json trên đĩa (hiện chỉ có phiếu lấy mẫu reports/phase5c/heldout_v2_worksheet.csv). Theo mục 0.4: KHÔNG chạy bất kỳ đánh giá chất lượng nào trên test_gallery; chỉ kiểm tra/chạy Phần A rồi báo và DỪNG."
+    },
+    "0_5_approvals": {
+      "t2i_official_winner": "cfg_v5_09",
+      "t2i_safe_config": "cfg_v5_01",
+      "t2i_predeclared_reference_configs": [
+        "cfg_v5_06",
+        "cfg_v5_08b"
+      ],
+      "t2i_approval_source": "reports/phase5c/step5c_selection_report.md",
+      "cir_provisional_winner": "cir_v1_05",
+      "cir_baseline_model_only": "cir_v1_01",
+      "cir_approval_status": "provisional_pending_part_a_clean_gpu_latency",
+      "cir_approval_source": "reports/phase5c/step5c_cir_report.md"
+    },
+    "0_6_locked_definitions": {
+      "spec_version": "prompt14_step0_6_v1",
+      "seed": 42,
+      "n_bootstrap": 1000,
+      "bootstrap_unit": "query (paired when comparing two configurations)",
+      "test_gallery_size": 1290,
+      "metrics": {
+        "recall_at_k_hit_rate": "1.0 if sum(rels[:k]) >= 1 else 0.0 (standard hit-rate@k)",
+        "true_recall_at_10": "sum(rels[:10]) / max(1, total_relevant_in_gallery) (supplementary)",
+        "mAP": "Average Precision over full ranked list of all 1,290 items in test_gallery, divided by total_relevant_in_gallery",
+        "secondary_gt_non_circular": "Within the subset S_primary of gallery items matching the query's primary catalog attributes (articleType, gender under hybrid policy, baseColour), preserve the system's ranking order and compute within-group AP (secondary_within_group_mAP) and within-group Hit@5 (secondary_within_group_R@5) against items in S_primary matching the query's non-indexed usage/season attribute."
+      },
+      "conclusion_rules": {
+        "latency_p95_lt_200ms": {
+          "Đạt chắc chắn": "max(run_p95_ms) < 200.0",
+          "Đạt theo trung vị nhưng có run vượt": "median(run_p95_ms) < 200.0 <= max(run_p95_ms)",
+          "Chưa đạt": "median(run_p95_ms) >= 200.0"
+        },
+        "quality_threshold": {
+          "Đạt chắc chắn": "ci_low >= threshold",
+          "Đạt điểm số nhưng CI chứa ngưỡng": "ci_low < threshold <= point_estimate (or point_estimate >= threshold >= ci_low)",
+          "Chưa đạt điểm số, CI chứa ngưỡng": "point_estimate < threshold <= ci_high",
+          "Chưa đạt": "ci_high < threshold"
+        }
+      }
+    }
+  },
+  "part_a_latency": {
+    "status": "BLOCKED_BY_BACKGROUND_GPU_PROCESSES",
+    "gpu_precheck": {
+      "telemetry": {
+        "timestamp": "2026/11/14 20:22:52.418",
+        "gpu_name": "NVIDIA GeForce RTX 2050",
+        "temperature_c": 70.0,
+        "utilization_pct": 84.0,
+        "power_draw_w": 17.43,
+        "clock_graphics_mhz": 1747.0,
+        "clock_mem_mhz": 6000.0,
+        "memory_used_mb": 2385.0,
+        "memory_total_mb": 4096.0
+      },
+      "processes": [
+        {
+          "pid": "1596",
+          "type": "C+G",
+          "process_name": "...rograms\\antigravity\\Antigravity.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "2912",
+          "type": "C+G",
+          "process_name": "...rograms\\antigravity\\Antigravity.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "3588",
+          "type": "C+G",
+          "process_name": "...4__8wekyb3d8bbwe\\EdgeGameAssist.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "4724",
+          "type": "C+G",
+          "process_name": "C:\\Windows\\System32\\ShellHost.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "12004",
+          "type": "C+G",
+          "process_name": "...cw5n1h2txyewy\\CrossDeviceResume.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "12964",
+          "type": "C+G",
+          "process_name": "...nt.CBS_cw5n1h2txyewy\\SearchHost.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "12976",
+          "type": "C+G",
+          "process_name": "...2txyewy\\StartMenuExperienceHost.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "13176",
+          "type": "C+G",
+          "process_name": "..._x64__cw5n1h2txyewy\\WidgetBoard.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "13356",
+          "type": "C+G",
+          "process_name": "...on\\157.0.4341.46\\msedgewebview2.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "16284",
+          "type": "C+G",
+          "process_name": "...er\\ldmutiplayer\\dnmultiplayerex.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "16984",
+          "type": "C",
+          "process_name": "...rograms\\Python\\Python312\\python.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "17140",
+          "type": "C+G",
+          "process_name": "...CBS_cw5n1h2txyewy\\TextInputHost.exe",
+          "gpu_memory": "N/A"
+        }
+      ],
+      "blocking_graphics_processes": [
+        {
+          "pid": "3588",
+          "type": "C+G",
+          "process_name": "...4__8wekyb3d8bbwe\\EdgeGameAssist.exe",
+          "gpu_memory": "N/A"
+        },
+        {
+          "pid": "16284",
+          "type": "C+G",
+          "process_name": "...er\\ldmutiplayer\\dnmultiplayerex.exe",
+          "gpu_memory": "N/A"
+        }
+      ],
+      "has_blocking_graphics_processes": true
+    },
+    "policy_note": "Theo mệnh lệnh Phần A: 'Trước/sau: ghi tiến trình GPU (nvidia-smi). Còn tiến trình đồ họa nền thì DỪNG, báo người dùng, không tự kill.' Phát hiện tiến trình đồ họa nền đang chạy trên GPU nên DỪNG ngay, không tự kill và không đo độ trễ trên GPU đang bị chiếm tải."
+  },
+  "part_b_quality_test_gallery": {
+    "status": "NOT_RUN_PER_STEP_0_4",
+    "test_gallery_touched_for_quality_eval": false
+  },
+  "prompt14b_step1_audit": {
+    "script_path": "scripts/build_val_text_index_v5.py",
+    "hardcoded_lines": {
+      "line_48": "val_dir = PROJECT_ROOT / index/val_gallery",
+      "line_49": "out_dir = PROJECT_ROOT / index/val_gallery_text_v5",
+      "line_53": "shard_files = sorted(captions_dir.glob(shard_val_[0-9]*.parquet))",
+      "line_114": "gallery_type: val_tuning_split_text_v5"
+    },
+    "accepts_cli_args": false,
+    "rule_triggered": "Không sửa script. Nếu phải sửa thì DỪNG và báo."
+  },
+  "prompt14b_step2_gpu_audit": {
+    "timestamp_local": "2026-11-14T20:57:46+07:00",
+    "agent_python_pid": 15456,
+    "blocking_graphics_processes_still_alive": [
+      {
+        "pid": "3588",
+        "type": "C+G",
+        "process_name": "...4__8wekyb3d8bbwe\\EdgeGameAssist.exe",
+        "gpu_memory": "N/A"
+      },
+      {
+        "pid": "16284",
+        "type": "C+G",
+        "process_name": "...er\\ldmutiplayer\\dnmultiplayerex.exe",
+        "gpu_memory": "N/A"
+      }
+    ],
+    "accepted_system_ide_processes": [
+      {
+        "pid": "1596",
+        "type": "C+G",
+        "process_name": "...rograms\\antigravity\\Antigravity.exe"
+      },
+      {
+        "pid": "2912",
+        "type": "C+G",
+        "process_name": "...rograms\\antigravity\\Antigravity.exe"
+      },
+      {
+        "pid": "4724",
+        "type": "C+G",
+        "process_name": "C:\\Windows\\System32\\ShellHost.exe"
+      },
+      {
+        "pid": "12004",
+        "type": "C+G",
+        "process_name": "...cw5n1h2txyewy\\CrossDeviceResume.exe"
+      },
+      {
+        "pid": "12964",
+        "type": "C+G",
+        "process_name": "...nt.CBS_cw5n1h2txyewy\\SearchHost.exe"
+      },
+      {
+        "pid": "12976",
+        "type": "C+G",
+        "process_name": "...2txyewy\\StartMenuExperienceHost.exe"
+      },
+      {
+        "pid": "13176",
+        "type": "C+G",
+        "process_name": "..._x64__cw5n1h2txyewy\\WidgetBoard.exe"
+      },
+      {
+        "pid": "13356",
+        "type": "C+G",
+        "process_name": "...on\\157.0.4341.46\\msedgewebview2.exe"
+      },
+      {
+        "pid": "17140",
+        "type": "C+G",
+        "process_name": "...CBS_cw5n1h2txyewy\\TextInputHost.exe"
+      }
+    ],
+    "idle_30s_sampling_1s_interval": {
+      "samples_pct": [
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        55.0,
+        28.0,
+        30.0,
+        28.0,
+        28.0,
+        28.0,
+        29.0,
+        28.0,
+        28.0,
+        29.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        28.0,
+        29.0,
+        28.0,
+        55.0
+      ],
+      "median_pct": 28.0,
+      "max_pct": 55.0,
+      "min_pct": 28.0,
+      "mean_pct": 29.97,
+      "threshold_median_pct": 10.0,
+      "passed_idle_threshold": false,
+      "temp_median_c": 56.0,
+      "temp_max_c": 56.0
+    }
+  },
+  "prompt14c_step1_test_text_index_v5": {
+    "created_at": "2026-11-14 21:26:24",
+    "commit_hash": "1d30dd62111d49ad78e8e4cf3f44705abbf61462",
+    "seed": 42,
+    "build_val_text_index_v5_sha256": "da87e18c0027c769a072d99d59fe47e7c5e2fc9a71f1a4116c9280d232d2e867",
+    "build_val_text_index_v5_untouched": true,
+    "val_parity_verification": {
+      "passed_all_0_9999": true,
+      "files": {
+        "internvl2_only_embeddings.npy": {
+          "n_rows": 1884,
+          "min_cosine": 0.9999998807907104,
+          "mean_cosine": 1.0,
+          "max_abs_diff": 0.0,
+          "count_cosine_lt_0_9999": 0,
+          "sha256_ref": "a1dd96ab2efa293e0748f02934148a547522e94c8124714e1b6f631a1e89c5a2",
+          "sha256_cand": "a1dd96ab2efa293e0748f02934148a547522e94c8124714e1b6f631a1e89c5a2",
+          "exact_byte_match": true,
+          "passed_0_9999": true
+        },
+        "internvl2_plus_aux_embeddings.npy": {
+          "n_rows": 1884,
+          "min_cosine": 0.9999997615814209,
+          "mean_cosine": 1.0,
+          "max_abs_diff": 0.0,
+          "count_cosine_lt_0_9999": 0,
+          "sha256_ref": "ea0df85b52dc69d655b1230c55642bfa475f462c5fff1f56c44b1e1481a50f63",
+          "sha256_cand": "ea0df85b52dc69d655b1230c55642bfa475f462c5fff1f56c44b1e1481a50f63",
+          "exact_byte_match": true,
+          "passed_0_9999": true
+        },
+        "metadata_aux_embeddings.npy": {
+          "n_rows": 1884,
+          "min_cosine": 0.9999998211860657,
+          "mean_cosine": 1.0,
+          "max_abs_diff": 0.0,
+          "count_cosine_lt_0_9999": 0,
+          "sha256_ref": "faf6880e9d3bb7b01544c91b6888e8afc07ea770f964659bcc99c632ffe7b04b",
+          "sha256_cand": "faf6880e9d3bb7b01544c91b6888e8afc07ea770f964659bcc99c632ffe7b04b",
+          "exact_byte_match": true,
+          "passed_0_9999": true
+        }
+      }
+    },
+    "test_gallery_text_v5_sanity": {
+      "passed": true,
+      "checkpoint_hash_match": true,
+      "catalog_hash_match": true,
+      "n_vectors": 1290,
+      "expected_n_vectors": 1290,
+      "n_vectors_match": true,
+      "n_duplicate_ids": 0,
+      "id_order_matches_gallery_id_map": true,
+      "id_order_sha256": "6ca5bbf0b268103da2b901538effc004057faa817e7473d96dd49395418ee282",
+      "files": {
+        "internvl2_only_embeddings": {
+          "file": "internvl2_only_embeddings.npy",
+          "sha256": "7d4344b33194cc01b8a211b978e82357ef7b04ec65f3a435895e8b4efb58aaf3",
+          "sha256_matches_manifest": true,
+          "shape": [
+            1290,
+            1152
+          ],
+          "dtype": "float32",
+          "nan_or_inf_count": 0,
+          "l2_norm_min": 0.9996054172515869,
+          "l2_norm_mean": 1.0000354051589966,
+          "l2_norm_max": 1.0003639459609985,
+          "l2_norm_ok": true,
+          "passed": true
+        },
+        "internvl2_plus_aux_embeddings": {
+          "file": "internvl2_plus_aux_embeddings.npy",
+          "sha256": "53c75ab8a110a0053fc5e1d74d8a0407c14aebe2f9744d4f65f104fb1084d450",
+          "sha256_matches_manifest": true,
+          "shape": [
+            1290,
+            1152
+          ],
+          "dtype": "float32",
+          "nan_or_inf_count": 0,
+          "l2_norm_min": 0.9995230436325073,
+          "l2_norm_mean": 1.0000028610229492,
+          "l2_norm_max": 1.0004714727401733,
+          "l2_norm_ok": true,
+          "passed": true
+        },
+        "metadata_aux_embeddings": {
+          "file": "metadata_aux_embeddings.npy",
+          "sha256": "0339efc1e3799fe2d449b92c412f7a06742190b44f9d716bbf9b2f30c5eb101c",
+          "sha256_matches_manifest": true,
+          "shape": [
+            1290,
+            1152
+          ],
+          "dtype": "float32",
+          "nan_or_inf_count": 0,
+          "l2_norm_min": 0.9995219707489014,
+          "l2_norm_mean": 1.0000081062316895,
+          "l2_norm_max": 1.0004698038101196,
+          "l2_norm_ok": true,
+          "passed": true
+        }
+      }
+    },
+    "test_gallery_text_v5_manifest_summary": {
+      "gallery_type": "test_split_text_v5",
+      "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+      "catalog_hash": "aaec78681b80a39ebd6e07f70130ab600b0df1f13315354312741f930b9474ab",
+      "shard_hashes": {
+        "shard_test_0000.parquet": "9cf154b9c1f8f33adadb209fb234ac731a03b685c7988a42c8ffda295581d690",
+        "shard_test_0001.parquet": "32db89eebeb87982714add0af4be9126644a77e3f4502698da5044e03c10c03c",
+        "shard_test_0002.parquet": "e888366e043a5ba13d751669ddcdd032925eeb29073d7a0e08d92c8b4d9af7c2"
+      },
+      "n_vectors": 1290,
+      "id_order_sha256": "6ca5bbf0b268103da2b901538effc004057faa817e7473d96dd49395418ee282",
+      "caption_model": "OpenGVLab/InternVL2-2B + 5CD-AI/Vintern-1B-v3_5",
+      "model_revision": "e4f6747bd20f139e637642c6a058c6bd00b36919 + b98f263eab246eb5269ade64edbdca8a887dc44d",
+      "combination_method": "merge_v1",
+      "generation_params": {
+        "max_new_tokens": 96,
+        "do_sample": false,
+        "num_beams": 1,
+        "quantization": "8bit"
+      },
+      "files": {
+        "internvl2_only_embeddings": {
+          "file": "internvl2_only_embeddings.npy",
+          "sha256": "7d4344b33194cc01b8a211b978e82357ef7b04ec65f3a435895e8b4efb58aaf3"
+        },
+        "internvl2_plus_aux_embeddings": {
+          "file": "internvl2_plus_aux_embeddings.npy",
+          "sha256": "53c75ab8a110a0053fc5e1d74d8a0407c14aebe2f9744d4f65f104fb1084d450"
+        },
+        "metadata_aux_embeddings": {
+          "file": "metadata_aux_embeddings.npy",
+          "sha256": "0339efc1e3799fe2d449b92c412f7a06742190b44f9d716bbf9b2f30c5eb101c"
+        }
+      }
+    },
+    "token_length_comparison_max_length_128": {
+      "val_max_new_tokens_48": {
+        "generation_params": {
+          "max_new_tokens": 48,
+          "do_sample": false,
+          "num_beams": 1,
+          "quantization": "8bit"
+        },
+        "stats": {
+          "max_length": 128,
+          "caption_A_internvl2_only": {
+            "n_items": 1884,
+            "min": 49,
+            "p25": 68.0,
+            "median": 68.0,
+            "mean": 67.91348195329087,
+            "p95": 68.0,
+            "p99": 68.0,
+            "max": 68,
+            "count_gt_128_truncated": 0,
+            "rate_gt_128_truncated": 0.0,
+            "count_ge_128": 0,
+            "rate_ge_128": 0.0
+          },
+          "caption_B_internvl2_plus_aux": {
+            "n_items": 1884,
+            "min": 97,
+            "p25": 127.0,
+            "median": 128.0,
+            "mean": 127.3911889596603,
+            "p95": 128.0,
+            "p99": 128.0,
+            "max": 128,
+            "count_gt_128_truncated": 0,
+            "rate_gt_128_truncated": 0.0,
+            "count_ge_128": 1055,
+            "rate_ge_128": 0.5599787685774947
+          },
+          "metadata_aux": {
+            "n_items": 1884,
+            "min": 9,
+            "p25": 19.0,
+            "median": 22.0,
+            "mean": 22.359341825902334,
+            "p95": 30.0,
+            "p99": 33.0,
+            "max": 36,
+            "count_gt_128_truncated": 0,
+            "rate_gt_128_truncated": 0.0,
+            "count_ge_128": 0,
+            "rate_ge_128": 0.0
+          }
+        }
+      },
+      "test_max_new_tokens_96": {
+        "generation_params": {
+          "max_new_tokens": 96,
+          "do_sample": false,
+          "num_beams": 1,
+          "quantization": "8bit"
+        },
+        "stats": {
+          "max_length": 128,
+          "caption_A_internvl2_only": {
+            "n_items": 1290,
+            "min": 4,
+            "p25": 6.0,
+            "median": 68.0,
+            "mean": 49.31240310077519,
+            "p95": 68.0,
+            "p99": 123.1099999999999,
+            "max": 131,
+            "count_gt_128_truncated": 2,
+            "rate_gt_128_truncated": 0.0015503875968992248,
+            "count_ge_128": 3,
+            "rate_ge_128": 0.002325581395348837
+          },
+          "caption_B_internvl2_plus_aux": {
+            "n_items": 1290,
+            "min": 111,
+            "p25": 127.0,
+            "median": 128.0,
+            "mean": 127.36666666666666,
+            "p95": 128.0,
+            "p99": 128.0,
+            "max": 128,
+            "count_gt_128_truncated": 0,
+            "rate_gt_128_truncated": 0.0,
+            "count_ge_128": 688,
+            "rate_ge_128": 0.5333333333333333
+          },
+          "metadata_aux": {
+            "n_items": 1290,
+            "min": 5,
+            "p25": 5.0,
+            "median": 7.0,
+            "mean": 7.446511627906977,
+            "p95": 13.0,
+            "p99": 13.0,
+            "max": 15,
+            "count_gt_128_truncated": 0,
+            "rate_gt_128_truncated": 0.0,
+            "count_ge_128": 0,
+            "rate_ge_128": 0.0
+          }
+        }
+      }
+    }
+  },
+  "prompt14c_step2_gpu_env_check": {
+    "agent_python_pid": 988,
+    "checked_at": "2026-11-14 21:28:19",
+    "nvidia_smi_raw": "Sat Nov 14 21:27:45 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 560.76                 Driver Version: 560.76         CUDA Version: 12.6     |\n|-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 2050      WDDM  |   00000000:01:00.0 Off |                  N/A |\n| N/A   72C    P5              4W /   35W |     332MiB /   4096MiB |     33%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n                                                                                         \n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A      1596    C+G   ...rograms\\antigravity\\Antigravity.exe      N/A      |\n|    0   N/A  N/A      2912    C+G   ...rograms\\antigravity\\Antigravity.exe      N/A      |\n|    0   N/A  N/A      3588    C+G   ...4__8wekyb3d8bbwe\\EdgeGameAssist.exe      N/A      |\n|    0   N/A  N/A      4724    C+G   C:\\Windows\\System32\\ShellHost.exe           N/A      |\n|    0   N/A  N/A     12004    C+G   ...cw5n1h2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A     12964    C+G   ...nt.CBS_cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A     12976    C+G   ...2txyewy\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A     13176    C+G   ..._x64__cw5n1h2txyewy\\WidgetBoard.exe      N/A      |\n|    0   N/A  N/A     13356    C+G   ...on\\157.0.4341.46\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A     16284    C+G   ...er\\ldmutiplayer\\dnmultiplayerex.exe      N/A      |\n|    0   N/A  N/A     17140    C+G   ...CBS_cw5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A     21960    C+G   ...ekyb3d8bbwe\\PhoneExperienceHost.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+    "idle_30s_summary": {
+      "n_samples": 30,
+      "gpu_util_median_pct": 31.0,
+      "gpu_util_mean_pct": 28.866666666666667,
+      "gpu_util_min_pct": 2.0,
+      "gpu_util_max_pct": 59.0,
+      "temp_min_c": 70.0,
+      "temp_median_c": 71.0,
+      "temp_max_c": 72.0
+    },
+    "samples": [
+      {
+        "timestamp": "2026/11/14 21:27:45.610",
+        "gpu_util_pct": 33.0,
+        "mem_util_pct": 4.0,
+        "temp_c": 72.0,
+        "power_w": 5.01,
+        "gr_clock_mhz": 517.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:46.731",
+        "gpu_util_pct": 29.0,
+        "mem_util_pct": 4.0,
+        "temp_c": 71.0,
+        "power_w": 4.68,
+        "gr_clock_mhz": 442.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:47.854",
+        "gpu_util_pct": 29.0,
+        "mem_util_pct": 3.0,
+        "temp_c": 71.0,
+        "power_w": 4.66,
+        "gr_clock_mhz": 592.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:48.953",
+        "gpu_util_pct": 28.0,
+        "mem_util_pct": 3.0,
+        "temp_c": 71.0,
+        "power_w": 4.64,
+        "gr_clock_mhz": 592.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:50.059",
+        "gpu_util_pct": 57.0,
+        "mem_util_pct": 6.0,
+        "temp_c": 72.0,
+        "power_w": 4.53,
+        "gr_clock_mhz": 592.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:51.164",
+        "gpu_util_pct": 32.0,
+        "mem_util_pct": 3.0,
+        "temp_c": 71.0,
+        "power_w": 4.47,
+        "gr_clock_mhz": 592.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:52.256",
+        "gpu_util_pct": 33.0,
+        "mem_util_pct": 3.0,
+        "temp_c": 71.0,
+        "power_w": 4.35,
+        "gr_clock_mhz": 487.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:53.430",
+        "gpu_util_pct": 27.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 71.0,
+        "power_w": 4.36,
+        "gr_clock_mhz": 435.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:54.536",
+        "gpu_util_pct": 32.0,
+        "mem_util_pct": 3.0,
+        "temp_c": 71.0,
+        "power_w": 4.53,
+        "gr_clock_mhz": 675.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:55.640",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 71.0,
+        "power_w": 4.31,
+        "gr_clock_mhz": 675.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:56.742",
+        "gpu_util_pct": 31.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 71.0,
+        "power_w": 4.39,
+        "gr_clock_mhz": 502.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:57.833",
+        "gpu_util_pct": 31.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 71.0,
+        "power_w": 4.4,
+        "gr_clock_mhz": 442.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:27:58.996",
+        "gpu_util_pct": 31.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 71.0,
+        "power_w": 4.49,
+        "gr_clock_mhz": 645.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:00.171",
+        "gpu_util_pct": 31.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 71.0,
+        "power_w": 4.34,
+        "gr_clock_mhz": 645.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:01.367",
+        "gpu_util_pct": 24.0,
+        "mem_util_pct": 3.0,
+        "temp_c": 71.0,
+        "power_w": 4.49,
+        "gr_clock_mhz": 487.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:02.650",
+        "gpu_util_pct": 26.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 71.0,
+        "power_w": 4.37,
+        "gr_clock_mhz": 412.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:03.772",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 71.0,
+        "power_w": 4.4,
+        "gr_clock_mhz": 607.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:04.860",
+        "gpu_util_pct": 5.0,
+        "mem_util_pct": 0.0,
+        "temp_c": 70.0,
+        "power_w": 3.93,
+        "gr_clock_mhz": 390.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:05.967",
+        "gpu_util_pct": 31.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 70.0,
+        "power_w": 4.41,
+        "gr_clock_mhz": 592.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:07.060",
+        "gpu_util_pct": 59.0,
+        "mem_util_pct": 4.0,
+        "temp_c": 70.0,
+        "power_w": 3.88,
+        "gr_clock_mhz": 540.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:08.180",
+        "gpu_util_pct": 31.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 70.0,
+        "power_w": 4.33,
+        "gr_clock_mhz": 540.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:09.292",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 71.0,
+        "power_w": 4.31,
+        "gr_clock_mhz": 420.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:10.488",
+        "gpu_util_pct": 2.0,
+        "mem_util_pct": 0.0,
+        "temp_c": 70.0,
+        "power_w": 4.05,
+        "gr_clock_mhz": 615.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:11.568",
+        "gpu_util_pct": 32.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 70.0,
+        "power_w": 4.64,
+        "gr_clock_mhz": 525.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:12.682",
+        "gpu_util_pct": 35.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 70.0,
+        "power_w": 4.3,
+        "gr_clock_mhz": 405.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:13.773",
+        "gpu_util_pct": 32.0,
+        "mem_util_pct": 3.0,
+        "temp_c": 70.0,
+        "power_w": 4.58,
+        "gr_clock_mhz": 592.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:14.849",
+        "gpu_util_pct": 30.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 70.0,
+        "power_w": 4.23,
+        "gr_clock_mhz": 495.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:16.036",
+        "gpu_util_pct": 8.0,
+        "mem_util_pct": 1.0,
+        "temp_c": 70.0,
+        "power_w": 3.96,
+        "gr_clock_mhz": 390.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:17.207",
+        "gpu_util_pct": 31.0,
+        "mem_util_pct": 2.0,
+        "temp_c": 70.0,
+        "power_w": 4.32,
+        "gr_clock_mhz": 585.0,
+        "mem_clock_mhz": 810.0,
+        "pstate": "P5"
+      },
+      {
+        "timestamp": "2026/11/14 21:28:18.371",
+        "gpu_util_pct": 6.0,
+        "mem_util_pct": 0.0,
+        "temp_c": 70.0,
+        "power_w": 3.66,
+        "gr_clock_mhz": 367.0,
+        "mem_clock_mhz": 405.0,
+        "pstate": "P8"
+      }
+    ]
+  }
+}

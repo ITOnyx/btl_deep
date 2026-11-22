@@ -1,0 +1,310 @@
+slot_kind,spec_cluster_id,articleType,gender,baseColour,n_relevant,used_DEV,used_A,used_B_synth,used_B_human_valid,total_used,chua_ai_dung,da_dung_ge_3
+1_slot (articleType),Tshirts__None__,Tshirts,null,,314,0,0,0,0,0,True,False
+1_slot (articleType),Shirts__None__,Shirts,null,,147,0,0,0,0,0,True,False
+1_slot (articleType),Casual Shoes__None__,Casual Shoes,null,,125,0,0,0,0,0,True,False
+1_slot (articleType),Watches__None__,Watches,null,,118,0,0,0,0,0,True,False
+1_slot (articleType),Kurtas__None__,Kurtas,null,,95,0,0,0,0,0,True,False
+1_slot (articleType),Sports Shoes__None__,Sports Shoes,null,,95,0,0,0,0,0,True,False
+1_slot (articleType),Handbags__None__,Handbags,null,,86,0,0,0,0,0,True,False
+1_slot (articleType),Tops__None__,Tops,null,,84,0,0,0,0,0,True,False
+1_slot (articleType),Heels__None__,Heels,null,,63,0,0,0,0,0,True,False
+1_slot (articleType),Wallets__None__,Wallets,null,,45,0,0,0,0,0,True,False
+1_slot (articleType),Belts__None__,Belts,null,,37,0,0,0,0,0,True,False
+1_slot (articleType),Sandals__None__,Sandals,null,,34,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Watches__None__Black,Watches,null,Black,34,0,0,0,0,0,True,False
+1_slot (articleType),Backpacks__None__,Backpacks,null,,33,0,0,0,0,0,True,False
+1_slot (articleType),Sunglasses__None__,Sunglasses,null,,32,0,0,0,0,0,True,False
+1_slot (articleType),Briefs__None__,Briefs,null,,31,0,0,0,0,0,True,False
+2_slot (articleType+gender),Backpacks__Men__,Backpacks,Men,,30,0,0,0,0,0,True,False
+2_slot (articleType+gender),Backpacks__Women__,Backpacks,Women,,30,0,0,0,0,0,True,False
+1_slot (articleType),Flip Flops__None__,Flip Flops,null,,30,0,0,0,0,0,True,False
+1_slot (articleType),Socks__None__,Socks,null,,29,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Sports Shoes__None__Black,Sports Shoes,null,Black,27,0,0,0,0,0,True,False
+1_slot (articleType),Bra__None__,Bra,null,,24,0,0,0,0,0,True,False
+1_slot (articleType),Earrings__None__,Earrings,null,,24,0,0,0,0,0,True,False
+1_slot (articleType),Formal Shoes__None__,Formal Shoes,null,,24,0,0,0,0,0,True,False
+1_slot (articleType),Track Pants__None__,Track Pants,null,,22,0,0,0,0,0,True,False
+1_slot (articleType),Flats__None__,Flats,null,,21,0,0,0,0,0,True,False
+1_slot (articleType),Jeans__None__,Jeans,null,,21,0,0,0,0,0,True,False
+1_slot (articleType),Caps__None__,Caps,null,,20,0,0,0,0,0,True,False
+1_slot (articleType),Sarees__None__,Sarees,null,,19,0,0,0,0,0,True,False
+1_slot (articleType),Trousers__None__,Trousers,null,,19,0,0,0,0,0,True,False
+1_slot (articleType),Shorts__None__,Shorts,null,,18,0,0,0,0,0,True,False
+2_slot (articleType+gender),Casual Shoes__Boys__,Casual Shoes,Boys,,17,0,0,0,0,0,True,False
+2_slot (articleType+gender),Casual Shoes__Girls__,Casual Shoes,Girls,,16,0,0,0,0,0,True,False
+2_slot (articleType+gender),Innerwear Vests__Men__,Innerwear Vests,Men,,16,0,0,0,0,0,True,False
+1_slot (articleType),Innerwear Vests__None__,Innerwear Vests,null,,16,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Kurtas__None__Blue,Kurtas,null,Blue,16,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Kurtas__None__Green,Kurtas,null,Green,16,0,0,0,0,0,True,False
+1_slot (articleType),Ties__None__,Ties,null,,16,0,0,0,0,0,True,False
+1_slot (articleType),Dresses__None__,Dresses,null,,15,0,0,0,0,0,True,False
+1_slot (articleType),Jackets__None__,Jackets,null,,15,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Heels__Women__Brown,Heels,Women,Brown,14,0,0,0,0,0,True,False
+1_slot (articleType),Clutches__None__,Clutches,null,,13,0,0,0,0,0,True,False
+2_slot (articleType+gender),Caps__Women__,Caps,Women,,12,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Casual Shoes__None__Brown,Casual Shoes,null,Brown,12,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Shirts__None__Black,Shirts,null,Black,12,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Shirts__None__Green,Shirts,null,Green,12,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Tops__None__White,Tops,null,White,12,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Backpacks__Men__Black,Backpacks,Men,Black,11,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Kurtas__None__Black,Kurtas,null,Black,11,0,0,0,0,0,True,False
+1_slot (articleType),Kurtis__None__,Kurtis,null,,11,0,0,0,0,0,True,False
+2_slot (articleType+gender),Kurtis__Women__,Kurtis,Women,,11,0,0,0,0,0,True,False
+1_slot (articleType),Night suits__None__,Night suits,null,,11,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Track Pants__None__Black,Track Pants,null,Black,11,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Watches__None__Steel,Watches,null,Steel,11,0,0,0,0,0,True,False
+2_slot (articleType+gender),Accessory Gift Set__Men__,Accessory Gift Set,Men,,10,0,0,0,0,0,True,False
+1_slot (articleType),Accessory Gift Set__None__,Accessory Gift Set,null,,10,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Heels__None__Gold,Heels,null,Gold,10,0,0,0,0,0,True,False
+1_slot (articleType),Necklace and Chains__None__,Necklace and Chains,null,,10,0,0,0,0,0,True,False
+2_slot (articleType+gender),Necklace and Chains__Women__,Necklace and Chains,Women,,10,0,0,0,0,0,True,False
+1_slot (articleType),Nightdress__None__,Nightdress,null,,10,0,0,0,0,0,True,False
+2_slot (articleType+gender),Nightdress__Women__,Nightdress,Women,,10,0,0,0,0,0,True,False
+1_slot (articleType),Sweatshirts__None__,Sweatshirts,null,,10,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Backpacks__Men__Red,Backpacks,Men,Red,9,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Casual Shoes__None__Navy Blue,Casual Shoes,null,Navy Blue,9,0,0,0,0,0,True,False
+1_slot (articleType),Duffel Bag__None__,Duffel Bag,null,,9,0,0,0,0,0,True,False
+2_slot (articleType+gender),Sunglasses__Girls__,Sunglasses,Girls,,9,0,0,0,0,0,True,False
+1_slot (articleType),Sweaters__None__,Sweaters,null,,9,0,0,0,0,0,True,False
+1_slot (articleType),Tunics__None__,Tunics,null,,9,0,0,0,0,0,True,False
+2_slot (articleType+gender),Tunics__Women__,Tunics,Women,,9,0,0,0,0,0,True,False
+1_slot (articleType),Dupatta__None__,Dupatta,null,,8,0,0,0,0,0,True,False
+2_slot (articleType+gender),Dupatta__Women__,Dupatta,Women,,8,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Flats__None__Black,Flats,null,Black,8,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Handbags__None__Blue,Handbags,null,Blue,8,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Kurtas__None__White,Kurtas,null,White,8,0,0,0,0,0,True,False
+1_slot (articleType),Pendant__None__,Pendant,null,,8,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Pendant__None__Silver,Pendant,null,Silver,8,0,0,0,0,0,True,False
+2_slot (articleType+gender),Pendant__Women__,Pendant,Women,,8,0,0,0,0,0,True,False
+2_slot (articleType+gender),Tops__Girls__,Tops,Girls,,8,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Bra__None__Black,Bra,null,Black,7,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Bra__None__White,Bra,null,White,7,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Kurtas__None__Purple,Kurtas,null,Purple,7,0,0,0,0,0,True,False
+1_slot (articleType),Leggings__None__,Leggings,null,,7,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Earrings__None__Gold,Earrings,null,Gold,6,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Handbags__Women__Grey,Handbags,Women,Grey,6,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Jackets__None__Black,Jackets,null,Black,6,0,0,0,0,0,True,False
+1_slot (articleType),Kurta Sets__None__,Kurta Sets,null,,6,0,0,0,0,0,True,False
+2_slot (articleType+gender),Kurta Sets__Women__,Kurta Sets,Women,,6,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Kurtas__None__Brown,Kurtas,null,Brown,6,0,0,0,0,0,True,False
+2_slot (articleType+gender),Leggings__Women__,Leggings,Women,,6,0,0,0,0,0,True,False
+2_slot (articleType+gender),Night suits__Women__,Night suits,Women,,6,0,0,0,0,0,True,False
+2_slot (articleType+gender),Socks__Women__,Socks,Women,,6,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Sunglasses__Women__Black,Sunglasses,Women,Black,6,0,0,0,0,0,True,False
+2_slot (articleType+gender),Sweatshirts__Men__,Sweatshirts,Men,,6,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Backpacks__Women__Blue,Backpacks,Women,Blue,5,0,0,0,0,0,True,False
+1_slot (articleType),Bracelet__None__,Bracelet,null,,5,0,0,0,0,0,True,False
+2_slot (articleType+gender),Bracelet__Women__,Bracelet,Women,,5,0,0,0,0,0,True,False
+1_slot (articleType),Capris__None__,Capris,null,,5,0,0,0,0,0,True,False
+2_slot (articleType+gender),Capris__Women__,Capris,Women,,5,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Olive,Casual Shoes,Men,Olive,5,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Red,Casual Shoes,Men,Red,5,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Casual Shoes__None__Olive,Casual Shoes,null,Olive,5,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Casual Shoes__Women__Black,Casual Shoes,Women,Black,5,0,0,0,0,0,True,False
+3_slot (articleType+gender+baseColour),Casual Shoes__Women__Blue,Casual Shoes,Women,Blue,5,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Handbags__None__Purple,Handbags,null,Purple,5,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Kurtas__None__Grey,Kurtas,null,Grey,5,0,0,0,0,0,True,False
+1_slot (articleType),Lounge Pants__None__,Lounge Pants,null,,5,0,0,0,0,0,True,False
+2_slot (articleType+gender),Night suits__Men__,Night suits,Men,,5,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Sarees__None__Green,Sarees,null,Green,5,0,0,0,0,0,True,False
+1_slot (articleType),Stockings__None__,Stockings,null,,5,0,0,0,0,0,True,False
+2_slot (articleType+gender),Stockings__Women__,Stockings,Women,,5,0,0,0,0,0,True,False
+2_slot (articleType+baseColour),Track Pants__None__Grey,Track Pants,null,Grey,5,0,0,0,0,0,True,False
+2_slot (articleType+gender),Trunk__Men__,Trunk,Men,,5,0,0,0,0,0,True,False
+1_slot (articleType),Trunk__None__,Trunk,null,,5,0,0,0,0,0,True,False
+2_slot (articleType+gender),Kurtas__Women__,Kurtas,Women,,92,0,1,0,0,1,False,False
+2_slot (articleType+baseColour),Tshirts__None__Blue,Tshirts,null,Blue,55,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Sports Shoes__None__White,Sports Shoes,null,White,44,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Casual Shoes__None__Black,Casual Shoes,null,Black,42,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Tshirts__None__Black,Tshirts,null,Black,39,0,0,1,0,1,False,False
+2_slot (articleType+gender),Backpacks__Unisex__,Backpacks,Unisex,,27,0,1,0,0,1,False,False
+2_slot (articleType+gender),Socks__Men__,Socks,Men,,27,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Tshirts__None__Green,Tshirts,null,Green,27,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Shirts__None__White,Shirts,null,White,26,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Tshirts__None__Red,Tshirts,null,Red,25,0,0,1,0,1,False,False
+2_slot (articleType+gender),Bra__Women__,Bra,Women,,24,0,1,0,0,1,False,False
+2_slot (articleType+gender),Formal Shoes__Men__,Formal Shoes,Men,,24,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Casual Shoes__None__White,Casual Shoes,null,White,20,0,0,0,1,1,False,False
+2_slot (articleType+baseColour),Heels__None__Black,Heels,null,Black,17,0,0,1,0,1,False,False
+2_slot (articleType+gender),Caps__Men__,Caps,Men,,16,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Belts__None__Black,Belts,null,Black,15,0,0,1,0,1,False,False
+2_slot (articleType+gender),Casual Shoes__Unisex__,Casual Shoes,Unisex,,15,0,1,0,0,1,False,False
+2_slot (articleType+baseColour),Jeans__None__Blue,Jeans,null,Blue,15,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Watches__None__Silver,Watches,null,Silver,15,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Sunglasses__None__Black,Sunglasses,null,Black,14,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Tops__None__Pink,Tops,null,Pink,14,0,0,1,0,1,False,False
+2_slot (articleType+gender),Clutches__Women__,Clutches,Women,,13,0,1,0,0,1,False,False
+2_slot (articleType+gender),Jackets__Men__,Jackets,Men,,13,0,1,0,0,1,False,False
+2_slot (articleType+baseColour),Belts__None__Brown,Belts,null,Brown,12,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Earrings__None__Silver,Earrings,null,Silver,12,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Sandals__None__Black,Sandals,null,Black,12,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Shirts__None__Grey,Shirts,null,Grey,12,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Tshirts__None__Purple,Tshirts,null,Purple,12,0,0,1,0,1,False,False
+2_slot (articleType+gender),Briefs__Women__,Briefs,Women,,11,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Casual Shoes__None__Blue,Casual Shoes,null,Blue,11,0,0,1,0,1,False,False
+2_slot (articleType+gender),Flip Flops__Women__,Flip Flops,Women,,11,0,0,1,0,1,False,False
+2_slot (articleType+gender),Duffel Bag__Unisex__,Duffel Bag,Unisex,,9,1,0,0,0,1,False,False
+2_slot (articleType+baseColour),Formal Shoes__None__Brown,Formal Shoes,null,Brown,9,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Shirts__None__Navy Blue,Shirts,null,Navy Blue,9,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Shirts__None__Purple,Shirts,null,Purple,9,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Sunglasses__None__Brown,Sunglasses,null,Brown,9,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Casual Shoes__None__Red,Casual Shoes,null,Red,8,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Socks__None__White,Socks,null,White,8,0,0,1,0,1,False,False
+2_slot (articleType+gender),Sunglasses__Unisex__,Sunglasses,Unisex,,8,0,0,1,0,1,False,False
+3_slot (articleType+gender+baseColour),Bra__Women__White,Bra,Women,White,7,0,1,0,0,1,False,False
+2_slot (articleType+gender),Watches__Unisex__,Watches,Unisex,,7,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Flip Flops__None__Red,Flip Flops,null,Red,6,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Handbags__None__Grey,Handbags,null,Grey,6,0,0,1,0,1,False,False
+3_slot (articleType+gender+baseColour),Kurtas__Women__Brown,Kurtas,Women,Brown,6,0,1,0,0,1,False,False
+2_slot (articleType+baseColour),Shirts__None__Brown,Shirts,null,Brown,6,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Sports Shoes__None__Blue,Sports Shoes,null,Blue,6,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Tops__None__Navy Blue,Tops,null,Navy Blue,6,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Handbags__None__Green,Handbags,null,Green,5,0,0,1,0,1,False,False
+2_slot (articleType+baseColour),Sports Shoes__None__Grey,Sports Shoes,null,Grey,5,0,0,1,0,1,False,False
+2_slot (articleType+gender),Sweaters__Men__,Sweaters,Men,,5,0,0,1,0,1,False,False
+2_slot (articleType+gender),Heels__Women__,Heels,Women,,63,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Tshirts__None__White,Tshirts,null,White,47,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Tshirts__None__Grey,Tshirts,null,Grey,41,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Black,Casual Shoes,Men,Black,39,0,1,1,0,2,False,False
+2_slot (articleType+baseColour),Watches__None__White,Watches,null,White,37,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Shirts__None__Blue,Shirts,null,Blue,35,0,0,1,1,2,False,False
+2_slot (articleType+gender),Casual Shoes__Women__,Casual Shoes,Women,,30,0,1,1,0,2,False,False
+2_slot (articleType+gender),Flip Flops__Men__,Flip Flops,Men,,22,0,1,1,0,2,False,False
+2_slot (articleType+gender),Flats__Women__,Flats,Women,,21,1,0,1,0,2,False,False
+2_slot (articleType+gender),Sunglasses__Men__,Sunglasses,Men,,21,0,0,2,0,2,False,False
+2_slot (articleType+gender),Wallets__Men__,Wallets,Men,,21,0,1,1,0,2,False,False
+2_slot (articleType+baseColour),Tshirts__None__Navy Blue,Tshirts,null,Navy Blue,20,0,0,2,0,2,False,False
+2_slot (articleType+gender),Sarees__Women__,Sarees,Women,,19,0,2,0,0,2,False,False
+2_slot (articleType+gender),Track Pants__Men__,Track Pants,Men,,19,0,2,0,0,2,False,False
+2_slot (articleType+gender),Trousers__Men__,Trousers,Men,,17,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Kurtas__Women__Green,Kurtas,Women,Green,16,0,2,0,0,2,False,False
+2_slot (articleType+gender),Ties__Men__,Ties,Men,,16,0,1,1,0,2,False,False
+3_slot (articleType+gender+baseColour),Tshirts__Men__Navy Blue,Tshirts,Men,Navy Blue,16,0,2,0,0,2,False,False
+2_slot (articleType+gender),Dresses__Women__,Dresses,Women,,15,0,1,1,0,2,False,False
+2_slot (articleType+baseColour),Handbags__None__Brown,Handbags,null,Brown,15,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Formal Shoes__None__Black,Formal Shoes,null,Black,14,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Heels__None__Brown,Heels,null,Brown,14,0,0,2,0,2,False,False
+2_slot (articleType+gender),Jeans__Men__,Jeans,Men,,14,0,1,1,0,2,False,False
+2_slot (articleType+gender),Belts__Women__,Belts,Women,,13,0,1,1,0,2,False,False
+2_slot (articleType+baseColour),Tops__None__Blue,Tops,null,Blue,13,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Sandals__Men__Black,Sandals,Men,Black,12,0,2,0,0,2,False,False
+2_slot (articleType+baseColour),Wallets__None__Brown,Wallets,null,Brown,12,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Brown,Casual Shoes,Men,Brown,11,1,1,0,0,2,False,False
+3_slot (articleType+gender+baseColour),Kurtas__Women__Black,Kurtas,Women,Black,11,0,2,0,0,2,False,False
+2_slot (articleType+baseColour),Sandals__None__Brown,Sandals,null,Brown,11,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Tshirts__None__Pink,Tshirts,null,Pink,11,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Shirts__None__Red,Shirts,null,Red,10,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Socks__Men__Black,Socks,Men,Black,10,0,1,1,0,2,False,False
+2_slot (articleType+baseColour),Socks__None__Black,Socks,null,Black,10,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Tshirts__None__Yellow,Tshirts,null,Yellow,10,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Watches__Women__Black,Watches,Women,Black,10,0,2,0,0,2,False,False
+2_slot (articleType+baseColour),Backpacks__None__Red,Backpacks,null,Red,9,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Track Pants__Men__Black,Track Pants,Men,Black,9,0,2,0,0,2,False,False
+2_slot (articleType+gender),Caps__Unisex__,Caps,Unisex,,8,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Flats__Women__Black,Flats,Women,Black,8,0,2,0,0,2,False,False
+2_slot (articleType+baseColour),Flip Flops__None__Black,Flip Flops,null,Black,8,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Kurtas__Women__White,Kurtas,Women,White,8,0,2,0,0,2,False,False
+2_slot (articleType+baseColour),Tops__None__Black,Tops,null,Black,8,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Tops__Women__Black,Tops,Women,Black,8,0,1,1,0,2,False,False
+3_slot (articleType+gender+baseColour),Kurtas__Women__Purple,Kurtas,Women,Purple,7,0,2,0,0,2,False,False
+2_slot (articleType+baseColour),Shirts__None__Pink,Shirts,null,Pink,7,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Briefs__None__Black,Briefs,null,Black,6,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Flip Flops__Men__Black,Flip Flops,Men,Black,6,0,1,1,0,2,False,False
+2_slot (articleType+gender),Handbags__Unisex__,Handbags,Unisex,,6,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Grey,Casual Shoes,Men,Grey,5,0,1,0,1,2,False,False
+2_slot (articleType+baseColour),Casual Shoes__None__Grey,Casual Shoes,null,Grey,5,0,0,2,0,2,False,False
+2_slot (articleType+baseColour),Jeans__None__Black,Jeans,null,Black,5,0,0,2,0,2,False,False
+3_slot (articleType+gender+baseColour),Sarees__Women__Green,Sarees,Women,Green,5,0,2,0,0,2,False,False
+3_slot (articleType+gender+baseColour),Tshirts__Boys__Red,Tshirts,Boys,Red,5,0,2,0,0,2,False,False
+2_slot (articleType+gender),Tshirts__Men__,Tshirts,Men,,244,0,1,2,0,3,False,True
+2_slot (articleType+gender),Handbags__Women__,Handbags,Women,,86,0,1,2,0,3,False,True
+2_slot (articleType+gender),Sports Shoes__Men__,Sports Shoes,Men,,77,1,1,1,0,3,False,True
+2_slot (articleType+gender),Tops__Women__,Tops,Women,,76,0,2,1,0,3,False,True
+2_slot (articleType+gender),Watches__Men__,Watches,Men,,71,1,1,1,0,3,False,True
+2_slot (articleType+gender),Watches__Women__,Watches,Women,,54,0,1,2,0,3,False,True
+2_slot (articleType+gender),Tshirts__Women__,Tshirts,Women,,50,0,0,3,0,3,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Blue,Tshirts,Men,Blue,45,0,1,2,0,3,False,True
+2_slot (articleType+gender),Wallets__Women__,Wallets,Women,,26,0,2,1,0,3,False,True
+2_slot (articleType+gender),Belts__Men__,Belts,Men,,24,0,2,1,0,3,False,True
+3_slot (articleType+gender+baseColour),Sports Shoes__Men__Black,Sports Shoes,Men,Black,23,0,1,2,0,3,False,True
+2_slot (articleType+gender),Briefs__Men__,Briefs,Men,,20,0,1,2,0,3,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Red,Tshirts,Men,Red,20,0,3,0,0,3,False,True
+2_slot (articleType+baseColour),Handbags__None__Black,Handbags,null,Black,19,0,0,3,0,3,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Green,Tshirts,Men,Green,19,0,1,2,0,3,False,True
+3_slot (articleType+gender+baseColour),Heels__Women__Black,Heels,Women,Black,17,2,1,0,0,3,False,True
+2_slot (articleType+gender),Shorts__Men__,Shorts,Men,,16,1,1,1,0,3,False,True
+3_slot (articleType+gender+baseColour),Kurtas__Women__Blue,Kurtas,Women,Blue,14,0,3,0,0,3,False,True
+2_slot (articleType+gender),Shirts__Women__,Shirts,Women,,14,0,2,1,0,3,False,True
+2_slot (articleType+baseColour),Wallets__None__Black,Wallets,null,Black,14,0,0,3,0,3,False,True
+2_slot (articleType+baseColour),Backpacks__None__Black,Backpacks,null,Black,11,0,0,2,1,3,False,True
+3_slot (articleType+gender+baseColour),Tops__Women__Blue,Tops,Women,Blue,11,0,2,1,0,3,False,True
+3_slot (articleType+gender+baseColour),Heels__Women__Gold,Heels,Women,Gold,10,0,3,0,0,3,False,True
+3_slot (articleType+gender+baseColour),Tops__Women__White,Tops,Women,White,10,0,2,1,0,3,False,True
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Navy Blue,Casual Shoes,Men,Navy Blue,9,0,3,0,0,3,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__Black,Shirts,Men,Black,9,0,3,0,0,3,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__Navy Blue,Shirts,Men,Navy Blue,9,0,2,1,0,3,False,True
+3_slot (articleType+gender+baseColour),Pendant__Women__Silver,Pendant,Women,Silver,8,0,3,0,0,3,False,True
+3_slot (articleType+gender+baseColour),Bra__Women__Black,Bra,Women,Black,7,0,3,0,0,3,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__Purple,Shirts,Men,Purple,7,1,2,0,0,3,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Yellow,Tshirts,Men,Yellow,7,0,3,0,0,3,False,True
+3_slot (articleType+gender+baseColour),Wallets__Men__Brown,Wallets,Men,Brown,7,1,1,1,0,3,False,True
+3_slot (articleType+gender+baseColour),Watches__Women__Steel,Watches,Women,Steel,7,0,3,0,0,3,False,True
+3_slot (articleType+gender+baseColour),Earrings__Women__Gold,Earrings,Women,Gold,6,0,3,0,0,3,False,True
+3_slot (articleType+gender+baseColour),Tops__Women__Navy Blue,Tops,Women,Navy Blue,6,0,2,1,0,3,False,True
+2_slot (articleType+baseColour),Backpacks__None__Blue,Backpacks,null,Blue,5,0,0,3,0,3,False,True
+3_slot (articleType+gender+baseColour),Handbags__Women__Purple,Handbags,Women,Purple,5,0,2,1,0,3,False,True
+3_slot (articleType+gender+baseColour),Jackets__Men__Black,Jackets,Men,Black,5,1,2,0,0,3,False,True
+2_slot (articleType+gender),Jeans__Women__,Jeans,Women,,5,0,0,2,1,3,False,True
+3_slot (articleType+gender+baseColour),Track Pants__Men__Grey,Track Pants,Men,Grey,5,1,2,0,0,3,False,True
+2_slot (articleType+gender),Shirts__Men__,Shirts,Men,,132,0,1,1,2,4,False,True
+2_slot (articleType+gender),Casual Shoes__Men__,Casual Shoes,Men,,107,0,1,3,0,4,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Grey,Tshirts,Men,Grey,39,0,3,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__Blue,Shirts,Men,Blue,33,0,2,2,0,4,False,True
+2_slot (articleType+gender),Sandals__Men__,Sandals,Men,,32,1,1,2,0,4,False,True
+2_slot (articleType+gender),Earrings__Women__,Earrings,Women,,24,0,2,2,0,4,False,True
+2_slot (articleType+gender),Sports Shoes__Women__,Sports Shoes,Women,,21,0,2,2,0,4,False,True
+2_slot (articleType+gender),Sunglasses__Women__,Sunglasses,Women,,18,1,0,2,1,4,False,True
+2_slot (articleType+gender),Tshirts__Boys__,Tshirts,Boys,,16,1,1,2,0,4,False,True
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__White,Casual Shoes,Men,White,15,0,3,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Formal Shoes__Men__Black,Formal Shoes,Men,Black,14,0,2,2,0,4,False,True
+3_slot (articleType+gender+baseColour),Wallets__Men__Black,Wallets,Men,Black,13,2,1,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Belts__Men__Black,Belts,Men,Black,11,1,3,0,0,4,False,True
+3_slot (articleType+gender+baseColour),Sandals__Men__Brown,Sandals,Men,Brown,11,0,3,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__Grey,Shirts,Men,Grey,11,0,1,3,0,4,False,True
+3_slot (articleType+gender+baseColour),Tops__Women__Pink,Tops,Women,Pink,11,0,3,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Purple,Tshirts,Men,Purple,11,0,1,1,2,4,False,True
+3_slot (articleType+gender+baseColour),Backpacks__Unisex__Black,Backpacks,Unisex,Black,10,0,3,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Formal Shoes__Men__Brown,Formal Shoes,Men,Brown,9,1,2,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Backpacks__Unisex__Red,Backpacks,Unisex,Red,8,0,3,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Handbags__Women__Blue,Handbags,Women,Blue,8,0,2,2,0,4,False,True
+3_slot (articleType+gender+baseColour),Sunglasses__Women__Brown,Sunglasses,Women,Brown,8,0,2,2,0,4,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Women__Pink,Tshirts,Women,Pink,7,0,4,0,0,4,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__Brown,Shirts,Men,Brown,6,0,2,2,0,4,False,True
+3_slot (articleType+gender+baseColour),Socks__Men__White,Socks,Men,White,6,1,1,2,0,4,False,True
+3_slot (articleType+gender+baseColour),Casual Shoes__Unisex__White,Casual Shoes,Unisex,White,5,0,3,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Handbags__Women__Green,Handbags,Women,Green,5,0,3,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__Pink,Shirts,Men,Pink,5,0,3,1,0,4,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Men__Black,Tshirts,Men,Black,33,2,0,1,2,5,False,True
+3_slot (articleType+gender+baseColour),Watches__Women__White,Watches,Women,White,21,1,2,2,0,5,False,True
+3_slot (articleType+gender+baseColour),Handbags__Women__Black,Handbags,Women,Black,19,1,2,1,1,5,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Women__White,Tshirts,Women,White,14,0,3,2,0,5,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__Green,Shirts,Men,Green,12,1,3,1,0,5,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__Red,Shirts,Men,Red,8,0,3,2,0,5,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Women__Green,Tshirts,Women,Green,8,0,3,2,0,5,False,True
+3_slot (articleType+gender+baseColour),Casual Shoes__Men__Blue,Casual Shoes,Men,Blue,7,0,4,1,0,5,False,True
+3_slot (articleType+gender+baseColour),Sports Shoes__Women__White,Sports Shoes,Women,White,6,0,2,3,0,5,False,True
+3_slot (articleType+gender+baseColour),Wallets__Women__Brown,Wallets,Women,Brown,5,0,2,3,0,5,False,True
+3_slot (articleType+gender+baseColour),Sports Shoes__Men__White,Sports Shoes,Men,White,38,2,3,1,0,6,False,True
+3_slot (articleType+gender+baseColour),Watches__Men__White,Watches,Men,White,19,0,4,2,0,6,False,True
+3_slot (articleType+gender+baseColour),Earrings__Women__Silver,Earrings,Women,Silver,12,1,3,2,0,6,False,True
+3_slot (articleType+gender+baseColour),Sunglasses__Men__Black,Sunglasses,Men,Black,12,2,2,1,1,6,False,True
+3_slot (articleType+gender+baseColour),Belts__Men__Brown,Belts,Men,Brown,10,0,3,3,0,6,False,True
+3_slot (articleType+gender+baseColour),Casual Shoes__Women__White,Casual Shoes,Women,White,10,0,4,2,0,6,False,True
+3_slot (articleType+gender+baseColour),Watches__Men__Silver,Watches,Men,Silver,9,0,4,2,0,6,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Women__Blue,Tshirts,Women,Blue,7,0,4,2,0,6,False,True
+3_slot (articleType+gender+baseColour),Tshirts__Men__White,Tshirts,Men,White,29,2,3,2,0,7,False,True
+3_slot (articleType+gender+baseColour),Watches__Men__Black,Watches,Men,Black,26,4,2,1,0,7,False,True
+3_slot (articleType+gender+baseColour),Handbags__Women__Brown,Handbags,Women,Brown,15,2,3,2,0,7,False,True
+3_slot (articleType+gender+baseColour),Watches__Women__Silver,Watches,Women,Silver,6,1,3,1,2,7,False,True
+3_slot (articleType+gender+baseColour),Shirts__Men__White,Shirts,Men,White,23,2,3,2,1,8,False,True
+3_slot (articleType+gender+baseColour),Jeans__Men__Blue,Jeans,Men,Blue,14,2,4,1,1,8,False,True

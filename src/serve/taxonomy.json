@@ -1,0 +1,1102 @@
+{
+  "rules": {
+    "Quần áo": {
+      "Áo": [
+        "Tshirts",
+        "Shirts",
+        "Tops",
+        "Topwear",
+        "Jackets",
+        "Sweaters",
+        "Sweatshirts",
+        "Kurtas",
+        "Kurtis",
+        "Tunics",
+        "Blazers",
+        "Waistcoat",
+        "Nehru Jackets",
+        "Shrug",
+        "Rain Jacket"
+      ],
+      "Quần & Chân váy": [
+        "Jeans",
+        "Trousers",
+        "Shorts",
+        "Track Pants",
+        "Skirts",
+        "Capris",
+        "Leggings",
+        "Jeggings",
+        "Churidar",
+        "Salwar",
+        "Patiala",
+        "Bottomwear",
+        "Rain Trousers"
+      ],
+      "Đầm & Trang phục truyền thống": [
+        "Dresses",
+        "Dress",
+        "Jumpsuit",
+        "Rompers",
+        "Saree",
+        "Sarees",
+        "Lehenga Choli",
+        "Salwar and Dupatta"
+      ],
+      "Đồ lót & Đồ mặc nhà": [
+        "Bra",
+        "Briefs",
+        "Boxers",
+        "Trunk",
+        "Innerwear",
+        "Innerwear Vests",
+        "Camisoles",
+        "Night suits",
+        "Nightdress",
+        "Baby Dolls",
+        "Bath Robe",
+        "Robe",
+        "Shapewear",
+        "Swimwear",
+        "Loungewear and Nightwear",
+        "Lounge Pants",
+        "Lounge Shorts",
+        "Lounge Tshirts"
+      ],
+      "Bộ trang phục": [
+        "Apparel Set",
+        "Clothing Set",
+        "Kurta Sets",
+        "Suits",
+        "Tracksuits"
+      ]
+    },
+    "Giày dép": {
+      "Giày": [
+        "Casual Shoes",
+        "Sports Shoes",
+        "Formal Shoes",
+        "Heels",
+        "Flats",
+        "Shoes",
+        "Booties"
+      ],
+      "Sandal": [
+        "Sandals",
+        "Sandal",
+        "Sports Sandals"
+      ],
+      "Dép xỏ ngón": [
+        "Flip Flops"
+      ]
+    },
+    "Túi & Ví": {
+      "Túi & Balo": [
+        "Handbags",
+        "Backpacks",
+        "Clutches",
+        "Laptop Bag",
+        "Duffel Bag",
+        "Messenger Bag",
+        "Rucksacks",
+        "Trolley Bag",
+        "Waist Pouch",
+        "Mobile Pouch",
+        "Bags"
+      ],
+      "Ví": [
+        "Wallets"
+      ]
+    },
+    "Đồng hồ": {
+      "Đồng hồ": [
+        "Watches"
+      ]
+    },
+    "Trang sức": {
+      "Trang sức": [
+        "Bangle",
+        "Bracelet",
+        "Earrings",
+        "Jewellery Set",
+        "Necklace and Chains",
+        "Pendant",
+        "Ring",
+        "Jewellery"
+      ]
+    },
+    "Kính mắt": {
+      "Kính mắt": [
+        "Sunglasses",
+        "Eyewear"
+      ]
+    },
+    "Phụ kiện thời trang": {
+      "Mũ nón": [
+        "Caps",
+        "Hat",
+        "Headband",
+        "Headwear"
+      ],
+      "Khăn & Cà vạt": [
+        "Ties",
+        "Ties and Cufflinks",
+        "Scarves",
+        "Mufflers",
+        "Stoles",
+        "Dupatta"
+      ],
+      "Phụ kiện khác": [
+        "Belts",
+        "Socks",
+        "Stockings",
+        "Tights",
+        "Gloves",
+        "Cufflinks",
+        "Key chain",
+        "Shoe Accessories",
+        "Shoe Laces",
+        "Suspenders",
+        "Umbrellas",
+        "Accessories",
+        "Accessory Gift Set",
+        "Travel Accessory"
+      ]
+    },
+    "Chăm sóc cá nhân": {
+      "Nước hoa & Khử mùi": [
+        "Perfume and Body Mist",
+        "Perfumes",
+        "Deodorant",
+        "Fragrance",
+        "Fragrance Gift Set"
+      ],
+      "Chăm sóc da & Cơ thể": [
+        "Face Moisturisers",
+        "Face Scrub and Exfoliator",
+        "Face Serum and Gel",
+        "Face Wash and Cleanser",
+        "Body Lotion",
+        "Body Wash and Scrub",
+        "Eye Cream",
+        "Sunscreen",
+        "Toner",
+        "Mask and Peel",
+        "Skin",
+        "Skin Care",
+        "Bath and Body"
+      ],
+      "Trang điểm & Móng": [
+        "Lipstick",
+        "Lip Gloss",
+        "Lip Liner",
+        "Lip Care",
+        "Lip Plumper",
+        "Lips",
+        "Kajal and Eyeliner",
+        "Mascara",
+        "Eyeshadow",
+        "Eyes",
+        "Foundation and Primer",
+        "Compact",
+        "Concealer",
+        "Highlighter and Blush",
+        "Makeup",
+        "Makeup Remover",
+        "Nail Polish",
+        "Nail Essentials",
+        "Nails",
+        "Beauty Accessories",
+        "Beauty Accessory",
+        "Mens Grooming Kit"
+      ],
+      "Chăm sóc tóc": [
+        "Hair",
+        "Hair Accessory",
+        "Hair Colour"
+      ]
+    },
+    "Đồ thể thao": {
+      "Dụng cụ thể thao": [
+        "Basketballs",
+        "Footballs",
+        "Sports Accessories",
+        "Sports Equipment",
+        "Wristbands",
+        "Water Bottle"
+      ]
+    },
+    "Khác": {
+      "Khác": [
+        "Home Furnishing",
+        "Cushion Covers",
+        "Ipad",
+        "Tablet Sleeve",
+        "Free Gifts",
+        "Vouchers"
+      ]
+    }
+  },
+  "article_to_taxonomy": {
+    "Tshirts": [
+      "Quần áo",
+      "Áo",
+      "Tshirts"
+    ],
+    "Shirts": [
+      "Quần áo",
+      "Áo",
+      "Shirts"
+    ],
+    "Tops": [
+      "Quần áo",
+      "Áo",
+      "Tops"
+    ],
+    "Topwear": [
+      "Quần áo",
+      "Áo",
+      "Topwear"
+    ],
+    "Jackets": [
+      "Quần áo",
+      "Áo",
+      "Jackets"
+    ],
+    "Sweaters": [
+      "Quần áo",
+      "Áo",
+      "Sweaters"
+    ],
+    "Sweatshirts": [
+      "Quần áo",
+      "Áo",
+      "Sweatshirts"
+    ],
+    "Kurtas": [
+      "Quần áo",
+      "Áo",
+      "Kurtas"
+    ],
+    "Kurtis": [
+      "Quần áo",
+      "Áo",
+      "Kurtis"
+    ],
+    "Tunics": [
+      "Quần áo",
+      "Áo",
+      "Tunics"
+    ],
+    "Blazers": [
+      "Quần áo",
+      "Áo",
+      "Blazers"
+    ],
+    "Waistcoat": [
+      "Quần áo",
+      "Áo",
+      "Waistcoat"
+    ],
+    "Nehru Jackets": [
+      "Quần áo",
+      "Áo",
+      "Nehru Jackets"
+    ],
+    "Shrug": [
+      "Quần áo",
+      "Áo",
+      "Shrug"
+    ],
+    "Rain Jacket": [
+      "Quần áo",
+      "Áo",
+      "Rain Jacket"
+    ],
+    "Jeans": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Jeans"
+    ],
+    "Trousers": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Trousers"
+    ],
+    "Shorts": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Shorts"
+    ],
+    "Track Pants": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Track Pants"
+    ],
+    "Skirts": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Skirts"
+    ],
+    "Capris": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Capris"
+    ],
+    "Leggings": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Leggings"
+    ],
+    "Jeggings": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Jeggings"
+    ],
+    "Churidar": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Churidar"
+    ],
+    "Salwar": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Salwar"
+    ],
+    "Patiala": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Patiala"
+    ],
+    "Bottomwear": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Bottomwear"
+    ],
+    "Rain Trousers": [
+      "Quần áo",
+      "Quần & Chân váy",
+      "Rain Trousers"
+    ],
+    "Dresses": [
+      "Quần áo",
+      "Đầm & Trang phục truyền thống",
+      "Dresses"
+    ],
+    "Dress": [
+      "Quần áo",
+      "Đầm & Trang phục truyền thống",
+      "Dress"
+    ],
+    "Jumpsuit": [
+      "Quần áo",
+      "Đầm & Trang phục truyền thống",
+      "Jumpsuit"
+    ],
+    "Rompers": [
+      "Quần áo",
+      "Đầm & Trang phục truyền thống",
+      "Rompers"
+    ],
+    "Saree": [
+      "Quần áo",
+      "Đầm & Trang phục truyền thống",
+      "Saree"
+    ],
+    "Sarees": [
+      "Quần áo",
+      "Đầm & Trang phục truyền thống",
+      "Sarees"
+    ],
+    "Lehenga Choli": [
+      "Quần áo",
+      "Đầm & Trang phục truyền thống",
+      "Lehenga Choli"
+    ],
+    "Salwar and Dupatta": [
+      "Quần áo",
+      "Đầm & Trang phục truyền thống",
+      "Salwar and Dupatta"
+    ],
+    "Bra": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Bra"
+    ],
+    "Briefs": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Briefs"
+    ],
+    "Boxers": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Boxers"
+    ],
+    "Trunk": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Trunk"
+    ],
+    "Innerwear": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Innerwear"
+    ],
+    "Innerwear Vests": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Innerwear Vests"
+    ],
+    "Camisoles": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Camisoles"
+    ],
+    "Night suits": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Night suits"
+    ],
+    "Nightdress": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Nightdress"
+    ],
+    "Baby Dolls": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Baby Dolls"
+    ],
+    "Bath Robe": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Bath Robe"
+    ],
+    "Robe": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Robe"
+    ],
+    "Shapewear": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Shapewear"
+    ],
+    "Swimwear": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Swimwear"
+    ],
+    "Loungewear and Nightwear": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Loungewear and Nightwear"
+    ],
+    "Lounge Pants": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Lounge Pants"
+    ],
+    "Lounge Shorts": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Lounge Shorts"
+    ],
+    "Lounge Tshirts": [
+      "Quần áo",
+      "Đồ lót & Đồ mặc nhà",
+      "Lounge Tshirts"
+    ],
+    "Apparel Set": [
+      "Quần áo",
+      "Bộ trang phục",
+      "Apparel Set"
+    ],
+    "Clothing Set": [
+      "Quần áo",
+      "Bộ trang phục",
+      "Clothing Set"
+    ],
+    "Kurta Sets": [
+      "Quần áo",
+      "Bộ trang phục",
+      "Kurta Sets"
+    ],
+    "Suits": [
+      "Quần áo",
+      "Bộ trang phục",
+      "Suits"
+    ],
+    "Tracksuits": [
+      "Quần áo",
+      "Bộ trang phục",
+      "Tracksuits"
+    ],
+    "Casual Shoes": [
+      "Giày dép",
+      "Giày",
+      "Casual Shoes"
+    ],
+    "Sports Shoes": [
+      "Giày dép",
+      "Giày",
+      "Sports Shoes"
+    ],
+    "Formal Shoes": [
+      "Giày dép",
+      "Giày",
+      "Formal Shoes"
+    ],
+    "Heels": [
+      "Giày dép",
+      "Giày",
+      "Heels"
+    ],
+    "Flats": [
+      "Giày dép",
+      "Giày",
+      "Flats"
+    ],
+    "Shoes": [
+      "Giày dép",
+      "Giày",
+      "Shoes"
+    ],
+    "Booties": [
+      "Giày dép",
+      "Giày",
+      "Booties"
+    ],
+    "Sandals": [
+      "Giày dép",
+      "Sandal",
+      "Sandals"
+    ],
+    "Sandal": [
+      "Giày dép",
+      "Sandal",
+      "Sandal"
+    ],
+    "Sports Sandals": [
+      "Giày dép",
+      "Sandal",
+      "Sports Sandals"
+    ],
+    "Flip Flops": [
+      "Giày dép",
+      "Dép xỏ ngón",
+      "Flip Flops"
+    ],
+    "Handbags": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Handbags"
+    ],
+    "Backpacks": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Backpacks"
+    ],
+    "Clutches": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Clutches"
+    ],
+    "Laptop Bag": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Laptop Bag"
+    ],
+    "Duffel Bag": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Duffel Bag"
+    ],
+    "Messenger Bag": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Messenger Bag"
+    ],
+    "Rucksacks": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Rucksacks"
+    ],
+    "Trolley Bag": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Trolley Bag"
+    ],
+    "Waist Pouch": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Waist Pouch"
+    ],
+    "Mobile Pouch": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Mobile Pouch"
+    ],
+    "Bags": [
+      "Túi & Ví",
+      "Túi & Balo",
+      "Bags"
+    ],
+    "Wallets": [
+      "Túi & Ví",
+      "Ví",
+      "Wallets"
+    ],
+    "Watches": [
+      "Đồng hồ",
+      "Đồng hồ",
+      "Watches"
+    ],
+    "Bangle": [
+      "Trang sức",
+      "Trang sức",
+      "Bangle"
+    ],
+    "Bracelet": [
+      "Trang sức",
+      "Trang sức",
+      "Bracelet"
+    ],
+    "Earrings": [
+      "Trang sức",
+      "Trang sức",
+      "Earrings"
+    ],
+    "Jewellery Set": [
+      "Trang sức",
+      "Trang sức",
+      "Jewellery Set"
+    ],
+    "Necklace and Chains": [
+      "Trang sức",
+      "Trang sức",
+      "Necklace and Chains"
+    ],
+    "Pendant": [
+      "Trang sức",
+      "Trang sức",
+      "Pendant"
+    ],
+    "Ring": [
+      "Trang sức",
+      "Trang sức",
+      "Ring"
+    ],
+    "Jewellery": [
+      "Trang sức",
+      "Trang sức",
+      "Jewellery"
+    ],
+    "Sunglasses": [
+      "Kính mắt",
+      "Kính mắt",
+      "Sunglasses"
+    ],
+    "Eyewear": [
+      "Kính mắt",
+      "Kính mắt",
+      "Eyewear"
+    ],
+    "Caps": [
+      "Phụ kiện thời trang",
+      "Mũ nón",
+      "Caps"
+    ],
+    "Hat": [
+      "Phụ kiện thời trang",
+      "Mũ nón",
+      "Hat"
+    ],
+    "Headband": [
+      "Phụ kiện thời trang",
+      "Mũ nón",
+      "Headband"
+    ],
+    "Headwear": [
+      "Phụ kiện thời trang",
+      "Mũ nón",
+      "Headwear"
+    ],
+    "Ties": [
+      "Phụ kiện thời trang",
+      "Khăn & Cà vạt",
+      "Ties"
+    ],
+    "Ties and Cufflinks": [
+      "Phụ kiện thời trang",
+      "Khăn & Cà vạt",
+      "Ties and Cufflinks"
+    ],
+    "Scarves": [
+      "Phụ kiện thời trang",
+      "Khăn & Cà vạt",
+      "Scarves"
+    ],
+    "Mufflers": [
+      "Phụ kiện thời trang",
+      "Khăn & Cà vạt",
+      "Mufflers"
+    ],
+    "Stoles": [
+      "Phụ kiện thời trang",
+      "Khăn & Cà vạt",
+      "Stoles"
+    ],
+    "Dupatta": [
+      "Phụ kiện thời trang",
+      "Khăn & Cà vạt",
+      "Dupatta"
+    ],
+    "Belts": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Belts"
+    ],
+    "Socks": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Socks"
+    ],
+    "Stockings": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Stockings"
+    ],
+    "Tights": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Tights"
+    ],
+    "Gloves": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Gloves"
+    ],
+    "Cufflinks": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Cufflinks"
+    ],
+    "Key chain": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Key chain"
+    ],
+    "Shoe Accessories": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Shoe Accessories"
+    ],
+    "Shoe Laces": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Shoe Laces"
+    ],
+    "Suspenders": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Suspenders"
+    ],
+    "Umbrellas": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Umbrellas"
+    ],
+    "Accessories": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Accessories"
+    ],
+    "Accessory Gift Set": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Accessory Gift Set"
+    ],
+    "Travel Accessory": [
+      "Phụ kiện thời trang",
+      "Phụ kiện khác",
+      "Travel Accessory"
+    ],
+    "Perfume and Body Mist": [
+      "Chăm sóc cá nhân",
+      "Nước hoa & Khử mùi",
+      "Perfume and Body Mist"
+    ],
+    "Perfumes": [
+      "Chăm sóc cá nhân",
+      "Nước hoa & Khử mùi",
+      "Perfumes"
+    ],
+    "Deodorant": [
+      "Chăm sóc cá nhân",
+      "Nước hoa & Khử mùi",
+      "Deodorant"
+    ],
+    "Fragrance": [
+      "Chăm sóc cá nhân",
+      "Nước hoa & Khử mùi",
+      "Fragrance"
+    ],
+    "Fragrance Gift Set": [
+      "Chăm sóc cá nhân",
+      "Nước hoa & Khử mùi",
+      "Fragrance Gift Set"
+    ],
+    "Face Moisturisers": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Face Moisturisers"
+    ],
+    "Face Scrub and Exfoliator": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Face Scrub and Exfoliator"
+    ],
+    "Face Serum and Gel": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Face Serum and Gel"
+    ],
+    "Face Wash and Cleanser": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Face Wash and Cleanser"
+    ],
+    "Body Lotion": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Body Lotion"
+    ],
+    "Body Wash and Scrub": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Body Wash and Scrub"
+    ],
+    "Eye Cream": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Eye Cream"
+    ],
+    "Sunscreen": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Sunscreen"
+    ],
+    "Toner": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Toner"
+    ],
+    "Mask and Peel": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Mask and Peel"
+    ],
+    "Skin": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Skin"
+    ],
+    "Skin Care": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Skin Care"
+    ],
+    "Bath and Body": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc da & Cơ thể",
+      "Bath and Body"
+    ],
+    "Lipstick": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Lipstick"
+    ],
+    "Lip Gloss": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Lip Gloss"
+    ],
+    "Lip Liner": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Lip Liner"
+    ],
+    "Lip Care": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Lip Care"
+    ],
+    "Lip Plumper": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Lip Plumper"
+    ],
+    "Lips": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Lips"
+    ],
+    "Kajal and Eyeliner": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Kajal and Eyeliner"
+    ],
+    "Mascara": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Mascara"
+    ],
+    "Eyeshadow": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Eyeshadow"
+    ],
+    "Eyes": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Eyes"
+    ],
+    "Foundation and Primer": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Foundation and Primer"
+    ],
+    "Compact": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Compact"
+    ],
+    "Concealer": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Concealer"
+    ],
+    "Highlighter and Blush": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Highlighter and Blush"
+    ],
+    "Makeup": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Makeup"
+    ],
+    "Makeup Remover": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Makeup Remover"
+    ],
+    "Nail Polish": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Nail Polish"
+    ],
+    "Nail Essentials": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Nail Essentials"
+    ],
+    "Nails": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Nails"
+    ],
+    "Beauty Accessories": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Beauty Accessories"
+    ],
+    "Beauty Accessory": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Beauty Accessory"
+    ],
+    "Mens Grooming Kit": [
+      "Chăm sóc cá nhân",
+      "Trang điểm & Móng",
+      "Mens Grooming Kit"
+    ],
+    "Hair": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc tóc",
+      "Hair"
+    ],
+    "Hair Accessory": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc tóc",
+      "Hair Accessory"
+    ],
+    "Hair Colour": [
+      "Chăm sóc cá nhân",
+      "Chăm sóc tóc",
+      "Hair Colour"
+    ],
+    "Basketballs": [
+      "Đồ thể thao",
+      "Dụng cụ thể thao",
+      "Basketballs"
+    ],
+    "Footballs": [
+      "Đồ thể thao",
+      "Dụng cụ thể thao",
+      "Footballs"
+    ],
+    "Sports Accessories": [
+      "Đồ thể thao",
+      "Dụng cụ thể thao",
+      "Sports Accessories"
+    ],
+    "Sports Equipment": [
+      "Đồ thể thao",
+      "Dụng cụ thể thao",
+      "Sports Equipment"
+    ],
+    "Wristbands": [
+      "Đồ thể thao",
+      "Dụng cụ thể thao",
+      "Wristbands"
+    ],
+    "Water Bottle": [
+      "Đồ thể thao",
+      "Dụng cụ thể thao",
+      "Water Bottle"
+    ],
+    "Home Furnishing": [
+      "Khác",
+      "Khác",
+      "Home Furnishing"
+    ],
+    "Cushion Covers": [
+      "Khác",
+      "Khác",
+      "Cushion Covers"
+    ],
+    "Ipad": [
+      "Khác",
+      "Khác",
+      "Ipad"
+    ],
+    "Tablet Sleeve": [
+      "Khác",
+      "Khác",
+      "Tablet Sleeve"
+    ],
+    "Free Gifts": [
+      "Khác",
+      "Khác",
+      "Free Gifts"
+    ],
+    "Vouchers": [
+      "Khác",
+      "Khác",
+      "Vouchers"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "official_test_gallery": [
+    {
+      "efSearch": 32,
+      "Recall@10": 1.0,
+      "latency_ms_per_query": 0.012
+    },
+    {
+      "efSearch": 64,
+      "Recall@10": 1.0,
+      "latency_ms_per_query": 0.022
+    },
+    {
+      "efSearch": 128,
+      "Recall@10": 1.0,
+      "latency_ms_per_query": 0.032
+    },
+    {
+      "efSearch": 256,
+      "Recall@10": 1.0,
+      "latency_ms_per_query": 0.058
+    }
+  ],
+  "reference_full_gallery": [
+    {
+      "efSearch": 32,
+      "Recall@10": 1.0,
+      "latency_ms_per_query": 0.049
+    },
+    {
+      "efSearch": 64,
+      "Recall@10": 1.0,
+      "latency_ms_per_query": 0.073
+    },
+    {
+      "efSearch": 128,
+      "Recall@10": 1.0,
+      "latency_ms_per_query": 0.121
+    },
+    {
+      "efSearch": 256,
+      "Recall@10": 1.0,
+      "latency_ms_per_query": 0.176
+    }
+  ]
+}

@@ -1,0 +1,1400 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-11-13T02:25:43.102423+00:00",
+    "git_commit": "2e057d6",
+    "seed": 42,
+    "queries_file": "eval/handwritten_queries.json",
+    "n_queries": 100,
+    "gamma": 0.3,
+    "ef_search": 128
+  },
+  "official_test_gallery": {
+    "gallery_size": 1290,
+    "before_mean_centering": {
+      "t2i_model_only": {
+        "policies": {
+          "hybrid": {
+            "summary": {
+              "n_queries": 86,
+              "recall@1": 0.29069767441860467,
+              "recall@5": 0.5697674418604651,
+              "recall@10": 0.7093023255813954,
+              "mAP": 0.32794014397649524,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 86
+            },
+            "breakdowns": {
+              "by_thin_slot": {
+                "Giày dép": {
+                  "n_queries": 17,
+                  "recall@1": 0.29411764705882354,
+                  "recall@5": 0.5882352941176471,
+                  "recall@10": 0.7058823529411765,
+                  "mAP": 0.3408075706056929
+                },
+                "Phụ kiện": {
+                  "n_queries": 10,
+                  "recall@1": 0.3,
+                  "recall@5": 0.6,
+                  "recall@10": 0.6,
+                  "mAP": 0.34451542332655843
+                },
+                "Quần & Váy": {
+                  "n_queries": 16,
+                  "recall@1": 0.3125,
+                  "recall@5": 0.5,
+                  "recall@10": 0.625,
+                  "mAP": 0.38718969847574175
+                },
+                "Túi & Balo": {
+                  "n_queries": 14,
+                  "recall@1": 0.21428571428571427,
+                  "recall@5": 0.42857142857142855,
+                  "recall@10": 0.7142857142857143,
+                  "mAP": 0.25722049603666336
+                },
+                "Áo": {
+                  "n_queries": 19,
+                  "recall@1": 0.47368421052631576,
+                  "recall@5": 0.7368421052631579,
+                  "recall@10": 0.8947368421052632,
+                  "mAP": 0.34649127193977963
+                },
+                "Đồng hồ": {
+                  "n_queries": 10,
+                  "recall@1": 0.0,
+                  "recall@5": 0.5,
+                  "recall@10": 0.6,
+                  "mAP": 0.2584513161435259
+                }
+              },
+              "by_has_diacritics": {
+                "False": {
+                  "n_queries": 21,
+                  "recall@1": 0.047619047619047616,
+                  "recall@5": 0.09523809523809523,
+                  "recall@10": 0.3333333333333333,
+                  "mAP": 0.05344339481094601
+                },
+                "True": {
+                  "n_queries": 65,
+                  "recall@1": 0.36923076923076925,
+                  "recall@5": 0.7230769230769231,
+                  "recall@10": 0.8307692307692308,
+                  "mAP": 0.41662370909151886
+                }
+              },
+              "by_gender": {
+                "Boys": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6101069201957611
+                },
+                "Men": {
+                  "n_queries": 52,
+                  "recall@1": 0.23076923076923078,
+                  "recall@5": 0.5384615384615384,
+                  "recall@10": 0.6538461538461539,
+                  "mAP": 0.3066619369148232
+                },
+                "Unisex": {
+                  "n_queries": 5,
+                  "recall@1": 0.2,
+                  "recall@5": 0.6,
+                  "recall@10": 1.0,
+                  "mAP": 0.320483648854241
+                },
+                "Women": {
+                  "n_queries": 28,
+                  "recall@1": 0.39285714285714285,
+                  "recall@5": 0.6071428571428571,
+                  "recall@10": 0.75,
+                  "mAP": 0.35871094635502915
+                }
+              },
+              "by_colour": {
+                "Beige": {
+                  "n_queries": 1,
+                  "recall@1": 0.0,
+                  "recall@5": 0.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.13425925925925924
+                },
+                "Black": {
+                  "n_queries": 24,
+                  "recall@1": 0.25,
+                  "recall@5": 0.5,
+                  "recall@10": 0.6666666666666666,
+                  "mAP": 0.32316623040971165
+                },
+                "Blue": {
+                  "n_queries": 9,
+                  "recall@1": 0.6666666666666666,
+                  "recall@5": 0.8888888888888888,
+                  "recall@10": 0.8888888888888888,
+                  "mAP": 0.6067771160753819
+                },
+                "Brown": {
+                  "n_queries": 7,
+                  "recall@1": 0.14285714285714285,
+                  "recall@5": 0.42857142857142855,
+                  "recall@10": 0.42857142857142855,
+                  "mAP": 0.1533477418943541
+                },
+                "Gold": {
+                  "n_queries": 1,
+                  "recall@1": 0.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.4853140140446642
+                },
+                "Green": {
+                  "n_queries": 1,
+                  "recall@1": 0.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.22691844179532275
+                },
+                "Grey": {
+                  "n_queries": 3,
+                  "recall@1": 0.3333333333333333,
+                  "recall@5": 0.6666666666666666,
+                  "recall@10": 0.6666666666666666,
+                  "mAP": 0.35341022651404685
+                },
+                "Grey Melange": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6903122773986744
+                },
+                "Khaki": {
+                  "n_queries": 1,
+                  "recall@1": 0.0,
+                  "recall@5": 0.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.13425925925925924
+                },
+                "Maroon": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.7856623009216108
+                },
+                "Navy Blue": {
+                  "n_queries": 3,
+                  "recall@1": 0.6666666666666666,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.47594195161452696
+                },
+                "Pink": {
+                  "n_queries": 2,
+                  "recall@1": 0.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.338063100911534
+                },
+                "Purple": {
+                  "n_queries": 2,
+                  "recall@1": 0.5,
+                  "recall@5": 0.5,
+                  "recall@10": 1.0,
+                  "mAP": 0.35877546285988393
+                },
+                "Red": {
+                  "n_queries": 2,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6206783726830276
+                },
+                "Silver": {
+                  "n_queries": 6,
+                  "recall@1": 0.0,
+                  "recall@5": 0.3333333333333333,
+                  "recall@10": 0.5,
+                  "mAP": 0.16834531603238936
+                },
+                "Steel": {
+                  "n_queries": 2,
+                  "recall@1": 0.0,
+                  "recall@5": 0.5,
+                  "recall@10": 0.5,
+                  "mAP": 0.15274064171122997
+                },
+                "Unspecified": {
+                  "n_queries": 22,
+                  "recall@1": 0.3181818181818182,
+                  "recall@5": 0.6363636363636364,
+                  "recall@10": 0.7727272727272727,
+                  "mAP": 0.3586021458894236
+                },
+                "White": {
+                  "n_queries": 11,
+                  "recall@1": 0.09090909090909091,
+                  "recall@5": 0.36363636363636365,
+                  "recall@10": 0.5454545454545454,
+                  "mAP": 0.20432244021821003
+                }
+              }
+            }
+          },
+          "strict": {
+            "summary": {
+              "n_queries": 85,
+              "recall@1": 0.27058823529411763,
+              "recall@5": 0.5529411764705883,
+              "recall@10": 0.7058823529411765,
+              "mAP": 0.3134630702022146,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 85
+            }
+          },
+          "relaxed": {
+            "summary": {
+              "n_queries": 86,
+              "recall@1": 0.29069767441860467,
+              "recall@5": 0.5697674418604651,
+              "recall@10": 0.7093023255813954,
+              "mAP": 0.32897698835856853,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 86
+            }
+          }
+        },
+        "hubness_top10": {
+          "n_queries": 100,
+          "gallery_size": 1290,
+          "top_k": 10,
+          "unique_items_retrieved": 655,
+          "coverage_ratio": 0.5077519379844961,
+          "max_appearances": 7,
+          "max_query_pct": 0.07,
+          "top1_hub_slot_share": 0.007,
+          "top5_hub_slot_share": 0.033,
+          "top10_hub_slot_share": 0.062,
+          "mean_appearances": 0.7751937984496124,
+          "std_appearances": 1.032347442246034,
+          "skewness": 2.091099523313984,
+          "hub_threshold": 5,
+          "n_hubs_above_threshold": 14,
+          "top5_counts": [
+            7,
+            7,
+            7,
+            6,
+            6
+          ]
+        }
+      },
+      "t2i_system": {
+        "policies": {
+          "hybrid": {
+            "summary": {
+              "n_queries": 86,
+              "recall@1": 0.6046511627906976,
+              "recall@5": 0.8255813953488372,
+              "recall@10": 0.8488372093023255,
+              "mAP": 0.5536594781213402,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 86
+            },
+            "breakdowns": {
+              "by_thin_slot": {
+                "Giày dép": {
+                  "n_queries": 17,
+                  "recall@1": 0.6470588235294118,
+                  "recall@5": 0.8823529411764706,
+                  "recall@10": 0.9411764705882353,
+                  "mAP": 0.6221311969772536
+                },
+                "Phụ kiện": {
+                  "n_queries": 10,
+                  "recall@1": 0.7,
+                  "recall@5": 0.8,
+                  "recall@10": 0.9,
+                  "mAP": 0.665166263475087
+                },
+                "Quần & Váy": {
+                  "n_queries": 16,
+                  "recall@1": 0.4375,
+                  "recall@5": 0.75,
+                  "recall@10": 0.75,
+                  "mAP": 0.5353939132079104
+                },
+                "Túi & Balo": {
+                  "n_queries": 14,
+                  "recall@1": 0.6428571428571429,
+                  "recall@5": 0.7857142857142857,
+                  "recall@10": 0.7857142857142857,
+                  "mAP": 0.5186173999521903
+                },
+                "Áo": {
+                  "n_queries": 19,
+                  "recall@1": 0.7368421052631579,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.5523389877828789
+                },
+                "Đồng hồ": {
+                  "n_queries": 10,
+                  "recall@1": 0.4,
+                  "recall@5": 0.6,
+                  "recall@10": 0.6,
+                  "mAP": 0.40654351565391417
+                }
+              },
+              "by_has_diacritics": {
+                "False": {
+                  "n_queries": 21,
+                  "recall@1": 0.2857142857142857,
+                  "recall@5": 0.6190476190476191,
+                  "recall@10": 0.6666666666666666,
+                  "mAP": 0.2240135473265737
+                },
+                "True": {
+                  "n_queries": 65,
+                  "recall@1": 0.7076923076923077,
+                  "recall@5": 0.8923076923076924,
+                  "recall@10": 0.9076923076923077,
+                  "mAP": 0.6601604711473417
+                }
+              },
+              "by_gender": {
+                "Boys": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.7763157894736842
+                },
+                "Men": {
+                  "n_queries": 52,
+                  "recall@1": 0.5961538461538461,
+                  "recall@5": 0.8076923076923077,
+                  "recall@10": 0.8076923076923077,
+                  "mAP": 0.5508833906943706
+                },
+                "Unisex": {
+                  "n_queries": 5,
+                  "recall@1": 0.6,
+                  "recall@5": 0.8,
+                  "recall@10": 0.8,
+                  "mAP": 0.6266348510259758
+                },
+                "Women": {
+                  "n_queries": 28,
+                  "recall@1": 0.6071428571428571,
+                  "recall@5": 0.8571428571428571,
+                  "recall@10": 0.9285714285714286,
+                  "mAP": 0.5378317413473006
+                }
+              },
+              "by_colour": {
+                "Beige": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.9166666666666666
+                },
+                "Black": {
+                  "n_queries": 24,
+                  "recall@1": 0.625,
+                  "recall@5": 0.75,
+                  "recall@10": 0.7916666666666666,
+                  "mAP": 0.5822721401350192
+                },
+                "Blue": {
+                  "n_queries": 9,
+                  "recall@1": 0.8888888888888888,
+                  "recall@5": 0.8888888888888888,
+                  "recall@10": 0.8888888888888888,
+                  "mAP": 0.7385051371770007
+                },
+                "Brown": {
+                  "n_queries": 7,
+                  "recall@1": 0.5714285714285714,
+                  "recall@5": 0.8571428571428571,
+                  "recall@10": 0.8571428571428571,
+                  "mAP": 0.4485951858114359
+                },
+                "Gold": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6190964060449353
+                },
+                "Green": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.7861009361009361
+                },
+                "Grey": {
+                  "n_queries": 3,
+                  "recall@1": 0.6666666666666666,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6885301101357135
+                },
+                "Grey Melange": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.8850347748515852
+                },
+                "Khaki": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.9166666666666666
+                },
+                "Maroon": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.8322473153421202
+                },
+                "Navy Blue": {
+                  "n_queries": 3,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.7313193503904967
+                },
+                "Pink": {
+                  "n_queries": 2,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.5165502288757561
+                },
+                "Purple": {
+                  "n_queries": 2,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6859210807078884
+                },
+                "Red": {
+                  "n_queries": 2,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.8586236576710601
+                },
+                "Silver": {
+                  "n_queries": 6,
+                  "recall@1": 0.5,
+                  "recall@5": 0.6666666666666666,
+                  "recall@10": 0.8333333333333334,
+                  "mAP": 0.437136158367776
+                },
+                "Steel": {
+                  "n_queries": 2,
+                  "recall@1": 0.5,
+                  "recall@5": 0.5,
+                  "recall@10": 0.5,
+                  "mAP": 0.3863095238095238
+                },
+                "Unspecified": {
+                  "n_queries": 22,
+                  "recall@1": 0.5,
+                  "recall@5": 0.7727272727272727,
+                  "recall@10": 0.7727272727272727,
+                  "mAP": 0.4894251557822454
+                },
+                "White": {
+                  "n_queries": 11,
+                  "recall@1": 0.36363636363636365,
+                  "recall@5": 0.9090909090909091,
+                  "recall@10": 0.9090909090909091,
+                  "mAP": 0.43464611507623974
+                }
+              }
+            }
+          },
+          "strict": {
+            "summary": {
+              "n_queries": 85,
+              "recall@1": 0.5764705882352941,
+              "recall@5": 0.8235294117647058,
+              "recall@10": 0.8470588235294118,
+              "mAP": 0.5246993319562475,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 85
+            }
+          },
+          "relaxed": {
+            "summary": {
+              "n_queries": 86,
+              "recall@1": 0.6046511627906976,
+              "recall@5": 0.8255813953488372,
+              "recall@10": 0.8488372093023255,
+              "mAP": 0.554327951833131,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 86
+            }
+          }
+        },
+        "hubness_top10": {
+          "n_queries": 100,
+          "gallery_size": 1290,
+          "top_k": 10,
+          "unique_items_retrieved": 659,
+          "coverage_ratio": 0.5108527131782946,
+          "max_appearances": 6,
+          "max_query_pct": 0.06,
+          "top1_hub_slot_share": 0.006,
+          "top5_hub_slot_share": 0.027,
+          "top10_hub_slot_share": 0.052,
+          "mean_appearances": 0.7751937984496124,
+          "std_appearances": 0.970417556395179,
+          "skewness": 1.5709493220346253,
+          "hub_threshold": 5,
+          "n_hubs_above_threshold": 10,
+          "top5_counts": [
+            6,
+            6,
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "i2i": {
+        "summary": {
+          "n_queries": 156,
+          "recall@1": 0.3974358974358974,
+          "recall@5": 0.6410256410256411,
+          "recall@10": 0.7435897435897436,
+          "mAP": 0.3406266729543425,
+          "n_sampled": 200,
+          "n_queries_with_gt": 156
+        },
+        "hubness_top10": {
+          "n_queries": 156,
+          "gallery_size": 1290,
+          "top_k": 10,
+          "unique_items_retrieved": 773,
+          "coverage_ratio": 0.5992248062015504,
+          "max_appearances": 8,
+          "max_query_pct": 0.05128205128205128,
+          "top1_hub_slot_share": 0.005128205128205128,
+          "top5_hub_slot_share": 0.02435897435897436,
+          "top10_hub_slot_share": 0.046794871794871795,
+          "mean_appearances": 1.2093023255813953,
+          "std_appearances": 1.4347536784764026,
+          "skewness": 1.5939153283995473,
+          "hub_threshold": 5,
+          "n_hubs_above_threshold": 47,
+          "top5_counts": [
+            8,
+            8,
+            8,
+            7,
+            7
+          ]
+        }
+      },
+      "bootstrap_95ci_system_vs_model": {
+        "recall@1": {
+          "mean_a": 0.29069767441860467,
+          "mean_b": 0.6046511627906976,
+          "diff_b_minus_a": 0.313953488372093,
+          "ci_low": 0.22093023255813954,
+          "ci_high": 0.4186046511627907
+        },
+        "recall@5": {
+          "mean_a": 0.5697674418604651,
+          "mean_b": 0.8255813953488372,
+          "diff_b_minus_a": 0.2558139534883721,
+          "ci_low": 0.16279069767441862,
+          "ci_high": 0.3488372093023256
+        },
+        "recall@10": {
+          "mean_a": 0.7093023255813954,
+          "mean_b": 0.8488372093023255,
+          "diff_b_minus_a": 0.13953488372093023,
+          "ci_low": 0.06976744186046512,
+          "ci_high": 0.22122093023255787
+        },
+        "ap": {
+          "mean_a": 0.32794014397649524,
+          "mean_b": 0.5536594781213402,
+          "diff_b_minus_a": 0.2257193341448449,
+          "ci_low": 0.18332192749837337,
+          "ci_high": 0.27708441911304593
+        }
+      }
+    },
+    "after_mean_centering": {
+      "t2i_model_only": {
+        "policies": {
+          "hybrid": {
+            "summary": {
+              "n_queries": 86,
+              "recall@1": 0.32558139534883723,
+              "recall@5": 0.5348837209302325,
+              "recall@10": 0.686046511627907,
+              "mAP": 0.32290241553454296,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 86
+            },
+            "breakdowns": {
+              "by_thin_slot": {
+                "Giày dép": {
+                  "n_queries": 17,
+                  "recall@1": 0.4117647058823529,
+                  "recall@5": 0.5882352941176471,
+                  "recall@10": 0.7058823529411765,
+                  "mAP": 0.3313879441375559
+                },
+                "Phụ kiện": {
+                  "n_queries": 10,
+                  "recall@1": 0.4,
+                  "recall@5": 0.5,
+                  "recall@10": 0.6,
+                  "mAP": 0.3404884095128199
+                },
+                "Quần & Váy": {
+                  "n_queries": 16,
+                  "recall@1": 0.25,
+                  "recall@5": 0.4375,
+                  "recall@10": 0.5625,
+                  "mAP": 0.3791659417887488
+                },
+                "Túi & Balo": {
+                  "n_queries": 14,
+                  "recall@1": 0.21428571428571427,
+                  "recall@5": 0.35714285714285715,
+                  "recall@10": 0.6428571428571429,
+                  "mAP": 0.2588067896093753
+                },
+                "Áo": {
+                  "n_queries": 19,
+                  "recall@1": 0.5263157894736842,
+                  "recall@5": 0.7368421052631579,
+                  "recall@10": 0.8947368421052632,
+                  "mAP": 0.33016627964740336
+                },
+                "Đồng hồ": {
+                  "n_queries": 10,
+                  "recall@1": 0.0,
+                  "recall@5": 0.5,
+                  "recall@10": 0.6,
+                  "mAP": 0.2768019154052145
+                }
+              },
+              "by_has_diacritics": {
+                "False": {
+                  "n_queries": 21,
+                  "recall@1": 0.047619047619047616,
+                  "recall@5": 0.09523809523809523,
+                  "recall@10": 0.2857142857142857,
+                  "mAP": 0.05844318830055238
+                },
+                "True": {
+                  "n_queries": 65,
+                  "recall@1": 0.4153846153846154,
+                  "recall@5": 0.676923076923077,
+                  "recall@10": 0.8153846153846154,
+                  "mAP": 0.40834308894860144
+                }
+              },
+              "by_gender": {
+                "Boys": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.5654824427293766
+                },
+                "Men": {
+                  "n_queries": 52,
+                  "recall@1": 0.28846153846153844,
+                  "recall@5": 0.5,
+                  "recall@10": 0.6346153846153846,
+                  "mAP": 0.2981390437994309
+                },
+                "Unisex": {
+                  "n_queries": 5,
+                  "recall@1": 0.4,
+                  "recall@5": 0.4,
+                  "recall@10": 1.0,
+                  "mAP": 0.3352197213687052
+                },
+                "Women": {
+                  "n_queries": 28,
+                  "recall@1": 0.35714285714285715,
+                  "recall@5": 0.6071428571428571,
+                  "recall@10": 0.7142857142857143,
+                  "mAP": 0.3580284431724066
+                }
+              },
+              "by_colour": {
+                "Beige": {
+                  "n_queries": 1,
+                  "recall@1": 0.0,
+                  "recall@5": 0.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.09754901960784314
+                },
+                "Black": {
+                  "n_queries": 24,
+                  "recall@1": 0.2916666666666667,
+                  "recall@5": 0.4583333333333333,
+                  "recall@10": 0.6666666666666666,
+                  "mAP": 0.323355940636453
+                },
+                "Blue": {
+                  "n_queries": 9,
+                  "recall@1": 0.6666666666666666,
+                  "recall@5": 0.7777777777777778,
+                  "recall@10": 0.8888888888888888,
+                  "mAP": 0.6095084092857462
+                },
+                "Brown": {
+                  "n_queries": 7,
+                  "recall@1": 0.14285714285714285,
+                  "recall@5": 0.42857142857142855,
+                  "recall@10": 0.42857142857142855,
+                  "mAP": 0.15692862528927323
+                },
+                "Gold": {
+                  "n_queries": 1,
+                  "recall@1": 0.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.4536551411551411
+                },
+                "Green": {
+                  "n_queries": 1,
+                  "recall@1": 0.0,
+                  "recall@5": 0.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.085270314418073
+                },
+                "Grey": {
+                  "n_queries": 3,
+                  "recall@1": 0.3333333333333333,
+                  "recall@5": 0.6666666666666666,
+                  "recall@10": 0.6666666666666666,
+                  "mAP": 0.3077054407958446
+                },
+                "Grey Melange": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6810095256754739
+                },
+                "Khaki": {
+                  "n_queries": 1,
+                  "recall@1": 0.0,
+                  "recall@5": 0.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.09754901960784314
+                },
+                "Maroon": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.7239770563753661
+                },
+                "Navy Blue": {
+                  "n_queries": 3,
+                  "recall@1": 0.6666666666666666,
+                  "recall@5": 0.6666666666666666,
+                  "recall@10": 1.0,
+                  "mAP": 0.4861389310264976
+                },
+                "Pink": {
+                  "n_queries": 2,
+                  "recall@1": 0.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.3250549284538866
+                },
+                "Purple": {
+                  "n_queries": 2,
+                  "recall@1": 0.5,
+                  "recall@5": 0.5,
+                  "recall@10": 1.0,
+                  "mAP": 0.35605779209966537
+                },
+                "Red": {
+                  "n_queries": 2,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6168370130361679
+                },
+                "Silver": {
+                  "n_queries": 6,
+                  "recall@1": 0.0,
+                  "recall@5": 0.3333333333333333,
+                  "recall@10": 0.5,
+                  "mAP": 0.17838976839003165
+                },
+                "Steel": {
+                  "n_queries": 2,
+                  "recall@1": 0.0,
+                  "recall@5": 0.5,
+                  "recall@10": 0.5,
+                  "mAP": 0.16532755121499398
+                },
+                "Unspecified": {
+                  "n_queries": 22,
+                  "recall@1": 0.4090909090909091,
+                  "recall@5": 0.5909090909090909,
+                  "recall@10": 0.7272727272727273,
+                  "mAP": 0.35955029970389013
+                },
+                "White": {
+                  "n_queries": 11,
+                  "recall@1": 0.09090909090909091,
+                  "recall@5": 0.45454545454545453,
+                  "recall@10": 0.45454545454545453,
+                  "mAP": 0.1851911188598424
+                }
+              }
+            }
+          },
+          "strict": {
+            "summary": {
+              "n_queries": 85,
+              "recall@1": 0.29411764705882354,
+              "recall@5": 0.5294117647058824,
+              "recall@10": 0.6823529411764706,
+              "mAP": 0.3084870257195976,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 85
+            }
+          },
+          "relaxed": {
+            "summary": {
+              "n_queries": 86,
+              "recall@1": 0.32558139534883723,
+              "recall@5": 0.5348837209302325,
+              "recall@10": 0.686046511627907,
+              "mAP": 0.3241696372697352,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 86
+            }
+          }
+        },
+        "hubness_top10": {
+          "n_queries": 100,
+          "gallery_size": 1290,
+          "top_k": 10,
+          "unique_items_retrieved": 645,
+          "coverage_ratio": 0.5,
+          "max_appearances": 7,
+          "max_query_pct": 0.07,
+          "top1_hub_slot_share": 0.007,
+          "top5_hub_slot_share": 0.032,
+          "top10_hub_slot_share": 0.058,
+          "mean_appearances": 0.7751937984496124,
+          "std_appearances": 1.0156932186345173,
+          "skewness": 1.8541047762077372,
+          "hub_threshold": 5,
+          "n_hubs_above_threshold": 11,
+          "top5_counts": [
+            7,
+            7,
+            6,
+            6,
+            6
+          ]
+        }
+      },
+      "t2i_system": {
+        "policies": {
+          "hybrid": {
+            "summary": {
+              "n_queries": 86,
+              "recall@1": 0.5930232558139535,
+              "recall@5": 0.8023255813953488,
+              "recall@10": 0.8372093023255814,
+              "mAP": 0.5425779401450844,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 86
+            },
+            "breakdowns": {
+              "by_thin_slot": {
+                "Giày dép": {
+                  "n_queries": 17,
+                  "recall@1": 0.7058823529411765,
+                  "recall@5": 0.7647058823529411,
+                  "recall@10": 0.8823529411764706,
+                  "mAP": 0.5999829212951148
+                },
+                "Phụ kiện": {
+                  "n_queries": 10,
+                  "recall@1": 0.5,
+                  "recall@5": 0.8,
+                  "recall@10": 0.8,
+                  "mAP": 0.590731184354506
+                },
+                "Quần & Váy": {
+                  "n_queries": 16,
+                  "recall@1": 0.4375,
+                  "recall@5": 0.8125,
+                  "recall@10": 0.8125,
+                  "mAP": 0.5902695679488075
+                },
+                "Túi & Balo": {
+                  "n_queries": 14,
+                  "recall@1": 0.6428571428571429,
+                  "recall@5": 0.7857142857142857,
+                  "recall@10": 0.7857142857142857,
+                  "mAP": 0.5101630032687152
+                },
+                "Áo": {
+                  "n_queries": 19,
+                  "recall@1": 0.7368421052631579,
+                  "recall@5": 0.9473684210526315,
+                  "recall@10": 1.0,
+                  "mAP": 0.5134104554396611
+                },
+                "Đồng hồ": {
+                  "n_queries": 10,
+                  "recall@1": 0.4,
+                  "recall@5": 0.6,
+                  "recall@10": 0.6,
+                  "mAP": 0.42132875606187625
+                }
+              },
+              "by_has_diacritics": {
+                "False": {
+                  "n_queries": 21,
+                  "recall@1": 0.2857142857142857,
+                  "recall@5": 0.5238095238095238,
+                  "recall@10": 0.6666666666666666,
+                  "mAP": 0.2576521301835118
+                },
+                "True": {
+                  "n_queries": 65,
+                  "recall@1": 0.6923076923076923,
+                  "recall@5": 0.8923076923076924,
+                  "recall@10": 0.8923076923076924,
+                  "mAP": 0.6346308941326695
+                }
+              },
+              "by_gender": {
+                "Boys": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.8449762927242204
+                },
+                "Men": {
+                  "n_queries": 52,
+                  "recall@1": 0.5769230769230769,
+                  "recall@5": 0.7692307692307693,
+                  "recall@10": 0.8269230769230769,
+                  "mAP": 0.5357991885286734
+                },
+                "Unisex": {
+                  "n_queries": 5,
+                  "recall@1": 0.8,
+                  "recall@5": 0.8,
+                  "recall@10": 0.8,
+                  "mAP": 0.6219947639427604
+                },
+                "Women": {
+                  "n_queries": 28,
+                  "recall@1": 0.5714285714285714,
+                  "recall@5": 0.8571428571428571,
+                  "recall@10": 0.8571428571428571,
+                  "mAP": 0.530185533448151
+                }
+              },
+              "by_colour": {
+                "Beige": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.8095238095238094
+                },
+                "Black": {
+                  "n_queries": 24,
+                  "recall@1": 0.6666666666666666,
+                  "recall@5": 0.7916666666666666,
+                  "recall@10": 0.7916666666666666,
+                  "mAP": 0.6088758909380488
+                },
+                "Blue": {
+                  "n_queries": 9,
+                  "recall@1": 0.7777777777777778,
+                  "recall@5": 0.8888888888888888,
+                  "recall@10": 0.8888888888888888,
+                  "mAP": 0.7191729978848715
+                },
+                "Brown": {
+                  "n_queries": 7,
+                  "recall@1": 0.5714285714285714,
+                  "recall@5": 0.7142857142857143,
+                  "recall@10": 0.8571428571428571,
+                  "mAP": 0.44557888444255495
+                },
+                "Gold": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6078366035409378
+                },
+                "Green": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.4064559547015687
+                },
+                "Grey": {
+                  "n_queries": 3,
+                  "recall@1": 0.3333333333333333,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.5854620466413146
+                },
+                "Grey Melange": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.855592489130293
+                },
+                "Khaki": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.8095238095238094
+                },
+                "Maroon": {
+                  "n_queries": 1,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.8031938487571013
+                },
+                "Navy Blue": {
+                  "n_queries": 3,
+                  "recall@1": 0.6666666666666666,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6789987381899146
+                },
+                "Pink": {
+                  "n_queries": 2,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.5052176357336392
+                },
+                "Purple": {
+                  "n_queries": 2,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.6418294894605252
+                },
+                "Red": {
+                  "n_queries": 2,
+                  "recall@1": 1.0,
+                  "recall@5": 1.0,
+                  "recall@10": 1.0,
+                  "mAP": 0.8212397815214078
+                },
+                "Silver": {
+                  "n_queries": 6,
+                  "recall@1": 0.3333333333333333,
+                  "recall@5": 0.6666666666666666,
+                  "recall@10": 0.6666666666666666,
+                  "mAP": 0.39586875655270704
+                },
+                "Steel": {
+                  "n_queries": 2,
+                  "recall@1": 0.5,
+                  "recall@5": 0.5,
+                  "recall@10": 0.5,
+                  "mAP": 0.39188660801564024
+                },
+                "Unspecified": {
+                  "n_queries": 22,
+                  "recall@1": 0.5909090909090909,
+                  "recall@5": 0.7727272727272727,
+                  "recall@10": 0.7727272727272727,
+                  "mAP": 0.4982428005286378
+                },
+                "White": {
+                  "n_queries": 11,
+                  "recall@1": 0.2727272727272727,
+                  "recall@5": 0.7272727272727273,
+                  "recall@10": 0.9090909090909091,
+                  "mAP": 0.40120073320736577
+                }
+              }
+            }
+          },
+          "strict": {
+            "summary": {
+              "n_queries": 85,
+              "recall@1": 0.5647058823529412,
+              "recall@5": 0.788235294117647,
+              "recall@10": 0.8352941176470589,
+              "mAP": 0.5151485081665157,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 85
+            }
+          },
+          "relaxed": {
+            "summary": {
+              "n_queries": 86,
+              "recall@1": 0.5930232558139535,
+              "recall@5": 0.8023255813953488,
+              "recall@10": 0.8372093023255814,
+              "mAP": 0.5433502957107033,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 86
+            }
+          }
+        },
+        "hubness_top10": {
+          "n_queries": 100,
+          "gallery_size": 1290,
+          "top_k": 10,
+          "unique_items_retrieved": 658,
+          "coverage_ratio": 0.5100775193798449,
+          "max_appearances": 7,
+          "max_query_pct": 0.07,
+          "top1_hub_slot_share": 0.007,
+          "top5_hub_slot_share": 0.027,
+          "top10_hub_slot_share": 0.05,
+          "mean_appearances": 0.7751937984496124,
+          "std_appearances": 0.961590333870978,
+          "skewness": 1.517977730800037,
+          "hub_threshold": 5,
+          "n_hubs_above_threshold": 8,
+          "top5_counts": [
+            7,
+            5,
+            5,
+            5,
+            5
+          ]
+        }
+      },
+      "i2i": {
+        "summary": {
+          "n_queries": 156,
+          "recall@1": 0.3782051282051282,
+          "recall@5": 0.6410256410256411,
+          "recall@10": 0.7628205128205128,
+          "mAP": 0.33767516423270094,
+          "n_sampled": 200,
+          "n_queries_with_gt": 156
+        },
+        "hubness_top10": {
+          "n_queries": 156,
+          "gallery_size": 1290,
+          "top_k": 10,
+          "unique_items_retrieved": 792,
+          "coverage_ratio": 0.6139534883720931,
+          "max_appearances": 9,
+          "max_query_pct": 0.057692307692307696,
+          "top1_hub_slot_share": 0.0057692307692307696,
+          "top5_hub_slot_share": 0.02435897435897436,
+          "top10_hub_slot_share": 0.046153846153846156,
+          "mean_appearances": 1.2093023255813953,
+          "std_appearances": 1.3997475885673167,
+          "skewness": 1.5679441072738323,
+          "hub_threshold": 5,
+          "n_hubs_above_threshold": 45,
+          "top5_counts": [
+            9,
+            8,
+            7,
+            7,
+            7
+          ]
+        }
+      },
+      "bootstrap_95ci_system_vs_model": {
+        "recall@1": {
+          "mean_a": 0.32558139534883723,
+          "mean_b": 0.5930232558139535,
+          "diff_b_minus_a": 0.26744186046511625,
+          "ci_low": 0.1744186046511628,
+          "ci_high": 0.37209302325581395
+        },
+        "recall@5": {
+          "mean_a": 0.5348837209302325,
+          "mean_b": 0.8023255813953488,
+          "diff_b_minus_a": 0.26744186046511625,
+          "ci_low": 0.18604651162790697,
+          "ci_high": 0.36046511627906974
+        },
+        "recall@10": {
+          "mean_a": 0.686046511627907,
+          "mean_b": 0.8372093023255814,
+          "diff_b_minus_a": 0.1511627906976744,
+          "ci_low": 0.06976744186046512,
+          "ci_high": 0.2441860465116279
+        },
+        "ap": {
+          "mean_a": 0.32290241553454296,
+          "mean_b": 0.5425779401450844,
+          "diff_b_minus_a": 0.21967552461054157,
+          "ci_low": 0.17781331976212153,
+          "ci_high": 0.27284200149368526
+        }
+      }
+    }
+  },
+  "reference_full_gallery": {
+    "label": "ước lượng lạc quan (tham khảo)",
+    "gallery_size": 38646,
+    "before_mean_centering": {
+      "model_only": {
+        "policies": {
+          "hybrid": {
+            "summary": {
+              "n_queries": 99,
+              "recall@1": 0.31313131313131315,
+              "recall@5": 0.5656565656565656,
+              "recall@10": 0.5858585858585859,
+              "mAP": 0.10269039637589172,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 99
+            }
+          },
+          "strict": {
+            "summary": {
+              "n_queries": 98,
+              "recall@1": 0.30612244897959184,
+              "recall@5": 0.5714285714285714,
+              "recall@10": 0.5918367346938775,
+              "mAP": 0.10242922727497218,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 98
+            }
+          },
+          "relaxed": {
+            "summary": {
+              "n_queries": 99,
+              "recall@1": 0.31313131313131315,
+              "recall@5": 0.5656565656565656,
+              "recall@10": 0.5858585858585859,
+              "mAP": 0.10231816459167077,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 99
+            }
+          }
+        },
+        "hubness_top10": {
+          "n_queries": 100,
+          "gallery_size": 38646,
+          "top_k": 10,
+          "unique_items_retrieved": 919,
+          "coverage_ratio": 0.023779951353309528,
+          "max_appearances": 6,
+          "max_query_pct": 0.06,
+          "top1_hub_slot_share": 0.006,
+          "top5_hub_slot_share": 0.023,
+          "top10_hub_slot_share": 0.041,
+          "mean_appearances": 0.025875899187496765,
+          "std_appearances": 0.1776845751011029,
+          "skewness": 9.29262329889606,
+          "hub_threshold": 5,
+          "n_hubs_above_threshold": 2,
+          "top5_counts": [
+            6,
+            5,
+            4,
+            4,
+            4
+          ]
+        }
+      },
+      "system": {
+        "policies": {
+          "hybrid": {
+            "summary": {
+              "n_queries": 99,
+              "recall@1": 0.6767676767676768,
+              "recall@5": 0.7070707070707071,
+              "recall@10": 0.7171717171717171,
+              "mAP": 0.15135759258634196,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 99
+            }
+          },
+          "strict": {
+            "summary": {
+              "n_queries": 98,
+              "recall@1": 0.6632653061224489,
+              "recall@5": 0.7142857142857143,
+              "recall@10": 0.7244897959183674,
+              "mAP": 0.15122673012305052,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 98
+            }
+          },
+          "relaxed": {
+            "summary": {
+              "n_queries": 99,
+              "recall@1": 0.6767676767676768,
+              "recall@5": 0.7070707070707071,
+              "recall@10": 0.7171717171717171,
+              "mAP": 0.15083917021207047,
+              "n_queries_total": 100,
+              "n_queries_with_gt": 99
+            }
+          }
+        },
+        "hubness_top10": {
+          "n_queries": 100,
+          "gallery_size": 38646,
+          "top_k": 10,
+          "unique_items_retrieved": 947,
+          "coverage_ratio": 0.024504476530559437,
+          "max_appearances": 6,
+          "max_query_pct": 0.06,
+          "top1_hub_slot_share": 0.006,
+          "top5_hub_slot_share": 0.023,
+          "top10_hub_slot_share": 0.038,
+          "mean_appearances": 0.025875899187496765,
+          "std_appearances": 0.1720617327897453,
+          "skewness": 8.770267879137851,
+          "hub_threshold": 5,
+          "n_hubs_above_threshold": 3,
+          "top5_counts": [
+            6,
+            5,
+            5,
+            4,
+            3
+          ]
+        }
+      }
+    }
+  }
+}

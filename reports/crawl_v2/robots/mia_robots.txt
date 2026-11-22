@@ -1,0 +1,45 @@
+# Fetched from: https://mia.vn/robots.txt
+# Timestamp (UTC): 2026-11-19T23:54:29+00:00
+# HTTP Status: 200
+# User-Agent: AcademicResearchBot/2.0 (Hoc_sau_ver4 Vietnamese Fashion Visual Search; non-commercial academic evaluation; contact: nguyen-student@university.edu.vn)
+
+User-agent: *
+Allow: /
+Disallow: /tim-kiem
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: SemrushBot-BA
+Disallow: /
+
+User-agent: SemrushBot-CT
+Disallow: /
+
+Sitemap: https://mia.vn/sitemap.xml

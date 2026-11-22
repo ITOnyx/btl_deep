@@ -1,0 +1,100 @@
+{
+  "timestamp": "2026-11-12 16:17:44",
+  "status": "PASSED",
+  "checkpoint": {
+    "path": "D:\\Kì 7\\Hoc_sau_ver4\\data\\checkpoints_siglip-vit\\best_model.pt",
+    "sha256": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+    "hash_guard_verified": true
+  },
+  "metrics": {
+    "num_samples": 200,
+    "min_cosine": 0.999660074710846,
+    "max_cosine": 0.9999977946281433,
+    "mean_cosine": 0.9999809265136719,
+    "median_cosine": 0.9999910593032837,
+    "std_cosine": 3.401902722544037e-05,
+    "passed_threshold_count": 200,
+    "pass_rate": 1.0,
+    "target_threshold": 0.999
+  },
+  "device_info": {
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 2050",
+    "vram_allocated_mb": 1727.5498046875
+  },
+  "bottom_5_samples": [
+    {
+      "index": 63,
+      "item_id": "18237",
+      "path": "data/fashion-dataset/images/18237.jpg",
+      "articleType": "Tshirts",
+      "cosine": 0.999660074710846
+    },
+    {
+      "index": 94,
+      "item_id": "41268",
+      "path": "data/fashion-dataset/images/41268.jpg",
+      "articleType": "Wallets",
+      "cosine": 0.999796450138092
+    },
+    {
+      "index": 15,
+      "item_id": "42419",
+      "path": "data/fashion-dataset/images/42419.jpg",
+      "articleType": "Tops",
+      "cosine": 0.9998372793197632
+    },
+    {
+      "index": 53,
+      "item_id": "42841",
+      "path": "data/fashion-dataset/images/42841.jpg",
+      "articleType": "Handbags",
+      "cosine": 0.9998475313186646
+    },
+    {
+      "index": 67,
+      "item_id": "19123",
+      "path": "data/fashion-dataset/images/19123.jpg",
+      "articleType": "Flip Flops",
+      "cosine": 0.9998870491981506
+    }
+  ],
+  "top_5_samples": [
+    {
+      "index": 54,
+      "item_id": "22198",
+      "path": "data/fashion-dataset/images/22198.jpg",
+      "articleType": "Casual Shoes",
+      "cosine": 0.9999977946281433
+    },
+    {
+      "index": 130,
+      "item_id": "30462",
+      "path": "data/fashion-dataset/images/30462.jpg",
+      "articleType": "Bra",
+      "cosine": 0.9999973177909851
+    },
+    {
+      "index": 64,
+      "item_id": "54118",
+      "path": "data/fashion-dataset/images/54118.jpg",
+      "articleType": "Heels",
+      "cosine": 0.9999973177909851
+    },
+    {
+      "index": 62,
+      "item_id": "23876",
+      "path": "data/fashion-dataset/images/23876.jpg",
+      "articleType": "Sweatshirts",
+      "cosine": 0.9999973177909851
+    },
+    {
+      "index": 106,
+      "item_id": "28200",
+      "path": "data/fashion-dataset/images/28200.jpg",
+      "articleType": "Sunglasses",
+      "cosine": 0.9999972581863403
+    }
+  ],
+  "elapsed_seconds": 41.73
+}

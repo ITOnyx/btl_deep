@@ -1,0 +1,101 @@
+[
+  {
+    "source": "coolmate",
+    "base_url": "https://www.coolmate.me",
+    "robots_url": "https://www.coolmate.me/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:24+00:00",
+    "bytes": 546,
+    "saved_path": "reports\\crawl_v2\\robots\\coolmate_robots.txt"
+  },
+  {
+    "source": "juno",
+    "base_url": "https://juno.vn",
+    "robots_url": "https://juno.vn/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:25+00:00",
+    "bytes": 247,
+    "saved_path": "reports\\crawl_v2\\robots\\juno_robots.txt"
+  },
+  {
+    "source": "bitis",
+    "base_url": "https://bitis.com.vn",
+    "robots_url": "https://bitis.com.vn/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:26+00:00",
+    "bytes": 1635,
+    "saved_path": "reports\\crawl_v2\\robots\\bitis_robots.txt"
+  },
+  {
+    "source": "ivymoda",
+    "base_url": "https://ivymoda.com",
+    "robots_url": "https://ivymoda.com/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:26+00:00",
+    "bytes": 143,
+    "saved_path": "reports\\crawl_v2\\robots\\ivymoda_robots.txt"
+  },
+  {
+    "source": "yame",
+    "base_url": "https://yame.vn",
+    "robots_url": "https://yame.vn/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:27+00:00",
+    "bytes": 7104,
+    "saved_path": "reports\\crawl_v2\\robots\\yame_robots.txt"
+  },
+  {
+    "source": "aristino",
+    "base_url": "https://aristino.com",
+    "robots_url": "https://aristino.com/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:27+00:00",
+    "bytes": 1635,
+    "saved_path": "reports\\crawl_v2\\robots\\aristino_robots.txt"
+  },
+  {
+    "source": "rabity",
+    "base_url": "https://rabity.vn",
+    "robots_url": "https://rabity.vn/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:28+00:00",
+    "bytes": 1626,
+    "saved_path": "reports\\crawl_v2\\robots\\rabity_robots.txt"
+  },
+  {
+    "source": "mia",
+    "base_url": "https://mia.vn",
+    "robots_url": "https://mia.vn/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:29+00:00",
+    "bytes": 516,
+    "saved_path": "reports\\crawl_v2\\robots\\mia_robots.txt"
+  },
+  {
+    "source": "leonardo",
+    "base_url": "https://www.leonardo.vn",
+    "robots_url": "https://www.leonardo.vn/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:30+00:00",
+    "bytes": 3687,
+    "saved_path": "reports\\crawl_v2\\robots\\leonardo_robots.txt"
+  },
+  {
+    "source": "matkinhshady",
+    "base_url": "https://matkinhshady.com",
+    "robots_url": "https://matkinhshady.com/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:30+00:00",
+    "bytes": 1647,
+    "saved_path": "reports\\crawl_v2\\robots\\matkinhshady_robots.txt"
+  },
+  {
+    "source": "watchstore",
+    "base_url": "https://www.watchstore.vn",
+    "robots_url": "https://www.watchstore.vn/robots.txt",
+    "status": 200,
+    "fetched_at_utc": "2026-11-19T23:54:31+00:00",
+    "bytes": 3703,
+    "saved_path": "reports\\crawl_v2\\robots\\watchstore_robots.txt"
+  }
+]

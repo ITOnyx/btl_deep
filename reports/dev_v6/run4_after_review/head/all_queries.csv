@@ -1,0 +1,675 @@
+﻿set,query,type,gender,colour,top3(type/gender/colour),ms,flags
+hand,áo thun nam màu trắng trơn cổ tròn,Tshirts,Men,White,Tshirts/Men/White;Tshirts/Men/White;Tshirts/Men/White,82.4,
+hand,ao thun nam trang,Tshirts,Men,White,Tshirts/Men/White;Tshirts/Men/White;Tshirts/Men/White,86.8,
+hand,áo sơ mi nam trắng công sở đi làm,Shirts,Men,White,Shirts/Men/White;Shirts/Men/White;Shirts/Men/White,55.3,
+hand,ao so mi nam trang dai tay,Shirts,Men,White,Shirts/Men/White;Shirts/Men/White;Shirts/Men/White,45.5,
+hand,áo polo nam màu xanh navy thể thao,Tshirts,Men,Navy Blue,Tshirts/Men/Navy Blue;Tshirts/Men/Navy Blue;Tshirts/Men/Navy Blue,74.9,
+hand,áo phông nam màu đen in họa tiết,Tshirts,Men,Black,Tshirts/Men/Black;Tshirts/Men/Black;Tshirts/Men/Black,99.5,
+hand,ao phong den nam,Tshirts,Men,,Tshirts/Men/Black;Tshirts/Men/Black;Tshirts/Men/Black,88.7,R@10=0.90
+hand,áo thun nữ mùa hè màu hồng dễ thương,Tshirts,Women,Pink,Tshirts/Women/Pink;Tshirts/Women/Pink;Tshirts/Women/Pink,71.5,
+hand,áo sơ mi nữ kẻ sọc màu xanh dương,Shirts,Women,Blue,Shirts/Women/Blue;Shirts/Women/Blue;Shirts/Women/Blue,59.0,
+hand,ao so mi nu cong so,Shirts,Women,,Shirts/Women/Pink;Shirts/Women/Pink;Shirts/Women/Purple,49.0,
+hand,áo khoác jacket nam màu đen có khóa kéo,Jackets,Men,Black,Jackets/Men/Black;Jackets/Men/Black;Jackets/Men/Black,30.7,
+hand,áo len cổ tròn nữ màu đỏ ấm áp,Sweaters,Women,Red,Sweaters/Women/Red;Sweaters/Women/Red;Sweaters/Women/Red,30.6,lac_loai(1/10:['Jackets']);R@10=0.67
+hand,ao len nu mau do,Sweaters,Women,Red,Sweaters/Women/Red;Sweaters/Women/Red;Sweaters/Women/Red,32.8,
+hand,áo hoodie nỉ nam màu xám,Sweatshirts,Men,Grey,Sweatshirts/Men/Grey;Sweatshirts/Men/Grey;Sweatshirts/Men/Grey,37.1,
+hand,áo kiểu nữ sát nách màu vàng,Tops,Women,Yellow,Tops/Women/Yellow;Tops/Women/Yellow;Tops/Women/Yellow,40.7,
+hand,áo blazer nam công sở lịch lãm màu đen,Blazers,Men,Black,Blazers/Men/Black;Blazers/Men/Black;Blazers/Men/Brown,31.5,"lac_loai(5/10:['Kurtas', 'Sweaters']);R@10=0.20"
+hand,ao blazer nam den,Blazers,Men,Black,Blazers/Men/Black;Blazers/Men/Black;Blazers/Men/Brown,36.5,"lac_loai(5/10:['Jackets', 'Sweatshirts', 'Waistcoat']);R@10=0.50"
+hand,áo thun nam màu đỏ đô thể thao,Tshirts,Men,Maroon,Tshirts/Men/Maroon;Tshirts/Men/Maroon;Tshirts/Men/Maroon,91.1,
+hand,áo thun tay dài nam màu xám tiêu,Tshirts,Men,Grey Melange,Tshirts/Men/Grey Melange;Tshirts/Men/Grey Melange;Tshirts/Men/Grey Melange,73.1,
+hand,áo sơ mi nam cộc tay đi biển màu xanh lá,Shirts,Men,Green,Shirts/Men/Green;Shirts/Men/Green;Shirts/Men/Green,54.6,
+hand,áo thun nữ form rộng màu trắng,Tshirts,Women,White,Tshirts/Women/White;Tshirts/Women/White;Tshirts/Women/White,80.3,
+hand,áo sơ mi nam caro tím trẻ trung,Shirts,Men,Purple,Shirts/Men/Purple;Shirts/Men/Purple;Shirts/Men/Purple,48.9,R@10=0.70
+hand,áo sát nách thể thao nam tập gym,,Men,,Tshirts/Men/Grey;Tshirts/Men/Black;Tshirts/Men/White,29.2,khong_nhan_ra_loai
+hand,áo khoác gió thể thao nam chống nước,Jackets,Men,,Jackets/Men/Olive;Jackets/Men/Black;Jackets/Men/Black,33.8,
+hand,áo thun bé trai in hình siêu nhân,Tshirts,Boys,,Tshirts/Boys/Yellow;Tshirts/Boys/Yellow;Tshirts/Boys/Yellow,172.2,
+hand,quần jean nam ống đứng màu xanh dương,Jeans,Men,Blue,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Men/Blue,46.1,
+hand,quan jean nam xanh,Jeans,Men,,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Men/Blue,36.8,
+hand,quần bò nam rách gối cá tính,Jeans,Men,,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Men/Blue,30.6,
+hand,quần tây nam đi làm công sở màu đen,Trousers,Men,Black,Trousers/Men/Black;Trousers/Men/Black;Trousers/Men/Black,29.5,
+hand,quan tay nam cong so mau den,Trousers,Men,Black,Trousers/Men/Black;Trousers/Men/Black;Trousers/Men/Black,37.0,
+hand,quần short nam đi biển mùa hè thoáng mát,Shorts,Men,,Shorts/Men/White;Shorts/Men/Red;Shorts/Men/Grey,34.5,
+hand,quan short nam mau trang,Shorts,Men,White,Shorts/Men/White;Shorts/Men/White;Shorts/Men/White,34.0,
+hand,quần jogger thể thao bo gấu màu xám,Track Pants,,Grey,Track Pants/Women/Grey;Track Pants/Women/Grey;Track Pants/Women/Grey,43.9,R@10=0.00
+hand,quần legging nữ ôm sát màu đen,Leggings,Women,Black,Leggings/Women/Black;Leggings/Women/Black;Leggings/Women/Black,34.3,
+hand,quan legging nu den,Leggings,Women,Black,Leggings/Women/Black;Leggings/Women/Black;Leggings/Women/Black,27.8,R@10=0.80
+hand,chân váy chữ a dáng ngắn màu đen,Skirts,,Black,Skirts/Women/Black;Skirts/Women/Black;Skirts/Women/Black,28.7,
+hand,chân váy xòe hoa nhí dễ thương,Skirts,,,Skirts/Women/Purple;Skirts/Girls/Pink;Skirts/Women/Blue,27.9,R@10=0.70
+hand,váy đầm dự tiệc sang trọng màu đỏ,Dresses,,Red,Dresses/Women/Red;Dresses/Women/Red;Dresses/Women/Red,30.8,R@10=0.90
+hand,dam du tiec mau do,Dresses,,Red,Dresses/Women/Red;Dresses/Women/Red;Dresses/Women/Red,27.9,R@10=0.80
+hand,đầm suông dạo phố mùa hè màu trắng,Dresses,,White,Dresses/Women/White;Dresses/Girls/White;Dresses/Girls/White,29.8,R@10=0.70
+hand,quần kaki nam màu be dáng ôm,Trousers,Men,Beige|Khaki,Trousers/Men/Beige;Trousers/Men/Beige;Trousers/Men/Beige,31.1,
+hand,quần lót boxer nam co giãn tốt,Boxers,Men,,Boxers/Men/Black;Boxers/Men/White;Boxers/Men/Charcoal,28.4,
+hand,bộ đồ ngủ mặc nhà nữ dễ thương,Night suits,Women,,Night suits/Women/White;Night suits/Women/Blue;Night suits/Women/Grey,28.4,
+hand,quần jean nữ cạp cao ống loe,Jeans,Women,,Jeans/Women/Blue;Jeans/Women/Blue;Jeans/Women/Blue,39.3,
+hand,áo liền quần jumpsuit nữ thanh lịch,Jumpsuit,Women,,Jumpsuit/Women/Olive;Jumpsuit/Women/Magenta;Jumpsuit/Women/Peach,29.7,
+hand,giày thể thao nam chạy bộ màu trắng,Sports Shoes,Men,White,Sports Shoes/Men/White;Sports Shoes/Men/White;Sports Shoes/Men/White,40.4,
+hand,giay the thao nam trang,Sports Shoes,Men,White,Sports Shoes/Men/White;Sports Shoes/Men/White;Sports Shoes/Men/White,77.1,
+hand,giày sneaker nam cổ thấp màu đen,Casual Shoes,Men,Black,Casual Shoes/Men/Black;Casual Shoes/Men/Black;Casual Shoes/Men/Black,87.1,
+hand,giày tây nam da bóng buộc dây công sở,Formal Shoes,Men,,Formal Shoes/Men/Tan;Formal Shoes/Men/Brown;Formal Shoes/Men/Brown,49.7,R@10=0.80
+hand,giay tay nam da bo mau nau,Formal Shoes,Men,Brown,Formal Shoes/Men/Brown;Formal Shoes/Men/Brown;Formal Shoes/Men/Brown,55.2,
+hand,giày lười nam da mềm màu nâu,Casual Shoes,Men,Brown,Casual Shoes/Men/Brown;Casual Shoes/Men/Brown;Casual Shoes/Men/Brown,49.4,
+hand,giày cao gót nữ mũi nhọn màu đen 7cm,Heels,Women,Black,Heels/Women/Black;Heels/Women/Black;Heels/Women/Black,35.6,
+hand,giay cao got nu mau den,Heels,Women,Black,Heels/Women/Black;Heels/Women/Black;Heels/Women/Black,32.9,
+hand,giày cao gót nữ dự tiệc màu đỏ quyến rũ,Heels,Women,Red,Heels/Women/Red;Heels/Women/Red;Heels/Women/Red,35.2,
+hand,giày búp bê đế bệt nữ màu kem,Flats,Women,Off White,Flats/Women/White;Flats/Women/Black;Flats/Women/Gold,31.3,lac_mau(10/10);R@10=0.10
+hand,giay bup be de bet nu,Flats,Women,,Flats/Women/Silver;Flats/Women/Brown;Flats/Women/Beige,33.5,
+hand,dép quai hậu sandal nam đi học đi chơi,Sandals,Men,,Sandals/Men/Blue;Sandals/Men/Yellow;Sandals/Men/Blue,32.1,
+hand,sandal nữ quai mảnh màu trắng thanh lịch,Sandals,Women,White,Sandals/Unisex/White;Sandals/Unisex/White;Sandals/Unisex/White,29.0,lac_mau(6/10);R@10=0.67
+hand,dép kẹp xỏ ngón đi biển mùa hè,Flip Flops,,,Flip Flops/Women/White;Flip Flops/Women/White;Flip Flops/Women/Blue,31.8,R@10=0.10
+hand,giày thể thao nữ tập aerobic màu tím,Sports Shoes,Women,Purple,Sports Shoes/Women/Purple;Sports Shoes/Women/Purple;Sports Shoes/Women/Purple,44.0,R@10=0.90
+hand,giày vải nam cổ thấp màu xanh navy,Casual Shoes,Men,Navy Blue,Casual Shoes/Men/Navy Blue;Casual Shoes/Men/Navy Blue;Casual Shoes/Men/Navy Blue,54.4,
+hand,giày bốt da nữ cổ thấp cá tính,Booties,Women,,Casual Shoes/Women/Blue;Sports Shoes/Women/White;Casual Shoes/Women/Blue,32.3,"lac_loai(10/10:['Casual Shoes', 'Sports Shoes'])"
+hand,dep sandal nam quai dan,Sandals,Men,,Sandals/Men/Multi;Sandals/Men/Black;Sandals/Men/Grey,49.8,
+hand,giày đá bóng sân cỏ nhân tạo nam,Sports Shoes,Men,,Sports Shoes/Men/Brown;Sports Shoes/Men/Brown;Sports Shoes/Men/Black,44.3,
+hand,tất vớ cổ ngắn thể thao nam màu trắng,Socks,Men,White,Socks/Men/White;Socks/Men/White;Socks/Men/White,29.3,
+hand,balo đựng laptop chống sốc đi học màu đen,Backpacks,,Black,Backpacks/Unisex/Black;Backpacks/Unisex/Black;Backpacks/Men/Black,32.4,R@10=0.60
+hand,balo laptop chong nuoc mau den,Laptop Bag,,Black,Laptop Bag/Unisex/Black;Laptop Bag/Unisex/Black;Laptop Bag/Men/Black,30.4,R@10=0.40
+hand,balo du lịch dã ngoại màu xanh dương,Rucksacks,,Blue,Rucksacks/Unisex/Blue;Rucksacks/Unisex/Green;Rucksacks/Unisex/Red,33.0,lac_loai(5/10:['Backpacks']);R@10=0.60
+hand,túi xách tay nữ da thật màu nâu sang trọng,Handbags,Women,Brown,Handbags/Women/Brown;Handbags/Women/Brown;Handbags/Women/Brown,82.2,
+hand,tui xach nu da mau nau,Handbags,Women,Brown,Handbags/Women/Brown;Handbags/Women/Brown;Handbags/Women/Brown,74.5,
+hand,túi đeo chéo nữ nhỏ gọn đi chơi dạo phố,Messenger Bag,Women,,Messenger Bag/Unisex/Multi;Messenger Bag/Unisex/Black;Messenger Bag/Unisex/Black,38.7,
+hand,ví da nam bỏ túi nhỏ gọn màu đen,Wallets,Men,Black,Wallets/Men/Black;Wallets/Men/Black;Wallets/Men/Black,33.3,
+hand,vi da nam mau den,Wallets,Men,Black,Wallets/Men/Black;Wallets/Men/Black;Wallets/Men/Black,31.2,
+hand,bóp tiền nam da bò màu nâu gập đôi,Wallets,Men,Brown,Wallets/Men/Brown;Wallets/Men/Brown;Wallets/Men/Brown,29.2,lac_mau(7/10);R@10=0.30
+hand,ví cầm tay nữ dự tiệc sang chảnh clutch,Clutches,Women,,Clutches/Women/Purple;Clutches/Women/Blue;Clutches/Women/Black,30.5,
+hand,vi cam tay nu du tiec,Clutches,Women,,Clutches/Women/Brown;Clutches/Women/Gold;Clutches/Women/Grey,29.9,
+hand,túi đeo chéo nam đựng ipad thể thao,Messenger Bag,Men,,Messenger Bag/Men/Red;Messenger Bag/Men/Brown;Messenger Bag/Men/Black,23.6,
+hand,túi trống thể thao tập gym đựng đồ,Duffel Bag,,,Duffel Bag/Men/Black;Duffel Bag/Unisex/Black;Duffel Bag/Unisex/Orange,27.5,R@10=0.90
+hand,túi xách công sở nữ màu đen đựng tài liệu,Handbags,Women,Black,Handbags/Women/Black;Handbags/Women/Black;Handbags/Women/Black,39.8,
+hand,túi bao tử đeo hông cá tính,Waist Pouch,,,Waist Pouch/Unisex/Grey;Waist Pouch/Unisex/Grey;Waist Pouch/Unisex/Olive,32.3,
+hand,đồng hồ đeo tay nam mặt tròn dây da màu đen,Watches,Men,Black,Watches/Men/Black;Watches/Men/Black;Watches/Men/Black,61.9,
+hand,dong ho nam day da mau den,Watches,Men,Black,Watches/Men/Black;Watches/Men/Black;Watches/Men/Black,44.9,
+hand,đồng hồ nam kim loại thép không gỉ màu bạc,Watches,Men,Steel|Silver,Watches/Men/Steel;Watches/Men/Steel;Watches/Men/Steel,41.9,
+hand,dong ho nam day kim loai,Watches,Men,,Watches/Men/Brown;Watches/Men/Copper;Watches/Men/Grey,39.6,R@10=0.00
+hand,đồng hồ nữ mặt nhỏ dây kim loại màu vàng hồng,Watches,Women,Gold,Watches/Women/Gold;Watches/Women/Gold;Watches/Women/Gold,40.7,
+hand,dong ho nu mau trang thanh lich,Watches,Women,White,Watches/Women/White;Watches/Women/White;Watches/Women/White,50.7,
+hand,đồng hồ nam phong cách thể thao chống nước,Watches,Men,,Watches/Men/Silver;Watches/Men/Blue;Watches/Men/White,52.2,R@10=0.10
+hand,đồng hồ thời trang nữ mặt số đính đá màu bạc,Watches,Women,Silver,Watches/Women/Silver;Watches/Women/Silver;Watches/Women/Silver,68.6,
+hand,đồng hồ nam mặt vuông dây cao su,Watches,Men,,Watches/Men/Brown;Watches/Men/Copper;Watches/Men/Cream,84.2,R@10=0.00
+hand,đồng hồ công sở nam thanh lịch sang trọng,Watches,Men,,Watches/Men/Silver;Watches/Men/Blue;Watches/Men/Black,82.5,
+hand,kính râm nam phi công mắt đen thời trang,Sunglasses,Men,Black,Sunglasses/Men/Black;Sunglasses/Men/Black;Sunglasses/Men/Black,65.3,
+hand,kinh ram nam den,Sunglasses,Men,Black,Sunglasses/Men/Black;Sunglasses/Men/Black;Sunglasses/Men/Black,44.6,
+hand,kính mát nữ mắt mèo sành điệu,Sunglasses,Women,,Sunglasses/Women/Brown;Sunglasses/Women/Brown;Sunglasses/Women/Brown,47.2,
+hand,thắt lưng da nam khóa kim màu đen,Belts,Men,Black,Belts/Men/Black;Belts/Men/Black;Belts/Men/Black,63.8,
+hand,day nit nam da bo,Belts,Men,,Belts/Men/Black;Belts/Men/Black;Belts/Men/Black,64.5,
+hand,cà vạt nam lụa tơ tằm màu xanh navy lịch lãm,Ties,Men,Navy Blue,Ties/Men/Navy Blue;Ties/Men/Navy Blue;Ties/Men/Navy Blue,49.1,
+hand,mũ lưỡi trai thể thao nam màu đen,Caps,Men,Black,Caps/Men/Black;Caps/Men/Black;Caps/Men/Black,41.5,
+hand,khăn quàng cổ len mùa đông ấm áp cho nữ,Mufflers,Women,,Mufflers/Women/Blue;Mufflers/Women/Grey;Mufflers/Women/Purple,34.3,lac_loai(2/10:['Dupatta']);R@10=0.80
+hand,bông tai bạc nữ hình tròn đính đá lấp lánh,Earrings,Women,Silver,Earrings/Women/Silver;Earrings/Women/Silver;Earrings/Women/Silver,34.0,
+hand,dây chuyền bạc nữ mặt trái tim tinh tế,Necklace and Chains,Women,Silver,Necklace and Chains/Women/Silver;Necklace and Chains/Women/Silver;Necklace and Chains/Women/Silver,37.7,lac_mau(7/10);R@10=0.30
+val_a,vi tien cho nam,Wallets,Men,,Wallets/Men/Brown;Wallets/Men/Brown;Wallets/Men/Brown,55.4,
+val_a,giay thuong mau xanh duong cho nam,Casual Shoes,Men,Blue,Casual Shoes/Men/Blue;Casual Shoes/Men/Blue;Casual Shoes/Men/Blue,43.3,
+val_a,bong tai nu mau vang kim,Earrings,Women,Gold,Earrings/Women/Gold;Earrings/Women/Gold;Earrings/Women/Gold,27.1,
+val_a,quần jean nam màu xanh dương,Jeans,Men,Blue,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Men/Blue,34.8,
+val_a,mat day chuyen mau bac cho nu,Pendant,Women,Silver,Pendant/Women/Silver;Pendant/Women/Silver;Pendant/Women/Silver,36.6,
+val_a,quần thể thao dài màu xám cho nam,Track Pants,Men,Grey,Track Pants/Men/Grey;Track Pants/Men/Grey;Track Pants/Men/Grey,35.1,
+val_a,giày thường màu đen cho nam,Casual Shoes,Men,Black,Casual Shoes/Men/Black;Casual Shoes/Men/Black;Casual Shoes/Men/Black,60.2,
+val_a,ao thun mau tim cho nam,Tshirts,Men,Purple,Tshirts/Men/Purple;Tshirts/Men/Purple;Tshirts/Men/Purple,121.7,
+val_a,quan jean nam mau xanh duong,Jeans,Men,Blue,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Men/Blue,34.7,
+val_a,ao kieu nu mau xanh navy,Tops,Women,Navy Blue,Tops/Women/Navy Blue;Tops/Women/Navy Blue;Tops/Women/Navy Blue,51.2,
+val_a,áo thun màu xanh dương cho nữ,Tshirts,Women,Blue,Tshirts/Women/Blue;Tshirts/Women/Blue;Tshirts/Women/Blue,73.6,
+val_a,giay the thao mau trang cho nam,Sports Shoes,Men,White,Sports Shoes/Men/White;Sports Shoes/Men/White;Sports Shoes/Men/White,46.8,
+val_a,quan jean cho nam,Jeans,Men,,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Men/Blue,32.3,
+val_a,giày thường cho nam,Casual Shoes,Men,,Casual Shoes/Men/Brown;Casual Shoes/Men/Khaki;Casual Shoes/Men/Beige,49.8,
+val_a,áo thun nữ màu xanh dương,Tshirts,Women,Blue,Tshirts/Women/Blue;Tshirts/Women/Blue;Tshirts/Women/Blue,105.6,
+val_a,kính râm màu đen cho nam,Sunglasses,Men,Black,Sunglasses/Men/Black;Sunglasses/Men/Black;Sunglasses/Men/Black,35.1,
+val_a,ao kurta mau den cho nu,Kurtas,Women,Black,Kurtas/Women/Black;Kurtas/Women/Black;Kurtas/Women/Black,42.1,
+val_a,bông tai cho nữ,Earrings,Women,,Earrings/Women/Bronze;Earrings/Women/Silver;Earrings/Women/Silver,27.2,
+val_a,giày thường màu trắng cho nam,Casual Shoes,Men,White,Casual Shoes/Men/White;Casual Shoes/Men/White;Casual Shoes/Men/White,46.5,
+val_a,ao so mi nam mau hong,Shirts,Men,Pink,Shirts/Men/Pink;Shirts/Men/Pink;Shirts/Men/Pink,52.6,
+val_a,giay the thao cho nu,Sports Shoes,Women,,Sports Shoes/Women/Grey;Sports Shoes/Women/Pink;Sports Shoes/Women/Pink,52.6,
+val_a,giay thuong nam nu mau trang,Casual Shoes,Unisex,White,Casual Shoes/Unisex/White;Casual Shoes/Unisex/White;Casual Shoes/Unisex/White,43.5,lac_loai(2/10:['Sports Shoes']);R@10=0.40
+val_a,áo thun màu xanh dương cho nam,Tshirts,Men,Blue,Tshirts/Men/Blue;Tshirts/Men/Blue;Tshirts/Men/Blue,63.0,
+val_a,bông tai nữ màu bạc,Earrings,Women,Silver,Earrings/Women/Silver;Earrings/Women/Silver;Earrings/Women/Silver,36.2,
+val_a,tui xach mau den cho nu,Handbags,Women,Black,Handbags/Women/Black;Handbags/Women/Black;Handbags/Women/Black,40.9,
+val_a,giay cao got mau den cho nu,Heels,Women,Black,Heels/Women/Black;Heels/Women/Black;Heels/Women/Black,51.1,
+val_a,ao so mi mau hong cho nam,Shirts,Men,Pink,Shirts/Men/Pink;Shirts/Men/Pink;Shirts/Men/Pink,95.1,
+val_a,giay thuong nam mau xanh navy,Casual Shoes,Men,Navy Blue,Casual Shoes/Men/Navy Blue;Casual Shoes/Men/Navy Blue;Casual Shoes/Men/Navy Blue,48.4,
+val_a,ao so mi mau xanh navy cho nam,Shirts,Men,Navy Blue,Shirts/Men/Navy Blue;Shirts/Men/Navy Blue;Shirts/Men/Navy Blue,44.2,
+val_a,giày thường màu xám cho nam,Casual Shoes,Men,Grey,Casual Shoes/Men/Grey;Casual Shoes/Men/Grey;Casual Shoes/Men/Grey,55.0,
+val_a,áo sơ mi nam màu tím,Shirts,Men,Purple,Shirts/Men/Purple;Shirts/Men/Purple;Shirts/Men/Purple,53.0,
+val_a,giày cao gót nữ màu vàng kim,Heels,Women,Gold,Heels/Women/Gold;Heels/Women/Gold;Heels/Women/Gold,48.1,
+val_a,ao thun nam mau vang,Tshirts,Men,Yellow,Tshirts/Men/Yellow;Tshirts/Men/Yellow;Tshirts/Men/Yellow,62.8,
+val_a,đồng hồ màu bạc cho nam,Watches,Men,Silver,Watches/Men/Silver;Watches/Men/Silver;Watches/Men/Silver,39.6,
+val_a,ao so mi nam mau do,Shirts,Men,Red,Shirts/Men/Red;Shirts/Men/Red;Shirts/Men/Red,41.3,
+val_a,áo kurta màu trắng cho nữ,Kurtas,Women,White,Kurtas/Women/White;Kurtas/Women/White;Kurtas/Women/White,44.1,
+val_a,ao thun nu mau xanh duong,Tshirts,Women,Blue,Tshirts/Women/Blue;Tshirts/Women/Blue;Tshirts/Women/Blue,93.1,
+val_a,bong tai cho nu,Earrings,Women,,Earrings/Women/Bronze;Earrings/Women/Silver;Earrings/Women/Silver,26.9,
+val_a,ao thun mau do cho nam,Tshirts,Men,Red,Tshirts/Men/Red;Tshirts/Men/Red;Tshirts/Men/Red,71.7,
+val_a,ao so mi cho nu,Shirts,Women,,Shirts/Women/Red;Shirts/Women/Yellow;Shirts/Women/Pink,61.4,
+val_a,ao kurta nu mau xanh duong,Kurtas,Women,Blue,Kurtas/Women/Blue;Kurtas/Women/Blue;Kurtas/Women/Blue,50.6,
+val_a,ao thun mau xanh duong cho nu,Tshirts,Women,Blue,Tshirts/Women/Blue;Tshirts/Women/Blue;Tshirts/Women/Blue,74.2,
+val_a,balo màu đen cho nam nữ,Backpacks,Unisex,Black,Backpacks/Unisex/Black;Backpacks/Unisex/Black;Backpacks/Unisex/Black,38.7,
+val_a,bông tai nữ màu vàng kim,Earrings,Women,Gold,Earrings/Women/Gold;Earrings/Women/Gold;Earrings/Women/Gold,41.5,
+val_a,giày thể thao cho nam,Sports Shoes,Men,,Sports Shoes/Men/Beige;Sports Shoes/Men/Yellow;Sports Shoes/Men/Yellow,54.5,
+val_a,ao nguc nu mau trang,Bra,Women,White,Bra/Women/White;Bra/Women/White;Bra/Women/White,32.4,
+val_a,giay thuong mau trang cho nu,Casual Shoes,Women,White,Casual Shoes/Women/White;Casual Shoes/Women/White;Casual Shoes/Women/White,47.4,
+val_a,ao kieu nu mau xanh duong,Tops,Women,Blue,Tops/Women/Blue;Tops/Women/Blue;Tops/Women/Blue,49.2,
+val_a,thắt lưng màu đen cho nam,Belts,Men,Black,Belts/Men/Black;Belts/Men/Black;Belts/Men/Black,36.0,
+val_a,ao thun nam mau do,Tshirts,Men,Red,Tshirts/Men/Red;Tshirts/Men/Red;Tshirts/Men/Red,64.8,
+val_a,ao so mi mau trang cho nam,Shirts,Men,White,Shirts/Men/White;Shirts/Men/White;Shirts/Men/White,55.3,
+val_a,quan the thao dai nam mau xam,Track Pants,Men,Grey,Track Pants/Men/Grey;Track Pants/Men/Grey;Track Pants/Men/Grey,36.2,
+val_a,ao thun nam mau xanh la,Tshirts,Men,Green,Tshirts/Men/Green;Tshirts/Men/Green;Tshirts/Men/Green,72.2,
+val_a,giày thể thao màu đen cho nam,Sports Shoes,Men,Black,Sports Shoes/Men/Black;Sports Shoes/Men/Black;Sports Shoes/Men/Black,47.7,
+val_a,ao thun nu mau trang,Tshirts,Women,White,Tshirts/Women/White;Tshirts/Women/White;Tshirts/Women/White,70.5,
+val_a,áo khoác nam màu đen,Jackets,Men,Black,Jackets/Men/Black;Jackets/Men/Black;Jackets/Men/Black,35.0,
+val_a,dep xo ngon nam mau den,Flip Flops,Men,Black,Flip Flops/Men/Black;Flip Flops/Men/Black;Flip Flops/Men/Black,41.2,
+val_a,túi xách nữ màu xanh lá,Handbags,Women,Green,Handbags/Women/Green;Handbags/Women/Green;Handbags/Women/Green,44.8,
+val_a,áo thun màu hồng cho nữ,Tshirts,Women,Pink,Tshirts/Women/Pink;Tshirts/Women/Pink;Tshirts/Women/Pink,89.6,
+val_a,kính râm màu nâu cho nữ,Sunglasses,Women,Brown,Sunglasses/Women/Brown;Sunglasses/Women/Brown;Sunglasses/Women/Brown,47.8,
+val_a,tui xach nu mau xanh duong,Handbags,Women,Blue,Handbags/Women/Blue;Handbags/Women/Blue;Handbags/Women/Blue,40.5,
+val_a,áo thun nam màu xám,Tshirts,Men,Grey,Tshirts/Men/Grey;Tshirts/Men/Grey;Tshirts/Men/Grey,65.5,
+val_a,túi xách nữ màu tím,Handbags,Women,Purple,Handbags/Women/Purple;Handbags/Women/Purple;Handbags/Women/Purple,47.1,
+val_a,giày thường cho nam nữ,Casual Shoes,Unisex,,Casual Shoes/Unisex/Yellow;Casual Shoes/Unisex/Brown;Casual Shoes/Unisex/White,48.8,
+val_a,giay tay cong so nam mau den,Formal Shoes,Men,Black,Formal Shoes/Men/Black;Formal Shoes/Men/Black;Formal Shoes/Men/Black,37.0,
+val_a,áo kurta nữ màu nâu,Kurtas,Women,Brown,Kurtas/Women/Brown;Kurtas/Women/Brown;Kurtas/Women/Brown,49.5,
+val_a,ao thun cho be trai,Tshirts,Boys,,Tshirts/Boys/Yellow;Tshirts/Boys/Yellow;Tshirts/Boys/Yellow,79.9,
+val_a,ao so mi mau xam cho nam,Shirts,Men,Grey,Shirts/Men/Grey;Shirts/Men/Grey;Shirts/Men/Grey,48.3,
+val_a,áo thun nam màu xanh navy,Tshirts,Men,Navy Blue,Tshirts/Men/Navy Blue;Tshirts/Men/Navy Blue;Tshirts/Men/Navy Blue,82.6,
+val_a,giay xang dan nam mau nau,Sandals,Men,Brown,Sandals/Men/Brown;Sandals/Men/Brown;Sandals/Men/Brown,43.4,
+val_a,áo kiểu nữ màu đen,Tops,Women,Black,Tops/Women/Black;Tops/Women/Black;Tops/Women/Black,38.1,
+val_a,tui xach mau nau cho nu,Handbags,Women,Brown,Handbags/Women/Brown;Handbags/Women/Brown;Handbags/Women/Brown,39.9,
+val_a,giày thường nam màu xanh dương,Casual Shoes,Men,Blue,Casual Shoes/Men/Blue;Casual Shoes/Men/Blue;Casual Shoes/Men/Blue,61.9,
+val_a,tất nam màu trắng,Socks,Men,White,Socks/Men/White;Socks/Men/White;Socks/Men/White,35.1,
+val_a,giày thể thao màu trắng cho nữ,Sports Shoes,Women,White,Sports Shoes/Women/White;Sports Shoes/Women/White;Sports Shoes/Women/White,51.6,
+val_a,ao kurta mau trang cho nu,Kurtas,Women,White,Kurtas/Women/White;Kurtas/Women/White;Kurtas/Women/White,52.6,
+val_a,áo sơ mi màu trắng cho nam,Shirts,Men,White,Shirts/Men/White;Shirts/Men/White;Shirts/Men/White,60.8,
+val_a,áo sơ mi nam màu đỏ,Shirts,Men,Red,Shirts/Men/Red;Shirts/Men/Red;Shirts/Men/Red,46.7,
+val_a,đồng hồ màu trắng cho nữ,Watches,Women,White,Watches/Women/White;Watches/Women/White;Watches/Women/White,62.9,
+val_a,áo sơ mi nam màu hồng,Shirts,Men,Pink,Shirts/Men/Pink;Shirts/Men/Pink;Shirts/Men/Pink,55.0,
+val_a,kinh ram nam mau den,Sunglasses,Men,Black,Sunglasses/Men/Black;Sunglasses/Men/Black;Sunglasses/Men/Black,76.6,
+val_a,áo thun nữ màu trắng,Tshirts,Women,White,Tshirts/Women/White;Tshirts/Women/White;Tshirts/Women/White,121.8,
+val_a,áo thun màu trắng cho nam,Tshirts,Men,White,Tshirts/Men/White;Tshirts/Men/White;Tshirts/Men/White,75.8,
+val_a,áo thun nam màu vàng,Tshirts,Men,Yellow,Tshirts/Men/Yellow;Tshirts/Men/Yellow;Tshirts/Men/Yellow,93.8,
+val_a,giày xăng đan màu nâu cho nam,Sandals,Men,Brown,Sandals/Men/Brown;Sandals/Men/Brown;Sandals/Men/Brown,33.9,
+val_a,đồng hồ màu trắng cho nam,Watches,Men,White,Watches/Men/White;Watches/Men/White;Watches/Men/White,51.2,
+val_a,áo sơ mi nam màu xanh lá,Shirts,Men,Green,Shirts/Men/Green;Shirts/Men/Green;Shirts/Men/Green,51.1,
+val_a,áo kiểu nữ màu hồng,Tops,Women,Pink,Tops/Women/Pink;Tops/Women/Pink;Tops/Women/Pink,41.6,
+val_a,ao thun mau vang cho nam,Tshirts,Men,Yellow,Tshirts/Men/Yellow;Tshirts/Men/Yellow;Tshirts/Men/Yellow,63.7,
+val_a,tui xach nu mau den,Handbags,Women,Black,Handbags/Women/Black;Handbags/Women/Black;Handbags/Women/Black,40.7,
+val_a,ví tiền cho nữ,Wallets,Women,,Wallets/Women/Yellow;Wallets/Women/Yellow;Wallets/Women/Rust,36.0,
+val_a,vi tien nam mau nau,Wallets,Men,Brown,Wallets/Men/Brown;Wallets/Men/Brown;Wallets/Men/Brown,36.3,
+val_a,balo màu đỏ cho nam nữ,Backpacks,Unisex,Red,Backpacks/Unisex/Red;Backpacks/Unisex/Red;Backpacks/Unisex/Red,35.7,
+val_a,balo mau den cho nam nu,Backpacks,Unisex,Black,Backpacks/Unisex/Black;Backpacks/Unisex/Black;Backpacks/Unisex/Black,42.6,
+val_a,giày búp bê màu đen cho nữ,Flats,Women,Black,Flats/Women/Black;Flats/Women/Black;Flats/Women/Black,40.1,
+val_a,dong ho mau den cho nam,Watches,Men,Black,Watches/Men/Black;Watches/Men/Black;Watches/Men/Black,51.4,
+val_a,túi xách nữ màu nâu,Handbags,Women,Brown,Handbags/Women/Brown;Handbags/Women/Brown;Handbags/Women/Brown,60.0,
+val_a,ao so mi mau tim cho nam,Shirts,Men,Purple,Shirts/Men/Purple;Shirts/Men/Purple;Shirts/Men/Purple,67.2,
+val_a,mat day chuyen nu mau bac,Pendant,Women,Silver,Pendant/Women/Silver;Pendant/Women/Silver;Pendant/Women/Silver,32.4,
+val_a,ao so mi mau do cho nam,Shirts,Men,Red,Shirts/Men/Red;Shirts/Men/Red;Shirts/Men/Red,57.2,
+val_a,quần thể thao dài nam màu đen,Track Pants,Men,Black,Track Pants/Men/Black;Track Pants/Men/Black;Track Pants/Men/Black,31.2,
+val_a,mặt dây chuyền màu bạc cho nữ,Pendant,Women,Silver,Pendant/Women/Silver;Pendant/Women/Silver;Pendant/Women/Silver,32.6,
+val_a,giày tây công sở nam màu đen,Formal Shoes,Men,Black,Formal Shoes/Men/Black;Formal Shoes/Men/Black;Formal Shoes/Men/Black,37.8,
+val_a,dong ho mau bac cho nu,Watches,Women,Silver,Watches/Women/Silver;Watches/Women/Silver;Watches/Women/Silver,52.3,
+val_a,thắt lưng nam màu nâu,Belts,Men,Brown,Belts/Men/Brown;Belts/Men/Brown;Belts/Men/Brown,39.5,
+val_a,giày thể thao màu trắng cho nam,Sports Shoes,Men,White,Sports Shoes/Men/White;Sports Shoes/Men/White;Sports Shoes/Men/White,42.3,
+val_a,dong ho nam mau trang,Watches,Men,White,Watches/Men/White;Watches/Men/White;Watches/Men/White,42.6,
+val_a,giay the thao nu mau trang,Sports Shoes,Women,White,Sports Shoes/Women/White;Sports Shoes/Women/White;Sports Shoes/Women/White,44.6,
+val_a,ao nguc nu mau den,Bra,Women,Black,Bra/Women/Black;Bra/Women/Black;Bra/Women/Black,38.9,
+val_a,áo thun nữ màu hồng,Tshirts,Women,Pink,Tshirts/Women/Pink;Tshirts/Women/Pink;Tshirts/Women/Pink,64.0,
+val_a,giay thuong nam mau nau,Casual Shoes,Men,Brown,Casual Shoes/Men/Brown;Casual Shoes/Men/Brown;Casual Shoes/Men/Brown,40.6,
+val_a,đồng hồ nam màu trắng,Watches,Men,White,Watches/Men/White;Watches/Men/White;Watches/Men/White,44.2,
+val_a,túi xách màu xanh dương cho nữ,Handbags,Women,Blue,Handbags/Women/Blue;Handbags/Women/Blue;Handbags/Women/Blue,38.9,
+val_a,dong ho cho nam,Watches,Men,,Watches/Men/Cream;Watches/Men/Cream;Watches/Men/Brown,48.0,
+val_a,áo thun màu xám cho nam,Tshirts,Men,Grey,Tshirts/Men/Grey;Tshirts/Men/Grey;Tshirts/Men/Grey,66.7,
+val_a,giay thuong nam mau trang,Casual Shoes,Men,White,Casual Shoes/Men/White;Casual Shoes/Men/White;Casual Shoes/Men/White,42.8,
+val_a,quần lót nam cho nam,Briefs,Men,,Briefs/Men/Khaki;Briefs/Men/Brown;Briefs/Men/Khaki,34.7,
+val_a,giày thường màu xanh dương cho nam,Casual Shoes,Men,Blue,Casual Shoes/Men/Blue;Casual Shoes/Men/Blue;Casual Shoes/Men/Blue,42.3,
+val_a,ao kieu cho nu,Tops,Women,,Tops/Women/Yellow;Tops/Women/Yellow;Tops/Women/Orange,45.0,
+val_a,ao thun nam mau xanh navy,Tshirts,Men,Navy Blue,Tshirts/Men/Navy Blue;Tshirts/Men/Navy Blue;Tshirts/Men/Navy Blue,122.7,
+val_a,quần jean màu xanh dương cho nam,Jeans,Men,Blue,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Men/Blue,43.6,
+val_a,túi xách màu nâu cho nữ,Handbags,Women,Brown,Handbags/Women/Brown;Handbags/Women/Brown;Handbags/Women/Brown,40.8,
+val_a,ao thun mau xam cho nam,Tshirts,Men,Grey,Tshirts/Men/Grey;Tshirts/Men/Grey;Tshirts/Men/Grey,66.2,
+val_a,giay cao got mau vang kim cho nu,Heels,Women,Gold,Heels/Women/Gold;Heels/Women/Gold;Heels/Women/Gold,37.7,
+val_a,ao so mi nam mau trang,Shirts,Men,White,Shirts/Men/White;Shirts/Men/White;Shirts/Men/White,75.3,
+val_a,ao so mi nam mau den,Shirts,Men,Black,Shirts/Men/Black;Shirts/Men/Black;Shirts/Men/Black,48.0,
+val_a,ao kieu mau trang cho nu,Tops,Women,White,Tops/Women/White;Tops/Women/White;Tops/Women/White,42.5,
+val_a,ao kieu nu mau trang,Tops,Women,White,Tops/Women/White;Tops/Women/White;Tops/Women/White,39.8,
+val_a,balo nam nữ màu đen,Backpacks,Unisex,Black,Backpacks/Unisex/Black;Backpacks/Unisex/Black;Backpacks/Unisex/Black,32.5,
+val_a,giày thường màu trắng cho nữ,Casual Shoes,Women,White,Casual Shoes/Women/White;Casual Shoes/Women/White;Casual Shoes/Women/White,53.6,
+val_a,giày thể thao cho nữ,Sports Shoes,Women,,Sports Shoes/Women/Grey;Sports Shoes/Women/Pink;Sports Shoes/Women/Pink,45.0,
+val_a,giay xang dan cho nam,Sandals,Men,,Sandals/Men/Black;Sandals/Men/Black;Sandals/Men/Black,69.5,
+val_a,ao so mi mau xanh la cho nam,Shirts,Men,Green,Shirts/Men/Green;Shirts/Men/Green;Shirts/Men/Green,49.0,
+val_a,ao nguc mau den cho nu,Bra,Women,Black,Bra/Women/Black;Bra/Women/Black;Bra/Women/Black,33.2,
+val_a,ao so mi nam mau xanh la,Shirts,Men,Green,Shirts/Men/Green;Shirts/Men/Green;Shirts/Men/Green,67.2,
+val_a,ao thun cho nam,Tshirts,Men,,Tshirts/Men/Beige;Tshirts/Men/Black;Tshirts/Men/Yellow,73.8,
+val_a,áo thun nữ màu xanh lá,Tshirts,Women,Green,Tshirts/Women/Green;Tshirts/Women/Green;Tshirts/Women/Green,83.1,
+val_a,bông tai màu vàng kim cho nữ,Earrings,Women,Gold,Earrings/Women/Gold;Earrings/Women/Gold;Earrings/Women/Gold,32.5,
+val_a,ví tiền nữ màu nâu,Wallets,Women,Brown,Wallets/Women/Brown;Wallets/Women/Brown;Wallets/Women/Brown,34.3,
+val_a,ao kieu mau hong cho nu,Tops,Women,Pink,Tops/Women/Pink;Tops/Women/Pink;Tops/Women/Pink,52.0,
+val_a,đồng hồ màu đen cho nữ,Watches,Women,Black,Watches/Women/Black;Watches/Women/Black;Watches/Women/Black,64.7,
+val_a,giày tây công sở nam màu nâu,Formal Shoes,Men,Brown,Formal Shoes/Men/Brown;Formal Shoes/Men/Brown;Formal Shoes/Men/Brown,40.9,
+val_a,sari an do mau xanh la cho nu,Sarees,Women,Green,Sarees/Women/Green;Sarees/Women/Green;Sarees/Women/Green,37.6,R@10=0.70
+val_a,đồng hồ nữ màu thép kim loại,Watches,Women,Steel,Watches/Women/Steel;Watches/Women/Steel;Watches/Women/Steel,42.1,
+val_a,tui xach cho nu,Handbags,Women,,Handbags/Women/Beige;Handbags/Women/Brown;Handbags/Women/Brown,41.6,
+val_a,quan the thao dai cho nam,Track Pants,Men,,Track Pants/Men/Black;Track Pants/Men/Brown;Track Pants/Men/Black,40.2,
+val_a,đồng hồ nữ màu đen,Watches,Women,Black,Watches/Women/Black;Watches/Women/Black;Watches/Women/Black,53.0,
+val_a,vi cam tay cho nu,Clutches,Women,,Clutches/Women/Gold;Clutches/Women/Beige;Clutches/Women/Gold,30.3,
+val_a,dong ho nam mau bac,Watches,Men,Silver,Watches/Men/Silver;Watches/Men/Silver;Watches/Men/Silver,53.5,
+val_a,ao kurta nu mau tim,Kurtas,Women,Purple,Kurtas/Women/Purple;Kurtas/Women/Purple;Kurtas/Women/Purple,48.8,
+val_a,giay xang dan nam mau den,Sandals,Men,Black,Sandals/Men/Black;Sandals/Men/Black;Sandals/Men/Black,34.1,
+val_a,ao so mi mau xanh duong cho nam,Shirts,Men,Blue,Shirts/Men/Blue;Shirts/Men/Blue;Shirts/Men/Blue,55.0,
+val_a,giày cao gót màu vàng kim cho nữ,Heels,Women,Gold,Heels/Women/Gold;Heels/Women/Gold;Heels/Women/Gold,47.5,
+val_a,ví tiền màu đen cho nam,Wallets,Men,Black,Wallets/Men/Black;Wallets/Men/Black;Wallets/Men/Black,41.0,
+val_a,tất nam màu đen,Socks,Men,Black,Socks/Men/Black;Socks/Men/Black;Socks/Men/Black,40.5,
+val_a,giay thuong nam mau xanh duong,Casual Shoes,Men,Blue,Casual Shoes/Men/Blue;Casual Shoes/Men/Blue;Casual Shoes/Men/Blue,40.6,
+val_a,ao so mi nam mau xanh navy,Shirts,Men,Navy Blue,Shirts/Men/Navy Blue;Shirts/Men/Navy Blue;Shirts/Men/Navy Blue,43.4,
+val_a,áo kiểu cho nữ,Tops,Women,,Tops/Women/Yellow;Tops/Women/Yellow;Tops/Women/Orange,37.5,
+val_a,ao khoac cho nam,Jackets,Men,,Jackets/Men/Olive;Jackets/Men/Brown;Jackets/Men/Grey,30.1,
+val_a,tui xach mau xanh la cho nu,Handbags,Women,Green,Handbags/Women/Green;Handbags/Women/Green;Handbags/Women/Green,43.5,
+val_a,ao so mi mau den cho nam,Shirts,Men,Black,Shirts/Men/Black;Shirts/Men/Black;Shirts/Men/Black,48.9,
+val_a,áo ngực cho nữ,Bra,Women,,Bra/Women/Cream;Bra/Women/Skin;Bra/Women/Nude,42.5,
+val_a,sari Ấn Độ cho nữ,Sarees,Women,,Sarees/Women/Magenta;Sarees/Women/Beige;Sarees/Women/Red,36.3,
+val_a,ao thun mau trang cho nam,Tshirts,Men,White,Tshirts/Men/White;Tshirts/Men/White;Tshirts/Men/White,75.7,
+val_a,balo mau do cho nam nu,Backpacks,Unisex,Red,Backpacks/Unisex/Red;Backpacks/Unisex/Red;Backpacks/Unisex/Red,40.9,
+val_a,bong tai mau bac cho nu,Earrings,Women,Silver,Earrings/Women/Silver;Earrings/Women/Silver;Earrings/Women/Silver,30.5,
+val_a,giày thường nam màu xanh navy,Casual Shoes,Men,Navy Blue,Casual Shoes/Men/Navy Blue;Casual Shoes/Men/Navy Blue;Casual Shoes/Men/Navy Blue,44.0,
+val_a,ao thun nam mau trang,Tshirts,Men,White,Tshirts/Men/White;Tshirts/Men/White;Tshirts/Men/White,62.6,
+val_a,áo ngực màu đen cho nữ,Bra,Women,Black,Bra/Women/Black;Bra/Women/Black;Bra/Women/Black,38.0,
+val_a,quan the thao dai mau den cho nam,Track Pants,Men,Black,Track Pants/Men/Black;Track Pants/Men/Black;Track Pants/Men/Black,31.3,
+val_a,quan short cho nam,Shorts,Men,,Shorts/Men/Grey;Shorts/Men/Navy Blue;Shorts/Men/Grey,34.2,
+val_a,áo kurta cho nữ,Kurtas,Women,,Kurtas/Women/Black;Kurtas/Women/White;Kurtas/Women/Grey,41.7,
+val_a,that lung nam mau den,Belts,Men,Black,Belts/Men/Black;Belts/Men/Black;Belts/Men/Black,41.0,
+val_a,dong ho mau thep kim loai cho nu,Watches,Women,Steel,Watches/Women/Steel;Watches/Women/Steel;Watches/Women/Steel,51.3,
+val_a,áo thun màu trắng cho nữ,Tshirts,Women,White,Tshirts/Women/White;Tshirts/Women/White;Tshirts/Women/White,82.8,
+val_a,vi tien cho nu,Wallets,Women,,Wallets/Women/Yellow;Wallets/Women/Yellow;Wallets/Women/Rust,43.4,
+val_a,dong ho nu mau bac,Watches,Women,Silver,Watches/Women/Silver;Watches/Women/Silver;Watches/Women/Silver,41.5,
+val_a,áo sơ mi màu đen cho nam,Shirts,Men,Black,Shirts/Men/Black;Shirts/Men/Black;Shirts/Men/Black,47.9,
+val_a,ao so mi nam mau nau,Shirts,Men,Brown,Shirts/Men/Brown;Shirts/Men/Brown;Shirts/Men/Brown,43.8,
+val_a,đồng hồ nữ màu trắng,Watches,Women,White,Watches/Women/White;Watches/Women/White;Watches/Women/White,57.2,
+val_a,thắt lưng nam màu đen,Belts,Men,Black,Belts/Men/Black;Belts/Men/Black;Belts/Men/Black,46.5,
+val_a,that lung cho nam,Belts,Men,,Belts/Men/Beige;Belts/Men/Beige;Belts/Men/Olive,31.0,
+val_a,áo kurta màu xanh lá cho nữ,Kurtas,Women,Green,Kurtas/Women/Green;Kurtas/Women/Green;Kurtas/Women/Green,48.3,
+val_a,áo kurta màu tím cho nữ,Kurtas,Women,Purple,Kurtas/Women/Purple;Kurtas/Women/Purple;Kurtas/Women/Purple,44.6,R@10=0.50
+val_a,that lung mau nau cho nam,Belts,Men,Brown,Belts/Men/Brown;Belts/Men/Brown;Belts/Men/Brown,35.8,
+val_a,thắt lưng màu nâu cho nam,Belts,Men,Brown,Belts/Men/Brown;Belts/Men/Brown;Belts/Men/Brown,37.9,
+val_a,ca vat cho nam,Ties,Men,,Ties/Men/Purple;Ties/Men/Purple;Ties/Men/Green,35.1,
+val_a,túi xách màu xanh lá cho nữ,Handbags,Women,Green,Handbags/Women/Green;Handbags/Women/Green;Handbags/Women/Green,38.0,
+val_a,dép xỏ ngón cho nam,Flip Flops,Men,,Flip Flops/Men/Grey;Flip Flops/Men/Brown;Flip Flops/Men/Yellow,31.6,
+val_a,đồng hồ màu thép kim loại cho nữ,Watches,Women,Steel,Watches/Women/Steel;Watches/Women/Steel;Watches/Women/Steel,40.6,
+val_a,ao thun mau hong cho nu,Tshirts,Women,Pink,Tshirts/Women/Pink;Tshirts/Women/Pink;Tshirts/Women/Pink,91.2,
+val_a,ao thun nu mau xanh la,Tshirts,Women,Green,Tshirts/Women/Green;Tshirts/Women/Green;Tshirts/Women/Green,81.3,
+val_a,giày thường nữ màu trắng,Casual Shoes,Women,White,Casual Shoes/Women/White;Casual Shoes/Women/White;Casual Shoes/Women/White,50.6,
+val_a,áo kurta nữ màu xanh lá,Kurtas,Women,Green,Kurtas/Women/Green;Kurtas/Women/Green;Kurtas/Women/Green,44.4,
+val_a,giay xang dan mau nau cho nam,Sandals,Men,Brown,Sandals/Men/Brown;Sandals/Men/Brown;Sandals/Men/Brown,43.3,
+val_a,giay thuong mau xanh navy cho nam,Casual Shoes,Men,Navy Blue,Casual Shoes/Men/Navy Blue;Casual Shoes/Men/Navy Blue;Casual Shoes/Men/Navy Blue,43.7,
+val_a,áo kurta nữ màu xanh dương,Kurtas,Women,Blue,Kurtas/Women/Blue;Kurtas/Women/Blue;Kurtas/Women/Blue,62.1,
+val_a,giày thể thao nam màu trắng,Sports Shoes,Men,White,Sports Shoes/Men/White;Sports Shoes/Men/White;Sports Shoes/Men/White,89.5,
+val_a,ao thun nu mau hong,Tshirts,Women,Pink,Tshirts/Women/Pink;Tshirts/Women/Pink;Tshirts/Women/Pink,107.3,
+val_a,giay bup be mau den cho nu,Flats,Women,Black,Flats/Women/Black;Flats/Women/Black;Flats/Women/Black,37.2,
+val_a,đầm váy cho nữ,Dresses,Women,,Dresses/Women/Cream;Dresses/Women/Black;Dresses/Women/Gold,32.9,
+val_a,giay thuong mau trang cho nam nu,Casual Shoes,Unisex,White,Casual Shoes/Unisex/White;Casual Shoes/Unisex/White;Casual Shoes/Unisex/White,62.3,lac_loai(2/10:['Sports Shoes']);R@10=0.40
+val_a,ao thun mau do cho be trai,Tshirts,Boys,Red,Tshirts/Boys/Red;Tshirts/Boys/Red;Tshirts/Boys/Red,82.3,
+val_a,áo sơ mi màu xanh dương cho nam,Shirts,Men,Blue,Shirts/Men/Blue;Shirts/Men/Blue;Shirts/Men/Blue,55.9,
+val_a,áo sơ mi cho nữ,Shirts,Women,,Shirts/Women/Red;Shirts/Women/Yellow;Shirts/Women/Pink,50.0,
+val_a,áo sơ mi nam màu nâu,Shirts,Men,Brown,Shirts/Men/Brown;Shirts/Men/Brown;Shirts/Men/Brown,58.3,
+val_a,balo nam nu mau do,Backpacks,Unisex,Red,Backpacks/Unisex/Red;Backpacks/Unisex/Red;Backpacks/Unisex/Red,33.7,
+val_a,kính râm nữ màu nâu,Sunglasses,Women,Brown,Sunglasses/Women/Brown;Sunglasses/Women/Brown;Sunglasses/Women/Brown,35.6,
+val_a,ao kurta nu mau den,Kurtas,Women,Black,Kurtas/Women/Black;Kurtas/Women/Black;Kurtas/Women/Black,48.4,
+val_a,sari an do cho nu,Sarees,Women,,Sarees/Women/Pink;Sarees/Women/Magenta;Sarees/Women/Maroon,30.9,
+val_a,ao thun be trai mau do,Tshirts,Boys,Red,Tshirts/Boys/Red;Tshirts/Boys/Red;Tshirts/Boys/Red,80.4,
+val_a,áo kurta màu xanh dương cho nữ,Kurtas,Women,Blue,Kurtas/Women/Blue;Kurtas/Women/Blue;Kurtas/Women/Blue,44.0,
+val_a,túi xách màu tím cho nữ,Handbags,Women,Purple,Handbags/Women/Purple;Handbags/Women/Purple;Handbags/Women/Purple,40.7,
+val_a,áo kiểu nữ màu xanh navy,Tops,Women,Navy Blue,Tops/Women/Navy Blue;Tops/Women/Navy Blue;Tops/Women/Navy Blue,42.3,
+val_a,balo cho nam nữ,Backpacks,Unisex,,Backpacks/Unisex/Yellow;Backpacks/Unisex/Grey;Backpacks/Unisex/Grey,66.7,
+val_a,đồng hồ màu đen cho nam,Watches,Men,Black,Watches/Men/Black;Watches/Men/Black;Watches/Men/Black,46.8,
+val_a,giay xang dan mau den cho nam,Sandals,Men,Black,Sandals/Men/Black;Sandals/Men/Black;Sandals/Men/Black,34.1,
+val_a,áo kiểu nữ màu xanh dương,Tops,Women,Blue,Tops/Women/Blue;Tops/Women/Blue;Tops/Women/Blue,38.0,
+val_a,giay thuong cho nu,Casual Shoes,Women,,Casual Shoes/Women/Beige;Casual Shoes/Women/Beige;Casual Shoes/Women/Yellow,42.4,
+val_a,quan jean mau xanh duong cho nam,Jeans,Men,Blue,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Men/Blue,31.4,
+val_a,ao khoac nam mau den,Jackets,Men,Black,Jackets/Men/Black;Jackets/Men/Black;Jackets/Men/Black,32.4,
+val_a,dong ho mau bac cho nam,Watches,Men,Silver,Watches/Men/Silver;Watches/Men/Silver;Watches/Men/Silver,52.7,
+val_a,bông tai màu bạc cho nữ,Earrings,Women,Silver,Earrings/Women/Silver;Earrings/Women/Silver;Earrings/Women/Silver,39.6,
+val_a,quần thể thao dài cho nam,Track Pants,Men,,Track Pants/Men/Brown;Track Pants/Men/Black;Track Pants/Men/Black,36.4,
+val_a,giày tây công sở màu nâu cho nam,Formal Shoes,Men,Brown,Formal Shoes/Men/Brown;Formal Shoes/Men/Brown;Formal Shoes/Men/Brown,46.3,
+val_a,ao so mi cho nam,Shirts,Men,,Shirts/Men/Blue;Shirts/Men/Orange;Shirts/Men/Yellow,50.6,
+val_a,thắt lưng cho nam,Belts,Men,,Belts/Men/Beige;Belts/Men/Beige;Belts/Men/Olive,43.2,
+val_a,ví tiền màu nâu cho nữ,Wallets,Women,Brown,Wallets/Women/Brown;Wallets/Women/Brown;Wallets/Women/Brown,41.4,
+val_a,đồng hồ cho nữ,Watches,Women,,Watches/Women/Silver;Watches/Women/Pink;Watches/Women/Red,61.5,
+val_a,sari an do nu mau xanh la,Sarees,Women,Green,Sarees/Women/Green;Sarees/Women/Green;Sarees/Women/Green,31.3,R@10=0.60
+val_a,đồng hồ nữ màu bạc,Watches,Women,Silver,Watches/Women/Silver;Watches/Women/Silver;Watches/Women/Silver,48.8,
+val_a,giày thường màu trắng cho nam nữ,Casual Shoes,Unisex,White,Casual Shoes/Unisex/White;Casual Shoes/Unisex/White;Casual Shoes/Unisex/White,51.4,lac_loai(2/10:['Sports Shoes']);R@10=0.40
+val_a,giay thuong mau trang cho nam,Casual Shoes,Men,White,Casual Shoes/Men/White;Casual Shoes/Men/White;Casual Shoes/Men/White,43.6,
+val_a,ao thun mau xanh la cho nu,Tshirts,Women,Green,Tshirts/Women/Green;Tshirts/Women/Green;Tshirts/Women/Green,70.9,
+val_a,giay thuong nu mau trang,Casual Shoes,Women,White,Casual Shoes/Women/White;Casual Shoes/Women/White;Casual Shoes/Women/White,44.1,
+val_a,dong ho mau trang cho nam,Watches,Men,White,Watches/Men/White;Watches/Men/White;Watches/Men/White,41.8,
+val_a,áo thun màu đỏ cho nam,Tshirts,Men,Red,Tshirts/Men/Red;Tshirts/Men/Red;Tshirts/Men/Red,80.6,
+val_a,that lung cho nu,Belts,Women,,Belts/Women/Cream;Belts/Women/Orange;Belts/Women/Gold,61.7,
+val_a,ao kieu nu mau hong,Tops,Women,Pink,Tops/Women/Pink;Tops/Women/Pink;Tops/Women/Pink,57.8,
+val_a,đồng hồ nam màu bạc,Watches,Men,Silver,Watches/Men/Silver;Watches/Men/Silver;Watches/Men/Silver,54.6,
+val_b,tìm mua bóp tiền nam giới màu đen giá tốt,Wallets,Men,Black,Wallets/Men/Black;Wallets/Men/Black;Wallets/Men/Black,31.5,
+val_b,tư vấn giúp hoa tai của nữ ánh bạc đẹp xịn,Earrings,Women,Silver,Earrings/Women/Silver;Earrings/Women/Silver;Earrings/Women/Silver,27.9,
+val_b,shop ơi có bóp da đen đẹp xịn,Wallets,,Black,Wallets/Women/Black;Wallets/Women/Black;Wallets/Women/Black,34.2,R@10=0.70
+val_b,can tim tui cong so cua nu gia tot,Handbags,Women,,Handbags/Women/Yellow;Handbags/Women/Yellow;Handbags/Women/Brown,41.2,
+val_b,sơ mi công sở cho nam đỏ tươi đi chơi,Shirts,Men,Red,Shirts/Men/Red;Shirts/Men/Red;Shirts/Men/Red,41.8,
+val_b,tim mua ao phong xanh than,Tshirts,,Navy Blue,Tshirts/Boys/Navy Blue;Tshirts/Boys/Navy Blue;Tshirts/Men/Navy Blue,57.1,R@10=0.70
+val_b,bop tien nau dat di choi,Wallets,,Brown,Wallets/Women/Brown;Wallets/Women/Brown;Wallets/Women/Red,32.2,lac_mau(8/10);R@10=0.20
+val_b,cho mình hỏi ba lô laptop unisex mẫu mới nhất,Backpacks,Unisex,,Backpacks/Unisex/Black;Backpacks/Unisex/Black;Backpacks/Unisex/Navy Blue,33.0,
+val_b,giày mọi chị em đen tuyền giá tốt,Casual Shoes,Women,Black,Casual Shoes/Women/Black;Casual Shoes/Women/Black;Casual Shoes/Women/Black,42.1,
+val_b,so mi cong so mau do dep xin,Shirts,,Red,Shirts/Boys/Red;Shirts/Women/Red;Shirts/Men/Red,56.1,
+val_b,giay da cong so nam den,Formal Shoes,Men,Black,Formal Shoes/Men/Black;Formal Shoes/Men/Black;Formal Shoes/Men/Black,32.2,
+val_b,tu van giup ao dieu den tuyen,Tops,,Black,Tops/Women/Black;Tops/Women/Black;Tops/Women/Black,37.8,
+val_b,can tim ao thun lanh nam mau xanh la mau moi nhat,Tshirts,Men,Green,Tshirts/Men/Green;Tshirts/Men/Green;Tshirts/Men/Green,78.5,
+val_b,can tim ao kieu mau xanh duong,Tops,,Blue,Tops/Women/Blue;Tops/Women/Blue;Tops/Women/Blue,36.3,
+val_b,tu van giup mat kinh di nang cho nu mau nau di choi,Sunglasses,Women,Brown,Sunglasses/Women/Brown;Sunglasses/Women/Brown;Sunglasses/Women/Brown,30.6,lac_mau(6/10);R@10=0.40
+val_b,vớ cổ ngắn đen tuyền đẹp xịn,Socks,,Black,Socks/Men/Black;Socks/Men/Black;Socks/Men/Black,36.7,
+val_b,cần tìm giày tập gym nữ màu trắng đi làm,Sports Shoes,Women,White,Sports Shoes/Women/White;Sports Shoes/Women/White;Sports Shoes/Women/White,37.4,
+val_b,tim mua giay sneaker thuong cua nam xanh bien gia tot,Casual Shoes,Men,Blue,Casual Shoes/Men/Blue;Casual Shoes/Men/Blue;Casual Shoes/Men/Blue,52.6,lac_mau(6/10);R@10=0.40
+val_b,áo phông cổ tròn nam giới,Tshirts,Men,,Tshirts/Men/White;Tshirts/Men/Beige;Tshirts/Men/Green,76.3,
+val_b,cho minh hoi dong ho đeo tay màu trắng giá tốt,Watches,,White,Watches/Unisex/White;Watches/Unisex/White;Watches/Women/White,37.6,lac_mau(6/10);R@10=0.40
+val_b,túi công sở màu đen,Handbags,,Black,Handbags/Women/Black;Handbags/Women/Black;Handbags/Women/Black,41.1,
+val_b,guoc cao got nâu bò đi chơi,Heels,,Brown,Heels/Women/Brown;Heels/Women/Brown;Heels/Women/Brown,31.5,lac_mau(7/10);R@10=0.30
+val_b,sơ mi công sở cho nam nâu bò đẹp xịn,Shirts,Men,Brown,Shirts/Men/Olive;Shirts/Men/Black;Shirts/Men/Green,42.1,lac_mau(10/10);R@10=0.00
+val_b,ba lo di hoc den tuyen mac hang ngay,Backpacks,,Black,Backpacks/Unisex/Black;Backpacks/Men/Black;Backpacks/Unisex/Black,34.0,
+val_b,tim mua ao coc tay nữ giới đi làm,Tshirts,Women,,Tshirts/Women/Blue;Tshirts/Women/Cream;Tshirts/Women/Black,93.3,
+val_b,can tim quan sip mau den,Briefs,,Black,Briefs/Men/Black;Briefs/Men/Black;Briefs/Men/Black,37.7,
+val_b,shop ơi có sơ mi công sở của nam màu trắng,Shirts,Men,White,Shirts/Men/White;Shirts/Men/White;Shirts/Men/White,50.0,
+val_b,cần tìm dây lưng da của nam màu nâu đi làm,Belts,Men,Brown,Belts/Men/Brown;Belts/Men/Brown;Belts/Men/Brown,35.6,
+val_b,giày chú rể đen đi làm,Formal Shoes,,Black,Formal Shoes/Men/Black;Formal Shoes/Men/Black;Formal Shoes/Men/Black,32.2,
+val_b,shop ơi có giày chạy bộ nữ giới,Sports Shoes,Women,,Sports Shoes/Women/Blue;Sports Shoes/Women/Black;Sports Shoes/Women/Purple,35.8,
+val_b,cho mình hỏi bóp da của nữ nâu đất đi chơi,Wallets,Women,Brown,Wallets/Women/Brown;Wallets/Women/Brown;Wallets/Women/Red,40.9,lac_mau(8/10);R@10=0.20
+val_b,cần tìm sơ mi công sở của nam lông chuột đi làm,Shirts,Men,Charcoal,Shirts/Men/Olive;Shirts/Men/Brown;Shirts/Men/Beige,56.0,lac_mau(10/10);R@10=0.00
+val_b,can tim ao phong cho nu xanh da troi di lam,Tshirts,Women,Blue,Tshirts/Women/Blue;Tshirts/Women/Blue;Tshirts/Women/Blue,75.8,lac_mau(6/10);R@10=0.40
+val_b,tim mua kinh mat nu gioi di lam,Sunglasses,Women,,Sunglasses/Women/Black;Sunglasses/Women/Black;Sunglasses/Women/Silver,33.0,
+val_b,ao coc tay nam xanh da troi,Tshirts,Men,Blue,Tshirts/Men/Blue;Tshirts/Men/Blue;Tshirts/Men/Blue,89.3,
+val_b,tư vấn giúp áo thun lạnh chị em màu xanh lá mặc hàng ngày,Tshirts,Women,Green,Tshirts/Women/Green;Tshirts/Women/Green;Tshirts/Women/Green,101.9,
+val_b,kinh ram nam,Sunglasses,Men,,Sunglasses/Men/Green;Sunglasses/Men/Gold;Sunglasses/Men/Gold,35.0,
+val_b,giày vải của nam đi chơi,Casual Shoes,Men,,Casual Shoes/Men/Brown;Casual Shoes/Men/White;Casual Shoes/Men/Brown,52.7,
+val_b,tư vấn giúp ba lô đi học xanh da trời đẹp xịn,Backpacks,,Blue,Backpacks/Women/Blue;Backpacks/Women/Blue;Backpacks/Unisex/Black,35.5,lac_mau(8/10);R@10=0.20
+val_b,quần công sở nam giới mẫu mới nhất,Trousers,Men,,Trousers/Men/Beige;Trousers/Men/Grey;Trousers/Men/Khaki,38.5,
+val_b,giày đi chơi xám ghi mẫu mới nhất,Casual Shoes,,Grey,Casual Shoes/Women/Grey;Casual Shoes/Women/Grey;Casual Shoes/Men/Grey,55.8,R@10=0.70
+val_b,tu van giup dong ho kim nam trang di choi,Watches,Men,White,Watches/Men/White;Watches/Men/White;Watches/Men/White,47.3,R@10=0.50
+val_b,cần tìm quần bò ống đứng màu đen,Jeans,,Black,Jeans/Women/Black;Jeans/Men/Black;Jeans/Women/Black,33.3,
+val_b,tu van giup cap sach mau do gia tot,Backpacks,,Red,Backpacks/Unisex/Red;Backpacks/Women/Black;Backpacks/Women/Brown,36.6,lac_mau(9/10);R@10=0.10
+val_b,tui xach tay mau nau di choi,Handbags,,Brown,Handbags/Women/Brown;Handbags/Women/Brown;Handbags/Women/Brown,45.7,
+val_b,tu van giup quan lot cho nam di lam,Briefs,Men,,Briefs/Men/Green;Briefs/Men/Blue;Briefs/Men/Olive,38.3,
+val_b,áo len mùa đông của nam,Sweaters,Men,,Sweaters/Men/Grey;Sweaters/Men/Blue;Sweaters/Men/Blue,37.3,
+val_b,shop oi co ba lo di hoc unisex den,Backpacks,Unisex,Black,Backpacks/Unisex/Black;Backpacks/Unisex/Black;Backpacks/Unisex/Black,30.1,
+val_b,tim mua ao coc tay trắng tinh mặc hàng ngày,Tshirts,,White,Tshirts/Boys/White;Tshirts/Unisex/Blue;Tshirts/Boys/Black,74.1,lac_mau(9/10);R@10=0.10
+val_b,cho minh hoi giay chu re cho nam nau dat di choi,Formal Shoes,Men,Brown,Formal Shoes/Men/Brown;Formal Shoes/Men/Brown;Formal Shoes/Men/Brown,26.9,
+val_b,hoa tai bac bac sang di choi,Earrings,,Silver,Earrings/Women/Silver;Earrings/Women/Silver;Earrings/Women/Silver,29.7,
+val_b,cho mình hỏi dép quai hậu của nam mặc hàng ngày,Sandals,Men,,Sandals/Men/Black;Sandals/Men/Brown;Sandals/Men/Black,32.8,
+val_b,shop ơi có áo phông vàng đi làm,Tshirts,,Yellow,Tshirts/Boys/Yellow;Tshirts/Boys/Yellow;Tshirts/Boys/Yellow,78.0,R@10=0.80
+val_b,tìm mua sơ mi dài tay nâu đất đi làm,Shirts,,Brown,Shirts/Men/Brown;Shirts/Women/Brown;Shirts/Women/Gold,48.7,lac_mau(8/10);R@10=0.20
+val_b,tìm mua quần bò xanh biển đẹp xịn,Jeans,,Blue,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Boys/Blue,68.9,
+val_b,cho minh hoi quan bò chị em đi làm,Jeans,Women,,Jeans/Women/Black;Jeans/Women/Black;Jeans/Women/Blue,45.5,
+val_b,vớ chân của nam đen tuyền đẹp xịn,Socks,Men,Black,Socks/Men/Black;Socks/Men/Black;Socks/Men/Black,34.4,
+val_b,cần tìm sơ mi dài tay xanh biển giá tốt,Shirts,,Blue,Shirts/Girls/Blue;Shirts/Women/Blue;Shirts/Women/Blue,46.7,
+val_b,mat kinh di nang nam den,Sunglasses,Men,Black,Sunglasses/Men/Black;Sunglasses/Men/Black;Sunglasses/Men/Black,30.0,
+val_b,shop ơi có đồng hồ thời trang chị em,Watches,Women,,Watches/Women/White;Watches/Women/Black;Watches/Women/White,38.3,
+val_b,tu van giup giay di choi nam nu deu mang duoc mau trang di choi,Casual Shoes,Unisex,White,Casual Shoes/Unisex/White;Casual Shoes/Unisex/White;Casual Shoes/Unisex/Pink,49.1,lac_mau(8/10);R@10=0.20
+val_b,can tim quan đùi nam giới,Shorts,Men,,Shorts/Men/Grey;Shorts/Men/Grey;Shorts/Men/Brown,30.5,
+val_b,tim mua tui cong so chị em màu nâu đẹp xịn,Handbags,Women,Brown,Handbags/Women/Brown;Handbags/Women/Brown;Handbags/Women/Brown,34.6,
+val_b,tìm mua dép kẹp nam giới đen,Flip Flops,Men,Black,Flip Flops/Men/Black;Flip Flops/Men/Black;Flip Flops/Men/Black,27.9,
+val_b,kính râm nâu đất mẫu mới nhất,Sunglasses,,Brown,Sunglasses/Women/Brown;Sunglasses/Unisex/Brown;Sunglasses/Men/Brown,47.5,
+val_b,cho mình hỏi dép lào màu đen đi chơi,Flip Flops,,Black,Flip Flops/Women/Black;Flip Flops/Women/Black;Flip Flops/Women/Black,32.7,
+val_b,hoa tai nữ giá tốt,Earrings,Women,,Earrings/Women/Pink;Earrings/Women/Silver;Earrings/Women/Silver,33.6,
+val_b,tư vấn giúp ví gập nam nâu bò đẹp xịn,Wallets,Men,Brown,Wallets/Men/Brown;Wallets/Men/Brown;Wallets/Men/Brown,28.1,R@10=0.70
+val_b,mu che nang nam giá tốt,Caps,Men,,Caps/Men/Black;Caps/Men/Black;Caps/Men/Purple,27.2,
+val_b,tư vấn giúp vớ chân của nam giá tốt,Socks,Men,,Socks/Men/Black;Socks/Men/Multi;Socks/Men/Beige,37.9,
+val_b,day lung da nau dat di lam,Belts,,Brown,Belts/Men/Brown;Belts/Men/Brown;Belts/Men/Brown,44.2,lac_mau(7/10);R@10=0.30
+val_b,cho minh hoi tui deo vai xam ghi,Handbags,,Grey,Handbags/Women/Yellow;Handbags/Women/Black;Handbags/Women/Black,34.0,lac_mau(10/10);R@10=0.00
+val_b,ao thun lanh nam long chuot di choi,Tshirts,Men,Charcoal,Tshirts/Men/Blue;Tshirts/Men/Navy Blue;Tshirts/Men/Navy Blue,79.8,lac_mau(10/10);R@10=0.00
+val_b,cho minh hoi non luoi trai nam nữ đều mang được giá tốt,Caps,Unisex,,Caps/Unisex/Blue;Caps/Unisex/Black;Caps/Unisex/Brown,43.8,
+val_b,cần tìm áo kiểu nữ,Tops,Women,,Tops/Women/White;Tops/Women/White;Tops/Women/Nude,39.3,
+val_b,giay the duc nam mac hang ngay,Sports Shoes,Men,,Sports Shoes/Men/White;Sports Shoes/Men/Silver;Sports Shoes/Men/White,51.3,
+val_b,cho minh hoi giay the dục xanh biển đi chơi,Sports Shoes,,Blue,Sports Shoes/Unisex/Blue;Sports Shoes/Women/Blue;Sports Shoes/Men/Blue,36.0,lac_mau(7/10);R@10=0.30
+val_b,can tim dep di bien do tuoi,,,Red,Flip Flops/Boys/Red;Sandals/Unisex/Red;Sandals/Boys/Red,348.1,khong_nhan_ra_loai;R@10=0.20
+val_b,áo sơ mi đi làm nam giới xanh navy,Shirts,Men,Navy Blue,Shirts/Men/Navy Blue;Shirts/Men/Navy Blue;Shirts/Men/Navy Blue,47.9,
+val_b,túi công sở chị em xanh da trời,Handbags,Women,Blue,Handbags/Women/Blue;Handbags/Women/Blue;Handbags/Women/Blue,36.7,R@10=0.50
+val_b,giay di choi xanh bien,Casual Shoes,,Blue,Casual Shoes/Women/Blue;Casual Shoes/Women/Blue;Casual Shoes/Girls/Blue,42.6,R@10=0.70
+val_b,can tim vo co ngan mau trang mac hang ngay,Socks,,White,Socks/Men/White;Socks/Women/White;Socks/Women/Purple,27.7,lac_mau(8/10);R@10=0.20
+val_b,tu van giup giay the duc trang tinh dep xin,Sports Shoes,,White,Sports Shoes/Men/White;Sports Shoes/Men/White;Sports Shoes/Women/White,32.9,R@10=0.80
+val_b,tìm mua áo phông nữ màu trắng,Tshirts,Women,White,Tshirts/Women/White;Tshirts/Women/White;Tshirts/Women/White,75.8,
+val_b,tìm mua đầm công sở nữ giới,Dresses,Women,,Dresses/Women/Green;Dresses/Women/Grey;Dresses/Women/White,44.2,
+val_b,tư vấn giúp đồng hồ thời trang cho nam,Watches,Men,,Watches/Men/White;Watches/Men/Silver;Watches/Men/Black,43.6,
+val_b,cho minh hoi so mi cong so mau hong mau moi nhat,Shirts,,Pink,Shirts/Men/Pink;Shirts/Men/Pink;Shirts/Men/Pink,40.5,R@10=0.70
+val_b,đồng hồ kim cho nữ trắng giá tốt,Watches,Women,White,Watches/Women/White;Watches/Women/White;Watches/Women/White,39.9,
+val_b,cho mình hỏi xăng đan nam giới nâu bò,Sandals,Men,Brown,Sandals/Men/Brown;Sandals/Men/Brown;Sandals/Men/Brown,27.9,R@10=0.90
+val_b,áo thun lạnh xanh biển,Tshirts,,Blue,Tshirts/Women/Blue;Tshirts/Women/Blue;Tshirts/Men/Blue,62.6,
+val_b,can tim mat kinh di nang nam nu deu mang duoc di choi,Sunglasses,Unisex,,Sunglasses/Unisex/Brown;Sunglasses/Unisex/Blue;Sunglasses/Unisex/Brown,33.8,R@10=0.60
+val_b,tư vấn giúp áo thun lạnh cho nam đen đi làm,Tshirts,Men,Black,Tshirts/Men/Black;Tshirts/Men/Black;Tshirts/Men/Black,130.2,
+val_b,shop ơi có áo sơ mi màu tím đẹp xịn,Shirts,,Purple,Shirts/Women/Purple;Shirts/Women/Purple;Shirts/Women/Purple,44.3,
+val_b,tư vấn giúp giày vải của nam màu đen đẹp xịn,Casual Shoes,Men,Black,Casual Shoes/Men/Black;Casual Shoes/Men/Black;Casual Shoes/Men/Black,44.3,
+val_b,tìm mua áo sơ mi nam xanh biển giá tốt,Shirts,Men,Blue,Shirts/Men/Blue;Shirts/Men/Blue;Shirts/Men/Blue,44.7,R@10=0.50
+val_b,tìm mua áo cộc tay màu đen đi làm,Tshirts,,Black,Tshirts/Women/Black;Tshirts/Boys/Black;Tshirts/Women/Black,63.6,
+val_b,tu van giup giay the duc nam trang tinh di lam,Sports Shoes,Men,White,Sports Shoes/Men/White;Sports Shoes/Men/White;Sports Shoes/Men/White,33.2,
+val_b,shop oi co bop da cho nu gia tot,Wallets,Women,,Wallets/Women/Brown;Wallets/Women/Brown;Wallets/Women/Yellow,29.4,
+val_b,cho minh hoi dong ho kim anh bac dep xin,Watches,,Silver,Watches/Men/Silver;Watches/Women/Silver;Watches/Men/Silver,38.0,lac_mau(7/10);R@10=0.30
+val_b,giay sneaker thuong nau dat gia tot,Casual Shoes,,Brown,Casual Shoes/Men/Brown;Casual Shoes/Men/Brown;Casual Shoes/Men/Brown,42.0,
+val_b,shop ơi có áo ấm đen tuyền đi làm,,,Black,Tops/Women/Black;Shirts/Women/Black;Shirts/Women/Black,28.6,khong_nhan_ra_loai;R@10=0.00
+val_b,áo thun cotton bé trai đi chơi,Tshirts,Boys,,Tshirts/Boys/Yellow;Tshirts/Boys/Green;Tshirts/Boys/Yellow,80.1,
+val_b,tư vấn giúp kính mát đen đi chơi,Sunglasses,,Black,Sunglasses/Men/Black;Sunglasses/Men/Black;Sunglasses/Men/Black,30.0,
+val_b,tu van giup ao dieu nu hong phan,Tops,Women,Pink,Tops/Women/Pink;Tops/Women/Pink;Tops/Women/Pink,36.9,
+val_b,tim mua giay di choi do tuoi di choi,Casual Shoes,,Red,Casual Shoes/Boys/Red;Casual Shoes/Boys/Red;Casual Shoes/Girls/Red,37.1,lac_mau(7/10);R@10=0.30
+val_b,can tim nit quan đen tuyền mặc hàng ngày,,,Black,Salwar/Girls/Orange;Salwar/Girls/Magenta;Kurta Sets/Women/Black,26.2,khong_nhan_ra_loai;lac_mau(9/10);R@10=0.00
+val_b,shop ơi có túi công sở xanh lục mặc hàng ngày,Handbags,,Green,Handbags/Women/Green;Handbags/Women/Green;Handbags/Women/Green,37.2,R@10=0.60
+val_b,shop oi co quan jean dai cua nam di choi,Jeans,Men,,Jeans/Men/Unknown;Jeans/Men/Blue;Jeans/Men/Blue,32.0,
+val_b,tim mua dong ho deo tay cua nam mau bac mau moi nhat,Watches,Men,Silver,Watches/Men/Silver;Watches/Men/Silver;Watches/Men/Black,36.4,lac_mau(8/10);R@10=0.20
+val_b,tìm mua túi công sở nữ tím đi làm,Handbags,Women,Purple,Handbags/Women/Purple;Handbags/Women/Purple;Handbags/Women/Purple,35.1,
+val_b,giay di choi den tuyen mac hang ngay,Casual Shoes,,Black,Casual Shoes/Men/Black;Casual Shoes/Men/Black;Casual Shoes/Men/Black,43.7,
+val_b,quan sip chi em di lam,Briefs,Women,,Briefs/Women/Brown;Briefs/Women/White;Briefs/Women/Grey,36.1,
+val_b,giay vai cua nam trang gia tot,Casual Shoes,Men,White,Casual Shoes/Men/White;Casual Shoes/Men/White;Casual Shoes/Men/White,41.5,
+val_b,shop oi co giay vải chị em giá tốt,Casual Shoes,Women,,Casual Shoes/Women/Blue;Casual Shoes/Women/Pink;Casual Shoes/Women/Blue,37.9,lac_gioi_tinh(1/10);R@10=0.90
+val_b,sơ mi dài tay xanh than đi làm,Shirts,,Navy Blue,Shirts/Women/Navy Blue;Shirts/Women/Navy Blue;Shirts/Women/Navy Blue,44.6,R@10=0.90
+val_b,tu van giup túi đeo vai unisex,Handbags,Unisex,,Handbags/Unisex/Black;Handbags/Unisex/Beige;Handbags/Unisex/Beige,39.6,"lac_loai(4/10:['Duffel Bag', 'Mobile Pouch']);R@10=0.60"
+val_b,ao so mi cho nam mau hong di lam,Shirts,Men,Pink,Shirts/Men/Pink;Shirts/Men/Pink;Shirts/Men/Pink,114.2,
+val_b,cho mình hỏi giày bệt cho nữ đẹp xịn,Flats,Women,,Flats/Women/Off White;Flats/Women/Yellow;Flats/Women/Beige,34.4,
+val_b,tu van giup ao thun cotton màu xám đẹp xịn,Tshirts,,Grey,Tshirts/Women/Grey;Tshirts/Girls/Grey;Tshirts/Men/Grey,61.7,
+val_b,cần tìm áo cánh của nữ đen đi làm,Tops,Women,Black,Tops/Women/Black;Tops/Women/Black;Tops/Women/Black,33.1,
+val_b,áo kiểu chị em xanh tím than đi chơi,Tops,Women,Navy Blue,Tops/Women/Navy Blue;Tops/Women/Navy Blue;Tops/Women/Navy Blue,36.2,
+val_b,giay the thao nhe trang mau moi nhat,Sports Shoes,,White,Sports Shoes/Women/White;Sports Shoes/Women/White;Sports Shoes/Women/White,36.5,
+val_b,ao dieu cho nu màu xanh dương đẹp xịn,Tops,Women,Blue,Tops/Women/Blue;Tops/Women/Blue;Tops/Women/Blue,35.8,
+val_b,ao sweater ni cua nam di choi,Sweaters,Men,,Sweaters/Men/Black;Sweaters/Men/Red;Sweaters/Men/Grey,29.6,
+val_b,giày thể thao nhẹ nam nữ đều mang được đi chơi,Sports Shoes,Unisex,,Sports Shoes/Unisex/Blue;Sports Shoes/Unisex/Black;Casual Shoes/Unisex/Red,37.3,lac_loai(8/10:['Casual Shoes'])
+val_b,tim mua giay mọi đen đi chơi,Casual Shoes,,Black,Casual Shoes/Men/Black;Casual Shoes/Men/Black;Casual Shoes/Unisex/Black,37.2,R@10=0.90
+val_b,sơ mi công sở lông chuột đi làm,Shirts,,Charcoal,Shirts/Women/Black;Shirts/Women/Purple;Shirts/Women/Blue,41.8,lac_mau(10/10);R@10=0.10
+val_b,dép quai hậu màu đen đi làm,Sandals,,Black,Sandals/Men/Black;Sandals/Men/Black;Sandals/Men/Black,31.8,
+val_b,quần bò ống đứng của nam xanh biển giá tốt,Jeans,Men,Blue,Jeans/Men/Blue;Jeans/Men/Blue;Jeans/Men/Blue,30.1,
+val_b,shop oi co ao điệu xanh navy giá tốt,Tops,,Navy Blue,Tops/Women/Navy Blue;Tops/Women/Navy Blue;Tops/Women/Navy Blue,37.8,R@10=0.70
+val_b,tìm mua giày chạy bộ xám ghi mặc hàng ngày,Sports Shoes,,Grey,Sports Shoes/Women/Grey;Sports Shoes/Men/White;Sports Shoes/Unisex/Blue,32.3,lac_mau(9/10);R@10=0.10
+val_b,dây nịt cho nam,Belts,Men,,Belts/Men/Black;Belts/Men/Black;Belts/Men/Black,32.8,
+val_b,cần tìm áo phông cổ tròn cho nam màu trắng giá tốt,Tshirts,Men,White,Tshirts/Men/White;Tshirts/Men/White;Tshirts/Men/White,61.6,
+val_b,cần tìm guốc cao gót đen giá tốt,Heels,,Black,Heels/Women/Black;Heels/Women/Black;Heels/Women/Black,30.2,
+val_b,shop ơi có túi đeo vai của nữ đen tuyền mặc hàng ngày,Handbags,Women,Black,Handbags/Women/Black;Handbags/Women/Black;Handbags/Women/Black,36.6,
+val_b,tim mua ao kieu cua nu trang tinh gia tot,Tops,Women,White,Tops/Women/White;Tops/Women/White;Tops/Women/White,35.3,
+val_b,can tim ao am cho nam,,Men,,Waistcoat/Men/Red;Nehru Jackets/Men/Brown;Nehru Jackets/Men/Brown,29.8,khong_nhan_ra_loai;R@10=0.10
+val_b,tư vấn giúp dây lưng da cho nữ đẹp xịn,Belts,Women,,Belts/Women/Black;Belts/Women/Red;Belts/Women/Black,42.4,
+val_b,can tim tui xach tay chi em xanh reu,Handbags,Women,Green,Handbags/Women/Green;Handbags/Women/Green;Handbags/Women/Green,36.1,R@10=0.70
+val_b,tìm mua sơ mi dài tay nam giá tốt,Shirts,Men,,Shirts/Men/White;Shirts/Men/White;Shirts/Men/Olive,42.5,
+val_b,so mi cong so cua nam xanh lục đi làm,Shirts,Men,Green,Shirts/Men/Green;Shirts/Men/Green;Shirts/Men/Green,40.9,
+val_b,giày chú rể nâu đất,Formal Shoes,,Brown,Formal Shoes/Men/Brown;Formal Shoes/Men/Brown;Formal Shoes/Men/Brown,32.1,
+val_b,tim mua dong ho thoi trang unisex mau moi nhat,Watches,Unisex,,Watches/Unisex/Green;Watches/Unisex/Purple;Watches/Unisex/White,39.1,
+val_b,giày vải chị em trắng tinh đi chơi,Casual Shoes,Women,White,Casual Shoes/Women/Black;Casual Shoes/Women/Black;Casual Shoes/Women/Black,49.4,lac_mau(10/10);R@10=0.00
+val_b,tim mua dong ho deo tay nam màu đen mẫu mới nhất,Watches,Men,Black,Watches/Men/Black;Watches/Men/Black;Watches/Men/Black,40.4,
+val_b,cho minh hoi giay chu rể của nam đi làm,Formal Shoes,Men,,Formal Shoes/Men/Brown;Formal Shoes/Men/Black;Formal Shoes/Men/Black,30.4,
+val_b,giày gót nhọn nữ giá tốt,Heels,Women,,Heels/Women/Black;Heels/Women/Black;Heels/Women/Multi,37.2,
+val_b,cho mình hỏi áo ấm nam giới đen mẫu mới nhất,,Men,Black,Tshirts/Men/Black;Tshirts/Men/Black;Tshirts/Men/Red,24.4,khong_nhan_ra_loai;R@10=0.00
+val_b,shop ơi có sơ mi dài tay nữ đi làm,Shirts,Women,,Shirts/Women/White;Shirts/Women/White;Shirts/Women/Blue,44.8,
+val_b,tư vấn giúp áo phông cổ tròn tím giá tốt,Tshirts,,Purple,Tshirts/Girls/Purple;Tshirts/Girls/Purple;Tshirts/Girls/Pink,69.5,lac_mau(8/10);R@10=0.20
+val_b,can tim ao coc tay do mac hang ngay,Tshirts,,Red,Tshirts/Unisex/Red;Tshirts/Men/Black;Tshirts/Unisex/Green,73.3,lac_mau(9/10);R@10=0.10
+val_b,shop ơi có dép lào nam đi chơi,Flip Flops,Men,,Flip Flops/Men/White;Flip Flops/Men/Yellow;Flip Flops/Men/Yellow,32.6,
+val_b,cần tìm áo kiểu hồng đi chơi,Tops,,Pink,Tops/Girls/Pink;Tops/Girls/Pink;Tops/Girls/Pink,79.0,R@10=0.50
+val_b,tìm mua vớ cổ ngắn cho nam trắng tinh giá tốt,Socks,Men,White,Socks/Men/White;Socks/Men/White;Socks/Men/White,28.0,R@10=0.80
+val_b,tim mua ao so mi di làm trắng tinh mẫu mới nhất,Shirts,,White,Shirts/Women/White;Shirts/Women/White;Shirts/Women/White,50.2,lac_mau(6/10);R@10=0.40
+val_b,cho mình hỏi dép xỏ ngón nữ giới mặc hàng ngày,Flip Flops,Women,,Flip Flops/Women/Pink;Flip Flops/Women/Gold;Flip Flops/Women/Lavender,42.8,
+val_b,cho minh hoi ao coc tay mau xanh la gia tot,Tshirts,,Green,Tshirts/Men/Green;Tshirts/Unisex/Green;Tshirts/Men/Green,100.1,R@10=0.60
+val_b,giay tap gym nam đen,Sports Shoes,Men,Black,Sports Shoes/Men/Black;Sports Shoes/Men/Black;Sports Shoes/Men/Black,66.0,
+val_b,tìm mua ba lô đi học nam nữ đều mang được đỏ đẹp xịn,Backpacks,Unisex,Red,Backpacks/Unisex/Red;Backpacks/Unisex/Red;Backpacks/Unisex/Red,29.2,lac_mau(6/10);R@10=0.40
+val_b,shop ơi có đồng hồ kim chị em bạc sáng giá tốt,Watches,Women,Silver,Watches/Women/White;Watches/Women/White;Watches/Women/Black,38.2,lac_mau(10/10);R@10=0.00
+val_b,dép quai hậu nâu bò đi chơi,Sandals,,Brown,Sandals/Men/Brown;Sandals/Men/Brown;Sandals/Unisex/Brown,42.0,lac_mau(6/10);R@10=0.40
+val_b,tim mua vi gập nam giới,Wallets,Men,,Wallets/Men/Black;Wallets/Men/Brown;Wallets/Men/Black,42.3,
+val_b,áo phông cho nam tím đi làm,Tshirts,Men,Purple,Tshirts/Men/Green;Tshirts/Men/Green;Tshirts/Men/Green,70.2,lac_mau(10/10);R@10=0.00
+val_b,tu van giup ca vat cong so cua nam,Ties,Men,,Ties/Men/Purple;Ties/Men/Black;Ties/Men/Burgundy,47.4,
+val_b,ao phong co tron hồng phấn đi chơi,Tshirts,,Pink,Tshirts/Girls/Pink;Tshirts/Girls/Pink;Tshirts/Boys/Navy Blue,98.0,lac_mau(8/10);R@10=0.20
+val_b,tư vấn giup hoa tai của nữ ánh bạc đẹp xịn,Earrings,Women,Silver,Earrings/Women/Silver;Earrings/Women/Silver;Earrings/Women/Silver,31.1,
+val_b,shop ơi có bóp da đen dep xịn,Wallets,,Black,Wallets/Women/Black;Wallets/Women/Black;Wallets/Women/Black,57.9,R@10=0.60
+val_b,can tim tui cong so cua nu gai tot,Handbags,Women,,Handbags/Women/Black;Handbags/Women/Yellow;Handbags/Women/Yellow,42.3,
+val_b,sơ mi công sở cho nam đỏ tươi đi cơi,Shirts,Men,Red,Shirts/Men/Red;Shirts/Men/Red;Shirts/Men/Red,46.7,
+val_b,tim mua ao phong xannh than,Tshirts,,Navy Blue,Tshirts/Boys/Navy Blue;Tshirts/Boys/Navy Blue;Tshirts/Boys/Navy Blue,66.8,lac_mau(6/10);R@10=0.40
+val_b,bop tien nua dat di choi,Wallets,,,Wallets/Women/Blue;Wallets/Women/Pink;Wallets/Women/Teal,36.1,R@10=0.00
+val_b,cho mình hỏi ba lô laptop uisex mẫu mới nhất,Backpacks,,,Backpacks/Women/Brown;Backpacks/Unisex/Black;Backpacks/Unisex/Black,35.5,R@10=0.60
+val_b,giày mọi chị em đenn tuyền giá tốt,Casual Shoes,Women,,Casual Shoes/Women/Black;Casual Shoes/Women/Black;Casual Shoes/Women/Black,47.9,R@10=0.90
+val_b,so mi cong so mau do dep xinn,Shirts,,Red,Shirts/Women/Red;Shirts/Boys/Red;Shirts/Men/Red,47.4,
+val_b,giay da cong so nma den,Formal Shoes,,Black,Formal Shoes/Men/Black;Formal Shoes/Men/Black;Formal Shoes/Men/Black,31.8,
+val_b,tu van giup ao dieu edn tuyen,Tops,,,Tops/Women/Black;Tops/Women/Black;Tops/Girls/Yellow,40.7,R@10=0.30
+val_b,can tim ao thun lanh nam mau xanhh la mau moi nhat,Tshirts,Men,Green,Tshirts/Men/Blue;Tshirts/Men/Blue;Tshirts/Men/Blue,70.5,lac_mau(10/10);R@10=0.00
+val_b,can tim ao kiieu mau xanh duong,Tops,,Blue,Tops/Women/Blue;Tops/Women/Blue;Tops/Women/Blue,36.8,
+val_b,tu van giup mat kinh di nang cho nu maau nau di choi,Sunglasses,Women,Brown,Sunglasses/Women/Brown;Sunglasses/Women/Brown;Sunglasses/Women/Brown,30.8,lac_mau(7/10);R@10=0.30
+val_b,vớ cổ ngắn đen tuyền đẹp xnị,Socks,,Black,Socks/Men/Black;Socks/Men/Black;Socks/Men/Black,31.6,
+val_b,cần tìm giày tập gym nữ mau trắng đi làm,Sports Shoes,Women,White,Sports Shoes/Women/White;Sports Shoes/Women/White;Sports Shoes/Women/White,47.3,
+val_b,tim mua giay sneakr thuong cua nam xanh bien gia tot,Casual Shoes,Men,Blue,Casual Shoes/Men/Blue;Casual Shoes/Men/Blue;Casual Shoes/Men/Blue,42.9,R@10=0.50
+val_b,ao phông cổ tròn nam giới,Tshirts,Men,,Tshirts/Men/Black;Tshirts/Men/White;Tshirts/Men/Olive,64.3,
+val_b,choo minh hoi dong ho đeo tay màu trắng giá tốt,Watches,,White,Watches/Girls/White;Watches/Women/White;Watches/Women/White,42.3,R@10=0.50
+val_b,túúi công sở màu đen,,,Black,Bracelet/Women/Black;Handbags/Women/Black;Bangle/Women/Black,28.5,khong_nhan_ra_loai;R@10=0.60
+val_b,guooc cao got nâu bò đi chơi,Heels,,Brown,Heels/Women/Brown;Heels/Women/Brown;Heels/Women/Brown,32.3,
+val_b,sơ mi cong sở cho nam nâu bò đẹp xịn,Shirts,Men,Brown,Shirts/Men/Brown;Shirts/Men/Blue;Shirts/Men/Red,43.8,lac_loai(1/10:['Tshirts']);lac_gioi_tinh(1/10);lac_mau(8/10);R@10=0.10
+val_b,ba lo di hoc dne tuyen mac hang ngay,Backpacks,,,Backpacks/Men/Black;Backpacks/Unisex/Black;Backpacks/Unisex/Black,32.6,R@10=0.60
+val_b,tim mua ao coc tay nữ giiới đi làm,Tshirts,Women,,Tshirts/Women/Cream;Tshirts/Women/Blue;Tshirts/Women/Black,62.2,
+val_b,can tim qaun sip mau den,Briefs,,Black,Briefs/Men/Black;Briefs/Men/Black;Briefs/Men/Black,28.9,
+val_b,shop ơi có sơ mi công sở của nam màu trrắng,Shirts,Men,,Shirts/Men/White;Shirts/Men/White;Shirts/Men/White,44.5,
+val_b,cần tìm dây lưng da của nam màu ânu đi làm,Belts,Men,,Belts/Men/Black;Belts/Men/Black;Belts/Men/Black,33.7,R@10=0.00
+val_b,giày chú rể đen di làm,Formal Shoes,,Black,Formal Shoes/Men/Black;Formal Shoes/Men/Black;Formal Shoes/Men/Black,33.7,
+val_b,shop ơi có giày cạhy bộ nữ giới,Sports Shoes,Women,,Sports Shoes/Women/Blue;Sports Shoes/Women/Black;Sports Shoes/Women/Purple,37.2,
+val_b,chho mình hỏi bóp da của nữ nâu đất đi chơi,Wallets,Women,Brown,Wallets/Women/Brown;Wallets/Women/Brown;Wallets/Women/Brown,39.4,lac_mau(7/10);R@10=0.30
+val_b,cần tìm sơ mi công sở của nam lông chuột đi làmm,Shirts,Men,Charcoal,Shirts/Men/Olive;Shirts/Men/Brown;Shirts/Men/Beige,51.9,lac_mau(10/10);R@10=0.00
+val_b,can tim ao phong cho nu xahn da troi di lam,Tshirts,Women,Blue,Tshirts/Women/Blue;Tshirts/Women/Pink;Tshirts/Women/White,90.2,lac_mau(9/10);R@10=0.10
+val_b,tim mua kihn mat nu gioi di lam,Sunglasses,Women,,Sunglasses/Women/Black;Sunglasses/Women/Silver;Sunglasses/Women/Black,32.0,
+val_b,ao coc aty nam xanh da troi,Tshirts,Men,Blue,Tshirts/Men/Blue;Tshirts/Men/Blue;Tshirts/Men/Blue,61.7,
+val_b,tư vấn giúp áo thun lạnh chị em màu xanh lá mặc hàng ngàyy,Tshirts,Women,Green,Tshirts/Women/Green;Tshirts/Women/Green;Tshirts/Women/Green,81.9,
+val_b,kihn ram nam,Sunglasses,Men,,Sunglasses/Men/Brown;Sunglasses/Men/Grey;Sunglasses/Men/Steel,43.4,
+val_b,giày vải của namm đi chơi,Casual Shoes,,,Casual Shoes/Men/Brown;Casual Shoes/Men/White;Casual Shoes/Men/Brown,43.4,
+val_b,tu vấn giúp ba lô đi học xanh da trời đẹp xịn,Backpacks,,Blue,Backpacks/Women/Blue;Backpacks/Women/Blue;Backpacks/Women/Brown,41.6,lac_mau(8/10);R@10=0.20
+val_b,quầần công sở nam giới mẫu mới nhất,Trousers,Men,,Trousers/Men/Beige;Trousers/Men/Brown;Trousers/Men/Brown,38.2,
+val_b,igày đi chơi xám ghi mẫu mới nhất,Casual Shoes,,Grey,Casual Shoes/Women/Grey;Casual Shoes/Men/Grey;Casual Shoes/Women/Grey,38.6,lac_mau(6/10);R@10=0.40
+val_b,tu van giup dong ho kim nma trang di choi,Watches,,White,Watches/Women/White;Watches/Girls/White;Watches/Girls/White,40.4,R@10=0.00
+val_b,cần tìm quần bò ốngg đứng màu đen,Jeans,,Black,Jeans/Women/Black;Jeans/Women/Black;Jeans/Men/Black,32.5,
+val_b,tu van giup cap sach mua do gia tot,Backpacks,,Red,Backpacks/Women/Black;Backpacks/Women/Brown;Backpacks/Unisex/Black,30.8,lac_mau(10/10);R@10=0.00
+val_b,tui xach tay mau nau di cohi,Handbags,,Brown,Handbags/Women/Brown;Handbags/Women/Brown;Handbags/Women/Brown,37.4,
+val_b,tu van giup quan lot coh nam di lam,Briefs,Men,,Briefs/Men/Green;Briefs/Men/Blue;Briefs/Men/Olive,28.2,
+val_b,tim mua ao coc tay nux giới đi làm,Tshirts,,,Tshirts/Women/Cream;Tshirts/Men/Black;Tshirts/Men/Yellow,59.6,R@10=0.50
+val_b,cần1 tìm sơ mi công sở của nam lông chuột đi làm,Shirts,Men,Charcoal,Shirts/Men/Olive;Shirts/Men/Brown;Shirts/Men/White,40.7,lac_mau(10/10);R@10=0.00
+val_b,tưvấn giúp ba lô đi học xanh da trời đẹp xịn,Backpacks,,Blue,Backpacks/Women/Blue;Backpacks/Women/Blue;Backpacks/Unisex/Black,31.1,lac_mau(8/10);R@10=0.20
+val_b,shop ơi có ảo phông vàng đi làm,Tshirts,,Yellow,Tshirts/Boys/Yellow;Tshirts/Men/Yellow;Tshirts/Girls/Red,57.8,lac_mau(8/10);R@10=0.20
+val_b,shop ơi có ddoongf hồ thời trang chị em,,Women,,Tops/Women/White;Shirts/Women/Purple;Belts/Women/Black,28.7,khong_nhan_ra_loai;R@10=0.00
+val_b,hoa tai nu4 giá tốt,Earrings,,,Earrings/Women/Silver;Earrings/Women/Green;Earrings/Women/Pink,26.0,
+val_b,cho minh hoi non luoi trai nam nữ đều mang được giátốt,Caps,Unisex,,Caps/Unisex/Blue;Caps/Unisex/Black;Caps/Unisex/Brown,38.6,
+val_b,đồng hồ kim cho nữ trẳng giá tốt,Watches,Women,,Watches/Women/Silver;Watches/Women/White;Watches/Women/White,77.3,R@10=0.50
+val_b,tìm mua aso sơ mi nam xanh biển giá tốt,Shirts,Men,Blue,Shirts/Men/Blue;Shirts/Men/Blue;Shirts/Men/Blue,55.5,R@10=0.80
+val_b,ao1 thun cotton bé trai đi chơi,,Boys,,Clothing Set/Boys/Blue;Tshirts/Boys/White;Tshirts/Boys/Blue,30.7,khong_nhan_ra_loai;R@10=0.90
+val_b,tim mua dong ho deotay cua nam mau bac mau moi nhat,Watches,Men,Silver,Watches/Men/Silver;Watches/Men/Silver;Watches/Men/Black,72.8,lac_mau(8/10);R@10=0.20
+val_b,tu van giup tủi đeo vai unisex,Handbags,Unisex,,Handbags/Unisex/Beige;Mobile Pouch/Unisex/Pink;Mobile Pouch/Unisex/Green,42.2,"lac_loai(6/10:['Duffel Bag', 'Mobile Pouch', 'Waist Pouch']);R@10=0.10"
+val_b,giayf vải chị em trắng tinh đi chơi,Casual Shoes,Women,White,Casual Shoes/Women/White;Casual Shoes/Unisex/White;Casual Shoes/Women/Blue,56.1,lac_mau(8/10);R@10=0.20
+val_b,giay tap gym nam d9en,Sports Shoes,Men,,Sports Shoes/Men/Brown;Sports Shoes/Men/White;Sports Shoes/Men/Charcoal,38.4,R@10=0.50
+val_b,ao phongco tron hồng phấn đi chơi,,,Pink,Tshirts/Girls/Pink;Kurtas/Women/Pink;Tshirts/Unisex/Blue,28.6,khong_nhan_ra_loai;lac_mau(8/10);R@10=0.10
+val_b,tủi công sở màu đen,Handbags,,Black,Handbags/Women/Black;Handbags/Unisex/Black;Handbags/Women/Black,32.6,
+val_b,cần tìm dây lưng da của nam màu naau đi làm,Belts,Men,,Belts/Men/Black;Belts/Men/Black;Belts/Men/Black,34.6,R@10=0.00
+val_b,tim mua ao coc tay tra8ng1 tinh mặc hàng ngày,Tshirts,,,Tshirts/Men/Black;Tshirts/Unisex/Black;Tshirts/Unisex/Blue,75.1,R@10=0.00
+val_b,cho minh hoi quanbò chị em đi làm,,Women,,Scarves/Women/Brown;Scarves/Women/Black;Scarves/Women/Blue,28.9,khong_nhan_ra_loai;R@10=0.00
+val_b,tim mua tui cong so chị em màu nẩu đẹp xịn,Handbags,Women,,Handbags/Women/Black;Handbags/Women/Black;Handbags/Women/Black,37.7,R@10=0.30
+val_b,tìm mua aso phông nữ màu trắng,,Women,White,Tshirts/Women/White;Tshirts/Women/White;Tshirts/Women/White,30.0,khong_nhan_ra_loai;R@10=0.90
+val_b,tu van giup ao thun cotton mau2 xám đẹp xịn,Tshirts,,Grey,Tshirts/Men/Grey;Tshirts/Boys/Grey;Tshirts/Boys/Grey,77.7,lac_mau(7/10);R@10=0.30
+val_b,tim muagiay mọi đen đi chơi,,,Black,Wallets/Women/Black;Wallets/Unisex/Black;Accessory Gift Set/Men/Black,28.3,khong_nhan_ra_loai;R@10=0.00
+val_b,cần tìm áo phông cổ tròn cho nam màu trẳng giá tốt,Tshirts,Men,,Tshirts/Men/Blue;Tshirts/Men/Pink;Tshirts/Men/Black,58.9,R@10=0.10
+val_b,giayf gót nhọn nữ giá tốt,Heels,Women,,Heels/Women/Black;Heels/Women/Silver;Heels/Women/Brown,47.3,
+val_b,tìm mua vớ cổ ngắn cho nam tra8ng1 tinh giá tốt,Socks,Men,,Socks/Men/Grey;Socks/Men/Black;Socks/Men/Black,29.4,R@10=0.00
+val_b,dép quai hậu nâu bò đichơi,Sandals,,Brown,Sandals/Men/Brown;Sandals/Unisex/Brown;Sandals/Girls/Multi,41.7,lac_mau(8/10);R@10=0.20
+val_b,shop oi có bóp da đen đẹp xịn,Wallets,,Black,Wallets/Women/Black;Wallets/Men/Black;Wallets/Women/Black,31.6,
+val_b,cần tìm giayf tập gym nữ màu trắng đi làm,Sports Shoes,Women,White,Sports Shoes/Women/White;Sports Shoes/Women/White;Sports Shoes/Women/White,58.1,
+val_b,cho mình hỏi bóp da của nữ na6u đất đi chơi,Wallets,Women,,Wallets/Women/Red;Wallets/Women/Purple;Wallets/Women/Red,37.4,R@10=0.00
+val_b,giày vải của nam đichơi,Casual Shoes,Men,,Casual Shoes/Men/Brown;Casual Shoes/Men/Beige;Casual Shoes/Men/Brown,54.8,
+val_b,cho mình hỏi dẹp quai hậu của nam mặc hàng ngày,Sandals,Men,,Sandals/Men/Black;Sandals/Men/Black;Sandals/Men/Black,33.1,
+val_b,cho mình hỏi dép lào màu dden đi chơi,Flip Flops,,,Flip Flops/Women/Black;Flip Flops/Boys/Red;Flip Flops/Women/Black,47.4,R@10=0.30
+val_b,tui1 công sở chị em xanh da trời,,Women,Blue,Umbrellas/Women/Blue;Bangle/Women/Blue;Umbrellas/Women/Blue,43.6,khong_nhan_ra_loai;R@10=0.20
+val_b,cho minhhoi so mi cong so mau hong mau moi nhat,Shirts,,Pink,Shirts/Men/Pink;Shirts/Men/Pink;Shirts/Men/Pink,38.6,R@10=0.90
+val_h,tìm giúp mình cái áo phông xanh dương rộng rãi,Tshirts,,Blue,Tshirts/Unisex/Blue;Tshirts/Unisex/Blue;Tshirts/Boys/Blue,66.6,lac_mau(7/10);R@10=0.30
+val_h,ao thun den tron mac hang ngay cho thoai mai,Tshirts,,Black,Tshirts/Men/Black;Tshirts/Men/Black;Tshirts/Men/Black,66.4,
+val_h,áo thun xanh lá cổ tròn thoáng mát,Tshirts,,Green,Tshirts/Boys/Green;Tshirts/Boys/Green;Tshirts/Boys/Green,68.4,
+val_h,ao phong tim nhat cho mua he,Tshirts,,Purple,Tshirts/Women/Purple;Tshirts/Men/Purple;Tshirts/Men/Purple,82.7,
+val_h,t-shirt hồng pastel dễ thương,Tshirts,,Pink,Tshirts/Women/Pink;Tshirts/Women/Pink;Tshirts/Women/Pink,71.5,
+val_h,áo htun vàng tươi đi biển,Tshirts,,Yellow,Tshirts/Women/Yellow;Tshirts/Women/Yellow;Tshirts/Men/Blue,66.5,lac_mau(8/10);R@10=0.20
+val_h,mình cần áo thun nam xanh than,Tshirts,Men,Navy Blue,Tshirts/Men/Navy Blue;Tshirts/Men/Black;Tshirts/Men/Blue,71.6,lac_mau(9/10);R@10=0.10
+val_h,doi sneaker di choi cuoi tuan,Casual Shoes,,,Casual Shoes/Women/Black;Casual Shoes/Men/Black;Casual Shoes/Women/Navy Blue,52.9,
+val_h,giày sneaker xanh rêu mang cuối tuần,Casual Shoes,,Green,Casual Shoes/Men/Green;Casual Shoes/Men/Green;Casual Shoes/Men/Green,42.3,R@10=0.00
+val_h,sneaker nu đen di học,Casual Shoes,Women,Black,Casual Shoes/Women/Black;Casual Shoes/Women/Black;Casual Shoes/Women/Black,44.8,
+val_h,sneaker màu đỏ nổi bật,Casual Shoes,,Red,Casual Shoes/Women/Red;Casual Shoes/Men/Red;Casual Shoes/Women/Red,63.0,
+val_h,sneaker unisex ai mang cung dep,Casual Shoes,Unisex,,Casual Shoes/Unisex/Beige;Casual Shoes/Unisex/Orange;Casual Shoes/Unisex/Yellow,49.9,R@10=0.40
+val_h,giay vai xanh duong,Casual Shoes,,Blue,Casual Shoes/Women/Blue;Casual Shoes/Women/Blue;Casual Shoes/Women/Blue,60.0,
+val_h,so mi trang mac di lam van phong,Shirts,,White,Shirts/Women/White;Shirts/Women/White;Shirts/Women/White,80.9,
+val_h,áo sơ mi màu xám tro,Shirts,,Grey,Shirts/Women/Grey;Shirts/Men/Grey;Shirts/Men/Grey,46.9,
+val_h,so mi xanh navy lich su,Shirts,,Navy Blue,Shirts/Women/Navy Blue;Shirts/Girls/Blue;Shirts/Men/Brown,51.9,lac_mau(9/10);R@10=0.10
+val_h,aos sơ mi tím,Shirts,,Purple,Shirts/Women/Purple;Shirts/Women/Purple;Shirts/Women/Purple,45.5,R@10=0.90
+val_h,sơ mi nâu đất kiểu vintage,Shirts,,Brown,Shirts/Men/Brown;Shirts/Women/Brown;Shirts/Women/Lavender,46.0,lac_mau(8/10);R@10=0.20
+val_h,dong ho deo tay mau bac,Watches,,Silver,Watches/Women/Silver;Watches/Women/Silver;Watches/Women/Silver,51.0,
+val_h,đồn hồ unisex,,Unisex,,Watches/Unisex/Red;Watches/Unisex/White;Watches/Unisex/Blue,35.0,khong_nhan_ra_loai;R@10=0.70
+val_h,đồng hố mặt trắng,Watches,,White,Watches/Women/White;Watches/Women/White;Watches/Women/White,47.1,
+val_h,đồng hồ nữ màu đen mặt nhỏ,Watches,Women,Black,Watches/Women/Black;Watches/Women/Black;Watches/Women/Black,46.1,
+val_h,áo kurta,Kurtas,,,Kurtas/Women/Black;Kurtas/Women/Red;Kurtas/Women/Pink,63.4,
+val_h,kurta xanh la1,Kurtas,,,Kurtas/Women/Green;Kurtas/Women/White;Kurtas/Women/Blue,45.5,R@10=0.10
+val_h,áo kurta đen,Kurtas,,Black,Kurtas/Women/Black;Kurtas/Women/Black;Kurtas/Women/Black,44.5,
+val_h,kurta trang,Kurtas,,White,Kurtas/Women/White;Kurtas/Women/White;Kurtas/Women/White,51.9,R@10=0.80
+val_h,áo kurta tím,Kurtas,,Purple,Kurtas/Women/Purple;Kurtas/Women/Purple;Kurtas/Women/Purple,51.7,R@10=0.50
+val_h,kurta màu nâu,Kurtas,,Brown,Kurtas/Women/Brown;Kurtas/Women/Brown;Kurtas/Women/Brown,62.0,R@10=0.80
+val_h,kurta dành cho phái nữ,Kurtas,Women,,Kurtas/Women/Multi;Kurtas/Women/Yellow;Kurtas/Women/Brown,47.5,
+val_h,giày chạy bộ tập gym,Sports Shoes,,,Sports Shoes/Unisex/Blue;Sports Shoes/Women/Sea Green;Sports Shoes/Men/Black,53.0,
+val_h,giày thể thao xanh dương,Sports Shoes,,Blue,Sports Shoes/Women/Blue;Sports Shoes/Women/Blue;Sports Shoes/Men/Blue,43.9,
+val_h,giày chạy bộ màu xám,Sports Shoes,,Grey,Sports Shoes/Women/Grey;Sports Shoes/Women/Grey;Sports Shoes/Women/Grey,51.4,
+val_h,tui xach di lam xin xo,Handbags,,,Handbags/Women/Grey;Handbags/Women/Brown;Handbags/Women/Brown,43.8,
+val_h,túi xách màu xám,Handbags,,Grey,Handbags/Women/Grey;Handbags/Women/Grey;Handbags/Women/Grey,43.3,
+val_h,túii xách xanh lá,,,Green,Handbags/Women/Green;Handbags/Women/Green;Handbags/Women/Green,39.6,khong_nhan_ra_loai
+val_h,giày cao gót đi tiệc cưới bạn,Heels,,,Heels/Women/Silver;Heels/Women/Black;Heels/Women/Brown,47.2,
+val_h,giay cao got den,Heels,,Black,Heels/Women/Black;Heels/Women/Black;Heels/Women/Black,54.2,
+val_h,cao gót mauf nâu,Heels,,Brown,Heels/Women/Brown;Heels/Women/Brown;Heels/Women/Brown,36.7,
+val_h,áo kiểu cho bé gái,Tops,Girls,,Tops/Women/Yellow;Tops/Women/White;Tops/Women/Yellow,48.1,R@10=0.00
+val_h,áo kiểu hồng pastel,Tops,,Pink,Tops/Women/Pink;Tops/Women/Pink;Tops/Women/Pink,57.3,
+val_h,áo kiểu xanh navy,Tops,,Navy Blue,Tops/Women/Navy Blue;Tops/Women/Navy Blue;Tops/Women/Navy Blue,63.1,
+val_h,áo kiểểu xanh dương,Tops,,Blue,Tops/Women/Blue;Tops/Women/Blue;Tops/Women/Blue,51.7,
+val_h,ba lô đi học nhẹ nhàng,Backpacks,,,Backpacks/Women/Brown;Backpacks/Unisex/Black;Backpacks/Unisex/Black,40.3,
+val_h,ba lô dành cho nam,Backpacks,Men,,Backpacks/Unisex/Brown;Backpacks/Unisex/Beige;Backpacks/Unisex/Black,57.4,
+val_h,balo cho nu74,Backpacks,,,Backpacks/Women/Orange;Backpacks/Women/Purple;Backpacks/Women/Beige,33.8,R@10=0.90
+val_h,balo unisex,Backpacks,Unisex,,Backpacks/Unisex/Orange;Backpacks/Unisex/Brown;Backpacks/Unisex/Black,40.8,
+val_h,ba lô đỏ,Backpacks,,Red,Backpacks/Unisex/Red;Backpacks/Unisex/Red;Backpacks/Unisex/Red,33.3,
+val_h,kính râm đi biển chống nắng,Sunglasses,,,Sunglasses/Women/Brown;Sunglasses/Women/Brown;Sunglasses/Women/Brown,42.8,
+val_h,kín mát đen,,,Black,Sunglasses/Unisex/Black;Sunglasses/Men/Black;Sunglasses/Men/Black,35.8,khong_nhan_ra_loai
+val_h,kinh ram gong nau,Sunglasses,,Brown,Sunglasses/Men/Brown;Sunglasses/Women/Brown;Sunglasses/Men/Brown,55.9,
+val_h,kính mát unisex,Sunglasses,Unisex,,Sunglasses/Unisex/Black;Sunglasses/Unisex/Purple;Sunglasses/Unisex/Brown,49.8,
+val_h,ví cho nam,Wallets,Men,,Wallets/Men/Black;Wallets/Men/Brown;Wallets/Men/Brown,36.5,
+val_h,vì da màu nâu,,,Brown,Dresses/Women/Brown;Tunics/Women/Brown;Dresses/Women/Brown,32.2,khong_nhan_ra_loai;R@10=0.00
+val_h,bop nu,Wallets,Women,,Wallets/Women/White;Wallets/Women/Purple;Wallets/Women/Purple,36.8,
+val_h,sandal đen,Sandals,,Black,Sandals/Men/Black;Sandals/Men/Black;Sandals/Men/Black,30.7,R@10=0.70
+val_h,sandal da nâu đi chơi,Sandals,,Brown,Sandals/Men/Brown;Sandals/Men/Brown;Sandals/Unisex/Brown,35.6,lac_mau(6/10);R@10=0.40
+val_h,dép tông đi biển đi muối,Flip Flops,,,Flip Flops/Unisex/Navy Blue;Flip Flops/Women/Black;Flip Flops/Women/Red,53.5,
+val_h,dep xo ngon cho nu,Flip Flops,Women,,Flip Flops/Women/Pink;Flip Flops/Women/White;Flip Flops/Women/Gold,36.5,
+val_h,thắt lưng đen,Belts,,Black,Belts/Women/Black;Belts/Women/Black;Belts/Women/Black,33.8,
+val_h,dây nịt màu nâu,Belts,,Brown,Belts/Women/Brown;Belts/Women/Brown;Belts/Women/Brown,33.7,
+val_h,giay tay cho nam,Formal Shoes,Men,,Formal Shoes/Men/Tan;Formal Shoes/Men/Tan;Formal Shoes/Men/Brown,33.7,
+val_h,giáy tây màu nâu,Formal Shoes,,Brown,Formal Shoes/Men/Brown;Formal Shoes/Men/Brown;Formal Shoes/Men/Brown,30.7,
+val_h,áo ngực,Bra,,,Bra/Women/Purple;Bra/Women/Skin;Bra/Women/White,29.9,
+val_h,áo ngực đen không gọng,Bra,,Black,Bra/Women/Black;Bra/Women/Black;Bra/Women/Black,34.3,
+val_h,quần thể thao dài,Track Pants,,,Track Pants/Women/Black;Track Pants/Women/Red;Track Pants/Men/Grey,76.8,
+val_h,quần jogger đen,Track Pants,,Black,Track Pants/Women/Black;Track Pants/Women/Black;Track Pants/Women/Black,53.5,
+val_h,tat cho nu,Socks,Women,,Socks/Women/Purple;Socks/Women/Yellow;Socks/Women/Cream,41.7,
+val_h,tất rtắng,Socks,,,Socks/Men/White;Socks/Men/White;Socks/Men/Cream,34.4,R@10=0.50
+val_h,giày bệt,Flats,,,Flats/Women/Pink;Flats/Women/Purple;Flats/Women/Pink,32.8,
+val_h,giày bệt đen,Flats,,Black,Flats/Women/Black;Flats/Women/Black;Flats/Women/Black,37.0,
+val_h,khuyen tai mau bac,Earrings,,Silver,Earrings/Women/Silver;Earrings/Women/Silver;Earrings/Women/Silver,31.2,
+val_h,sari lụa,Sarees,,,Sarees/Women/Navy Blue;Sarees/Women/Pink;Sarees/Women/Turquoise Blue,27.0,
+val_h,nón lưỡi trai,Caps,,,Caps/Unisex/Orange;Caps/Women/Beige;Caps/Women/Grey,32.3,
+val_h,mũ lưỡi trai nam,Caps,Men,,Caps/Men/Yellow;Caps/Men/Blue;Caps/Men/Yellow,35.6,
+val_h,quan lot nu,Briefs,Women,,Briefs/Women/Pink;Briefs/Women/Black;Briefs/Women/Yellow,56.0,
+val_h,quan tay cong so,Trousers,,,Trousers/Women/Khaki;Trousers/Women/Beige;Trousers/Women/Brown,59.9,
+val_h,quần đùi mặc nhà cho mát,Shorts,,,Shorts/Women/Brown;Shorts/Women/Blue;Shorts/Women/Black,32.3,
+val_h,quần bò xanh,Jeans,,,Jeans/Boys/Blue;Jeans/Women/Blue;Jeans/Girls/Blue,31.1,R@10=0.80
+val_h,áo khoác ngoài,Jackets,,,Jackets/Women/Peach;Jackets/Women/Black;Jackets/Women/Black,28.2,
+val_h,mặt dây chuyền,Pendant,,,Pendant/Men/Steel;Pendant/Women/Silver;Pendant/Women/Silver,28.4,
+val_h,váy liền đi tiệc,Dresses,,,Dresses/Women/Brown;Dresses/Women/Cream;Dresses/Women/Red,29.6,
+val_h,bộ pijama nữ,Night suits,Women,,Night suits/Women/Yellow;Night suits/Women/Multi;Night suits/Women/Black,27.8,
+val_h,quần legging,Leggings,,,Leggings/Women/Rust;Leggings/Women/Rust;Leggings/Women/Brown,46.1,
+val_h,áo ba lỗ lót trong mặc dưới sơ mi,Innerwear Vests|Shirts,,,Innerwear Vests/Girls/Green;Innerwear Vests/Girls/Pink;Innerwear Vests/Girls/Pink,65.3,
+val_h,áo kurti,Kurtis,,,Kurtis/Women/Sea Green;Kurtis/Women/White;Kurtis/Women/Green,37.8,
+val_h,dây chuyền,Necklace and Chains,,,Necklace and Chains/Women/Black;Necklace and Chains/Women/Multi;Necklace and Chains/Women/Gold,23.3,
+val_h,áo nỉ ấm,Sweatshirts,,,Sweatshirts/Women/Purple;Sweatshirts/Women/Blue;Sweatshirts/Women/Magenta,31.3,
+val_h,áo tunic,Tunics,,,Tunics/Women/Maroon;Tunics/Women/Blue;Tunics/Women/Brown,30.0,
+val_h,khăn dupatta,Dupatta,,,Dupatta/Women/Cream;Dupatta/Women/Brown;Dupatta/Women/Red,27.9,

@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-11-12 16:34:42",
+  "index_dir": "index/test_gallery",
+  "gallery_type": "official_test_split",
+  "status": "PASSED",
+  "checks": {
+    "c1_zero_duplicate_ids": {
+      "passed": true,
+      "num_duplicates": 0,
+      "total_ids": 1290
+    },
+    "c2_zero_test_leak_into_train": {
+      "passed": true,
+      "num_leak": 0,
+      "test_set_size": 1372,
+      "train_set_size": 42924
+    },
+    "c3_self_query_rank1": {
+      "passed": true,
+      "tested_samples": 50,
+      "rank1_matches": 50,
+      "min_cosine": 0.9999997019767761,
+      "mean_cosine": 1.0000000619888305,
+      "target_threshold": 0.9999
+    },
+    "c4_vector_count_consistency": {
+      "passed": true,
+      "n_embeddings": 1290,
+      "n_id_map": 1290,
+      "n_hnsw": 1290,
+      "n_manifest": 1290
+    },
+    "hash_guard": {
+      "passed": true,
+      "checkpoint_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d",
+      "expected_hash": "e2f82fee26c786c2ea9e521d8341e7bbfc29c0980cebac46688c5522ff64215d"
+    }
+  }
+}

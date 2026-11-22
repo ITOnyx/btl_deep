@@ -1,0 +1,1909 @@
+{
+  "file": "eval\\val_queries_b_human_v4.json",
+  "preset": "b_human_v4",
+  "n_queries": 92,
+  "n_clusters": 92,
+  "meets_min_queries": true,
+  "min_queries_required": 60,
+  "warnings_low_relevant_lt5": 0,
+  "warnings_near_duplicate_ge08": 3,
+  "warnings_internal_duplicate_ge08": 0,
+  "warnings_dia_class_mismatch": 11,
+  "warnings_missing_source": 0,
+  "dia_class_counts": {
+    "full": 59,
+    "none": 22,
+    "partial": 11
+  },
+  "source_counts": {
+    "ai_written": 92
+  },
+  "n_outside_v1_lexicon": 55,
+  "n_outside_v2_lexicon": 44,
+  "pct_outside_v2_lexicon": 0.4783,
+  "n_typo": 13,
+  "n_with_usage_season": 0,
+  "preset_checks": {
+    "min_queries_60": true,
+    "min_clusters_30": true,
+    "all_n_relevant_ge5": true,
+    "no_ref_duplicates": false,
+    "no_internal_duplicates": true,
+    "min_outside_lexicon_v2_20": true,
+    "min_no_diacritics_20": true,
+    "exact_typo_10": false,
+    "all_have_source": true,
+    "passed": false
+  },
+  "rows": [
+    {
+      "id": "val_b_human_v4_000",
+      "query": "tìm giúp mình cái áo phông xanh dương rộng rãi",
+      "source": "ai_written",
+      "spec_cluster_id": "Tshirts__None__Blue",
+      "n_relevant": 55,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cai",
+        "giup",
+        "minh",
+        "rai",
+        "rong"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "cai",
+        "giup",
+        "minh",
+        "rai",
+        "rong"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_001",
+      "query": "ao thun den tron mac hang ngay cho thoai mai",
+      "source": "ai_written",
+      "spec_cluster_id": "Tshirts__None__Black",
+      "n_relevant": 39,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho",
+        "hang",
+        "mac",
+        "mai",
+        "ngay",
+        "thoai",
+        "tron"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "hang",
+        "mac",
+        "mai",
+        "ngay",
+        "thoai",
+        "tron"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_002",
+      "query": "áo thun xanh lá cổ tròn thoáng mát",
+      "source": "ai_written",
+      "spec_cluster_id": "Tshirts__None__Green",
+      "n_relevant": 27,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "thoang",
+        "tron"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "thoang",
+        "tron"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_003",
+      "query": "ao phong tim nhat cho mua he",
+      "source": "ai_written",
+      "spec_cluster_id": "Tshirts__None__Purple",
+      "n_relevant": 12,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho",
+        "he",
+        "mua",
+        "nhat"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "he",
+        "mua",
+        "nhat"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_004",
+      "query": "t-shirt hồng pastel dễ thương",
+      "source": "ai_written",
+      "spec_cluster_id": "Tshirts__None__Pink",
+      "n_relevant": 11,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "de",
+        "pastel"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "pastel"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_005",
+      "query": "áo htun vàng tươi đi biển",
+      "source": "ai_written",
+      "spec_cluster_id": "Tshirts__None__Yellow",
+      "n_relevant": 10,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "di",
+        "htun"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "di",
+        "htun"
+      ],
+      "typo_type": "swap_chars",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_006",
+      "query": "mình cần áo thun nam xanh than",
+      "source": "ai_written",
+      "spec_cluster_id": "Tshirts__Men__Navy Blue",
+      "n_relevant": 16,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "can",
+        "minh"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "can",
+        "minh"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_007",
+      "query": "doi sneaker di choi cuoi tuan",
+      "source": "ai_written",
+      "spec_cluster_id": "Casual Shoes__None__",
+      "n_relevant": 125,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "choi",
+        "cuoi",
+        "di",
+        "doi",
+        "tuan"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "choi",
+        "cuoi",
+        "di",
+        "doi",
+        "tuan"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_008",
+      "query": "giày sneaker xanh rêu mang cuối tuần",
+      "source": "ai_written",
+      "spec_cluster_id": "Casual Shoes__None__Olive",
+      "n_relevant": 5,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cuoi",
+        "mang",
+        "tuan"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "cuoi",
+        "mang",
+        "tuan"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_009",
+      "query": "sneaker nu đen di học",
+      "source": "ai_written",
+      "spec_cluster_id": "Casual Shoes__Women__Black",
+      "n_relevant": 5,
+      "low_relevant_warning": false,
+      "dia_class_declared": "partial",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "di",
+        "hoc"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "di",
+        "hoc"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_010",
+      "query": "sneaker màu đỏ nổi bật",
+      "source": "ai_written",
+      "spec_cluster_id": "Casual Shoes__None__Red",
+      "n_relevant": 8,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "bat",
+        "noi"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "bat",
+        "noi"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_011",
+      "query": "sneaker unisex ai mang cung dep",
+      "source": "ai_written",
+      "spec_cluster_id": "Casual Shoes__Unisex__",
+      "n_relevant": 15,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "ai",
+        "cung",
+        "mang"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "ai",
+        "cung",
+        "mang"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_012",
+      "query": "giay vai xanh duong",
+      "source": "ai_written",
+      "spec_cluster_id": "Casual Shoes__None__Blue",
+      "n_relevant": 11,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_013",
+      "query": "áo sơ mi công sở",
+      "source": "ai_written",
+      "spec_cluster_id": "Shirts__None__",
+      "n_relevant": 147,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [
+        {
+          "dataset": "DEV",
+          "id": "h010",
+          "jaccard": 0.8
+        }
+      ],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_014",
+      "query": "so mi trang mac di lam van phong",
+      "source": "ai_written",
+      "spec_cluster_id": "Shirts__None__White",
+      "n_relevant": 26,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "di",
+        "mac",
+        "van"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "di",
+        "mac",
+        "van"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_015",
+      "query": "áo sơ mi màu xám tro",
+      "source": "ai_written",
+      "spec_cluster_id": "Shirts__None__Grey",
+      "n_relevant": 12,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "tro"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "tro"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_016",
+      "query": "so mi xanh navy lich su",
+      "source": "ai_written",
+      "spec_cluster_id": "Shirts__None__Navy Blue",
+      "n_relevant": 9,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "lich",
+        "su"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "su"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_017",
+      "query": "aos sơ mi tím",
+      "source": "ai_written",
+      "spec_cluster_id": "Shirts__None__Purple",
+      "n_relevant": 9,
+      "low_relevant_warning": false,
+      "dia_class_declared": "partial",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "aos"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "aos"
+      ],
+      "typo_type": "telex_raw",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_018",
+      "query": "sơ mi nâu đất kiểu vintage",
+      "source": "ai_written",
+      "spec_cluster_id": "Shirts__None__Brown",
+      "n_relevant": 6,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "vintage"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "vintage"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_019",
+      "query": "dong ho deo tay mau bac",
+      "source": "ai_written",
+      "spec_cluster_id": "Watches__None__Silver",
+      "n_relevant": 15,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_020",
+      "query": "đồn hồ unisex",
+      "source": "ai_written",
+      "spec_cluster_id": "Watches__Unisex__",
+      "n_relevant": 7,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "don"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "don"
+      ],
+      "typo_type": "drop_char",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_021",
+      "query": "đồng hố mặt trắng",
+      "source": "ai_written",
+      "spec_cluster_id": "Watches__None__White",
+      "n_relevant": 37,
+      "low_relevant_warning": false,
+      "dia_class_declared": "partial",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": "wrong_tone",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_022",
+      "query": "đồng hồ nữ màu đen mặt nhỏ",
+      "source": "ai_written",
+      "spec_cluster_id": "Watches__Women__Black",
+      "n_relevant": 10,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "nho"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "nho"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_023",
+      "query": "áo kurta",
+      "source": "ai_written",
+      "spec_cluster_id": "Kurtas__None__",
+      "n_relevant": 95,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_024",
+      "query": "kurta xanh la1",
+      "source": "ai_written",
+      "spec_cluster_id": "Kurtas__None__Green",
+      "n_relevant": 16,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "la1"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "la1"
+      ],
+      "typo_type": "vni_raw",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_025",
+      "query": "áo kurta đen",
+      "source": "ai_written",
+      "spec_cluster_id": "Kurtas__None__Black",
+      "n_relevant": 11,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_026",
+      "query": "kurta trang",
+      "source": "ai_written",
+      "spec_cluster_id": "Kurtas__None__White",
+      "n_relevant": 8,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_027",
+      "query": "áo kurta tím",
+      "source": "ai_written",
+      "spec_cluster_id": "Kurtas__None__Purple",
+      "n_relevant": 7,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_028",
+      "query": "kurta màu nâu",
+      "source": "ai_written",
+      "spec_cluster_id": "Kurtas__None__Brown",
+      "n_relevant": 6,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_029",
+      "query": "kurta dành cho phái nữ",
+      "source": "ai_written",
+      "spec_cluster_id": "Kurtas__Women__",
+      "n_relevant": 92,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho",
+        "danh"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "danh"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_030",
+      "query": "giày chạy bộ tập gym",
+      "source": "ai_written",
+      "spec_cluster_id": "Sports Shoes__None__",
+      "n_relevant": 95,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "gym",
+        "tap"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_031",
+      "query": "giày the thao trang",
+      "source": "ai_written",
+      "spec_cluster_id": "Sports Shoes__None__White",
+      "n_relevant": 44,
+      "low_relevant_warning": false,
+      "dia_class_declared": "partial",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [
+        {
+          "dataset": "DEV",
+          "id": "h047",
+          "jaccard": 0.8
+        }
+      ],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_032",
+      "query": "giày thể thao xanh dương",
+      "source": "ai_written",
+      "spec_cluster_id": "Sports Shoes__None__Blue",
+      "n_relevant": 6,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_033",
+      "query": "giày chạy bộ màu xám",
+      "source": "ai_written",
+      "spec_cluster_id": "Sports Shoes__None__Grey",
+      "n_relevant": 5,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_034",
+      "query": "tui xach di lam xin xo",
+      "source": "ai_written",
+      "spec_cluster_id": "Handbags__None__",
+      "n_relevant": 86,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "di",
+        "xin"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "di",
+        "xin"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_035",
+      "query": "túi xách màu xám",
+      "source": "ai_written",
+      "spec_cluster_id": "Handbags__None__Grey",
+      "n_relevant": 6,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_036",
+      "query": "túii xách xanh lá",
+      "source": "ai_written",
+      "spec_cluster_id": "Handbags__None__Green",
+      "n_relevant": 5,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "tuii"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "tuii"
+      ],
+      "typo_type": "sticky_keys",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_037",
+      "query": "túi xách da màu nâu",
+      "source": "ai_written",
+      "spec_cluster_id": "Handbags__None__Brown",
+      "n_relevant": 15,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [
+        {
+          "dataset": "DEV",
+          "id": "h070",
+          "jaccard": 0.8333
+        }
+      ],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_038",
+      "query": "giày cao gót đi tiệc cưới bạn",
+      "source": "ai_written",
+      "spec_cluster_id": "Heels__None__",
+      "n_relevant": 63,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "ban",
+        "cuoi",
+        "di"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "ban",
+        "cuoi",
+        "di"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_039",
+      "query": "giay cao got den",
+      "source": "ai_written",
+      "spec_cluster_id": "Heels__None__Black",
+      "n_relevant": 17,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_040",
+      "query": "cao gót mauf nâu",
+      "source": "ai_written",
+      "spec_cluster_id": "Heels__None__Brown",
+      "n_relevant": 14,
+      "low_relevant_warning": false,
+      "dia_class_declared": "partial",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "mauf"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "mauf"
+      ],
+      "typo_type": "telex_raw",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_041",
+      "query": "áo kiểu cho bé gái",
+      "source": "ai_written",
+      "spec_cluster_id": "Tops__Girls__",
+      "n_relevant": 8,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_042",
+      "query": "áo kiểu hồng pastel",
+      "source": "ai_written",
+      "spec_cluster_id": "Tops__None__Pink",
+      "n_relevant": 14,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "pastel"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "pastel"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_043",
+      "query": "áo kiểu xanh navy",
+      "source": "ai_written",
+      "spec_cluster_id": "Tops__None__Navy Blue",
+      "n_relevant": 6,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_044",
+      "query": "áo kiểểu xanh dương",
+      "source": "ai_written",
+      "spec_cluster_id": "Tops__None__Blue",
+      "n_relevant": 13,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "kieeu"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "kieeu"
+      ],
+      "typo_type": "insert_char",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_045",
+      "query": "ba lô đi học nhẹ nhàng",
+      "source": "ai_written",
+      "spec_cluster_id": "Backpacks__None__",
+      "n_relevant": 33,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "di",
+        "hoc",
+        "nhang",
+        "nhe"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "di",
+        "hoc",
+        "nhang",
+        "nhe"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_046",
+      "query": "ba lô dành cho nam",
+      "source": "ai_written",
+      "spec_cluster_id": "Backpacks__Men__",
+      "n_relevant": 30,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho",
+        "danh"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "danh"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_047",
+      "query": "balo cho nu74",
+      "source": "ai_written",
+      "spec_cluster_id": "Backpacks__Women__",
+      "n_relevant": 30,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho",
+        "nu74"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "nu74"
+      ],
+      "typo_type": "vni_raw",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_048",
+      "query": "balo unisex",
+      "source": "ai_written",
+      "spec_cluster_id": "Backpacks__Unisex__",
+      "n_relevant": 27,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_049",
+      "query": "ba lô đỏ",
+      "source": "ai_written",
+      "spec_cluster_id": "Backpacks__None__Red",
+      "n_relevant": 9,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_050",
+      "query": "kính râm đi biển chống nắng",
+      "source": "ai_written",
+      "spec_cluster_id": "Sunglasses__None__",
+      "n_relevant": 32,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "chong",
+        "di",
+        "nang"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "chong",
+        "di",
+        "nang"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_051",
+      "query": "kín mát đen",
+      "source": "ai_written",
+      "spec_cluster_id": "Sunglasses__None__Black",
+      "n_relevant": 14,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "kin"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "kin"
+      ],
+      "typo_type": "drop_char",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_052",
+      "query": "kinh ram gong nau",
+      "source": "ai_written",
+      "spec_cluster_id": "Sunglasses__None__Brown",
+      "n_relevant": 9,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "gong"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "gong"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_053",
+      "query": "kính mát unisex",
+      "source": "ai_written",
+      "spec_cluster_id": "Sunglasses__Unisex__",
+      "n_relevant": 8,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_054",
+      "query": "ví cho nam",
+      "source": "ai_written",
+      "spec_cluster_id": "Wallets__Men__",
+      "n_relevant": 21,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_055",
+      "query": "vì da màu nâu",
+      "source": "ai_written",
+      "spec_cluster_id": "Wallets__None__Brown",
+      "n_relevant": 12,
+      "low_relevant_warning": false,
+      "dia_class_declared": "partial",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": "wrong_tone",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_056",
+      "query": "bop nu",
+      "source": "ai_written",
+      "spec_cluster_id": "Wallets__Women__",
+      "n_relevant": 26,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_057",
+      "query": "sandal đen",
+      "source": "ai_written",
+      "spec_cluster_id": "Sandals__None__Black",
+      "n_relevant": 12,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_058",
+      "query": "sandal da nâu đi chơi",
+      "source": "ai_written",
+      "spec_cluster_id": "Sandals__None__Brown",
+      "n_relevant": 11,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "choi",
+        "di"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "choi",
+        "di"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_059",
+      "query": "dép tông đi biển đi muối",
+      "source": "ai_written",
+      "spec_cluster_id": "Flip Flops__None__",
+      "n_relevant": 30,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "di",
+        "muoi"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "di",
+        "muoi"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_060",
+      "query": "dep xo ngon cho nu",
+      "source": "ai_written",
+      "spec_cluster_id": "Flip Flops__Women__",
+      "n_relevant": 11,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_061",
+      "query": "thắt lưng đen",
+      "source": "ai_written",
+      "spec_cluster_id": "Belts__None__Black",
+      "n_relevant": 15,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_062",
+      "query": "dây nịt màu nâu",
+      "source": "ai_written",
+      "spec_cluster_id": "Belts__None__Brown",
+      "n_relevant": 12,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_063",
+      "query": "giay tay cho nam",
+      "source": "ai_written",
+      "spec_cluster_id": "Formal Shoes__Men__",
+      "n_relevant": 24,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_064",
+      "query": "giáy tây màu nâu",
+      "source": "ai_written",
+      "spec_cluster_id": "Formal Shoes__None__Brown",
+      "n_relevant": 9,
+      "low_relevant_warning": false,
+      "dia_class_declared": "partial",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": "wrong_tone",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_065",
+      "query": "áo ngực",
+      "source": "ai_written",
+      "spec_cluster_id": "Bra__None__",
+      "n_relevant": 24,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_066",
+      "query": "áo ngực đen không gọng",
+      "source": "ai_written",
+      "spec_cluster_id": "Bra__None__Black",
+      "n_relevant": 7,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "gong",
+        "khong"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "gong"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_067",
+      "query": "quần thể thao dài",
+      "source": "ai_written",
+      "spec_cluster_id": "Track Pants__None__",
+      "n_relevant": 22,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_068",
+      "query": "quần jogger đen",
+      "source": "ai_written",
+      "spec_cluster_id": "Track Pants__None__Black",
+      "n_relevant": 11,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_069",
+      "query": "tat cho nu",
+      "source": "ai_written",
+      "spec_cluster_id": "Socks__Women__",
+      "n_relevant": 6,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_070",
+      "query": "tất rtắng",
+      "source": "ai_written",
+      "spec_cluster_id": "Socks__None__White",
+      "n_relevant": 8,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "rtang"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "rtang"
+      ],
+      "typo_type": "swap_chars",
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_071",
+      "query": "giày bệt",
+      "source": "ai_written",
+      "spec_cluster_id": "Flats__None__",
+      "n_relevant": 21,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_072",
+      "query": "giày bệt đen",
+      "source": "ai_written",
+      "spec_cluster_id": "Flats__None__Black",
+      "n_relevant": 8,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_073",
+      "query": "khuyen tai mau bac",
+      "source": "ai_written",
+      "spec_cluster_id": "Earrings__None__Silver",
+      "n_relevant": 12,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "khuyen",
+        "tai"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_074",
+      "query": "sari lụa",
+      "source": "ai_written",
+      "spec_cluster_id": "Sarees__None__",
+      "n_relevant": 19,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "lua",
+        "sari"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "lua"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_075",
+      "query": "nón lưỡi trai",
+      "source": "ai_written",
+      "spec_cluster_id": "Caps__None__",
+      "n_relevant": 20,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_076",
+      "query": "mũ lưỡi trai nam",
+      "source": "ai_written",
+      "spec_cluster_id": "Caps__Men__",
+      "n_relevant": 16,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_077",
+      "query": "quan lot nu",
+      "source": "ai_written",
+      "spec_cluster_id": "Briefs__Women__",
+      "n_relevant": 11,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_078",
+      "query": "quan tay cong so",
+      "source": "ai_written",
+      "spec_cluster_id": "Trousers__None__",
+      "n_relevant": 19,
+      "low_relevant_warning": false,
+      "dia_class_declared": "none",
+      "dia_class_auto": "none",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_079",
+      "query": "quần đùi mặc nhà cho mát",
+      "source": "ai_written",
+      "spec_cluster_id": "Shorts__None__",
+      "n_relevant": 18,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "cho",
+        "mac",
+        "nha"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "mac",
+        "nha"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_080",
+      "query": "quần bò xanh",
+      "source": "ai_written",
+      "spec_cluster_id": "Jeans__None__Blue",
+      "n_relevant": 15,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_081",
+      "query": "áo khoác ngoài",
+      "source": "ai_written",
+      "spec_cluster_id": "Jackets__None__",
+      "n_relevant": 15,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "ngoai"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "ngoai"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_082",
+      "query": "mặt dây chuyền",
+      "source": "ai_written",
+      "spec_cluster_id": "Pendant__None__",
+      "n_relevant": 8,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_083",
+      "query": "váy liền đi tiệc",
+      "source": "ai_written",
+      "spec_cluster_id": "Dresses__None__",
+      "n_relevant": 15,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "di"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "di"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_084",
+      "query": "bộ pijama nữ",
+      "source": "ai_written",
+      "spec_cluster_id": "Night suits__Women__",
+      "n_relevant": 6,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "pijama"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "pijama"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_085",
+      "query": "quần legging",
+      "source": "ai_written",
+      "spec_cluster_id": "Leggings__None__",
+      "n_relevant": 7,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "legging"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_086",
+      "query": "áo ba lỗ lót trong mặc dưới sơ mi",
+      "source": "ai_written",
+      "spec_cluster_id": "Innerwear Vests__None__",
+      "n_relevant": 16,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "duoi",
+        "mac",
+        "trong"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "duoi",
+        "mac"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_087",
+      "query": "áo kurti",
+      "source": "ai_written",
+      "spec_cluster_id": "Kurtis__None__",
+      "n_relevant": 11,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "kurti"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_088",
+      "query": "dây chuyền",
+      "source": "ai_written",
+      "spec_cluster_id": "Necklace and Chains__None__",
+      "n_relevant": 10,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_089",
+      "query": "áo nỉ ấm",
+      "source": "ai_written",
+      "spec_cluster_id": "Sweatshirts__None__",
+      "n_relevant": 10,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "full",
+      "dia_class_mismatch_warning": false,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "am"
+      ],
+      "tokens_outside_v2_lexicon": [
+        "am"
+      ],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_090",
+      "query": "áo tunic",
+      "source": "ai_written",
+      "spec_cluster_id": "Tunics__None__",
+      "n_relevant": 9,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "tunic"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    },
+    {
+      "id": "val_b_human_v4_091",
+      "query": "khăn dupatta",
+      "source": "ai_written",
+      "spec_cluster_id": "Dupatta__None__",
+      "n_relevant": 8,
+      "low_relevant_warning": false,
+      "dia_class_declared": "full",
+      "dia_class_auto": "partial",
+      "dia_class_mismatch_warning": true,
+      "near_duplicates": [],
+      "internal_duplicates": [],
+      "tokens_outside_v1_lexicon": [
+        "dupatta"
+      ],
+      "tokens_outside_v2_lexicon": [],
+      "typo_type": null,
+      "has_usage_season": false
+    }
+  ]
+}
