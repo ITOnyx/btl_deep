@@ -22,6 +22,7 @@ def render_sidebar(service_metadata: Dict[str, Any]) -> Dict[str, Any]:
             options=list(gallery_options.keys()),
             format_func=lambda k: gallery_options[k],
             index=0,
+            key="sidebar_gallery",
             help=(
                 "test_gallery: 1,290 sản phẩm test split dùng để đánh giá chuẩn.\n"
                 "reference_gallery: 38,646 sản phẩm catalog lớn (ước lượng lạc quan do chứa ảnh train)."

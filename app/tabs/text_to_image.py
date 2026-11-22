@@ -7,6 +7,7 @@ from __future__ import annotations
 from typing import Any, Dict
 import streamlit as st
 
+from app.components.errors import load_sample_image, show_search_error
 from app.components.product_card import render_result_grid
 
 
@@ -72,6 +73,8 @@ def render_tab_text_to_image(service: Any, config: Dict[str, Any]) -> None:
     elif submit_search and active_query:
         st.session_state["t2i_query"] = active_query
         should_run = True
+    elif submit_search:
+        st.warning("Vui lòng nhập mô tả sản phẩm.")
 
     if should_run:
         with st.spinner("Đang tìm kiếm..."):
@@ -84,7 +87,7 @@ def render_tab_text_to_image(service: Any, config: Dict[str, Any]) -> None:
                 st.session_state["t2i_results"] = results
                 st.session_state["t2i_elapsed_s"] = elapsed_ms / 1000.0
             except Exception as e:
-                st.error(f"Lỗi tìm kiếm: {e}")
+                show_search_error(e)
                 st.session_state["t2i_results"] = None
 
     # Render results from session_state
@@ -92,6 +95,6 @@ def render_tab_text_to_image(service: Any, config: Dict[str, Any]) -> None:
     if saved_results is not None:
         elapsed_s = st.session_state.get("t2i_elapsed_s", 0.0)
         st.caption(f"Tìm thấy {len(saved_results)} kết quả trong {elapsed_s:.2f} giây")
-        if len(saved_results) < config.get("top_k", 10):
+        if len(saved_results) < config.get("top_k", 10) and config["t2i_config_id"] in ("cfg_v5_10", "cfg_v5_11"):
             st.caption(f"Chỉ có {len(saved_results)} sản phẩm cùng lĩnh vực phù hợp.")
         render_result_grid(saved_results, num_cols=5)

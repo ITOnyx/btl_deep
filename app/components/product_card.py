@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import base64
 import html
+import logging
 from pathlib import Path
 from typing import Any, Dict, List
 import streamlit as st
@@ -17,6 +18,8 @@ from app.i18n_vi import (
     translate_color,
     translate_gender,
 )
+
+logger = logging.getLogger(__name__)
 
 
 def _get_image_base64(image_path: str) -> str:
@@ -34,6 +37,15 @@ def _get_image_base64(image_path: str) -> str:
         return ""
 
 
+def _num(value: Any) -> float:
+    """Điểm số để hiển thị: None/NaN/chuỗi lạ -> 0.0 thay vì làm vỡ cả lưới kết quả khi format."""
+    try:
+        v = float(value)
+    except (TypeError, ValueError):
+        return 0.0
+    return v if v == v and abs(v) != float("inf") else 0.0
+
+
 def _e(value: Any) -> str:
     """HTML-escape a metadata value before interpolating it into markup."""
     return html.escape(str(value), quote=True)
@@ -42,9 +54,9 @@ def _e(value: Any) -> str:
 def render_result_card(item: Dict[str, Any]) -> None:
     """Renders a single minimalist product card with uniform height and alignment."""
     rank = item.get("rank", 1)
-    score = item.get("final_score", 0.0)
-    cos_score = item.get("cosine_score", 0.0)
-    bonus = item.get("attribute_bonus", 0.0)
+    score = _num(item.get("final_score"))
+    cos_score = _num(item.get("cosine_score"))
+    bonus = _num(item.get("attribute_bonus"))
     pid = str(item.get("product_id", item.get("item_id", "N/A")))
     orig_title = str(item.get("title", f"Sản phẩm {pid}")).strip()
 
@@ -108,9 +120,9 @@ def render_result_card(item: Dict[str, Any]) -> None:
         ]
 
         if tax_b is not None and col_b is not None:
-            detail_lines.append(f'<div>Thưởng giữ loại: <code>{tax_b:+.4f}</code></div>')
-            detail_lines.append(f'<div>Phạt lệch nhóm: <code>{-tax_p:+.4f}</code></div>')
-            detail_lines.append(f'<div>Thưởng màu mới: <code>{col_b:+.4f}</code></div>')
+            detail_lines.append(f'<div>Thưởng giữ loại: <code>{_num(tax_b):+.4f}</code></div>')
+            detail_lines.append(f'<div>Phạt lệch nhóm: <code>{-_num(tax_p):+.4f}</code></div>')
+            detail_lines.append(f'<div>Thưởng màu mới: <code>{_num(col_b):+.4f}</code></div>')
             if constraint_str:
                 detail_lines.append(f'<div>Ràng buộc: <b>{_e(constraint_str)}</b></div>')
         else:
@@ -142,4 +154,8 @@ def render_result_grid(results: List[Dict[str, Any]], num_cols: int = 5) -> None
         cols = st.columns(num_cols)
         for col_idx, item in enumerate(row_items):
             with cols[col_idx]:
-                render_result_card(item)
+                try:
+                    render_result_card(item)
+                except Exception:  # một thẻ lỗi dữ liệu không được làm mất cả trang kết quả
+                    logger.exception("Không hiển thị được sản phẩm %s", item.get("item_id"))
+                    st.caption(f"Không hiển thị được sản phẩm {_e(item.get('item_id', '?'))}")

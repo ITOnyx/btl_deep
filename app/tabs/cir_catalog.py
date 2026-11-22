@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any, Dict
 import streamlit as st
 
+from app.components.errors import load_sample_image, show_search_error
 from app.components.product_card import render_result_grid
 
 
@@ -92,6 +93,8 @@ def render_tab_cir_catalog(service: Any, config: Dict[str, Any]) -> None:
         st.session_state["cir_cat_pid"] = active_pid
         st.session_state["cir_cat_mod"] = mod_val.strip()
         should_run = True
+    elif submit_search:
+        st.warning("Vui lòng nhập cả mã sản phẩm và yêu cầu chỉnh sửa.")
 
     if should_run:
         with st.spinner("Đang tìm kiếm..."):
@@ -104,11 +107,8 @@ def render_tab_cir_catalog(service: Any, config: Dict[str, Any]) -> None:
                 )
                 st.session_state["cir_cat_results"] = results
                 st.session_state["cir_cat_elapsed_s"] = elapsed_ms / 1000.0
-            except ValueError as ve:
-                st.error(f"Lỗi: {ve}")
-                st.session_state["cir_cat_results"] = None
             except Exception as e:
-                st.error(f"Lỗi tìm kiếm: {e}")
+                show_search_error(e)
                 st.session_state["cir_cat_results"] = None
 
     # Render saved results
@@ -116,6 +116,6 @@ def render_tab_cir_catalog(service: Any, config: Dict[str, Any]) -> None:
     if saved_results is not None:
         elapsed_s = st.session_state.get("cir_cat_elapsed_s", 0.0)
         st.caption(f"Tìm thấy {len(saved_results)} kết quả trong {elapsed_s:.2f} giây")
-        if len(saved_results) < config.get("top_k", 10):
+        if len(saved_results) < config.get("top_k", 10) and config["cir_config_id"] in ("cir_v1_06", "cir_v1_07"):
             st.caption(f"Chỉ có {len(saved_results)} sản phẩm cùng lĩnh vực phù hợp.")
         render_result_grid(saved_results, num_cols=5)

@@ -12,6 +12,7 @@ Handles:
 from __future__ import annotations
 
 from collections import Counter
+import functools
 import io
 import json
 from pathlib import Path
@@ -40,6 +41,74 @@ class HashGuardError(Exception):
 class ImageValidationError(Exception):
     """Raised when an uploaded image fails validation."""
     pass
+
+
+class IndexLoadError(Exception):
+    """Raised when index/config files are missing, corrupted or inconsistent with each other."""
+    pass
+
+
+class SearchInputError(ValueError):
+    """Raised when a search request is invalid (empty text, unknown config, bad top_k...)."""
+    pass
+
+
+class SearchRuntimeError(RuntimeError):
+    """Raised when a search fails at runtime for a reason the user can act on (e.g. GPU out of memory)."""
+    pass
+
+
+T2I_CONFIGS = ("cfg_v5_11", "cfg_v5_10", "cfg_v5_09", "cfg_v5_01", "model_only")
+CIR_CONFIGS = ("cir_v1_07", "cir_v1_06", "cir_v1_05", "cir_v1_01")
+MAX_TOP_K = 100
+MAX_QUERY_CHARS = 500  # tokenizer cắt ở 128 token; câu dài hơn thế này gần như chắc chắn là dán nhầm
+
+
+def _check_request(text: Optional[str], top_k: Any, config_id: str, allowed: Tuple[str, ...],
+                   field: str = "Câu truy vấn") -> str:
+    """Kiểm tra tham số chung của một yêu cầu tìm kiếm; trả về text đã strip ('' nếu text là None)."""
+    if config_id not in allowed:
+        raise SearchInputError(f"Cấu hình '{config_id}' không hợp lệ. Chọn một trong: {', '.join(allowed)}.")
+    if isinstance(top_k, bool) or not isinstance(top_k, (int, np.integer)) or not (1 <= int(top_k) <= MAX_TOP_K):
+        raise SearchInputError(f"Số lượng kết quả phải là số nguyên từ 1 đến {MAX_TOP_K} (nhận: {top_k!r}).")
+    if text is None:
+        return ""
+    if not isinstance(text, str):
+        raise SearchInputError(f"{field} phải là chuỗi văn bản.")
+    text = text.strip()
+    if len(text) > MAX_QUERY_CHARS:
+        raise SearchInputError(f"{field} quá dài ({len(text)} ký tự, tối đa {MAX_QUERY_CHARS}).")
+    return text
+
+
+def _require_text(text: str, field: str) -> None:
+    if not text:
+        raise SearchInputError(f"{field} không được để trống.")
+
+
+def _check_query_vector(vec: np.ndarray) -> np.ndarray:
+    """Vector truy vấn phải hữu hạn và khác 0 (fp16 tràn số có thể sinh NaN/inf)."""
+    vec = np.asarray(vec, dtype=np.float32)
+    if not np.all(np.isfinite(vec)) or float(np.linalg.norm(vec)) < 1e-6:
+        raise SearchRuntimeError(
+            "Mô hình trả về vector truy vấn không hợp lệ (NaN/inf hoặc bằng 0). Hãy thử lại với đầu vào khác."
+        )
+    return vec
+
+
+def _gpu_guard(fn):
+    """Chuyển lỗi hết VRAM thành thông báo dễ hiểu và giải phóng cache để lần sau còn chạy được."""
+    @functools.wraps(fn)
+    def wrapper(*args, **kwargs):
+        try:
+            return fn(*args, **kwargs)
+        except torch.cuda.OutOfMemoryError as e:
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+            raise SearchRuntimeError(
+                "GPU hết bộ nhớ khi xử lý yêu cầu. Hãy đóng ứng dụng khác đang dùng GPU rồi thử lại."
+            ) from e
+    return wrapper
 
 
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024  # 10 MB limit
@@ -82,14 +151,15 @@ def validate_and_load_image(file_data: Union[bytes, io.BytesIO], filename: str =
         with Image.open(bio) as img_check:
             img_check.verify()
 
-        bio_read = io.BytesIO(raw_bytes)
-        img = Image.open(bio_read).convert("RGB")
-        w, h = img.size
-        if w < 10 or h < 10:
-            raise ImageValidationError(f"Kích thước ảnh quá nhỏ ({w}x{h} px). Yêu cầu tối thiểu 10x10 px.")
-        if w > 8000 or h > 8000:
-            raise ImageValidationError(f"Kích thước ảnh quá lớn ({w}x{h} px). Yêu cầu tối đa 8000x8000 px.")
-        return img
+        with Image.open(io.BytesIO(raw_bytes)) as img_raw:
+            # Kiểm tra kích thước từ header TRƯỚC khi giải mã toàn bộ ảnh
+            # (ảnh nén nhỏ nhưng kích thước cực lớn có thể làm cạn RAM khi convert).
+            w, h = img_raw.size
+            if w < 10 or h < 10:
+                raise ImageValidationError(f"Kích thước ảnh quá nhỏ ({w}x{h} px). Yêu cầu tối thiểu 10x10 px.")
+            if w > 8000 or h > 8000:
+                raise ImageValidationError(f"Kích thước ảnh quá lớn ({w}x{h} px). Yêu cầu tối đa 8000x8000 px.")
+            return img_raw.convert("RGB")  # ảnh động (GIF/WebP động): chỉ lấy khung đầu
     except ImageValidationError:
         raise
     except Exception as e:
@@ -133,15 +203,24 @@ class AppSearchService:
         # 1. Load config
         if not self.config_path.exists():
             raise FileNotFoundError(f"Không tìm thấy tệp cấu hình tại {self.config_path}")
-        with open(self.config_path, "r", encoding="utf-8") as f:
-            self.cfg = yaml.safe_load(f)
+        try:
+            with open(self.config_path, "r", encoding="utf-8") as f:
+                self.cfg = yaml.safe_load(f)
+        except yaml.YAMLError as e:
+            raise IndexLoadError(f"Tệp cấu hình {self.config_path.name} sai cú pháp YAML: {e}") from e
+        if not isinstance(self.cfg, dict):
+            raise IndexLoadError(f"Tệp cấu hình {self.config_path.name} rỗng hoặc không phải dạng ánh xạ.")
+        for section, key in (("checkpoint", "checkpoint_hash"), ("paths", "checkpoint_file")):
+            if not isinstance(self.cfg.get(section), dict) or not self.cfg[section].get(key):
+                raise IndexLoadError(f"Tệp cấu hình thiếu khóa bắt buộc '{section}.{key}'.")
 
         # 2. Hash Guard (Rule 6)
         manifest_path = self.index_dir / "manifest.json"
         if not manifest_path.exists():
             raise FileNotFoundError(f"Không tìm thấy manifest.json tại {manifest_path}")
-        with open(manifest_path, "r", encoding="utf-8") as f:
-            self.manifest = json.load(f)
+        self.manifest = self._load_json(manifest_path)
+        if not isinstance(self.manifest, dict):
+            raise IndexLoadError(f"manifest.json trong {self.index_dir.name} không đúng định dạng (phải là object).")
 
         expected_hash = self.cfg["checkpoint"]["checkpoint_hash"].strip().lower()
         actual_manifest_hash = str(self.manifest.get("checkpoint_hash", "")).strip().lower()
@@ -154,22 +233,52 @@ class AppSearchService:
             )
         self.hash_guard_ok = True
 
-        # 3. Load id_map and gallery embeddings
-        with open(self.index_dir / "id_map.json", "r", encoding="utf-8") as f:
-            self.id_map: List[Dict[str, Any]] = json.load(f)
+        # 3. Load id_map and gallery embeddings (kiểm tra nhất quán trước khi nạp mô hình nặng)
+        self.id_map: List[Dict[str, Any]] = self._load_json(self.index_dir / "id_map.json")
+        if not isinstance(self.id_map, list) or not self.id_map:
+            raise IndexLoadError(f"id_map.json trong {self.index_dir.name} rỗng hoặc không phải danh sách.")
+        bad = [i for i, it in enumerate(self.id_map) if not isinstance(it, dict) or "item_id" not in it]
+        if bad:
+            raise IndexLoadError(f"id_map.json có {len(bad)} mục thiếu 'item_id' (vd. vị trí {bad[0]}).")
 
         self.item_id_to_idx = {str(item["item_id"]): i for i, item in enumerate(self.id_map)}
-        self.embeddings = np.load(self.index_dir / "image_embeddings.npy").astype(np.float32)
+        if len(self.item_id_to_idx) != len(self.id_map):
+            raise IndexLoadError(
+                f"id_map.json có {len(self.id_map) - len(self.item_id_to_idx)} item_id bị trùng; "
+                "không thể ánh xạ mã sản phẩm duy nhất."
+            )
+        emb_path = self._require_file(self.index_dir / "image_embeddings.npy")
+        try:
+            self.embeddings = np.load(emb_path).astype(np.float32)
+        except Exception as e:
+            raise IndexLoadError(f"Không đọc được {emb_path.name}: {e}") from e
+        emb_dim = int(self.cfg["checkpoint"].get("embedding_dim", 1152))
+        if self.embeddings.ndim != 2 or self.embeddings.shape != (len(self.id_map), emb_dim):
+            raise IndexLoadError(
+                f"Embedding gallery có shape {self.embeddings.shape}, kỳ vọng ({len(self.id_map)}, {emb_dim}) "
+                "theo id_map.json và config — index có thể được dựng lệch phiên bản."
+            )
+        if not np.all(np.isfinite(self.embeddings)):
+            raise IndexLoadError(f"{emb_path.name} chứa giá trị NaN/inf.")
         # Chuẩn hoá sẵn một lần lúc khởi tạo (exact search + lọc ảnh trùng khi upload dùng chung),
         # để không tính trong thời gian của truy vấn đầu tiên.
         self._emb_normed = None
         self._normed_embeddings()
 
         # Load FAISS HNSW Index
-        self.hnsw = FaissHNSWIndex.load(self.index_dir / "faiss_hnsw.bin", ef_search=self.ef_search)
+        hnsw_path = self._require_file(self.index_dir / "faiss_hnsw.bin")
+        try:
+            self.hnsw = FaissHNSWIndex.load(hnsw_path, ef_search=self.ef_search)
+        except Exception as e:
+            raise IndexLoadError(f"Không đọc được {hnsw_path.name} (tệp hỏng hoặc sai định dạng FAISS): {e}") from e
+        if self.hnsw.ntotal != len(self.id_map) or self.hnsw.index.d != emb_dim:
+            raise IndexLoadError(
+                f"faiss_hnsw.bin có {self.hnsw.ntotal} vector {self.hnsw.index.d}-d, nhưng id_map có "
+                f"{len(self.id_map)} mục và embedding {emb_dim}-d — index lệch với id_map."
+            )
 
         # 4. Load SigLIP Model & Preprocessor (Rule 4: identical preprocessing)
-        ckpt_path = self.project_root / self.cfg["paths"]["checkpoint_file"]
+        ckpt_path = self._require_file(self.project_root / self.cfg["paths"]["checkpoint_file"], what="checkpoint")
         self.preprocessor = SigLIPPreprocessor(device=self.device)
         self.model = load_siglip_model(
             checkpoint_path=str(ckpt_path),
@@ -193,6 +302,21 @@ class AppSearchService:
             assert w_grp > w_col, "Cấu hình vi phạm: |group_mismatch_penalty| phải > color_match_bonus"
             assert w_typ > w_col, "Cấu hình vi phạm: type_match_bonus phải > color_match_bonus"
             assert w_typ_mis < w_grp, "Cấu hình vi phạm: |type_mismatch_penalty| phải < |group_mismatch_penalty|"
+
+    @staticmethod
+    def _require_file(path: Path, what: str = "tệp index") -> Path:
+        if not path.is_file():
+            raise IndexLoadError(f"Không tìm thấy {what} tại {path}")
+        return path
+
+    @classmethod
+    def _load_json(cls, path: Path) -> Any:
+        cls._require_file(path)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, UnicodeDecodeError) as e:
+            raise IndexLoadError(f"{path.name} trong {path.parent.name} bị hỏng (JSON không hợp lệ): {e}") from e
 
     def get_system_metadata(self) -> Dict[str, Any]:
         """Returns metadata for sidebar display."""
@@ -497,6 +621,7 @@ class AppSearchService:
 
         return final_top
 
+    @_gpu_guard
     def search_text_to_image(
         self,
         query_text: str,
@@ -509,6 +634,8 @@ class AppSearchService:
         Supports cfg_v5_10 (3-tier taxonomy guard) and legacy cfg_v5_09 / cfg_v5_01 / model_only.
         Returns: (results, parsed_attributes, elapsed_ms)
         """
+        query_text = _check_request(query_text, top_k, config_id, T2I_CONFIGS)
+        _require_text(query_text, "Câu truy vấn")
         if torch.cuda.is_available() and "cuda" in self.device:
             torch.cuda.synchronize()
         t0 = time.perf_counter()
@@ -524,7 +651,7 @@ class AppSearchService:
                 input_ids=inputs["input_ids"],
                 attention_mask=inputs.get("attention_mask")
             )
-            q_vec = emb.float().cpu().numpy()
+            q_vec = _check_query_vector(emb.float().cpu().numpy())
 
         if config_id == "model_only":
             parsed = {}
@@ -568,6 +695,7 @@ class AppSearchService:
 
         return results, parsed, elapsed_ms
 
+    @_gpu_guard
     def search_image_to_image(
         self,
         image_input: Union[Image.Image, Path, str],
@@ -578,6 +706,9 @@ class AppSearchService:
         Pure vision similarity (always model_only, no text parser).
         Returns: (results, elapsed_ms)
         """
+        _check_request(None, top_k, "model_only", ("model_only",))
+        if image_input is None:
+            raise SearchInputError("Chưa có ảnh truy vấn.")
         if torch.cuda.is_available() and "cuda" in self.device:
             torch.cuda.synchronize()
         t0 = time.perf_counter()
@@ -587,7 +718,7 @@ class AppSearchService:
         )
         with torch.no_grad():
             img_emb = self.model.encode_image(pixel_values)
-            q_vec = img_emb.float().cpu().numpy()
+            q_vec = _check_query_vector(img_emb.float().cpu().numpy())
 
         results = self._execute_ranking(
             query_vec=q_vec,
@@ -602,6 +733,7 @@ class AppSearchService:
 
         return results, elapsed_ms
 
+    @_gpu_guard
     def search_cir_catalog(
         self,
         product_id: str,
@@ -618,7 +750,11 @@ class AppSearchService:
         Supports cir_v1_06 (3-tier taxonomy preservation) and legacy cir_v1_05 / cir_v1_01.
         Returns: (results, parsed_attributes, elapsed_ms)
         """
-        pid_clean = str(product_id).strip()
+        modifier_text = _check_request(modifier_text, top_k, config_id, CIR_CONFIGS, field="Yêu cầu chỉnh sửa")
+        _require_text(modifier_text, "Yêu cầu chỉnh sửa")
+        pid_clean = str(product_id if product_id is not None else "").strip()
+        if not pid_clean:
+            raise SearchInputError("Mã sản phẩm không được để trống.")
         if pid_clean not in self.item_id_to_idx:
             raise ValueError(
                 f"Không tìm thấy mã sản phẩm '{pid_clean}' trong gallery hiện tại ({self.index_dir.name})."
@@ -647,6 +783,7 @@ class AppSearchService:
             else:
                 cir_emb = self.model.cir_combiner(ref_img_emb, mod_txt_emb)
                 q_vec = cir_emb.float().cpu().numpy()
+        q_vec = _check_query_vector(q_vec)
 
         if config_id == "cir_v1_07":
             parsed = self.parser_v3.parse(modifier_text)
@@ -737,14 +874,18 @@ class AppSearchService:
         if not tax_votes:
             return (None, None, None, None, False)
 
+        # Bầu theo tầng: nhóm chỉ bầu trong lĩnh vực thắng, loại chỉ bầu trong nhóm thắng,
+        # để (lĩnh vực, nhóm, loại) luôn nhất quán (vd. 3 phiếu Giày + 2 phiếu cùng một nhóm Túi
+        # không được ra nhóm Túi trong lĩnh vực Giày).
         top_dom = Counter([t[0] for t in tax_votes]).most_common(1)[0]
-        top_grp = Counter([t[1] for t in tax_votes]).most_common(1)[0]
-        top_typ = Counter([t[2] for t in tax_votes]).most_common(1)[0]
+        top_grp = Counter([t[1] for t in tax_votes if t[0] == top_dom[0]]).most_common(1)[0]
+        top_typ = Counter([t[2] for t in tax_votes if t[0] == top_dom[0] and t[1] == top_grp[0]]).most_common(1)[0]
         top_gen = Counter([g for g in gen_votes if g]).most_common(1)[0][0] if any(gen_votes) else None
 
         is_confident = (top_dom[1] >= 3)
         return (top_dom[0], top_grp[0], top_typ[0], top_gen, is_confident)
 
+    @_gpu_guard
     def search_cir_upload(
         self,
         uploaded_image: Image.Image,
@@ -761,6 +902,10 @@ class AppSearchService:
         Supports cir_v1_06 (3-tier taxonomy preservation) and legacy cir_v1_05 / cir_v1_01.
         Returns: (results, parsed_attributes, elapsed_ms)
         """
+        modifier_text = _check_request(modifier_text, top_k, config_id, CIR_CONFIGS, field="Yêu cầu chỉnh sửa")
+        _require_text(modifier_text, "Yêu cầu chỉnh sửa")
+        if uploaded_image is None:
+            raise SearchInputError("Chưa có ảnh tham chiếu.")
         if torch.cuda.is_available() and "cuda" in self.device:
             torch.cuda.synchronize()
         t0 = time.perf_counter()
@@ -781,6 +926,7 @@ class AppSearchService:
             else:
                 cir_emb = self.model.cir_combiner(ref_img_emb, mod_txt_emb)
                 q_vec = cir_emb.float().cpu().numpy()
+        q_vec = _check_query_vector(q_vec)
 
         if config_id == "cir_v1_07":
             parsed = self.parser_v3.parse(modifier_text)

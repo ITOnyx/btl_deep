@@ -12,14 +12,19 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
+import logging
+
 import streamlit as st
 
-from app.engine_service import AppSearchService, HashGuardError
+from app.engine_service import AppSearchService, HashGuardError, IndexLoadError
 from app.components.sidebar import render_sidebar
 from app.tabs.text_to_image import render_tab_text_to_image
 from app.tabs.image_to_image import render_tab_image_to_image
 from app.tabs.cir_catalog import render_tab_cir_catalog
 from app.tabs.cir_upload import render_tab_cir_upload
+
+logger = logging.getLogger(__name__)
+DEFAULT_GALLERY = "test_gallery"
 
 # Configure page without icons
 st.set_page_config(
@@ -199,6 +204,19 @@ def get_cached_search_service(gallery_name: str) -> AppSearchService:
     return AppSearchService(index_dir=index_path, config_path="config.yaml")
 
 
+def _offer_gallery_fallback(failed_gallery: str) -> None:
+    """Khi nạp gallery lỗi, trang dừng trước khi vẽ sidebar -> người dùng bị kẹt ở gallery hỏng.
+    Cho nút quay về gallery mặc định (và xoá cache để lần sau nạp lại từ đầu)."""
+    if failed_gallery != DEFAULT_GALLERY:
+        if st.button(f"Quay lại bộ sưu tập {DEFAULT_GALLERY}", type="primary"):
+            st.session_state["active_gallery"] = DEFAULT_GALLERY
+            st.session_state.pop("sidebar_gallery", None)  # selectbox quay về mặc định (test_gallery)
+            st.rerun()
+    if st.button("Thử nạp lại"):
+        get_cached_search_service.clear()
+        st.rerun()
+
+
 def main() -> None:
     inject_custom_css()
 
@@ -206,7 +224,7 @@ def main() -> None:
     st.caption("Tìm kiếm sản phẩm bằng văn bản hoặc hình ảnh.")
 
     # Temporary gallery selection state before service load
-    active_gallery = st.session_state.get("active_gallery", "test_gallery")
+    active_gallery = st.session_state.get("active_gallery", DEFAULT_GALLERY)
 
     # Load service with Hash Guard
     try:
@@ -214,9 +232,16 @@ def main() -> None:
         service_meta = service.get_system_metadata()
     except HashGuardError as hge:
         st.error(f"Lỗi bảo mật Hash Guard: {hge}")
+        _offer_gallery_fallback(active_gallery)
+        st.stop()
+    except IndexLoadError as ile:
+        st.error(f"Dữ liệu index của bộ sưu tập '{active_gallery}' không hợp lệ: {ile}")
+        _offer_gallery_fallback(active_gallery)
         st.stop()
     except Exception as e:
+        logger.exception("Không khởi động được dịch vụ tìm kiếm cho gallery %s", active_gallery)
         st.error(f"Không thể khởi động hệ thống: {e}")
+        _offer_gallery_fallback(active_gallery)
         st.stop()
 
     # Render sidebar with controls and metadata
