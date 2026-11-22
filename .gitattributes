@@ -1,0 +1,4 @@
+# Bộ đánh giá đóng băng bằng SHA-256: giữ nguyên từng byte (không đổi LF/CRLF)
+eval/crawl_v2_t2i_queries.json -text
+eval/crawl_v2_cir_pairs.json -text
+eval/crawl_v2_eval_set.sha256 -text
